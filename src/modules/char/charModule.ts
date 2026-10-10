@@ -506,7 +506,7 @@ export async function charModule(ctx: ModuleContext) {
                 __descIndex: i,
             }
 
-            // 影响（SkillDescHints → 技能效益/技能威力/技能范围/技能耐久）
+            // 影响（SkillDescHints → 技能效益/技能威力/技能范围/技能耐久/多重）
             const hints = Array.isArray(descHints) ? descHints[i] : undefined
             if (Array.isArray(hints) && hints.length > 0) {
                 const impact = hints.map((h: string) => HINT_MAP[h] ?? h).join(",")
@@ -778,6 +778,7 @@ export async function charModule(ctx: ModuleContext) {
 // ---------- 模块级辅助 ----------
 
 const HINT_MAP: Record<string, string> = {
+    MultiShoot: "多重",
     SkillEfficiency: "技能效益",
     SkillIntensity: "技能威力",
     SkillRange: "技能范围",

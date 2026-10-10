@@ -51348,7 +51348,22 @@
               "17804009481207050409",
               "17851555172566669159"
             ],
-            "video": "SQ_Ex02_FixSimple_01"
+            "video": "SQ_Ex02_FixSimple_01",
+            "dialogues": [
+              {
+                "id": 11100006,
+                "content": "\"The soldiers of the Griffins and the Snow Wolves bled for the Empire until the very end. They were heroes. They don't deserve to be reduced to numbers in someone else's conspiracy. They don't deserve to be branded criminals by a lie.\"",
+                "voice": "story/1102/111000/1BC9A6BC",
+                "npc": 110022,
+                "next": 11100007
+              },
+              {
+                "id": 11100007,
+                "content": "\"Only then can I stand at your side again as your guard — not as a suspect whose very presence could implicate you.\"",
+                "voice": "story/1102/111000/1BC9A6E6",
+                "npc": 110022
+              }
+            ]
           },
           {
             "id": "17804009481207050409",
@@ -108929,6 +108944,121 @@
             "pos": [
               1351,
               -10153
+            ],
+            "dialogues": [
+              {
+                "id": 12070001,
+                "content": "卡米拉，{nickname}的下落有消息了吗？",
+                "npc": 260001,
+                "next": 12070002
+              },
+              {
+                "id": 12070002,
+                "content": "还没有。",
+                "npc": 260002,
+                "next": 12070003
+              },
+              {
+                "id": 12070003,
+                "content": "Try not to worry. Dismania is a long way from here. News takes time to travel.",
+                "npc": 260002,
+                "next": 12070004
+              },
+              {
+                "id": 12070004,
+                "content": "But with both the Forsakens and the Legion involved, {性别：he|she} could be in serious danger.",
+                "npc": 260001,
+                "next": 12070005
+              },
+              {
+                "id": 12070005,
+                "content": "The intelligence I provided is what put {性别：him|her} in this situation. I can't just stand by and—",
+                "npc": 260001,
+                "next": 12070006
+              },
+              {
+                "id": 12070006,
+                "content": "You don't even know where {性别：he|she} is or what's happened. How do you expect to find {性别：him|her}, let alone help?",
+                "npc": 260002,
+                "next": 12070007
+              },
+              {
+                "id": 12070007,
+                "content": "You know how dangerous this is. What if you get yourself killed too?",
+                "npc": 260002,
+                "next": 12070008
+              },
+              {
+                "id": 12070008,
+                "content": "What happens to me doesn't matter.",
+                "npc": 260001,
+                "next": 12070009
+              },
+              {
+                "id": 12070009,
+                "content": "Really? I doubt {nickname} would agree. You're not with the Legion anymore. If you get yourself into trouble, {性别：he|she} will only end up having to rescue you.",
+                "npc": 260002,
+                "next": 12070010
+              },
+              {
+                "id": 12070010,
+                "content": "For now, I think you should focus on looking after yourself. It's been more than a month since you left the Legion, and you still look just as lost as you did when you left.",
+                "npc": 260002,
+                "next": 12070011
+              },
+              {
+                "id": 12070011,
+                "content": "You spent last night repairing someone's heater, and first thing this morning, you were helping me bring supplies into the tavern. Did you sleep at all? At this rate, you'll work yourself into the ground before {性别：he|she} gets back.",
+                "npc": 260002,
+                "next": 12070012
+              },
+              {
+                "id": 12070012,
+                "content": "Thank you for your concern, Ms Camilla. But I'm fine. A little fatigue is nothing I can't handle. I'm simply... accustomed to the Legion's routine. I don't know how to sit still.",
+                "npc": 260001,
+                "next": 12070013
+              },
+              {
+                "id": 12070013,
+                "content": "Is that really it? Because from where I'm standing, it looks more like you're running away.",
+                "npc": 260002,
+                "next": 12070014
+              },
+              {
+                "id": 12070014,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070015
+              },
+              {
+                "id": 12070015,
+                "content": "When you chose to leave the Legion, I thought you'd decided to put the past behind you. But leaving the Legion isn't the same as moving on. You still have to decide where you're going next.",
+                "npc": 260002,
+                "next": 12070016
+              },
+              {
+                "id": 12070016,
+                "content": "Where I'm going...? But I don't know where to go.",
+                "npc": 260001,
+                "next": 12070017
+              },
+              {
+                "id": 12070017,
+                "content": "Then stop running for a moment and be honest with yourself. Listen to what your heart is telling you.",
+                "npc": 260002,
+                "next": 12070018
+              },
+              {
+                "id": 12070018,
+                "content": "My heart...?",
+                "npc": 260001,
+                "next": 12070019
+              },
+              {
+                "id": 12070019,
+                "content": "(Perhaps it's time I went back to our old hideout.)",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -108946,6 +109076,19 @@
               "17901699603925720263",
               "17901699603915720261",
               "17901699603925720262"
+            ],
+            "dialogues": [
+              {
+                "id": 12070021,
+                "content": "(It's been a long time since I was last here... Look at all this dust. I should clean the place up.)",
+                "npc": 260001,
+                "next": 12070022
+              },
+              {
+                "id": 12070022,
+                "content": "(And I should finally... sort through what Blues left behind.)",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -108955,6 +109098,55 @@
             "next": [
               "17901699603925720265",
               "17901699603935720267"
+            ],
+            "dialogues": [
+              {
+                "id": 12070025,
+                "content": "After you joined the Legion, I would sometimes try to imagine what you might look like when you came home.",
+                "npc": 260001,
+                "next": 12070026
+              },
+              {
+                "id": 12070026,
+                "content": "They say you hardly notice the little ways someone changes when you see them every day.",
+                "npc": 260001,
+                "next": 12070027
+              },
+              {
+                "id": 12070027,
+                "content": "But spend a few years apart, and even the smallest change stands out.",
+                "npc": 260001,
+                "next": 12070028
+              },
+              {
+                "id": 12070028,
+                "content": "You were still growing when you left. I thought that after three years, you might have grown much taller. Perhaps I would even have to look up at you.",
+                "npc": 260001,
+                "next": 12070029
+              },
+              {
+                "id": 12070029,
+                "content": "I thought the Legion's training might make you look tougher too. But you always took such care with your appearance. I knew you'd still look as neat as ever.",
+                "npc": 260001,
+                "next": 12070030
+              },
+              {
+                "id": 12070030,
+                "content": "Everyone always said you were handsome. You must have looked striking in uniform.",
+                "npc": 260001,
+                "next": 12070031
+              },
+              {
+                "id": 12070031,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070032
+              },
+              {
+                "id": 12070032,
+                "content": "But now I'll never know.",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -108964,6 +109156,31 @@
             "next": [
               "17901699603925720265",
               "17901699603935720267"
+            ],
+            "dialogues": [
+              {
+                "id": 12070034,
+                "content": "\"I'll never let anyone die to Filthoids again.\"",
+                "npc": 260001,
+                "next": 12070035
+              },
+              {
+                "id": 12070035,
+                "content": "...How naive I was. I thought that if we killed every Filthoid, everyone would be safe. There would be no more grief. No more goodbyes.",
+                "npc": 260001,
+                "next": 12070036
+              },
+              {
+                "id": 12070036,
+                "content": "Only later did I realise that Filthoids weren't the only things in this world that could take someone you love away.",
+                "npc": 260001,
+                "next": 12070037
+              },
+              {
+                "id": 12070037,
+                "content": "What am I supposed to hope for now...?",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -108973,6 +109190,31 @@
             "next": [
               "17901699603925720265",
               "17901699603935720267"
+            ],
+            "dialogues": [
+              {
+                "id": 12070040,
+                "content": "I forgot to put this away...",
+                "npc": 260001,
+                "next": 12070041
+              },
+              {
+                "id": 12070041,
+                "content": "I wonder how {性别：he|she} is doing. How could the information I gathered have been so wrong? I put {性别：him|her} in danger...",
+                "npc": 260001,
+                "next": 12070042
+              },
+              {
+                "id": 12070042,
+                "content": "No. That isn't right. {性别：He|She} wouldn't want me thinking like this. I have to trust that {性别：he|she} can make it through this.",
+                "npc": 260001,
+                "next": 12070043
+              },
+              {
+                "id": 12070043,
+                "content": "Yes... {性别：He|She} will make it home safely.",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -108994,17 +109236,127 @@
             "next": [
               "17901699603935720270",
               "17901699603935720271"
+            ],
+            "dialogues": [
+              {
+                "id": 12070047,
+                "content": "*sigh* These books have been sitting here for years. I've barely had time to read since I started working.",
+                "npc": 260001,
+                "next": 12070048
+              },
+              {
+                "id": 12070048,
+                "content": "Blues left notes for me in many of these... He went to all that trouble, and I never made use of a single one...",
+                "npc": 260001,
+                "next": 12070049
+              },
+              {
+                "id": 12070049,
+                "content": "These newspapers... They're all reports on productions staged at the Galea Theatre. Blues made a point of asking me not to throw them away. I should sort through them and box them up.",
+                "npc": 260001,
+                "next": 12070050
+              },
+              {
+                "id": 12070050,
+                "content": "Hm?",
+                "npc": 260001,
+                "next": 12070051
+              },
+              {
+                "id": 12070051,
+                "content": "This clipping...",
+                "npc": 260001,
+                "next": 12070052
+              },
+              {
+                "id": 12070052,
+                "content": "(A neatly trimmed newspaper clipping contains a list of names. \"Blues Fischer\" has been circled in bright ink, with a small victory sign drawn beside it.)",
+                "next": 12070053
+              },
+              {
+                "id": 12070053,
+                "content": "—!",
+                "npc": 260001,
+                "next": 12070056
+              },
+              {
+                "id": 12070056,
+                "content": "(It's getting late... I should find something to eat. After that... I think a factory in the south of the city was hiring temporary workers.)",
+                "npc": 260001,
+                "next": 12070057
+              },
+              {
+                "id": 12070057,
+                "content": "(Yes. I'll go there once I've eaten...)",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17901699603935720270",
             "type": "TalkNode",
-            "name": "黎瑟不想看"
+            "name": "黎瑟不想看",
+            "dialogues": [
+              {
+                "id": 12070059,
+                "content": "(No. I don't want to look at it.)",
+                "npc": 260001
+              }
+            ]
           },
           {
             "id": "17901699603935720271",
             "type": "TalkNode",
-            "name": "回来捡名单"
+            "name": "回来捡名单",
+            "dialogues": [
+              {
+                "id": 12070063,
+                "content": "There are other names...",
+                "npc": 260001,
+                "next": 12070065
+              },
+              {
+                "id": 12070065,
+                "content": "Marian Rhodes. Kenny Warren. Lucy Clark. Darcy Sloan...",
+                "npc": 260001,
+                "next": 12070066
+              },
+              {
+                "id": 12070066,
+                "content": "They all... met the same fate as Blues.",
+                "npc": 260001,
+                "next": 12070067
+              },
+              {
+                "id": 12070067,
+                "content": "Of course... How did I not realise?",
+                "npc": 260001,
+                "next": 12070068
+              },
+              {
+                "id": 12070068,
+                "content": "Blues wasn't the only victim. Behind every name on this list is a family that has lost someone. And the Legion's lies have kept them all in the dark.",
+                "npc": 260001,
+                "next": 12070069
+              },
+              {
+                "id": 12070069,
+                "content": "Perhaps they're still counting the days until their loved ones come home. Perhaps, like me, they're clinging to an illusion.",
+                "npc": 260001,
+                "next": 12070070
+              },
+              {
+                "id": 12070070,
+                "content": "Is this what you wanted me to find, Blues?",
+                "npc": 260001,
+                "next": 12070071
+              },
+              {
+                "id": 12070071,
+                "content": "There's still something I can do. Even if I can't make the truth public, I can at least tell these families what happened.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       }
@@ -109024,12 +109376,266 @@
             "name": "敲门对话",
             "next": [
               "17872153023084507659"
+            ],
+            "dialogues": [
+              {
+                "id": 12070075,
+                "content": "This should be Marian's home.",
+                "npc": 260001,
+                "next": 12070076
+              },
+              {
+                "id": 12070076,
+                "content": "Knock, knock.",
+                "next": 12070077
+              },
+              {
+                "id": 12070077,
+                "content": "Hello? Is anyone home?",
+                "npc": 260001,
+                "next": 12070078
+              },
+              {
+                "id": 12070078,
+                "content": "Don't bother. No one's home. An old woman lives there on her own. She takes a walk around the square every morning, so she won't be back for a while.",
+                "npc": 260003,
+                "next": 12070079
+              },
+              {
+                "id": 12070079,
+                "content": "I see. Thank you. I'll look for her in the square.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17872153023084507659",
             "type": "TalkNode",
-            "name": "罗德斯奶奶"
+            "name": "罗德斯奶奶",
+            "dialogues": [
+              {
+                "id": 12070081,
+                "content": "...",
+                "npc": 260005,
+                "speakerName": "Forlorn Old Man",
+                "next": 12070082
+              },
+              {
+                "id": 12070082,
+                "content": "Good morning, Mrs Rhodes.",
+                "npc": 260001,
+                "next": 12070083
+              },
+              {
+                "id": 12070083,
+                "content": "Hm...? You're the Fischer girl, aren't you?",
+                "npc": 260005,
+                "next": 12070084
+              },
+              {
+                "id": 12070084,
+                "content": "I heard you'd left the Escort. Did something happen? Did the Legion give you trouble, or were you hurt on a mission?",
+                "npc": 260005,
+                "next": 12070085
+              },
+              {
+                "id": 12070085,
+                "content": "...I'm fine. Thank you for asking.",
+                "npc": 260001,
+                "next": 12070086
+              },
+              {
+                "id": 12070086,
+                "content": "You look exhausted, dear. Your eyes are bloodshot. You haven't had a proper night's sleep in days, have you?",
+                "npc": 260005,
+                "next": 12070087
+              },
+              {
+                "id": 12070087,
+                "content": "I...",
+                "npc": 260001,
+                "next": 12070088
+              },
+              {
+                "id": 12070088,
+                "content": "Oh, you're too kind for your own good. Always looking after everyone but yourself — just like my granddaughter.",
+                "npc": 260005,
+                "next": 12070089
+              },
+              {
+                "id": 12070089,
+                "content": "My little Marian... She used to work from dawn till dusk to pay for my treatment. She was getting thinner by the day.",
+                "npc": 260005,
+                "next": 12070090
+              },
+              {
+                "id": 12070090,
+                "content": "Her clothes were hanging off her, but she kept insisting it was only because she'd been exercising.",
+                "npc": 260005,
+                "next": 12070091
+              },
+              {
+                "id": 12070091,
+                "content": "She didn't want you to worry.",
+                "npc": 260001,
+                "next": 12070092
+              },
+              {
+                "id": 12070092,
+                "content": "I know, I know... I just wish she'd taken better care of herself.",
+                "npc": 260005,
+                "next": 12070093
+              },
+              {
+                "id": 12070093,
+                "content": "At least now that she's joined the Legion, she doesn't have to wear herself out looking after these old bones.",
+                "npc": 260005,
+                "next": 12070094
+              },
+              {
+                "id": 12070094,
+                "content": "But I haven't heard a word from her since she went into... what was it called, closed training? How could I not worry?",
+                "npc": 260005,
+                "next": 12070095
+              },
+              {
+                "id": 12070095,
+                "content": "I keep wondering how she's getting on in the Legion... whether she's made any friends... You were with the Legion too, weren't you? Have you heard anything about Marian?",
+                "npc": 260005,
+                "next": 12070096
+              },
+              {
+                "id": 12070096,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070097
+              },
+              {
+                "id": 12070097,
+                "content": "Mrs Rhodes, that's why I came. It's about Marian.",
+                "npc": 260001,
+                "next": 12070098
+              },
+              {
+                "id": 12070098,
+                "content": "What is it? Has something happened?",
+                "npc": 260005,
+                "next": 12070099
+              },
+              {
+                "id": 12070099,
+                "content": "...No. Please don't worry. She's doing... very well in the Legion. She's even received a commendation.",
+                "npc": 260001,
+                "next": 12070100
+              },
+              {
+                "id": 12070100,
+                "content": "Before I left, my commanding officer asked me to visit soldiers' families whenever I could. Please take this. It's a special allowance for the families of exemplary soldiers.",
+                "npc": 260001,
+                "next": 12070101
+              },
+              {
+                "id": 12070101,
+                "content": "...Is that true? This isn't money Marian saved for me, is it?",
+                "npc": 260005,
+                "next": 12070102
+              },
+              {
+                "id": 12070102,
+                "content": "Of course not. Her unit is in closed training, so they aren't allowed to contact anyone outside or send money home. This allowance is awarded to the families of soldiers who've distinguished themselves — the Legion's way of thanking them for raising such fine soldiers.",
+                "npc": 260001,
+                "next": 12070103
+              },
+              {
+                "id": 12070103,
+                "content": "The Legion is giving us money? Goodness, I've never heard of anything like that... My little Marian really has done us proud!",
+                "npc": 260005,
+                "next": 12070104
+              },
+              {
+                "id": 12070104,
+                "content": "With this money, I can make her a new quilt. When she comes home, it'll keep her warm at night.",
+                "npc": 260005,
+                "next": 12070105
+              },
+              {
+                "id": 12070105,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070106
+              },
+              {
+                "id": 12070106,
+                "content": "This may sound silly, but I come here every day in case Marian's unit passes through. I keep hoping to catch a glimpse of her — just to see for myself that she's well and looking stronger.",
+                "npc": 260005,
+                "next": 12070107
+              },
+              {
+                "id": 12070107,
+                "content": "But now that I know she's doing well, I can finally stop worrying.",
+                "npc": 260005,
+                "next": 12070108
+              },
+              {
+                "id": 12070108,
+                "content": "Oh, look at me... I've done nothing but ramble on about my granddaughter. Thank you for bringing me news, dear. It's nearly lunchtime. Would you like to come back with me for something to eat?",
+                "npc": 260005,
+                "next": 12070109
+              },
+              {
+                "id": 12070109,
+                "content": "Thank you, but I still have work to do. There are other families I need to visit.",
+                "npc": 260001,
+                "next": 12070110
+              },
+              {
+                "id": 12070110,
+                "content": "All right. I know how demanding the Legion can be. This can't be easy for you. Oh, that reminds me... Do you happen to know how the older Warren boy is doing?",
+                "npc": 260005,
+                "next": 12070111
+              },
+              {
+                "id": 12070111,
+                "content": "He joined the Legion the same year Marian did. Will his family be getting an allowance too? His younger brother works at the railway station. It breaks my heart to see that poor boy working himself to the bone every day.",
+                "npc": 260005,
+                "next": 12070112
+              },
+              {
+                "id": 12070112,
+                "content": "Kenny Warren... Yes. He's on my list as well. Don't worry. I'll go and see his younger brother.",
+                "npc": 260001,
+                "next": 12070113
+              },
+              {
+                "id": 12070113,
+                "content": "Good. That's a relief. You'll find him at the railway station. He starts at the crack of dawn and rarely gets home before dark.",
+                "npc": 260005,
+                "next": 12070114
+              },
+              {
+                "id": 12070114,
+                "content": "I see. Thank you.",
+                "npc": 260001,
+                "next": 12070115
+              },
+              {
+                "id": 12070115,
+                "content": "I should be going. Please look after yourself. I'm sure Marian would want you to stay well while she's away.",
+                "npc": 260001,
+                "next": 12070116
+              },
+              {
+                "id": 12070116,
+                "content": "I will. Thank you, dear.",
+                "npc": 260005,
+                "next": 12070118
+              },
+              {
+                "id": 12070118,
+                "content": "The railway station next. Kenny Warren's younger brother should be there.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109049,6 +109655,19 @@
             ],
             "next": [
               "17872180642791136856"
+            ],
+            "dialogues": [
+              {
+                "id": 12070120,
+                "content": "Excuse me. Do you know if anyone named Warren works here?",
+                "npc": 260001,
+                "next": 12070121
+              },
+              {
+                "id": 12070121,
+                "content": "What? How would I know? I've only just been transferred here. I don't know any of the workers yet.",
+                "npc": 260006
+              }
             ]
           },
           {
@@ -109062,6 +109681,25 @@
             ],
             "next": [
               "17872180642791136856"
+            ],
+            "dialogues": [
+              {
+                "id": 12070123,
+                "content": "Excuse me. Does anyone named Warren work here?",
+                "npc": 260001,
+                "next": 12070124
+              },
+              {
+                "id": 12070124,
+                "content": "Could be...",
+                "npc": 260007,
+                "next": 12070125
+              },
+              {
+                "id": 12070125,
+                "content": "There are too many people here for me to know everyone by name.",
+                "npc": 260007
+              }
             ]
           },
           {
@@ -109075,12 +109713,126 @@
             ],
             "next": [
               "17872180642791136856"
+            ],
+            "dialogues": [
+              {
+                "id": 12070127,
+                "content": "Excuse me. Do you happen to know if anyone named Warren works here?",
+                "npc": 260001,
+                "next": 12070128
+              },
+              {
+                "id": 12070128,
+                "content": "Warren...? No. There's no one by that name here.",
+                "npc": 260008,
+                "next": 12070129
+              },
+              {
+                "id": 12070129,
+                "content": "You must have the wrong place.",
+                "npc": 260008,
+                "next": 12070130
+              },
+              {
+                "id": 12070130,
+                "content": "I see... His neighbour told me he worked here.",
+                "npc": 260001,
+                "next": 12070131
+              },
+              {
+                "id": 12070131,
+                "content": "Then they must have been mistaken.",
+                "npc": 260008,
+                "next": 12070132
+              },
+              {
+                "id": 12070132,
+                "content": "All right. Thank you. I'll ask around a little more.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17872180642791136856",
             "type": "TalkNode",
-            "name": "马蒂斯触发"
+            "name": "马蒂斯触发",
+            "dialogues": [
+              {
+                "id": 12070134,
+                "content": "Hey! You in red! Yes, you. What are you doing snooping around and asking questions?",
+                "npc": 260010,
+                "speakerName": "Alert Guard",
+                "next": 12070135
+              },
+              {
+                "id": 12070135,
+                "content": "Come with us. We've got a few questions for you.",
+                "npc": 260010,
+                "speakerName": "Alert Guard",
+                "next": 12070136
+              },
+              {
+                "id": 12070136,
+                "content": "Ah...",
+                "npc": 260001,
+                "next": 12070137
+              },
+              {
+                "id": 12070137,
+                "content": "Huh? Rhythm? What are you doing here?",
+                "npc": 260010,
+                "speakerName": "Alert Guard",
+                "next": 12070138
+              },
+              {
+                "id": 12070138,
+                "content": "Sorry. I couldn't make you out from back there. Things have been tense lately, so I'm a little on edge.",
+                "npc": 260010,
+                "speakerName": "Alert Guard",
+                "next": 12070139
+              },
+              {
+                "id": 12070139,
+                "content": "It's all right. I understand. It's been a while, Mathis. Have you been posted here?",
+                "npc": 260001,
+                "next": 12070140
+              },
+              {
+                "id": 12070140,
+                "content": "Yeah. After that hijacking a few days ago, they sent half the Escort down here. This place is practically a barracks now.",
+                "npc": 260010,
+                "next": 12070141
+              },
+              {
+                "id": 12070141,
+                "content": "Anyway, what were you doing just now? The whole station's under lockdown. You can't go around asking questions without attracting attention. If I hadn't recognised you, you'd probably be in an interrogation room by now.",
+                "npc": 260010,
+                "next": 12070142
+              },
+              {
+                "id": 12070142,
+                "content": "Thank you for the warning. I'll be more careful. I'm looking for a man named Warren. I was told he works here.",
+                "npc": 260001,
+                "next": 12070143
+              },
+              {
+                "id": 12070143,
+                "content": "Dougie Warren? Funny you should mention him. I ran into him earlier. He works at the ironworks below the station. You won't find him up here.",
+                "npc": 260010,
+                "next": 12070144
+              },
+              {
+                "id": 12070144,
+                "content": "Take that passage. It'll lead you down to the ironworks.",
+                "npc": 260010,
+                "next": 12070145
+              },
+              {
+                "id": 12070145,
+                "content": "Thank you, Mathis.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109095,6 +109847,265 @@
             "name": "触发道吉站桩",
             "next": [
               "17872198265145642746"
+            ],
+            "dialogues": [
+              {
+                "id": 12070147,
+                "content": "So this is the ironworks. I should ask around.",
+                "npc": 260001,
+                "next": 12070148
+              },
+              {
+                "id": 12070148,
+                "content": "Damn it... They nearly caught me again.",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070149
+              },
+              {
+                "id": 12070149,
+                "content": "It took me long enough to find steady work. If the stationmaster finds out I've brought trouble down here... Ah, hell. What am I supposed to do?",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070150
+              },
+              {
+                "id": 12070150,
+                "content": "Kenny said joining the Legion would make things easier for all of us. Two years, and he hasn't sent home a single copper. Selfish bastard.",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070151
+              },
+              {
+                "id": 12070151,
+                "content": "Bet he's got his Legion mates now. Wouldn't care if his own brother dropped dead! And I was proud of him when he got in. I was such an idiot!",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070152
+              },
+              {
+                "id": 12070152,
+                "content": "Excuse me. Are you Kenny Warren's younger brother?",
+                "npc": 260001,
+                "next": 12070153
+              },
+              {
+                "id": 12070153,
+                "content": "Huh? Yeah. Who's asking?",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070154
+              },
+              {
+                "id": 12070154,
+                "content": "My name is Rhythm Fischer. I used to serve with the Escort under the 6th Legion. My commanding officer asked me to visit Kenny's family and—",
+                "npc": 260001,
+                "next": 12070155
+              },
+              {
+                "id": 12070155,
+                "content": "What, Kenny finally remembered us? Did he send any money?",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070156
+              },
+              {
+                "id": 12070156,
+                "content": "...Is that really all you care about? You haven't heard from him in two years. Didn't you ever worry that something might have happened to him?",
+                "npc": 260001,
+                "next": 12070157
+              },
+              {
+                "id": 12070157,
+                "content": "Why should I? I'm the one here breaking my back just to put food on the table. If you haven't brought any money, stop wasting my time. I've got work to do.",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070158
+              },
+              {
+                "id": 12070158,
+                "content": "What if I told you he was killed in action?",
+                "npc": 260001,
+                "next": 12070159
+              },
+              {
+                "id": 12070159,
+                "content": "Wh—What...?",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070160
+              },
+              {
+                "id": 12070160,
+                "content": "Kenny is dead. That's why he never wrote to you. That's why he never sent any money home.",
+                "npc": 260001,
+                "next": 12070161
+              },
+              {
+                "id": 12070161,
+                "content": "No... That's not true. Don't be absurd.",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070162
+              },
+              {
+                "id": 12070162,
+                "content": "He only went away for training. He wasn't going to the front. He told me it was safe!",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070163
+              },
+              {
+                "id": 12070163,
+                "content": "He told you that so you wouldn't worry. Once he joined the Legion, it was only a matter of time before he was deployed.",
+                "npc": 260001,
+                "next": 12070164
+              },
+              {
+                "id": 12070164,
+                "content": "If you didn't understand why before, surely you do now.",
+                "npc": 260001,
+                "next": 12070165
+              },
+              {
+                "id": 12070165,
+                "content": "But... the kids... They're still so young. What are they supposed to do without him?",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070166
+              },
+              {
+                "id": 12070166,
+                "content": "No... I didn't mean any of it. I take it back, all right? Just... don't say that. My brother's coming home, isn't he? He said he would...",
+                "npc": 260013,
+                "speakerName": "Irritable Worker",
+                "next": 12070167
+              },
+              {
+                "id": 12070167,
+                "content": "...I'm sorry.",
+                "npc": 260001,
+                "next": 12070168
+              },
+              {
+                "id": 12070168,
+                "content": "Well, well. Dougie Warren. Thought you could hide from me down here?",
+                "npc": 260012,
+                "next": 12070169
+              },
+              {
+                "id": 12070169,
+                "content": "Today's the deadline. You got my money?",
+                "npc": 260012,
+                "next": 12070170
+              },
+              {
+                "id": 12070170,
+                "content": "I—I wasn't hiding... I was only checking the machinery...",
+                "npc": 260013,
+                "next": 12070171
+              },
+              {
+                "id": 12070171,
+                "content": "Yeah, sure. Pay up.",
+                "npc": 260012,
+                "next": 12070172
+              },
+              {
+                "id": 12070172,
+                "content": "Please, sir. You know how little this job pays, and I've got two kids to feed. I can't come up with that kind of money all at once...",
+                "npc": 260013,
+                "next": 12070173
+              },
+              {
+                "id": 12070173,
+                "content": "Please... just give me a few more months.",
+                "npc": 260013,
+                "next": 12070174
+              },
+              {
+                "id": 12070174,
+                "content": "Cut the crap. You've had more than enough time.",
+                "npc": 260012,
+                "next": 12070175
+              },
+              {
+                "id": 12070175,
+                "content": "No money? Fine. I'll take the kids instead.",
+                "npc": 260012,
+                "next": 12070176
+              },
+              {
+                "id": 12070176,
+                "content": "They're young, but they look sturdy. Put them to work and they'll clear your debt soon enough.",
+                "npc": 260012,
+                "next": 12070177
+              },
+              {
+                "id": 12070177,
+                "content": "No! Please, sir!",
+                "npc": 260013,
+                "next": 12070178
+              },
+              {
+                "id": 12070178,
+                "content": "I'll borrow it from someone else. I'll find the money somehow. Just leave the kids out of this! My brother... My brother's dead. They're all he left behind!",
+                "npc": 260013,
+                "next": 12070179
+              },
+              {
+                "id": 12070179,
+                "content": "(Those children... They're Kenny's? Dougie's been raising Kenny's children all this time?)",
+                "npc": 260001,
+                "next": 12070180
+              },
+              {
+                "id": 12070180,
+                "content": "Spare me the sob story. You're just a lazy piece of s**t looking for an excuse not to pay.",
+                "npc": 260012,
+                "next": 12070181
+              },
+              {
+                "id": 12070181,
+                "content": "I'm not trying to get out of paying! But forty per cent interest? How am I supposed to keep up with that, let alone pay off the debt?",
+                "npc": 260013,
+                "next": 12070182
+              },
+              {
+                "id": 12070182,
+                "content": "Take me instead. I can work. I'm stronger than both of them put together. I'll be worth more to you!",
+                "npc": 260013,
+                "next": 12070183
+              },
+              {
+                "id": 12070183,
+                "content": "Forty per cent interest...? That's illegal.",
+                "npc": 260001,
+                "next": 12070184
+              },
+              {
+                "id": 12070184,
+                "content": "And who the hell are you? \"Illegal\"? Go on, then. Run to the Security Bureau. See if they lift a finger for a few Charons.",
+                "npc": 260012,
+                "next": 12070185
+              },
+              {
+                "id": 12070185,
+                "content": "...I won't deny there's prejudice against Charons in the Security Bureau. But not everyone there has forgotten their duty. I served in the Escort, and I would never have turned a blind eye to this.",
+                "npc": 260001,
+                "next": 12070186
+              },
+              {
+                "id": 12070186,
+                "content": "You? In the Escort? Sure. And I'm with the 13th Legion.",
+                "npc": 260012,
+                "next": 12070187
+              },
+              {
+                "id": 12070187,
+                "content": "This is none of your business. Walk away now, or you're next.",
+                "npc": 260012
+              }
             ]
           },
           {
@@ -109103,6 +110114,60 @@
             "name": "触发催债人对话",
             "next": [
               "17872275674185645578"
+            ],
+            "dialogues": [
+              {
+                "id": 12070189,
+                "content": "Damn it... You weren't bluffing... You really did serve in the Escort?",
+                "npc": 260012,
+                "next": 12070190
+              },
+              {
+                "id": 12070190,
+                "content": "Are you ready to listen now? Forty per cent is extortionate. Lower the interest rate and give him more time to repay the debt.",
+                "npc": 260001,
+                "next": 12070191
+              },
+              {
+                "id": 12070191,
+                "content": "All right! I'll change it! Just don't hit me again!",
+                "npc": 260012,
+                "next": 12070192
+              },
+              {
+                "id": 12070192,
+                "content": "(The debt collector hurriedly pulls out a pen and amends the loan agreement.)",
+                "next": 12070193
+              },
+              {
+                "id": 12070193,
+                "content": "There. Five per cent interest, and three months to pay it back. W—We good?",
+                "npc": 260012,
+                "next": 12070194
+              },
+              {
+                "id": 12070194,
+                "content": "That will do.",
+                "npc": 260001,
+                "next": 12070195
+              },
+              {
+                "id": 12070195,
+                "content": "Kenny Warren died in the Legion's service. The Security Bureau has a duty to protect the family he left behind.",
+                "npc": 260001,
+                "next": 12070196
+              },
+              {
+                "id": 12070196,
+                "content": "I'll be checking in on them. If you go near Dougie or the children again, you'll answer to me. Is that clear?",
+                "npc": 260001,
+                "next": 12070197
+              },
+              {
+                "id": 12070197,
+                "content": "Y—Yes, ma'am. Crystal.",
+                "npc": 260012
+              }
             ]
           },
           {
@@ -109113,6 +110178,73 @@
             "pos": [
               -16076,
               7101
+            ],
+            "dialogues": [
+              {
+                "id": 12070198,
+                "content": "...Thank you.",
+                "npc": 260013,
+                "next": 12070199
+              },
+              {
+                "id": 12070199,
+                "content": "There's no need to thank me. What they were doing was wrong. I only did what was right.",
+                "npc": 260001,
+                "next": 12070200
+              },
+              {
+                "id": 12070200,
+                "content": "Here. This is compensation from the Legion for the family of a fallen soldier. You can put it towards the debt or use it to care for the children. It's up to you.",
+                "npc": 260001,
+                "next": 12070201
+              },
+              {
+                "id": 12070201,
+                "content": "Compensation... Heh...",
+                "npc": 260013,
+                "next": 12070202
+              },
+              {
+                "id": 12070202,
+                "content": "How am I supposed to accept money because my brother died...? You can't put a price on a man's life.",
+                "npc": 260013,
+                "next": 12070203
+              },
+              {
+                "id": 12070203,
+                "content": "And the kids... They've lost their father.",
+                "npc": 260013,
+                "next": 12070204
+              },
+              {
+                "id": 12070204,
+                "content": "...But they still have you. You've been working yourself to the bone to keep them fed.",
+                "npc": 260001,
+                "next": 12070205
+              },
+              {
+                "id": 12070205,
+                "content": "They depend on you now. I’m sure Kenny would have wanted you to take care of yourself and be there for them.",
+                "npc": 260001,
+                "next": 12070206
+              },
+              {
+                "id": 12070206,
+                "content": "Yeah... I know. Thank you.",
+                "npc": 260013,
+                "next": 12070207
+              },
+              {
+                "id": 12070207,
+                "content": "But I just... need to be alone for a while. Sorry.",
+                "npc": 260013,
+                "next": 12070208
+              },
+              {
+                "id": 12070208,
+                "content": "Of course. Take care of yourself. If anything else happens, leave a message for me at The Asphodel. Ms Camilla will know how to reach me.",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -109128,12 +110260,200 @@
             "name": "回到冰湖城",
             "next": [
               "17872282021667900956"
+            ],
+            "dialogues": [
+              {
+                "id": 12070210,
+                "content": "Kenny Warren... One more family reached. Next on the list...",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17872282021667900956",
             "type": "TalkNode",
-            "name": "再遇罗德斯奶奶"
+            "name": "再遇罗德斯奶奶",
+            "dialogues": [
+              {
+                "id": 12070212,
+                "content": "Stop bothering me! You've got the wrong house! No son of mine is a Charon. Come knocking again and I'll call the Security Bureau!",
+                "npc": 260014,
+                "next": 12070213
+              },
+              {
+                "id": 12070213,
+                "content": "All right... Sorry to have disturbed you.",
+                "npc": 260001,
+                "next": 12070214
+              },
+              {
+                "id": 12070214,
+                "content": "This is odd... The young man on the list had the same surname as the man who lives here. Could it really just be a coincidence...?",
+                "npc": 260001,
+                "next": 12070215
+              },
+              {
+                "id": 12070215,
+                "content": "Oh, he's the boy's father, all right.",
+                "npc": 260015,
+                "next": 12070216
+              },
+              {
+                "id": 12070216,
+                "content": "The lad was his son from his first marriage. They treated him like a servant from the time he was little — always ordering him about, never a kind word for him. Then his father packed him off to the Legion. After that, they acted as if he'd never existed.",
+                "npc": 260015,
+                "next": 12070217
+              },
+              {
+                "id": 12070217,
+                "content": "So that's what happened...",
+                "npc": 260001,
+                "next": 12070218
+              },
+              {
+                "id": 12070218,
+                "content": "But he was still his son. Two years without a word... Did he really not care what happened to him?",
+                "npc": 260001,
+                "next": 12070219
+              },
+              {
+                "id": 12070219,
+                "content": "Exactly. Any man who treats his own child that way deserves whatever comes to him.",
+                "npc": 260015,
+                "next": 12070220
+              },
+              {
+                "id": 12070220,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070221
+              },
+              {
+                "id": 12070221,
+                "content": "(Rejected by his own family. Sent away, then erased from their lives... How could a parent be so cruel?)",
+                "npc": 260001,
+                "next": 12070222
+              },
+              {
+                "id": 12070222,
+                "content": "Only a few names left...",
+                "npc": 260001,
+                "next": 12070223
+              },
+              {
+                "id": 12070223,
+                "content": "Once I've visited every family... what then?",
+                "npc": 260001,
+                "next": 12070224
+              },
+              {
+                "id": 12070224,
+                "content": "Rhythm! There you are, dear. I've been looking all over for you.",
+                "npc": 260005,
+                "next": 12070225
+              },
+              {
+                "id": 12070225,
+                "content": "Hm...? Mrs Rhodes. Did you need something?",
+                "npc": 260001,
+                "next": 12070226
+              },
+              {
+                "id": 12070226,
+                "content": "I made you some stew. It's fresh off the stove, still piping hot. I picked up the vegetables and fish at the market this morning.",
+                "npc": 260005,
+                "next": 12070227
+              },
+              {
+                "id": 12070227,
+                "content": "Oh... Mrs Rhodes, you really didn't have to.",
+                "npc": 260001,
+                "next": 12070228
+              },
+              {
+                "id": 12070228,
+                "content": "Young Dougie Warren told me what you did for him. The other families said you'd brought them money too. They're all so grateful.",
+                "npc": 260005,
+                "next": 12070229
+              },
+              {
+                "id": 12070229,
+                "content": "Going from house to house like that must have worn you out. And knowing you, I doubt you've been eating properly lately.",
+                "npc": 260005,
+                "next": 12070230
+              },
+              {
+                "id": 12070230,
+                "content": "There isn't much an old woman like me can do for you, so I thought I could at least bring you something warm to eat. My Marian always loved my stew. I hope you'll like it too.",
+                "npc": 260005,
+                "next": 12070231
+              },
+              {
+                "id": 12070231,
+                "content": "Thank you... I'd be glad to have it. I won't let any of it go to waste.",
+                "npc": 260001,
+                "next": 12070232
+              },
+              {
+                "id": 12070232,
+                "content": "There, that's better.",
+                "npc": 260005,
+                "next": 12070233
+              },
+              {
+                "id": 12070233,
+                "content": "I should be thanking you too, dear. I've been thinking about what you said the other day.",
+                "npc": 260005,
+                "next": 12070234
+              },
+              {
+                "id": 12070234,
+                "content": "You were right. Marian worked so hard to pay for my treatment. The least I can do is look after myself and stay healthy while I wait for her to come home. That's what she'd want.",
+                "npc": 260005,
+                "next": 12070235
+              },
+              {
+                "id": 12070235,
+                "content": "So no more getting by on dry bread. I need proper hot meals — something that'll do me good. Come and see me when you can. I'll make you something nice again.",
+                "npc": 260005,
+                "next": 12070236
+              },
+              {
+                "id": 12070236,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070237
+              },
+              {
+                "id": 12070237,
+                "content": "Hm? What's wrong, dear? Did someone upset you?",
+                "npc": 260005,
+                "next": 12070238
+              },
+              {
+                "id": 12070238,
+                "content": "...No. I'm fine. It's just the wind. It's making my eyes water. Thank you, Mrs Rhodes. I promise I'll visit again when I can.",
+                "npc": 260001,
+                "next": 12070239
+              },
+              {
+                "id": 12070239,
+                "content": "Good, good. I'd better be getting home, then. Make sure you eat it while it's still hot.",
+                "npc": 260005,
+                "next": 12070241
+              },
+              {
+                "id": 12070241,
+                "content": "Maybe... for those left behind, finding a way to go on is enough.",
+                "npc": 260001,
+                "next": 12070242
+              },
+              {
+                "id": 12070242,
+                "content": "(Can't let Mrs Rhodes's kindness go to waste. I'm feeling a little tired anyway, so I might as well head to The Asphodel, get some rest, and have that stew.)",
+                "npc": 260001
+              }
+            ]
           }
         ]
       }
@@ -109153,12 +110473,296 @@
             "name": "卡米拉蕾伊对话",
             "next": [
               "17872805278704264"
+            ],
+            "dialogues": [
+              {
+                "id": 12070243,
+                "content": "Please, Ms Camilla. Could you put me in touch with a few more Phoxhunters?",
+                "npc": 260017,
+                "speakerName": "Haggard Charon Girl",
+                "next": 12070244
+              },
+              {
+                "id": 12070244,
+                "content": "For a job like this... I could introduce you to every Phoxhunter in Hyperborea, and I doubt a single one would take it.",
+                "npc": 260002,
+                "next": 12070245
+              },
+              {
+                "id": 12070245,
+                "content": "Start asking questions about a Legion officer at a time like this, and you may as well hang a sign around your neck that says \"SPY\".",
+                "npc": 260002,
+                "next": 12070246
+              },
+              {
+                "id": 12070246,
+                "content": "But I have to find—",
+                "npc": 260017,
+                "speakerName": "Haggard Charon Girl",
+                "next": 12070247
+              },
+              {
+                "id": 12070247,
+                "content": "Is something wrong? Do you need help?",
+                "npc": 260001,
+                "next": 12070248
+              },
+              {
+                "id": 12070248,
+                "content": "Oh! Are you a Phoxhunter too, miss? Please, I really need help!",
+                "npc": 260017,
+                "speakerName": "Haggard Charon Girl",
+                "next": 12070249
+              },
+              {
+                "id": 12070249,
+                "content": "She's not a Phoxhunter. Phoxhunters work for money. Rhythm spends her own money helping people. Apparently, that's her idea of a hobby.",
+                "npc": 260002,
+                "next": 12070250
+              },
+              {
+                "id": 12070250,
+                "content": "Now you're just teasing me, Ms Camilla.",
+                "npc": 260001,
+                "next": 12070251
+              },
+              {
+                "id": 12070251,
+                "content": "Hi. I'm Rhythm. You mentioned the Legion. Does this job have something to do with them?",
+                "npc": 260001,
+                "next": 12070252
+              },
+              {
+                "id": 12070252,
+                "content": "I'm not a Phoxhunter, but I served in the Escort under the 6th Legion. I know how things work here in Icelake. Tell me what happened. If I can help, I will.",
+                "npc": 260001,
+                "next": 12070253
+              },
+              {
+                "id": 12070253,
+                "content": "Really? Thank you so much!",
+                "npc": 260017,
+                "speakerName": "Haggard Charon Girl",
+                "next": 12070254
+              },
+              {
+                "id": 12070254,
+                "content": "Rhythm... you really need to stop making every stranger's problems your responsibility. You've spent days running all over the city without a break. I was just about to tell you to get some rest, and now you're volunteering for another job — a dangerous one, by the sound of it.",
+                "npc": 260002,
+                "next": 12070255
+              },
+              {
+                "id": 12070255,
+                "content": "Thank you for your concern, Ms Camilla.",
+                "npc": 260001,
+                "next": 12070256
+              },
+              {
+                "id": 12070256,
+                "content": "But I can manage. I handled far worse during my time with the Escort.",
+                "npc": 260001,
+                "next": 12070257
+              },
+              {
+                "id": 12070257,
+                "content": "Besides, she clearly needs help. If {nickname} were here, {性别：he|she} wouldn't turn her away.",
+                "npc": 260001,
+                "next": 12070258
+              },
+              {
+                "id": 12070258,
+                "content": "Since {性别：he|she} isn't here, I'll do what {性别：he|she} would have done.",
+                "npc": 260001,
+                "next": 12070259
+              },
+              {
+                "id": 12070259,
+                "content": "Honestly, you two are just as bad as each other.",
+                "npc": 260002,
+                "next": 12070260
+              },
+              {
+                "id": 12070260,
+                "content": "Let's find somewhere quiet to sit. Then you can tell me what happened.",
+                "npc": 260001,
+                "next": 12070261
+              },
+              {
+                "id": 12070261,
+                "content": "All right. Thank you so much, Rhythm!",
+                "npc": 260017,
+                "speakerName": "Haggard Charon Girl",
+                "next": 12070262
+              },
+              {
+                "id": 12070262,
+                "content": "Don't thank me yet. Let's start from the beginning. Once I know what happened, I'll see what I can do.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17872805278704264",
             "type": "TalkNode",
-            "name": "桌边蕾伊对话"
+            "name": "桌边蕾伊对话",
+            "dialogues": [
+              {
+                "id": 12070263,
+                "content": "I didn't catch your name.",
+                "npc": 260001,
+                "next": 12070264
+              },
+              {
+                "id": 12070264,
+                "content": "Rae. Rae Sloan.",
+                "npc": 260017,
+                "speakerName": "Haggard Charon Girl",
+                "next": 12070265
+              },
+              {
+                "id": 12070265,
+                "content": "(Sloan... There was a Sloan on the list. Could she be related?)",
+                "npc": 260001,
+                "next": 12070266
+              },
+              {
+                "id": 12070266,
+                "content": "(I should hear her out first. If she's related to one of them, perhaps I can help her too.)",
+                "npc": 260001,
+                "next": 12070267
+              },
+              {
+                "id": 12070267,
+                "content": "Camilla said your request involved the Legion. What exactly do you need help with?",
+                "npc": 260001,
+                "next": 12070268
+              },
+              {
+                "id": 12070268,
+                "content": "I'm trying to find a Legion officer who once helped my sister and me.",
+                "npc": 260017,
+                "next": 12070269
+              },
+              {
+                "id": 12070269,
+                "content": "Two years ago, we came to Icelake looking for work. Before we'd even made it through the gates, a gang of thugs cornered us.",
+                "npc": 260017,
+                "next": 12070270
+              },
+              {
+                "id": 12070270,
+                "content": "We'd never been that far from home before. We didn't know the first thing about the city, and we were terrified. The guards just looked the other way. Everyone else kept their distance.",
+                "npc": 260017,
+                "next": 12070271
+              },
+              {
+                "id": 12070271,
+                "content": "Just when we thought no one was going to help, an officer stepped in. He chased the thugs off, then tore into the guards for standing there and doing nothing.",
+                "npc": 260017,
+                "next": 12070272
+              },
+              {
+                "id": 12070272,
+                "content": "He even gave us a few silver coins. He told us not to give up just because we'd met a few bad people, and to try to build a life for ourselves in Icelake.",
+                "npc": 260017,
+                "next": 12070273
+              },
+              {
+                "id": 12070273,
+                "content": "If he hadn't come along, we'd have been too frightened to take another step into the city. We'd have turned around and gone straight home.",
+                "npc": 260017,
+                "next": 12070274
+              },
+              {
+                "id": 12070274,
+                "content": "He didn't just get us safely through the gates. He made us believe we could stay and build a life here.",
+                "npc": 260017,
+                "next": 12070275
+              },
+              {
+                "id": 12070275,
+                "content": "For the next two years, we took whatever work we could get, moved from place to place, and saved every coin we could. This year, we finally found steady work and a place of our own in Mist Aken.",
+                "npc": 260017,
+                "next": 12070276
+              },
+              {
+                "id": 12070276,
+                "content": "Now I want to find him. I want to show him how far we've come — and thank him properly.",
+                "npc": 260017,
+                "next": 12070277
+              },
+              {
+                "id": 12070277,
+                "content": "He sounds like a good man. Do you remember what he looked like? His rank, his unit — anything that could help me identify him?",
+                "npc": 260001,
+                "next": 12070278
+              },
+              {
+                "id": 12070278,
+                "content": "Um... I heard someone call him a major in the 6th Legion. He was tall and broad-shouldered, with brown hair... Oh! And he had a scar here, on the left side of his face!",
+                "npc": 260017,
+                "next": 12070279
+              },
+              {
+                "id": 12070279,
+                "content": "Brown hair... a scar on his left cheek... Ah. I think I know who you mean.",
+                "npc": 260001,
+                "next": 12070280
+              },
+              {
+                "id": 12070280,
+                "content": "The description fits Lieutenant Colonel Johnson. He got that scar during the war. Two years ago, he was still a major, and he may have been posted at the city gates.",
+                "npc": 260001,
+                "next": 12070281
+              },
+              {
+                "id": 12070281,
+                "content": "But... that doesn't sound like something he'd do. I never knew him to go out of his way to help civilians.",
+                "npc": 260001,
+                "next": 12070282
+              },
+              {
+                "id": 12070282,
+                "content": "Rae, are you sure you haven't mistaken him for someone else?",
+                "npc": 260001,
+                "next": 12070283
+              },
+              {
+                "id": 12070283,
+                "content": "Of course! I could never mistake the man who helped us!",
+                "npc": 260017,
+                "next": 12070284
+              },
+              {
+                "id": 12070284,
+                "content": "Strange... Perhaps I didn't know him as well as I thought.",
+                "npc": 260001,
+                "next": 12070285
+              },
+              {
+                "id": 12070285,
+                "content": "If you know who he is, do you know where I can find him? Could you take me to see him?",
+                "npc": 260017,
+                "next": 12070286
+              },
+              {
+                "id": 12070286,
+                "content": "Hm... I'll find out where Lieutenant Colonel Johnson is stationed. The city is under lockdown, so I may not be able to take you straight to him. But we should at least be able to get close enough for you to see him from a safe distance.",
+                "npc": 260001,
+                "next": 12070287
+              },
+              {
+                "id": 12070287,
+                "content": "I'll let you know as soon as I know where he is. Once you've confirmed it's him, we can decide what to do next.",
+                "npc": 260001,
+                "next": 12070288
+              },
+              {
+                "id": 12070288,
+                "content": "All right! Thank you so much, Rhythm. I'll wait to hear from you.",
+                "npc": 260017
+              }
+            ]
           }
         ]
       },
@@ -109173,6 +110777,25 @@
             "name": "闸机前感慨",
             "next": [
               "17873001989544561443"
+            ],
+            "dialogues": [
+              {
+                "id": 12070347,
+                "content": "I haven't been here since the day I first arrived in Icelake. It's every bit as grand as I remember.",
+                "npc": 260017,
+                "next": 12070348
+              },
+              {
+                "id": 12070348,
+                "content": "There are some soldiers over there. Lieutenant Colonel Johnson may be among them. Let's get a little closer.",
+                "npc": 260001,
+                "next": 12070349
+              },
+              {
+                "id": 12070349,
+                "content": "Mm... All right.",
+                "npc": 260017
+              }
             ]
           },
           {
@@ -109181,12 +110804,224 @@
             "name": "列队整兵",
             "next": [
               "17873001231094560543"
+            ],
+            "dialogues": [
+              {
+                "id": 12070351,
+                "content": "Sir! Today's patrol is complete. We found no one suspicious.",
+                "npc": 260021,
+                "next": 12070352
+              },
+              {
+                "id": 12070352,
+                "content": "Understood. You're dismissed.",
+                "npc": 260022,
+                "next": 12070353
+              },
+              {
+                "id": 12070353,
+                "content": "There he is. Is he the officer you've been looking for?",
+                "npc": 260001,
+                "next": 12070354
+              },
+              {
+                "id": 12070354,
+                "content": "Rae...?",
+                "npc": 260001,
+                "next": 12070355
+              },
+              {
+                "id": 12070355,
+                "content": "It's him...",
+                "npc": 260017,
+                "next": 12070356
+              },
+              {
+                "id": 12070356,
+                "content": "I finally found him...",
+                "npc": 260017,
+                "next": 12070357
+              },
+              {
+                "id": 12070357,
+                "content": "Rae?",
+                "npc": 260001,
+                "next": 12070358
+              },
+              {
+                "id": 12070358,
+                "content": "Huh...? Oh, s—sorry. I just... After looking for him for so long, I can't believe he's really here.",
+                "npc": 260017,
+                "next": 12070359
+              },
+              {
+                "id": 12070359,
+                "content": "Yes. He's the officer who helped my sister and me.",
+                "npc": 260017,
+                "next": 12070360
+              },
+              {
+                "id": 12070360,
+                "content": "I can have someone pass on a message for you.",
+                "npc": 260001,
+                "next": 12070361
+              },
+              {
+                "id": 12070361,
+                "content": "I know one of the soldiers over there. I can ask him to let the lieutenant colonel know you're here. Given what he did for you, I'm sure he'll agree to see you.",
+                "npc": 260001,
+                "next": 12070362
+              },
+              {
+                "id": 12070362,
+                "content": "Wait!",
+                "npc": 260017,
+                "next": 12070363
+              },
+              {
+                "id": 12070363,
+                "content": "What's wrong?",
+                "npc": 260001,
+                "next": 12070364
+              },
+              {
+                "id": 12070364,
+                "content": "There are so many soldiers... I'm a little frightened. The truth is... I was so focused on finding him that I never stopped to think about what I'd say when I did.",
+                "npc": 260017,
+                "next": 12070365
+              },
+              {
+                "id": 12070365,
+                "content": "I understand... That's all right. Take as much time as you need. I'll stay with you. You don't have to speak to him today. He'll probably be stationed here for a while.",
+                "npc": 260001,
+                "next": 12070366
+              },
+              {
+                "id": 12070366,
+                "content": "Thank you, Rhythm.",
+                "npc": 260017,
+                "next": 12070367
+              },
+              {
+                "id": 12070367,
+                "content": "Let's move over to the platform. Security is tight, and if we stay here much longer, the guards may start asking questions.",
+                "npc": 260001,
+                "next": 12070368
+              },
+              {
+                "id": 12070368,
+                "content": "We're not doing anything wrong, but I'd rather not draw attention to us.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17873001231094560543",
             "type": "TalkNode",
-            "name": "站台附近再对话"
+            "name": "站台附近再对话",
+            "dialogues": [
+              {
+                "id": 12070370,
+                "content": "By the way, Rae. You said you came to Icelake with your sister. Where is she now? Why isn't she helping you look for him?",
+                "npc": 260001,
+                "next": 12070371
+              },
+              {
+                "id": 12070371,
+                "content": "My sister... She's been very busy with work. She barely has time to come home these days.",
+                "npc": 260017,
+                "next": 12070372
+              },
+              {
+                "id": 12070372,
+                "content": "She must be working very hard. What does she do?",
+                "npc": 260001,
+                "next": 12070373
+              },
+              {
+                "id": 12070373,
+                "content": "Um... She's in the Legion. It's demanding work, but my sister can handle anything. I wouldn't be surprised if she's earned a medal or two by now!",
+                "npc": 260017,
+                "next": 12070374
+              },
+              {
+                "id": 12070374,
+                "content": "What's her name? I may have come across her.",
+                "npc": 260001,
+                "next": 12070375
+              },
+              {
+                "id": 12070375,
+                "content": "Darcy Sloan.",
+                "npc": 260017,
+                "next": 12070376
+              },
+              {
+                "id": 12070376,
+                "content": "(I knew it. Darcy Sloan was on the list... She doesn't know her sister is already...)",
+                "npc": 260001,
+                "next": 12070377
+              },
+              {
+                "id": 12070377,
+                "content": "Well? Do you know her?",
+                "npc": 260017,
+                "next": 12070378
+              },
+              {
+                "id": 12070378,
+                "content": "I... The name is familiar. She...",
+                "npc": 260001,
+                "next": 12070379
+              },
+              {
+                "id": 12070379,
+                "content": "Hm? You can't quite place her? That's all right, Rhythm.",
+                "npc": 260017,
+                "next": 12070380
+              },
+              {
+                "id": 12070380,
+                "content": "My sister and I have always been very close. Even when we're apart, I always know what's on her mind.",
+                "npc": 260017,
+                "next": 12070381
+              },
+              {
+                "id": 12070381,
+                "content": "Even if she can't be here, I know she's still with me.",
+                "npc": 260017,
+                "next": 12070382
+              },
+              {
+                "id": 12070382,
+                "content": "That's why I have to see this through... for her.",
+                "npc": 260017,
+                "next": 12070383
+              },
+              {
+                "id": 12070383,
+                "content": "...?",
+                "npc": 260001,
+                "next": 12070384
+              },
+              {
+                "id": 12070384,
+                "content": "Ah... It looks like he's leaving. Is he going out on patrol?",
+                "npc": 260017,
+                "next": 12070385
+              },
+              {
+                "id": 12070385,
+                "content": "Let's follow him!",
+                "npc": 260017,
+                "next": 12070386
+              },
+              {
+                "id": 12070386,
+                "content": "Huh? Wait! Rae...?",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109201,12 +111036,146 @@
             "name": "门口盯梢站桩",
             "next": [
               "17873049992345707105"
+            ],
+            "dialogues": [
+              {
+                "id": 12070388,
+                "content": "Why did you suddenly run after him? Have you decided what you want to say?",
+                "npc": 260001,
+                "next": 12070389
+              },
+              {
+                "id": 12070389,
+                "content": "Ah, no... I just want to see what he's like now. I need to know if he's still the man I remember...",
+                "npc": 260017,
+                "next": 12070390
+              },
+              {
+                "id": 12070390,
+                "content": "Ugh. What's the hold-up?",
+                "npc": 260022,
+                "next": 12070391
+              },
+              {
+                "id": 12070391,
+                "content": "Is anyone here actually doing their job?",
+                "npc": 260022,
+                "next": 12070392
+              },
+              {
+                "id": 12070392,
+                "content": "My apologies, sir. Some details are missing from their travel permits. We're checking—",
+                "npc": 260023,
+                "next": 12070393
+              },
+              {
+                "id": 12070393,
+                "content": "They're Charons. Why are you wasting time on them?",
+                "npc": 260022,
+                "next": 12070394
+              },
+              {
+                "id": 12070394,
+                "content": "Turn them away. They can come back when their papers are in order. Keep the line moving.",
+                "npc": 260022,
+                "next": 12070395
+              },
+              {
+                "id": 12070395,
+                "content": "Yes, sir! Right away!",
+                "npc": 260023,
+                "next": 12070396
+              },
+              {
+                "id": 12070396,
+                "content": "...",
+                "npc": 260017,
+                "next": 12070397
+              },
+              {
+                "id": 12070397,
+                "content": "Let's keep following him, Rhythm.",
+                "npc": 260017
+              }
             ]
           },
           {
             "id": "17873049992345707105",
             "type": "TalkNode",
-            "name": "终点对话"
+            "name": "终点对话",
+            "dialogues": [
+              {
+                "id": 12070411,
+                "content": "Hm? Why is that soldier going into the theatre?",
+                "npc": 260017,
+                "next": 12070412
+              },
+              {
+                "id": 12070412,
+                "content": "He's probably gone to buy a ticket for Lieutenant Colonel Johnson. I remember he was quite fond of the theatre. He once sent one of my colleagues to pick one up for him after a patrol.",
+                "npc": 260001,
+                "next": 12070413
+              },
+              {
+                "id": 12070413,
+                "content": "I see...",
+                "npc": 260017,
+                "next": 12070414
+              },
+              {
+                "id": 12070414,
+                "content": "They've gone into the inner city. We can't follow them any further.",
+                "npc": 260001,
+                "next": 12070415
+              },
+              {
+                "id": 12070415,
+                "content": "I'm sorry for dragging you all over Icelake, Rhythm. I've been thinking, and... I don't think I want to keep looking for him.",
+                "npc": 260017,
+                "next": 12070416
+              },
+              {
+                "id": 12070416,
+                "content": "You don't want to keep looking? Why?",
+                "npc": 260001,
+                "next": 12070417
+              },
+              {
+                "id": 12070417,
+                "content": "You saw how he treated those people at the gate. I think you were right. He doesn't seem like the kind of man who'd go out of his way to help two Charons like us. Maybe I really did mistake him for someone else.",
+                "npc": 260017,
+                "next": 12070418
+              },
+              {
+                "id": 12070418,
+                "content": "Besides, I'm exhausted from walking all over the city. I can always start looking again another day.",
+                "npc": 260017,
+                "next": 12070419
+              },
+              {
+                "id": 12070419,
+                "content": "You'll still be paid, of course. I left the fee with Camilla, so you can collect it from her.",
+                "npc": 260017,
+                "next": 12070420
+              },
+              {
+                "id": 12070420,
+                "content": "I should go. Goodbye, Rhythm.",
+                "npc": 260017,
+                "next": 12070421
+              },
+              {
+                "id": 12070421,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070422
+              },
+              {
+                "id": 12070422,
+                "content": "(Something doesn't add up... I should talk to Camilla. She may know something I don't.)",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109241,6 +111210,67 @@
             "pos": [
               -4628,
               -6285
+            ],
+            "dialogues": [
+              {
+                "id": 12070294,
+                "content": "Ah, Officer Fischer! Haven't seen you on patrol in ages!",
+                "npc": 260018,
+                "next": 12070295
+              },
+              {
+                "id": 12070295,
+                "content": "That's not your usual uniform. Did you get promoted? Or transferred somewhere else?",
+                "npc": 260018,
+                "next": 12070296
+              },
+              {
+                "id": 12070296,
+                "content": "I... I left the Legion.",
+                "npc": 260001,
+                "next": 12070297
+              },
+              {
+                "id": 12070297,
+                "content": "What!? Why? Did some Solarian bastard push you out?",
+                "npc": 260018,
+                "next": 12070298
+              },
+              {
+                "id": 12070298,
+                "content": "No. Nothing like that. I left for personal reasons.",
+                "npc": 260001,
+                "next": 12070299
+              },
+              {
+                "id": 12070299,
+                "content": "I see... That's a shame. A few of us were talking over drinks the other day. We were wondering who was going to look out for people like us now that you're gone.",
+                "npc": 260018,
+                "next": 12070300
+              },
+              {
+                "id": 12070300,
+                "content": "I'm sorry...",
+                "npc": 260001,
+                "next": 12070301
+              },
+              {
+                "id": 12070301,
+                "content": "Oh, I'm not blaming you! You worked yourself half to death when you were with the Escort. A bit of time away might do you good.",
+                "npc": 260018,
+                "next": 12070302
+              },
+              {
+                "id": 12070302,
+                "content": "I may no longer serve with the Escort, but if you ever run into trouble, you can still come to me. I'll do what I can.",
+                "npc": 260001,
+                "next": 12070303
+              },
+              {
+                "id": 12070303,
+                "content": "Good to know. I might just take you up on that.",
+                "npc": 260018
+              }
             ]
           },
           {
@@ -109251,6 +111281,73 @@
             "pos": [
               -10034,
               -4993
+            ],
+            "dialogues": [
+              {
+                "id": 12070306,
+                "content": "Officer Fischer! Fancy seeing you here. Are you on patrol today?",
+                "npc": 260019,
+                "next": 12070307
+              },
+              {
+                "id": 12070307,
+                "content": "No. I've left the Escort. I'm just out for a walk.",
+                "npc": 260001,
+                "next": 12070308
+              },
+              {
+                "id": 12070308,
+                "content": "What? I thought you loved that job. What made you leave?",
+                "npc": 260019,
+                "next": 12070309
+              },
+              {
+                "id": 12070309,
+                "content": "Personal reasons... It's a long story.",
+                "npc": 260001,
+                "next": 12070310
+              },
+              {
+                "id": 12070310,
+                "content": "That's all right. You don't have to tell me. I just wasn't expecting it, that's all.",
+                "npc": 260019,
+                "next": 12070311
+              },
+              {
+                "id": 12070311,
+                "content": "Oh, Officer Fischer, do you remember that friend of mine who went out into the wilds looking for ingredients? She ended up drawing a Filthoid straight to her, and you arrived just in time to save her life.",
+                "npc": 260019,
+                "next": 12070312
+              },
+              {
+                "id": 12070312,
+                "content": "She runs a restaurant in the north of the city now. Drop by anytime — she says you'll never have to pay for a meal there!",
+                "npc": 260019,
+                "next": 12070313
+              },
+              {
+                "id": 12070313,
+                "content": "Members of the Escort aren't allowed to accept gifts or favours in return for helping civilians. I may no longer serve in the Escort, but I see no reason to abandon that principle.",
+                "npc": 260001,
+                "next": 12070314
+              },
+              {
+                "id": 12070314,
+                "content": "So I can't accept free meals. But I'll visit when I have the time. Thank you.",
+                "npc": 260001,
+                "next": 12070315
+              },
+              {
+                "id": 12070315,
+                "content": "That's our Officer Fischer! You haven't changed a bit.",
+                "npc": 260019,
+                "next": 12070316
+              },
+              {
+                "id": 12070316,
+                "content": "She'll be delighted to hear you're stopping by. I'd better get going. See you around!",
+                "npc": 260019
+              }
             ]
           }
         ]
@@ -109284,7 +111381,128 @@
           {
             "id": "1790173744869857",
             "type": "TalkNode",
-            "name": "对话卡森"
+            "name": "对话卡森",
+            "dialogues": [
+              {
+                "id": 12070321,
+                "content": "Warrant Officer Carson. Are you hurt?",
+                "npc": 260001,
+                "next": 12070322
+              },
+              {
+                "id": 12070322,
+                "content": "Warrant Officer Fischer? It's been ages!",
+                "npc": 260020,
+                "next": 12070323
+              },
+              {
+                "id": 12070323,
+                "content": "Just Fischer now. I left the Escort, remember?",
+                "npc": 260001,
+                "next": 12070324
+              },
+              {
+                "id": 12070324,
+                "content": "Right, right. Force of habit.",
+                "npc": 260020,
+                "next": 12070325
+              },
+              {
+                "id": 12070325,
+                "content": "I'm fine. Thanks. I was getting a bit outnumbered there.",
+                "npc": 260020,
+                "next": 12070326
+              },
+              {
+                "id": 12070326,
+                "content": "You were in danger. I couldn't simply stand by.",
+                "npc": 260001,
+                "next": 12070327
+              },
+              {
+                "id": 12070327,
+                "content": "Ha! I haven't seen you in months, and you're still exactly the same.",
+                "npc": 260020,
+                "next": 12070328
+              },
+              {
+                "id": 12070328,
+                "content": "The guards at the gate said they'd seen you around lately. I tried stopping by, but you were out every time. What have you been so busy with?",
+                "npc": 260020,
+                "next": 12070329
+              },
+              {
+                "id": 12070329,
+                "content": "I've just been visiting a few people.",
+                "npc": 260001,
+                "next": 12070330
+              },
+              {
+                "id": 12070330,
+                "content": "Helping them, more like. You should come back. You may have left the Escort, but you're still doing the job.",
+                "npc": 260020,
+                "next": 12070331
+              },
+              {
+                "id": 12070331,
+                "content": "The chief never stops talking about you. Says he misses you terribly. Since you left, no one wants to take on all those thankless, back-breaking jobs... Ahem. I mean, all the vital community work that keeps us in the public's good books.",
+                "npc": 260020,
+                "next": 12070332
+              },
+              {
+                "id": 12070332,
+                "content": "I'm sorry, but I've made my decision. I won't be going back.",
+                "npc": 260001,
+                "next": 12070333
+              },
+              {
+                "id": 12070333,
+                "content": "Relax, I'm not being serious. Still, you look more worn out now than you ever did in uniform. Is everything all right? Need a hand with anything?",
+                "npc": 260020,
+                "next": 12070334
+              },
+              {
+                "id": 12070334,
+                "content": "Actually, there is something you might be able to help me with. Is Lieutenant Colonel Johnson still in Icelake?",
+                "npc": 260001,
+                "next": 12070335
+              },
+              {
+                "id": 12070335,
+                "content": "Yeah. He's heading up the investigation at Bloomfield Station. They've pulled a lot of us in to help with the case. That's why I'm out here on my own.",
+                "npc": 260020,
+                "next": 12070336
+              },
+              {
+                "id": 12070336,
+                "content": "I see. Thank you.",
+                "npc": 260001,
+                "next": 12070337
+              },
+              {
+                "id": 12070337,
+                "content": "Anytime. But what do you need someone that high up for? Need a hand? You're not with the Escort anymore, so just be careful not to get yourself into trouble.",
+                "npc": 260020,
+                "next": 12070338
+              },
+              {
+                "id": 12070338,
+                "content": "It's a personal matter. I can handle it on my own. Thank you, Carson. I'll be careful.",
+                "npc": 260001,
+                "next": 12070339
+              },
+              {
+                "id": 12070339,
+                "content": "I should be going. I won't keep you from your patrol any longer.",
+                "npc": 260001,
+                "next": 12070340
+              },
+              {
+                "id": 12070340,
+                "content": "All right. We'll catch up properly next time.",
+                "npc": 260020
+              }
+            ]
           }
         ]
       },
@@ -109301,6 +111519,31 @@
             "pos": [
               -3572,
               -5523
+            ],
+            "dialogues": [
+              {
+                "id": 12070342,
+                "content": "Rhythm, you're back! Did you find out where he is?",
+                "npc": 260017,
+                "next": 12070343
+              },
+              {
+                "id": 12070343,
+                "content": "Yes. I spoke to a former colleague. He told me Lieutenant Colonel Johnson is leading the investigation at Bloomfield Station.",
+                "npc": 260001,
+                "next": 12070344
+              },
+              {
+                "id": 12070344,
+                "content": "Let's go before it gets dark.",
+                "npc": 260001,
+                "next": 12070345
+              },
+              {
+                "id": 12070345,
+                "content": "All right! Let's go.",
+                "npc": 260017
+              }
             ]
           }
         ]
@@ -109323,6 +111566,96 @@
             "pos": [
               1351,
               -10153
+            ],
+            "dialogues": [
+              {
+                "id": 12070424,
+                "content": "Good evening, Camilla.",
+                "npc": 260001,
+                "next": 12070425
+              },
+              {
+                "id": 12070425,
+                "content": "Evening, Rhythm. How did things go with Rae? She saw you through the window when you came back this afternoon and rushed out before I could ask her anything.",
+                "npc": 260002,
+                "next": 12070426
+              },
+              {
+                "id": 12070426,
+                "content": "I'll explain.",
+                "npc": 260001,
+                "next": 12070427
+              },
+              {
+                "id": 12070427,
+                "content": "(Rhythm explains what happened.)",
+                "next": 12070428
+              },
+              {
+                "id": 12070428,
+                "content": "I see... Yes, that does sound strange.",
+                "npc": 260002,
+                "next": 12070429
+              },
+              {
+                "id": 12070429,
+                "content": "That's why I came back. Rae said her sister's name is Darcy Sloan. Have you ever heard of her?",
+                "npc": 260001,
+                "next": 12070430
+              },
+              {
+                "id": 12070430,
+                "content": "No. Today was the first time I'd seen Rae. She'd never been in here before.",
+                "npc": 260002,
+                "next": 12070431
+              },
+              {
+                "id": 12070431,
+                "content": "Rae? You mean that Sloan girl?",
+                "npc": 260024,
+                "next": 12070432
+              },
+              {
+                "id": 12070432,
+                "content": "Yes. Do you know her?",
+                "npc": 260001,
+                "next": 12070433
+              },
+              {
+                "id": 12070433,
+                "content": "Not really, but my kid talks about her all the time. I think she lives alone in Mist Aken, down near the sewers.",
+                "npc": 260024,
+                "next": 12070434
+              },
+              {
+                "id": 12070434,
+                "content": "Come to think of it, she once asked me where she could buy gunpowder. No idea what a girl her age would want with something like that.",
+                "npc": 260024,
+                "next": 12070435
+              },
+              {
+                "id": 12070435,
+                "content": "Gunpowder...?",
+                "npc": 260001,
+                "next": 12070436
+              },
+              {
+                "id": 12070436,
+                "content": "This could be worse than I thought. I need to get to her house and talk to her.",
+                "npc": 260001,
+                "next": 12070437
+              },
+              {
+                "id": 12070437,
+                "content": "Rhythm... No, forget it. There's no stopping you once you've made up your mind, is there? Just... be careful.",
+                "npc": 260002,
+                "next": 12070438
+              },
+              {
+                "id": 12070438,
+                "content": "I will.",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -109338,6 +111671,19 @@
             "name": "调查完痕迹对话",
             "next": [
               "178737999785013557650"
+            ],
+            "dialogues": [
+              {
+                "id": 12070457,
+                "content": "These are blast marks. Someone cleared out the Filthoids here not long ago.",
+                "npc": 260001,
+                "next": 12070458
+              },
+              {
+                "id": 12070458,
+                "content": "If Rae did this, her hideout must be deeper inside.",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -109346,6 +111692,13 @@
             "name": "到达藏身处",
             "next": [
               "178738522919313570468"
+            ],
+            "dialogues": [
+              {
+                "id": 12070461,
+                "content": "(So there really is a \"secret base\"... But Rae isn't here. I should look around. She may have left something behind.)",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -109382,6 +111735,17 @@
             "name": "查看人偶对话",
             "next": [
               "178738511388313568621"
+            ],
+            "dialogues": [
+              {
+                "id": 12070463,
+                "content": "(A crude portrait has been pasted over the doll's face. It depicts a middle-aged man who bears a striking resemblance to Lieutenant Colonel Johnson.)",
+                "next": 12070464
+              },
+              {
+                "id": 12070464,
+                "content": "(The doll is covered in cuts and puncture marks — some shallow, others gouged deep. Whoever did this must have harboured a deep hatred for him.)"
+              }
             ]
           },
           {
@@ -109398,6 +111762,13 @@
             "name": "药瓶对话&试验记录",
             "next": [
               "178738513980213569283"
+            ],
+            "dialogues": [
+              {
+                "id": 12070468,
+                "content": "(Bottles of poison and packets of gunpowder lie scattered among several dead rats. Beside them is a sheet of hurried notes detailing a series of experiments.)",
+                "next": 12070469
+              }
             ]
           },
           {
@@ -109468,7 +111839,56 @@
           {
             "id": "178738599490213579181",
             "type": "TalkNode",
-            "name": "藏身处结论"
+            "name": "藏身处结论",
+            "dialogues": [
+              {
+                "id": 12070471,
+                "content": "I knew it... Rae lied to me. Her sister Darcy is dead.",
+                "npc": 260001,
+                "next": 12070472
+              },
+              {
+                "id": 12070472,
+                "content": "Those drawings... Somehow, Rae knows what the Alchemy Academy's experiments did to her sister.",
+                "npc": 260001,
+                "next": 12070473
+              },
+              {
+                "id": 12070473,
+                "content": "And judging by that doll, she blames Lieutenant Colonel Johnson.",
+                "npc": 260001,
+                "next": 12070474
+              },
+              {
+                "id": 12070474,
+                "content": "But why him? As far as I knew, Johnson had nothing to do with the Alchemy Academy...",
+                "npc": 260001,
+                "next": 12070475
+              },
+              {
+                "id": 12070475,
+                "content": "Wait. Two years ago, he was in charge of security during the 6th Legion's recruitment drive. Rae must believe he was involved.",
+                "npc": 260001,
+                "next": 12070476
+              },
+              {
+                "id": 12070476,
+                "content": "The request was just a way to get close to him. And at the station, she wasn't trying to work out what to say. She was waiting for an opportunity...",
+                "npc": 260001,
+                "next": 12070478
+              },
+              {
+                "id": 12070478,
+                "content": "The theatre... She's planning to attack him there!",
+                "npc": 260001,
+                "next": 12070479
+              },
+              {
+                "id": 12070479,
+                "content": "No... She'll get herself killed. I have to find her.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109485,6 +111905,103 @@
             "pos": [
               -3335,
               -9453
+            ],
+            "dialogues": [
+              {
+                "id": 12070440,
+                "content": "Hello. Do you know a girl named Rae?",
+                "npc": 260001,
+                "next": 12070441
+              },
+              {
+                "id": 12070441,
+                "content": "Uh-huh! She lives right here.",
+                "npc": 260025,
+                "next": 12070442
+              },
+              {
+                "id": 12070442,
+                "content": "I see. Thank you.",
+                "npc": 260001,
+                "next": 12070443
+              },
+              {
+                "id": 12070443,
+                "content": "Are you here to see her? She's not home!",
+                "npc": 260025,
+                "next": 12070444
+              },
+              {
+                "id": 12070444,
+                "content": "She hasn't come back yet?",
+                "npc": 260001,
+                "next": 12070445
+              },
+              {
+                "id": 12070445,
+                "content": "No. I'm waiting for her too. She promised she'd draw a picture of me, but she still hasn't come by. She must've forgotten. Hmph.",
+                "npc": 260025,
+                "next": 12070446
+              },
+              {
+                "id": 12070446,
+                "content": "Oh! I know! Maybe she's gone down into the sewers to hide from me!",
+                "npc": 260025,
+                "next": 12070447
+              },
+              {
+                "id": 12070447,
+                "content": "The sewers?",
+                "npc": 260001,
+                "next": 12070448
+              },
+              {
+                "id": 12070448,
+                "content": "Yeah! Davy says Rae's been sneaking down there on little adventures lately, and she never lets anyone go with her.",
+                "npc": 260025,
+                "next": 12070449
+              },
+              {
+                "id": 12070449,
+                "content": "Maybe she's got a secret base hidden away in there!",
+                "npc": 260025,
+                "next": 12070450
+              },
+              {
+                "id": 12070450,
+                "content": "I see... Thank you for telling me. I'll go and look for her.",
+                "npc": 260001,
+                "next": 12070451
+              },
+              {
+                "id": 12070451,
+                "content": "Huh? But the sewers are dangerous, miss!",
+                "npc": 260025,
+                "next": 12070452
+              },
+              {
+                "id": 12070452,
+                "content": "Don't worry. I used to serve in the Escort. I'll be fine.",
+                "npc": 260001,
+                "next": 12070453
+              },
+              {
+                "id": 12070453,
+                "content": "Oh! The Escort helps people when they're in trouble, right? When you find Rae, can you remind her that she still owes me a drawing?",
+                "npc": 260025,
+                "next": 12070454
+              },
+              {
+                "id": 12070454,
+                "content": "She won't be able to wriggle out of it if an Escort officer reminds her. Hehe!",
+                "npc": 260025,
+                "next": 12070455
+              },
+              {
+                "id": 12070455,
+                "content": "All right. I'll remind her.",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -109510,6 +112027,49 @@
             ],
             "next": [
               "178738792599718109208"
+            ],
+            "dialogues": [
+              {
+                "id": 12070481,
+                "content": "Good evening, ma'am. Would you like a ticket for tonight's performance?",
+                "npc": 260026,
+                "next": 12070482
+              },
+              {
+                "id": 12070482,
+                "content": "Good evening. Did a blonde Charon girl with a ponytail come in a little while ago?",
+                "npc": 260001,
+                "next": 12070483
+              },
+              {
+                "id": 12070483,
+                "content": "Yes, I remember her. She's already inside. The performance doesn't start for a while, but she said she'd never been here before and wanted to look around, so I let her in early.",
+                "npc": 260026,
+                "next": 12070484
+              },
+              {
+                "id": 12070484,
+                "content": "...One ticket, please. She's a friend of mine. We were supposed to see the performance together.",
+                "npc": 260001,
+                "next": 12070485
+              },
+              {
+                "id": 12070485,
+                "content": "Of course. Just a moment.",
+                "npc": 260026,
+                "next": 12070486
+              },
+              {
+                "id": 12070486,
+                "content": "Here you are. Please stay in the auditorium. The stage and backstage areas are strictly off-limits.",
+                "npc": 260026,
+                "next": 12070487
+              },
+              {
+                "id": 12070487,
+                "content": "Of course. Thank you.",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -109518,6 +112078,421 @@
             "name": "揭开蕾伊目的",
             "next": [
               "178738803476318110081"
+            ],
+            "dialogues": [
+              {
+                "id": 12070490,
+                "content": "...",
+                "npc": 260017,
+                "next": 12070491
+              },
+              {
+                "id": 12070491,
+                "content": "Rae!",
+                "npc": 260001,
+                "next": 12070492
+              },
+              {
+                "id": 12070492,
+                "content": "Huh? Rhythm? What are you doing here?",
+                "npc": 260017,
+                "next": 12070493
+              },
+              {
+                "id": 12070493,
+                "content": "I was about to ask you the same thing. Why are you at the theatre?",
+                "npc": 260001,
+                "next": 12070494
+              },
+              {
+                "id": 12070494,
+                "content": "Oh, I... I changed my mind. I was afraid I might miss my chance, so I thought I'd speak to Lieutenant Colonel Johnson before the performance and thank him properly.",
+                "npc": 260017,
+                "next": 12070495
+              },
+              {
+                "id": 12070495,
+                "content": "Tickets here aren't cheap. You and your sister had only just managed to find a place of your own in Mist Aken. If all you wanted was to thank him, you could have waited outside. Why spend money on a ticket?",
+                "npc": 260001,
+                "next": 12070496
+              },
+              {
+                "id": 12070496,
+                "content": "I... I happen to like the theatre. Is there something wrong with that?",
+                "npc": 260017,
+                "next": 12070497
+              },
+              {
+                "id": 12070497,
+                "content": "All right. Then what's playing tonight? What's it about?",
+                "npc": 260001,
+                "next": 12070498
+              },
+              {
+                "id": 12070498,
+                "content": "Um...",
+                "npc": 260017,
+                "next": 12070499
+              },
+              {
+                "id": 12070499,
+                "content": "Please don't lie to me again, Rae. I found your hideout in the sewers. I saw the doll, the gunpowder and the poison. I know what you're planning to do.",
+                "npc": 260001,
+                "next": 12070500
+              },
+              {
+                "id": 12070500,
+                "content": "You didn't ask me to find Johnson so you could thank him. You wanted a way to get close to him and avenge your sister. Is that right?",
+                "npc": 260001,
+                "next": 12070501
+              },
+              {
+                "id": 12070501,
+                "content": "You...",
+                "npc": 260017,
+                "next": 12070502
+              },
+              {
+                "id": 12070502,
+                "content": "I didn't think you'd work it out.",
+                "npc": 260017,
+                "next": 12070503
+              },
+              {
+                "id": 12070503,
+                "content": "...Yes. You're right.",
+                "npc": 260017,
+                "next": 12070504
+              },
+              {
+                "id": 12070504,
+                "content": "Why do you believe Lieutenant Colonel Johnson was responsible for what happened to Darcy?",
+                "npc": 260001,
+                "next": 12070505
+              },
+              {
+                "id": 12070505,
+                "content": "Because I <H>saw</> what happened.",
+                "npc": 260017,
+                "next": 12070506
+              },
+              {
+                "id": 12070506,
+                "content": "What...?",
+                "npc": 260001,
+                "next": 12070507
+              },
+              {
+                "id": 12070507,
+                "content": "I'm a Daimon. In my dreams, my magic let me share what my sister was experiencing.",
+                "npc": 260017,
+                "next": 12070508
+              },
+              {
+                "id": 12070508,
+                "content": "I used to thank Mother Embla for blessing me with that gift. Once we both started working, we barely had time to talk. But through my dreams, I could still see what was happening in her life.",
+                "npc": 260017,
+                "next": 12070509
+              },
+              {
+                "id": 12070509,
+                "content": "Sometimes, what I saw even helped me look after her.",
+                "npc": 260017,
+                "next": 12070510
+              },
+              {
+                "id": 12070510,
+                "content": "If she had to miss a meal because of work, I'd have something hot waiting for her when she got home.",
+                "npc": 260017,
+                "next": 12070511
+              },
+              {
+                "id": 12070511,
+                "content": "If a customer gave her a hard time, she didn't have to explain a thing. We'd sit together and complain about them until she felt a little better.",
+                "npc": 260017,
+                "next": 12070512
+              },
+              {
+                "id": 12070512,
+                "content": "But little by little... I started to realise my gift wasn't helping either of us.",
+                "npc": 260017,
+                "next": 12070513
+              },
+              {
+                "id": 12070513,
+                "content": "It couldn't help us earn a living. It didn't bring in a single coin. All it did was leave me drowsy and make it harder to keep up at work.",
+                "npc": 260017,
+                "next": 12070514
+              },
+              {
+                "id": 12070514,
+                "content": "When I told Darcy I felt like a burden, she just smiled and told me not to worry. She said she'd work hard enough to support us both.",
+                "npc": 260017,
+                "next": 12070515
+              },
+              {
+                "id": 12070515,
+                "content": "But I couldn't accept that. I couldn't let her carry everything alone... Then I saw the 6th Legion's recruitment notice.",
+                "npc": 260017,
+                "next": 12070516
+              },
+              {
+                "id": 12070516,
+                "content": "...And you told her...",
+                "npc": 260001,
+                "next": 12070517
+              },
+              {
+                "id": 12070517,
+                "content": "I was so excited when I saw it. I can still remember my heart pounding as I read it.",
+                "npc": 260017,
+                "next": 12070518
+              },
+              {
+                "id": 12070518,
+                "content": "The notice said that any Charon with magic could apply — no matter what kind of power they had.",
+                "npc": 260017,
+                "next": 12070519
+              },
+              {
+                "id": 12070519,
+                "content": "I thought it was the chance we'd been waiting for. At last, my magic could be worth something. I could finally help support us instead of leaving everything to Darcy.",
+                "npc": 260017,
+                "next": 12070520
+              },
+              {
+                "id": 12070520,
+                "content": "I ran straight home to tell her, and she was just as excited as I was.",
+                "npc": 260017,
+                "next": 12070521
+              },
+              {
+                "id": 12070521,
+                "content": "It sounded too good to pass up, so we both applied. I suppose I didn't do well enough in the selection trials. In the end, they only accepted Darcy.",
+                "npc": 260017,
+                "next": 12070522
+              },
+              {
+                "id": 12070522,
+                "content": "I couldn't bear the thought of being separated from her. But she reminded me that even while she was away in closed training, my magic would still let me see what she was going through.",
+                "npc": 260017,
+                "next": 12070523
+              },
+              {
+                "id": 12070523,
+                "content": "I could learn from what I saw and use it to prepare for the next selection. She said that if I worked hard, I'd pass the trials the next year — and then I could join her in the Legion.",
+                "npc": 260017,
+                "next": 12070524
+              },
+              {
+                "id": 12070524,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070525
+              },
+              {
+                "id": 12070525,
+                "content": "And I believed her. So I stood there and watched the Legion take her away...",
+                "npc": 260017,
+                "next": 12070526
+              },
+              {
+                "id": 12070526,
+                "content": "After she left, I missed her terribly. I couldn't stop wondering what life in the Legion was like for her. I wanted to stay asleep as long as I could, just so I could see more of what she was going through.",
+                "npc": 260017,
+                "next": 12070527
+              },
+              {
+                "id": 12070527,
+                "content": "At first, everything looked exactly as I'd expected. She boarded a Legion train and was taken to a place that looked like a fortress.",
+                "npc": 260017,
+                "next": 12070528
+              },
+              {
+                "id": 12070528,
+                "content": "Then I saw her living in a tiny room with iron bars across the door. It looked more like a prison cell than a dormitory.",
+                "npc": 260017,
+                "next": 12070529
+              },
+              {
+                "id": 12070529,
+                "content": "I thought it was strange, but I told myself new recruits probably had to put up with poor living conditions at first. Darcy had always worked hard at everything she did. I was sure she'd prove herself soon and be moved somewhere better.",
+                "npc": 260017,
+                "next": 12070530
+              },
+              {
+                "id": 12070530,
+                "content": "Then, all of a sudden, the dreams stopped. I tried everything I could think of to make myself dream again. I swallowed all sorts of strange herbs, but nothing worked. No matter what I did, I couldn't see her.",
+                "npc": 260017,
+                "next": 12070531
+              },
+              {
+                "id": 12070531,
+                "content": "I thought maybe I'd worn myself out from using my magic too much. So I started going to bed on time and eating properly, hoping I'd recover and be able to see her again.",
+                "npc": 260017,
+                "next": 12070532
+              },
+              {
+                "id": 12070532,
+                "content": "About a month later, the dreams finally came back.",
+                "npc": 260017,
+                "next": 12070533
+              },
+              {
+                "id": 12070533,
+                "content": "Most of what I saw was that cramped little cell... the filthy bed, the meagre food, the dim light...",
+                "npc": 260017,
+                "next": 12070534
+              },
+              {
+                "id": 12070534,
+                "content": "Sometimes I heard muffled voices — people calling her useless, a coward, a waste of the Legion's resources.",
+                "npc": 260017,
+                "next": 12070535
+              },
+              {
+                "id": 12070535,
+                "content": "I heard people begging for mercy somewhere in the distance... And there were these terrible growls from somewhere I couldn't see.",
+                "npc": 260017,
+                "next": 12070536
+              },
+              {
+                "id": 12070536,
+                "content": "I wanted so badly to see what was happening. But every time I was about to see where those sounds were coming from, everything went black.",
+                "npc": 260017,
+                "next": 12070537
+              },
+              {
+                "id": 12070537,
+                "content": "Then, at last, I saw it — a horned monster, drenched in blood, with its eyes fixed on my sister.",
+                "npc": 260017,
+                "next": 12070538
+              },
+              {
+                "id": 12070538,
+                "content": "I could smell the blood. I could feel her terror. Then it lunged at her, claws raised to strike. She screamed in pain and crumpled to the ground.",
+                "npc": 260017,
+                "next": 12070539
+              },
+              {
+                "id": 12070539,
+                "content": "Then I saw several uniformed figures standing over her as she lay dying. One of them looked down at her and sneered:",
+                "npc": 260017,
+                "next": 12070540
+              },
+              {
+                "id": 12070540,
+                "content": "\"Pathetic.\"",
+                "npc": 260017,
+                "next": 12070541
+              },
+              {
+                "id": 12070541,
+                "content": "Then everything began to blur. I woke up shaking, drenched in cold sweat. And after that... I stopped dreaming altogether.",
+                "npc": 260017,
+                "next": 12070542
+              },
+              {
+                "id": 12070542,
+                "content": "I was terrified. I went to the Legion for answers, but they insisted my sister was still in training and that everything was fine. But the moment I asked for any details about her training, they wouldn't tell me a thing.",
+                "npc": 260017,
+                "next": 12070543
+              },
+              {
+                "id": 12070543,
+                "content": "Even then, I tried to convince myself none of it was real. That something had gone wrong with my magic. That the dreams had been nothing more than nightmares.",
+                "npc": 260017,
+                "next": 12070544
+              },
+              {
+                "id": 12070544,
+                "content": "How could there be a monster like that inside a Legion facility? My sister had gone there to train. She wasn't fighting on the front line. She was supposed to be safe.",
+                "npc": 260017,
+                "next": 12070545
+              },
+              {
+                "id": 12070545,
+                "content": "Then the Charon Hunt happened. Everything I heard about the killer matched the creature I'd seen in those dreams.",
+                "npc": 260017,
+                "next": 12070546
+              },
+              {
+                "id": 12070546,
+                "content": "That was when I finally understood. They hadn't been nightmares. I'd been seeing what was really happening to Darcy. The Legion had thrown my sister in with that monster and left her to die!",
+                "npc": 260017,
+                "next": 12070547
+              },
+              {
+                "id": 12070547,
+                "content": "So now you understand. I have to avenge her. The Legion killed my sister — and I'm going to make them pay.",
+                "npc": 260017,
+                "next": 12070548
+              },
+              {
+                "id": 12070548,
+                "content": "...I see.",
+                "npc": 260001,
+                "next": 12070549
+              },
+              {
+                "id": 12070549,
+                "content": "So you're planning to kill Lieutenant Colonel Johnson during the performance.",
+                "npc": 260001,
+                "next": 12070550
+              },
+              {
+                "id": 12070550,
+                "content": "That's right.",
+                "npc": 260017,
+                "next": 12070551
+              },
+              {
+                "id": 12070551,
+                "content": "Then I have one question. Do you really think you can kill him?",
+                "npc": 260001,
+                "next": 12070552
+              },
+              {
+                "id": 12070552,
+                "content": "Of course I can! I've waited too long for this. The moment I learned the truth, I swore I'd see it through.",
+                "npc": 260017,
+                "next": 12070553
+              },
+              {
+                "id": 12070553,
+                "content": "I've practised over and over on that doll, imagining it was him. I'm going to drive this knife into his heart.",
+                "npc": 260017,
+                "next": 12070554
+              },
+              {
+                "id": 12070554,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070555
+              },
+              {
+                "id": 12070555,
+                "content": "I told you I once served under the 6th Legion. I was only in the Escort, but I received basic military training.",
+                "npc": 260001,
+                "next": 12070556
+              },
+              {
+                "id": 12070556,
+                "content": "You've only practised on a doll. A real opponent fights back. So imagine I'm Lieutenant Colonel Johnson.",
+                "npc": 260001,
+                "next": 12070557
+              },
+              {
+                "id": 12070557,
+                "content": "Go on. Try to stab me. Let's see how far all that practice gets you.",
+                "npc": 260001,
+                "next": 12070558
+              },
+              {
+                "id": 12070558,
+                "content": "...You think I won't do it?",
+                "npc": 260017
+              }
             ]
           },
           {
@@ -109528,6 +112503,121 @@
             "pos": [
               23884,
               2520
+            ],
+            "dialogues": [
+              {
+                "id": 12070561,
+                "content": "I understand why you want revenge. But you don't have the training to carry it out. You'd only be throwing your life away.",
+                "npc": 260001,
+                "next": 12070562
+              },
+              {
+                "id": 12070562,
+                "content": "...",
+                "npc": 260017,
+                "next": 12070563
+              },
+              {
+                "id": 12070563,
+                "content": "I know Johnson. Even off duty, he keeps several guards close by. With the theatre's own security on top of that, you may not even get near the private boxes.",
+                "npc": 260001,
+                "next": 12070564
+              },
+              {
+                "id": 12070564,
+                "content": "And even if you somehow got inside, slipped past his guards and reached him...",
+                "npc": 260001,
+                "next": 12070565
+              },
+              {
+                "id": 12070565,
+                "content": "I didn't use any magic just now. That was only basic hand-to-hand training. If you couldn't get past a former soldier like me, what chance do you have against a senior officer who's still on active duty?",
+                "npc": 260001,
+                "next": 12070566
+              },
+              {
+                "id": 12070566,
+                "content": "I... I don't care!",
+                "npc": 260017,
+                "next": 12070567
+              },
+              {
+                "id": 12070567,
+                "content": "Even if there's only a one-in-a-thousand chance... one in ten thousand... I still have to try!",
+                "npc": 260017,
+                "next": 12070568
+              },
+              {
+                "id": 12070568,
+                "content": "Even if I fail — even if I die — at least that bastard will know someone knows what he did. Someone who hates him for it!",
+                "npc": 260017,
+                "next": 12070569
+              },
+              {
+                "id": 12070569,
+                "content": "If I do nothing, I won't be able to live with myself...",
+                "npc": 260017,
+                "next": 12070570
+              },
+              {
+                "id": 12070570,
+                "content": "Every time I close my eyes, I see that monster again. I hear my sister screaming. I can still smell the blood.",
+                "npc": 260017,
+                "next": 12070571
+              },
+              {
+                "id": 12070571,
+                "content": "No one else could ever understand.",
+                "npc": 260017,
+                "next": 12070572
+              },
+              {
+                "id": 12070572,
+                "content": "...I do.",
+                "npc": 260001,
+                "next": 12070573
+              },
+              {
+                "id": 12070573,
+                "content": "My younger brother joined the 6th Legion too.",
+                "npc": 260001,
+                "next": 12070574
+              },
+              {
+                "id": 12070574,
+                "content": "What...?",
+                "npc": 260017,
+                "next": 12070575
+              },
+              {
+                "id": 12070575,
+                "content": "This is the list of recruits accepted into the 6th Legion two years ago. Darcy Sloan is on it. So is... Blues Fischer. My younger brother.",
+                "npc": 260001,
+                "next": 12070576
+              },
+              {
+                "id": 12070576,
+                "content": "...!",
+                "npc": 260017,
+                "next": 12070577
+              },
+              {
+                "id": 12070577,
+                "content": "What happened to Darcy is far more complicated than you realise. Johnson was only in charge of security during the recruitment drive. He wasn't the only one involved. This goes far beyond him.",
+                "npc": 260001,
+                "next": 12070578
+              },
+              {
+                "id": 12070578,
+                "content": "Come with me. I'll tell you everything I know. After that, if you still decide to go through with it, I won't try to stop you again.",
+                "npc": 260001,
+                "next": 12070579
+              },
+              {
+                "id": 12070579,
+                "content": "...All right.",
+                "npc": 260017
+              }
             ]
           }
         ]
@@ -109543,6 +112633,238 @@
             "name": "告知蕾伊真相",
             "next": [
               "178738897881919244854"
+            ],
+            "dialogues": [
+              {
+                "id": 12070583,
+                "content": "...That's everything I know about the 6th Legion and the Charon Hunt.",
+                "npc": 260001,
+                "next": 12070584
+              },
+              {
+                "id": 12070584,
+                "content": "Augmentation experiments...? Monsters...? What are you talking about...?",
+                "npc": 260017,
+                "next": 12070585
+              },
+              {
+                "id": 12070585,
+                "content": "How is that possible...? My sister... The Legion is supposed to protect us from monsters, not create them!",
+                "npc": 260017,
+                "next": 12070586
+              },
+              {
+                "id": 12070586,
+                "content": "I couldn't believe it at first either.",
+                "npc": 260001,
+                "next": 12070587
+              },
+              {
+                "id": 12070587,
+                "content": "But I couldn't keep telling myself it wasn't true. My brother... he would never have lied to me.",
+                "npc": 260001,
+                "next": 12070588
+              },
+              {
+                "id": 12070588,
+                "content": "Is that why you left the Escort?",
+                "npc": 260017,
+                "next": 12070589
+              },
+              {
+                "id": 12070589,
+                "content": "Yes.",
+                "npc": 260001,
+                "next": 12070590
+              },
+              {
+                "id": 12070590,
+                "content": "Then why are you trying to stop me!?",
+                "npc": 260017,
+                "next": 12070591
+              },
+              {
+                "id": 12070591,
+                "content": "What are we supposed to do — just let the people who killed Darcy and Blues get away with it?",
+                "npc": 260017,
+                "next": 12070592
+              },
+              {
+                "id": 12070592,
+                "content": "I don't care whether Johnson was responsible or not. I don't care how slim my chances are. If I die, I die!",
+                "npc": 260017,
+                "next": 12070593
+              },
+              {
+                "id": 12070593,
+                "content": "Let them kill me too! I'm the one who should be dead anyway. If I hadn't found that recruitment notice, my sister would still be alive!",
+                "npc": 260017,
+                "next": 12070594
+              },
+              {
+                "id": 12070594,
+                "content": "Is that really what you want? The Legion took your sister. Are you going to let it take you too?",
+                "npc": 260001,
+                "next": 12070595
+              },
+              {
+                "id": 12070595,
+                "content": "...This isn't just about revenge, is it? You want the pain to stop, even if that means dying.",
+                "npc": 260001,
+                "next": 12070596
+              },
+              {
+                "id": 12070596,
+                "content": "I—I don't... I...",
+                "npc": 260017,
+                "next": 12070597
+              },
+              {
+                "id": 12070597,
+                "content": "Rae, I'm not judging you. I know what that feels like.",
+                "npc": 260001,
+                "next": 12070598
+              },
+              {
+                "id": 12070598,
+                "content": "Until very recently, I was doing the same thing in my own way — burying myself in work so I wouldn't have to face what had happened.",
+                "npc": 260001,
+                "next": 12070599
+              },
+              {
+                "id": 12070599,
+                "content": "That's why I have to stop you. Neither Darcy nor Blues would have wanted this for either of us.",
+                "npc": 260001,
+                "next": 12070600
+              },
+              {
+                "id": 12070600,
+                "content": "When the 13th Legion came for those responsible for the Charon Hunt, I was ready to turn my weapon on my own comrades if that was what it took to help Blues escape.",
+                "npc": 260001,
+                "next": 12070601
+              },
+              {
+                "id": 12070601,
+                "content": "But he never gave me the chance. He chose to face the Legion alone so that I could get away.",
+                "npc": 260001,
+                "next": 12070602
+              },
+              {
+                "id": 12070602,
+                "content": "He knocked me unconscious and had a friend carry me to safety.",
+                "npc": 260001,
+                "next": 12070603
+              },
+              {
+                "id": 12070603,
+                "content": "What...?",
+                "npc": 260017,
+                "next": 12070604
+              },
+              {
+                "id": 12070604,
+                "content": "The last thing he said to me was...",
+                "npc": 260001,
+                "next": 12070605
+              },
+              {
+                "id": 12070605,
+                "content": "<H>\"No matter what happens, be brave, and live on.\"</>",
+                "npc": 260001,
+                "next": 12070606
+              },
+              {
+                "id": 12070606,
+                "content": "If Darcy could have said one last thing to you, I believe she would have said the same.",
+                "npc": 260001,
+                "next": 12070607
+              },
+              {
+                "id": 12070607,
+                "content": "She would have wanted you to live, not throw your life away trying to avenge her.",
+                "npc": 260001,
+                "next": 12070608
+              },
+              {
+                "id": 12070608,
+                "content": "How could you possibly know what she would have wanted...?",
+                "npc": 260017,
+                "next": 12070609
+              },
+              {
+                "id": 12070609,
+                "content": "(Something in Rae's story showed what Darcy wanted for her. Rae just hasn't realised it yet...)",
+                "npc": 260001,
+                "options": [
+                  {
+                    "id": 12070610,
+                    "content": "They called Darcy a coward",
+                    "next": 12070611
+                  },
+                  {
+                    "id": 12070612,
+                    "content": "Darcy died fighting the monster",
+                    "next": 12070613
+                  },
+                  {
+                    "id": 12070614,
+                    "content": "Rae's dreams always went dark at crucial moments",
+                    "next": 12070615
+                  },
+                  {
+                    "id": 12070616,
+                    "content": "Darcy always comforted Rae when she was upset",
+                    "next": 12070617
+                  }
+                ]
+              },
+              {
+                "id": 12070611,
+                "content": "(They may have called Darcy a coward because she couldn't bring herself to fight Blues... But that doesn't tell me what Darcy wanted for Rae. I need another clue.)",
+                "npc": 260001,
+                "next": 12070609
+              },
+              {
+                "id": 12070613,
+                "content": "(Darcy may have died when the test subjects were forced to fight one another. Rae may not have realised that, but telling her now would only hurt her more. That isn't the answer.)",
+                "npc": 260001,
+                "next": 12070609
+              },
+              {
+                "id": 12070615,
+                "content": "(Yes... that's it. What if Rae's magic wasn't failing at all? What if the dreams went dark for another reason...?)",
+                "npc": 260001,
+                "next": 12070618
+              },
+              {
+                "id": 12070617,
+                "content": "(Darcy always tried to comfort Rae, and that matters. But Rae already knows how much her sister cared for her. It won't be enough to change her mind. I need another clue.)",
+                "npc": 260001,
+                "next": 12070609
+              },
+              {
+                "id": 12070618,
+                "content": "I wanted so badly to see what was happening. But every time I was about to see where those sounds were coming from, everything went black.",
+                "npc": 260017,
+                "next": 12070619
+              },
+              {
+                "id": 12070619,
+                "content": "You said everything went black just as you were about to see where those sounds were coming from. Is that right?",
+                "npc": 260001,
+                "next": 12070620
+              },
+              {
+                "id": 12070620,
+                "content": "Have you ever considered that Darcy might have been closing her eyes on purpose... so you wouldn't have to see what they were doing to her?",
+                "npc": 260001,
+                "next": 12070621
+              },
+              {
+                "id": 12070621,
+                "content": "...!",
+                "npc": 260017
+              }
             ]
           },
           {
@@ -109553,6 +112875,174 @@
             "pos": [
               -4845,
               -13642
+            ],
+            "dialogues": [
+              {
+                "id": 12070624,
+                "content": "(Rae lowers her head and covers her face, her shoulders trembling.)",
+                "next": 12070625
+              },
+              {
+                "id": 12070625,
+                "content": "I'm sorry. I know how much this hurts... But I've been where you are, and I can't let grief push you into doing something you can never undo.",
+                "npc": 260001,
+                "next": 12070626
+              },
+              {
+                "id": 12070626,
+                "content": "...Then what am I supposed to do?",
+                "npc": 260017,
+                "next": 12070627
+              },
+              {
+                "id": 12070627,
+                "content": "So Darcy is just... gone? There's nothing left of her, and I'm supposed to do nothing?",
+                "npc": 260017,
+                "next": 12070628
+              },
+              {
+                "id": 12070628,
+                "content": "No, Rae. She left you something no one can take away.",
+                "npc": 260001,
+                "next": 12070629
+              },
+              {
+                "id": 12070629,
+                "content": "Because of your gift, you shared parts of her life that no one else ever could. Those memories — and all the love she gave you — are still with you.",
+                "npc": 260001,
+                "next": 12070630
+              },
+              {
+                "id": 12070630,
+                "content": "*sob*",
+                "npc": 260017,
+                "next": 12070631
+              },
+              {
+                "id": 12070631,
+                "content": "Darcy...",
+                "npc": 260017,
+                "next": 12070632
+              },
+              {
+                "id": 12070632,
+                "content": "What am I supposed to do...? Darcy... please, tell me...",
+                "npc": 260017,
+                "next": 12070633
+              },
+              {
+                "id": 12070633,
+                "content": "I think there is something you can do.",
+                "npc": 260001,
+                "next": 12070634
+              },
+              {
+                "id": 12070634,
+                "content": "I found this among Blues's belongings. It's the 6th Legion's recruitment list from that year. A list of victims.",
+                "npc": 260001,
+                "next": 12070635
+              },
+              {
+                "id": 12070635,
+                "content": "For the past few days, I've been visiting the families of the people named on it.",
+                "npc": 260001,
+                "next": 12070636
+              },
+              {
+                "id": 12070636,
+                "content": "I needed something to keep me occupied, and I thought I could at least offer whatever help I could. But as I listened to their stories, I began to see the people behind those names...",
+                "npc": 260001,
+                "next": 12070637
+              },
+              {
+                "id": 12070637,
+                "content": "Whenever Marian had a little time to herself, she liked to curl up on her bed and knit. She loved the fresh, clean smell of the cotton in her grandmother's quilts. She said knitting was simple, calming work — and it earned a little extra money to help her grandmother.",
+                "npc": 260001,
+                "next": 12070638
+              },
+              {
+                "id": 12070638,
+                "content": "Kenny was always quiet and serious. Once, his younger brother and a friend made a bet to see which of them could make him laugh first. His brother painted his own face like a clown. It was the first time he had ever heard Kenny laugh.",
+                "npc": 260001,
+                "next": 12070639
+              },
+              {
+                "id": 12070639,
+                "content": "Little by little, the names on that list stopped being just names. They became Marian. Kenny. People who had lived, laughed, and been loved.",
+                "npc": 260001,
+                "next": 12070640
+              },
+              {
+                "id": 12070640,
+                "content": "...",
+                "npc": 260017,
+                "next": 12070641
+              },
+              {
+                "id": 12070641,
+                "content": "When their families spoke about them, it felt as though part of them was still here. As long as we carry their memories with us, they're not entirely gone.",
+                "npc": 260001,
+                "next": 12070642
+              },
+              {
+                "id": 12070642,
+                "content": "Even if all we can do is get through each day, we still have to keep living. If we die too, who will be left to remember them?",
+                "npc": 260001,
+                "next": 12070643
+              },
+              {
+                "id": 12070643,
+                "content": "I've only just realised... those visits did far more for me than I ever did for those families.",
+                "npc": 260001,
+                "next": 12070644
+              },
+              {
+                "id": 12070644,
+                "content": "You may not understand yet. But once you've met those families and heard their stories, I think you will. You'll understand why we have to keep going — why we have to be brave and keep living.",
+                "npc": 260001,
+                "next": 12070645
+              },
+              {
+                "id": 12070645,
+                "content": "Rae... I'm glad I found you before it was too late.",
+                "npc": 260001,
+                "next": 12070646
+              },
+              {
+                "id": 12070646,
+                "content": "I'd like you to come with me when I visit the families I haven't reached yet.",
+                "npc": 260001,
+                "next": 12070647
+              },
+              {
+                "id": 12070647,
+                "content": "Huh...?",
+                "npc": 260017,
+                "next": 12070648
+              },
+              {
+                "id": 12070648,
+                "content": "Think of it as a commission from me. Will you take it on?",
+                "npc": 260001,
+                "next": 12070649
+              },
+              {
+                "id": 12070649,
+                "content": "...All right.",
+                "npc": 260017,
+                "next": 12070650
+              },
+              {
+                "id": 12070650,
+                "content": "Thank you.",
+                "npc": 260001,
+                "next": 12070651
+              },
+              {
+                "id": 12070651,
+                "content": "For now, I'll walk you home. Get some rest. We have a lot ahead of us.",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -109565,7 +113055,158 @@
           {
             "id": "178738943523721508624",
             "type": "TalkNode",
-            "name": "蕾伊回家"
+            "name": "蕾伊回家",
+            "dialogues": [
+              {
+                "id": 12070653,
+                "content": "Rae! You're back!",
+                "npc": 260027,
+                "next": 12070654
+              },
+              {
+                "id": 12070654,
+                "content": "Oh! Are you the lady from the Escort? Freda told me about you.",
+                "npc": 260027,
+                "next": 12070655
+              },
+              {
+                "id": 12070655,
+                "content": "Ah... That reminds me. I forgot to give you Freda's message.",
+                "npc": 260001,
+                "next": 12070656
+              },
+              {
+                "id": 12070656,
+                "content": "Don't worry about that. Freda was so busy complaining about her picture that she didn't even notice Rae was upset. We told her off for it.",
+                "npc": 260027,
+                "next": 12070657
+              },
+              {
+                "id": 12070657,
+                "content": "Rae, we know you didn't forget our pictures on purpose. You haven't seemed like yourself lately. Have you been busy with work? Or did some mean grown-ups give you a hard time?",
+                "npc": 260027,
+                "next": 12070658
+              },
+              {
+                "id": 12070658,
+                "content": "We can't help with your work, but we thought we might be able to cheer you up.",
+                "npc": 260027,
+                "next": 12070659
+              },
+              {
+                "id": 12070659,
+                "content": "So we brought you a present. Hehe! Look!",
+                "npc": 260027,
+                "next": 12070660
+              },
+              {
+                "id": 12070660,
+                "content": "These are... Crackblooms. Where did you find so many?",
+                "npc": 260017,
+                "next": 12070661
+              },
+              {
+                "id": 12070661,
+                "content": "We all went looking together. We checked every crack we could find and picked all of these!",
+                "npc": 260027,
+                "next": 12070662
+              },
+              {
+                "id": 12070662,
+                "content": "Darcy told us they were your favourite flowers. We thought they might cheer you up.",
+                "npc": 260027,
+                "next": 12070663
+              },
+              {
+                "id": 12070663,
+                "content": "*sniffle*",
+                "npc": 260017,
+                "next": 12070664
+              },
+              {
+                "id": 12070664,
+                "content": "Huh? Why are you crying? I'm sorry! I didn't mean to make you sad!",
+                "npc": 260027,
+                "next": 12070665
+              },
+              {
+                "id": 12070665,
+                "content": "Don't worry. You didn't do anything wrong. Rae just... misses her sister.",
+                "npc": 260001,
+                "next": 12070666
+              },
+              {
+                "id": 12070666,
+                "content": "Thank you. I'm sure Rae knows how much you all care about her. But I think she needs some time on her own right now.",
+                "npc": 260001,
+                "next": 12070667
+              },
+              {
+                "id": 12070667,
+                "content": "Oh... all right. I'll go home, then. Get some rest, Rae!",
+                "npc": 260027,
+                "next": 12070668
+              },
+              {
+                "id": 12070668,
+                "content": "See? Darcy may be gone, but the love she gave you is still here, in everyone who cares about you.",
+                "npc": 260001,
+                "next": 12070669
+              },
+              {
+                "id": 12070669,
+                "content": "...Yeah.",
+                "npc": 260017,
+                "next": 12070670
+              },
+              {
+                "id": 12070670,
+                "content": "Get some rest. I hope you sleep well tonight.",
+                "npc": 260001,
+                "next": 12070671
+              },
+              {
+                "id": 12070671,
+                "content": "Darcy Sloan... That leaves only a few names.",
+                "npc": 260001,
+                "next": 12070672
+              },
+              {
+                "id": 12070672,
+                "content": "Next is...",
+                "npc": 260001,
+                "next": 12070673
+              },
+              {
+                "id": 12070673,
+                "content": "Parsifal Snowfield...? That name sounds familiar.",
+                "npc": 260001,
+                "next": 12070674
+              },
+              {
+                "id": 12070674,
+                "content": "Ah, I remember. His name was in the report on the brawl at Galea Theatre. He was one of the people involved... and he played the lead in Children From the Snowfield.",
+                "npc": 260001,
+                "next": 12070675
+              },
+              {
+                "id": 12070675,
+                "content": "Wait, Children From the Snowfield... I remember Blues mentioning that he met a friend while escaping the Alchemy Academy, and it was all because of that opera.",
+                "npc": 260001,
+                "next": 12070676
+              },
+              {
+                "id": 12070676,
+                "content": "Parsifal... could he be the one Blues spoke of?",
+                "npc": 260001,
+                "next": 12070677
+              },
+              {
+                "id": 12070677,
+                "content": "Tonight's performance should be over by now. I'll go and ask at the theatre.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       }
@@ -109590,12 +113231,176 @@
             ],
             "next": [
               "178739023979622644773"
+            ],
+            "dialogues": [
+              {
+                "id": 12070678,
+                "content": "Good evening.",
+                "npc": 260001,
+                "next": 12070679
+              },
+              {
+                "id": 12070679,
+                "content": "Good evening, ma'am. Did you enjoy the performance?",
+                "npc": 260026,
+                "next": 12070680
+              },
+              {
+                "id": 12070680,
+                "content": "Er... yes. Very much.",
+                "npc": 260001,
+                "next": 12070681
+              },
+              {
+                "id": 12070681,
+                "content": "Do you happen to know an actor named Parsifal? He was with the troupe here two years ago.",
+                "npc": 260001,
+                "next": 12070682
+              },
+              {
+                "id": 12070682,
+                "content": "I'm afraid I wasn't working here then. But Miss Susanna may be able to help. She's finished for the night, but she should still be inside.",
+                "npc": 260026,
+                "next": 12070683
+              },
+              {
+                "id": 12070683,
+                "content": "(Susanna... Her name was in the report on the brawl too. She should know Parsifal.)",
+                "npc": 260001,
+                "next": 12070684
+              },
+              {
+                "id": 12070684,
+                "content": "I see. Thank you.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "178739023979622644773",
             "type": "TalkNode",
-            "name": "对话苏珊娜"
+            "name": "对话苏珊娜",
+            "dialogues": [
+              {
+                "id": 12070687,
+                "content": "The tiny fairy flew towards the monstrous creatures, only for its delicate limbs to snap beneath their might.",
+                "npc": 260028,
+                "next": 12070688
+              },
+              {
+                "id": 12070688,
+                "content": "The fairy's frozen heart pulsed for the first time — beating, screaming its own destiny—",
+                "npc": 260028,
+                "next": 12070689
+              },
+              {
+                "id": 12070689,
+                "content": "...Children From the Snowfield is finally back on stage. If only Parsifal could have seen it.",
+                "npc": 260028,
+                "next": 12070690
+              },
+              {
+                "id": 12070690,
+                "content": "Parsifal... You knew him?",
+                "npc": 260001,
+                "next": 12070691
+              },
+              {
+                "id": 12070691,
+                "content": "Yes. He was a friend of mine, and he used to perform here. Wait... do you know him too? Do you know where he is?",
+                "npc": 260028,
+                "next": 12070692
+              },
+              {
+                "id": 12070692,
+                "content": "I'm sorry, I don't know him personally, but he might be the person I'm looking for.",
+                "npc": 260001,
+                "next": 12070730
+              },
+              {
+                "id": 12070730,
+                "content": "My brother met a young man in the Legion who loved opera. He helped and encouraged him a great deal.",
+                "npc": 260001,
+                "next": 12070731
+              },
+              {
+                "id": 12070731,
+                "content": "I don't know his name. All I know is that he's a Charon from Icelake, in his twenties, and he joined the Legion two years ago... and he can sing Children From the Snowfield.",
+                "npc": 260001,
+                "next": 12070732
+              },
+              {
+                "id": 12070732,
+                "content": "Two years ago... that was exactly when Parsifal left. We never heard from him again.",
+                "npc": 260028,
+                "next": 12070693
+              },
+              {
+                "id": 12070693,
+                "content": "He was kind. Compassionate. Children From the Snowfield was his favourite play, and the one he rehearsed the most. That must be Parsifal.",
+                "npc": 260028,
+                "next": 12070733
+              },
+              {
+                "id": 12070733,
+                "content": "So he joined the Legion, why didn't he tell us...",
+                "npc": 260028,
+                "next": 12070734
+              },
+              {
+                "id": 12070734,
+                "content": "Then he's the one I've been looking for.",
+                "npc": 260001,
+                "next": 12070735
+              },
+              {
+                "id": 12070735,
+                "content": "Is he doing well now?",
+                "npc": 260028,
+                "next": 12070736
+              },
+              {
+                "id": 12070736,
+                "content": "...He's fine. Don't worry. But his unit is in closed training, so he can't contact the outside world.",
+                "npc": 260001,
+                "next": 12070737
+              },
+              {
+                "id": 12070737,
+                "content": "That's alright. As long as he's safe... I believe we'll meet again someday.",
+                "npc": 260028,
+                "next": 12070694
+              },
+              {
+                "id": 12070694,
+                "content": "Do you know where his family lives? I'd like to visit them, if I can.",
+                "npc": 260001,
+                "next": 12070695
+              },
+              {
+                "id": 12070695,
+                "content": "Hm... Parsifal grew up with just his mother. She died several years ago, so as far as I know, he has no family left. But the troupe was like family to him too.",
+                "npc": 260028,
+                "next": 12070696
+              },
+              {
+                "id": 12070696,
+                "content": "If you'd like to understand him a little better, come and see it sometime.",
+                "npc": 260028,
+                "next": 12070697
+              },
+              {
+                "id": 12070697,
+                "content": "We'll give it everything we've got. For Parsifal.",
+                "npc": 260028,
+                "next": 12070698
+              },
+              {
+                "id": 12070698,
+                "content": "I will. Thank you.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109610,12 +113415,147 @@
             "name": "无缝对话看城墙",
             "next": [
               "178739061344924907242"
+            ],
+            "dialogues": [
+              {
+                "id": 12070699,
+                "content": "Parsifal Snowfield... He must have been the other test subject from Blues's memories — the friend whose name I never knew.",
+                "npc": 260001,
+                "next": 12070700
+              },
+              {
+                "id": 12070700,
+                "content": "I had no idea he'd already lost everyone in his family...",
+                "npc": 260001,
+                "next": 12070701
+              },
+              {
+                "id": 12070701,
+                "content": "But his friends still remember him with such affection. Perhaps he wasn't so alone after all.",
+                "npc": 260001,
+                "next": 12070702
+              },
+              {
+                "id": 12070702,
+                "content": "Parsifal... thank you for giving Blues the courage to carry on. I'll keep your memory alive for him. I'll remember how much you loved Children From the Snowfield, and how you dreamed of giving your all on stage.",
+                "npc": 260001,
+                "next": 12070703
+              }
             ]
           },
           {
             "id": "178739061344924907242",
             "type": "TalkNode",
-            "name": "告别过往"
+            "name": "告别过往",
+            "dialogues": [
+              {
+                "id": 12070706,
+                "content": "Hey, Sis. Been a while.",
+                "npc": 260029,
+                "next": 12070707
+              },
+              {
+                "id": 12070707,
+                "content": "Mm. It has.",
+                "npc": 260001,
+                "next": 12070708
+              },
+              {
+                "id": 12070708,
+                "content": "I... I've missed you so much.",
+                "npc": 260001,
+                "next": 12070709
+              },
+              {
+                "id": 12070709,
+                "content": "I'm sorry. I think I've let you down these past few months.",
+                "npc": 260001,
+                "next": 12070710
+              },
+              {
+                "id": 12070710,
+                "content": "You told me to be brave and go on living, but instead, I buried myself in work. I barely slept. I barely ate. I just kept rushing from one thing to the next.",
+                "npc": 260001,
+                "next": 12070711
+              },
+              {
+                "id": 12070711,
+                "content": "It wasn't until I finally stopped that I realised how exhausted I was.",
+                "npc": 260001,
+                "next": 12070712
+              },
+              {
+                "id": 12070712,
+                "content": "Ha! That sounds like my big sister. Once you decide something needs doing, you don't stop until you drop. You never did learn how to take a break.",
+                "npc": 260029,
+                "next": 12070713
+              },
+              {
+                "id": 12070713,
+                "content": "But skipping meals and letting your whole routine fall apart? That's new. You used to measure out every meal, eat at exactly the same times every day, and keep your sleep schedule like clockwork.",
+                "npc": 260029,
+                "next": 12070714
+              },
+              {
+                "id": 12070714,
+                "content": "Not that running yourself into the ground is a good thing... But maybe there's one good thing to come out of it. Maybe you're finally learning that you don't have to get everything exactly right.",
+                "npc": 260029,
+                "next": 12070715
+              },
+              {
+                "id": 12070715,
+                "content": "Whatever happens, I believe in you. No matter what life throws at you, you'll find a way through.",
+                "npc": 260029,
+                "next": 12070716
+              },
+              {
+                "id": 12070716,
+                "content": "Just like we did after Mum and Dad died. We learned to live with the pain and keep going.",
+                "npc": 260029,
+                "next": 12070717
+              },
+              {
+                "id": 12070717,
+                "content": "Mm... You're right.",
+                "npc": 260001,
+                "next": 12070718
+              },
+              {
+                "id": 12070718,
+                "content": "I promise. I'll be brave, and I'll keep going. And I'll find a new dream of my own.",
+                "npc": 260001,
+                "next": 12070719
+              },
+              {
+                "id": 12070719,
+                "content": "When I do, I'll come back here and tell you all about it.",
+                "npc": 260001,
+                "next": 12070720
+              },
+              {
+                "id": 12070720,
+                "content": "Then it's a promise! I'll be here waiting.",
+                "npc": 260029,
+                "next": 12070722
+              },
+              {
+                "id": 12070722,
+                "content": "O silent, silent snow, child of the sky... Let your grace fall softly where the nameless child lies.",
+                "npc": 260001,
+                "next": 12070723
+              },
+              {
+                "id": 12070723,
+                "content": "He danced with the snowflakes, so merry and free. Then rode on the wind to a kingdom of light.",
+                "npc": 260001,
+                "next": 12070724
+              },
+              {
+                "id": 12070724,
+                "content": "From that day onward, his pure heart shone bright, and brimmed with unending delight.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       }

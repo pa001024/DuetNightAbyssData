@@ -40,6 +40,21 @@ describe("char 模块", () => {
         expect(liseField?.取消).toBeUndefined()
     })
 
+    test("540201 追踪弹伤害的影响映射为多重", async () => {
+        const graph = new Graph()
+        graph.defineModule({ name: "Skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })
+        graph.defineModule({ name: "Char", deps: ["Skill"], outputs: true, build: ctx => charModule(ctx) })
+
+        const artifacts = await graph.build({}, undefined, ["Char"])
+        const chars = (artifacts.get("Char") as { Char: Array<Record<string, any>> }).Char
+        const field = chars
+            .find(item => item.id === 5402)
+            ?.技能?.find((item: Record<string, any>) => item.id === 540201)
+            ?.字段?.find((item: Record<string, any>) => item.名称?.key === "SKILL_DESC_5402_Skill01_Dmg")
+
+        expect(field?.影响).toBe("多重")
+    })
+
     test("特质按派遣标签槽位聚合，同名标签叠加等级并保留各自突破阶段", async () => {
         const graph = new Graph()
         graph.defineModule({ name: "Skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })

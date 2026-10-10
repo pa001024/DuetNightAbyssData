@@ -51342,7 +51342,22 @@
               "17804009481207050409",
               "17851555172566669159"
             ],
-            "video": "SQ_Ex02_FixSimple_01"
+            "video": "SQ_Ex02_FixSimple_01",
+            "dialogues": [
+              {
+                "id": 11100006,
+                "content": "« Les soldats des Griffons et des Loups Blancs étaient des héros ayant versé leur sang pour l’Empire. Ils ne méritaient pas de finir comme de simples chiffres au cœur d’une conspiration... ni d’être condamnés à porter une honte qui n’était pas la leur. »",
+                "voice": "story/1102/111000/1BC9A6BC",
+                "npc": 110022,
+                "next": 11100007
+              },
+              {
+                "id": 11100007,
+                "content": "« Ce n’est qu’à ce moment-là que je pourrai me tenir à tes côtés en tant que garde du corps... et non avec les soupçons qui pèsent encore sur moi, au risque de t’entraîner dans ma chute. »",
+                "voice": "story/1102/111000/1BC9A6E6",
+                "npc": 110022
+              }
+            ]
           },
           {
             "id": "17804009481207050409",
@@ -108923,6 +108938,121 @@
             "pos": [
               1351,
               -10153
+            ],
+            "dialogues": [
+              {
+                "id": 12070001,
+                "content": "卡米拉，{nickname}的下落有消息了吗？",
+                "npc": 260001,
+                "next": 12070002
+              },
+              {
+                "id": 12070002,
+                "content": "还没有。",
+                "npc": 260002,
+                "next": 12070003
+              },
+              {
+                "id": 12070003,
+                "content": "Ne t’inquiète pas trop. Dismania est loin d’ici, il faut du temps pour que les nouvelles nous parviennent.",
+                "npc": 260002,
+                "next": 12070004
+              },
+              {
+                "id": 12070004,
+                "content": "Cette affaire implique tout de même les Déchus et la Légion. {性别:Il|Elle} court un grave danger.",
+                "npc": 260001,
+                "next": 12070005
+              },
+              {
+                "id": 12070005,
+                "content": "C’est à cause des renseignements que je lui ai transmis qu’{性别:il|elle} s’est {性别:retrouvé|retrouvée} au cœur de cette affaire. Je ne peux pas rester sans rien faire...",
+                "npc": 260001,
+                "next": 12070006
+              },
+              {
+                "id": 12070006,
+                "content": "Tu ignores même où {性别:il|elle} se trouve et ce qui lui est arrivé. Comment comptes-tu retrouver sa trace, et encore moins lui venir en aide ?",
+                "npc": 260002,
+                "next": 12070007
+              },
+              {
+                "id": 12070007,
+                "content": "Tu sais toi-même à quel point c’est dangereux. Et si tu y laissais la vie ?",
+                "npc": 260002,
+                "next": 12070008
+              },
+              {
+                "id": 12070008,
+                "content": "Je n’ai aucune importance.",
+                "npc": 260001,
+                "next": 12070009
+              },
+              {
+                "id": 12070009,
+                "content": "Ah oui ? {nickname} ne serait sans doute pas de cet avis. Tu ne fais plus partie de la Légion. Si tu t’attires des ennuis, {性别:il|elle} devra encore trouver le moyen de te tirer de là.",
+                "npc": 260002,
+                "next": 12070010
+              },
+              {
+                "id": 12070010,
+                "content": "Tu ferais mieux de commencer par t’occuper de toi. Cela fait plus d’un mois que tu as quitté la Légion, et tu as toujours l’air aussi perdue qu’au premier jour.",
+                "npc": 260002,
+                "next": 12070011
+              },
+              {
+                "id": 12070011,
+                "content": "Hier soir, tu réparais le système de chauffage de quelqu’un, et à l’aube, je t’ai déjà vue transporter des marchandises. Combien d’heures as-tu dormi, au juste ? À ce rythme, tu t’effondreras avant même son retour.",
+                "npc": 260002,
+                "next": 12070012
+              },
+              {
+                "id": 12070012,
+                "content": "Merci pour votre sollicitude, Camilla. Je vais bien. Ce n’est pas un peu de fatigue qui aura raison de moi. Je... suis habituée au rythme de la Légion. Je ne sais pas rester inactive.",
+                "npc": 260001,
+                "next": 12070013
+              },
+              {
+                "id": 12070013,
+                "content": "Vraiment ? À mes yeux, tu cherches surtout à fuir.",
+                "npc": 260002,
+                "next": 12070014
+              },
+              {
+                "id": 12070014,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070015
+              },
+              {
+                "id": 12070015,
+                "content": "Puisque tu as choisi de quitter la Légion, j’imagine que tu avais décidé de tirer un trait sur le passé. Mais pour laisser le passé derrière soi, il ne suffit pas de s’arrêter. Il faut aussi avancer.",
+                "npc": 260002,
+                "next": 12070016
+              },
+              {
+                "id": 12070016,
+                "content": "« Avancer »... ? Mais je ne sais pas dans quelle direction.",
+                "npc": 260001,
+                "next": 12070017
+              },
+              {
+                "id": 12070017,
+                "content": "Alors regarde au fond de toi et écoute la voix de ton cœur.",
+                "npc": 260002,
+                "next": 12070018
+              },
+              {
+                "id": 12070018,
+                "content": "La voix de mon cœur... ?",
+                "npc": 260001,
+                "next": 12070019
+              },
+              {
+                "id": 12070019,
+                "content": "<I>Peut-être est-il temps de retourner à notre base secrète.</>",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -108940,6 +109070,19 @@
               "17901699603925720263",
               "17901699603915720261",
               "17901699603925720262"
+            ],
+            "dialogues": [
+              {
+                "id": 12070021,
+                "content": "<I>Cela faisait longtemps que je n’étais pas venue. La poussière s’est accumulée... Je vais nettoyer un peu.</>",
+                "npc": 260001,
+                "next": 12070022
+              },
+              {
+                "id": 12070022,
+                "content": "<I>Il est temps aussi... de trier les affaires que Blues a laissées derrière lui.</>",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -108949,6 +109092,55 @@
             "next": [
               "17901699603925720265",
               "17901699603935720267"
+            ],
+            "dialogues": [
+              {
+                "id": 12070025,
+                "content": "Après ton entrée dans la Légion, je n’ai jamais pu m’empêcher d’imaginer à quoi tu ressemblerais à ton retour.",
+                "npc": 260001,
+                "next": 12070026
+              },
+              {
+                "id": 12070026,
+                "content": "On dit souvent qu’il est difficile de remarquer les changements chez ceux que l’on côtoie chaque jour.",
+                "npc": 260001,
+                "next": 12070027
+              },
+              {
+                "id": 12070027,
+                "content": "Mais après quelque temps loin l’un de l’autre, ces changements sautent aux yeux.",
+                "npc": 260001,
+                "next": 12070028
+              },
+              {
+                "id": 12070028,
+                "content": "Je me disais que tu étais encore en pleine croissance. En trois ans, tu aurais sûrement beaucoup grandi. Peut-être même que j’aurais dû lever la tête pour te regarder.",
+                "npc": 260001,
+                "next": 12070029
+              },
+              {
+                "id": 12070029,
+                "content": "L’entraînement de la Légion aurait sans doute rendu tes traits plus durs. Mais comme tu as toujours été soigneux, tu aurais encore veillé à rester impeccable.",
+                "npc": 260001,
+                "next": 12070030
+              },
+              {
+                "id": 12070030,
+                "content": "Depuis tout petit, beaucoup de gens te trouvaient beau. En uniforme, tu devais sûrement avoir fière allure.",
+                "npc": 260001,
+                "next": 12070031
+              },
+              {
+                "id": 12070031,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070032
+              },
+              {
+                "id": 12070032,
+                "content": "Mais je ne le saurai jamais.",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -108958,6 +109150,31 @@
             "next": [
               "17901699603925720265",
               "17901699603935720267"
+            ],
+            "dialogues": [
+              {
+                "id": 12070034,
+                "content": "« Je ne regarderai plus jamais quelqu’un mourir à cause d’un Souillé. »",
+                "npc": 260001,
+                "next": 12070035
+              },
+              {
+                "id": 12070035,
+                "content": "... Comme j’étais naïve, à l’époque. Je croyais qu’il suffirait de tuer tous les Souillés pour que chacun puisse vivre en paix, sans plus jamais connaître la peine ni les adieux.",
+                "npc": 260001,
+                "next": 12070036
+              },
+              {
+                "id": 12070036,
+                "content": "Ce n’est que plus tard que j’ai compris qu’en ce monde, les Souillés étaient loin d’être les seuls capables de nous enlever quelqu’un.",
+                "npc": 260001,
+                "next": 12070037
+              },
+              {
+                "id": 12070037,
+                "content": "À présent, quel vœu pourrais-je encore écrire ici... ?",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -108967,6 +109184,31 @@
             "next": [
               "17901699603925720265",
               "17901699603935720267"
+            ],
+            "dialogues": [
+              {
+                "id": 12070040,
+                "content": "J’avais oublié de ranger ce coffret...",
+                "npc": 260001,
+                "next": 12070041
+              },
+              {
+                "id": 12070041,
+                "content": "Je me demande comment {性别:il|elle} va. Tout cela est arrivé parce que mes renseignements étaient erronés. C’est ma faute si {性别:il|elle} s’est encore {性别:retrouvé mêlé|retrouvée mêlée} à une affaire aussi dangereuse.",
+                "npc": 260001,
+                "next": 12070042
+              },
+              {
+                "id": 12070042,
+                "content": "Non... Ce n’est pas ainsi que je dois penser. {性别:Il|Elle} ne voudrait pas m’entendre parler de cette façon. Je dois croire en ses capacités. Quoi qu’il arrive, {性别:il|elle} saura toujours se tirer d’affaire.",
+                "npc": 260001,
+                "next": 12070043
+              },
+              {
+                "id": 12070043,
+                "content": "Oui... {性别:il|elle} reviendra sans encombre.",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -108988,17 +109230,127 @@
             "next": [
               "17901699603935720270",
               "17901699603935720271"
+            ],
+            "dialogues": [
+              {
+                "id": 12070047,
+                "content": "<I>Pff...</> Ces livres sont là depuis des années. Depuis que j’ai commencé à travailler, je n’ai plus eu le temps de les lire.",
+                "npc": 260001,
+                "next": 12070048
+              },
+              {
+                "id": 12070048,
+                "content": "Je me souviens que Blues avait même pris le temps de me laisser de nombreuses notes. Je n’ai vraiment pas su honorer tous ses efforts.",
+                "npc": 260001,
+                "next": 12070049
+              },
+              {
+                "id": 12070049,
+                "content": "Ces journaux... Ils contiennent tous des articles sur les spectacles du Théâtre Galea. Blues m’avait expressément demandé de ne pas les jeter. Je vais les trier et les ranger dans une boîte.",
+                "npc": 260001,
+                "next": 12070050
+              },
+              {
+                "id": 12070050,
+                "content": "Hm ?",
+                "npc": 260001,
+                "next": 12070051
+              },
+              {
+                "id": 12070051,
+                "content": "Cette feuille...",
+                "npc": 260001,
+                "next": 12070052
+              },
+              {
+                "id": 12070052,
+                "content": "Un article soigneusement découpé contient une liste. La ligne portant le nom de Blues a été entourée d’un trait de couleur vive, et un petit dessin symbolisant la victoire a été tracé à côté.",
+                "next": 12070053
+              },
+              {
+                "id": 12070053,
+                "content": "... !",
+                "npc": 260001,
+                "next": 12070056
+              },
+              {
+                "id": 12070056,
+                "content": "<I>Il se fait tard... Je devrais aller manger quelque chose. Ensuite... il me semble qu’une usine du quartier sud cherche encore des ouvriers pour quelques jours...</>",
+                "npc": 260001,
+                "next": 12070057
+              },
+              {
+                "id": 12070057,
+                "content": "<I>Oui... J’irai voir après avoir mangé...</>",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17901699603935720270",
             "type": "TalkNode",
-            "name": "黎瑟不想看"
+            "name": "黎瑟不想看",
+            "dialogues": [
+              {
+                "id": 12070059,
+                "content": "<I>Non. Je ne veux pas regarder ça.</>",
+                "npc": 260001
+              }
+            ]
           },
           {
             "id": "17901699603935720271",
             "type": "TalkNode",
-            "name": "回来捡名单"
+            "name": "回来捡名单",
+            "dialogues": [
+              {
+                "id": 12070063,
+                "content": "Il y a... d’autres noms...",
+                "npc": 260001,
+                "next": 12070065
+              },
+              {
+                "id": 12070065,
+                "content": "Marian Rhodes, Kenny Warren, Lucy Clark, Darcy Sloan...",
+                "npc": 260001,
+                "next": 12070066
+              },
+              {
+                "id": 12070066,
+                "content": "Eux aussi... comme Blues, ils sont déjà...",
+                "npc": 260001,
+                "next": 12070067
+              },
+              {
+                "id": 12070067,
+                "content": "... Bien sûr. Comment ai-je pu ne pas y penser ?",
+                "npc": 260001,
+                "next": 12070068
+              },
+              {
+                "id": 12070068,
+                "content": "Blues n’était pas la seule victime. Derrière chacun de ces noms se trouve une famille qui a perdu l’un des siens... sans même savoir que la Légion lui ment.",
+                "npc": 260001,
+                "next": 12070069
+              },
+              {
+                "id": 12070069,
+                "content": "Ces familles comptent peut-être encore les jours en attendant leur retour. Peut-être courent-elles toujours, comme moi autrefois, après le mirage qu’elles se sont inventé.",
+                "npc": 260001,
+                "next": 12070070
+              },
+              {
+                "id": 12070070,
+                "content": "Est-ce le message que tu m’as laissé, Blues ?",
+                "npc": 260001,
+                "next": 12070071
+              },
+              {
+                "id": 12070071,
+                "content": "Il reste encore quelque chose que je peux faire. Même si je ne peux pas révéler la vérité, je peux au moins aider ceux qui l’ignorent encore.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       }
@@ -109018,12 +109370,266 @@
             "name": "敲门对话",
             "next": [
               "17872153023084507659"
+            ],
+            "dialogues": [
+              {
+                "id": 12070075,
+                "content": "Si je me souviens bien, c’est ici que vit Marian.",
+                "npc": 260001,
+                "next": 12070076
+              },
+              {
+                "id": 12070076,
+                "content": "<I>Toc, toc !</>",
+                "next": 12070077
+              },
+              {
+                "id": 12070077,
+                "content": "Bonjour ? Y a-t-il quelqu’un ?",
+                "npc": 260001,
+                "next": 12070078
+              },
+              {
+                "id": 12070078,
+                "content": "Hé, inutile de frapper, il n’y a personne. La vieille dame qui habite ici vit seule. Tous les matins, elle va se promener sur la place. Elle ne doit pas encore être rentrée.",
+                "npc": 260003,
+                "next": 12070079
+              },
+              {
+                "id": 12070079,
+                "content": "Je vois. Merci. Je vais la chercher sur la place.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17872153023084507659",
             "type": "TalkNode",
-            "name": "罗德斯奶奶"
+            "name": "罗德斯奶奶",
+            "dialogues": [
+              {
+                "id": 12070081,
+                "content": "...",
+                "npc": 260005,
+                "speakerName": "Vieil homme abattu",
+                "next": 12070082
+              },
+              {
+                "id": 12070082,
+                "content": "Bonjour, Mamie Rhodes.",
+                "npc": 260001,
+                "next": 12070083
+              },
+              {
+                "id": 12070083,
+                "content": "Hm... ? Mais... ce ne serait pas la sœur de Blues ?",
+                "npc": 260005,
+                "next": 12070084
+              },
+              {
+                "id": 12070084,
+                "content": "J’ai entendu dire que tu ne travaillais plus au Bureau de la Sécurité. Il s’est passé quelque chose ? On t’a fait des misères à la Légion ? Ou tu as été blessée pendant une mission ?",
+                "npc": 260005,
+                "next": 12070085
+              },
+              {
+                "id": 12070085,
+                "content": "... Je vais bien. Merci de vous en inquiéter.",
+                "npc": 260001,
+                "next": 12070086
+              },
+              {
+                "id": 12070086,
+                "content": "Regarde-toi un peu ! Tu as l’air épuisée. Tes yeux sont tout injectés de sang, on voit bien que tu n’as pas dormi correctement depuis plusieurs jours.",
+                "npc": 260005,
+                "next": 12070087
+              },
+              {
+                "id": 12070087,
+                "content": "Euh...",
+                "npc": 260001,
+                "next": 12070088
+              },
+              {
+                "id": 12070088,
+                "content": "Ah, ma pauvre enfant... Tu as toujours été bien trop raisonnable. Tu ne penses qu’aux autres sans jamais prendre soin de toi. Tu es exactement comme ma petite-fille.",
+                "npc": 260005,
+                "next": 12070089
+              },
+              {
+                "id": 12070089,
+                "content": "Ma petite Marian... À l’époque, elle partait travailler avant l’aube et ne rentrait que tard le soir pour pouvoir payer mes soins. Elle maigrissait un peu plus chaque jour.",
+                "npc": 260005,
+                "next": 12070090
+              },
+              {
+                "id": 12070090,
+                "content": "Ses anciens vêtements flottaient tellement sur elle que le vent s’y engouffrait, mais elle s’obstinait à dire qu’elle faisait simplement plus d’exercice et que ses muscles s’étaient raffermis.",
+                "npc": 260005,
+                "next": 12070091
+              },
+              {
+                "id": 12070091,
+                "content": "Elle ne voulait pas que vous vous inquiétiez.",
+                "npc": 260001,
+                "next": 12070092
+              },
+              {
+                "id": 12070092,
+                "content": "Je sais, je sais... Mais j’aurais tout de même voulu qu’elle prenne mieux soin d’elle.",
+                "npc": 260005,
+                "next": 12070093
+              },
+              {
+                "id": 12070093,
+                "content": "Heureusement, elle a rejoint la Légion. Elle n’a plus à se tuer à la tâche à cause de cette vieille femme que je suis.",
+                "npc": 260005,
+                "next": 12070094
+              },
+              {
+                "id": 12070094,
+                "content": "Seulement, la Légion prétend qu’elle suit un entraînement en isolement complet... Depuis qu’elle est partie, je n’ai plus reçu la moindre nouvelle. Comment veux-tu que je ne m’inquiète pas ?",
+                "npc": 260005,
+                "next": 12070095
+              },
+              {
+                "id": 12070095,
+                "content": "Je me demande comment elle vit là-bas, si elle s’est fait des amis... Dis-moi, ma petite, toi aussi, tu travaillais dans la Légion. Tu aurais des nouvelles de Marian ?",
+                "npc": 260005,
+                "next": 12070096
+              },
+              {
+                "id": 12070096,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070097
+              },
+              {
+                "id": 12070097,
+                "content": "Mamie Rhodes... À vrai dire, je suis justement venue vous parler de Marian.",
+                "npc": 260001,
+                "next": 12070098
+              },
+              {
+                "id": 12070098,
+                "content": "Que se passe-t-il ? Il lui est arrivé quelque chose ?",
+                "npc": 260005,
+                "next": 12070099
+              },
+              {
+                "id": 12070099,
+                "content": "... Ne vous inquiétez pas. À la Légion... elle s’est particulièrement distinguée. Elle a même été récompensée pour ses mérites.",
+                "npc": 260001,
+                "next": 12070100
+              },
+              {
+                "id": 12070100,
+                "content": "Avant mon départ, mon supérieur m’a expressément demandé de trouver le temps de rendre visite aux familles des soldats. Prenez cet argent. Il s’agit d’une allocation spécialement destinée aux familles des soldats les plus méritants.",
+                "npc": 260001,
+                "next": 12070101
+              },
+              {
+                "id": 12070101,
+                "content": "C’est... c’est vrai ? Ce ne serait pas plutôt de l’argent que cette enfant a mis de côté pour moi ?",
+                "npc": 260005,
+                "next": 12070102
+              },
+              {
+                "id": 12070102,
+                "content": "Bien sûr que non. Son unité suit un entraînement en isolement complet. Elle ne peut ni communiquer avec l’extérieur ni faire parvenir quoi que ce soit. Cette allocation est bien destinée aux familles, afin de les remercier d’avoir donné à la Légion des soldats aussi remarquables.",
+                "npc": 260001,
+                "next": 12070103
+              },
+              {
+                "id": 12070103,
+                "content": "La Légion nous donne de l’argent ? Eh bien, je n’avais encore jamais entendu parler d’une chose pareille... Ma petite-fille fait vraiment honneur à notre famille !",
+                "npc": 260005,
+                "next": 12070104
+              },
+              {
+                "id": 12070104,
+                "content": "Avec ça, je vais justement pouvoir confectionner une nouvelle couverture. Elle pourra s’en servir quand elle rentrera à la maison.",
+                "npc": 260005,
+                "next": 12070105
+              },
+              {
+                "id": 12070105,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070106
+              },
+              {
+                "id": 12070106,
+                "content": "Tu vas sans doute te moquer de moi, mais si je reste ici, c’est parce que je me dis que l’unité de Marian passera peut-être un jour par cette place. Je pourrais alors l’apercevoir, voir si elle a bonne mine et si elle a pris des forces.",
+                "npc": 260005,
+                "next": 12070107
+              },
+              {
+                "id": 12070107,
+                "content": "Mais maintenant que je sais qu’elle se porte bien à la Légion, je suis rassurée.",
+                "npc": 260005,
+                "next": 12070108
+              },
+              {
+                "id": 12070108,
+                "content": "Ah, regarde-moi... Je ne fais que parler de ma petite-fille. Merci d’avoir pris la peine de m’apporter de ses nouvelles. Il est presque l’heure de manger. Tu ne voudrais pas venir prendre quelque chose à la maison ?",
+                "npc": 260005,
+                "next": 12070109
+              },
+              {
+                "id": 12070109,
+                "content": "Merci, mais je ne voudrais pas vous déranger. Je suis en mission et je dois encore rendre visite à plusieurs autres familles.",
+                "npc": 260001,
+                "next": 12070110
+              },
+              {
+                "id": 12070110,
+                "content": "Très bien, je comprends. La Légion est stricte avec vous... Ce ne doit pas être facile tous les jours. Ah, à ce propos... Sais-tu ce qu’est devenu le fils aîné des Warren ?",
+                "npc": 260005,
+                "next": 12070111
+              },
+              {
+                "id": 12070111,
+                "content": "Il a rejoint la Légion la même année que Marian. Est-ce que sa famille reçoit également cette allocation ? Son petit frère travaille à la gare et se tue lui aussi à la tâche. Cela fait peine à voir.",
+                "npc": 260005,
+                "next": 12070112
+              },
+              {
+                "id": 12070112,
+                "content": "Warren... Oui, son nom figure également sur ma liste. Ne vous inquiétez pas, j’irai voir son frère.",
+                "npc": 260001,
+                "next": 12070113
+              },
+              {
+                "id": 12070113,
+                "content": "Bien, me voilà rassurée. Si tu veux le trouver, tu devras aller à la gare. Il part très tôt chaque matin et ne rentre que tard dans la soirée.",
+                "npc": 260005,
+                "next": 12070114
+              },
+              {
+                "id": 12070114,
+                "content": "Très bien, j’ai compris.",
+                "npc": 260001,
+                "next": 12070115
+              },
+              {
+                "id": 12070115,
+                "content": "Je vais donc prendre congé. Prenez bien soin de vous. Marian... elle aussi voudrait certainement que vous preniez soin de vous et que vous ne vous priviez pas sous prétexte qu’elle n’est pas là.",
+                "npc": 260001,
+                "next": 12070116
+              },
+              {
+                "id": 12070116,
+                "content": "Je le ferai. Merci, ma petite.",
+                "npc": 260005,
+                "next": 12070118
+              },
+              {
+                "id": 12070118,
+                "content": "Dans ce cas, je vais maintenant rendre visite au fils cadet des Warren.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109043,6 +109649,19 @@
             ],
             "next": [
               "17872180642791136856"
+            ],
+            "dialogues": [
+              {
+                "id": 12070120,
+                "content": "Bonjour. Est-ce qu’un ouvrier du nom de Warren travaille ici ?",
+                "npc": 260001,
+                "next": 12070121
+              },
+              {
+                "id": 12070121,
+                "content": "Hein ? Aucune idée. Je viens d’être affecté ici, je ne connais encore personne.",
+                "npc": 260006
+              }
             ]
           },
           {
@@ -109056,6 +109675,25 @@
             ],
             "next": [
               "17872180642791136856"
+            ],
+            "dialogues": [
+              {
+                "id": 12070123,
+                "content": "Bonjour. Est-ce qu’un ouvrier du nom de Warren travaille ici ?",
+                "npc": 260001,
+                "next": 12070124
+              },
+              {
+                "id": 12070124,
+                "content": "Peut-être bien... ou peut-être pas.",
+                "npc": 260007,
+                "next": 12070125
+              },
+              {
+                "id": 12070125,
+                "content": "Avec tous les collègues qu’on a, je ne peux pas retenir le nom de famille de chacun.",
+                "npc": 260007
+              }
             ]
           },
           {
@@ -109069,12 +109707,126 @@
             ],
             "next": [
               "17872180642791136856"
+            ],
+            "dialogues": [
+              {
+                "id": 12070127,
+                "content": "Bonjour, excusez-moi. Est-ce qu’un ouvrier du nom de Warren travaille ici ?",
+                "npc": 260001,
+                "next": 12070128
+              },
+              {
+                "id": 12070128,
+                "content": "Warren... ! Non. Il n’y a personne de ce nom ici.",
+                "npc": 260008,
+                "next": 12070129
+              },
+              {
+                "id": 12070129,
+                "content": "Vous vous êtes trompée d’endroit !",
+                "npc": 260008,
+                "next": 12070130
+              },
+              {
+                "id": 12070130,
+                "content": "Vraiment... ? Pourtant, l’une de ses voisines m’a dit qu’il travaillait ici.",
+                "npc": 260001,
+                "next": 12070131
+              },
+              {
+                "id": 12070131,
+                "content": "Comment serait-ce possible ? Cette voisine doit forcément se tromper.",
+                "npc": 260008,
+                "next": 12070132
+              },
+              {
+                "id": 12070132,
+                "content": "Très bien, merci. Je vais continuer à me renseigner.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17872180642791136856",
             "type": "TalkNode",
-            "name": "马蒂斯触发"
+            "name": "马蒂斯触发",
+            "dialogues": [
+              {
+                "id": 12070134,
+                "content": "Hé, toi, en rouge ! Oui, toi ! Qu’est-ce que tu trafiques à rôder partout en posant toutes ces questions depuis tout à l’heure ?",
+                "npc": 260010,
+                "speakerName": "Garde vigilant",
+                "next": 12070135
+              },
+              {
+                "id": 12070135,
+                "content": "Tu vas venir avec nous pour répondre à quelques questions !",
+                "npc": 260010,
+                "speakerName": "Garde vigilant",
+                "next": 12070136
+              },
+              {
+                "id": 12070136,
+                "content": "Ah...",
+                "npc": 260001,
+                "next": 12070137
+              },
+              {
+                "id": 12070137,
+                "content": "Hein ? Attends... Mais c’est Rhythm ! Quand est-ce que tu es revenue ?",
+                "npc": 260010,
+                "speakerName": "Garde vigilant",
+                "next": 12070138
+              },
+              {
+                "id": 12070138,
+                "content": "Désolé, je ne t’avais pas reconnue de loin. Avec tout ce qui se passe en ce moment, je commence à voir des suspects partout.",
+                "npc": 260010,
+                "speakerName": "Garde vigilant",
+                "next": 12070139
+              },
+              {
+                "id": 12070139,
+                "content": "Ce n’est rien, je comprends. Cela faisait longtemps, Mathis. Toi aussi, tu as été affecté aux patrouilles de la gare ?",
+                "npc": 260001,
+                "next": 12070140
+              },
+              {
+                "id": 12070140,
+                "content": "Oui. À cause du casse retentissant d’il y a quelques jours, une bonne partie des Veilleurs a été envoyée ici. La gare est presque devenue un camp militaire !",
+                "npc": 260010,
+                "next": 12070141
+              },
+              {
+                "id": 12070141,
+                "content": "Mais au fait, qu’est-ce que tu faisais ? La gare est bouclée en ce moment, alors tu ferais mieux d’éviter ce genre de comportement suspect. Si je ne t’avais pas reconnue, tu aurais vraiment pu finir en salle d’interrogatoire.",
+                "npc": 260010,
+                "next": 12070142
+              },
+              {
+                "id": 12070142,
+                "content": "Merci de m’avoir prévenue. Je ferai attention. Je cherchais un ami. Il s’appelle Warren et travaille ici.",
+                "npc": 260001,
+                "next": 12070143
+              },
+              {
+                "id": 12070143,
+                "content": "Dougie Warren ? Quelle coïncidence, je l’ai croisé pendant ma ronde. Il travaille aux Installations de forge, au sous-sol. Tu ne risques pas de le trouver en restant ici.",
+                "npc": 260010,
+                "next": 12070144
+              },
+              {
+                "id": 12070144,
+                "content": "Descends par ce passage et cherche de ce côté-là.",
+                "npc": 260010,
+                "next": 12070145
+              },
+              {
+                "id": 12070145,
+                "content": "Très bien. Merci.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109089,6 +109841,265 @@
             "name": "触发道吉站桩",
             "next": [
               "17872198265145642746"
+            ],
+            "dialogues": [
+              {
+                "id": 12070147,
+                "content": "Ce sont sûrement les Installations de forge. Je vais me renseigner auprès des ouvriers des alentours.",
+                "npc": 260001,
+                "next": 12070148
+              },
+              {
+                "id": 12070148,
+                "content": "Bon sang ! Ils ont encore failli me retrouver.",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070149
+              },
+              {
+                "id": 12070149,
+                "content": "J’ai eu assez de mal à décrocher un emploi stable. Si le chef de gare l’apprend... Ah, ça me rend fou !",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070150
+              },
+              {
+                "id": 12070150,
+                "content": "Ce salaud de Kenny n’a vraiment aucun cœur. Il disait qu’en rejoignant la Légion, il nous offrirait une vie meilleure, mais cela fait deux ans qu’il n’a pas envoyé le moindre sou à la maison.",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070151
+              },
+              {
+                "id": 12070151,
+                "content": "Alors quoi ? Parce qu’il est entré dans la Légion, il peut laisser son propre frère crever de faim ? Et dire que j’étais si heureux pour lui à l’époque... Quel gâchis !",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070152
+              },
+              {
+                "id": 12070152,
+                "content": "Vous... Vous êtes le frère de Kenny Warren ?",
+                "npc": 260001,
+                "next": 12070153
+              },
+              {
+                "id": 12070153,
+                "content": "Hein ? Oui, c’est moi. Pourquoi ?",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070154
+              },
+              {
+                "id": 12070154,
+                "content": "J’ai autrefois servi dans la VIᵉ Légion. Mon supérieur m’a envoyée à la recherche de sa famille...",
+                "npc": 260001,
+                "next": 12070155
+              },
+              {
+                "id": 12070155,
+                "content": "Quoi ?! Mon frère s’est enfin souvenu qu’il avait une famille et nous a envoyé de l’argent ?",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070156
+              },
+              {
+                "id": 12070156,
+                "content": "Vous... Vous ne pensez donc qu’à l’argent ? Votre frère n’a donné aucun signe de vie depuis si longtemps. Vous ne vous êtes jamais demandé s’il lui était arrivé quelque chose ?",
+                "npc": 260001,
+                "next": 12070157
+              },
+              {
+                "id": 12070157,
+                "content": "Ha ! Qu’est-ce que ça peut me faire ? Tout ce que je sais, c’est que je suis si pauvre que je vais finir par mourir de faim. Si vous n’êtes pas venue m’apporter de l’argent, laissez-moi tranquille. J’ai du travail !",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070158
+              },
+              {
+                "id": 12070158,
+                "content": "Et si je vous disais qu’il est mort au combat ?",
+                "npc": 260001,
+                "next": 12070159
+              },
+              {
+                "id": 12070159,
+                "content": "Qu... Quoi ?",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070160
+              },
+              {
+                "id": 12070160,
+                "content": "Votre frère est mort. C’est pour cette raison qu’il n’a jamais repris contact avec sa famille et qu’il n’a pas pu vous envoyer d’argent.",
+                "npc": 260001,
+                "next": 12070161
+              },
+              {
+                "id": 12070161,
+                "content": "Non... Impossible. Qu’est-ce que vous racontez ?",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070162
+              },
+              {
+                "id": 12070162,
+                "content": "Il était seulement parti suivre un entraînement. Il ne devait pas aller au front, il ne courait aucun danger... C’est lui qui me l’a dit !",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070163
+              },
+              {
+                "id": 12070163,
+                "content": "Il vous a dit cela uniquement pour vous rassurer. Quiconque rejoint la Légion finit tôt ou tard par être envoyé au combat.",
+                "npc": 260001,
+                "next": 12070164
+              },
+              {
+                "id": 12070164,
+                "content": "Si vous ne l’aviez pas compris jusque-là, vous devez le comprendre maintenant.",
+                "npc": 260001,
+                "next": 12070165
+              },
+              {
+                "id": 12070165,
+                "content": "Mais... ce n’est pas possible... Ses enfants sont encore si jeunes. Comment aurait-il pu les abandonner ?",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070166
+              },
+              {
+                "id": 12070166,
+                "content": "Tout ce que j’ai dit, c’était sous le coup de la colère. J’ai eu tort, d’accord ? Alors ne cherchez pas à me faire peur... Mon frère reviendra. Il m’a promis qu’il reviendrait...",
+                "npc": 260013,
+                "speakerName": "Ouvrier colérique",
+                "next": 12070167
+              },
+              {
+                "id": 12070167,
+                "content": "... Toutes mes condoléances.",
+                "npc": 260001,
+                "next": 12070168
+              },
+              {
+                "id": 12070168,
+                "content": "Tiens donc, Dougie Warren ! Alors c’est ici que tu te cachais !",
+                "npc": 260012,
+                "next": 12070169
+              },
+              {
+                "id": 12070169,
+                "content": "Aujourd’hui, c’est le dernier délai pour nous rembourser. Tu comptes te défiler ?",
+                "npc": 260012,
+                "next": 12070170
+              },
+              {
+                "id": 12070170,
+                "content": "Je... Je ne me cachais pas. Je suis seulement venu inspecter les équipements...",
+                "npc": 260013,
+                "next": 12070171
+              },
+              {
+                "id": 12070171,
+                "content": "Ah oui ? Alors sors l’argent.",
+                "npc": 260012,
+                "next": 12070172
+              },
+              {
+                "id": 12070172,
+                "content": "Écoutez, vous savez bien que ce travail ne rapporte presque rien. Et j’ai deux enfants à nourrir. Il m’est vraiment impossible de réunir autant d’argent d’un seul coup...",
+                "npc": 260013,
+                "next": 12070173
+              },
+              {
+                "id": 12070173,
+                "content": "Je vous en supplie, accordez-moi encore quelques mois.",
+                "npc": 260013,
+                "next": 12070174
+              },
+              {
+                "id": 12070174,
+                "content": "Tu te moques de moi ? Ça fait combien de temps que je t’accorde des délais ?",
+                "npc": 260012,
+                "next": 12070175
+              },
+              {
+                "id": 12070175,
+                "content": "Une dette, ça se rembourse. Si tu n’as pas d’argent, donne-nous les deux enfants pour régler ce que tu nous dois.",
+                "npc": 260012,
+                "next": 12070176
+              },
+              {
+                "id": 12070176,
+                "content": "Ils sont encore un peu jeunes, mais ils ont l’air robustes. Ils devraient faire de bons ouvriers.",
+                "npc": 260012,
+                "next": 12070177
+              },
+              {
+                "id": 12070177,
+                "content": "Non, pitié !",
+                "npc": 260013,
+                "next": 12070178
+              },
+              {
+                "id": 12070178,
+                "content": "Je trouverai un moyen d’emprunter l’argent, mais ne touchez pas aux enfants ! Mon frère... Mon frère est mort. Ces deux enfants sont tout ce qu’il a laissé derrière lui !",
+                "npc": 260013,
+                "next": 12070179
+              },
+              {
+                "id": 12070179,
+                "content": "<I>Ce sont... les enfants de Kenny qu’il élève ?</>",
+                "npc": 260001,
+                "next": 12070180
+              },
+              {
+                "id": 12070180,
+                "content": "Arrête de nous raconter tes malheurs. Tu cherches seulement à nous rouler et à trouver toutes sortes d’excuses pour ne pas payer.",
+                "npc": 260012,
+                "next": 12070181
+              },
+              {
+                "id": 12070181,
+                "content": "Je ne cherche vraiment pas à éviter de vous rembourser. Mais un taux d’intérêt de 40 %, c’est beaucoup trop élevé...",
+                "npc": 260013,
+                "next": 12070182
+              },
+              {
+                "id": 12070182,
+                "content": "Si vraiment il le faut, emmenez-moi à leur place ! Je suis bien plus grand et plus robuste que ces deux enfants. Je peux travailler bien plus qu’eux !",
+                "npc": 260013,
+                "next": 12070183
+              },
+              {
+                "id": 12070183,
+                "content": "Un taux d’intérêt... de 40 % ?! C’est illégal !",
+                "npc": 260001,
+                "next": 12070184
+              },
+              {
+                "id": 12070184,
+                "content": "Hein ? T’es qui, toi ? « Illégal » ? Ha ! Va donc porter plainte. On verra bien si le Bureau de la Sécurité se soucie du sort de quelques Charons.",
+                "npc": 260012,
+                "next": 12070185
+              },
+              {
+                "id": 12070185,
+                "content": "... Je ne peux pas nier que la plupart des soldats du Bureau de la Sécurité ont des préjugés à l’égard des Charons. Mais certains sont encore prêts à faire ce qui est juste. J’ai moi-même servi parmi les Veilleurs. Si j’étais encore en poste, je ne fermerais pas les yeux.",
+                "npc": 260001,
+                "next": 12070186
+              },
+              {
+                "id": 12070186,
+                "content": "Ha ! Toi, une Veilleuse ? Dans ce cas, moi, je suis de la XIIIᵉ Légion !",
+                "npc": 260012,
+                "next": 12070187
+              },
+              {
+                "id": 12070187,
+                "content": "Assez parlé. Puisque tu tiens tant à te mêler de nos affaires, ne viens pas te plaindre de ce qui va suivre !",
+                "npc": 260012
+              }
             ]
           },
           {
@@ -109097,6 +110108,60 @@
             "name": "触发催债人对话",
             "next": [
               "17872275674185645578"
+            ],
+            "dialogues": [
+              {
+                "id": 12070189,
+                "content": "B-Bon sang... Avec une force pareille, ce serait vraiment une alliée que son frère a fait venir de la Légion... ?",
+                "npc": 260012,
+                "next": 12070190
+              },
+              {
+                "id": 12070190,
+                "content": "Êtes-vous maintenant disposé à m’écouter ? Le taux d’intérêt indiqué sur cette reconnaissance de dette est abusif. Je vous prie de le modifier et de fixer une nouvelle échéance.",
+                "npc": 260001,
+                "next": 12070191
+              },
+              {
+                "id": 12070191,
+                "content": "Je vais le changer ! Je vais le changer, d’accord ? Pitié, épargnez-moi, cheffe !",
+                "npc": 260012,
+                "next": 12070192
+              },
+              {
+                "id": 12070192,
+                "content": "Pris de panique, le recouvreur sort un stylo et modifie précipitamment la reconnaissance de dette.",
+                "next": 12070193
+              },
+              {
+                "id": 12070193,
+                "content": "Voilà, c’est fait ! Regardez : 5 %, avec un remboursement dans trois mois. Ça... ça vous convient ?",
+                "npc": 260012,
+                "next": 12070194
+              },
+              {
+                "id": 12070194,
+                "content": "Un taux de 5 % est raisonnable. Nous en resterons donc là.",
+                "npc": 260001,
+                "next": 12070195
+              },
+              {
+                "id": 12070195,
+                "content": "Monsieur Warren est un proche d’un soldat tombé au combat. À ce titre, il doit bénéficier de la protection du Bureau de la Sécurité.",
+                "npc": 260001,
+                "next": 12070196
+              },
+              {
+                "id": 12070196,
+                "content": "Je viendrai régulièrement patrouiller dans les environs. Si je vous surprends encore à harceler Monsieur Warren, l’affaire ne se réglera pas aussi facilement qu’aujourd’hui. Est-ce bien compris ?",
+                "npc": 260001,
+                "next": 12070197
+              },
+              {
+                "id": 12070197,
+                "content": "Oui, oui ! Bien compris !",
+                "npc": 260012
+              }
             ]
           },
           {
@@ -109107,6 +110172,73 @@
             "pos": [
               -16076,
               7101
+            ],
+            "dialogues": [
+              {
+                "id": 12070198,
+                "content": "... Merci.",
+                "npc": 260013,
+                "next": 12070199
+              },
+              {
+                "id": 12070199,
+                "content": "Le prêt usuraire est un crime en soi. Je n’ai fait que ce qui devait être fait.",
+                "npc": 260001,
+                "next": 12070200
+              },
+              {
+                "id": 12070200,
+                "content": "À propos, prenez cet argent. Il s’agit d’une allocation versée par la Légion aux familles des soldats tombés au combat. Libre à vous de l’utiliser pour rembourser votre dette ou améliorer le quotidien des enfants.",
+                "npc": 260001,
+                "next": 12070201
+              },
+              {
+                "id": 12070201,
+                "content": "Une allocation... Ha...",
+                "npc": 260013,
+                "next": 12070202
+              },
+              {
+                "id": 12070202,
+                "content": "Mon frère est mort... Comment voulez-vous que j’accepte cet argent ? Une vie humaine a été perdue. Vous croyez vraiment que quelques pièces peuvent compenser une chose pareille ?",
+                "npc": 260013,
+                "next": 12070203
+              },
+              {
+                "id": 12070203,
+                "content": "Ses enfants sont encore si jeunes... et ils ont déjà perdu leur père...",
+                "npc": 260013,
+                "next": 12070204
+              },
+              {
+                "id": 12070204,
+                "content": "... Ils ont encore leur oncle, qui travaille sans relâche pour les nourrir et prendre soin d’eux.",
+                "npc": 260001,
+                "next": 12070205
+              },
+              {
+                "id": 12070205,
+                "content": "Vous devez continuer à vivre. Vous êtes désormais leur modèle et leur pilier. Votre frère... aurait certainement souhaité la même chose.",
+                "npc": 260001,
+                "next": 12070206
+              },
+              {
+                "id": 12070206,
+                "content": "Oui... Je comprends... Merci.",
+                "npc": 260013,
+                "next": 12070207
+              },
+              {
+                "id": 12070207,
+                "content": "Mais pour l’instant, j’ai besoin de rester seul quelque temps. Pardonnez-moi...",
+                "npc": 260013,
+                "next": 12070208
+              },
+              {
+                "id": 12070208,
+                "content": "Bien... Alors, prenez soin de vous. Si vous rencontrez de nouveau des difficultés, venez me trouver. Je m’appelle Rhythm Fischer. Venez aux Asphodèles et demandez à Camilla de me faire passer un message.",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -109122,12 +110254,200 @@
             "name": "回到冰湖城",
             "next": [
               "17872282021667900956"
+            ],
+            "dialogues": [
+              {
+                "id": 12070210,
+                "content": "Kenny Warren... C’est fait. La prochaine famille à visiter est...",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17872282021667900956",
             "type": "TalkNode",
-            "name": "再遇罗德斯奶奶"
+            "name": "再遇罗德斯奶奶",
+            "dialogues": [
+              {
+                "id": 12070212,
+                "content": "Laissez-moi tranquille, vous vous êtes trompée de maison ! Je n’ai pas de fils Charon ! Si vous continuez à me harceler, j’appelle le Bureau de la Sécurité !",
+                "npc": 260014,
+                "next": 12070213
+              },
+              {
+                "id": 12070213,
+                "content": "Très bien... Pardonnez-moi de vous avoir dérangé.",
+                "npc": 260001,
+                "next": 12070214
+              },
+              {
+                "id": 12070214,
+                "content": "Étrange... Ce jeune Charon portait pourtant le même nom de famille que l’homme qui vit ici. S’agirait-il de deux familles homonymes ? Ce serait une drôle de coïncidence...",
+                "npc": 260001,
+                "next": 12070215
+              },
+              {
+                "id": 12070215,
+                "content": "Bah, le garçon dont vous parlez est bien son fils.",
+                "npc": 260015,
+                "next": 12070216
+              },
+              {
+                "id": 12070216,
+                "content": "C’est l’enfant qu’il a eu avec sa première femme. Depuis tout petit, on le traitait comme un domestique dans cette maison. Ils le faisaient courir au moindre ordre. Puis son père l’a envoyé dans la Légion, et plus personne n’a reparlé de lui.",
+                "npc": 260015,
+                "next": 12070217
+              },
+              {
+                "id": 12070217,
+                "content": "C’est donc... ce qui s’est passé... ?",
+                "npc": 260001,
+                "next": 12070218
+              },
+              {
+                "id": 12070218,
+                "content": "Mais quoi qu’il en soit, c’était son propre fils. Cela fait deux ans... Comment peut-il ne pas se soucier de lui après tout ce temps ?",
+                "npc": 260001,
+                "next": 12070219
+              },
+              {
+                "id": 12070219,
+                "content": "Eh oui... Traiter ainsi son propre enfant, c’est une abomination. Un jour ou l’autre, il paiera pour ce qu’il a fait.",
+                "npc": 260015,
+                "next": 12070220
+              },
+              {
+                "id": 12070220,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070221
+              },
+              {
+                "id": 12070221,
+                "content": "<I>Rejeté, abandonné, puis finalement oublié... C’est d’une cruauté effroyable...</>",
+                "npc": 260001,
+                "next": 12070222
+              },
+              {
+                "id": 12070222,
+                "content": "Il ne reste plus que quelques noms sur cette liste.",
+                "npc": 260001,
+                "next": 12070223
+              },
+              {
+                "id": 12070223,
+                "content": "Une fois toutes ces familles visitées... que devrai-je faire ensuite... ?",
+                "npc": 260001,
+                "next": 12070224
+              },
+              {
+                "id": 12070224,
+                "content": "Rhythm ! Ah, ma petite, je te trouve enfin !",
+                "npc": 260005,
+                "next": 12070225
+              },
+              {
+                "id": 12070225,
+                "content": "Hein... ? Mamie Rhodes, vous me cherchiez ?",
+                "npc": 260001,
+                "next": 12070226
+              },
+              {
+                "id": 12070226,
+                "content": "Je suis venue t’apporter ceci. C’est un ragoût que je viens de préparer, il est encore bien chaud. J’ai acheté les légumes et le poisson au marché ce matin. Ils sont tout frais !",
+                "npc": 260005,
+                "next": 12070227
+              },
+              {
+                "id": 12070227,
+                "content": "Vous vous êtes donné beaucoup de mal... Vous n’aviez vraiment pas besoin d’en faire autant pour moi.",
+                "npc": 260001,
+                "next": 12070228
+              },
+              {
+                "id": 12070228,
+                "content": "Le jeune Warren m’a raconté que tu lui avais rendu un grand service l’autre jour. Les autres familles m’ont également dit que tu leur avais remis de l’argent. Elles te sont toutes très reconnaissantes.",
+                "npc": 260005,
+                "next": 12070229
+              },
+              {
+                "id": 12070229,
+                "content": "Je me suis dit que cela devait être épuisant de passer de maison en maison. À te voir travailler aussi dur, tu ne dois sûrement même pas prendre le temps de manger correctement.",
+                "npc": 260005,
+                "next": 12070230
+              },
+              {
+                "id": 12070230,
+                "content": "Je ne peux pas faire grand-chose d’autre pour t’aider, alors je me suis dit que je pouvais au moins t’apporter quelque chose à manger. Ma petite Marian adorait mon ragoût. Profites-en pour goûter ma cuisine, toi aussi.",
+                "npc": 260005,
+                "next": 12070231
+              },
+              {
+                "id": 12070231,
+                "content": "Merci... Dans ce cas, je l’accepte. Je prendrai le temps de le savourer.",
+                "npc": 260001,
+                "next": 12070232
+              },
+              {
+                "id": 12070232,
+                "content": "Voilà qui est mieux.",
+                "npc": 260005,
+                "next": 12070233
+              },
+              {
+                "id": 12070233,
+                "content": "Et puis, c’est aussi à moi de te remercier. J’ai beaucoup réfléchi à ce que tu m’as dit la dernière fois.",
+                "npc": 260005,
+                "next": 12070234
+              },
+              {
+                "id": 12070234,
+                "content": "Tu avais raison. Ma petite Marian s’est donné tant de mal pour payer mes soins... Je dois prendre soin de moi et rester en bonne santé jusqu’à son retour. Elle sera heureuse de me retrouver ainsi.",
+                "npc": 260005,
+                "next": 12070235
+              },
+              {
+                "id": 12070235,
+                "content": "Alors je ne peux plus continuer à me nourrir uniquement de pain dur. Il faut que je me prépare des plats chauds, plus faciles à digérer. Lorsque tu auras un peu de temps, pense à passer me voir. Je te cuisinerai encore de bonnes choses.",
+                "npc": 260005,
+                "next": 12070236
+              },
+              {
+                "id": 12070236,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070237
+              },
+              {
+                "id": 12070237,
+                "content": "Oh ? Qu’est-ce qui ne va pas ? Quelqu’un t’a fait de la peine ?",
+                "npc": 260005,
+                "next": 12070238
+              },
+              {
+                "id": 12070238,
+                "content": "... Non, je vais bien. C’est seulement le vent qui me pique un peu les yeux. Merci, Mamie Rhodes. Dès que j’en aurai le temps, je reviendrai vous rendre visite.",
+                "npc": 260001,
+                "next": 12070239
+              },
+              {
+                "id": 12070239,
+                "content": "Bien, bien. Alors je vais rentrer. Et n’oublie pas de manger ce ragoût pendant qu’il est encore chaud !",
+                "npc": 260005,
+                "next": 12070241
+              },
+              {
+                "id": 12070241,
+                "content": "Oui... Peut-être que continuer à vivre du mieux que l’on peut suffit déjà.",
+                "npc": 260001,
+                "next": 12070242
+              },
+              {
+                "id": 12070242,
+                "content": "<I>Je ne voudrais pas décevoir Mamie Rhodes. Je suis justement un peu fatiguée... Je vais aller me reposer un moment aux Asphodèles et en profiter pour manger le ragoût.</>",
+                "npc": 260001
+              }
+            ]
           }
         ]
       }
@@ -109147,12 +110467,296 @@
             "name": "卡米拉蕾伊对话",
             "next": [
               "17872805278704264"
+            ],
+            "dialogues": [
+              {
+                "id": 12070243,
+                "content": "Madame Camilla, je vous en prie... Présentez-moi encore quelques Chasseurs de Phoxène.",
+                "npc": 260017,
+                "speakerName": "Jeune fille Charon épuisée",
+                "next": 12070244
+              },
+              {
+                "id": 12070244,
+                "content": "Avec une mission pareille, même si je te présentais tous les Chasseurs de Phoxène d’Hyperborea, aucun d’entre eux n’accepterait probablement de s’en charger.",
+                "npc": 260002,
+                "next": 12070245
+              },
+              {
+                "id": 12070245,
+                "content": "Enquêter sur la Légion dans la situation actuelle, c’est pratiquement comme se coller le mot « espionne » sur le front.",
+                "npc": 260002,
+                "next": 12070246
+              },
+              {
+                "id": 12070246,
+                "content": "Mais... j’ai vraiment besoin de leur aide...",
+                "npc": 260017,
+                "speakerName": "Jeune fille Charon épuisée",
+                "next": 12070247
+              },
+              {
+                "id": 12070247,
+                "content": "Que se passe-t-il ? Avez-vous besoin d’aide ?",
+                "npc": 260001,
+                "next": 12070248
+              },
+              {
+                "id": 12070248,
+                "content": "Hein ? Mademoiselle aux cheveux bleus, vous êtes aussi une Chasseuse de Phoxène ? Je vous en supplie, aidez-moi !",
+                "npc": 260017,
+                "speakerName": "Jeune fille Charon épuisée",
+                "next": 12070249
+              },
+              {
+                "id": 12070249,
+                "content": "Elle n’est pas Chasseuse de Phoxène. Les Chasseurs de Phoxène travaillent pour de l’argent. Elle, c’est une bienfaitrice qui serait prête à payer de sa poche pour rendre service.",
+                "npc": 260002,
+                "next": 12070250
+              },
+              {
+                "id": 12070250,
+                "content": "Vous plaisantez, Camilla.",
+                "npc": 260001,
+                "next": 12070251
+              },
+              {
+                "id": 12070251,
+                "content": "Bonjour. D’après ce que je viens d’entendre, votre mission concerne la Légion ?",
+                "npc": 260001,
+                "next": 12070252
+              },
+              {
+                "id": 12070252,
+                "content": "Je ne suis pas une Chasseuse de Phoxène, mais j’ai autrefois servi chez les Veilleurs, une unité rattachée à la Légion. Je connais donc assez bien les affaires de Givrelac. Si votre demande est dans mes moyens, je peux vous aider.",
+                "npc": 260001,
+                "next": 12070253
+              },
+              {
+                "id": 12070253,
+                "content": "Vraiment ? Merci beaucoup !",
+                "npc": 260017,
+                "speakerName": "Jeune fille Charon épuisée",
+                "next": 12070254
+              },
+              {
+                "id": 12070254,
+                "content": "Rhythm... Il faudrait vraiment que tu te débarrasses de cette manie de vouloir aider tout le monde. Cela fait des jours que tu cours partout sans t’arrêter. J’allais justement te conseiller de prendre un peu de repos, et voilà que tu te charges déjà d’un nouveau problème.",
+                "npc": 260002,
+                "next": 12070255
+              },
+              {
+                "id": 12070255,
+                "content": "Merci de vous en inquiéter, Camilla.",
+                "npc": 260001,
+                "next": 12070256
+              },
+              {
+                "id": 12070256,
+                "content": "Mais cette fatigue n’est rien pour moi. Lorsque je servais chez les Veilleurs, mon travail était encore plus prenant et bien plus fastidieux.",
+                "npc": 260001,
+                "next": 12070257
+              },
+              {
+                "id": 12070257,
+                "content": "Et puis, elle semble réellement avoir besoin d’aide. Je suis certaine que si {nickname} était ici, {性别:il|elle} accepterait de l’aider.",
+                "npc": 260001,
+                "next": 12070258
+              },
+              {
+                "id": 12070258,
+                "content": "Puisqu’{性别:il|elle} n’est pas à Givrelac en ce moment, je m’en chargerai à sa place.",
+                "npc": 260001,
+                "next": 12070259
+              },
+              {
+                "id": 12070259,
+                "content": "Pff... Vous êtes vraiment incorrigibles, {性别:tous|toutes} les deux.",
+                "npc": 260002,
+                "next": 12070260
+              },
+              {
+                "id": 12070260,
+                "content": "Trouvons un endroit où nous asseoir. Vous pourrez tout m’expliquer calmement.",
+                "npc": 260001,
+                "next": 12070261
+              },
+              {
+                "id": 12070261,
+                "content": "D’accord ! Merci, Rhythm ! Merci infiniment !",
+                "npc": 260017,
+                "speakerName": "Jeune fille Charon épuisée",
+                "next": 12070262
+              },
+              {
+                "id": 12070262,
+                "content": "Ne me remerciez pas trop vite. Je dois d’abord connaître la nature de votre mission avant de savoir si je peux réellement vous aider.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17872805278704264",
             "type": "TalkNode",
-            "name": "桌边蕾伊对话"
+            "name": "桌边蕾伊对话",
+            "dialogues": [
+              {
+                "id": 12070263,
+                "content": "À propos, je ne vous ai pas encore demandé votre nom.",
+                "npc": 260001,
+                "next": 12070264
+              },
+              {
+                "id": 12070264,
+                "content": "Je m’appelle Rae. Rae Sloan.",
+                "npc": 260017,
+                "speakerName": "Jeune fille Charon épuisée",
+                "next": 12070265
+              },
+              {
+                "id": 12070265,
+                "content": "<I>Sloan... Il me semble avoir vu ce nom sur la liste. Serait-elle, elle aussi...</>",
+                "npc": 260001,
+                "next": 12070266
+              },
+              {
+                "id": 12070266,
+                "content": "<I>Commençons par découvrir ce qu’elle souhaite exactement. Si elle est réellement une proche de l’une des victimes, ce sera justement l’occasion de l’aider.</>",
+                "npc": 260001,
+                "next": 12070267
+              },
+              {
+                "id": 12070267,
+                "content": "Camilla disait que votre mission concernait la Légion. Que souhaitez-vous exactement ?",
+                "npc": 260001,
+                "next": 12070268
+              },
+              {
+                "id": 12070268,
+                "content": "Je voudrais retrouver mon bienfaiteur. C’est un officier.",
+                "npc": 260017,
+                "next": 12070269
+              },
+              {
+                "id": 12070269,
+                "content": "Il y a deux ans, lorsque ma sœur et moi sommes venues travailler à Givrelac, plusieurs voyous nous ont accostées devant les portes de la ville.",
+                "npc": 260017,
+                "next": 12070270
+              },
+              {
+                "id": 12070270,
+                "content": "C’était la première fois que nous partions aussi loin de chez nous, et nous ne connaissions personne. Nous étions si effrayées que nous ne savions absolument pas quoi faire. Les soldats postés à l’entrée ont fait semblant de ne pas voir notre détresse, et les passants ont tous pris soin de nous éviter.",
+                "npc": 260017,
+                "next": 12070271
+              },
+              {
+                "id": 12070271,
+                "content": "Alors que nous commencions à perdre tout espoir, un officier est apparu. Il a sévèrement chassé les voyous, puis réprimandé les soldats qui étaient restés les bras croisés.",
+                "npc": 260017,
+                "next": 12070272
+              },
+              {
+                "id": 12070272,
+                "content": "Il nous a même donné quelques pièces. Il nous a encouragées à construire notre vie à Givrelac et à ne pas perdre espoir à cause de quelques mauvaises personnes.",
+                "npc": 260017,
+                "next": 12070273
+              },
+              {
+                "id": 12070273,
+                "content": "Sans lui, ma sœur et moi aurions probablement pris peur et fui sur-le-champ, sans même oser entrer dans la ville.",
+                "npc": 260017,
+                "next": 12070274
+              },
+              {
+                "id": 12070274,
+                "content": "C’est grâce à son intervention que nous avons pu entrer sans encombre et trouver le courage de commencer une nouvelle vie.",
+                "npc": 260017,
+                "next": 12070275
+              },
+              {
+                "id": 12070275,
+                "content": "Pendant ces deux dernières années, nous n’avons pensé qu’à travailler et à économiser. Nous avons beaucoup déménagé et n’avons pas eu le temps de nous occuper d’autre chose. Mais cette année, nous avons enfin trouvé des emplois stables et un logement permanent à Brumelac.",
+                "npc": 260017,
+                "next": 12070276
+              },
+              {
+                "id": 12070276,
+                "content": "C’est pourquoi je souhaite maintenant retrouver cet officier. Je voudrais lui raconter ce que nous sommes devenues au cours de ces deux années et le remercier en personne.",
+                "npc": 260017,
+                "next": 12070277
+              },
+              {
+                "id": 12070277,
+                "content": "Il semble effectivement avoir été un officier très bienveillant... Vous souvenez-vous de certains détails de son apparence ? De son grade, de son unité ou de tout autre indice permettant de l’identifier ?",
+                "npc": 260001,
+                "next": 12070278
+              },
+              {
+                "id": 12070278,
+                "content": "Euh... Je me souviens avoir entendu dire qu’il était major dans la VIᵉ Légion. Il était très grand et robuste, avec des cheveux bruns... Ah oui ! Il avait aussi une cicatrice ici, sur la joue gauche !",
+                "npc": 260017,
+                "next": 12070279
+              },
+              {
+                "id": 12070279,
+                "content": "Des cheveux bruns... Une cicatrice sur la joue gauche... Oh ! Je vois de qui il s’agit.",
+                "npc": 260001,
+                "next": 12070280
+              },
+              {
+                "id": 12070280,
+                "content": "L’officier dont vous parlez est peut-être le lieutenant-colonel Johnson. Il a été blessé à la joue gauche pendant la guerre. Il y a deux ans, il devait encore avoir le grade de major, et il aurait effectivement pu être chargé de la surveillance aux abords de la ville.",
+                "npc": 260001,
+                "next": 12070281
+              },
+              {
+                "id": 12070281,
+                "content": "Cependant, en ce qui concerne son caractère... Dans mes souvenirs, ce n’était pas un officier particulièrement proche de la population.",
+                "npc": 260001,
+                "next": 12070282
+              },
+              {
+                "id": 12070282,
+                "content": "Rae, êtes-vous certaine de ne pas vous tromper ?",
+                "npc": 260001,
+                "next": 12070283
+              },
+              {
+                "id": 12070283,
+                "content": "Bien sûr ! Je ne pourrais jamais oublier une chose aussi importante !",
+                "npc": 260017,
+                "next": 12070284
+              },
+              {
+                "id": 12070284,
+                "content": "C’est étrange... Peut-être ne le connaissais-je pas aussi bien que je le pensais...",
+                "npc": 260001,
+                "next": 12070285
+              },
+              {
+                "id": 12070285,
+                "content": "Rhythm, puisque vous connaissez son nom, vous devez aussi savoir où il se trouve maintenant, non ? Pourriez-vous m’emmener le voir ?",
+                "npc": 260017,
+                "next": 12070286
+              },
+              {
+                "id": 12070286,
+                "content": "Hm... Voici ce que je vous propose : je vais essayer de me renseigner sur l’emploi du temps actuel du lieutenant-colonel Johnson. Malgré les restrictions actuelles, il devrait être possible de l’apercevoir de loin. Je vous préviendrai dès que j’aurai obtenu des informations.",
+                "npc": 260001,
+                "next": 12070287
+              },
+              {
+                "id": 12070287,
+                "content": "Une fois que vous l’aurez vu et que vous serez certaine qu’il s’agit bien de lui, nous déciderons de la suite.",
+                "npc": 260001,
+                "next": 12070288
+              },
+              {
+                "id": 12070288,
+                "content": "D’accord ! Merci infiniment, Rhythm ! J’attendrai de vos nouvelles !",
+                "npc": 260017
+              }
+            ]
           }
         ]
       },
@@ -109167,6 +110771,25 @@
             "name": "闸机前感慨",
             "next": [
               "17873001989544561443"
+            ],
+            "dialogues": [
+              {
+                "id": 12070347,
+                "content": "La dernière fois que je suis venue dans cette gare, c’était le jour de mon arrivée à Givrelac. Elle est toujours aussi impressionnante.",
+                "npc": 260017,
+                "next": 12070348
+              },
+              {
+                "id": 12070348,
+                "content": "Il y a de nombreux soldats dans cette direction. Le lieutenant-colonel Johnson se trouve peut-être parmi eux. Allons voir.",
+                "npc": 260001,
+                "next": 12070349
+              },
+              {
+                "id": 12070349,
+                "content": "Oui... allons-y.",
+                "npc": 260017
+              }
             ]
           },
           {
@@ -109175,12 +110798,224 @@
             "name": "列队整兵",
             "next": [
               "17873001231094560543"
+            ],
+            "dialogues": [
+              {
+                "id": 12070351,
+                "content": "Au rapport, lieutenant-colonel Johnson ! La patrouille du jour est terminée. Aucun individu suspect n’a été repéré !",
+                "npc": 260021,
+                "next": 12070352
+              },
+              {
+                "id": 12070352,
+                "content": "Très bien. Vous pouvez disposer.",
+                "npc": 260022,
+                "next": 12070353
+              },
+              {
+                "id": 12070353,
+                "content": "Nous l’avons trouvé. C’est le lieutenant-colonel Johnson. Est-ce bien l’officier dont vous vous souvenez ?",
+                "npc": 260001,
+                "next": 12070354
+              },
+              {
+                "id": 12070354,
+                "content": "Rae... ?",
+                "npc": 260001,
+                "next": 12070355
+              },
+              {
+                "id": 12070355,
+                "content": "C’est lui...",
+                "npc": 260017,
+                "next": 12070356
+              },
+              {
+                "id": 12070356,
+                "content": "Enfin... Je l’ai retrouvé...",
+                "npc": 260017,
+                "next": 12070357
+              },
+              {
+                "id": 12070357,
+                "content": "Rae ?",
+                "npc": 260001,
+                "next": 12070358
+              },
+              {
+                "id": 12070358,
+                "content": "Hein... ?! Ah, p-pardon. Je... suis un peu trop émue d’avoir enfin retrouvé mon bienfaiteur.",
+                "npc": 260017,
+                "next": 12070359
+              },
+              {
+                "id": 12070359,
+                "content": "Je ne me suis pas trompée. C’est bien l’officier qui nous est venu en aide, à ma sœur et à moi.",
+                "npc": 260017,
+                "next": 12070360
+              },
+              {
+                "id": 12070360,
+                "content": "Dans ce cas, voulez-vous que je lui fasse transmettre un message ?",
+                "npc": 260001,
+                "next": 12070361
+              },
+              {
+                "id": 12070361,
+                "content": "Je connais certains des soldats qui se trouvent là-bas. Ils devraient pouvoir prévenir le lieutenant-colonel. Puisqu’il vous a autrefois aidée, il acceptera probablement de vous accorder quelques instants.",
+                "npc": 260001,
+                "next": 12070362
+              },
+              {
+                "id": 12070362,
+                "content": "Attendez !",
+                "npc": 260017,
+                "next": 12070363
+              },
+              {
+                "id": 12070363,
+                "content": "Qu’y a-t-il ?",
+                "npc": 260001,
+                "next": 12070364
+              },
+              {
+                "id": 12070364,
+                "content": "Il y a beaucoup trop de soldats ici... Cela me fait un peu peur. À vrai dire... je n’ai pensé qu’à le retrouver et je n’ai pas encore réfléchi à ce que je pourrais lui dire.",
+                "npc": 260017,
+                "next": 12070365
+              },
+              {
+                "id": 12070365,
+                "content": "Je comprends... Ce n’est pas grave. Prenez le temps d’y réfléchir. Je resterai ici avec vous. Et même si vous ne vous sentez pas prête aujourd’hui, ce n’est pas un problème. Le lieutenant-colonel devrait continuer à venir à la gare pendant quelque temps.",
+                "npc": 260001,
+                "next": 12070366
+              },
+              {
+                "id": 12070366,
+                "content": "Merci, Rhythm.",
+                "npc": 260017,
+                "next": 12070367
+              },
+              {
+                "id": 12070367,
+                "content": "Allons plutôt du côté des quais. La surveillance est renforcée ces derniers temps, et rester trop longtemps ici pourrait attirer l’attention des gardes.",
+                "npc": 260001,
+                "next": 12070368
+              },
+              {
+                "id": 12070368,
+                "content": "Même si nous n’avons aucune mauvaise intention, mieux vaut éviter tout malentendu inutile.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "17873001231094560543",
             "type": "TalkNode",
-            "name": "站台附近再对话"
+            "name": "站台附近再对话",
+            "dialogues": [
+              {
+                "id": 12070370,
+                "content": "À propos, Rae... Vous m’avez dit que vous étiez venue à Givrelac avec votre sœur. Où se trouve-t-elle aujourd’hui ? Elle ne cherche pas votre bienfaiteur avec vous ?",
+                "npc": 260001,
+                "next": 12070371
+              },
+              {
+                "id": 12070371,
+                "content": "Ma sœur... Elle travaille énormément. Elle n’a même pas le temps de rentrer à la maison.",
+                "npc": 260017,
+                "next": 12070372
+              },
+              {
+                "id": 12070372,
+                "content": "Son travail est donc si prenant ? Où travaille-t-elle ?",
+                "npc": 260001,
+                "next": 12070373
+              },
+              {
+                "id": 12070373,
+                "content": "Euh... Elle sert dans la Légion. C’est difficile, mais ma sœur est très douée. Elle a peut-être même déjà accompli de grands exploits !",
+                "npc": 260017,
+                "next": 12070374
+              },
+              {
+                "id": 12070374,
+                "content": "Vraiment ? Comment s’appelle-t-elle ? Je la connais peut-être.",
+                "npc": 260001,
+                "next": 12070375
+              },
+              {
+                "id": 12070375,
+                "content": "Darcy Sloan.",
+                "npc": 260017,
+                "next": 12070376
+              },
+              {
+                "id": 12070376,
+                "content": "<I>Comme je le pensais... Son nom figurait sur la liste. Rae ignore encore que sa sœur est déjà...</>",
+                "npc": 260001,
+                "next": 12070377
+              },
+              {
+                "id": 12070377,
+                "content": "Hm ? Vous l’avez déjà rencontrée ?",
+                "npc": 260017,
+                "next": 12070378
+              },
+              {
+                "id": 12070378,
+                "content": "Je... Oui. Je l’ai rencontrée. Elle...",
+                "npc": 260001,
+                "next": 12070379
+              },
+              {
+                "id": 12070379,
+                "content": "Hm ? Vous avez du mal à vous en souvenir ? Ce n’est pas grave, Rhythm. Ne vous donnez pas tant de mal pour vous en souvenir.",
+                "npc": 260017,
+                "next": 12070380
+              },
+              {
+                "id": 12070380,
+                "content": "Ma sœur et moi sommes très proches. Vraiment très, très proches. Je sais même ce qu’elle pense sans qu’elle ait besoin de me le dire.",
+                "npc": 260017,
+                "next": 12070381
+              },
+              {
+                "id": 12070381,
+                "content": "Alors, même si elle n’est pas ici, je sais qu’elle me soutient.",
+                "npc": 260017,
+                "next": 12070382
+              },
+              {
+                "id": 12070382,
+                "content": "Pour elle, je dois absolument... absolument aller jusqu’au bout...",
+                "npc": 260017,
+                "next": 12070383
+              },
+              {
+                "id": 12070383,
+                "content": "... ?",
+                "npc": 260001,
+                "next": 12070384
+              },
+              {
+                "id": 12070384,
+                "content": "Ah ! Le lieutenant-colonel semble partir. Il va peut-être poursuivre sa patrouille ailleurs ?",
+                "npc": 260017,
+                "next": 12070385
+              },
+              {
+                "id": 12070385,
+                "content": "Vite, suivons-le !",
+                "npc": 260017,
+                "next": 12070386
+              },
+              {
+                "id": 12070386,
+                "content": "Hein ? Attendez-moi, Rae... !",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109195,12 +111030,146 @@
             "name": "门口盯梢站桩",
             "next": [
               "17873049992345707105"
+            ],
+            "dialogues": [
+              {
+                "id": 12070388,
+                "content": "Pourquoi êtes-vous partie à sa suite si brusquement ? Vous savez maintenant ce que vous voulez lui dire ?",
+                "npc": 260001,
+                "next": 12070389
+              },
+              {
+                "id": 12070389,
+                "content": "Ah, non. Je voulais simplement observer un peu plus le lieutenant-colonel Johnson, pour voir s’il est toujours tel que je me le rappelle...",
+                "npc": 260017,
+                "next": 12070390
+              },
+              {
+                "id": 12070390,
+                "content": "<I>Tss...</> Pourquoi tant de monde bloque-t-il le passage ?",
+                "npc": 260022,
+                "next": 12070391
+              },
+              {
+                "id": 12070391,
+                "content": "Vous autres, les gardes, vous faites réellement votre travail ?",
+                "npc": 260022,
+                "next": 12070392
+              },
+              {
+                "id": 12070392,
+                "content": "Pardonnez-nous, mon lieutenant-colonel. Il manque certaines informations sur leurs permis de circulation. Nous sommes en train de procéder aux vérifications, alors...",
+                "npc": 260023,
+                "next": 12070393
+              },
+              {
+                "id": 12070393,
+                "content": "Vous parlez de ces quelques Charons ? Pourquoi perdez-vous votre temps avec eux ?",
+                "npc": 260022,
+                "next": 12070394
+              },
+              {
+                "id": 12070394,
+                "content": "Si leurs permis posent problème, qu’ils règlent cela avant de revenir ! Ne les laissez pas bloquer le passage pour tout le monde ! Regardez-moi cet attroupement devant la porte !",
+                "npc": 260022,
+                "next": 12070395
+              },
+              {
+                "id": 12070395,
+                "content": "Compris ! Je les chasse immédiatement.",
+                "npc": 260023,
+                "next": 12070396
+              },
+              {
+                "id": 12070396,
+                "content": "...",
+                "npc": 260017,
+                "next": 12070397
+              },
+              {
+                "id": 12070397,
+                "content": "Suivons-le, Rhythm.",
+                "npc": 260017
+              }
             ]
           },
           {
             "id": "17873049992345707105",
             "type": "TalkNode",
-            "name": "终点对话"
+            "name": "终点对话",
+            "dialogues": [
+              {
+                "id": 12070411,
+                "content": "Hm ? Pourquoi ce soldat se dirige-t-il vers le théâtre ?",
+                "npc": 260017,
+                "next": 12070412
+              },
+              {
+                "id": 12070412,
+                "content": "Il va probablement acheter des billets pour le lieutenant-colonel. Je me souviens que le lieutenant-colonel Johnson aime beaucoup le théâtre. Il lui est déjà arrivé de demander à mes collègues de lui acheter des billets après leur patrouille.",
+                "npc": 260001,
+                "next": 12070413
+              },
+              {
+                "id": 12070413,
+                "content": "Je vois...",
+                "npc": 260017,
+                "next": 12070414
+              },
+              {
+                "id": 12070414,
+                "content": "Ils sont entrés dans la cité intérieure. Nous ne pouvons pas les suivre plus loin.",
+                "npc": 260001,
+                "next": 12070415
+              },
+              {
+                "id": 12070415,
+                "content": "Je suis désolée, Rhythm. Je vous ai fait courir partout avec moi... Après réflexion, je préfère en rester là pour cette mission.",
+                "npc": 260017,
+                "next": 12070416
+              },
+              {
+                "id": 12070416,
+                "content": "Hein ? Pourquoi ?",
+                "npc": 260001,
+                "next": 12070417
+              },
+              {
+                "id": 12070417,
+                "content": "Vous avez vu ce qui s’est passé à la porte de la ville. Je crois que vous aviez raison : le lieutenant-colonel Johnson ne ressemble vraiment pas à quelqu’un qui viendrait en aide à des civils. Je me suis peut-être trompée de personne.",
+                "npc": 260017,
+                "next": 12070418
+              },
+              {
+                "id": 12070418,
+                "content": "Cette journée m’a épuisée. Je reprendrai mes recherches une autre fois.",
+                "npc": 260017,
+                "next": 12070419
+              },
+              {
+                "id": 12070419,
+                "content": "Bien entendu, vous recevrez tout de même la rémunération prévue. Je l’ai déjà confiée à Camilla, vous n’aurez qu’à la lui demander.",
+                "npc": 260017,
+                "next": 12070420
+              },
+              {
+                "id": 12070420,
+                "content": "Alors, je rentre chez moi. Au revoir !",
+                "npc": 260017,
+                "next": 12070421
+              },
+              {
+                "id": 12070421,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070422
+              },
+              {
+                "id": 12070422,
+                "content": "<I>Quelque chose ne va pas... Je devrais retourner aux Asphodèles. Camilla sait peut-être quelque chose au sujet de Rae.</>",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109235,6 +111204,67 @@
             "pos": [
               -4628,
               -6285
+            ],
+            "dialogues": [
+              {
+                "id": 12070294,
+                "content": "Tiens, mais c’est l’adjudante Fischer ! Vous êtes enfin revenue à Givrelac !",
+                "npc": 260018,
+                "next": 12070295
+              },
+              {
+                "id": 12070295,
+                "content": "Pourquoi avez-vous changé d’uniforme ? Vous avez été promue et mutée dans une autre unité ?",
+                "npc": 260018,
+                "next": 12070296
+              },
+              {
+                "id": 12070296,
+                "content": "Je... ne fais plus partie de la Légion.",
+                "npc": 260001,
+                "next": 12070297
+              },
+              {
+                "id": 12070297,
+                "content": "Quoi ?! Comment est-ce arrivé ? Un de ces salauds de Solariens vous a poussée dehors ?",
+                "npc": 260018,
+                "next": 12070298
+              },
+              {
+                "id": 12070298,
+                "content": "Non, ce n’est pas cela. Je suis partie pour des raisons personnelles.",
+                "npc": 260001,
+                "next": 12070299
+              },
+              {
+                "id": 12070299,
+                "content": "Je vois... Quel dommage. Il y a quelques jours encore, en buvant un verre, nous nous demandions qui défendrait des gens comme nous maintenant que vous n’êtes plus là.",
+                "npc": 260018,
+                "next": 12070300
+              },
+              {
+                "id": 12070300,
+                "content": "Je suis désolée...",
+                "npc": 260001,
+                "next": 12070301
+              },
+              {
+                "id": 12070301,
+                "content": "Oh, je ne vous le reproche pas ! Vous vous êtes toujours tuée à la tâche. Un peu de repos ne peut pas vous faire de mal.",
+                "npc": 260018,
+                "next": 12070302
+              },
+              {
+                "id": 12070302,
+                "content": "Je ne fais peut-être plus partie de la Légion, mais vous pouvez toujours venir me trouver si vous rencontrez des difficultés. Tant que cela reste dans mes moyens, je ferai tout mon possible pour vous aider.",
+                "npc": 260001,
+                "next": 12070303
+              },
+              {
+                "id": 12070303,
+                "content": "Avec plaisir. Alors merci d’avance !",
+                "npc": 260018
+              }
             ]
           },
           {
@@ -109245,6 +111275,73 @@
             "pos": [
               -10034,
               -4993
+            ],
+            "dialogues": [
+              {
+                "id": 12070306,
+                "content": "Adjudante Fischer, quelle coïncidence ! Vous patrouillez dans le quartier aujourd’hui ?",
+                "npc": 260019,
+                "next": 12070307
+              },
+              {
+                "id": 12070307,
+                "content": "Non. J’ai quitté les Veilleurs. Aujourd’hui, je ne fais que me promener dans les environs.",
+                "npc": 260001,
+                "next": 12070308
+              },
+              {
+                "id": 12070308,
+                "content": "Quoi ?! Vous qui aimiez tant votre travail, vous avez démissionné ? Mais qu’est-ce qui s’est passé ?",
+                "npc": 260019,
+                "next": 12070309
+              },
+              {
+                "id": 12070309,
+                "content": "C’est pour des raisons personnelles... Ce serait trop long à expliquer.",
+                "npc": 260001,
+                "next": 12070310
+              },
+              {
+                "id": 12070310,
+                "content": "Ce n’est rien. Si vous ne voulez pas en parler, n’en parlons pas. Je suis simplement surpris.",
+                "npc": 260019,
+                "next": 12070311
+              },
+              {
+                "id": 12070311,
+                "content": "Au fait, vous vous souvenez de mon amie ? Celle qui cherchait des ingrédients dans la nature et qui avait attiré des Souillés par accident. Sans votre arrivée, elle n’en serait jamais sortie vivante.",
+                "npc": 260019,
+                "next": 12070312
+              },
+              {
+                "id": 12070312,
+                "content": "Elle tient maintenant un restaurant dans le quartier nord. Passez quand vous voulez ! Elle a dit que vous pourriez y manger gratuitement à vie !",
+                "npc": 260019,
+                "next": 12070313
+              },
+              {
+                "id": 12070313,
+                "content": "Le règlement des Veilleurs interdit aux militaires d’accepter une récompense personnelle après avoir aidé un citoyen. Même si j’ai quitté mon poste, je dois continuer à respecter ce principe.",
+                "npc": 260001,
+                "next": 12070314
+              },
+              {
+                "id": 12070314,
+                "content": "Je ne peux donc pas accepter de manger gratuitement, mais je passerai lui rendre visite lorsque j’en aurai le temps. Merci.",
+                "npc": 260001,
+                "next": 12070315
+              },
+              {
+                "id": 12070315,
+                "content": "Vous êtes bien l’adjudante Fischer ! Vous n’avez vraiment pas changé !",
+                "npc": 260019,
+                "next": 12070316
+              },
+              {
+                "id": 12070316,
+                "content": "Dans ce cas, je vous remercie d’avance de la part de mon amie ! Je dois y aller, alors je ne vais pas vous retenir. À la prochaine !",
+                "npc": 260019
+              }
             ]
           }
         ]
@@ -109278,7 +111375,128 @@
           {
             "id": "1790173744869857",
             "type": "TalkNode",
-            "name": "对话卡森"
+            "name": "对话卡森",
+            "dialogues": [
+              {
+                "id": 12070321,
+                "content": "Adjudant Carson, tu n’es pas blessé ?",
+                "npc": 260001,
+                "next": 12070322
+              },
+              {
+                "id": 12070322,
+                "content": "Adjudante Fischer... ?! Ça faisait longtemps !",
+                "npc": 260020,
+                "next": 12070323
+              },
+              {
+                "id": 12070323,
+                "content": "N’oublie pas que je ne suis plus adjudante.",
+                "npc": 260001,
+                "next": 12070324
+              },
+              {
+                "id": 12070324,
+                "content": "Ah ah ! J’ai tellement pris l’habitude de t’appeler comme ça que j’ai du mal à m’en défaire.",
+                "npc": 260020,
+                "next": 12070325
+              },
+              {
+                "id": 12070325,
+                "content": "Je vais bien. Merci pour ton aide ! Seul contre tous ces Souillés, je commençais vraiment à avoir du mal.",
+                "npc": 260020,
+                "next": 12070326
+              },
+              {
+                "id": 12070326,
+                "content": "Ce n’est rien. Je n’ai fait que ce qui devait être fait.",
+                "npc": 260001,
+                "next": 12070327
+              },
+              {
+                "id": 12070327,
+                "content": "Ha ha ! Même après plusieurs mois, tu n’as pas changé.",
+                "npc": 260020,
+                "next": 12070328
+              },
+              {
+                "id": 12070328,
+                "content": "Des collègues postés à la porte m’avaient dit que tu étais revenue. Je voulais passer te saluer, mais chaque fois que je suis passé devant chez toi, tu étais absente. Qu’est-ce qui t’occupe autant ?",
+                "npc": 260020,
+                "next": 12070329
+              },
+              {
+                "id": 12070329,
+                "content": "Je suis simplement allée rendre visite à quelques connaissances.",
+                "npc": 260001,
+                "next": 12070330
+              },
+              {
+                "id": 12070330,
+                "content": "Tu étais sûrement encore en train d’aider quelqu’un ! Franchement, tu devrais revenir. Même après avoir démissionné, tu continues à faire pratiquement le même travail.",
+                "npc": 260020,
+                "next": 12070331
+              },
+              {
+                "id": 12070331,
+                "content": "Tu n’imagines pas à quel point le directeur parle souvent de toi ces derniers temps. Tu lui manques beaucoup. Depuis ton départ, plus personne ne s’occupe des tâches ingrates et épuisantes... Enfin, je veux dire, des missions qui permettent au Bureau de la Sécurité de gagner la confiance des habitants !",
+                "npc": 260020,
+                "next": 12070332
+              },
+              {
+                "id": 12070332,
+                "content": "Je suis désolée, mais ma décision est prise. Je ne reviendrai pas.",
+                "npc": 260001,
+                "next": 12070333
+              },
+              {
+                "id": 12070333,
+                "content": "Oh, je plaisantais ! Mais sérieusement, tu as l’air encore plus fatiguée qu’à l’époque où tu travaillais. Il s’est passé quelque chose ? Tu as besoin d’aide ?",
+                "npc": 260020,
+                "next": 12070334
+              },
+              {
+                "id": 12070334,
+                "content": "Il y a justement quelque chose que j’aimerais te demander. Le lieutenant-colonel Johnson se trouve-t-il toujours à Givrelac ?",
+                "npc": 260001,
+                "next": 12070335
+              },
+              {
+                "id": 12070335,
+                "content": "Bien sûr. Il supervise l’enquête à la Gare des Cent-Fleurs. Une bonne partie des Veilleurs y a été détachée pour cette affaire. C’est d’ailleurs pour ça que je me retrouve à patrouiller seul ici.",
+                "npc": 260020,
+                "next": 12070336
+              },
+              {
+                "id": 12070336,
+                "content": "Très bien. Merci.",
+                "npc": 260001,
+                "next": 12070337
+              },
+              {
+                "id": 12070337,
+                "content": "Pas de quoi. Mais pourquoi cherches-tu un officier aussi haut placé ? Tu as besoin d’un coup de main ? Maintenant que tu ne fais plus partie de la Légion, sois prudente. Évite de t’attirer des ennuis.",
+                "npc": 260020,
+                "next": 12070338
+              },
+              {
+                "id": 12070338,
+                "content": "Ce n’est qu’une affaire personnelle. Je peux m’en charger seule. Merci de m’avoir prévenue, je ferai attention.",
+                "npc": 260001,
+                "next": 12070339
+              },
+              {
+                "id": 12070339,
+                "content": "J’ai encore rendez-vous avec quelqu’un, alors je ne vais pas te retenir davantage.",
+                "npc": 260001,
+                "next": 12070340
+              },
+              {
+                "id": 12070340,
+                "content": "Très bien. On discutera une prochaine fois, quand on aura le temps !",
+                "npc": 260020
+              }
+            ]
           }
         ]
       },
@@ -109295,6 +111513,31 @@
             "pos": [
               -3572,
               -5523
+            ],
+            "dialogues": [
+              {
+                "id": 12070342,
+                "content": "Rhythm, vous êtes revenue ! Alors, vous avez obtenu des informations ?",
+                "npc": 260017,
+                "next": 12070343
+              },
+              {
+                "id": 12070343,
+                "content": "Oui. Je me suis renseignée auprès de l’un de mes anciens collègues. Le lieutenant-colonel Johnson supervise actuellement l’enquête à la Gare des Cent-Fleurs.",
+                "npc": 260001,
+                "next": 12070344
+              },
+              {
+                "id": 12070344,
+                "content": "Tant qu’il fait encore jour, allons faire un tour à la gare.",
+                "npc": 260001,
+                "next": 12070345
+              },
+              {
+                "id": 12070345,
+                "content": "D’accord, allons-y !",
+                "npc": 260017
+              }
             ]
           }
         ]
@@ -109317,6 +111560,96 @@
             "pos": [
               1351,
               -10153
+            ],
+            "dialogues": [
+              {
+                "id": 12070424,
+                "content": "Bonsoir, Camilla.",
+                "npc": 260001,
+                "next": 12070425
+              },
+              {
+                "id": 12070425,
+                "content": "Bonsoir, Rhythm. Alors, comment les choses se sont-elles passées avec Rae ? Cet après-midi, elle t’a aperçue à travers la vitre et s’est précipitée dehors avant même que j’aie le temps de vous poser la moindre question.",
+                "npc": 260002,
+                "next": 12070426
+              },
+              {
+                "id": 12070426,
+                "content": "Voilà ce qui s’est passé...",
+                "npc": 260001,
+                "next": 12070427
+              },
+              {
+                "id": 12070427,
+                "content": "Rhythm raconte à Camilla les événements de la journée.",
+                "next": 12070428
+              },
+              {
+                "id": 12070428,
+                "content": "En effet, sa réaction semble plutôt étrange.",
+                "npc": 260002,
+                "next": 12070429
+              },
+              {
+                "id": 12070429,
+                "content": "Oui, c’est pour cela que je suis venue vous poser la question. Rae m’a parlé de sa sœur, Darcy Sloan. Ce nom vous dit-il quelque chose ?",
+                "npc": 260001,
+                "next": 12070430
+              },
+              {
+                "id": 12070430,
+                "content": "Non. C’était la première fois que je voyais Rae aujourd’hui. Elle n’était encore jamais venue aux Asphodèles.",
+                "npc": 260002,
+                "next": 12070431
+              },
+              {
+                "id": 12070431,
+                "content": "« Rae » ? Vous parlez de la petite Sloan ?",
+                "npc": 260024,
+                "next": 12070432
+              },
+              {
+                "id": 12070432,
+                "content": "Oui. Vous la connaissez ?",
+                "npc": 260001,
+                "next": 12070433
+              },
+              {
+                "id": 12070433,
+                "content": "Pas vraiment, mais mon enfant parle souvent d’elle. Il paraît qu’elle vit seule à Brumelac, près des égouts.",
+                "npc": 260024,
+                "next": 12070434
+              },
+              {
+                "id": 12070434,
+                "content": "Ah, maintenant que j’y pense, elle m’a aussi demandé où acheter de la poudre à canon ! Je me demande bien ce qu’une jeune fille comme elle compte faire avec quelque chose d’aussi dangereux.",
+                "npc": 260024,
+                "next": 12070435
+              },
+              {
+                "id": 12070435,
+                "content": "De la poudre à canon... ?!",
+                "npc": 260001,
+                "next": 12070436
+              },
+              {
+                "id": 12070436,
+                "content": "Je n’ai pas l’esprit tranquille. Je vais passer chez elle.",
+                "npc": 260001,
+                "next": 12070437
+              },
+              {
+                "id": 12070437,
+                "content": "Tu... Enfin, je sais que je ne pourrai pas t’en empêcher. Fais attention à toi.",
+                "npc": 260002,
+                "next": 12070438
+              },
+              {
+                "id": 12070438,
+                "content": "Oui, je serai prudente.",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -109332,6 +111665,19 @@
             "name": "调查完痕迹对话",
             "next": [
               "178737999785013557650"
+            ],
+            "dialogues": [
+              {
+                "id": 12070457,
+                "content": "Ce sont les traces laissées par des explosifs. Quelqu’un a dû éliminer les Souillés des environs récemment.",
+                "npc": 260001,
+                "next": 12070458
+              },
+              {
+                "id": 12070458,
+                "content": "Si Rae en est responsable, sa cachette doit se trouver dans cette direction.",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -109340,6 +111686,13 @@
             "name": "到达藏身处",
             "next": [
               "178738522919313570468"
+            ],
+            "dialogues": [
+              {
+                "id": 12070461,
+                "content": "<I>Il y avait donc réellement une « base secrète »... Mais Rae ne semble pas être ici. Je vais examiner les objets alentour. J’y trouverai peut-être un indice.</>",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -109376,6 +111729,17 @@
             "name": "查看人偶对话",
             "next": [
               "178738511388313568621"
+            ],
+            "dialogues": [
+              {
+                "id": 12070463,
+                "content": "Un mannequin étrangement familier. Un portrait a été collé sur son visage. Les traits désordonnés représentent un homme d’âge mûr ressemblant fortement au lieutenant-colonel Johnson.",
+                "next": 12070464
+              },
+              {
+                "id": 12070464,
+                "content": "Le corps du mannequin est couvert d’innombrables entailles, plus ou moins profondes. Elles témoignent d’une haine particulièrement intense."
+              }
             ]
           },
           {
@@ -109392,6 +111756,13 @@
             "name": "药瓶对话&试验记录",
             "next": [
               "178738513980213569283"
+            ],
+            "dialogues": [
+              {
+                "id": 12070468,
+                "content": "Des fioles contenant du poison et de la poudre à canon sont éparpillées près de plusieurs cadavres de rats. Une note griffonnée, semblable à un compte rendu d’expérience, se trouve également parmi elles.",
+                "next": 12070469
+              }
             ]
           },
           {
@@ -109462,7 +111833,56 @@
           {
             "id": "178738599490213579181",
             "type": "TalkNode",
-            "name": "藏身处结论"
+            "name": "藏身处结论",
+            "dialogues": [
+              {
+                "id": 12070471,
+                "content": "Rae a bien menti au sujet de sa sœur. Darcy est déjà morte.",
+                "npc": 260001,
+                "next": 12070472
+              },
+              {
+                "id": 12070472,
+                "content": "Et elle semble également avoir appris, d’une manière ou d’une autre, l’existence des expériences de transformation...",
+                "npc": 260001,
+                "next": 12070473
+              },
+              {
+                "id": 12070473,
+                "content": "Peu importe pour l’instant comment elle l’a découvert. Les marques sur ce mannequin montrent qu’elle voue une haine profonde au lieutenant-colonel Johnson.",
+                "npc": 260001,
+                "next": 12070474
+              },
+              {
+                "id": 12070474,
+                "content": "Mais... pourquoi lui ? Ses fonctions ne devraient pourtant avoir aucun lien avec l’Académie d’Alchimie...",
+                "npc": 260001,
+                "next": 12070475
+              },
+              {
+                "id": 12070475,
+                "content": "Oh... Lors du recrutement de la VIᵉ Légion, il y a deux ans, c’était le lieutenant-colonel Johnson qui était chargé de maintenir l’ordre sur place. Rae le considère peut-être pour cette raison comme le responsable de ce qui est arrivé.",
+                "npc": 260001,
+                "next": 12070476
+              },
+              {
+                "id": 12070476,
+                "content": "Elle voulait donc engager un Chasseur de Phoxène afin de pouvoir approcher le lieutenant-colonel... Voilà pourquoi elle cherchait des excuses pour gagner du temps à la gare.",
+                "npc": 260001,
+                "next": 12070478
+              },
+              {
+                "id": 12070478,
+                "content": "Se pourrait-il qu’elle compte profiter du théâtre pour s’en prendre au lieutenant-colonel... ?!",
+                "npc": 260001,
+                "next": 12070479
+              },
+              {
+                "id": 12070479,
+                "content": "Non... C’est beaucoup trop dangereux. Je dois la retrouver.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109479,6 +111899,103 @@
             "pos": [
               -3335,
               -9453
+            ],
+            "dialogues": [
+              {
+                "id": 12070440,
+                "content": "Bonjour, petite. Tu connais une jeune fille qui s’appelle Rae ?",
+                "npc": 260001,
+                "next": 12070441
+              },
+              {
+                "id": 12070441,
+                "content": "Oui ! Elle habite dans cette maison, juste là.",
+                "npc": 260025,
+                "next": 12070442
+              },
+              {
+                "id": 12070442,
+                "content": "Très bien, merci.",
+                "npc": 260001,
+                "next": 12070443
+              },
+              {
+                "id": 12070443,
+                "content": "Tu es venue la voir ? Elle n’est pas chez elle en ce moment !",
+                "npc": 260025,
+                "next": 12070444
+              },
+              {
+                "id": 12070444,
+                "content": "Elle n’est pas encore rentrée ?",
+                "npc": 260001,
+                "next": 12070445
+              },
+              {
+                "id": 12070445,
+                "content": "Non ! Je l’attends justement. Elle m’avait promis de faire mon portrait, mais elle n’est toujours pas venue me voir. Elle a sûrement oublié, <I>hmpf !</>",
+                "npc": 260025,
+                "next": 12070446
+              },
+              {
+                "id": 12070446,
+                "content": "Ah ! J’ai compris ! Elle s’est peut-être cachée dans les égouts pour m’éviter !",
+                "npc": 260025,
+                "next": 12070447
+              },
+              {
+                "id": 12070447,
+                "content": "Dans les égouts ?",
+                "npc": 260001,
+                "next": 12070448
+              },
+              {
+                "id": 12070448,
+                "content": "Oui ! Davy m’a raconté que Rae s’y faufilait souvent en cachette ces derniers temps, sans laisser personne l’accompagner.",
+                "npc": 260025,
+                "next": 12070449
+              },
+              {
+                "id": 12070449,
+                "content": "Elle y a peut-être construit une base secrète !",
+                "npc": 260025,
+                "next": 12070450
+              },
+              {
+                "id": 12070450,
+                "content": "Je vois... Merci pour ces renseignements, petite. Je vais aller la chercher dans les égouts.",
+                "npc": 260001,
+                "next": 12070451
+              },
+              {
+                "id": 12070451,
+                "content": "Mais les égouts sont dangereux, madame !",
+                "npc": 260025,
+                "next": 12070452
+              },
+              {
+                "id": 12070452,
+                "content": "Ce n’est rien. J’ai autrefois servi chez les Veilleurs. Ce genre de danger ne me pose aucun problème.",
+                "npc": 260001,
+                "next": 12070453
+              },
+              {
+                "id": 12070453,
+                "content": "Je connais les Veilleurs ! Ce sont eux qui aident les gens quand ils ont des problèmes, pas vrai ? Alors, quand tu retrouveras Rae, tu pourras lui rappeler qu’elle doit encore faire mon portrait ?",
+                "npc": 260025,
+                "next": 12070454
+              },
+              {
+                "id": 12070454,
+                "content": "Cette fois, elle ne pourra plus se défiler, hé hé !",
+                "npc": 260025,
+                "next": 12070455
+              },
+              {
+                "id": 12070455,
+                "content": "Ha ha... Très bien, je le lui rappellerai.",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -109504,6 +112021,49 @@
             ],
             "next": [
               "178738792599718109208"
+            ],
+            "dialogues": [
+              {
+                "id": 12070481,
+                "content": "Bonsoir, madame. Souhaitez-vous acheter un billet ?",
+                "npc": 260026,
+                "next": 12070482
+              },
+              {
+                "id": 12070482,
+                "content": "Bonsoir. J’aimerais vous poser une question. Une jeune Charon aux cheveux blonds attachés en queue-de-cheval est-elle venue acheter un billet récemment ?",
+                "npc": 260001,
+                "next": 12070483
+              },
+              {
+                "id": 12070483,
+                "content": "Oui, je me souviens d’elle. Elle est déjà entrée. Il reste encore un bon moment avant le début de la représentation, mais elle m’a expliqué qu’elle venait au théâtre pour la première fois et qu’elle souhaitait visiter les lieux. Je l’ai donc laissée entrer.",
+                "npc": 260026,
+                "next": 12070484
+              },
+              {
+                "id": 12070484,
+                "content": "... Je vais également prendre un billet. Cette jeune fille est une amie. Nous avions prévu d’assister ensemble à la représentation.",
+                "npc": 260001,
+                "next": 12070485
+              },
+              {
+                "id": 12070485,
+                "content": "Bien sûr. Un instant, je vous prie.",
+                "npc": 260026,
+                "next": 12070486
+              },
+              {
+                "id": 12070486,
+                "content": "Voici votre billet. Gardez-le précieusement. Veuillez noter que vous ne pouvez circuler que dans les espaces réservés au public. L’accès à la scène est strictement interdit.",
+                "npc": 260026,
+                "next": 12070487
+              },
+              {
+                "id": 12070487,
+                "content": "Très bien. Merci.",
+                "npc": 260001
+              }
             ]
           },
           {
@@ -109512,6 +112072,421 @@
             "name": "揭开蕾伊目的",
             "next": [
               "178738803476318110081"
+            ],
+            "dialogues": [
+              {
+                "id": 12070490,
+                "content": "...",
+                "npc": 260017,
+                "next": 12070491
+              },
+              {
+                "id": 12070491,
+                "content": "Rae !",
+                "npc": 260001,
+                "next": 12070492
+              },
+              {
+                "id": 12070492,
+                "content": "Hein ? Rhythm, qu’est-ce que vous faites ici ?",
+                "npc": 260017,
+                "next": 12070493
+              },
+              {
+                "id": 12070493,
+                "content": "C’est plutôt à moi de vous poser la question. Rae, pourquoi êtes-vous au théâtre ?",
+                "npc": 260001,
+                "next": 12070494
+              },
+              {
+                "id": 12070494,
+                "content": "Ah... Eh bien... Après notre séparation, je me suis dit que je risquais tout de même de laisser passer cette occasion. Je voulais donc remercier le lieutenant-colonel Johnson avant le début de la représentation.",
+                "npc": 260017,
+                "next": 12070495
+              },
+              {
+                "id": 12070495,
+                "content": "Puisque vous vivez à Brumelac, j’imagine que vous n’avez pas beaucoup d’argent. S’il s’agissait uniquement de le remercier, vous auriez pu attendre le lieutenant-colonel devant le théâtre. Pourquoi avoir dépensé de l’argent pour entrer ?",
+                "npc": 260001,
+                "next": 12070496
+              },
+              {
+                "id": 12070496,
+                "content": "Je... Je m’intéresse aussi au théâtre. Je n’en ai pas le droit ?",
+                "npc": 260017,
+                "next": 12070497
+              },
+              {
+                "id": 12070497,
+                "content": "Très bien. Dans ce cas, dites-moi quelle pièce sera jouée ce soir et de quoi elle parle.",
+                "npc": 260001,
+                "next": 12070498
+              },
+              {
+                "id": 12070498,
+                "content": "Je...",
+                "npc": 260017,
+                "next": 12070499
+              },
+              {
+                "id": 12070499,
+                "content": "Cessez de me mentir, Rae. J’ai découvert votre cachette dans les égouts. Je sais désormais ce que vous préparez.",
+                "npc": 260001,
+                "next": 12070500
+              },
+              {
+                "id": 12070500,
+                "content": "Vous ne cherchiez pas le lieutenant-colonel Johnson pour le remercier, mais pour venger votre sœur. N’est-ce pas ?",
+                "npc": 260001,
+                "next": 12070501
+              },
+              {
+                "id": 12070501,
+                "content": "Vous...",
+                "npc": 260017,
+                "next": 12070502
+              },
+              {
+                "id": 12070502,
+                "content": "Je vous ai sous-estimée, Rhythm.",
+                "npc": 260017,
+                "next": 12070503
+              },
+              {
+                "id": 12070503,
+                "content": "... Je l’admets. Vous avez tout deviné.",
+                "npc": 260017,
+                "next": 12070504
+              },
+              {
+                "id": 12070504,
+                "content": "Pourquoi pensez-vous que le lieutenant-colonel Johnson est responsable de ce qui est arrivé à votre sœur ?",
+                "npc": 260001,
+                "next": 12070505
+              },
+              {
+                "id": 12070505,
+                "content": "Parce que <H>je l’ai vu de mes propres yeux</>.",
+                "npc": 260017,
+                "next": 12070506
+              },
+              {
+                "id": 12070506,
+                "content": "Quoi... ?!",
+                "npc": 260001,
+                "next": 12070507
+              },
+              {
+                "id": 12070507,
+                "content": "En tant que Daimon, je possède un « pouvoir » qui me permet de voir en rêve ce que vit ma sœur.",
+                "npc": 260017,
+                "next": 12070508
+              },
+              {
+                "id": 12070508,
+                "content": "J’ai longtemps éprouvé une immense reconnaissance envers la Mère Embla pour m’avoir accordé ce don. Grâce à lui, même une fois adultes, lorsque le travail nous laissait peu de temps pour discuter, je continuais de tout savoir sur sa vie.",
+                "npc": 260017,
+                "next": 12070509
+              },
+              {
+                "id": 12070509,
+                "content": "Ce que je voyais me permettait même de lui venir en aide.",
+                "npc": 260017,
+                "next": 12070510
+              },
+              {
+                "id": 12070510,
+                "content": "Lorsque je la voyais sauter un repas à cause de son travail, je lui préparais un plat bien chaud pour qu’elle puisse manger dès son retour.",
+                "npc": 260017,
+                "next": 12070511
+              },
+              {
+                "id": 12070511,
+                "content": "Et quand je la voyais aux prises avec un client pénible, elle n’avait même pas besoin de me raconter ce qui s’était passé. Nous pouvions le maudire ensemble en secret, et cela lui remontait un peu le moral.",
+                "npc": 260017,
+                "next": 12070512
+              },
+              {
+                "id": 12070512,
+                "content": "Mais peu à peu... j’ai commencé à comprendre que je n’étais en réalité qu’un poids pour elle.",
+                "npc": 260017,
+                "next": 12070513
+              },
+              {
+                "id": 12070513,
+                "content": "D’un point de vue pratique, mon pouvoir ne servait presque à rien. Non seulement il ne me permettait pas de gagner de l’argent, mais il me rendait somnolente et m’empêchait de travailler correctement.",
+                "npc": 260017,
+                "next": 12070514
+              },
+              {
+                "id": 12070514,
+                "content": "Lorsque j’ai fini par avouer ce que je ressentais à ma sœur, elle m’a simplement souri avec douceur. Elle m’a dit de ne pas m’inquiéter, qu’elle redoublerait d’efforts et gagnerait assez pour nous faire vivre toutes les deux.",
+                "npc": 260017,
+                "next": 12070515
+              },
+              {
+                "id": 12070515,
+                "content": "Mais je ne pouvais pas l’accepter. Je ne voulais pas qu’elle porte un tel fardeau toute seule... C’est à ce moment-là que j’ai découvert l’avis de recrutement de la VIᵉ Légion.",
+                "npc": 260017,
+                "next": 12070516
+              },
+              {
+                "id": 12070516,
+                "content": "... Alors, vous...",
+                "npc": 260001,
+                "next": 12070517
+              },
+              {
+                "id": 12070517,
+                "content": "Lorsque j’ai vu cette affiche, j’étais tellement heureuse... Je me souviens encore de cette sensation. J’avais l’impression que tout mon sang me montait à la tête.",
+                "npc": 260017,
+                "next": 12070518
+              },
+              {
+                "id": 12070518,
+                "content": "Il y était écrit très clairement que tous les Charons dotés d’un talent magique pouvaient se porter candidats, quelle que soit la nature de leur pouvoir.",
+                "npc": 260017,
+                "next": 12070519
+              },
+              {
+                "id": 12070519,
+                "content": "J’ai cru que la chance me souriait enfin. Mon pouvoir allait enfin devenir « utile ». J’allais pouvoir, moi aussi, contribuer aux besoins de notre foyer.",
+                "npc": 260017,
+                "next": 12070520
+              },
+              {
+                "id": 12070520,
+                "content": "Je suis donc immédiatement rentrée annoncer la nouvelle à ma sœur. Elle aussi s’en est réjouie.",
+                "npc": 260017,
+                "next": 12070521
+              },
+              {
+                "id": 12070521,
+                "content": "Les conditions proposées par la Légion étaient très avantageuses, alors nous avons décidé de nous inscrire ensemble. Mais je n’ai sans doute pas été assez performante pendant les épreuves de sélection, car seule ma sœur a été retenue.",
+                "npc": 260017,
+                "next": 12070522
+              },
+              {
+                "id": 12070522,
+                "content": "L’idée d’être séparée d’elle me rendait terriblement triste. Mais elle m’a rassurée en disant que, même si l’entraînement de la Légion se déroulait à huis clos, mon pouvoir me permettrait d’observer ce qu’elle y apprenait et de m’y préparer à l’avance.",
+                "npc": 260017,
+                "next": 12070523
+              },
+              {
+                "id": 12070523,
+                "content": "Elle m’a promis que si je travaillais sérieusement, je réussirais les sélections l’année suivante et que nous nous retrouverions au sein de la Légion.",
+                "npc": 260017,
+                "next": 12070524
+              },
+              {
+                "id": 12070524,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070525
+              },
+              {
+                "id": 12070525,
+                "content": "Elle a fini par me convaincre. Alors je l’ai regardée partir avec la Légion...",
+                "npc": 260017,
+                "next": 12070526
+              },
+              {
+                "id": 12070526,
+                "content": "Après son départ, elle me manquait tellement et je m’inquiétais tant pour elle que je ne voulais presque plus me réveiller. Je cherchais à dormir autant que possible pour apercevoir le moindre fragment de sa nouvelle vie.",
+                "npc": 260017,
+                "next": 12070527
+              },
+              {
+                "id": 12070527,
+                "content": "Au début, tout correspondait à ce que j’avais imaginé. J’ai vu ma sœur monter dans un train de la Légion et pénétrer dans un endroit qui ressemblait à une forteresse.",
+                "npc": 260017,
+                "next": 12070528
+              },
+              {
+                "id": 12070528,
+                "content": "Puis je l’ai vue vivre dans une petite pièce fermée par des barreaux de fer. Cela ressemblait davantage à une cellule qu’à un dortoir.",
+                "npc": 260017,
+                "next": 12070529
+              },
+              {
+                "id": 12070529,
+                "content": "J’ai trouvé cela étrange, mais je me suis persuadée que les conditions réservées aux nouvelles recrues étaient peut-être simplement difficiles. Ma sœur était sérieuse et travailleuse. Elle finirait forcément par se distinguer grâce à ses efforts.",
+                "npc": 260017,
+                "next": 12070530
+              },
+              {
+                "id": 12070530,
+                "content": "Mais après cela, j’ai brusquement cessé de rêver d’elle. J’ai essayé toutes sortes de méthodes pour trouver le sommeil et avalé quantité d’herbes douteuses, mais je ne voyais toujours rien.",
+                "npc": 260017,
+                "next": 12070531
+              },
+              {
+                "id": 12070531,
+                "content": "Je me suis dit que j’avais peut-être trop sollicité mon pouvoir et que mon corps en avait souffert. Alors j’ai commencé à me coucher tôt, à me lever à heures fixes et à prendre mes repas régulièrement. J’espérais recouvrer mes forces et pouvoir de nouveau voir ma sœur.",
+                "npc": 260017,
+                "next": 12070532
+              },
+              {
+                "id": 12070532,
+                "content": "Environ un mois plus tard, j’ai enfin recommencé à rêver.",
+                "npc": 260017,
+                "next": 12070533
+              },
+              {
+                "id": 12070533,
+                "content": "Mais je ne voyais presque toujours que cette cellule étroite, une couche sale, des repas sommaires et une lumière lugubre...",
+                "npc": 260017,
+                "next": 12070534
+              },
+              {
+                "id": 12070534,
+                "content": "Parfois, j’entendais des voix indistinctes. Quelqu’un hurlait des insultes à ma sœur. On la traitait d’incapable, de gaspillage des ressources de la Légion, de lâche...",
+                "npc": 260017,
+                "next": 12070535
+              },
+              {
+                "id": 12070535,
+                "content": "J’entendais aussi des supplications au loin, ainsi que les grondements terrifiants d’une créature inconnue...",
+                "npc": 260017,
+                "next": 12070536
+              },
+              {
+                "id": 12070536,
+                "content": "Je voulais désespérément comprendre ce qui se passait. Mais chaque fois que mon regard était sur le point de se tourner vers l’origine de ces bruits, tout devenait noir.",
+                "npc": 260017,
+                "next": 12070537
+              },
+              {
+                "id": 12070537,
+                "content": "Puis, un jour, j’ai enfin aperçu un monstre pourvu de cornes. Il était couvert de sang et fixait ma sœur d’un regard féroce.",
+                "npc": 260017,
+                "next": 12070538
+              },
+              {
+                "id": 12070538,
+                "content": "Je sentais l’odeur du sang. Je percevais même clairement la terreur de ma sœur... J’ai vu le monstre se jeter sur elle, puis ma sœur s’effondrer dans un cri de douleur.",
+                "npc": 260017,
+                "next": 12070539
+              },
+              {
+                "id": 12070539,
+                "content": "J’ai vu plusieurs personnes en uniforme contempler ma sœur, qui respirait à peine, puis laisser échapper un rire méprisant.",
+                "npc": 260017,
+                "next": 12070540
+              },
+              {
+                "id": 12070540,
+                "content": "« Quelle incapable », ont-ils ricané.",
+                "npc": 260017,
+                "next": 12070541
+              },
+              {
+                "id": 12070541,
+                "content": "L’image est devenue de plus en plus floue. Je me suis réveillée tremblante, couverte de sueur froide. Depuis cette nuit-là, je n’ai plus jamais fait le moindre rêve.",
+                "npc": 260017,
+                "next": 12070542
+              },
+              {
+                "id": 12070542,
+                "content": "J’étais terrifiée. Je suis allée interroger la Légion, mais on m’a répondu que ma sœur poursuivait normalement son entraînement. Pourtant, dès que je demandais des détails, personne ne savait quoi me répondre.",
+                "npc": 260017,
+                "next": 12070543
+              },
+              {
+                "id": 12070543,
+                "content": "Même alors, j’essayais encore de me mentir. Je me disais que mon pouvoir n’avait peut-être pas fonctionné correctement, que je n’avais fait qu’un horrible cauchemar.",
+                "npc": 260017,
+                "next": 12070544
+              },
+              {
+                "id": 12070544,
+                "content": "Après tout, comment un monstre pareil aurait-il pu se trouver au sein de la Légion ? Ma sœur était simplement partie s’entraîner. Elle n’avait pas été envoyée sur un champ de bataille. Il ne pouvait rien lui arriver.",
+                "npc": 260017,
+                "next": 12070545
+              },
+              {
+                "id": 12070545,
+                "content": "Jusqu’à ce que survienne... l’affaire de la Traque aux Charons. Le monstre décrit par les témoins était exactement le même que celui que j’avais vu en rêve.",
+                "npc": 260017,
+                "next": 12070546
+              },
+              {
+                "id": 12070546,
+                "content": "J’ai enfin compris que ce n’était pas un cauchemar. Tout cela s’était réellement produit. La Légion avait forcé ma sœur à affronter ce monstre et l’avait envoyée à une mort certaine !",
+                "npc": 260017,
+                "next": 12070547
+              },
+              {
+                "id": 12070547,
+                "content": "Vous comprenez maintenant ? Je dois me venger de la Légion. Je leur ferai payer la mort de ma sœur !",
+                "npc": 260017,
+                "next": 12070548
+              },
+              {
+                "id": 12070548,
+                "content": "Je comprends... Voilà donc ce qui s’est passé.",
+                "npc": 260001,
+                "next": 12070549
+              },
+              {
+                "id": 12070549,
+                "content": "Vous comptez vous en prendre au lieutenant-colonel Johnson pendant la représentation ?",
+                "npc": 260001,
+                "next": 12070550
+              },
+              {
+                "id": 12070550,
+                "content": "Oui.",
+                "npc": 260017,
+                "next": 12070551
+              },
+              {
+                "id": 12070551,
+                "content": "Alors je n’ai qu’une seule question. Êtes-vous réellement prête à aller jusqu’au bout ?",
+                "npc": 260001,
+                "next": 12070552
+              },
+              {
+                "id": 12070552,
+                "content": "Évidemment ! J’attends ce moment depuis bien trop longtemps. Depuis le jour où j’ai compris la vérité, j’ai décidé d’aller jusqu’au bout.",
+                "npc": 260017,
+                "next": 12070553
+              },
+              {
+                "id": 12070553,
+                "content": "Je me suis entraînée d’innombrables fois sur son portrait. Avec cette lame, je viserai son cœur.",
+                "npc": 260017,
+                "next": 12070554
+              },
+              {
+                "id": 12070554,
+                "content": "...",
+                "npc": 260001,
+                "next": 12070555
+              },
+              {
+                "id": 12070555,
+                "content": "Je vous ai déjà dit que j’avais moi aussi servi dans la Légion. Je n’appartenais qu’aux Veilleurs, une unité subordonnée, mais j’ai tout de même reçu un entraînement militaire.",
+                "npc": 260001,
+                "next": 12070556
+              },
+              {
+                "id": 12070556,
+                "content": "Dans les égouts, vous vous êtes exercée sur un mannequin. J’imagine que vous n’avez encore jamais essayé de faire face à une personne capable de se défendre. Pour l’instant, considérez que je suis le lieutenant-colonel Johnson.",
+                "npc": 260001,
+                "next": 12070557
+              },
+              {
+                "id": 12070557,
+                "content": "Allez-y. Essayez de me toucher. Montrez-moi le résultat de votre entraînement.",
+                "npc": 260001,
+                "next": 12070558
+              },
+              {
+                "id": 12070558,
+                "content": "... Vous croyez que je n’en suis pas capable ?",
+                "npc": 260017
+              }
             ]
           },
           {
@@ -109522,6 +112497,121 @@
             "pos": [
               23884,
               2520
+            ],
+            "dialogues": [
+              {
+                "id": 12070561,
+                "content": "Je comprends ce que vous ressentez. Mais vous n’avez manifestement pas les capacités nécessaires pour mener ce plan à bien. Vous lancer dans cette entreprise reviendrait à courir à une mort certaine.",
+                "npc": 260001,
+                "next": 12070562
+              },
+              {
+                "id": 12070562,
+                "content": "...",
+                "npc": 260017,
+                "next": 12070563
+              },
+              {
+                "id": 12070563,
+                "content": "Je connais les habitudes du lieutenant-colonel Johnson. Même lors de ses sorties privées, plusieurs gardes l’accompagnent toujours. Avec les mesures de sécurité du théâtre, vous ne parviendrez probablement même pas jusqu’aux loges.",
+                "npc": 260001,
+                "next": 12070564
+              },
+              {
+                "id": 12070564,
+                "content": "Et même si vous aviez la chance de pénétrer dans sa loge, de contourner ses gardes et de vous retrouver directement face à lui...",
+                "npc": 260001,
+                "next": 12070565
+              },
+              {
+                "id": 12070565,
+                "content": "Je n’ai même pas utilisé mon pouvoir à l’instant, seulement mes techniques de combat. Si vous n’êtes pas capable de tenir tête à une ancienne militaire comme moi, quelles chances avez-vous de blesser un officier en service parfaitement entraîné ?",
+                "npc": 260001,
+                "next": 12070566
+              },
+              {
+                "id": 12070566,
+                "content": "Je... Je m’en moque... !",
+                "npc": 260017,
+                "next": 12070567
+              },
+              {
+                "id": 12070567,
+                "content": "Même s’il n’existe qu’une chance sur mille, ou sur dix mille, je dois tenter ma chance.",
+                "npc": 260017,
+                "next": 12070568
+              },
+              {
+                "id": 12070568,
+                "content": "Même si j’échoue et que j’y laisse la vie, ce salaud saura au moins que quelqu’un le surveille, que quelqu’un le hait !",
+                "npc": 260017,
+                "next": 12070569
+              },
+              {
+                "id": 12070569,
+                "content": "Si je ne fais rien, alors je ne pourrai vraiment plus continuer à vivre...",
+                "npc": 260017,
+                "next": 12070570
+              },
+              {
+                "id": 12070570,
+                "content": "Chaque jour, dès que je ferme les yeux, j’ai l’impression de revoir ce monstre. J’entends de nouveau les cris de douleur de ma sœur dans ses derniers instants et je sens encore cette odeur de sang.",
+                "npc": 260017,
+                "next": 12070571
+              },
+              {
+                "id": 12070571,
+                "content": "Personne ne peut comprendre cette souffrance.",
+                "npc": 260017,
+                "next": 12070572
+              },
+              {
+                "id": 12070572,
+                "content": "... Moi, je la comprends.",
+                "npc": 260001,
+                "next": 12070573
+              },
+              {
+                "id": 12070573,
+                "content": "Car mon petit frère a lui aussi rejoint la VIᵉ Légion, tout comme votre sœur.",
+                "npc": 260001,
+                "next": 12070574
+              },
+              {
+                "id": 12070574,
+                "content": "Quoi... ?",
+                "npc": 260017,
+                "next": 12070575
+              },
+              {
+                "id": 12070575,
+                "content": "Voici la liste des recrues admises dans la VIᵉ Légion il y a deux ans. Le nom de votre sœur, Darcy Sloan, y figure. Et il y a aussi... celui de Blues Fischer, mon petit frère.",
+                "npc": 260001,
+                "next": 12070576
+              },
+              {
+                "id": 12070576,
+                "content": "... !",
+                "npc": 260017,
+                "next": 12070577
+              },
+              {
+                "id": 12070577,
+                "content": "La vérité derrière cette affaire est bien plus complexe que vous ne l’imaginez. Le lieutenant-colonel Johnson était uniquement chargé du recrutement cette année-là. Derrière lui se trouvent d’innombrables personnes qui ont participé à cette vaste conspiration.",
+                "npc": 260001,
+                "next": 12070578
+              },
+              {
+                "id": 12070578,
+                "content": "Pour l’instant, je vous demande de partir avec moi. Je vous raconterai tout ce que je sais. Après cela, si vous tenez encore à poursuivre votre plan, je respecterai votre choix.",
+                "npc": 260001,
+                "next": 12070579
+              },
+              {
+                "id": 12070579,
+                "content": "... Très bien.",
+                "npc": 260017
+              }
             ]
           }
         ]
@@ -109537,6 +112627,238 @@
             "name": "告知蕾伊真相",
             "next": [
               "178738897881919244854"
+            ],
+            "dialogues": [
+              {
+                "id": 12070583,
+                "content": "... Voilà toute la vérité sur la VIᵉ Légion et la Traque aux Charons.",
+                "npc": 260001,
+                "next": 12070584
+              },
+              {
+                "id": 12070584,
+                "content": "Des expériences de transformation... ? Des monstres... ? De quoi parlez-vous... ?",
+                "npc": 260017,
+                "next": 12070585
+              },
+              {
+                "id": 12070585,
+                "content": "Comment est-ce possible... ? Ma sœur... Mais c’était la Légion ! La Légion n’est-elle pas censée éliminer les monstres ? Pourquoi en fabriquerait-elle ?",
+                "npc": 260017,
+                "next": 12070586
+              },
+              {
+                "id": 12070586,
+                "content": "La première fois que j’ai entendu tout cela, moi non plus, je n’ai rien voulu croire.",
+                "npc": 260001,
+                "next": 12070587
+              },
+              {
+                "id": 12070587,
+                "content": "Mais je ne pouvais pas continuer à me mentir. Car mon petit frère... ne m’a jamais menti.",
+                "npc": 260001,
+                "next": 12070588
+              },
+              {
+                "id": 12070588,
+                "content": "C’est pour cette raison que vous avez quitté la Légion ?",
+                "npc": 260017,
+                "next": 12070589
+              },
+              {
+                "id": 12070589,
+                "content": "Oui.",
+                "npc": 260001,
+                "next": 12070590
+              },
+              {
+                "id": 12070590,
+                "content": "Alors pourquoi essayez-vous encore de m’arrêter ?!",
+                "npc": 260017,
+                "next": 12070591
+              },
+              {
+                "id": 12070591,
+                "content": "Devrions-nous simplement regarder les responsables de la mort de nos proches continuer à vivre tranquillement, sans jamais payer pour ce qu’ils ont fait ?",
+                "npc": 260017,
+                "next": 12070592
+              },
+              {
+                "id": 12070592,
+                "content": "Je me moque de savoir si Johnson est le véritable responsable ! Je me moque de mes chances de réussir ! Même si je dois y laisser la vie, et alors ?!",
+                "npc": 260017,
+                "next": 12070593
+              },
+              {
+                "id": 12070593,
+                "content": "Tant mieux ! Qu’ils me tuent aussi ! C’est moi qui aurais dû mourir. Si je n’avais pas vu cet avis de recrutement, ma sœur serait encore là aujourd’hui !",
+                "npc": 260017,
+                "next": 12070594
+              },
+              {
+                "id": 12070594,
+                "content": "Est-ce réellement ce que vous souhaitez ? La Légion vous a pris votre sœur, et vous voudriez maintenant lui sacrifier tout ce qui vous reste ?",
+                "npc": 260001,
+                "next": 12070595
+              },
+              {
+                "id": 12070595,
+                "content": "... Vous cherchez seulement à apaiser votre conscience... pour ne plus avoir à affronter votre véritable douleur.",
+                "npc": 260001,
+                "next": 12070596
+              },
+              {
+                "id": 12070596,
+                "content": "Je... Ce n’est pas... Je...",
+                "npc": 260017,
+                "next": 12070597
+              },
+              {
+                "id": 12070597,
+                "content": "Rae, je ne vous dis pas cela pour vous accuser. Bien au contraire, je comprends parfaitement ce que vous ressentez.",
+                "npc": 260001,
+                "next": 12070598
+              },
+              {
+                "id": 12070598,
+                "content": "Il n’y a pas si longtemps encore, je vivais presque de la même manière que vous. Je m’étourdissais de travail pour ne pas avoir à affronter certaines vérités trop douloureuses.",
+                "npc": 260001,
+                "next": 12070599
+              },
+              {
+                "id": 12070599,
+                "content": "C’est précisément pour cette raison que je dois vous arrêter. Car je comprends désormais que ce n’est pas ce que nos proches auraient voulu pour nous.",
+                "npc": 260001,
+                "next": 12070600
+              },
+              {
+                "id": 12070600,
+                "content": "Lorsque la XIIIᵉ Légion est venue arrêter le responsable de la Traque aux Charons, j’étais prête à affronter ceux qui avaient autrefois été mes collègues pour permettre à Blues de s’enfuir.",
+                "npc": 260001,
+                "next": 12070601
+              },
+              {
+                "id": 12070601,
+                "content": "Mais je ne l’ai finalement pas fait. Car Blues... a choisi de faire face seul à la Légion venue enquêter afin de me protéger.",
+                "npc": 260001,
+                "next": 12070602
+              },
+              {
+                "id": 12070602,
+                "content": "Il m’a assommée, puis a chargé mon {性别:ami|amie} de m’emmener loin de là.",
+                "npc": 260001,
+                "next": 12070603
+              },
+              {
+                "id": 12070603,
+                "content": "Quoi... ?",
+                "npc": 260017,
+                "next": 12070604
+              },
+              {
+                "id": 12070604,
+                "content": "Juste avant nos adieux, il m’a dit une dernière chose...",
+                "npc": 260001,
+                "next": 12070605
+              },
+              {
+                "id": 12070605,
+                "content": "<H>« Quoi qu’il arrive... tiens bon... et vis. »</>",
+                "npc": 260001,
+                "next": 12070606
+              },
+              {
+                "id": 12070606,
+                "content": "Je suis certaine que si votre sœur avait encore pu vous adresser quelques mots à la fin, elle aurait formulé le même souhait.",
+                "npc": 260001,
+                "next": 12070607
+              },
+              {
+                "id": 12070607,
+                "content": "Elle aurait voulu que vous continuiez à vivre du mieux que vous le pouvez, et non que vous y laissiez vous aussi la vie.",
+                "npc": 260001,
+                "next": 12070608
+              },
+              {
+                "id": 12070608,
+                "content": "Comment pouvez-vous savoir ce qu’elle aurait voulu... ?",
+                "npc": 260017,
+                "next": 12070609
+              },
+              {
+                "id": 12070609,
+                "content": "<I>Dans l’histoire que Rae vient de raconter, un détail révèle bel et bien ce que sa sœur souhaitait. Mais Rae elle-même ne semble pas encore l’avoir compris...</>",
+                "npc": 260001,
+                "options": [
+                  {
+                    "id": 12070610,
+                    "content": "<I>Les officiers traitaient la sœur de Rae de lâche</>",
+                    "next": 12070611
+                  },
+                  {
+                    "id": 12070612,
+                    "content": "<I>La sœur de Rae est morte en affrontant le monstre</>",
+                    "next": 12070613
+                  },
+                  {
+                    "id": 12070614,
+                    "content": "<I>Les rêves de Rae sombraient souvent brusquement dans le noir</>",
+                    "next": 12070615
+                  },
+                  {
+                    "id": 12070616,
+                    "content": "<I>La sœur de Rae cherchait toujours à la réconforter</>",
+                    "next": 12070617
+                  }
+                ]
+              },
+              {
+                "id": 12070611,
+                "content": "<I>C’était sans doute parce que la sœur de Rae était trop bienveillante pour vouloir se battre... Mais cela ne suffira pas à la convaincre de renoncer à sa vengeance. Il doit y avoir autre chose.</>",
+                "npc": 260001,
+                "next": 12070609
+              },
+              {
+                "id": 12070613,
+                "content": "<I>La sœur de Rae a probablement péri lors d’un affrontement entre sujets d’expérience. Rae ne semble pas l’avoir compris. Mais lui en parler maintenant ne ferait qu’accroître sa douleur... Il doit y avoir autre chose.</>",
+                "npc": 260001,
+                "next": 12070609
+              },
+              {
+                "id": 12070615,
+                "content": "<I>Oui, c’est cela. À première vue, on pourrait croire que le pouvoir de Rae ne fonctionnait plus correctement. Mais il existe peut-être une autre explication...</>",
+                "npc": 260001,
+                "next": 12070618
+              },
+              {
+                "id": 12070617,
+                "content": "<I>Sa sœur s’est toujours beaucoup souciée d’elle. C’est important, mais Rae le sait déjà parfaitement. Cela seul ne suffira pas à la convaincre. Il doit y avoir un autre détail.</>",
+                "npc": 260001,
+                "next": 12070609
+              },
+              {
+                "id": 12070618,
+                "content": "Je voulais désespérément comprendre ce qui se passait. Mais chaque fois que mon regard était sur le point de se tourner vers l’origine de ces bruits, tout devenait noir.",
+                "npc": 260017,
+                "next": 12070619
+              },
+              {
+                "id": 12070619,
+                "content": "Vous avez dit que, dans vos rêves, tout devenait noir chaque fois que votre regard était sur le point de se tourner vers la source de ces bruits. N’est-ce pas ?",
+                "npc": 260001,
+                "next": 12070620
+              },
+              {
+                "id": 12070620,
+                "content": "Avez-vous déjà envisagé... que votre sœur ait volontairement fermé les yeux parce qu’elle ne voulait pas que vous assistiez à ces horreurs ?",
+                "npc": 260001,
+                "next": 12070621
+              },
+              {
+                "id": 12070621,
+                "content": "... !",
+                "npc": 260017
+              }
             ]
           },
           {
@@ -109547,6 +112869,174 @@
             "pos": [
               -4845,
               -13642
+            ],
+            "dialogues": [
+              {
+                "id": 12070624,
+                "content": "Rae garde la tête baissée et dissimule son visage entre ses mains. Elle semble pleurer.",
+                "next": 12070625
+              },
+              {
+                "id": 12070625,
+                "content": "Pardonnez-moi. Je sais à quel point cela doit être douloureux pour vous... Mais puisque j’ai traversé une épreuve semblable, je dois vous empêcher de prendre, sous le coup de l’émotion, une décision que vous pourriez regretter.",
+                "npc": 260001,
+                "next": 12070626
+              },
+              {
+                "id": 12070626,
+                "content": "... Alors, qu’est-ce que je peux faire... ? Est-ce que je ne peux vraiment rien faire ?",
+                "npc": 260017,
+                "next": 12070627
+              },
+              {
+                "id": 12070627,
+                "content": "Ma sœur va simplement disparaître sans un bruit... sans rien laisser derrière elle ?",
+                "npc": 260017,
+                "next": 12070628
+              },
+              {
+                "id": 12070628,
+                "content": "Non, Rae... Votre sœur vous a laissé quelque chose de très précieux.",
+                "npc": 260001,
+                "next": 12070629
+              },
+              {
+                "id": 12070629,
+                "content": "Avec un pouvoir aussi particulier, vous devez vous souvenir d’innombrables choses à son sujet. Ces précieux souvenirs, ainsi que tout l’amour qu’elle vous a donné, sont autant de trésors qu’elle vous a confiés.",
+                "npc": 260001,
+                "next": 12070630
+              },
+              {
+                "id": 12070630,
+                "content": "... Snif... Snif...",
+                "npc": 260017,
+                "next": 12070631
+              },
+              {
+                "id": 12070631,
+                "content": "Ma sœur...",
+                "npc": 260017,
+                "next": 12070632
+              },
+              {
+                "id": 12070632,
+                "content": "Qu’est-ce que je dois faire... ? Ma sœur... Dis-moi...",
+                "npc": 260017,
+                "next": 12070633
+              },
+              {
+                "id": 12070633,
+                "content": "À ce sujet, j’ai une proposition à vous faire.",
+                "npc": 260001,
+                "next": 12070634
+              },
+              {
+                "id": 12070634,
+                "content": "J’ai découvert cette liste parmi les affaires laissées par Blues. Il s’agit de la liste des recrues de la VIᵉ Légion cette année-là... autrement dit, de la liste des victimes.",
+                "npc": 260001,
+                "next": 12070635
+              },
+              {
+                "id": 12070635,
+                "content": "Ces derniers jours, j’ai rendu visite à plusieurs de leurs familles, principalement pour occuper mon esprit.",
+                "npc": 260001,
+                "next": 12070636
+              },
+              {
+                "id": 12070636,
+                "content": "Au départ, je voulais simplement profiter de l’occasion pour les aider dans la mesure de mes moyens. Mais au fil de ces visites, j’ai découvert de nombreuses choses sur ceux qui nous ont quittés...",
+                "npc": 260001,
+                "next": 12070637
+              },
+              {
+                "id": 12070637,
+                "content": "Lorsqu’elle ne travaillait pas, Marian aimait rester au lit pour tricoter. Elle adorait l’odeur du coton dans les couvertures cousues par sa grand-mère. Elle disait que tricoter était reposant, que cela l’aidait à se détendre et lui permettait en même temps de contribuer aux dépenses du foyer.",
+                "npc": 260001,
+                "next": 12070638
+              },
+              {
+                "id": 12070638,
+                "content": "Kenny était réservé depuis son enfance et souriait rarement. Son petit frère avait même parié avec un ami pour savoir lequel d’entre eux parviendrait à le faire rire. Il s’était peint le visage comme un clown... et, pour la première fois, son frère avait éclaté de rire.",
+                "npc": 260001,
+                "next": 12070639
+              },
+              {
+                "id": 12070639,
+                "content": "À travers tous ces petits fragments de vie, leurs visages ont peu à peu commencé à se dessiner dans mon esprit. Ils semblaient encore exister quelque part dans ce monde, au lieu de n’être plus que des noms froids inscrits sur une liste.",
+                "npc": 260001,
+                "next": 12070640
+              },
+              {
+                "id": 12070640,
+                "content": "...",
+                "npc": 260017,
+                "next": 12070641
+              },
+              {
+                "id": 12070641,
+                "content": "En pensant à eux, j’ai peu à peu compris ce que les vivants représentent pour ceux qui sont partis. Tant que des personnes comme nous continuent de penser à leurs proches, ceux-ci ne disparaissent jamais entièrement de ce monde.",
+                "npc": 260001,
+                "next": 12070642
+              },
+              {
+                "id": 12070642,
+                "content": "Voilà pourquoi nous devons continuer à vivre, même s’il nous faut ramper dans la boue pour avancer. Car si nous disparaissons à notre tour, il ne restera plus personne pour se souvenir d’eux.",
+                "npc": 260001,
+                "next": 12070643
+              },
+              {
+                "id": 12070643,
+                "content": "Ce n’est que maintenant que je le comprends enfin : au cours de ces visites, ce ne sont pas réellement eux que j’ai aidés... mais moi-même.",
+                "npc": 260001,
+                "next": 12070644
+              },
+              {
+                "id": 12070644,
+                "content": "Vous ne comprendrez peut-être pas encore tout ce que je vous dis. Mais lorsque vous aurez vu ce que j’ai vu, je suis certaine que vous comprendrez pourquoi nous devons avancer et continuer à vivre du mieux que nous le pouvons.",
+                "npc": 260001,
+                "next": 12070645
+              },
+              {
+                "id": 12070645,
+                "content": "Rae, je suis heureuse de vous avoir rencontrée avant que vous ne fassiez quelque chose d’irréparable... et d’avoir pu vous en empêcher.",
+                "npc": 260001,
+                "next": 12070646
+              },
+              {
+                "id": 12070646,
+                "content": "À présent, j’aimerais vous inviter à m’accompagner lorsque j’irai rendre visite aux familles restantes.",
+                "npc": 260001,
+                "next": 12070647
+              },
+              {
+                "id": 12070647,
+                "content": "Hein... ?",
+                "npc": 260017,
+                "next": 12070648
+              },
+              {
+                "id": 12070648,
+                "content": "Considérez cela comme une mission que je vous confie. D’accord ?",
+                "npc": 260001,
+                "next": 12070649
+              },
+              {
+                "id": 12070649,
+                "content": "... Oui. D’accord.",
+                "npc": 260017,
+                "next": 12070650
+              },
+              {
+                "id": 12070650,
+                "content": "Merci.",
+                "npc": 260001,
+                "next": 12070651
+              },
+              {
+                "id": 12070651,
+                "content": "Pour l’instant, laissez-moi vous raccompagner chez vous. Vous devez bien vous reposer, car nous avons encore beaucoup à faire.",
+                "npc": 260001
+              }
             ]
           }
         ]
@@ -109559,7 +113049,158 @@
           {
             "id": "178738943523721508624",
             "type": "TalkNode",
-            "name": "蕾伊回家"
+            "name": "蕾伊回家",
+            "dialogues": [
+              {
+                "id": 12070653,
+                "content": "Rae ! Tu es rentrée !",
+                "npc": 260027,
+                "next": 12070654
+              },
+              {
+                "id": 12070654,
+                "content": "Oh, la dame à côté de toi, c’est celle qui était chez les Veilleurs, pas vrai ? Freda nous a tout raconté.",
+                "npc": 260027,
+                "next": 12070655
+              },
+              {
+                "id": 12070655,
+                "content": "Ah... Maintenant que j’y pense, j’ai oublié de transmettre le message de cette petite fille.",
+                "npc": 260001,
+                "next": 12070656
+              },
+              {
+                "id": 12070656,
+                "content": "Ce n’est pas grave, tu n’auras pas besoin de t’en charger ! Freda ne pensait qu’à son portrait et n’avait même pas remarqué que Rae n’allait pas bien. On l’a déjà grondée pour ça.",
+                "npc": 260027,
+                "next": 12070657
+              },
+              {
+                "id": 12070657,
+                "content": "Rae, je sais que tu n’as pas fait exprès d’oublier de nous faire des dessins. Ces derniers temps, tu n’as jamais l’air très en forme. C’est parce que tu as trop de travail ? Ou tu as encore rencontré des adultes méchants ?",
+                "npc": 260027,
+                "next": 12070658
+              },
+              {
+                "id": 12070658,
+                "content": "On ne peut pas vraiment t’aider pour ton travail, mais on aimerait quand même que tu retrouves le sourire.",
+                "npc": 260027,
+                "next": 12070659
+              },
+              {
+                "id": 12070659,
+                "content": "Alors on t’a préparé un cadeau ! Hé hé, regarde !",
+                "npc": 260027,
+                "next": 12070660
+              },
+              {
+                "id": 12070660,
+                "content": "Ce sont... des Fleurs-des-Fissures ? Où en avez-vous trouvé autant ?",
+                "npc": 260017,
+                "next": 12070661
+              },
+              {
+                "id": 12070661,
+                "content": "On les a cherchées tous ensemble ! On a fouillé absolument tous les petits coins des environs !",
+                "npc": 260027,
+                "next": 12070662
+              },
+              {
+                "id": 12070662,
+                "content": "Je me souviens que Darcy avait dit que c’étaient tes fleurs préférées. J’espère qu’elles te rendront un peu plus heureuse !",
+                "npc": 260027,
+                "next": 12070663
+              },
+              {
+                "id": 12070663,
+                "content": "... Snif... Snif... !",
+                "npc": 260017,
+                "next": 12070664
+              },
+              {
+                "id": 12070664,
+                "content": "Hein... ?! Pourquoi tu pleures ? Pardon... !",
+                "npc": 260027,
+                "next": 12070665
+              },
+              {
+                "id": 12070665,
+                "content": "Ne t’inquiète pas, elle va bien. C’est seulement que... sa sœur lui manque.",
+                "npc": 260001,
+                "next": 12070666
+              },
+              {
+                "id": 12070666,
+                "content": "Je vais te remercier à sa place. Rae a certainement compris ce que vous vouliez lui transmettre. Mais pour l’instant, elle a besoin de rester un peu seule au calme.",
+                "npc": 260001,
+                "next": 12070667
+              },
+              {
+                "id": 12070667,
+                "content": "D’accord... ! Alors je rentre chez moi. Repose-toi bien, Rae !",
+                "npc": 260027,
+                "next": 12070668
+              },
+              {
+                "id": 12070668,
+                "content": "Vous voyez ? L’affection que votre sœur vous portait continue de veiller sur vous, aujourd’hui encore.",
+                "npc": 260001,
+                "next": 12070669
+              },
+              {
+                "id": 12070669,
+                "content": "... Oui.",
+                "npc": 260017,
+                "next": 12070670
+              },
+              {
+                "id": 12070670,
+                "content": "Reposez-vous bien. J’espère que vous dormirez paisiblement cette nuit.",
+                "npc": 260001,
+                "next": 12070671
+              },
+              {
+                "id": 12070671,
+                "content": "Je peux désormais rayer le nom de Darcy Sloan de la liste.",
+                "npc": 260001,
+                "next": 12070672
+              },
+              {
+                "id": 12070672,
+                "content": "Le suivant est...",
+                "npc": 260001,
+                "next": 12070673
+              },
+              {
+                "id": 12070673,
+                "content": "« Parsifal Snowfield »... ? J’ai l’impression d’avoir déjà vu ce nom quelque part.",
+                "npc": 260001,
+                "next": 12070674
+              },
+              {
+                "id": 12070674,
+                "content": "Je me souviens. Il figurait dans le dossier de la Bagarre au théâtre Galea. Il faisait partie des personnes impliquées et était, me semble-t-il, l’interprète principal de <I>Né du blizzard</>...",
+                "npc": 260001,
+                "next": 12070675
+              },
+              {
+                "id": 12070675,
+                "content": "Attends... <I>Né du blizzard</>... Je me souviens que Blues m’avait dit avoir rencontré l’ami avec qui il s’était échappé de l’Académie d’Alchimie grâce à cette pièce.",
+                "npc": 260001,
+                "next": 12070676
+              },
+              {
+                "id": 12070676,
+                "content": "Parsifal... Serait-ce l’homme que Blues évoquait dans ses souvenirs ?",
+                "npc": 260001,
+                "next": 12070677
+              },
+              {
+                "id": 12070677,
+                "content": "La représentation doit venir de se terminer. Je devrais retourner au théâtre pour me renseigner.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       }
@@ -109584,12 +113225,176 @@
             ],
             "next": [
               "178739023979622644773"
+            ],
+            "dialogues": [
+              {
+                "id": 12070678,
+                "content": "Bonsoir.",
+                "npc": 260001,
+                "next": 12070679
+              },
+              {
+                "id": 12070679,
+                "content": "Bonsoir, madame. Avez-vous apprécié la représentation de ce soir ?",
+                "npc": 260026,
+                "next": 12070680
+              },
+              {
+                "id": 12070680,
+                "content": "Hm... Oui, je l’ai trouvée très réussie.",
+                "npc": 260001,
+                "next": 12070681
+              },
+              {
+                "id": 12070681,
+                "content": "À ce propos, j’aimerais vous poser une question. Connaissez-vous un comédien nommé Parsifal ? Il travaillait dans cette troupe il y a deux ans.",
+                "npc": 260001,
+                "next": 12070682
+              },
+              {
+                "id": 12070682,
+                "content": "Je ne travaillais pas encore ici à l’époque. Mais pour tout ce qui concerne la troupe, vous pouvez vous adresser à Mademoiselle Susanna. Elle vient de terminer et devrait encore se trouver à l’intérieur.",
+                "npc": 260026,
+                "next": 12070683
+              },
+              {
+                "id": 12070683,
+                "content": "<I>Susanna... Elle faisait également partie des personnes impliquées dans la bagarre. Elle devrait connaître Parsifal.</>",
+                "npc": 260001,
+                "next": 12070684
+              },
+              {
+                "id": 12070684,
+                "content": "Très bien. Merci.",
+                "npc": 260001
+              }
             ]
           },
           {
             "id": "178739023979622644773",
             "type": "TalkNode",
-            "name": "对话苏珊娜"
+            "name": "对话苏珊娜",
+            "dialogues": [
+              {
+                "id": 12070687,
+                "content": "La frêle fée s’envola vers la bête gigantesque. Mais d’un simple geste, celle-ci lui brisa les membres.",
+                "npc": 260028,
+                "next": 12070688
+              },
+              {
+                "id": 12070688,
+                "content": "Elle entendit alors la voix de son cœur. Pour la première fois, il battait avec force, clamant son destin...",
+                "npc": 260028,
+                "next": 12070689
+              },
+              {
+                "id": 12070689,
+                "content": "... Ah, <I>Né du blizzard</> est enfin de retour sur scène. Si seulement Parsifal avait pu le voir...",
+                "npc": 260028,
+                "next": 12070690
+              },
+              {
+                "id": 12070690,
+                "content": "« Parsifal »... Vous le connaissez ?",
+                "npc": 260001,
+                "next": 12070691
+              },
+              {
+                "id": 12070691,
+                "content": "Bien sûr. C’est un ami, et il était autrefois comédien dans ce théâtre... Attendez, vous le connaissez aussi ? Savez-vous où il se trouve maintenant ?",
+                "npc": 260028,
+                "next": 12070692
+              },
+              {
+                "id": 12070692,
+                "content": "Pardonnez-moi, je ne le connais pas. Mais il pourrait bien être la personne que je recherche.",
+                "npc": 260001,
+                "next": 12070730
+              },
+              {
+                "id": 12070730,
+                "content": "Mon petit frère avait rencontré au sein de la Légion un jeune homme passionné d’opéra, qui l’avait beaucoup aidé et encouragé.",
+                "npc": 260001,
+                "next": 12070731
+              },
+              {
+                "id": 12070731,
+                "content": "J’ignore son nom. Je sais seulement que c’était lui aussi un Charon vivant à Givrelac, qu’il avait une vingtaine d’années et qu’il avait rejoint la Légion il y a deux ans... Ah, et il savait également chanter des passages de <I>Né du blizzard</>.",
+                "npc": 260001,
+                "next": 12070732
+              },
+              {
+                "id": 12070732,
+                "content": "Il y a deux ans... C’est justement à cette époque que Parsifal a quitté la troupe. Depuis, nous n’avons plus jamais eu de ses nouvelles.",
+                "npc": 260028,
+                "next": 12070693
+              },
+              {
+                "id": 12070693,
+                "content": "Il était si gentil et si compatissant... Et <I>Né du blizzard</> était justement son opéra préféré, celui qu’il répétait le plus souvent... Alors, c’était peut-être Parsifal !",
+                "npc": 260028,
+                "next": 12070733
+              },
+              {
+                "id": 12070733,
+                "content": "Alors il avait rejoint la Légion... Pourquoi ne nous a-t-il rien dit... ?",
+                "npc": 260028,
+                "next": 12070734
+              },
+              {
+                "id": 12070734,
+                "content": "... Dans ce cas, il semble bien que ce soit la personne que je recherche.",
+                "npc": 260001,
+                "next": 12070735
+              },
+              {
+                "id": 12070735,
+                "content": "Est-ce qu’il va bien ?",
+                "npc": 260028,
+                "next": 12070736
+              },
+              {
+                "id": 12070736,
+                "content": "... Il va bien. Ne vous inquiétez pas. Seulement, son unité suit un entraînement à huis clos, alors il ne peut pas communiquer avec l’extérieur.",
+                "npc": 260001,
+                "next": 12070737
+              },
+              {
+                "id": 12070737,
+                "content": "Ce n’est pas grave. Tant qu’il va bien, c’est tout ce qui compte... Je suis sûre que nous aurons encore l’occasion de nous revoir un jour !",
+                "npc": 260028,
+                "next": 12070694
+              },
+              {
+                "id": 12070694,
+                "content": "Savez-vous où vit sa famille ? J’aimerais leur rendre visite, si cela est possible.",
+                "npc": 260001,
+                "next": 12070695
+              },
+              {
+                "id": 12070695,
+                "content": "Hm... Depuis son enfance, il vivait seul avec sa mère. Elle est morte de maladie il y a quelques années, alors il n’a malheureusement plus aucune famille aujourd’hui. Mais tous les membres de notre troupe peuvent être considérés comme sa famille.",
+                "npc": 260028,
+                "next": 12070696
+              },
+              {
+                "id": 12070696,
+                "content": "Si vous souhaitez en apprendre davantage sur lui, pourquoi ne pas venir voir une représentation de <I>Né du blizzard</> ?",
+                "npc": 260028,
+                "next": 12070697
+              },
+              {
+                "id": 12070697,
+                "content": "En souvenir de notre amitié avec lui, nous donnerons nous aussi le meilleur de nous-mêmes pour faire vivre cette pièce !",
+                "npc": 260028,
+                "next": 12070698
+              },
+              {
+                "id": 12070698,
+                "content": "Oui. Je viendrai.",
+                "npc": 260001
+              }
+            ]
           }
         ]
       },
@@ -109604,12 +113409,147 @@
             "name": "无缝对话看城墙",
             "next": [
               "178739061344924907242"
+            ],
+            "dialogues": [
+              {
+                "id": 12070699,
+                "content": "Parsifal Snowfield... Il devait être l’autre sujet d’expérience apparu dans les souvenirs de Blues, cet ami dont j’ignorais le nom.",
+                "npc": 260001,
+                "next": 12070700
+              },
+              {
+                "id": 12070700,
+                "content": "Je ne pensais pas qu’il avait déjà perdu toute sa famille...",
+                "npc": 260001,
+                "next": 12070701
+              },
+              {
+                "id": 12070701,
+                "content": "Mais ses anciens amis se souviennent encore de lui et continuent de penser à lui. Peut-être que, pour lui, cela suffit déjà.",
+                "npc": 260001,
+                "next": 12070702
+              },
+              {
+                "id": 12070702,
+                "content": "Moi aussi, je garderai en mémoire cet ami qui avait autrefois redonné courage à Blues... Je me souviendrai qu’il aimait <I>Né du blizzard</>, et qu’il rêvait de monter sur une scène baignée de lumière pour jouer de tout son cœur.",
+                "npc": 260001,
+                "next": 12070703
+              }
             ]
           },
           {
             "id": "178739061344924907242",
             "type": "TalkNode",
-            "name": "告别过往"
+            "name": "告别过往",
+            "dialogues": [
+              {
+                "id": 12070706,
+                "content": "Grande sœur... Cela faisait longtemps.",
+                "npc": 260029,
+                "next": 12070707
+              },
+              {
+                "id": 12070707,
+                "content": "Oui. Cela faisait longtemps, Blues.",
+                "npc": 260001,
+                "next": 12070708
+              },
+              {
+                "id": 12070708,
+                "content": "Tu... m’as beaucoup manqué.",
+                "npc": 260001,
+                "next": 12070709
+              },
+              {
+                "id": 12070709,
+                "content": "Pardonne-moi. Ces derniers mois, j’ai dû beaucoup te décevoir.",
+                "npc": 260001,
+                "next": 12070710
+              },
+              {
+                "id": 12070710,
+                "content": "Tu m’avais demandé de continuer à vivre du mieux que je le pouvais, mais je n’ai fait que me jeter dans le travail pour ne plus rien ressentir. Je ne dormais ni ne mangeais correctement et je courais sans cesse d’un endroit à l’autre.",
+                "npc": 260001,
+                "next": 12070711
+              },
+              {
+                "id": 12070711,
+                "content": "Ce n’est qu’en m’arrêtant enfin que j’ai compris à quel point j’étais épuisée.",
+                "npc": 260001,
+                "next": 12070712
+              },
+              {
+                "id": 12070712,
+                "content": "Ha ha ! Cela ressemble bien à ma grande sœur. Dès que tu te fixes un objectif, tu te donnes corps et âme sans même savoir ce que signifie le mot « repos ».",
+                "npc": 260029,
+                "next": 12070713
+              },
+              {
+                "id": 12070713,
+                "content": "Cela dit, te voir négliger même tes repas et ton sommeil, c’est plutôt inhabituel. Avant, tu prenais toujours tes trois repas à heures fixes et en quantités bien précises. Même tes heures de coucher et de réveil étaient réglées comme une horloge !",
+                "npc": 260029,
+                "next": 12070714
+              },
+              {
+                "id": 12070714,
+                "content": "Mais d’un autre côté, peut-être que cela signifie aussi que tu es devenue un peu moins dure envers toi-même... et que tu t’autorises enfin à ne pas être parfaite.",
+                "npc": 260029,
+                "next": 12070715
+              },
+              {
+                "id": 12070715,
+                "content": "Quoi qu’il arrive, j’ai confiance en toi. Peu importe ce que tu traverses, je sais qu’au bout du compte, tu finiras toujours par aller mieux.",
+                "npc": 260029,
+                "next": 12070716
+              },
+              {
+                "id": 12070716,
+                "content": "Comme lorsque papa et maman nous ont quittés... Nous avons toujours su traverser la douleur et continuer à vivre.",
+                "npc": 260029,
+                "next": 12070717
+              },
+              {
+                "id": 12070717,
+                "content": "Oui... Tu as raison.",
+                "npc": 260001,
+                "next": 12070718
+              },
+              {
+                "id": 12070718,
+                "content": "Je te le promets : je continuerai à vivre du mieux que je peux, et je trouverai un nouveau rêve.",
+                "npc": 260001,
+                "next": 12070719
+              },
+              {
+                "id": 12070719,
+                "content": "Lorsque ce jour viendra, je reviendrai ici pour te le raconter.",
+                "npc": 260001,
+                "next": 12070720
+              },
+              {
+                "id": 12070720,
+                "content": "D’accord ! Alors, c’est promis. Je t’attendrai !",
+                "npc": 260029,
+                "next": 12070722
+              },
+              {
+                "id": 12070722,
+                "content": "« ... Ô neige silencieuse, fille des cieux... Accorde ta bénédiction à l’enfant sans nom... »",
+                "npc": 260001,
+                "next": 12070723
+              },
+              {
+                "id": 12070723,
+                "content": "« Qu’il danse en liesse parmi les flocons légers... et que le vent l’emporte vers le lumineux royaume des cieux. »",
+                "npc": 260001,
+                "next": 12070724
+              },
+              {
+                "id": 12070724,
+                "content": "« ... Et que son cœur pur et resplendissant soit désormais comblé de bonheur. »",
+                "npc": 260001
+              }
+            ]
           }
         ]
       }

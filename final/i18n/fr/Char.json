@@ -18929,7 +18929,7 @@
           },
           {
             "名称": "Dégâts du projectile guidé",
-            "影响": "MultiShoot",
+            "影响": "多重",
             "值": 1,
             "tag": [
               "远程",
