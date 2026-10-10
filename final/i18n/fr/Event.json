@@ -934,7 +934,163 @@
     "desc": "Triomphez d’un cauchemar sans fin — grandissez, puis métamorphosez-vous.\nPendant l’événement, défiez des ennemis d’élite pour recevoir des récompenses.",
     "startTime": 1793584800,
     "endTime": 1795338000,
-    "rule": "<H>Règles de l’événement Cauchemar éternel</>\n1) Pendant l’événement, plusieurs menaces majeures sont disponibles dans Cauchemar éternel. Chaque ennemi propose deux modes : <H>Éternel</> et <H>Extrême</>.\n \n2) En mode <H>Éternel</>, les récompenses fixes obtenues à chaque défi sont limitées par le nombre de <H>récompenses hebdomadaires</>. Ce nombre est partagé entre les modes Éternel des différents ennemis. Une fois toutes les récompenses hebdomadaires utilisées, vous pouvez toujours relever les défis du mode Éternel, mais vous ne recevrez plus de récompenses fixes. Le nombre de récompenses est réinitialisé chaque lundi à 5 h 00 (heure du serveur). Les <H>récompenses de première réussite</> ne sont pas affectées par cette limite.\n \n3) En mode <H>Extrême</>, les récompenses fixes obtenues à chaque défi ne sont pas limitées par le nombre de <H>récompenses hebdomadaires</>. La première réussite permet d’obtenir des récompenses supplémentaires."
+    "rule": "<H>Règles de l’événement Cauchemar éternel</>\n1) Pendant l’événement, plusieurs menaces majeures sont disponibles dans Cauchemar éternel. Chaque ennemi propose deux modes : <H>Éternel</> et <H>Extrême</>.\n \n2) En mode <H>Éternel</>, les récompenses fixes obtenues à chaque défi sont limitées par le nombre de <H>récompenses hebdomadaires</>. Ce nombre est partagé entre les modes Éternel des différents ennemis. Une fois toutes les récompenses hebdomadaires utilisées, vous pouvez toujours relever les défis du mode Éternel, mais vous ne recevrez plus de récompenses fixes. Le nombre de récompenses est réinitialisé chaque lundi à 5 h 00 (heure du serveur). Les <H>récompenses de première réussite</> ne sont pas affectées par cette limite.\n \n3) En mode <H>Extrême</>, les récompenses fixes obtenues à chaque défi ne sont pas limitées par le nombre de <H>récompenses hebdomadaires</>. La première réussite permet d’obtenir des récompenses supplémentaires.",
+    "hardBossEvent": {
+      "weeklyRewards": 20,
+      "period": "Week",
+      "bosses": [
+        {
+          "id": 1,
+          "name": "Sibylle",
+          "desc": "Commandante de la XIIIᵉ Légion de l’Empire Hyperboréen. Ce jour-là, sur l’Île du Purgatoire, son apparition fit vaciller notre avenir et traça pour toujours une route que nul ne pouvait prévoir.",
+          "icon": "T_Permanent_HardBoss_Xibi_S",
+          "monster": [
+            8500801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28001,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800101,
+              "firstReward": 2800102,
+              "buff": 1001
+            },
+            {
+              "dungeonId": 28002,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2800202,
+              "firstReward": 2800201,
+              "buff": 1001,
+              "unlock": [
+                28001
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "L’Éclose",
+          "desc": "Graine oubliée dans la glace, elle a laissé s’éteindre l’espoir d’un doux crépuscule.",
+          "icon": "T_Permanent_HardBoss_Saiqi_S",
+          "monster": [
+            8502801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28003,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800301,
+              "firstReward": 2800302,
+              "buff": 1002
+            },
+            {
+              "dungeonId": 28004,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2800402,
+              "firstReward": 2800401,
+              "buff": 1002,
+              "unlock": [
+                28003
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Geôlière de la fournaise",
+          "desc": "Geôlière de la Prison Militaire Royale : ses chaînes châtient le péché, et ses flammes veillent sur la justice.",
+          "icon": "T_Permanent_HardBoss_Haier_S",
+          "monster": [
+            8505801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28005,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800501,
+              "firstReward": 2800502,
+              "buff": 1001
+            },
+            {
+              "dungeonId": 28006,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2800602,
+              "firstReward": 2800601,
+              "buff": 1001,
+              "unlock": [
+                28005
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Monstre mystérieux",
+          "desc": "Sous un rideau écarlate, le vent glacé entonne la complainte du pays enneigé.",
+          "icon": "T_Permanent_HardBoss_Tuosi_S",
+          "monster": [
+            8509801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28007,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800701,
+              "firstReward": 2800702,
+              "buff": 1002
+            },
+            {
+              "dungeonId": 28008,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2800802,
+              "firstReward": 2800801,
+              "buff": 1002,
+              "unlock": [
+                28007
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "« Le Jugement » Maman Lapin",
+          "desc": "La véritable maîtresse du Paradis et l’architecte de son cauchemar.",
+          "icon": "T_Permanent_HardBoss_Aida_S",
+          "monster": [
+            8520801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28009,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800901,
+              "firstReward": 2800902,
+              "buff": 1002
+            },
+            {
+              "dungeonId": 28010,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2801002,
+              "firstReward": 2801001,
+              "buff": 1002,
+              "unlock": [
+                28009
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "id": 103037,

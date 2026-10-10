@@ -42290,6 +42290,203 @@
                 "npc": 110005
               }
             ]
+          },
+          {
+            "id": "172256678029511031",
+            "type": "TalkNode",
+            "name": "跟伤员A对话",
+            "dialogues": [
+              {
+                "id": 11010401,
+                "content": "Ces ordures... !",
+                "voice": "story/1002/110104/1B9039EA",
+                "npc": 110044,
+                "options": [
+                  {
+                    "id": 11010402,
+                    "content": "<I>Ça va, tu n’es pas trop blessé ?</>",
+                    "next": 11010403,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11010404,
+                    "content": "<I>Je n’ai pas réussi à vous protéger...</>",
+                    "next": 11010405,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11010406,
+                    "content": "<I>Tu en veux à qui ? Qui est-ce que tu insultes ?</>",
+                    "next": 11010407,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 11010403,
+                "content": "Capitaine ! Je vais bien, je peux encore bouger... Hfff—",
+                "voice": "story/1002/110104/1B903A3E",
+                "npc": 110044,
+                "next": 11010408
+              },
+              {
+                "id": 11010405,
+                "content": "Non, Capitaine ! Vous avez fait de votre mieux !",
+                "voice": "story/1002/110104/1B903A92",
+                "npc": 110044,
+                "next": 11010408
+              },
+              {
+                "id": 11010407,
+                "content": "À part ces maudits Déchus, qui d’autre ?",
+                "voice": "story/1002/110104/1B903AE6",
+                "npc": 110044,
+                "next": 11010408
+              },
+              {
+                "id": 11010408,
+                "content": "Ces monstres ont osé utiliser les Souillés comme arme... Les Déchus sont des monstres, tout comme leurs Souillés !",
+                "voice": "story/1002/110104/1B903B10",
+                "npc": 110044,
+                "next": 11010409
+              },
+              {
+                "id": 11010409,
+                "content": "Et les supérieurs ne valent pas mieux, pas un seul mot sur les Souillés dans le manuel de mission !",
+                "voice": "story/1002/110104/1B903B3A",
+                "npc": 110044,
+                "next": 11010410
+              },
+              {
+                "id": 11010410,
+                "content": "... Je suis désolé. Je n’aurais pas dû exprimer ma frustration devant vous, Capitaine.",
+                "voice": "story/1002/110104/1B903B64",
+                "npc": 110044,
+                "next": 11010411
+              },
+              {
+                "id": 11010411,
+                "content": "Ce n’est pas grave. Il vaut mieux laisser libre cours à ses émotions que de rester muet.",
+                "voice": "story/1002/110104/1B903B8E",
+                "npc": 110022,
+                "next": 11010412
+              },
+              {
+                "id": 11010412,
+                "content": "Haha ! Vous savez toujours comment réconforter quelqu’un, Capitaine !",
+                "voice": "story/1002/110104/1B903BB8",
+                "npc": 110044,
+                "next": 11010413
+              },
+              {
+                "id": 11010413,
+                "content": "Heureusement que vous étiez là... sinon on y serait tous passés.",
+                "voice": "story/1002/110104/1B903BE2",
+                "npc": 110044,
+                "next": 11010414
+              },
+              {
+                "id": 11010414,
+                "content": "C’est juste qu’on est trop inexpérimentés. Si le <H>Commandant Avar</> était là... Il aurait trouvé une solution.",
+                "voice": "story/1002/110104/1B903C0C",
+                "npc": 110044
+              }
+            ]
+          },
+          {
+            "id": "1740489491490270304",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 11010501,
+                "content": "Docteur... Docteur Daphne... nous sommes coincés ici, ça sent la fin. Si jamais je ne m’en sors pas ici, pourriez-vous m’enterrer... s’il vous plaît ?",
+                "voice": "story/1002/110105/1B904A52",
+                "npc": 110045,
+                "options": [
+                  {
+                    "id": 11010502,
+                    "content": "<I>Ne parle pas trop, ça pourrait aggraver tes blessures.</>",
+                    "next": 11010503,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11010504,
+                    "content": "<I>Bien, continue à élever la voix pour attirer les Souillés.</>",
+                    "next": 11010505,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 11010503,
+                "content": "Nous n’avons plus d’analgésiques... alors je dois râler un peu pour me sentir mieux.",
+                "voice": "story/1002/110105/1B904AA6",
+                "npc": 110045,
+                "next": 11010506
+              },
+              {
+                "id": 11010505,
+                "content": "<I>Désolée, Capitaine... je me tais. Sans analgésiques, je ne peux que râler un peu pour me sentir mieux.</>",
+                "voice": "story/1002/110105/1B904AFA",
+                "npc": 110045,
+                "next": 11010506
+              },
+              {
+                "id": 11010506,
+                "content": "Tout à l’heure, Docteur Daphne et vous avez couvert notre retraite... elle va bien ?",
+                "voice": "story/1002/110105/1B904B24",
+                "npc": 110045,
+                "next": 11010507
+              },
+              {
+                "id": 11010507,
+                "content": "Elle va bien. C’est elle qui m’a demandé de venir vous voir.",
+                "voice": "story/1002/110105/1B904B4E",
+                "npc": 110022,
+                "next": 11010508
+              },
+              {
+                "id": 11010508,
+                "content": "Tant mieux... Elle, une jeune dame de haute naissance, aurait pu rester tranquillement à l’Académie d’Alchimie, mais non, elle a choisi de se faire muter dans la XIIIᵉ Légion et de subir tout ça. Je ne comprends pas ce qu’elle a dans la tête.",
+                "voice": "story/1002/110105/1B904B78",
+                "npc": 110045,
+                "next": 11010509
+              },
+              {
+                "id": 11010509,
+                "content": "... « Gloire et loyauté éternelles à notre Empereur » ? Ces aristocrates rabâchent toujours la même chose, mais là, coincés dans ce trou, je me demande s’ils ne regrettent pas leur enthousiasme.",
+                "voice": "story/1002/110105/1B904BA2",
+                "npc": 110045,
+                "next": 11010510
+              },
+              {
+                "id": 11010510,
+                "content": "Mais Docteur Daphne est vraiment douée en médecine et parle si gentiment... Capitaine, il faut que vous la protégiez, ne la laissez pas mourir ici.",
+                "voice": "story/1002/110105/1B904BCC",
+                "npc": 110045
+              }
+            ]
           }
         ]
       },
@@ -46206,6 +46403,466 @@
                 "id": 11012468,
                 "content": "Mais quel dommage... je ne suis plus d’humeur à parler.",
                 "voice": "story/1002/110124/1B918CDE",
+                "npc": 110009
+              }
+            ]
+          },
+          {
+            "id": "17361551876042262",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 11012401,
+                "content": "Espèce de folle ! Qu’est-ce qui te fait rire ? Tu trahis {性别2:le|la} capitaine après tout ce {性别2:qu’il|qu’elle} a fait pour toi, et tu n’as pas le moindre remords ?",
+                "voice": "story/1002/110124/1B91820A",
+                "npc": 110015,
+                "next": 11012402
+              },
+              {
+                "id": 11012402,
+                "content": "Des remords... ? Ha ! T’as bu trop de mixtures de ton Académie ? Elles t’ont grillé les neurones ou quoi ?",
+                "voice": "story/1002/110124/1B918234",
+                "npc": 110009,
+                "next": 11012403
+              },
+              {
+                "id": 11012403,
+                "content": "Oh, attends, si, je dois avouer une faute. Pour berner {性别2:ton stupide petit|ta stupide petite} capitaine, j’ai attribué aux Déchus tous les crimes que l’Empire avait commis contre nous. Ah, mes pauvres camarades Déchus, pardonnez-moi ! Voilà mon grand remords !",
+                "voice": "story/1002/110124/1B91825E",
+                "npc": 110009,
+                "next": 11012404
+              },
+              {
+                "id": 11012404,
+                "content": "Toi— !",
+                "voice": "story/1002/110124/1B918288",
+                "npc": 110015,
+                "next": 11012405
+              },
+              {
+                "id": 11012405,
+                "content": "Tiens tiens... mais qui voilà ? {性别2:Mon cher capitaine|Ma chère capitaine} !",
+                "voice": "story/1002/110124/1B9182B2",
+                "npc": 110009,
+                "next": 11012406
+              },
+              {
+                "id": 11012406,
+                "content": "Je vais m’en charger.",
+                "voice": "story/1002/110124/1B9182DC",
+                "npc": 110022,
+                "next": 11012407
+              },
+              {
+                "id": 11012407,
+                "content": "Alors, qu’est-ce que tu veux de moi ? Me faire la leçon, montrer à quel point les officiers hyperboréens savent pardonner ? Ou peut-être que tu as pitié de cette pauvre fille qui a été « égarée » et que tu essaies de me sauver de mes « péchés » ?",
+                "voice": "story/1002/110124/1B918306",
+                "npc": 110009,
+                "next": 11012408
+              },
+              {
+                "id": 11012408,
+                "content": "Oh ! J’ai compris, tu veux rejoindre les Déchus, pas vrai ? Besoin d’une recommandation ?",
+                "voice": "story/1002/110124/1B918330",
+                "npc": 110009,
+                "next": 11012409
+              },
+              {
+                "id": 11012409,
+                "content": "Hé, vous avez entendu ? {性别2:Votre cher|Votre chère} capitaine veut devenir {性别2:un|une} des nôtres !",
+                "voice": "story/1002/110124/1B91835A",
+                "npc": 110009,
+                "options": [
+                  {
+                    "id": 11012410,
+                    "content": "<I>Inutile de crier, personne ne t’écoutera.</>",
+                    "next": 11012411,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11012412,
+                    "content": "<I>Oui, je suis {性别2:intéressé|intéressée}. Alors, qui est ton contact ?</>",
+                    "next": 11012413,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11012414,
+                    "content": "<I>Tu as eu de nombreuses occasions de tendre une embuscade. Pourquoi avoir attendu ?</>",
+                    "next": 11012415,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11012417,
+                    "content": "<I>Donner un coup de poing en pleine figure pour la faire taire</>",
+                    "next": 11012418,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 11012411,
+                "content": "Oh non... Quelle tristesse... Bouhouhou...",
+                "voice": "story/1002/110124/1B9183AE",
+                "npc": 110009,
+                "next": 11012419
+              },
+              {
+                "id": 11012413,
+                "content": "{性别2:Mon chéri|Ma chérie}, t’es vraiment nul à ce petit jeu-là. Oublie ça, tu n’auras rien de moi. Trahir ses camarades et vendre des infos à l’ennemi, ça n’existe que dans VOTRE Légion.",
+                "voice": "story/1002/110124/1B918402",
+                "npc": 110009,
+                "next": 11012419
+              },
+              {
+                "id": 11012415,
+                "content": "Parce que tu es toujours sur tes gardes. Même en tête-à-tête, je n’avais pas d’ouverture. Alors j’ai attendu. J’ai même joué les alliées pour gagner ta confiance, jusqu’à ce que tu baisses enfin la garde.",
+                "voice": "story/1002/110124/1B918456",
+                "npc": 110009,
+                "next": 11012416
+              },
+              {
+                "id": 11012418,
+                "content": "Aïe ! Mais {性别2:arrêtez-le|arrêtez-la} ! Un soldat armé qui frappe une pauvre fille sans défense !",
+                "voice": "story/1002/110124/1B9184D4",
+                "npc": 110009,
+                "next": 11012419
+              },
+              {
+                "id": 11012419,
+                "content": "Tu...",
+                "voice": "story/1002/110124/1B9184FE",
+                "npc": 110022,
+                "next": 11012420
+              },
+              {
+                "id": 11012416,
+                "content": "Et puis, c’est bien plus amusant comme ça ! La trahison d’un proche, ça fait bien plus mal qu’un coup de couteau d’un inconnu, tu ne trouves pas ?",
+                "voice": "story/1002/110124/1B918480",
+                "npc": 110009,
+                "next": 11012419
+              },
+              {
+                "id": 11012420,
+                "content": "Quoi, tu fais les gros yeux comme un taureau furieux ? Oh pardon, {性别2:mon|ma} capitaine, j’avais oublié, tu préfères quand je parle comme ça, pas vrai ?",
+                "voice": "story/1002/110124/1B918528",
+                "npc": 110009,
+                "next": 11012421
+              },
+              {
+                "id": 11012421,
+                "content": "... Assez. Arrête de faire semblant et réponds à ma question.",
+                "voice": "story/1002/110124/1B918552",
+                "npc": 110022,
+                "next": 11012422
+              },
+              {
+                "id": 11012422,
+                "content": "D’accord, d’accord ! Demande toujours... mais je répondrai seulement si l’envie me prend.",
+                "voice": "story/1002/110124/1B91857C",
+                "npc": 110009,
+                "next": 11012423
+              },
+              {
+                "id": 11012423,
+                "content": "Après tout ça, j’ai bien droit à une explication. Tu voulais frapper la Légion Hyperboréenne ? Ou bien c’était moi que tu visais ?",
+                "voice": "story/1002/110124/1B9185A6",
+                "npc": 110022,
+                "next": 11012424
+              },
+              {
+                "id": 11012424,
+                "content": "Ah, ça ! Très bien, je vais te dire, considère ça comme un petit cadeau pour m’avoir bien divertie.",
+                "voice": "story/1002/110124/1B9185D0",
+                "npc": 110009,
+                "next": 11012425
+              },
+              {
+                "id": 11012425,
+                "content": "Les Déchus veulent voir crever tous les chiens d’Hyperborea... et de préférence massacrés par leurs propres joujoux de guerre. Notre cadeau enflammé t’a plu ?",
+                "voice": "story/1002/110124/1B9185FA",
+                "npc": 110009,
+                "next": 11012426
+              },
+              {
+                "id": 11012426,
+                "content": "Quant à moi... Évidemment, je suis venue pour <H>toi</> !",
+                "voice": "story/1002/110124/1B918624",
+                "npc": 110009,
+                "next": 11012427
+              },
+              {
+                "id": 11012427,
+                "content": "On m’a dit que {性别2:le meilleur élève|la meilleure élève} de l’École Militaire Impériale {性别2:le fameux Faucheur Pâle|la fameuse Faucheuse Pâle}, était posté à la Forteresse de Lonza. Comment aurais-je pu rater ça, {性别2:mon cher|ma chère} ?",
+                "voice": "story/1002/110124/1B91864E",
+                "npc": 110009,
+                "next": 11012428
+              },
+              {
+                "id": 11012428,
+                "content": "Tu as entendu parler de moi ? On s’est déjà rencontrés ?",
+                "voice": "story/1002/110124/1B918678",
+                "npc": 110022,
+                "next": 11012429
+              },
+              {
+                "id": 11012429,
+                "content": "Hihi... devine !",
+                "voice": "story/1002/110124/1B9186A2",
+                "npc": 110009,
+                "next": 11012430
+              },
+              {
+                "id": 11012430,
+                "content": "D’après mes sources, notre {性别2:grand Faucheur Pâle|grande Faucheuse Pâle} n’a que quelques années de souvenirs. Tu ignores tout de ton passé... même l’endroit d’où tu viens.",
+                "voice": "story/1002/110124/1B9186CC",
+                "npc": 110009,
+                "next": 11012431
+              },
+              {
+                "id": 11012431,
+                "content": "...",
+                "voice": "story/1002/110124/1B9186F6",
+                "npc": 110022,
+                "next": 11012432
+              },
+              {
+                "id": 11012432,
+                "content": "Allez, jouons ! Devine, suis-je ta voisine d’enfance ? Ton ennemie jurée ? Ou bien...",
+                "voice": "story/1002/110124/1B918720",
+                "npc": 110009,
+                "next": 11012433
+              },
+              {
+                "id": 11012433,
+                "content": "Une parfaite inconnue qui te hait juste parce qu’Hyperborea t’adule... et qui veut briser tout ce que ton peuple chérit ?",
+                "voice": "story/1002/110124/1B91874A",
+                "npc": 110009,
+                "next": 11012434
+              },
+              {
+                "id": 11012434,
+                "content": "...",
+                "voice": "story/1002/110124/1B918774",
+                "npc": 110022,
+                "next": 11012435
+              },
+              {
+                "id": 11012435,
+                "content": "<W>Ta tête te fait mal, pas vrai ? Écoute... Les paroles de cette folle grouillent dans ton crâne comme des sangsues affamées, rongeant ton crâne, suçotant ta cervelle.</>",
+                "voice": "story/1002/110124/1B91879E",
+                "speakerName": "???",
+                "next": 11012436
+              },
+              {
+                "id": 11012436,
+                "content": "<W>Regarde. Dans ta main, ton épée... oui, ta fidèle lame. La garde est encore tiède de ta paume. Tu connais par cœur la sensation, la chair qui cède, la résistance infime quand l’acier s’enfonce.</>",
+                "voice": "story/1002/110124/1B9187C8",
+                "speakerName": "???",
+                "next": 11012437
+              },
+              {
+                "id": 11012437,
+                "content": "<W>Un geste, et tu pourrais lui trancher la gorge. Sa bouche immonde ne vomirait plus que des gargouillis de douleur.</>",
+                "voice": "story/1002/110124/1B9187F2",
+                "speakerName": "???",
+                "next": 11012438
+              },
+              {
+                "id": 11012438,
+                "content": "<I>Encore... cette voix ! Pourquoi maintenant...</>",
+                "voice": "story/1002/110124/1B91881C",
+                "npc": 110022,
+                "options": [
+                  {
+                    "id": 11012439,
+                    "content": "<I>Essayer de résister à la voix</>",
+                    "next": 11012451
+                  },
+                  {
+                    "id": 11012440,
+                    "content": "<I>Suivre la voix et poser la main sur l’épée</>",
+                    "next": 11012441
+                  }
+                ]
+              },
+              {
+                "id": 11012451,
+                "content": "ASSEZ ! Ferme-la !",
+                "voice": "story/1002/110124/1B918A3E",
+                "npc": 110022,
+                "next": 11012452
+              },
+              {
+                "id": 11012441,
+                "content": "Pourquoi tu te tais ? Tu faisais {性别2:le beau donneur|la belle donneuse} de leçons tout à l’heure. T’as perdu ta langue, {性别2:mon chéri|ma chérie} ?",
+                "voice": "story/1002/110124/1B91889A",
+                "npc": 110009,
+                "next": 11012442
+              },
+              {
+                "id": 11012452,
+                "content": "... Très bien, très bien, pas la peine de hurler comme ça.",
+                "voice": "story/1002/110124/1B918A68",
+                "npc": 110009,
+                "next": 11012453
+              },
+              {
+                "id": 11012442,
+                "content": "<W>Je suis ton plus ancien instinct, l’élan qui sommeille en toi. Ne me rejette pas. C’est moi qui t’ai donné ta force, celle qui t’a rendu invincible au combat.</>",
+                "voice": "story/1002/110124/1B9188C4",
+                "speakerName": "???",
+                "next": 11012443
+              },
+              {
+                "id": 11012453,
+                "content": "... Leon, surveille-la. Ramène-la entière, qu’elle ne s’amuse pas à se donner la mort. Si nécessaire, utilise Frank comme moyen de pression.",
+                "voice": "story/1002/110124/1B918A92",
+                "npc": 110022,
+                "next": 11012454
+              },
+              {
+                "id": 11012443,
+                "content": "<W>Sors ton épée. Cette lame acérée qui n’attend que ça.</>",
+                "voice": "story/1002/110124/1B9188EE",
+                "speakerName": "???",
+                "options": [
+                  {
+                    "id": 11012444,
+                    "content": "<I>Essayer de résister à la voix</>",
+                    "next": 11012451
+                  },
+                  {
+                    "id": 11012445,
+                    "content": "<I>Suivre la voix et tirer l’épée</>",
+                    "next": 11012446
+                  }
+                ]
+              },
+              {
+                "id": 11012454,
+                "content": "À vos ordres !",
+                "voice": "story/1002/110124/1B918ABC",
+                "npc": 110015,
+                "next": 11012455
+              },
+              {
+                "id": 11012446,
+                "content": "Allez, devine encore ! Même si tu tombes juste, je ne te révélerai pas la vérité de toute façon !",
+                "voice": "story/1002/110124/1B91896C",
+                "npc": 110009,
+                "next": 11012447
+              },
+              {
+                "id": 11012455,
+                "content": "Attends !",
+                "voice": "story/1002/110124/1B918AE6",
+                "npc": 110009,
+                "next": 11012456
+              },
+              {
+                "id": 11012447,
+                "content": "<W>Ne tergiverse plus ! Ton épée t’appelle ! Elle réclame la douce ivresse que seule la chair et le sang peuvent lui offrir.</>",
+                "voice": "story/1002/110124/1B918996",
+                "speakerName": "???",
+                "next": 11012448
+              },
+              {
+                "id": 11012456,
+                "content": "Tu te souviens, en chemin vers la tourelle, je t’avais dit : « Votre bonté ne sera pas oubliée. »",
+                "voice": "story/1002/110124/1B918B10",
+                "npc": 110009,
+                "next": 11012457
+              },
+              {
+                "id": 11012448,
+                "content": "<W>Dépêche-toi ! Fais-la taire à jamais !</>",
+                "voice": "story/1002/110124/1B9189C0",
+                "speakerName": "???",
+                "options": [
+                  {
+                    "id": 11012449,
+                    "content": "<I>Essayer de résister à la voix</>",
+                    "next": 11012451
+                  },
+                  {
+                    "id": 11012450,
+                    "content": "<I>Suivre la voix et frapper</>"
+                  }
+                ]
+              },
+              {
+                "id": 11012457,
+                "content": "Approche, j’ai un secret, rien que pour toi. Rassure-toi, vous m’avez fouillée, je n’ai plus la moindre arme.",
+                "voice": "story/1002/110124/1B918B3A",
+                "npc": 110009,
+                "next": 11012458
+              },
+              {
+                "id": 11012458,
+                "content": "Ça pourrait vraiment compter pour toi... Tu es {性别2:sûr|sûre} de ne pas vouloir savoir ?",
+                "voice": "story/1002/110124/1B918B64",
+                "npc": 110009,
+                "options": [
+                  {
+                    "id": 11012462,
+                    "content": "<I>Écouter</>",
+                    "next": 11012464
+                  },
+                  {
+                    "id": 11012459,
+                    "content": "<I>Refuser d’écouter</>",
+                    "next": 11012460
+                  }
+                ]
+              },
+              {
+                "id": 11012464,
+                "content": "<W>Quelqu’un veut ta mort... et il se cache parmi les tiens, dans la Légion.</>",
+                "voice": "story/1002/110124/1B918C36",
+                "npc": 110009,
+                "next": 11012465
+              },
+              {
+                "id": 11012460,
+                "content": "Leon, fais-la taire.",
+                "voice": "story/1002/110124/1B918BB8",
+                "npc": 110022,
+                "next": 11012461
+              },
+              {
+                "id": 11012465,
+                "content": "Qu’est-ce que tu viens de dire ?",
+                "voice": "story/1002/110124/1B918C60",
+                "npc": 110022,
+                "next": 11012466
+              },
+              {
+                "id": 11012461,
+                "content": "Hihi, très bien. J’espère seulement que tu ne regretteras pas ton choix.",
+                "voice": "story/1002/110124/1B918BE2",
+                "npc": 110009
+              },
+              {
+                "id": 11012466,
+                "content": "Les secrets ne se chuchotent qu’une fois. Hihi... bon voyage, {性别2:mon|ma} capitaine.",
+                "voice": "story/1002/110124/1B918C8A",
                 "npc": 110009
               }
             ]
@@ -118072,6 +118729,81 @@
                 "npc": 100001
               }
             ]
+          },
+          {
+            "id": "1716276373413143406",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51000433,
+                "content": "Merci, noble âme. Sans vous, j’étais perdue... Les malades de Vivar m’attendent encore.",
+                "npc": 700235,
+                "next": 51000434
+              },
+              {
+                "id": 51000434,
+                "content": "Vous êtes médecin ? Seriez-vous la Docteur Eleanor ?",
+                "npc": 100001,
+                "next": 51000435
+              },
+              {
+                "id": 51000435,
+                "content": "C’est bien moi... Vous me cherchiez ?",
+                "npc": 700235,
+                "next": 51000436
+              },
+              {
+                "id": 51000436,
+                "content": "On m’a dit que vous aviez secouru une jeune fille, dans les montagnes au nord.",
+                "npc": 100001,
+                "next": 51000437
+              },
+              {
+                "id": 51000437,
+                "content": "Ah, oui. Vous l’avez donc croisée à Givrelac ? Comment va-t-elle ?",
+                "npc": 700235,
+                "next": 51000438
+              },
+              {
+                "id": 51000438,
+                "content": "Elle semble en bonne santé... mais elle a tout oublié. Dites-moi, avait-elle quelque chose avec elle quand vous l’avez trouvée ? Un objet, peut-être lié à son identité ?",
+                "npc": 100001,
+                "next": 51000439
+              },
+              {
+                "id": 51000439,
+                "content": "En effet. J’avais l’intention de chercher sa famille quand j’aurai terminé ma tournée auprès des malades... Si vous acceptez de m’aider, ce serait une bénédiction.",
+                "npc": 700235,
+                "next": 51000440
+              },
+              {
+                "id": 51000440,
+                "content": "Tenez. C’est ce qu’elle portait sur elle.",
+                "npc": 700235,
+                "next": 51000441
+              },
+              {
+                "id": 51000441,
+                "content": "Je dois y aller. Encore merci pour m’avoir sauvé la vie.",
+                "npc": 700235,
+                "next": 51000443
+              },
+              {
+                "id": 51000443,
+                "content": "<I>Si ce journal dit vrai... alors tout est enfin clair.</>",
+                "next": 51000444
+              },
+              {
+                "id": 51000444,
+                "content": "<I>Et par la même occasion, le mystère entourant la fille d’Elsa trouve sa réponse...</>",
+                "next": 51000445
+              },
+              {
+                "id": 51000445,
+                "content": "<I>Annie est morte dans la tempête. Mais l’autre survivante, Alice, a hérité de ses vêtements. Elle a survécu aux montagnes, mais les fortes fièvres successives lui ont fait perdre la mémoire.</>"
+              }
+            ]
           }
         ]
       },
@@ -118224,6 +118956,76 @@
                 "content": "Alice serre le manteau contre elle, douce relique du sacrifice d’une amie. Tu la quittes, décidé à annoncer la vérité à Elsa.",
                 "npc": 700032,
                 "speakerName": "Alice"
+              }
+            ]
+          },
+          {
+            "id": "1704175978756175619",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51000501,
+                "content": "Je compte sur toi...",
+                "npc": 700006,
+                "options": [
+                  {
+                    "id": 510005011,
+                    "content": "<I>Elsa, j’ai des nouvelles d’Annie...</>",
+                    "next": 51000502
+                  }
+                ]
+              },
+              {
+                "id": 51000502,
+                "content": "Par tous les saints ! Tu as retrouvé Annie ?",
+                "npc": 700006,
+                "options": [
+                  {
+                    "id": 510005021,
+                    "content": "Je suis {性别:navré|navrée}... Annie n’est plus de ce monde. Dans ses derniers instants, elle a sauvé une autre jeune fille. Sa bonté mérite d’être honorée et jamais oubliée.",
+                    "next": 51000503
+                  }
+                ]
+              },
+              {
+                "id": 51000503,
+                "content": "...",
+                "npc": 700006,
+                "next": 51000504
+              },
+              {
+                "id": 51000504,
+                "content": "Mensonges... Des mensonges, encore des mensonges !",
+                "npc": 700006,
+                "next": 51000591
+              },
+              {
+                "id": 51000591,
+                "content": "Ma douce Annie... elle était si obéissante, si tendre... Jamais elle n’aurait abandonné sa mère ! Tu mens, sale {性别:menteur|menteuse} !",
+                "npc": 700006,
+                "next": 51000590
+              },
+              {
+                "id": 51000590,
+                "content": "J’ai été une mauvaise mère... Me voilà à attendre bêtement les bras croisés, à supplier les autres d’agir à ma place. Ma Annie a dû m’attendre si longtemps. Peu importe... je pars la retrouver, je pars la chercher moi-même...",
+                "npc": 700006,
+                "next": 51000505
+              },
+              {
+                "id": 51000505,
+                "content": "Dis-moi, comment une enfant pourrait-elle survivre sans sa mère...",
+                "npc": 700006,
+                "next": 51000506
+              },
+              {
+                "id": 51000506,
+                "content": "Elsa glisse une bourse dans tes bras, puis s’éloigne d’une démarche vacillante. Des larmes et un sourire tordu se mêlent sur son visage émacié, avant que sa silhouette ne disparaisse dans la brume",
+                "next": 51000507
+              },
+              {
+                "id": 51000507,
+                "content": "Un mensonge bienveillant n’apporte qu’un répit illusoire. Seule la vérité peut être affrontée. Le temps est le plus doux des remèdes... peut-être qu’un jour, elle guérira."
               }
             ]
           }
@@ -118456,6 +119258,115 @@
                 "npc": 700233
               }
             ]
+          },
+          {
+            "id": "1704175978764175755",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51000701,
+                "content": "...",
+                "npc": 700032,
+                "options": [
+                  {
+                    "id": 510007011,
+                    "content": "<I>Tu traînes ici depuis longtemps ? Je peux t’aider en quoi que ce soit ?</>",
+                    "next": 51000702
+                  }
+                ]
+              },
+              {
+                "id": 51000702,
+                "content": "Je... j’ai la tête embrumée. Honnêtement, je ne sais pas qui je suis, ni où je me trouve...",
+                "npc": 700032,
+                "next": 51000703
+              },
+              {
+                "id": 51000703,
+                "content": "Une médecin bienveillante m’a ramenée des montagnes au nord. Elle a dit que j’avais eu une forte fièvre qui m’a endommagé le cerveau, et que c’est pour ça que j’ai perdu la mémoire...",
+                "npc": 700032,
+                "options": [
+                  {
+                    "id": 510007031,
+                    "content": "<I>Je comprends ta confusion, perdre son identité est terrible.</>",
+                    "next": 51000705,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510007032,
+                    "content": "<I>Rester dehors n’est pas sûr. Il vaut mieux découvrir ta véritable identité rapidement.</>",
+                    "next": 51000705,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510007033,
+                    "content": "<I>Ce que l’on voit n’est pas toujours la vérité. Il faut enquêter avant de tirer des conclusions.</>",
+                    "next": 51000705,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51000705,
+                "content": "Ces derniers jours, je me souviens seulement de la tempête de neige dans laquelle j’avançais péniblement... Maintenant, je viens juste de me remettre de ma maladie, je ne peux même pas sortir de la cité. Peux-tu m’aider à enquêter ?",
+                "npc": 700032,
+                "options": [
+                  {
+                    "id": 510007051,
+                    "content": "<I>Accepter</>",
+                    "next": 51000706
+                  },
+                  {
+                    "id": 51000002,
+                    "content": "Refuser"
+                  }
+                ]
+              },
+              {
+                "id": 51000706,
+                "content": "À part la médecin qui m’a sauvée, tu es {性别:le seul|la seule} à tendre la main à une fille sans le sou comme moi. Je ne sais quoi dire d’autre... merci...",
+                "npc": 700032,
+                "next": 51000790
+              },
+              {
+                "id": 51000790,
+                "content": "Tiens, j’ai trouvé cette lettre dans ma poche. Je n’ai aucun souvenir de cette lettre... mais peut-être que c’est un indice utile ?",
+                "npc": 700032,
+                "next": 51000791
+              },
+              {
+                "id": 51000791,
+                "content": "Les indices commencent à se relier : Madame Elsa, qui cherche sa fille à la limite de la folie, et cette jeune fille amnésique... sans oublier la lettre apparemment adressée à une mère.",
+                "next": 51000792
+              },
+              {
+                "id": 51000792,
+                "content": "Tu supposes que la jeune fille amnésique pourrait être la fille disparue d’Elsa, Annie.",
+                "next": 51000793
+              },
+              {
+                "id": 51000793,
+                "content": "Tu devrais l’emmener voir Elsa pour confirmation. Mais Elsa prend chaque jeune passant pour Annie... Mieux vaut d’abord collecter plus de preuves.",
+                "next": 51000794
+              },
+              {
+                "id": 51000794,
+                "content": "Pour découvrir l’histoire de la jeune fille, il faudra retrouver la médecin qui l’a sauvée."
+              }
+            ]
           }
         ]
       },
@@ -118576,7 +119487,264 @@
       {
         "id": 20020403,
         "name": "Accomplir une mission de Chasseur de Phoxène\n(via l’interface des missions)",
-        "desc": "Vous avez accepté l’invitation de Wells.\nPréparez-vous et partez avec lui pour cette mission."
+        "desc": "Vous avez accepté l’invitation de Wells.\nPréparez-vous et partez avec lui pour cette mission.",
+        "nodes": [
+          {
+            "id": "1700739319090214464",
+            "type": "TalkNode",
+            "name": "check",
+            "dialogues": [
+              {
+                "id": 51001901,
+                "content": "Avant même d’entrer aux Asphodèles, tu entends déjà des jurons résonner à travers la salle, comme si toute la cité devait entendre sa colère.",
+                "next": 51001902
+              },
+              {
+                "id": 51001902,
+                "content": "Tu as encore le culot de montrer ta tête ! J’ai été si stupide... j’aurais dû faire plus que te chasser !",
+                "npc": 700047,
+                "next": 51001903
+              },
+              {
+                "id": 51001903,
+                "content": "Tu parades avec notre nom depuis des années... et mes lettres de mise en garde ? Tu les as brûlées ?",
+                "npc": 700047,
+                "next": 51001904
+              },
+              {
+                "id": 51001904,
+                "content": "Oui, oui... vous avez raison, mais ce nom, après tout, c’est ce que vous...",
+                "npc": 200015,
+                "next": 51001905
+              },
+              {
+                "id": 51001905,
+                "content": "Wells, tête baissée comme un enfant puni, reste immobile tandis que l’homme le pointe du doigt.",
+                "next": 51001906
+              },
+              {
+                "id": 51001906,
+                "content": "Ferme-la ! Tu n’as aucun talent et tu prétends être un Chasseur de Phoxène ? L’argent et la renommée ? Tu ne les mérites pas ! Tu cours partout comme un chien... maintenant toute la cité intérieure prend les Wells pour une blague !",
+                "npc": 700047,
+                "next": 51001907
+              },
+              {
+                "id": 51001907,
+                "content": "Je pensais juste... si je réussis un jour, peut-être que vous reverrez votre jugement sur Sara et moi...",
+                "npc": 200015,
+                "next": 51001908
+              },
+              {
+                "id": 51001908,
+                "content": "Comment oses-tu prononcer son nom ! Oublie-la ! Toi et ma fille, il n’y aura jamais de retour possible ! Jamais !",
+                "npc": 700047,
+                "next": 51001909
+              },
+              {
+                "id": 51001909,
+                "content": "Et ne dis pas que je ne t’ai pas prévenu : si tu poses un pied dans la cité intérieure, je te brise les jambes.",
+                "npc": 700047,
+                "next": 51001910
+              },
+              {
+                "id": 51001910,
+                "content": "Oui, oui...",
+                "npc": 200015,
+                "next": 51001911
+              },
+              {
+                "id": 51001911,
+                "content": "L’homme, voyant Wells hocher la tête sans fin, devient encore plus furieux. Son regard se pose finalement sur toi qui vient d’entrer dans les Asphodèles.",
+                "next": 51001912
+              },
+              {
+                "id": 51001912,
+                "content": "Et toi, Charon ? J’en ai vu des comme toi, rêvant de gloire en tant que Chasseur de Phoxène, pour ensuite espérer devenir un Charon Couronné...",
+                "npc": 700047,
+                "next": 51001990
+              },
+              {
+                "id": 51001990,
+                "content": "Laisse-moi te dire quelque chose. <H>Givrelac n’a pas eu beaucoup de Charons Couronnés vivants depuis des années.</> Les Charons finissent seulement par pourrir dans une ruelle sombre !",
+                "npc": 700047,
+                "next": 51001913
+              },
+              {
+                "id": 51001913,
+                "content": "Vous avez raison... mais {nickname} est vraiment capable, pas comme moi...",
+                "npc": 200015,
+                "next": 51001914
+              },
+              {
+                "id": 51001914,
+                "content": "Ferdinand Wells, ce qui s’est passé entre vous deux ne me regarde pas. Mais si vous continuez à déranger nos invités pour rien, je devrai vous faire sortir.",
+                "npc": 200003,
+                "next": 51001915
+              },
+              {
+                "id": 51001915,
+                "content": "Camilla, assise derrière le comptoir, souffle un anneau de fumée. Ses paroles désinvoltes résonnent pourtant avec force dans la salle vide.",
+                "next": 51001991
+              },
+              {
+                "id": 51001991,
+                "content": "On a l’impression que la température de la pièce monte légèrement à cause de la fumée.",
+                "options": [
+                  {
+                    "id": 510019911,
+                    "content": "<I>Wells n’est pas aussi mauvais que vous le dites. Vous allez trop loin.</>",
+                    "next": 51001918,
+                    "imprCheck": [
+                      1011,
+                      "Empathy",
+                      70
+                    ]
+                  },
+                  {
+                    "id": 510019912,
+                    "content": "<I>Nous n’avons aucun intérêt à devenir des Charons Couronnés. Ne jugez pas tout le monde selon vos idées superficielles.</>",
+                    "next": 51001918,
+                    "imprCheck": [
+                      1011,
+                      "Benefit",
+                      80
+                    ]
+                  },
+                  {
+                    "id": 510019913,
+                    "content": "<I>Surveille ton langage. Sinon, un autre « Monsieur Wells » risque de prendre une sacrée raclée aujourd’hui.</>",
+                    "next": 51001918,
+                    "imprCheck": [
+                      1011,
+                      "Chaos",
+                      75
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51001918,
+                "content": "<I>... Hmpf.</>",
+                "npc": 700047,
+                "next": 51001919
+              },
+              {
+                "id": 51001919,
+                "content": "L’homme, réduit au silence par tes paroles, jette un dernier regard noir et sort en claquant la porte.",
+                "next": 51001920
+              },
+              {
+                "id": 51001920,
+                "content": "Désolé pour tout ce remue-ménage... Mon beau-père... Monsieur Ferdinand Wells n’était pas venu dans la cité extérieure depuis des années.",
+                "npc": 200015,
+                "next": 51001992
+              },
+              {
+                "id": 51001992,
+                "content": "Il est un peu... attaché aux traditions. Ne prends pas ses paroles trop à cœur.",
+                "npc": 200015,
+                "next": 51001921
+              },
+              {
+                "id": 51001921,
+                "content": "Pas grave. Si quelques insultes pouvaient nous abattre, nous ne serions pas ici. On m’a dit que vous aviez été blessé pendant une mission. Ça va ?",
+                "npc": 100001,
+                "next": 51001922
+              },
+              {
+                "id": 51001922,
+                "content": "Ce n’est rien. Heureusement, cette montre m’a protégé d’une blessure mortelle.",
+                "npc": 200015,
+                "next": 51001923
+              },
+              {
+                "id": 51001923,
+                "content": "Wells sort une montre de poche finement travaillée, le cadran fissuré, les aiguilles tordues de façon exagérée, au point qu’il est devenu impossible de refermer le boîtier.",
+                "options": [
+                  {
+                    "id": 510019231,
+                    "content": "<I>La forme de ces fissures... je comprends. Elle vous a protégé d’un coup fatal.</>",
+                    "next": 51001924,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510019232,
+                    "content": "... Monsieur Wells, peu importe les épreuves, vous ne devriez pas voler la montre de quelqu’un d’autre.",
+                    "next": 51001924,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51001924,
+                "content": "Il l’a faite lui-même. Il y a dix ans, tout le monde connaissait Todd Wells, le prodige horloger. Il était presque devenu un Charon Couronné grâce à son talent.",
+                "npc": 200003,
+                "next": 51001925
+              },
+              {
+                "id": 51001925,
+                "content": "Une pièce magnifique... dommage qu’elle soit cassée.",
+                "npc": 100001,
+                "next": 51001926
+              },
+              {
+                "id": 51001926,
+                "content": "Haha, oui, mais les aiguilles étaient déjà cassées depuis longtemps. Je la garde juste comme souvenir.",
+                "npc": 200015,
+                "next": 51001927
+              },
+              {
+                "id": 51001927,
+                "content": "Pourquoi ne pas essayer de la réparer ?",
+                "npc": 100001,
+                "next": 51001928
+              },
+              {
+                "id": 51001928,
+                "content": "Mon beau-père a coupé l’accès aux outils et matériaux, impossible de la réparer.",
+                "npc": 200015,
+                "next": 51001929
+              },
+              {
+                "id": 51001929,
+                "content": "... Tout ne se répare pas juste parce qu’on veut et qu’on y met de la force.",
+                "npc": 200015,
+                "next": 51001930
+              },
+              {
+                "id": 51001930,
+                "content": "...",
+                "npc": 100001,
+                "next": 51001931
+              },
+              {
+                "id": 51001931,
+                "content": "Bref, merci d’être intervenu. Sans toi, mes oreilles n’y auraient pas résisté.",
+                "npc": 200015,
+                "next": 51001932
+              },
+              {
+                "id": 51001932,
+                "content": "Allez, ce soir c’est moi qui régale. Tu ouvres ces fûts là-bas, je m’occupe de ceux-ci !",
+                "npc": 200015,
+                "next": 51001934
+              },
+              {
+                "id": 51001934,
+                "content": "...",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 20020404,
@@ -119102,6 +120270,48 @@
                 "npc": 100001
               }
             ]
+          },
+          {
+            "id": "170184691563634954",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51002201,
+                "content": "Amis de passage ! Pour quelques pièces, rejoignez l’Association des pêcheurs de Givrelac et profitez de conseils de maîtres avec des décennies d’expérience— Ah ! C’est toi...",
+                "npc": 700048,
+                "next": 51002202
+              },
+              {
+                "id": 51002202,
+                "content": "Ceci devrait t’appartenir, non ?",
+                "npc": 100001,
+                "next": 51002203
+              },
+              {
+                "id": 51002203,
+                "content": "Ah ! ... Oui ! C’est bien ce vieux livre que je lisais sans cesse étant enfant. C’est en feuilletant ces pages que j’ai rêvé de quitter notre îlot minuscule...",
+                "npc": 700048,
+                "next": 51002204
+              },
+              {
+                "id": 51002204,
+                "content": "Merci. Merci infiniment. Ce soir, je vais le relire d’un bout à l’autre. Mais pour l’instant... <I>soupir,</> il faut bien continuer à gagner sa croûte.",
+                "npc": 700048,
+                "next": 51002205
+              },
+              {
+                "id": 51002205,
+                "content": "Prends soin de toi. Et évite d’arnaquer les gens, d’accord ? Tiens, prends aussi ça, du poisson séché de l’Île du Purgatoire.",
+                "npc": 100001,
+                "next": 51002206
+              },
+              {
+                "id": 51002206,
+                "content": "... Oh. Merci. Merci du fond du cœur...",
+                "npc": 700048
+              }
+            ]
           }
         ]
       },
@@ -119248,6 +120458,100 @@
               {
                 "id": 51002911,
                 "content": "Ne sois pas déçu. À Givrelac, pas plus de cinq personnes comprennent un mot de ses délires.",
+                "npc": 200003
+              }
+            ]
+          },
+          {
+            "id": "17471183338781300",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51002901,
+                "content": "Un homme à la voix puissante tient l’assemblée captive. Ses récitations théâtrales arrachent des rires aux habitués.",
+                "next": 51002902
+              },
+              {
+                "id": 51002902,
+                "content": "Des spectres surgis des montagnes profondes ! Des fantômes échappés du lac de glace lui-même !",
+                "npc": 700015,
+                "next": 51002903
+              },
+              {
+                "id": 51002903,
+                "content": "Ils approchent ! Ils se rapprochent !",
+                "npc": 700015,
+                "next": 51002904
+              },
+              {
+                "id": 51002904,
+                "content": "Ah, te voilà.",
+                "npc": 200003,
+                "options": [
+                  {
+                    "id": 510029041,
+                    "content": "<I>Comme convenu, me revoilà.</>",
+                    "next": 51002905
+                  }
+                ]
+              },
+              {
+                "id": 51002905,
+                "content": "Pour le moment, je n’ai pas de contrat officiel pour toi, mais...",
+                "npc": 200003,
+                "next": 51002906
+              },
+              {
+                "id": 51002906,
+                "content": "... Vous ne pouvez pas imaginer !",
+                "npc": 700015,
+                "next": 51002907
+              },
+              {
+                "id": 51002907,
+                "content": "Un spectre ! Une ombre muette qui traverse les portes comme si elles n’existaient pas !",
+                "npc": 700015,
+                "next": 51002908
+              },
+              {
+                "id": 51002908,
+                "content": "Comme tu peux l’entendre, il y en a toujours un qui se met dans de beaux draps...",
+                "npc": 200003,
+                "options": [
+                  {
+                    "id": 510029081,
+                    "content": "<I>Qui est-ce ?</>",
+                    "next": 51002909
+                  }
+                ]
+              },
+              {
+                "id": 51002909,
+                "content": "Monsieur Buck. Incapable de tenir l’alcool... alors il se gave de lait et de jus de fruits. Son métier ? Dramaturge raté. Mais pour bavarder, il mérite la palme. Regarde-le, il marmonne sans s’arrêter.",
+                "npc": 200003,
+                "next": 51002910
+              },
+              {
+                "id": 51002910,
+                "content": "Tu le vois bien, il est incapable d’être clair. Peut-être que toi, tu arriveras à décoder ses balivernes.",
+                "npc": 200003,
+                "options": [
+                  {
+                    "id": 510029101,
+                    "content": "<I>En simplifiant son discours et en isolant les mots-clés, on comprendra peut-être ce qu’il essaie de dire.</>",
+                    "next": 51002912,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      55
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51002912,
+                "content": "Avec ton esprit vif, tu dois bien être la seule personne ici capable de comprendre ce qu’il raconte.",
                 "npc": 200003
               }
             ]
@@ -119592,6 +120896,176 @@
               {
                 "id": 51003114,
                 "content": "Et ce pop-corn sur la manche de l’enfant ? Ils correspondent exactement à ce que j’ai trouvé sous la fenêtre de Monsieur Buck. Tout l’accuse. Il est temps de discuter.",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "171264403137816826",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51003301,
+                "content": "<I>Atchoum !</> On dirait qu’il fait encore plus froid...",
+                "npc": 700080,
+                "next": 51003302
+              },
+              {
+                "id": 51003302,
+                "content": "Même pour un Charon, il y a des limites au froid. Ce soir, il fera au moins vingt degrés de moins... Et sûrement des enfants vont encore mourir de froid... <I>Soupir...</>",
+                "npc": 700080,
+                "next": 51003303
+              },
+              {
+                "id": 51003303,
+                "content": "Bonjour.",
+                "npc": 100001,
+                "next": 51003304
+              },
+              {
+                "id": 51003304,
+                "content": "Bienvenue, honorable {性别:spectateur|spectatrice} ! Après trois heures d’opéra, vous devez avoir faim ! Voulez-vous quelque chose à grignoter et à boire ?",
+                "npc": 700080,
+                "next": 51003305
+              },
+              {
+                "id": 51003305,
+                "content": "Ou peut-être avez-vous été {性别:ému|émue} par la performance exceptionnelle et aimeriez-vous jeter un coup d’œil à une affiche signée par les comédiens ?",
+                "npc": 700080,
+                "options": [
+                  {
+                    "id": 510033051,
+                    "content": "<I>Et ton commerce suffit-il à couvrir ton chauffage ?</>",
+                    "next": 510033053,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510033052,
+                    "content": "<I>Ce n’est pas assez pour moi. Je mange beaucoup.</>",
+                    "next": 510033054,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 510033053,
+                "content": "Votre préoccupation est appréciée. J’arrive à peine à choisir, soit manger, soit me chauffer. Jamais les deux.",
+                "npc": 700080,
+                "next": 51003306
+              },
+              {
+                "id": 510033054,
+                "content": "Alors, considérez-les comme des amuse-gueules ! Il n’y en a pas beaucoup, mais je garantis le goût !",
+                "npc": 700080,
+                "next": 51003306
+              },
+              {
+                "id": 51003306,
+                "content": "Montre-moi ce que tu vends.",
+                "npc": 100001,
+                "next": 51003307
+              },
+              {
+                "id": 51003307,
+                "content": "Une affiche dédicacée par Vitti, des albums souvenirs des <I>Contes de Givrelac</>, de l’eau glacée des glaciers, du pop-corn édition spéciale théâtre... et de la bière rafraîchissante !",
+                "npc": 700080,
+                "next": 51003308
+              },
+              {
+                "id": 51003308,
+                "content": "Pas d’inquiétude ! Cela ne contient presque pas d’alcool et ne vous rendra pas ivre !",
+                "npc": 700080,
+                "next": 51003309
+              },
+              {
+                "id": 51003309,
+                "content": "Ça, j’en doute... Tu connais Monsieur Buck ?",
+                "npc": 100001,
+                "next": 51003310
+              },
+              {
+                "id": 51003310,
+                "content": "Bien sûr ! C’est un habitué. Un noble, mais respectueux des enfants Charons comme moi. Un homme bien, croyez-moi.",
+                "npc": 700080,
+                "next": 51003311
+              },
+              {
+                "id": 51003311,
+                "content": "Je sais que certains se moquent de lui. Mais comparé à ces gens-là, Monsieur Buck mérite vraiment le respect.",
+                "npc": 700080,
+                "next": 51003312
+              },
+              {
+                "id": 51003312,
+                "content": "C’est peut-être vrai, mais je doute que cela te donne le droit de t’introduire chez lui par la fenêtre et verser de la bière dans son lait.",
+                "npc": 100001,
+                "next": 51003313
+              },
+              {
+                "id": 51003313,
+                "content": "Qu... Comment tu sais ça... ?",
+                "npc": 700080,
+                "next": 51003321
+              },
+              {
+                "id": 51003321,
+                "content": "<I>Comme je le pensais.</>",
+                "npc": 100001,
+                "next": 51003314
+              },
+              {
+                "id": 51003314,
+                "content": "Monsieur Buck a l’habitude d’écrire ses œuvres la nuit. Tes actions ont fait qu’il n’a rien écrit depuis un mois, alors il m’a engagé pour trouver le « voleur d’inspiration ».",
+                "npc": 100001,
+                "options": [
+                  {
+                    "id": 510033141,
+                    "content": "<I>Tu n’as rien volé, tu ne le détestes pas... Alors, pourquoi entrer chez lui la nuit ? Laisse moi deviner.</>",
+                    "next": 51003316,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      65
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003316,
+                "content": "Tes ventes ne suffisent pas à couvrir tes besoins pendant l’hiver. Monsieur Buck, même pauvre, reste un noble, sa maison est chauffée. Alors tu t’y es introduit pour survivre au froid.",
+                "npc": 100001,
+                "next": 51003317
+              },
+              {
+                "id": 51003317,
+                "content": "Quant à savoir pourquoi tu as choisi Monsieur Buck, c’est parce que tu savais qu’une goutte d’alcool suffisait à l’endormir. Tu pourrais alors dormir chez lui sans avoir peur de mourir de froid. Ai-je raison ?",
+                "npc": 100001,
+                "next": 51003318
+              },
+              {
+                "id": 51003318,
+                "content": "... Vous êtes {性别:un vrai|une vraie} détective. Tout est vrai.",
+                "npc": 700080,
+                "next": 51003319
+              },
+              {
+                "id": 51003319,
+                "content": "Vous pouvez m’arrêter. Je suis vraiment désolé pour ce que j’ai fait. Mais si je ne l’avais pas fait, je serais mort dehors.",
+                "npc": 700080,
+                "next": 51003320
+              },
+              {
+                "id": 51003320,
+                "content": "Ce n’est pas à moi d’en décider. Je vais te conduire à mon client.",
                 "npc": 100001
               }
             ]
@@ -119967,6 +121441,166 @@
                 "content": "Après avoir serré Belinda dans ses bras, il s’éloigne à contrecœur."
               }
             ]
+          },
+          {
+            "id": "1714464198929108104",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51003604,
+                "content": "Bonjour ! Je ne t’ai jamais vu par ici. Tu viens d’arriver à Givrelac, peut-être ? Qu’est-ce qui t’amène chez la vieille Belinda ?",
+                "npc": 700081,
+                "options": [
+                  {
+                    "id": 510036041,
+                    "content": "<I>Emma m’a demandé de te transmettre un message. Elle ne peut pas venir aujourd’hui, mais elle voulait que je t’apporte ceci.</>",
+                    "next": 51003605
+                  }
+                ]
+              },
+              {
+                "id": 51003605,
+                "content": "La poupée est rudimentaire, mais on y devine les traits de Belinda. La vieille dame s’en empare avec une joie visible, la caressant avec tendresse.",
+                "next": 51003606
+              },
+              {
+                "id": 51003606,
+                "content": "Je sens encore l’odeur de la place sur ce jouet... Ah ! mais oui, c’est la semaine commémorative ! Comme le temps passe vite...",
+                "npc": 700081,
+                "next": 51003607
+              },
+              {
+                "id": 51003607,
+                "content": "Merci, mon enfant.",
+                "npc": 700081,
+                "next": 51003608
+              },
+              {
+                "id": 51003608,
+                "content": "Belinda te fixe longuement, sans un mot.",
+                "next": 51003609
+              },
+              {
+                "id": 51003609,
+                "content": "Tu portes un grand fardeau. Je sens sur toi l’odeur de la mer, l’étreinte des vagues... et la chaleur d’une main aimée, qui peu à peu s’éteint.",
+                "npc": 700081,
+                "next": 51003610
+              },
+              {
+                "id": 51003610,
+                "content": "Depuis ton arrivée ici, confusion et chagrin t’accompagnent. Tu caches tout ça au fond de ton cœur...",
+                "npc": 700081,
+                "next": 51003611
+              },
+              {
+                "id": 51003611,
+                "content": "Pardonne ma franchise, mais... as-tu perdu quelqu’un de cher ?",
+                "npc": 700081,
+                "options": [
+                  {
+                    "id": 510036111,
+                    "content": "<I>Tu es une Charon aux dons particuliers ?</>",
+                    "next": 51003612,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510036112,
+                    "content": "<I>...</>",
+                    "next": 51003613,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510036113,
+                    "content": "<I>Des superstitions de vieille femme... ça ne veut rien dire.</>",
+                    "next": 51003614,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003612,
+                "content": "En effet. Il est rare que les Charons atteignent mon âge.",
+                "npc": 700081,
+                "next": 51003615
+              },
+              {
+                "id": 51003613,
+                "content": "Tu es triste, mon enfant.",
+                "npc": 700081,
+                "next": 51003615
+              },
+              {
+                "id": 51003614,
+                "content": "Tu souffres, mon enfant. Pas besoin de le nier, je le vois.",
+                "npc": 700081,
+                "next": 51003615
+              },
+              {
+                "id": 51003615,
+                "content": "Hélas, je n’ai pas de remède à t’offrir. Mais voici des paroles anciennes, peut-être t’apporteront-elles un peu de réconfort...",
+                "npc": 700081,
+                "next": 51003616
+              },
+              {
+                "id": 51003616,
+                "content": "« Le voyageur chausse ses bottes et s’avance tandis que le fuseau de la Déesse du Destin resserre ses fils. Quand mille chemins se rejoignent, ce qui a été perdu revient doucement à portée de main. »",
+                "npc": 700081,
+                "options": [
+                  {
+                    "id": 510036161,
+                    "content": "<I>Belinda semble faire allusion à...</>",
+                    "next": 51003618,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      65
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003618,
+                "content": "C’est la fin de <I>Le Fuseau de la Déesse du Destin</>. Le héros y retrouve, dans le Royaume des Reflets, tout ce qu’il avait perdu... Tu veux dire que nous nous reverrons ?",
+                "npc": 100001,
+                "next": 51003619
+              },
+              {
+                "id": 51003619,
+                "content": "Considère ces mots comme un remerciement pour la poupée. Tu es {性别:intelligent|intelligente}, je le vois bien. Tu trouveras toi-même la réponse.",
+                "npc": 700081,
+                "next": 51003620
+              },
+              {
+                "id": 51003620,
+                "content": "Et puis... chaque personne qui parvient jusqu’ici pour la première fois reçoit un petit présent de ma part. Il me suffira d’un simple fil de fer portant ton empreinte... Pas besoin de se presser, je t’attendrai ici.",
+                "npc": 700081,
+                "next": 51003621
+              },
+              {
+                "id": 51003621,
+                "content": "Mon empreinte... ? Je ne suis pas {性别:sûr|sûre} de comprendre, mais ça doit vouloir dire n’importe quel objet que j’ai touché ou porté, non ?",
+                "npc": 100001,
+                "next": 51003622
+              },
+              {
+                "id": 51003622,
+                "content": "Dans la Fosse de Glevum, il doit y avoir plein de morceaux de fils de fer. J’irai voir.",
+                "npc": 100001
+              }
+            ]
           }
         ]
       },
@@ -120016,6 +121650,34 @@
               {
                 "id": 51003709,
                 "content": "Même si tu ignores pourquoi Belinda a besoin de ce fil, tu ne peux pas la laisser filer avec ton bien. Il faut la rattraper et lui donner une petite leçon !"
+              }
+            ]
+          },
+          {
+            "id": "17149829349441846317",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51003701,
+                "content": "Belinda prend le fil entre ses doigts et le tord jusqu’à en faire un délicat profil de jeune fille. Il ressemble étrangement à Berenica.",
+                "next": 51003702
+              },
+              {
+                "id": 51003702,
+                "content": "Je ne vois que des ombres... Je ne sais pas si cela ressemble à celle que tu chéris. Mais j’espère que cela t’apaisera un peu.",
+                "npc": 700081,
+                "next": 51003703
+              },
+              {
+                "id": 51003703,
+                "content": "Je souhaite de tout cœur que vous vous retrouviez.",
+                "npc": 700081,
+                "next": 51003704
+              },
+              {
+                "id": 51003704,
+                "content": "Tu quittes sa tente, comprenant mieux pourquoi Emma tient tant à elle. Ses pouvoirs ne sont pas immenses, mais elle guérit les cœurs et console les âmes."
               }
             ]
           }
@@ -121109,6 +122771,197 @@
                 "speakerName": "???"
               }
             ]
+          },
+          {
+            "id": "1715943530904118637",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51004201,
+                "content": "Pff. Une nouvelle tête.",
+                "npc": 700096,
+                "next": 51004202
+              },
+              {
+                "id": 51004202,
+                "content": "L’homme en face de toi plisse les yeux, ses lèvres fendues et sèches s’étirent tandis qu’il recrache des mots arides.",
+                "next": 51004203
+              },
+              {
+                "id": 51004203,
+                "content": "Alors, dis-moi. Qui t’envoie ici ?",
+                "npc": 700096,
+                "options": [
+                  {
+                    "id": 510042031,
+                    "content": "<I>Ce n’est pas toi qui m’as fait venir ?</>",
+                    "next": 51004204,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510042032,
+                    "content": "<I>C’est la personne que tu attends qui m’envoie.</>",
+                    "next": 51004205,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510042033,
+                    "content": "<I>Ce sont les pièces d’argent dans ma poche qui m’envoient.</>",
+                    "next": 51004206,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51004204,
+                "content": "Une nouvelle question est parfois la meilleure des réponses.",
+                "next": 51004207
+              },
+              {
+                "id": 51004205,
+                "content": "Il est évident qu’il attend quelqu’un.",
+                "next": 51004207
+              },
+              {
+                "id": 51004206,
+                "content": "Tu ignores ce qu’il voulait entendre, mais personne ne refuse jamais ce genre de réponse.",
+                "next": 51004207
+              },
+              {
+                "id": 51004207,
+                "content": "L’homme reste un instant silencieux, puis lève les yeux pour t’observer. Tu entends presque ses vertèbres craquer sous l’effort.",
+                "next": 51004208
+              },
+              {
+                "id": 51004208,
+                "content": "{性别:Beau parleur|Fine parleuse}.",
+                "npc": 700096,
+                "next": 51004209
+              },
+              {
+                "id": 51004209,
+                "content": "Il émet un bref grognement, mais son expression semble trahir une certaine satisfaction.",
+                "next": 51004210
+              },
+              {
+                "id": 51004210,
+                "content": "Peu importe qui t’a recommandé. De toute façon, tu es là pour ce que j’ai dans ma poche, pas vrai ?",
+                "npc": 700096,
+                "next": 51004211
+              },
+              {
+                "id": 51004211,
+                "content": "Il entrouvre son col, laissant entrevoir le reflet terne d’un canon métallique.",
+                "next": 51004212
+              },
+              {
+                "id": 51004212,
+                "content": "Il resserre aussitôt son manteau et jette un regard méfiant autour de lui.",
+                "next": 51004213
+              },
+              {
+                "id": 51004213,
+                "content": "Calibre 4. Double canon, un seul tir. Qu’il s’agisse d’un Charon ou d’un Souillé, personne ne résiste à ça.",
+                "npc": 700096,
+                "next": 51004214
+              },
+              {
+                "id": 51004214,
+                "content": "Ses lèvres se tordent, comme s’il parlait d’un banal pesticide.",
+                "next": 51004215
+              },
+              {
+                "id": 51004215,
+                "content": "Cette fois, pas besoin d’argent. Mais tu vas devoir faire quelque chose pour moi.",
+                "npc": 700096,
+                "options": [
+                  {
+                    "id": 510042151,
+                    "content": "<I>Tu...</>",
+                    "next": 51004216
+                  },
+                  {
+                    "id": 510042152,
+                    "content": "<I>Bien...</>",
+                    "next": 51004216
+                  }
+                ]
+              },
+              {
+                "id": 51004216,
+                "content": "Qu’est-ce que tu bafouilles ? T’es venu pour ce joujou, non ?",
+                "npc": 700096,
+                "next": 51004217
+              },
+              {
+                "id": 51004217,
+                "content": "Si tu t’acquittes de la tâche, il est à toi. Et je rajoute même une prime.",
+                "npc": 700096,
+                "options": [
+                  {
+                    "id": 510042171,
+                    "content": "<I>Si ça venait à tomber entre de mauvaises mains...</>",
+                    "next": 51004219,
+                    "imprCheck": [
+                      1011,
+                      "Morality",
+                      70
+                    ]
+                  },
+                  {
+                    "id": 510042172,
+                    "content": "<I>Ça a l’air redoutable, je le veux...</>",
+                    "next": 51004219,
+                    "imprCheck": [
+                      1011,
+                      "Benefit",
+                      70
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51004219,
+                "content": "Bon, d’accord. Qu’est-ce que tu veux que je fasse ?",
+                "npc": 100001,
+                "next": 51004220
+              },
+              {
+                "id": 51004220,
+                "content": "Parfait. Je vais te donner un lieu. Là-bas, dégomme tout le monde sauf la femme.",
+                "npc": 700096,
+                "next": 51004221
+              },
+              {
+                "id": 51004221,
+                "content": "... Une histoire de cœur ?",
+                "npc": 100001,
+                "next": 51004222
+              },
+              {
+                "id": 51004222,
+                "content": "Mêle-toi de tes affaires. Fais juste le travail.",
+                "npc": 700096,
+                "next": 51004223
+              },
+              {
+                "id": 51004223,
+                "content": "Il resserre son col et pince ses lèvres sèches, refusant de dire un mot de plus."
+              }
+            ]
           }
         ]
       }
@@ -121304,6 +123157,176 @@
                 "content": "La fille se bouche les oreilles et s’enfuit en courant."
               }
             ]
+          },
+          {
+            "id": "17167926144881255170",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51003901,
+                "content": "La fille est recroquevillée dans un coin, la tête basse. Elle paraît abattue.",
+                "options": [
+                  {
+                    "id": 510039011,
+                    "content": "<I>Essayer de lui parler</>",
+                    "next": 51003903,
+                    "imprCheck": [
+                      1011,
+                      "Empathy",
+                      100
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003903,
+                "content": "C’est toi...",
+                "npc": 700104,
+                "next": 51003904
+              },
+              {
+                "id": 51003904,
+                "content": "Ces enfants, c’étaient tes... camarades ?",
+                "npc": 100001,
+                "next": 51003905
+              },
+              {
+                "id": 51003905,
+                "content": "Oui... Désolée... Désolée... J’ai encore tout raté.",
+                "npc": 700104,
+                "next": 51003906
+              },
+              {
+                "id": 51003906,
+                "content": "Ils t’intimidaient, n’est-ce pas ?",
+                "npc": 100001,
+                "next": 51003907
+              },
+              {
+                "id": 51003907,
+                "content": "Non... c’est de ma faute...",
+                "npc": 700104,
+                "next": 51003908
+              },
+              {
+                "id": 51003908,
+                "content": "Je rate tout. Maman et mes professeurs disent que je suis idiote.",
+                "npc": 700104,
+                "next": 51003909
+              },
+              {
+                "id": 51003909,
+                "content": "Mes camarades sont très intelligents. Ils ont découvert que si je suis stupide, c’est parce que je suis une Charon. Mes parents auraient caché mes cornes par magie.",
+                "npc": 700104,
+                "next": 51003910
+              },
+              {
+                "id": 51003910,
+                "content": "C’est de ma faute... Je n’aurais jamais dû me mêler aux Solariens...",
+                "npc": 700104,
+                "next": 51003911
+              },
+              {
+                "id": 51003911,
+                "content": "Il ne fait aucun doute que c’est un mensonge grossier. Mais ses mots réveillent en toi de mauvais souvenirs : la malveillance que toi et Berenica aviez subie sur l’Île du Purgatoire.",
+                "next": 51003912
+              },
+              {
+                "id": 51003912,
+                "content": "La cruauté peut viser les faibles, les différents, ou n’avoir aucune raison : certains ont juste besoin d’un exutoire, et la malchance te désignait comme cible.",
+                "next": 51003913
+              },
+              {
+                "id": 51003913,
+                "content": "Mais cette enfant est plus démunie encore que toi jadis : elle n’a même pas une personne comme Berenica pour partager son fardeau.",
+                "options": [
+                  {
+                    "id": 510039131,
+                    "content": "<I>Tu n’as rien fait de mal.</>",
+                    "next": 51003914,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510039132,
+                    "content": "<I>Pourquoi jouer avec eux ? Mieux vaudrait leur coller une bonne raclée.</>",
+                    "next": 51003917,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510039133,
+                    "content": "<I>Ils t’ont menti. Ne les crois pas.</>",
+                    "next": 51003919,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003914,
+                "content": "Ce n’est pas... ma faute... ?",
+                "npc": 700104,
+                "next": 51003915
+              },
+              {
+                "id": 51003917,
+                "content": "Hein... ?",
+                "npc": 700104,
+                "next": 51003918
+              },
+              {
+                "id": 51003919,
+                "content": "Hein... ?",
+                "npc": 700104,
+                "next": 51003920
+              },
+              {
+                "id": 51003915,
+                "content": "Ceux qui blessent les autres sont les seuls coupables.",
+                "npc": 100001,
+                "next": 51003916
+              },
+              {
+                "id": 51003918,
+                "content": "Puisqu’ils t’appellent démon, alors agis comme tel.",
+                "npc": 100001,
+                "next": 51003922
+              },
+              {
+                "id": 51003920,
+                "content": "Ils ont inventé un mensonge pour se moquer de toi. Mais...",
+                "npc": 100001,
+                "next": 51003921
+              },
+              {
+                "id": 51003916,
+                "content": "Tu n’as pas à avoir peur. Riposte.",
+                "npc": 100001,
+                "next": 51003922
+              },
+              {
+                "id": 51003922,
+                "content": "Viens. On retourne les voir.",
+                "npc": 100001
+              },
+              {
+                "id": 51003921,
+                "content": "Puisqu’ils t’appellent démon, alors agis comme tel.",
+                "npc": 100001,
+                "next": 51003922
+              }
+            ]
           }
         ]
       },
@@ -121492,6 +123515,356 @@
                 "content": "Les élèves détalent aussitôt."
               }
             ]
+          },
+          {
+            "id": "17168652926013292",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51004107,
+                "content": "Tu vois ? Ce n’est que du vent.",
+                "npc": 100001,
+                "next": 51004108
+              },
+              {
+                "id": 51004108,
+                "content": "... Oui !",
+                "npc": 700105,
+                "next": 51004109
+              },
+              {
+                "id": 51004109,
+                "content": "Merci... {性别:Quand tu t’es battu, tu avais l’air tellement puissant !|Quand tu t’es battue, tu avais l’air tellement puissante !}",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041091,
+                    "content": "<I>Toi aussi, tu sais manier les mots. Entraîne-toi quand tu en as l’occasion.</>",
+                    "next": 51004110,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510041092,
+                    "content": "<I>Merci du compliment. Mais l’important, c’est que tu as osé leur tenir tête.</>",
+                    "next": 51004110,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51004110,
+                "content": "Hein... Vraiment ? Je... J’ai seulement dit tout haut ce que je pensais en silence.",
+                "npc": 700105,
+                "next": 51004111
+              },
+              {
+                "id": 51004111,
+                "content": "Merci ! C’est la première fois que je me sens aussi soulagée et libre !",
+                "npc": 700105,
+                "next": 51004112
+              },
+              {
+                "id": 51004112,
+                "content": "Pas de quoi. Ils ne t’approcheront pas avant longtemps. Je vais te raccompagner. Voilà mon adresse, s’ils reviennent, viens me trouver.",
+                "npc": 100001,
+                "next": 51004113
+              },
+              {
+                "id": 51004113,
+                "content": "Je ne veux pas rentrer... !",
+                "npc": 700105,
+                "next": 51004114
+              },
+              {
+                "id": 51004114,
+                "content": "Je suis une Charon. Je veux rester avec les miens...",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041141,
+                    "content": "<I>Essayer de la convaincre</>",
+                    "next": 51004116,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      100
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51004116,
+                "content": "Tu n’as pas remarqué ? Ils jouent les durs, mais dès qu’ils tombent sur plus fort, ils fuient.",
+                "npc": 100001,
+                "next": 51004117
+              },
+              {
+                "id": 51004117,
+                "content": "Ils ne sont pas aussi puissants qu’ils le prétendent. Alors, pourquoi leurs mots seraient-ils vrais ? Faye, tu es une Sola, ne te laisse pas avoir par leurs minables mensonges.",
+                "npc": 100001,
+                "next": 51004118
+              },
+              {
+                "id": 51004118,
+                "content": "Souviens-toi, ne doute jamais de toi à cause de la méchanceté des autres. Ne te reproche rien... C’est ma famille qui me l’a appris, et aujourd’hui je te transmets cette leçon.",
+                "npc": 100001,
+                "next": 51004119
+              },
+              {
+                "id": 51004119,
+                "content": "La fille bat des cils, un peu perdue. Elle ne comprend pas tout, mais son visage s’apaise.",
+                "next": 51004120
+              },
+              {
+                "id": 51004120,
+                "content": "D’accord... puisque tu le dis, je vais essayer ! Mais avant... j’ai une dernière petite demande...",
+                "npc": 700105,
+                "next": 51004121
+              },
+              {
+                "id": 51004121,
+                "content": "Est-ce que je peux toucher ta corne ?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041211,
+                    "content": "<I>Accepter</>",
+                    "next": 51004122
+                  },
+                  {
+                    "id": 510041212,
+                    "content": "<I>Refuser</>",
+                    "next": 51004124
+                  }
+                ]
+              },
+              {
+                "id": 51004122,
+                "content": "Merci !",
+                "npc": 700105,
+                "next": 51004123
+              },
+              {
+                "id": 51004124,
+                "content": "Bon... alors, laisse-moi au moins la regarder de près...",
+                "npc": 700105,
+                "next": 51004125
+              },
+              {
+                "id": 51004123,
+                "content": "La fille tend une main délicate et touche prudemment la corne sur ta tête.",
+                "next": 51004126
+              },
+              {
+                "id": 51004125,
+                "content": "La fille s’approche et observe attentivement ta corne.",
+                "next": 51004126
+              },
+              {
+                "id": 51004126,
+                "content": "Alors c’est ça, une vraie corne de Charon...",
+                "npc": 700105,
+                "next": 51004127
+              },
+              {
+                "id": 51004127,
+                "content": "Rouge, fine... Elle brille au soleil... Elle est bien plus jolie que mes tresses.",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041271,
+                    "content": "Tes tresses aussi sont jolies.",
+                    "next": 51004128
+                  }
+                ]
+              },
+              {
+                "id": 51004128,
+                "content": "Tu es {性别:le premier|la première} à me le dire. Mais elles sont toutes défaites... Je vais les refaire.",
+                "npc": 700105,
+                "next": 51004129
+              },
+              {
+                "id": 51004129,
+                "content": "Elle sort un peigne, refait soigneusement ses deux tresses, puis les soulève pour les faire ressembler à des cornes.",
+                "next": 51004130
+              },
+              {
+                "id": 51004130,
+                "content": "Comme ça, ça fait cornes de démon ?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041301,
+                    "content": "<I>Oui.</>",
+                    "next": 51004131
+                  },
+                  {
+                    "id": 510041302,
+                    "content": "<I>Plutôt des cornes de chèvre...</>",
+                    "next": 51004132
+                  }
+                ]
+              },
+              {
+                "id": 51004131,
+                "content": "Héhé.",
+                "npc": 700105,
+                "next": 51004133
+              },
+              {
+                "id": 51004132,
+                "content": "Haha, c’est bien aussi.",
+                "npc": 700105,
+                "next": 51004133
+              },
+              {
+                "id": 51004133,
+                "content": "Oh ! J’ai encore des élastiques. Je peux te faire une petite tresse ?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041331,
+                    "content": "<I>Accepter</>",
+                    "next": 51004136
+                  },
+                  {
+                    "id": 510041332,
+                    "content": "<I>Refuser</>",
+                    "next": 51004134
+                  }
+                ]
+              },
+              {
+                "id": 51004136,
+                "content": "Accroupis-toi un peu...",
+                "npc": 700105,
+                "next": 51004137
+              },
+              {
+                "id": 51004134,
+                "content": "Allez, juste un essai !",
+                "npc": 700105,
+                "next": 51004135
+              },
+              {
+                "id": 51004137,
+                "content": "Tu sens une légère traction sur ta nuque. Elle coiffe avec douceur, rien à craindre pour ta chevelure.",
+                "next": 51004138
+              },
+              {
+                "id": 51004135,
+                "content": "La fille se met sur la pointe des pieds pour atteindre tes cheveux. Elle paraît nettement plus joyeuse.",
+                "next": 51004136
+              },
+              {
+                "id": 51004138,
+                "content": "Voilà ! Ouah, tu es tellement {性别:mignon|mignonne} avec des tresses !",
+                "npc": 700105,
+                "next": 51004139
+              },
+              {
+                "id": 51004139,
+                "content": "Dommage, je n’ai pas de miroir...",
+                "npc": 700105,
+                "next": 51004140
+              },
+              {
+                "id": 51004140,
+                "content": "Oh ! Je sais ! Je vais te dessiner.",
+                "npc": 700105,
+                "next": 51004141
+              },
+              {
+                "id": 51004141,
+                "content": "Elle sort un cahier de son sac et esquisse ton portrait.",
+                "next": 51004142
+              },
+              {
+                "id": 51004142,
+                "content": "Au fait... comment tu t’appelles ?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041421,
+                    "content": "Je m’appelle {nickname}.",
+                    "next": 51004143
+                  }
+                ]
+              },
+              {
+                "id": 51004143,
+                "content": "Très bien ! {nickname}, je n’oublierai jamais ton nom. Tiens, garde ce dessin de toi que j’ai fait. À bientôt !",
+                "npc": 700105,
+                "next": 51004144
+              },
+              {
+                "id": 51004144,
+                "content": "... Mmmh... C’est donc ça l’art abstrait.",
+                "npc": 100001,
+                "next": 51004145
+              },
+              {
+                "id": 51004145,
+                "content": "Alors qu’elle s’éloigne, la fille se retourne soudain, le regard grave.",
+                "next": 51004146
+              },
+              {
+                "id": 51004146,
+                "content": "Au fait... Quand je t’ai coiffé, j’ai repensé à quelque chose.",
+                "npc": 700105,
+                "next": 51004147
+              },
+              {
+                "id": 51004147,
+                "content": "On m’a toujours répété que les Charons étaient des enfants de démons, stupides, perfides, toujours à faire le mal...",
+                "npc": 700105,
+                "next": 51004148
+              },
+              {
+                "id": 51004148,
+                "content": "Mais ce n’est pas vrai, pas vrai ?",
+                "npc": 700105,
+                "next": 51004149
+              },
+              {
+                "id": 51004149,
+                "content": "C’est juste un prétexte pour vous harceler... n’est-ce pas ?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041491,
+                    "content": "<I>Oui.</>",
+                    "next": 51004150
+                  },
+                  {
+                    "id": 510041492,
+                    "content": "<I>...</>",
+                    "next": 51004150
+                  }
+                ]
+              },
+              {
+                "id": 51004150,
+                "content": "Alors vous avez sûrement... souffert bien plus que moi.",
+                "npc": 700105,
+                "next": 51004151
+              },
+              {
+                "id": 51004151,
+                "content": "Désormais, si je peux faire quoi que ce soit pour aider, je le ferai. Pas parce que nous sommes pareils... mais parce que nous sommes {性别:amis|amies}.",
+                "npc": 700105
+              }
+            ]
           }
         ]
       },
@@ -121555,7 +123928,61 @@
       {
         "id": 20021202,
         "name": "Faire votre rapport à Kevin",
-        "desc": "À Givrelac, un mineur nerveux attire votre attention : un sac de minerai, couvert de traces suspectes, gît à ses pieds. Quelque chose cloche.\nMieux vaut en informer Kevin, des Veilleurs, posté près de la porte de la cité."
+        "desc": "À Givrelac, un mineur nerveux attire votre attention : un sac de minerai, couvert de traces suspectes, gît à ses pieds. Quelque chose cloche.\nMieux vaut en informer Kevin, des Veilleurs, posté près de la porte de la cité.",
+        "nodes": [
+          {
+            "id": "17180944232872082724",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51002601,
+                "content": "Magnifique, {nickname} n’est pas là aujourd’hui...",
+                "npc": 700111,
+                "next": 51002602
+              },
+              {
+                "id": 51002602,
+                "content": "Tu me cherchais ?",
+                "npc": 100001,
+                "next": 51002603
+              },
+              {
+                "id": 51002603,
+                "content": "... Hein ?! Ah ! Tu tombes toujours du ciel, toi !",
+                "npc": 700111,
+                "options": [
+                  {
+                    "id": 510026031,
+                    "content": "<I>Kevin, dans les taudis de Givrelac, quelqu’un vend illégalement du Phoxène.</>",
+                    "next": 51002605,
+                    "imprCheck": [
+                      1011,
+                      "Chaos",
+                      110
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51002605,
+                "content": "Près du portail, le téléphone sonne brusquement. Kevin sursaute comme un lapin effarouché et se précipite pour décrocher.",
+                "next": 51002606
+              },
+              {
+                "id": 51002606,
+                "content": "Ici Kevin... Quoi ? Des mouvements suspects en ville ? Compris, j’arrive !",
+                "npc": 700111,
+                "next": 51002607
+              },
+              {
+                "id": 51002607,
+                "content": "... Ça doit être le type dont tu me parlais. Allez, montre-moi le chemin.",
+                "npc": 700111
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 20021203,
@@ -122362,7 +124789,273 @@
       {
         "id": 20021301,
         "name": "Parler à Margie",
-        "desc": "Vous séjournez à Givrelac depuis un certain temps. Malgré le froid mordant, Margie continue d’y apporter chaleur et espoir, distribuant vivres et vêtements aux plus démunis.\nDepuis la chasse au voleur menée à ses côtés dans les égouts, vous n’avez guère eu l’occasion de lui reparler.\nAllez donc lui donner de vos nouvelles."
+        "desc": "Vous séjournez à Givrelac depuis un certain temps. Malgré le froid mordant, Margie continue d’y apporter chaleur et espoir, distribuant vivres et vêtements aux plus démunis.\nDepuis la chasse au voleur menée à ses côtés dans les égouts, vous n’avez guère eu l’occasion de lui reparler.\nAllez donc lui donner de vos nouvelles.",
+        "nodes": [
+          {
+            "id": "1715481528886312979",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51005001,
+                "content": "Qui êtes-vous... ?",
+                "npc": 100001,
+                "next": 51005002
+              },
+              {
+                "id": 51005002,
+                "content": "Devant toi, une femme d’âge mûr dépoussière les meubles avec une aisance méthodique. Elle semble étrangement familière avec la Maison d’Hypnos... un lieu pourtant déserté depuis longtemps.",
+                "next": 51005003
+              },
+              {
+                "id": 51005003,
+                "content": "Pardonnez mon intrusion. Je ne pensais pas croiser quelqu’un ici.",
+                "npc": 700013,
+                "next": 51005004
+              },
+              {
+                "id": 51005004,
+                "content": "Je suis une employée de maison, engagée par Monsieur Henrik pour l’entretien et les réparations de la demeure. Aujourd’hui est un jour de service prévu par contrat.",
+                "npc": 700013,
+                "next": 51005005
+              },
+              {
+                "id": 51005005,
+                "content": "Puis-je savoir qui vous êtes ?",
+                "npc": 700013,
+                "next": 51005006
+              },
+              {
+                "id": 51005006,
+                "content": "Je loue le vieux manoir à côté. Je voulais simplement vérifier que les portes et les fenêtres de cette maison étaient bien verrouillées.",
+                "npc": 100001,
+                "next": 51005007
+              },
+              {
+                "id": 51005007,
+                "content": "Mais... ne le saviez-vous pas ? Monsieur Henrik est décédé. Vous n’êtes plus tenue d’honorer ce contrat.",
+                "npc": 100001,
+                "next": 51005008
+              },
+              {
+                "id": 51005008,
+                "content": "Je le sais.",
+                "npc": 700013,
+                "next": 51005009
+              },
+              {
+                "id": 51005009,
+                "content": "Mais Monsieur Henrik avait déjà réglé mes honoraires à l’avance. Tant que le contrat n’a pas pris fin, je ne ferai rien qui aille à l’encontre de mon devoir professionnel.",
+                "npc": 700013,
+                "next": 51005010
+              },
+              {
+                "id": 51005010,
+                "content": "Il est quatre heures de l’après-midi. Je resterai trois heures, comme convenu.",
+                "npc": 700013,
+                "next": 51005011
+              },
+              {
+                "id": 51005011,
+                "content": "Si vous avez besoin de quoi que ce soit, n’hésitez pas à me le demander.",
+                "npc": 700013,
+                "next": 51005012
+              },
+              {
+                "id": 51005012,
+                "content": "En nettoyant, Lina découvre les profondes griffures laissées par Psyche lors de sa Dégradation... puis les traces de sang séché de Henrik.",
+                "options": [
+                  {
+                    "id": 510050121,
+                    "content": "<I>Tout le monde voit cette demeure comme une maison hantée. Pourtant, vous ne semblez ni effrayée ni surprise.</>",
+                    "next": 51005015,
+                    "imprCheck": [
+                      1011,
+                      "Empathy",
+                      105
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51005015,
+                "content": "J’ai vu bien pire... Dans une demeure plus luxueuse encore. Son maître avait incendié son propre manoir, brûlant avec lui toute sa famille.",
+                "npc": 700013,
+                "next": 51005016
+              },
+              {
+                "id": 51005016,
+                "content": "Comparé à cela, ici... cela reste une maison. Au moins, Monsieur Henrik a su en préserver l’âme.",
+                "npc": 700013,
+                "next": 51005017
+              },
+              {
+                "id": 51005017,
+                "content": "Un léger trouble traverse enfin son visage d’ordinaire impassible. Derrière cette façade de rigueur se cache peut-être un cœur moins calme qu’il n’y paraît.",
+                "options": [
+                  {
+                    "id": 510050171,
+                    "content": "<I>Vous connaissiez Monsieur Henrik depuis longtemps ?</>",
+                    "next": 51005018
+                  }
+                ]
+              },
+              {
+                "id": 51005018,
+                "content": "Il y a vingt ans, il était un médecin renommé. Moi, je n’étais qu’une servante dans la maison d’un vicomte. Le vicomte avait appelé Monsieur Henrik pour examiner sa femme. C’est ainsi que je l’ai rencontré... et je pensais ne jamais le revoir.",
+                "npc": 700013,
+                "next": 51005019
+              },
+              {
+                "id": 51005019,
+                "content": "Mais sur le chemin du retour, un enfant Charon s’est effondré devant nous. Henrik l’a immédiatement soigné et m’a confié sa garde.",
+                "npc": 700013,
+                "next": 51005020
+              },
+              {
+                "id": 51005020,
+                "content": "Il n’était pas seulement un grand médecin par son talent, mais parce qu’il ne faisait jamais de différence entre ses patients.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050201,
+                    "content": "<I>Hélas, ses bonnes actions ne lui ont pas valu la reconnaissance méritée.</>",
+                    "next": 51005021,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510050202,
+                    "content": "<I>Il a toujours défendu ce qu’il y avait d’humain en lui.</>",
+                    "next": 51005022,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510050203,
+                    "content": "<I>Peut-être... a-t-il pensé à sa propre fille.</>",
+                    "next": 51005023,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51005021,
+                "content": "Monsieur Henrik n’y attachait aucune importance. Mon estime pour lui n’a jamais changé.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050231,
+                    "content": "<I>S’il savait que vous continuez de veiller sur cette maison même après sa mort... il en serait heureux.</>",
+                    "next": 51005024
+                  }
+                ]
+              },
+              {
+                "id": 51005022,
+                "content": "C’était sa plus grande noblesse.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050231,
+                    "content": "<I>S’il savait que vous continuez de veiller sur cette maison même après sa mort... il en serait heureux.</>",
+                    "next": 51005024
+                  }
+                ]
+              },
+              {
+                "id": 51005023,
+                "content": "Je suis profondément peinée par ce qui lui est arrivé.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050231,
+                    "content": "<I>S’il savait que vous continuez de veiller sur cette maison même après sa mort... il en serait heureux.</>",
+                    "next": 51005024
+                  }
+                ]
+              },
+              {
+                "id": 51005024,
+                "content": "J’ai pourtant l’impression de n’avoir pas assez fait.",
+                "npc": 700013,
+                "next": 51005025
+              },
+              {
+                "id": 51005025,
+                "content": "Monsieur Henrik voulait probablement maintenir une certaine distance. Je ne venais que rarement, autrement, nous nous serions déjà croisés.",
+                "npc": 700013,
+                "next": 51005026
+              },
+              {
+                "id": 51005026,
+                "content": "Et je crois qu’il ne voudrait pas que je vienne trop souvent aujourd’hui non plus. Il est temps de rendre la clé à son véritable propriétaire. Je vais la déposer sur son bureau, sous votre regard.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050261,
+                    "content": "La clé qu’elle tient éveille en toi un étrange sentiment de familiarité.",
+                    "next": 51005028,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      110
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51005028,
+                "content": "La clé ressemble étrangement à celle que tu avais reçue de Margie.",
+                "next": 51005029
+              },
+              {
+                "id": 51005029,
+                "content": "Tu te rappelles l’avoir déjà vue sur Henrik, elle a dû se perdre dans le chaos de cette nuit-là, avant que Margie ne la ramasse par hasard.",
+                "options": [
+                  {
+                    "id": 510050291,
+                    "content": "<I>Madame Lina, reconnaissez-vous cette clé ?</>",
+                    "next": 51005030
+                  }
+                ]
+              },
+              {
+                "id": 51005030,
+                "content": "C’est celle qui ouvre le coffre où Monsieur Henrik gardait ses documents les plus précieux.",
+                "npc": 700013,
+                "next": 51005031
+              },
+              {
+                "id": 51005031,
+                "content": "Il m’avait confié qu’en cas de malheur, ce coffre devait être ouvert, et son testament lu.",
+                "npc": 700013,
+                "next": 51005032
+              },
+              {
+                "id": 51005032,
+                "content": "Je n’avais jamais retrouvé cette clé... La savoir entre vos mains me rassure.",
+                "npc": 700013,
+                "next": 51005033
+              },
+              {
+                "id": 51005033,
+                "content": "Je vous prie donc d’être témoin, pendant que j’accomplis sa dernière volonté.",
+                "npc": 700013
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 20021302,
@@ -124016,6 +126709,78 @@
                 "content": "Le marchand bredouille un peu dans sa langue maternelle, mais la guichetière lui lance un regard dédaigneux et l’ignore. Vexé, il s’éloigne."
               }
             ]
+          },
+          {
+            "id": "17215385938721176",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51007001,
+                "content": "Toi, venu pour infos sur train ? Attention, méchante guichetière, garde amère !",
+                "npc": 700149,
+                "options": [
+                  {
+                    "id": 510070011,
+                    "content": "<I>Cette ville est comme ça. À force, on finit par s’y habituer.</>",
+                    "next": 51007002,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510070012,
+                    "content": "<I>Tu sais même pas répliquer ?</>",
+                    "next": 51007003,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007002,
+                "content": "Moi, non ! Moi, très, très envie partir !",
+                "npc": 700149,
+                "next": 51007004
+              },
+              {
+                "id": 51007003,
+                "content": "J’apprends ! Accent d’ici, pas comme chez moi.",
+                "npc": 700149,
+                "next": 51007004
+              },
+              {
+                "id": 51007004,
+                "content": "Cette guichetière a l’air coriace. Mais tôt ou tard, tu devras quitter Givrelac, il faudra bien traiter avec elle. Est-ce le moment de tenter quelque chose ?",
+                "next": 51007005
+              },
+              {
+                "id": 51007005,
+                "content": "Et peut-être que l’information confiée par Margie peut servir à amorcer la conversation...",
+                "options": [
+                  {
+                    "id": 510070051,
+                    "content": "<I>Laissez-moi passer, je crois avoir une solution.</>",
+                    "next": 51007007,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      130
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007007,
+                "content": "Bravo ! Tu as géré ! J’ai tout vu !",
+                "npc": 700149
+              }
+            ]
           }
         ]
       },
@@ -125643,6 +128408,151 @@
                 "npc": 700172
               }
             ]
+          },
+          {
+            "id": "17261265595121679",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51007325,
+                "content": "Aaaah ! C’est beaucoup trop haut ! Je ne sais même pas si c’est plus élevé que le Pavillon de l’Arbitrage à Huaxu... Mon vertige va revenir !",
+                "npc": 700173,
+                "next": 51007326
+              },
+              {
+                "id": 51007326,
+                "content": "Ne regardez pas au loin pour l’instant. Fixez le sol sous vos pieds et respirez un peu.",
+                "npc": 100001,
+                "next": 51007327
+              },
+              {
+                "id": 51007327,
+                "content": "<I>Haa... haa...</> Ça va mieux, merci.",
+                "npc": 700173,
+                "next": 51007328
+              },
+              {
+                "id": 51007328,
+                "content": "Sérieusement, à quoi pensaient les architectes de l’Empire en érigeant des murailles aussi démesurées ?",
+                "npc": 700173,
+                "next": 51007329
+              },
+              {
+                "id": 51007329,
+                "content": "... ?",
+                "npc": 700173,
+                "next": 51007330
+              },
+              {
+                "id": 51007330,
+                "content": "Mais oui, pourquoi au juste ? D’après les chroniques impériales, Givrelac était à l’origine un simple village de Charons.",
+                "npc": 700173,
+                "next": 51007331
+              },
+              {
+                "id": 51007331,
+                "content": "Le premier empereur, Dis Galea, plus connu sous le nom de Dis Ier, est arrivé dans cette région après la Grande Migration. Il souhaitait coexister pacifiquement avec les tribus de Charon... mais son frère fut attiré ici sous prétexte d’un banquet, puis assassiné.",
+                "npc": 700173,
+                "next": 51007333
+              },
+              {
+                "id": 51007333,
+                "content": "C’est ainsi que Dis Ier en vint à considérer les Charons comme des démons. Il mena alors son ordre de chevaliers pour les soumettre et imposa ce que l’on appelle la soi-disant Paix d’Argent.",
+                "npc": 700173,
+                "next": 51007334
+              },
+              {
+                "id": 51007334,
+                "content": "Mais dans ce cas... contre qui ces murailles colossales ont-elles été érigées ? Contre les Souillés ? Ou bien les Charons continuaient-ils encore de résister à l’époque ?",
+                "npc": 700173,
+                "next": 51007335
+              },
+              {
+                "id": 51007335,
+                "content": "On dirait que vous avez encore trouvé matière à réflexion.",
+                "npc": 100001,
+                "next": 51007336
+              },
+              {
+                "id": 51007336,
+                "content": "Ce n’est pas vraiment de l’inspiration... plutôt une étrange sensation. Maître Qiu nous a toujours enseigné de ne jamais ignorer ce qui nous semble étrange : c’est souvent là que la vérité se dissimule.",
+                "npc": 700173,
+                "next": 51007339
+              },
+              {
+                "id": 51007339,
+                "content": "Quoi qu’il en soit, merci, vraiment ! J’ai l’impression de pouvoir enfin rédiger un rapport de terrain digne d’intérêt !",
+                "npc": 700173,
+                "next": 51007340
+              },
+              {
+                "id": 51007340,
+                "content": "Sans vous, j’aurais continué à penser que ce sol gelé n’avait aucune valeur archéologique, et j’aurais bâclé mes travaux comme avant.",
+                "npc": 700173,
+                "next": 51007341
+              },
+              {
+                "id": 51007341,
+                "content": "Quelle superficialité de ma part ! Ne seriez-vous pas... le grand maître archéologue caché de Givrelac ?",
+                "npc": 700173,
+                "options": [
+                  {
+                    "id": 510073411,
+                    "content": "<I>J’espérais rester {性别:discret|discrète}...</>",
+                    "next": 51007344,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073412,
+                    "content": "<I>Je ne suis {性别:qu’un Chasseur de Phoxène|qu’une Chasseuse de Phoxène} de passage.</>",
+                    "next": 510073441,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073413,
+                    "content": "<I>Épargnez-moi les flatteries. Et ma récompense ?</>",
+                    "next": 51007342,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007344,
+                "content": "Comme on pouvait s’y attendre d’un maître... Vous avez vraiment l’allure d’un sage hors du commun !",
+                "npc": 700173,
+                "next": 51007342
+              },
+              {
+                "id": 510073441,
+                "content": "Je comprends, Maître. Vous préférez dissimuler votre identité aux yeux du monde.",
+                "npc": 700173,
+                "next": 51007342
+              },
+              {
+                "id": 51007342,
+                "content": "Laissez-moi réfléchir... Quelle offrande serait digne d’un maître tel que vous...",
+                "npc": 700173,
+                "next": 51007343
+              },
+              {
+                "id": 51007343,
+                "content": "J’ai trouvé ! Veuillez m’attendre un instant à la porte de la cité !",
+                "npc": 700173
+              }
+            ]
           }
         ]
       },
@@ -125688,7 +128598,255 @@
       {
         "id": 20022105,
         "name": "Se rendre aux Asphodèles",
-        "desc": "Il ne manque jamais de personnes dans le besoin, et ceux qui tendent la main reçoivent souvent bien plus qu’ils ne l’espéraient.\nRendez-vous aux Asphodèles et voyez qui pourrait avoir besoin d’aide. La jeune Shirley, là-bas dans l’ombre, semble particulièrement anxieuse."
+        "desc": "Il ne manque jamais de personnes dans le besoin, et ceux qui tendent la main reçoivent souvent bien plus qu’ils ne l’espéraient.\nRendez-vous aux Asphodèles et voyez qui pourrait avoir besoin d’aide. La jeune Shirley, là-bas dans l’ombre, semble particulièrement anxieuse.",
+        "nodes": [
+          {
+            "id": "17258665755811422",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51007301,
+                "content": "Être fidèle à ses désirs... fidèle à ses désirs... fidèle à ses désirs... Pff... Mais qu’est-ce que ça signifie vraiment, être fidèle à ses désirs... ?",
+                "npc": 700077,
+                "next": 51007302
+              },
+              {
+                "id": 51007302,
+                "content": "Je suis archéologue ! Les désirs, ce n’est pas exactement mon domaine de recherche !",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073021,
+                    "content": "<I>Le désir, c’est chercher à comprendre ce que vous voulez vraiment.</>",
+                    "next": 510073024,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073022,
+                    "content": "<I>Le désir est la force première qui anime toute vie.</>",
+                    "next": 510073025,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073023,
+                    "content": "<I>Le désir est un sujet qu’on évite en public.</>",
+                    "next": 510073026,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 510073024,
+                "content": "Je... je ne sais même pas ce que je veux...",
+                "npc": 700077,
+                "next": 51007303
+              },
+              {
+                "id": 510073025,
+                "content": "C’est si profond... trop vaste pour moi...",
+                "npc": 700077,
+                "next": 51007303
+              },
+              {
+                "id": 510073026,
+                "content": "Je comprends mieux... voilà pourquoi je n’y comprenais rien.",
+                "npc": 700077,
+                "next": 51007303
+              },
+              {
+                "id": 51007303,
+                "content": "Votre point de vue est intéressant. Pourriez-vous m’aider ?",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073031,
+                    "content": "<I>Accepter</>",
+                    "next": 51007304
+                  },
+                  {
+                    "id": 510073032,
+                    "content": "<I>Refuser</>"
+                  }
+                ]
+              },
+              {
+                "id": 51007304,
+                "content": "Je suis chercheuse à la Société archéologique d’Atlasia, section impériale. Dernièrement, tous mes rapports sont rejetés avec la même remarque : « manque de désir ».",
+                "npc": 700077,
+                "next": 51007305
+              },
+              {
+                "id": 51007305,
+                "content": "Franchement... je ne comprends rien aux exigences de ces investisseurs...",
+                "npc": 700077,
+                "next": 51007306
+              },
+              {
+                "id": 51007306,
+                "content": "Depuis quand un investisseur comprend-il l’archéologie ?",
+                "npc": 100001,
+                "next": 51007307
+              },
+              {
+                "id": 51007307,
+                "content": "Maître Qiu n’est pas un investisseur ordinaire. Les épaves centenaires de Luca, les ruines millénaires d’Élysium, les champs de bataille oubliés d’Hyperborea... ce sont toutes ses découvertes personnelles.",
+                "npc": 700077,
+                "next": 51007308
+              },
+              {
+                "id": 51007308,
+                "content": "Les yeux de Shirley brillent d’admiration tandis qu’elle vous raconte sans s’arrêter les exploits de Maître Qiu.",
+                "next": 51007309
+              },
+              {
+                "id": 51007309,
+                "content": "Il est le principal investisseur de la Société, mais aussi un immense archéologue et collectionneur. Certains murmures prétendent même qu’il serait un souverain marchant dans l’ombre de Huaxu...",
+                "npc": 700077,
+                "next": 51007310
+              },
+              {
+                "id": 51007310,
+                "content": "Sans son soutien, la Société n’aurait jamais pu devenir une organisation couvrant tout le continent.",
+                "npc": 700077,
+                "next": 51007311
+              },
+              {
+                "id": 51007311,
+                "content": "<I>Pff...</> Il ne se mêlait jamais de nos affaires avant. Pourquoi s’acharne-t-il soudain ? Sa retraite à Huaxu est-elle si ennuyeuse ?",
+                "npc": 700077,
+                "next": 51007312
+              },
+              {
+                "id": 51007312,
+                "content": "Puis-je consulter vos rapports ?",
+                "npc": 100001,
+                "next": 51007313
+              },
+              {
+                "id": 51007313,
+                "content": "Bien sûr ! <I>Analyse succincte de la fréquentation des tavernes de Givrelac</>, <I>Évolution des techniques de brassage aux Asphodèles</>, ou encore <I>Observations sur la Luno se proclamant Roi Démon</>. Lequel vous tente ?",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073131,
+                    "content": "<I>Ce rapport... ne semble pas très académique.</>",
+                    "next": 51007314,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073132,
+                    "content": "<I>Quel est le lien avec l’archéologie, exactement ?</>",
+                    "next": 51007314,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007314,
+                "content": "Que voulez-vous... À Givrelac, tout est gelé. On ne peut rien fouiller, alors impossible d’écrire un vrai rapport archéologique !",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073141,
+                    "content": "<I>C’est précisément cette attitude expéditive qui empêche l’investisseur de « ressentir le désir ».</>",
+                    "next": 510073142,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 510073142,
+                "content": "Je le sais bien... mais qu’est-ce que le désir, au juste ? À Givrelac, je ne l’ai jamais trouvé...",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 51007315,
+                    "content": "<I>Il vous manque peut-être un guide compétent.</>",
+                    "next": 510073152,
+                    "imprCheck": [
+                      1011,
+                      "Morality",
+                      55
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 510073152,
+                "content": "Impossible d’en trouver. Les Chasseurs de Phoxène d’ici ne pensent qu’à se battre et à boire. Quand je leur ai demandé s’il y avait des vestiges anciens, ils m’ont répondu que leur marmite familiale comptait peut-être comme relique...",
+                "npc": 700077,
+                "next": 510073156
+              },
+              {
+                "id": 510073156,
+                "content": "Et si... vous m’accompagniez explorer les environs ? Parmi les habitués des Asphodèles, vous êtes celui qui boit le moins et lit le plus.",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073153,
+                    "content": "<I>Très bien, voyons si je peux vous inspirer.</>",
+                    "next": 51007316,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073154,
+                    "content": "<I>Offrez-moi une récompense, et je réfléchirai avec vous.</>",
+                    "next": 51007316,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073155,
+                    "content": "<I>Vous avez trouvé la bonne personne : partagez vos fonds de recherche.</>",
+                    "next": 51007316,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007316,
+                "content": "Je vous en prie, ne m’abandonnez pas !",
+                "npc": 700077
+              }
+            ]
+          }
+        ]
       }
     ]
   },

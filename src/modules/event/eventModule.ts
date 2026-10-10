@@ -137,12 +137,99 @@ function onlineTimeByEvent(ctx: ModuleContext): Map<string, VNodeTree> {
     return result
 }
 
+/**
+ * 永恒梦魇（HardBossEvent，如事件 103036）的 Boss 内联，按 EventId 分组。
+ * 数据链：HardBossEventMain.HardBossId[] → HardBossEventDungeonSelect（以 HardBossDungeonId
+ * 字段匹配；Lua 键为 0 起序号，无意义）→ DungeonId[2]（[永恒 lv80，高难 lv160]）。
+ * - modes 只输出 reward（Reward ID，前端经 Reward 模块解析；实测 DungeonRewardView 与
+ *   DungeonReward[0] 逐本一致，不重复输出）、firstReward、buff（RaidBuff 梦魇环境 ID）、
+ *   unlock（Dungeon.Condition 原样；永恒模式无 Condition 则省略）。
+ * - select 页聚合预览 HardBossRewardView 不导出。
+ * - HardBossType 是外部数据契约：Reward=永恒 eternal，Challenge=高难 challenge；未知值原样透出。
+ */
+function hardBossEventByEvent(ctx: ModuleContext): Map<string, VNodeTree> {
+    const selects = new Map<number, Record<string, any>>()
+    for (const item of Object.values(table(ctx, "HardBossEventDungeonSelect"))) {
+        if (!item || typeof item !== "object") continue
+        const row = item as Record<string, any>
+        const bossId = Number(row.HardBossDungeonId ?? 0)
+        if (bossId) selects.set(bossId, row)
+    }
+    const dungeons = table(ctx, "Dungeon")
+    const eventDungeons = table(ctx, "HardBossEventDungeon")
+    const result = new Map<string, VNodeTree>()
+    for (const item of Object.values(table(ctx, "HardBossEventMain"))) {
+        if (!item || typeof item !== "object") continue
+        const row = item as Record<string, any>
+        const eventId = Number(row.EventId ?? 0)
+        if (!eventId) continue
+        const bosses: VNodeTree[] = []
+        for (const bossId of sequence(row.HardBossId)
+            .map(Number)
+            .filter(id => id > 0)) {
+            const select = selects.get(bossId)
+            if (!select) continue
+            const modes: VNodeTree[] = []
+            const monsters: number[] = []
+            for (const dungeonId of sequence(select.DungeonId)
+                .map(Number)
+                .filter(id => id > 0)) {
+                const dungeon = dungeons[String(dungeonId)] as Record<string, any> | undefined
+                const link = eventDungeons[String(dungeonId)] as Record<string, any> | undefined
+                if (!dungeon || typeof dungeon !== "object") continue
+                for (const monsterId of sequence(dungeon.DungeonMonsters)
+                    .map(Number)
+                    .filter(id => id > 0))
+                    if (!monsters.includes(monsterId)) monsters.push(monsterId)
+                const rawType = link && typeof link.HardBossType === "string" ? link.HardBossType : ""
+                const reward =
+                    sequence(dungeon.DungeonReward)
+                        .map(Number)
+                        .find(id => id > 0) ?? 0
+                const firstReward = Number(dungeon.FirstCompleteReward ?? 0)
+                const mode: Record<string, VNodeTree> = {
+                    dungeonId,
+                    mode: rawType === "Reward" ? "eternal" : rawType === "Challenge" ? "challenge" : rawType,
+                    lv: dungeon.DungeonLevel ?? 0,
+                }
+                if (reward) mode.reward = reward
+                if (firstReward) mode.firstReward = firstReward
+                const buff = Number(link?.DungeonBuff ?? 0)
+                if (buff) mode.buff = buff
+                const unlock = sequence(dungeon.Condition)
+                    .map(Number)
+                    .filter(id => id > 0)
+                if (unlock.length) mode.unlock = unlock as VNodeTree
+                modes.push(mode as VNodeTree)
+            }
+            if (!modes.length) continue
+            bosses.push({
+                id: bossId,
+                name: T(select.HardBossName ?? ""),
+                desc: T(select.HardBossDes ?? ""),
+                // MonsterIcon 含 Texture2D'…' 引用外壳时尾部带单引号，需剥除（Tuosi 行）。
+                icon: iconName(select.MonsterIcon).replace(/'+$/, ""),
+                ...(monsters.length ? { monster: monsters as VNodeTree } : {}),
+                modes: modes as VNodeTree,
+            })
+        }
+        if (!bosses.length) continue
+        result.set(String(eventId), {
+            weeklyRewards: Number(row.PeriodRewardTime ?? 0),
+            period: String(row.PeriodRewardType ?? ""),
+            bosses: bosses as VNodeTree,
+        })
+    }
+    return result
+}
+
 export function eventModule(ctx: ModuleContext): VNodeTree {
     const boxDrops = rowsByEvent(ctx, "BoxDrop")
     const topUps = rowsByEvent(ctx, "CumulativeTopUpEvent")
     const photoTasks = photoTasksByEvent(ctx)
     const signIns = signInByEvent(ctx)
     const onlineTimes = onlineTimeByEvent(ctx)
+    const hardBossEvents = hardBossEventByEvent(ctx)
     const result: VNodeTree[] = []
     for (const item of Object.values(table(ctx, "EventMain"))) {
         if (!item || typeof item !== "object") continue
@@ -175,6 +262,8 @@ export function eventModule(ctx: ModuleContext): VNodeTree {
         if (signIn) output.signIn = signIn
         const onlineTime = onlineTimes.get(String(id))
         if (onlineTime) output.onlineTime = onlineTime
+        const hardBossEvent = hardBossEvents.get(String(id))
+        if (hardBossEvent) output.hardBossEvent = hardBossEvent
         result.push(output)
     }
     result.sort((a, b) => Number((a as Record<string, any>).id) - Number((b as Record<string, any>).id))

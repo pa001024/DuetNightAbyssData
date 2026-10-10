@@ -42290,6 +42290,203 @@
                 "npc": 110005
               }
             ]
+          },
+          {
+            "id": "172256678029511031",
+            "type": "TalkNode",
+            "name": "跟伤员A对话",
+            "dialogues": [
+              {
+                "id": 11010401,
+                "content": "Damn those friggin' rotters!",
+                "voice": "story/1002/110104/1B9039EA",
+                "npc": 110044,
+                "options": [
+                  {
+                    "id": 11010402,
+                    "content": "Are you okay?",
+                    "next": 11010403,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11010404,
+                    "content": "I failed to protect you. I'm sorry.",
+                    "next": 11010405,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11010406,
+                    "content": "Who are you cursing at?",
+                    "next": 11010407,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 11010403,
+                "content": "Captain! I'm fine, I can still move... Hssss—",
+                "voice": "story/1002/110104/1B903A3E",
+                "npc": 110044,
+                "next": 11010408
+              },
+              {
+                "id": 11010405,
+                "content": "Please don't say that, Captain! You did your best!",
+                "voice": "story/1002/110104/1B903A92",
+                "npc": 110044,
+                "next": 11010408
+              },
+              {
+                "id": 11010407,
+                "content": "Who else could it be? The bastards who call themselves The Forsakens.",
+                "voice": "story/1002/110104/1B903AE6",
+                "npc": 110044,
+                "next": 11010408
+              },
+              {
+                "id": 11010408,
+                "content": "Those despicable cowards are using Filthoids as their weapon... <W>The Forsakens</> are monsters, just like their Filthoid pets!",
+                "voice": "story/1002/110104/1B903B10",
+                "npc": 110044,
+                "next": 11010409
+              },
+              {
+                "id": 11010409,
+                "content": "And those blasted airheads giving us the orders are just as bad. The mission brief mentioned nothing about the Filthoid hordes down here.",
+                "voice": "story/1002/110104/1B903B3A",
+                "npc": 110044,
+                "next": 11010410
+              },
+              {
+                "id": 11010410,
+                "content": "...Sorry about that. I shouldn't have vented my frustration in front of you, Captain.",
+                "voice": "story/1002/110104/1B903B64",
+                "npc": 110044,
+                "next": 11010411
+              },
+              {
+                "id": 11010411,
+                "content": "It's alright. Letting out emotions is better than being unable to speak at all.",
+                "voice": "story/1002/110104/1B903B8E",
+                "npc": 110022,
+                "next": 11010412
+              },
+              {
+                "id": 11010412,
+                "content": "Hah! You always know how to soothe people, Captain!",
+                "voice": "story/1002/110104/1B903BB8",
+                "npc": 110044,
+                "next": 11010413
+              },
+              {
+                "id": 11010413,
+                "content": "And thank goodness we have you. We thought we were goners.",
+                "voice": "story/1002/110104/1B903BE2",
+                "npc": 110044,
+                "next": 11010414
+              },
+              {
+                "id": 11010414,
+                "content": "It's just that we're too green. If only <H>Commander Avar</> were here... As a veteran, he must have a way to get us out.",
+                "voice": "story/1002/110104/1B903C0C",
+                "npc": 110044
+              }
+            ]
+          },
+          {
+            "id": "1740489491490270304",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 11010501,
+                "content": "Doctor... Dr Daphne... We're stuck in this bloody dump. Please, Dr Daphne, if I don't make it, do me a favour and bury me...",
+                "voice": "story/1002/110105/1B904A52",
+                "npc": 110045,
+                "options": [
+                  {
+                    "id": 11010502,
+                    "content": "Don't be discouraged. It'll worsen your wounds.",
+                    "next": 11010503,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11010504,
+                    "content": "Right, keep raising your voice to attract the Filthoids.",
+                    "next": 11010505,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 11010503,
+                "content": "We're out of painkillers... so I have to grumble a bit to make myself feel better.",
+                "voice": "story/1002/110105/1B904AA6",
+                "npc": 110045,
+                "next": 11010506
+              },
+              {
+                "id": 11010505,
+                "content": "Sorry, Captain. I'll zip it. With no painkillers left, I can only grumble a little to help distract me from the pain.",
+                "voice": "story/1002/110105/1B904AFA",
+                "npc": 110045,
+                "next": 11010506
+              },
+              {
+                "id": 11010506,
+                "content": "Dr Daphne and you covered our retreat just then. How is she?",
+                "voice": "story/1002/110105/1B904B24",
+                "npc": 110045,
+                "next": 11010507
+              },
+              {
+                "id": 11010507,
+                "content": "She's all right. She told me to come check on all of you.",
+                "voice": "story/1002/110105/1B904B4E",
+                "npc": 110022,
+                "next": 11010508
+              },
+              {
+                "id": 11010508,
+                "content": "Good to hear that. *sigh* A high-born lady like her could've stayed at the Academy, but no, she chose to serve with the 13th Legion. What was she thinking?",
+                "voice": "story/1002/110105/1B904B78",
+                "npc": 110045,
+                "next": 11010509
+              },
+              {
+                "id": 11010509,
+                "content": "...\"Eternal glory and loyalty to our Emperor!\" Those aristocrats say that all the time. I wonder if any of them would still be so keen on that when they're actually in a filth pit like this.",
+                "voice": "story/1002/110105/1B904BA2",
+                "npc": 110045,
+                "next": 11010510
+              },
+              {
+                "id": 11010510,
+                "content": "But Dr Daphne has real medical skills and a soft, pretty voice. We gotta keep her safe, Captain. Don't want her to die here.",
+                "voice": "story/1002/110105/1B904BCC",
+                "npc": 110045
+              }
+            ]
           }
         ]
       },
@@ -46207,6 +46404,466 @@
                 "id": 11012468,
                 "content": "Sorry to disappoint, but I'm no longer in the mood for sharing.",
                 "voice": "story/1002/110124/1B918CDE",
+                "npc": 110009
+              }
+            ]
+          },
+          {
+            "id": "17361551876042262",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 11012401,
+                "content": "You crazy girl! What are you laughing at? Is this how you repay the Captain's kindness? Don't you feel guilty at all?",
+                "voice": "story/1002/110124/1B91820A",
+                "npc": 110015,
+                "next": 11012402
+              },
+              {
+                "id": 11012402,
+                "content": "Guilty...? Ha, have you had too many alchemical concoctions from your Academy that damaged your brain?",
+                "voice": "story/1002/110124/1B918234",
+                "npc": 110009,
+                "next": 11012403
+              },
+              {
+                "id": 11012403,
+                "content": "Oh wait, I do feel guilty about one thing — to manipulate that stupid captain of yours, I lied about The Forsakens and blamed them for what the Empire did to us. I'm so sorry to The Forsakens!",
+                "voice": "story/1002/110124/1B91825E",
+                "npc": 110009,
+                "next": 11012404
+              },
+              {
+                "id": 11012404,
+                "content": "You—!",
+                "voice": "story/1002/110124/1B918288",
+                "npc": 110015,
+                "next": 11012405
+              },
+              {
+                "id": 11012405,
+                "content": "Oh, look what the cat dragged in. Hello, dear sir.",
+                "voice": "story/1002/110124/1B9182B2",
+                "npc": 110009,
+                "next": 11012406
+              },
+              {
+                "id": 11012406,
+                "content": "I'll take it from here.",
+                "voice": "story/1002/110124/1B9182DC",
+                "npc": 110022,
+                "next": 11012407
+              },
+              {
+                "id": 11012407,
+                "content": "So what are you doing here? Come to show off the benevolence of a Hyperborean officer? Or perhaps you pity this poor girl who's been led \"astray,\" trying to save me from my \"sins\"?",
+                "voice": "story/1002/110124/1B918306",
+                "npc": 110009,
+                "next": 11012408
+              },
+              {
+                "id": 11012408,
+                "content": "Oh, I get it! You want to join The Forsakens, right? Need a reference?",
+                "voice": "story/1002/110124/1B918330",
+                "npc": 110009,
+                "next": 11012409
+              },
+              {
+                "id": 11012409,
+                "content": "Hey — you guys hear that? Your captain wants to join The Forsakens!",
+                "voice": "story/1002/110124/1B91835A",
+                "npc": 110009,
+                "options": [
+                  {
+                    "id": 11012410,
+                    "content": "Save it. No one would give you any attention.",
+                    "next": 11012411,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11012412,
+                    "content": "Yeah, I'm interested. Who's your contact?",
+                    "next": 11012413,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11012414,
+                    "content": "You had many chances for an ambush. Why played the long game?",
+                    "next": 11012415,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 11012417,
+                    "content": "(Give her a punch to shut her up)",
+                    "next": 11012418,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 11012411,
+                "content": "Oh, no. This is so sad. Boohoo whoo.",
+                "voice": "story/1002/110124/1B9183AE",
+                "npc": 110009,
+                "next": 11012419
+              },
+              {
+                "id": 11012413,
+                "content": "Oh honey, you really suck at this. Save it — you won't get anything from me. Lowlives who betray their comrades and sell intel to their enemy only exist in your beloved Legion.",
+                "voice": "story/1002/110124/1B918402",
+                "npc": 110009,
+                "next": 11012419
+              },
+              {
+                "id": 11012415,
+                "content": "Because you're always so on guard. I couldn't find a chance, even while we were alone. I had to bide my time patiently. Even offered you help a couple of times to lower your guard.",
+                "voice": "story/1002/110124/1B918456",
+                "npc": 110009,
+                "next": 11012416
+              },
+              {
+                "id": 11012418,
+                "content": "Oww, it hurts! Someone do something about this! An armed soldier's hitting a helpless young girl!",
+                "voice": "story/1002/110124/1B9184D4",
+                "npc": 110009,
+                "next": 11012419
+              },
+              {
+                "id": 11012419,
+                "content": "You...",
+                "voice": "story/1002/110124/1B9184FE",
+                "npc": 110022,
+                "next": 11012420
+              },
+              {
+                "id": 11012416,
+                "content": "And it's more fun this way! Betrayal by a trusted friend is far more memorable than a stab from a stranger, isn't it?",
+                "voice": "story/1002/110124/1B918480",
+                "npc": 110009,
+                "next": 11012419
+              },
+              {
+                "id": 11012420,
+                "content": "Aww, you look like an angry bull. I'm so sorry, sir! I forgot you like it better when I talk like this.",
+                "voice": "story/1002/110124/1B918528",
+                "npc": 110009,
+                "next": 11012421
+              },
+              {
+                "id": 11012421,
+                "content": "...Cut the act, and answer my question.",
+                "voice": "story/1002/110124/1B918552",
+                "npc": 110022,
+                "next": 11012422
+              },
+              {
+                "id": 11012422,
+                "content": "Sure! Ask away. I'll answer whenever I feel like it.",
+                "voice": "story/1002/110124/1B91857C",
+                "npc": 110009,
+                "next": 11012423
+              },
+              {
+                "id": 11012423,
+                "content": "I deserve to know why you stabbed us in the back after I helped you. Is it out of plain hatred for the Hyperborean Legion, or an assassination attempt targeting me specifically?",
+                "voice": "story/1002/110124/1B9185A6",
+                "npc": 110022,
+                "next": 11012424
+              },
+              {
+                "id": 11012424,
+                "content": "If this is your question... Sure, I can answer that — given that you've been naive enough to fall for my trick.",
+                "voice": "story/1002/110124/1B9185D0",
+                "npc": 110009,
+                "next": 11012425
+              },
+              {
+                "id": 11012425,
+                "content": "The Forsakens simply want all Hyperborean dogs to die here, and preferably at the hands of the killing machines they created — I hope you enjoyed our fiery gift.",
+                "voice": "story/1002/110124/1B9185FA",
+                "npc": 110009,
+                "next": 11012426
+              },
+              {
+                "id": 11012426,
+                "content": "As for me... Well, I personally came for <H>you</>!",
+                "voice": "story/1002/110124/1B918624",
+                "npc": 110009,
+                "next": 11012427
+              },
+              {
+                "id": 11012427,
+                "content": "I heard that you, the top graduate of the Imperial Military College, who is also known as the \"Pale Reaper,\" were coming to Lonza Fortress. How could I not come have a good look at the Pale Reaper myself?",
+                "voice": "story/1002/110124/1B91864E",
+                "npc": 110009,
+                "next": 11012428
+              },
+              {
+                "id": 11012428,
+                "content": "You've heard about me? Have we met before?",
+                "voice": "story/1002/110124/1B918678",
+                "npc": 110022,
+                "next": 11012429
+              },
+              {
+                "id": 11012429,
+                "content": "Hehe, that's for you to guess.",
+                "voice": "story/1002/110124/1B9186A2",
+                "npc": 110009,
+                "next": 11012430
+              },
+              {
+                "id": 11012430,
+                "content": "My sources said that our great {性别2:Mr|Miss} Pale Reaper only has a few years' worth of memories. You know nothing of your past. You don't even know where you came from.",
+                "voice": "story/1002/110124/1B9186CC",
+                "npc": 110009,
+                "next": 11012431
+              },
+              {
+                "id": 11012431,
+                "content": "...",
+                "voice": "story/1002/110124/1B9186F6",
+                "npc": 110022,
+                "next": 11012432
+              },
+              {
+                "id": 11012432,
+                "content": "Let's play a game then! Now, honey, take a guess — was I your neighbour, an old nemesis—",
+                "voice": "story/1002/110124/1B918720",
+                "npc": 110009,
+                "next": 11012433
+              },
+              {
+                "id": 11012433,
+                "content": "Or a complete stranger? Maybe I just hate you for being one of Hyperborea's honorable people, and I simply wish to destroy that which they cherish?",
+                "voice": "story/1002/110124/1B91874A",
+                "npc": 110009,
+                "next": 11012434
+              },
+              {
+                "id": 11012434,
+                "content": "...",
+                "voice": "story/1002/110124/1B918774",
+                "npc": 110022,
+                "next": 11012435
+              },
+              {
+                "id": 11012435,
+                "content": "<W>Your head hurts, right? The jabbering of this mad girl is worming through your skull like a leech sucking at your brains.</>",
+                "voice": "story/1002/110124/1B91879E",
+                "speakerName": "???",
+                "next": 11012436
+              },
+              {
+                "id": 11012436,
+                "content": "<W>See, you have a sword in your hand. That's right — it's the one you've wielded in countless battles. The hilt still carries your warmth. You're familiar with the slick feeling and the subtle tug of resistance when its blade slices through flesh.</>",
+                "voice": "story/1002/110124/1B9187C8",
+                "speakerName": "???",
+                "next": 11012437
+              },
+              {
+                "id": 11012437,
+                "content": "<W>You can easily slit this creature's throat and make its detestable lips gurgle and whimper in pain.</>",
+                "voice": "story/1002/110124/1B9187F2",
+                "speakerName": "???",
+                "next": 11012438
+              },
+              {
+                "id": 11012438,
+                "content": "(It's... that voice again! Why now...?)",
+                "voice": "story/1002/110124/1B91881C",
+                "npc": 110022,
+                "options": [
+                  {
+                    "id": 11012439,
+                    "content": "(Try to stay rational)",
+                    "next": 11012451
+                  },
+                  {
+                    "id": 11012440,
+                    "content": "(Follow the voice and reach for the sword)",
+                    "next": 11012441
+                  }
+                ]
+              },
+              {
+                "id": 11012451,
+                "content": "ENOUGH!!! Shut up!!",
+                "voice": "story/1002/110124/1B918A3E",
+                "npc": 110022,
+                "next": 11012452
+              },
+              {
+                "id": 11012441,
+                "content": "Why suddenly so quiet? You seemed ready to lecture me. Cat got your tongue, honey?",
+                "voice": "story/1002/110124/1B91889A",
+                "npc": 110009,
+                "next": 11012442
+              },
+              {
+                "id": 11012452,
+                "content": "...Okay, looks like somebody needs anger management here.",
+                "voice": "story/1002/110124/1B918A68",
+                "npc": 110009,
+                "next": 11012453
+              },
+              {
+                "id": 11012442,
+                "content": "<W>I am the origin of your soul, the impulse within the deepest recesses of your mind. Do not refuse me... Listen — I am the one who gave you power and made you invincible in battle.</>",
+                "voice": "story/1002/110124/1B9188C4",
+                "speakerName": "???",
+                "next": 11012443
+              },
+              {
+                "id": 11012453,
+                "content": "...Leon, keep a close watch on her. Bring her back in one piece, and make sure she doesn't harm herself. Use Frank as leverage if necessary.",
+                "voice": "story/1002/110124/1B918A92",
+                "npc": 110022,
+                "next": 11012454
+              },
+              {
+                "id": 11012443,
+                "content": "<W>Unsheathe your sword, the one that bears the killing razor.</>",
+                "voice": "story/1002/110124/1B9188EE",
+                "speakerName": "???",
+                "options": [
+                  {
+                    "id": 11012444,
+                    "content": "(Try to stay rational)",
+                    "next": 11012451
+                  },
+                  {
+                    "id": 11012445,
+                    "content": "(Follow the voice and try to draw the sword)",
+                    "next": 11012446
+                  }
+                ]
+              },
+              {
+                "id": 11012454,
+                "content": "Yes, sir!",
+                "voice": "story/1002/110124/1B918ABC",
+                "npc": 110015,
+                "next": 11012455
+              },
+              {
+                "id": 11012446,
+                "content": "Go on, make your guess — any guess would do, because I won't tell you the truth anyway!",
+                "voice": "story/1002/110124/1B91896C",
+                "npc": 110009,
+                "next": 11012447
+              },
+              {
+                "id": 11012455,
+                "content": "Wait!",
+                "voice": "story/1002/110124/1B918AE6",
+                "npc": 110009,
+                "next": 11012456
+              },
+              {
+                "id": 11012447,
+                "content": "<W>Do not hesitate! Use your sword! It's calling to you! It thirsts for the sweet joy that can only be sated by flesh and blood.</>",
+                "voice": "story/1002/110124/1B918996",
+                "speakerName": "???",
+                "next": 11012448
+              },
+              {
+                "id": 11012456,
+                "content": "Remember what I said back on our way to the turret? \"Your kindness will reap a just reward.\"",
+                "voice": "story/1002/110124/1B918B10",
+                "npc": 110009,
+                "next": 11012457
+              },
+              {
+                "id": 11012448,
+                "content": "<W>Quick! Silence this mad lass for good!</>",
+                "voice": "story/1002/110124/1B9189C0",
+                "speakerName": "???",
+                "options": [
+                  {
+                    "id": 11012449,
+                    "content": "(Try to stay rational)",
+                    "next": 11012451
+                  },
+                  {
+                    "id": 11012450,
+                    "content": "(Follow the voice and wield the sword)"
+                  }
+                ]
+              },
+              {
+                "id": 11012457,
+                "content": "Lend me your ear. I've got a secret that's just for you. Rest assured, you've just frisked me. I am really out of weapons.",
+                "voice": "story/1002/110124/1B918B3A",
+                "npc": 110009,
+                "next": 11012458
+              },
+              {
+                "id": 11012458,
+                "content": "It may be extremely important to you. You sure you don't want to hear it?",
+                "voice": "story/1002/110124/1B918B64",
+                "npc": 110009,
+                "options": [
+                  {
+                    "id": 11012462,
+                    "content": "Hear her out",
+                    "next": 11012464
+                  },
+                  {
+                    "id": 11012459,
+                    "content": "Refuse to hear",
+                    "next": 11012460
+                  }
+                ]
+              },
+              {
+                "id": 11012464,
+                "content": "<W>Someone in your Legion wants you dead.</>",
+                "voice": "story/1002/110124/1B918C36",
+                "npc": 110009,
+                "next": 11012465
+              },
+              {
+                "id": 11012460,
+                "content": "Leon, shut her up.",
+                "voice": "story/1002/110124/1B918BB8",
+                "npc": 110022,
+                "next": 11012461
+              },
+              {
+                "id": 11012465,
+                "content": "What did you say?",
+                "voice": "story/1002/110124/1B918C60",
+                "npc": 110022,
+                "next": 11012466
+              },
+              {
+                "id": 11012461,
+                "content": "Hehe, fine. I hope you won't regret your choice.",
+                "voice": "story/1002/110124/1B918BE2",
+                "npc": 110009
+              },
+              {
+                "id": 11012466,
+                "content": "Secrets are meant to be whispered once. Take care, sir.",
+                "voice": "story/1002/110124/1B918C8A",
                 "npc": 110009
               }
             ]
@@ -118078,6 +118735,81 @@
                 "npc": 100001
               }
             ]
+          },
+          {
+            "id": "1716276373413143406",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51000433,
+                "content": "Thank you, kind soul. You've saved my life. I must be going — my patients in Vivar are waiting.",
+                "npc": 700235,
+                "next": 51000434
+              },
+              {
+                "id": 51000434,
+                "content": "You're a doctor? Would you happen to be Dr Elinor?",
+                "npc": 100001,
+                "next": 51000435
+              },
+              {
+                "id": 51000435,
+                "content": "That's me. Are you looking for me?",
+                "npc": 700235,
+                "next": 51000436
+              },
+              {
+                "id": 51000436,
+                "content": "I heard you rescued a girl in the northern mountains recently.",
+                "npc": 100001,
+                "next": 51000437
+              },
+              {
+                "id": 51000437,
+                "content": "Ah, yes. You've seen her in Icelake, then? Is she doing all right?",
+                "npc": 700235,
+                "next": 51000438
+              },
+              {
+                "id": 51000438,
+                "content": "Physically, she seems fine. But... she's lost her memory. I was wondering — did she have anything on her when you found her? Something that might help figure out who she is?",
+                "npc": 100001,
+                "next": 51000439
+              },
+              {
+                "id": 51000439,
+                "content": "She did, actually. I'd been meaning to follow up after this house call. If you're willing to help, that would be wonderful.",
+                "npc": 700235,
+                "next": 51000440
+              },
+              {
+                "id": 51000440,
+                "content": "Here — this was with her.",
+                "npc": 700235,
+                "next": 51000441
+              },
+              {
+                "id": 51000441,
+                "content": "I need to get going. Thank you again for saving my life.",
+                "npc": 700235,
+                "next": 51000443
+              },
+              {
+                "id": 51000443,
+                "content": "(If the words in this diary are true... then the truth is clear at last.)",
+                "next": 51000444
+              },
+              {
+                "id": 51000444,
+                "content": "(Not only has the lost girl's real identity come to light — so too has the fate of Elsa's daughter, Annie.)",
+                "next": 51000445
+              },
+              {
+                "id": 51000445,
+                "content": "(...Annie has tragically passed away, while the other girl, Alice, who ended up with Annie's clothes, has survived. Although Alice made it through the ordeal in the snowy mountains, the severe fevers she suffered afterwards took away her memories.)"
+              }
+            ]
           }
         ]
       },
@@ -118230,6 +118962,76 @@
                 "content": "(Alice gently strokes the clothing which is a testament of one girl protecting the other. You bid farewell to Alice and get ready to tell Elsa the truth.)",
                 "npc": 700032,
                 "speakerName": "Alice"
+              }
+            ]
+          },
+          {
+            "id": "1704175978756175619",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51000501,
+                "content": "I'm counting on you...",
+                "npc": 700006,
+                "options": [
+                  {
+                    "id": 510005011,
+                    "content": "Elsa, I have news about Annie...",
+                    "next": 51000502
+                  }
+                ]
+              },
+              {
+                "id": 51000502,
+                "content": "My goodness! Have you found Annie?",
+                "npc": 700006,
+                "options": [
+                  {
+                    "id": 510005021,
+                    "content": "I'm so sorry, but Annie has passed away... my condolences. In her final moments, she helped another girl survive, and her kindness will always be remembered.",
+                    "next": 51000503
+                  }
+                ]
+              },
+              {
+                "id": 51000503,
+                "content": "...",
+                "npc": 700006,
+                "next": 51000504
+              },
+              {
+                "id": 51000504,
+                "content": "Nonsense... That's utter nonsense!",
+                "npc": 700006,
+                "next": 51000591
+              },
+              {
+                "id": 51000591,
+                "content": "My Annie... My sweet Annie, she'd never leave her mother like this! You're lying, you dirty liar!",
+                "npc": 700006,
+                "next": 51000590
+              },
+              {
+                "id": 51000590,
+                "content": "I've been a terrible mother — how could I just wait here for others to help me? My Annie must've waited for me for so long... It's okay, I'll set off to find her now... I'll find my baby on my own...",
+                "npc": 700006,
+                "next": 51000505
+              },
+              {
+                "id": 51000505,
+                "content": "How do you think a child can manage without her mother...",
+                "npc": 700006,
+                "next": 51000506
+              },
+              {
+                "id": 51000506,
+                "content": "(She thrusts the coin pouch into your arms and walks away, as if spellbound. Tears and a smile mingle on her weary face, flickering faintly before she disappears into the distance.)",
+                "next": 51000507
+              },
+              {
+                "id": 51000507,
+                "content": "(A gentle lie might bring comfort for a time — but in the end, truth must be faced. Time will mend what it can... and perhaps, someday, she'll heal.)"
               }
             ]
           }
@@ -118462,6 +119264,115 @@
                 "npc": 700233
               }
             ]
+          },
+          {
+            "id": "1704175978764175755",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51000701,
+                "content": "...",
+                "npc": 700032,
+                "options": [
+                  {
+                    "id": 510007011,
+                    "content": "Have you been wandering around here all this time? Is there anything I can help you with?",
+                    "next": 51000702
+                  }
+                ]
+              },
+              {
+                "id": 51000702,
+                "content": "I... I feel so foggy. Honestly, I don't even know who I am — or where this place is.",
+                "npc": 700032,
+                "next": 51000703
+              },
+              {
+                "id": 51000703,
+                "content": "A kind-hearted doctor found me up in the northern mountains and brought me back. She said I had a terrible fever... and that it probably damaged my memory.",
+                "npc": 700032,
+                "options": [
+                  {
+                    "id": 510007031,
+                    "content": "I understand. Losing a sense of belonging is awful.",
+                    "next": 51000705,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510007032,
+                    "content": "Staying out here isn't safe. It's best to figure out your true identity as soon as possible.",
+                    "next": 51000705,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510007033,
+                    "content": "Seeing is not always believing. You've got to investigate everything thoroughly before jumping to conclusions.",
+                    "next": 51000705,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51000705,
+                "content": "The only thing I could remember these past few days was the relentless blizzard as I struggled to make my way across the mountain... But right now I'm in no condition to go anywhere. Could you help me with the investigation?",
+                "npc": 700032,
+                "options": [
+                  {
+                    "id": 510007051,
+                    "content": "(Accept)",
+                    "next": 51000706
+                  },
+                  {
+                    "id": 51000002,
+                    "content": "(Decline)"
+                  }
+                ]
+              },
+              {
+                "id": 51000706,
+                "content": "Apart from the kind doctor who saved me, you are the only one willing to offer a helping hand to a penniless girl like me. I don't know what else to say but thank you...",
+                "npc": 700032,
+                "next": 51000790
+              },
+              {
+                "id": 51000790,
+                "content": "Oh — this was in my coat pocket. I don't remember anything about it... but maybe it's important?",
+                "npc": 700032,
+                "next": 51000791
+              },
+              {
+                "id": 51000791,
+                "content": "(The threads begin to connect between the two individuals you've recently come across — Ms Elsa, who's been driven near to madness in search of her daughter, and this amnesiac girl. And then there's the letter, seemingly penned to a mother.)",
+                "next": 51000792
+              },
+              {
+                "id": 51000792,
+                "content": "(The thought crosses your mind that the girl bereft of memory might very well be Elsa's missing daughter, Annie.)",
+                "next": 51000793
+              },
+              {
+                "id": 51000793,
+                "content": "(Intuition suggests bringing her to Elsa for recognition, yet Elsa's delusion leads her to see Annie in every youthful face... Gathering more substantial evidence of the girl's identity seems the prudent course at the moment.)",
+                "next": 51000794
+              },
+              {
+                "id": 51000794,
+                "content": "(If anyone holds the key to this girl's past, it's the doctor who saved her back then.)"
+              }
+            ]
           }
         ]
       },
@@ -118582,7 +119493,264 @@
       {
         "id": 20020403,
         "name": "Complete any Phoxhunter Commission \n(Can accept this commission via the Commission page)",
-        "desc": "You agreed to work with Wells on the commission.\nGet ready and go with him."
+        "desc": "You agreed to work with Wells on the commission.\nGet ready and go with him.",
+        "nodes": [
+          {
+            "id": "1700739319090214464",
+            "type": "TalkNode",
+            "name": "check",
+            "dialogues": [
+              {
+                "id": 51001901,
+                "content": "(Before even enter The Asphodel, you already hear the echoing curse words, as if wanting the whole city to listen to his rage.)",
+                "next": 51001902
+              },
+              {
+                "id": 51001902,
+                "content": "How dare you show yourself in front of my face! I was such a fool. I should have done more than just kick you out!",
+                "npc": 700047,
+                "next": 51001903
+              },
+              {
+                "id": 51001903,
+                "content": "You paraded around with our family name for so many years. Did you use my warning letters as kindling?",
+                "npc": 700047,
+                "next": 51001904
+              },
+              {
+                "id": 51001904,
+                "content": "Yes, yes, you are right, but after all, that surname is what you...",
+                "npc": 200015,
+                "next": 51001905
+              },
+              {
+                "id": 51001905,
+                "content": "(Wells, like a child who's misbehaved, stands with his head bowed in front of an old man, allowing the latter's finger to jab at him.)",
+                "next": 51001906
+              },
+              {
+                "id": 51001906,
+                "content": "Shut up! You have no talent, yet you try to be a Phoxhunter. Do you really think you deserve this money and fame? Running around like a dog for others. The inner city now sees the Wells family as a joke!",
+                "npc": 700047,
+                "next": 51001907
+              },
+              {
+                "id": 51001907,
+                "content": "I was just thinking, if I make something of myself someday, maybe you'll reconsider things about me and Sara—",
+                "npc": 200015,
+                "next": 51001908
+              },
+              {
+                "id": 51001908,
+                "content": "How dare you mention her name! Forget about it. You and my daughter will never get back together, never!",
+                "npc": 700047,
+                "next": 51001909
+              },
+              {
+                "id": 51001909,
+                "content": "Don't say I didn't warn you. If you dare step foot in the inner city, I'll break your legs.",
+                "npc": 700047,
+                "next": 51001910
+              },
+              {
+                "id": 51001910,
+                "content": "Yeah, yeah...",
+                "npc": 200015,
+                "next": 51001911
+              },
+              {
+                "id": 51001911,
+                "content": "(The old man, glaring at the nodding Wells, grows even more infuriated, looking around and finally setting his eyes on you, who just enters The Asphodel.)",
+                "next": 51001912
+              },
+              {
+                "id": 51001912,
+                "content": "And you, a Phoxhunter? I've seen many like you, dreaming of making a name for yourself as a Phoxhunter, and becoming a laurelled Charon.",
+                "npc": 700047,
+                "next": 51001990
+              },
+              {
+                "id": 51001990,
+                "content": "Let me tell you something. <H>Icelake hasn't had many living laurelled Charons for years.</> Charons only end up rotting in some dark alley!",
+                "npc": 700047,
+                "next": 51001913
+              },
+              {
+                "id": 51001913,
+                "content": "Father-in-law, {nickname} is a capable one, not a loser like me...",
+                "npc": 200015,
+                "next": 51001914
+              },
+              {
+                "id": 51001914,
+                "content": "Mr. Ferdinand Wells, I had no right to interfere what happened between you two. But if you keep harassing my other guests for no reason like this, The Asphodel might have to show you the door.",
+                "npc": 200003,
+                "next": 51001915
+              },
+              {
+                "id": 51001915,
+                "content": "(Camilla, sitting behind the counter, puffs out a ring of smoke. Her casual words echoing powerfully in the empty tavern.)",
+                "next": 51001991
+              },
+              {
+                "id": 51001991,
+                "content": "(As if the temperature in The Asphodel rose significantly in the smoke.)",
+                "options": [
+                  {
+                    "id": 510019911,
+                    "content": "Mr. Wells isn't as bad as you say. You're pushing things too far.",
+                    "next": 51001918,
+                    "imprCheck": [
+                      1011,
+                      "Empathy",
+                      70
+                    ]
+                  },
+                  {
+                    "id": 510019912,
+                    "content": "We have no interest in becoming laurelled Charon. Don't try to put everyone into a box with your shallow understanding.",
+                    "next": 51001918,
+                    "imprCheck": [
+                      1011,
+                      "Benefit",
+                      80
+                    ]
+                  },
+                  {
+                    "id": 510019913,
+                    "content": "Watch your mouth. Otherwise, another \"Mr. Wells\" might end up getting beaten up like a dog today.",
+                    "next": 51001918,
+                    "imprCheck": [
+                      1011,
+                      "Chaos",
+                      75
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51001918,
+                "content": "...Hmph.",
+                "npc": 700047,
+                "next": 51001919
+              },
+              {
+                "id": 51001919,
+                "content": "(The elder is left speechless by your words, and glares fiercely before storming out.)",
+                "next": 51001920
+              },
+              {
+                "id": 51001920,
+                "content": "Sorry for causing everyone so much trouble. Well, my father-in-law... I mean Mr. Ferdinand Wells hasn't been to the outer city for years.",
+                "npc": 200015,
+                "next": 51001992
+              },
+              {
+                "id": 51001992,
+                "content": "Let's just say he's more... traditional. Don't take his words to heart.",
+                "npc": 200015,
+                "next": 51001921
+              },
+              {
+                "id": 51001921,
+                "content": "It's alright. We wouldn't be here today if we gave in to every slight or insult. Anyway, I heard you were injured recently during a commission. Are you okay?",
+                "npc": 100001,
+                "next": 51001922
+              },
+              {
+                "id": 51001922,
+                "content": "It's nothing. Luckily this thing saved me from being fatally injured.",
+                "npc": 200015,
+                "next": 51001923
+              },
+              {
+                "id": 51001923,
+                "content": "(Wells takes out a finely crafted pocket watch from his chest. The dial is covered in cracks, and the hands are twisted upwards in an exaggerated manner, making closing the watch cover a mere wish.)",
+                "options": [
+                  {
+                    "id": 510019231,
+                    "content": "The shape of these cracks... I see. It protected you from a fatal blow to the chest.",
+                    "next": 51001924,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510019232,
+                    "content": "...Mr. Wells, no matter how hard life is, you shouldn't steal someone else's watch.",
+                    "next": 51001924,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51001924,
+                "content": "He made it himself. Over a decade ago, there wasn't a soul who hadn't heard of Todd Wells, the prodigy clockmaker. Back then, his craftsmanship almost won him the title of Laurelled Charon.",
+                "npc": 200003,
+                "next": 51001925
+              },
+              {
+                "id": 51001925,
+                "content": "Such a beautifully crafted watch. It's a pity it cracked like that.",
+                "npc": 100001,
+                "next": 51001926
+              },
+              {
+                "id": 51001926,
+                "content": "Haha. Actually the hands had been broken for a long time, you know. I just keep it with me as a memento.",
+                "npc": 200015,
+                "next": 51001927
+              },
+              {
+                "id": 51001927,
+                "content": "Why don't you try to fix it then?",
+                "npc": 100001,
+                "next": 51001928
+              },
+              {
+                "id": 51001928,
+                "content": "The tools and materials needed for repairs were cut off by my father-in-law, so even if I wanted to fix it, I just couldn't.",
+                "npc": 200015,
+                "next": 51001929
+              },
+              {
+                "id": 51001929,
+                "content": "...It's the way it is. Not everything can be fixed just because you want to and put effort into it.",
+                "npc": 200015,
+                "next": 51001930
+              },
+              {
+                "id": 51001930,
+                "content": "...",
+                "npc": 100001,
+                "next": 51001931
+              },
+              {
+                "id": 51001931,
+                "content": "Anyway! Enough about that. Thanks again for stepping in — if you hadn't, I'd be half-deaf by now from all that yelling.",
+                "npc": 200015,
+                "next": 51001932
+              },
+              {
+                "id": 51001932,
+                "content": "Come on, drinks are on me tonight! I'll crack open these kegs — you handle those ones over there!",
+                "npc": 200015,
+                "next": 51001934
+              },
+              {
+                "id": 51001934,
+                "content": "...",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 20020404,
@@ -119108,6 +120276,48 @@
                 "npc": 100001
               }
             ]
+          },
+          {
+            "id": "170184691563634954",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51002201,
+                "content": "Ladies and gentlemen, drop by and drop a few coins, and you can join The Fisheries in Icelake to get the best and latest— Oh! It's you...",
+                "npc": 700048,
+                "next": 51002202
+              },
+              {
+                "id": 51002202,
+                "content": "Is this yours?",
+                "npc": 100001,
+                "next": 51002203
+              },
+              {
+                "id": 51002203,
+                "content": "Ah! That's it! The book I used to pore over for hours as a kid. I'd sit there staring at the pictures, dreaming of life beyond our tiny island...",
+                "npc": 700048,
+                "next": 51002204
+              },
+              {
+                "id": 51002204,
+                "content": "Thank you. Thank you so much. I need to give it a good read tonight. But for now, *sigh* making a living is more important.",
+                "npc": 700048,
+                "next": 51002205
+              },
+              {
+                "id": 51002205,
+                "content": "Take care. And no more scamming people, alright? Oh, and here — some dried fish, caught off Purgatorio Island.",
+                "npc": 100001,
+                "next": 51002206
+              },
+              {
+                "id": 51002206,
+                "content": "Oh, wow... Thank you. Really. Thank you so much...",
+                "npc": 700048
+              }
+            ]
           }
         ]
       },
@@ -119254,6 +120464,100 @@
               {
                 "id": 51002911,
                 "content": "It's okay. I doubt there are more than five people in Icelake who can understand his words.",
+                "npc": 200003
+              }
+            ]
+          },
+          {
+            "id": "17471183338781300",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51002901,
+                "content": "(A loud man is holding court, his dramatic recitations drawing bursts of laughter from the patrons.)",
+                "next": 51002902
+              },
+              {
+                "id": 51002902,
+                "content": "Phantoms from the deep mountains, ghosts from the Icelake itself!",
+                "npc": 700015,
+                "next": 51002903
+              },
+              {
+                "id": 51002903,
+                "content": "They're pressing in! They're getting closer!",
+                "npc": 700015,
+                "next": 51002904
+              },
+              {
+                "id": 51002904,
+                "content": "Hey, you're here.",
+                "npc": 200003,
+                "options": [
+                  {
+                    "id": 510029041,
+                    "content": "Reporting for duty.",
+                    "next": 51002905
+                  }
+                ]
+              },
+              {
+                "id": 51002905,
+                "content": "I don't have any proper jobs for you at the moment, but...",
+                "npc": 200003,
+                "next": 51002906
+              },
+              {
+                "id": 51002906,
+                "content": "...You can hardly imagine!",
+                "npc": 700015,
+                "next": 51002907
+              },
+              {
+                "id": 51002907,
+                "content": "A phantom!!! A silent stalker that ignores the doors!!!",
+                "npc": 700015,
+                "next": 51002908
+              },
+              {
+                "id": 51002908,
+                "content": "As you can see, we've got a bit of a situation here.",
+                "npc": 200003,
+                "options": [
+                  {
+                    "id": 510029081,
+                    "content": "Who's that gentleman?",
+                    "next": 51002909
+                  }
+                ]
+              },
+              {
+                "id": 51002909,
+                "content": "Mr Buck. Can't handle even a drop of alcohol — so it's always fruit juice or milk for him. Profession... third-rate playwright, first-rate producer of mumble-jumble. He's been spinning his yarns for a while now.",
+                "npc": 200003,
+                "next": 51002910
+              },
+              {
+                "id": 51002910,
+                "content": "As you can see, the man struggles to convey his thoughts clearly. Could you help by translating his flamboyant narratives?",
+                "npc": 200003,
+                "options": [
+                  {
+                    "id": 510029101,
+                    "content": "Perhaps sorting out Mr Buck's convoluted vocabulary and reorganising the keywords would clarify his script.",
+                    "next": 51002912,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      55
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51002912,
+                "content": "Only a sharp mind like yours is suited for this task.",
                 "npc": 200003
               }
             ]
@@ -119598,6 +120902,176 @@
               {
                 "id": 51003114,
                 "content": "And those popcorn kernels on the kid's sleeve? They match exactly with what I found under Buck's window. Everything's pointing to him. Time to have a chat.",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "171264403137816826",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51003301,
+                "content": "Achoo! It's getting colder...",
+                "npc": 700080,
+                "next": 51003302
+              },
+              {
+                "id": 51003302,
+                "content": "Even a Charon has limits on cold tolerance... The temperature will be down by twenty degrees this evening. We might lose a few kids to the cold. *sigh*...",
+                "npc": 700080,
+                "next": 51003303
+              },
+              {
+                "id": 51003303,
+                "content": "Hello.",
+                "npc": 100001,
+                "next": 51003304
+              },
+              {
+                "id": 51003304,
+                "content": "Greetings, my dear patron! Did you enjoy the play? You must be hungry after sitting through the show for three hours! Would you like some snacks and drinks?",
+                "npc": 700080,
+                "next": 51003305
+              },
+              {
+                "id": 51003305,
+                "content": "Or perhaps you were captivated by the thrilling performance — how about a poster with the thespians' signatures?",
+                "npc": 700080,
+                "options": [
+                  {
+                    "id": 510033051,
+                    "content": "How's business today? Will it cover your heating expenses for the night?",
+                    "next": 510033053,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510033052,
+                    "content": "These are hardly enough for me. I'm a big eater.",
+                    "next": 510033054,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 510033053,
+                "content": "Your concern is appreciated. I can either afford enough food or fuel. Guess for some people, having it all isn't an option.",
+                "npc": 700080,
+                "next": 51003306
+              },
+              {
+                "id": 510033054,
+                "content": "Then think of them as appetisers! There isn't much, but the flavor is definitely top-notch!",
+                "npc": 700080,
+                "next": 51003306
+              },
+              {
+                "id": 51003306,
+                "content": "Okay, let's see what you've got.",
+                "npc": 100001,
+                "next": 51003307
+              },
+              {
+                "id": 51003307,
+                "content": "A special edition poster signed by Vitti, Tales of Icelake souvenir albums, glacial meltwater, theatre-themed popcorn... and refreshing beer!",
+                "npc": 700080,
+                "next": 51003308
+              },
+              {
+                "id": 51003308,
+                "content": "Don't you worry! This barely contains any alcohol and won't get you drunk!",
+                "npc": 700080,
+                "next": 51003309
+              },
+              {
+                "id": 51003309,
+                "content": "That's hard to say... Do you happen to know Mr Buck the playwright?",
+                "npc": 100001,
+                "next": 51003310
+              },
+              {
+                "id": 51003310,
+                "content": "Of course I do! Mr Buck frequents the theatre and is one of my most cherished patrons! Despite being a noble, he actually respects Charon kids like me. Mr Buck is one fine gentleman!",
+                "npc": 700080,
+                "next": 51003311
+              },
+              {
+                "id": 51003311,
+                "content": "I know people make fun of Mr Buck, but unlike most people, he genuinely deserves respect.",
+                "npc": 700080,
+                "next": 51003312
+              },
+              {
+                "id": 51003312,
+                "content": "That may be true, but I doubt it gives you the right to sneak into his house through the window and pour beer into his milk.",
+                "npc": 100001,
+                "next": 51003313
+              },
+              {
+                "id": 51003313,
+                "content": "H—How did you know?",
+                "npc": 700080,
+                "next": 51003321
+              },
+              {
+                "id": 51003321,
+                "content": "(Just as I thought.)",
+                "npc": 100001,
+                "next": 51003314
+              },
+              {
+                "id": 51003314,
+                "content": "Mr Buck has a habit of writing his works at night. Your actions have delayed his progress for a month, so he hired me to find the mysterious \"Inspiration Stealer\".",
+                "npc": 100001,
+                "options": [
+                  {
+                    "id": 510033141,
+                    "content": "You don't hate him and you stole nothing from him. Let me guess why you sneaked into his home in the middle of the night.",
+                    "next": 51003316,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      65
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003316,
+                "content": "Your business income isn't enough to cover your needs through the winter. Mr Buck might not be wealthy, but he is a noble and his house is warm enough. So, you sneaked into Mr Buck's home for the heating.",
+                "npc": 100001,
+                "next": 51003317
+              },
+              {
+                "id": 51003317,
+                "content": "As for why you chose Mr Buck — even the smallest amount of alcohol makes him doze off. You could then sleep in his house without the fear of freezing to death. Am I right?",
+                "npc": 100001,
+                "next": 51003318
+              },
+              {
+                "id": 51003318,
+                "content": "Ugh... You are indeed a great detective. You've got every detail right.",
+                "npc": 700080,
+                "next": 51003319
+              },
+              {
+                "id": 51003319,
+                "content": "You might as well arrest me. I'm truly sorry for what I did. Though if I hadn't done it, I wouldn't be here for you to arrest...",
+                "npc": 700080,
+                "next": 51003320
+              },
+              {
+                "id": 51003320,
+                "content": "I don't get to decide what to do with you. I'm taking you to my client.",
                 "npc": 100001
               }
             ]
@@ -119973,6 +121447,166 @@
                 "content": "Belinda gives him a hug and he leaves with some hesitation."
               }
             ]
+          },
+          {
+            "id": "1714464198929108104",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51003604,
+                "content": "Greetings. I haven't seen you around before. Have you just arrived at Icelake? Is there anything you seek from this old lady?",
+                "npc": 700081,
+                "options": [
+                  {
+                    "id": 510036041,
+                    "content": "Emma has a message for you. Something came up and she can't meet you today, but she wanted you to have this.",
+                    "next": 51003605
+                  }
+                ]
+              },
+              {
+                "id": 51003605,
+                "content": "(The doll, though crudely made, captures Belinda's essence. The old Charon lady's eyes light up with joy as she gently caresses the doll.)",
+                "next": 51003606
+              },
+              {
+                "id": 51003606,
+                "content": "I can feel the plaza's essence in this doll... Ah, my memory eludes me! It's Memorial Week, filled with all sorts of events...",
+                "npc": 700081,
+                "next": 51003607
+              },
+              {
+                "id": 51003607,
+                "content": "Thank you very much, {性别:young man|young lady}.",
+                "npc": 700081,
+                "next": 51003608
+              },
+              {
+                "id": 51003608,
+                "content": "(She observes you silently for a long moment.)",
+                "next": 51003609
+              },
+              {
+                "id": 51003609,
+                "content": "You seem to be carrying a heavy burden. I smell the ocean's breeze and tides on you, and the lingering warmth in your palm... it is fading...",
+                "npc": 700081,
+                "next": 51003610
+              },
+              {
+                "id": 51003610,
+                "content": "Every moment you spend in this city is entwined in confusion and sorrow. You try to hide your pain, keeping your sorrows buried deep away from others...",
+                "npc": 700081,
+                "next": 51003611
+              },
+              {
+                "id": 51003611,
+                "content": "Pardon me for this intrusion, but have you recently lost someone dear?",
+                "npc": 700081,
+                "options": [
+                  {
+                    "id": 510036111,
+                    "content": "You are a Charon with special abilities?",
+                    "next": 51003612,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510036112,
+                    "content": "...",
+                    "next": 51003613,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510036113,
+                    "content": "I don't believe in superstitions and I don't understand a word you say.",
+                    "next": 51003614,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003612,
+                "content": "Indeed. It is rare for Charons to reach my age.",
+                "npc": 700081,
+                "next": 51003615
+              },
+              {
+                "id": 51003613,
+                "content": "Your soul is in pain.",
+                "npc": 700081,
+                "next": 51003615
+              },
+              {
+                "id": 51003614,
+                "content": "You don't have to put on an act. I see the pain you hide.",
+                "npc": 700081,
+                "next": 51003615
+              },
+              {
+                "id": 51003615,
+                "content": "Though I'm unsure how to ease your suffering, an old saying might provide some comfort...",
+                "npc": 700081,
+                "next": 51003616
+              },
+              {
+                "id": 51003616,
+                "content": "\"They don their boots to traverse as Fate retracts her spindle. Doubt and uncertainty dost confound, but what is lost may come around.\"",
+                "npc": 700081,
+                "options": [
+                  {
+                    "id": 510036161,
+                    "content": "Belinda seems to hint at ...",
+                    "next": 51003618,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      65
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003618,
+                "content": "It's the epilogue from The Spindle of the Goddess of Fate... The hero, having lost everything, reunites with all they had lost in the realm of duality... Are you suggesting we'll meet again?",
+                "npc": 100001,
+                "next": 51003619
+              },
+              {
+                "id": 51003619,
+                "content": "Consider it a token of gratitude for bringing the doll. You are clever, as I've seen... You'll unravel the meaning on your own.",
+                "npc": 700081,
+                "next": 51003620
+              },
+              {
+                "id": 51003620,
+                "content": "And one more thing — every soul who finds their way here gets a little gift from me. Just bring me a piece of wire that's been touched by your presence. No rush. I'll be here.",
+                "npc": 700081,
+                "next": 51003621
+              },
+              {
+                "id": 51003621,
+                "content": "Touched by my presence...? Hmm. Not exactly sure what that means... But anything I've worn or handled should count, right?",
+                "npc": 100001,
+                "next": 51003622
+              },
+              {
+                "id": 51003622,
+                "content": "There should be plenty of scrap wire lying around in Glevum Pit. I'll try my luck there.",
+                "npc": 100001
+              }
+            ]
           }
         ]
       },
@@ -120022,6 +121656,34 @@
               {
                 "id": 51003709,
                 "content": "(You still have no idea what Belinda wants the wire for — but that doesn't mean you're just going to let someone run off with it. Chase down Lulu Lunoloot and give her a proper lesson.)"
+              }
+            ]
+          },
+          {
+            "id": "17149829349441846317",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51003701,
+                "content": "(Belinda takes the wires from you and crafts it into a girl's silhouette. You can see that the handicraft resembles Berenica.)",
+                "next": 51003702
+              },
+              {
+                "id": 51003702,
+                "content": "My skills are modest. I see only shadows and cannot be sure if this resembles the one you yearn for. I hope it brings you comfort.",
+                "npc": 700081,
+                "next": 51003703
+              },
+              {
+                "id": 51003703,
+                "content": "It is my sincere wish that you are reunited.",
+                "npc": 700081,
+                "next": 51003704
+              },
+              {
+                "id": 51003704,
+                "content": "(You leave Belinda's tent, now understanding why Emma treasures this place. Belinda's powers may be limited, but she uses them to mend souls and soothe wounds.)"
               }
             ]
           }
@@ -121115,6 +122777,197 @@
                 "speakerName": "???"
               }
             ]
+          },
+          {
+            "id": "1715943530904118637",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51004201,
+                "content": "Tsk. A new face.",
+                "npc": 700096,
+                "next": 51004202
+              },
+              {
+                "id": 51004202,
+                "content": "(The man before you squints, his lips cracked and dry, as he gruffly spits out his words.)",
+                "next": 51004203
+              },
+              {
+                "id": 51004203,
+                "content": "Tell me. Who sent you here?",
+                "npc": 700096,
+                "options": [
+                  {
+                    "id": 510042031,
+                    "content": "You did, didn't you?",
+                    "next": 51004204,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510042032,
+                    "content": "The person you're waiting for.",
+                    "next": 51004205,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510042033,
+                    "content": "The silver coins in my pocket sent me here.",
+                    "next": 51004206,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51004204,
+                "content": "(Answering a question with another question always works.)",
+                "next": 51004207
+              },
+              {
+                "id": 51004205,
+                "content": "(It is obvious that he's waiting for someone.)",
+                "next": 51004207
+              },
+              {
+                "id": 51004206,
+                "content": "(I don't know what he meant, but that's an answer that no one will refuse.)",
+                "next": 51004207
+              },
+              {
+                "id": 51004207,
+                "content": "(The man broods silently for a while, assessing you. His posture decrepit as he raises his head with an audible creak.)",
+                "next": 51004208
+              },
+              {
+                "id": 51004208,
+                "content": "You smooth talker.",
+                "npc": 700096,
+                "next": 51004209
+              },
+              {
+                "id": 51004209,
+                "content": "(He snorted, but he seemed to be satisfied with your answer.)",
+                "next": 51004210
+              },
+              {
+                "id": 51004210,
+                "content": "I don't care who the fixer is. You're here for the stuff in my pocket, ain't that right?",
+                "npc": 700096,
+                "next": 51004211
+              },
+              {
+                "id": 51004211,
+                "content": "(He opens his collar to reveal a dull iron piece.)",
+                "next": 51004212
+              },
+              {
+                "id": 51004212,
+                "content": "(After showing it, he quickly conceals it again, looking around warily.)",
+                "next": 51004213
+              },
+              {
+                "id": 51004213,
+                "content": "Calibre 4. Double barrelled. Single shot. No Charon or Filthoid can survive a blast from this baby.",
+                "npc": 700096,
+                "next": 51004214
+              },
+              {
+                "id": 51004214,
+                "content": "(His lip curls, as if he's just discussing the uses of a pesticide.)",
+                "next": 51004215
+              },
+              {
+                "id": 51004215,
+                "content": "You can have it for free, but I'll need you to do something for me.",
+                "npc": 700096,
+                "options": [
+                  {
+                    "id": 510042151,
+                    "content": "You...",
+                    "next": 51004216
+                  },
+                  {
+                    "id": 510042152,
+                    "content": "Well...",
+                    "next": 51004216
+                  }
+                ]
+              },
+              {
+                "id": 51004216,
+                "content": "Cut the crap. You're here for this piece of metal, ain't that right?",
+                "npc": 700096,
+                "next": 51004217
+              },
+              {
+                "id": 51004217,
+                "content": "Do the job, and it's yours. I can even give you extra money.",
+                "npc": 700096,
+                "options": [
+                  {
+                    "id": 510042171,
+                    "content": "(Well, can't let it fall into the wrong hands...)",
+                    "next": 51004219,
+                    "imprCheck": [
+                      1011,
+                      "Morality",
+                      70
+                    ]
+                  },
+                  {
+                    "id": 510042172,
+                    "content": "(It looks like a handy piece. I gotta get it...)",
+                    "next": 51004219,
+                    "imprCheck": [
+                      1011,
+                      "Benefit",
+                      70
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51004219,
+                "content": "Fine, I'm in. What's the deal?",
+                "npc": 100001,
+                "next": 51004220
+              },
+              {
+                "id": 51004220,
+                "content": "Good. I'll give you a location. Kill everything there except for a woman.",
+                "npc": 700096,
+                "next": 51004221
+              },
+              {
+                "id": 51004221,
+                "content": "So... A bad romance, huh?",
+                "npc": 100001,
+                "next": 51004222
+              },
+              {
+                "id": 51004222,
+                "content": "None of your beeswax. Just get it done.",
+                "npc": 700096,
+                "next": 51004223
+              },
+              {
+                "id": 51004223,
+                "content": "(The man tightens his collar and licks his dried lips, unwilling to utter another word.)"
+              }
+            ]
           }
         ]
       }
@@ -121310,6 +123163,176 @@
                 "content": "(The girl covers her ears and runs away.)"
               }
             ]
+          },
+          {
+            "id": "17167926144881255170",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51003901,
+                "content": "(The girl stands at the corner with her head down. She looks very upset.)",
+                "options": [
+                  {
+                    "id": 510039011,
+                    "content": "(Try to talk to her)",
+                    "next": 51003903,
+                    "imprCheck": [
+                      1011,
+                      "Empathy",
+                      100
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003903,
+                "content": "It's you...",
+                "npc": 700104,
+                "next": 51003904
+              },
+              {
+                "id": 51003904,
+                "content": "Were those your... classmates?",
+                "npc": 100001,
+                "next": 51003905
+              },
+              {
+                "id": 51003905,
+                "content": "Yeah... I'm sorry... Really sorry... I messed up again.",
+                "npc": 700104,
+                "next": 51003906
+              },
+              {
+                "id": 51003906,
+                "content": "Were they picking on you?",
+                "npc": 100001,
+                "next": 51003907
+              },
+              {
+                "id": 51003907,
+                "content": "No... It's all my fault...",
+                "npc": 700104,
+                "next": 51003908
+              },
+              {
+                "id": 51003908,
+                "content": "I can't do anything right. Both my mom and my teachers say I'm stupid.",
+                "npc": 700104,
+                "next": 51003909
+              },
+              {
+                "id": 51003909,
+                "content": "My classmates are smart. They said that the reason I'm stupid is because I'm a Charon, and my parents hid my horns with magic.",
+                "npc": 700104,
+                "next": 51003910
+              },
+              {
+                "id": 51003910,
+                "content": "It's all my fault... I shouldn't have showed up among Solas...",
+                "npc": 700104,
+                "next": 51003911
+              },
+              {
+                "id": 51003911,
+                "content": "(You know that is a blatant lie. It also brings up unpleasant memories of what happened to you and Berenica on Purgatorio Island.)",
+                "next": 51003912
+              },
+              {
+                "id": 51003912,
+                "content": "(Those malicious acts may have been invited because of your weakness and differences, or, perhaps they just happened — the perpetrators only wanted to vent their hatred and you were just unlucky.)",
+                "next": 51003913
+              },
+              {
+                "id": 51003913,
+                "content": "(But this girl is more helpless than you. She didn't even have a friend like Berenica to share the pain.)",
+                "options": [
+                  {
+                    "id": 510039131,
+                    "content": "You did nothing wrong.",
+                    "next": 51003914,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510039132,
+                    "content": "Why bother playing with them? You should give them a thrashing.",
+                    "next": 51003917,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510039133,
+                    "content": "They lied. Don't believe a word they say.",
+                    "next": 51003919,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51003914,
+                "content": "It isn't my fault...?",
+                "npc": 700104,
+                "next": 51003915
+              },
+              {
+                "id": 51003917,
+                "content": "Huh...?",
+                "npc": 700104,
+                "next": 51003918
+              },
+              {
+                "id": 51003919,
+                "content": "Huh...?",
+                "npc": 700104,
+                "next": 51003920
+              },
+              {
+                "id": 51003915,
+                "content": "The fault lies with those who are mean to others.",
+                "npc": 100001,
+                "next": 51003916
+              },
+              {
+                "id": 51003918,
+                "content": "Since they call you a demon, you might as well act like one.",
+                "npc": 100001,
+                "next": 51003922
+              },
+              {
+                "id": 51003920,
+                "content": "They came up with a lie and made fun of you. But...",
+                "npc": 100001,
+                "next": 51003921
+              },
+              {
+                "id": 51003916,
+                "content": "There's nothing to be afraid of. Fight back.",
+                "npc": 100001,
+                "next": 51003922
+              },
+              {
+                "id": 51003922,
+                "content": "Let's go back and confront them.",
+                "npc": 100001
+              },
+              {
+                "id": 51003921,
+                "content": "Since they call you a demon, you might as well act like one.",
+                "npc": 100001,
+                "next": 51003922
+              }
+            ]
           }
         ]
       },
@@ -121498,6 +123521,356 @@
                 "content": "(The students scamper off quickly.)"
               }
             ]
+          },
+          {
+            "id": "17168652926013292",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51004107,
+                "content": "See? That's all they can do.",
+                "npc": 100001,
+                "next": 51004108
+              },
+              {
+                "id": 51004108,
+                "content": "...Yeah!",
+                "npc": 700105,
+                "next": 51004109
+              },
+              {
+                "id": 51004109,
+                "content": "Thanks for helping me... You looked really cool throwing those punches!",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041091,
+                    "content": "And you seem to be really good at spouting insults. Practice when you have the chance. You'll get better.",
+                    "next": 51004110,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510041092,
+                    "content": "You flatter me. The most important lesson is that you learned to stand up for yourself.",
+                    "next": 51004110,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51004110,
+                "content": "R—Really? I... I just said the things that I'd wanted to say but couldn't.",
+                "npc": 700105,
+                "next": 51004111
+              },
+              {
+                "id": 51004111,
+                "content": "Thank you so much. I've never felt so relieved and happy in my life!",
+                "npc": 700105,
+                "next": 51004112
+              },
+              {
+                "id": 51004112,
+                "content": "You're welcome. Your classmates should leave you alone for a while. I'll walk you home. Here, this is my address — come find me if they give you trouble again.",
+                "npc": 100001,
+                "next": 51004113
+              },
+              {
+                "id": 51004113,
+                "content": "I don't want to go home...!",
+                "npc": 700105,
+                "next": 51004114
+              },
+              {
+                "id": 51004114,
+                "content": "I'm a Charon and I want to stay with my people...",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041141,
+                    "content": "(Try to persuade Faye)",
+                    "next": 51004116,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      100
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51004116,
+                "content": "Don't you see that? They acted all tough and mighty towards you, but once someone stronger shows up, they just run away.",
+                "npc": 100001,
+                "next": 51004117
+              },
+              {
+                "id": 51004117,
+                "content": "They're not as strong as they pretend to be. Likewise, their words are not as truthful as they seem. Faye, don't listen to them. You're a hundred percent Sola.",
+                "npc": 100001,
+                "next": 51004118
+              },
+              {
+                "id": 51004118,
+                "content": "Remember, never doubt yourself just because someone says bad things about you... My family taught me this, and I hope you'll keep it in mind too.",
+                "npc": 100001,
+                "next": 51004119
+              },
+              {
+                "id": 51004119,
+                "content": "(The girl blinks her eyes in confusion. She probably doesn't understand everything you just said, but her expression softens.)",
+                "next": 51004120
+              },
+              {
+                "id": 51004120,
+                "content": "Okay... If that's what you say, I'll try my best! But before I leave, I still have a teensy-weensy request...",
+                "npc": 700105,
+                "next": 51004121
+              },
+              {
+                "id": 51004121,
+                "content": "May I touch your horn?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041211,
+                    "content": "(Agree)",
+                    "next": 51004122
+                  },
+                  {
+                    "id": 510041212,
+                    "content": "(Refuse)",
+                    "next": 51004124
+                  }
+                ]
+              },
+              {
+                "id": 51004122,
+                "content": "Thank you!",
+                "npc": 700105,
+                "next": 51004123
+              },
+              {
+                "id": 51004124,
+                "content": "Alright then. I won't touch it. But can I at least get a better look...?",
+                "npc": 700105,
+                "next": 51004125
+              },
+              {
+                "id": 51004123,
+                "content": "(The girl carefully extends her frail hand and touches the horn on your head.)",
+                "next": 51004126
+              },
+              {
+                "id": 51004125,
+                "content": "(She carefully approaches you and studies the horn on your head.)",
+                "next": 51004126
+              },
+              {
+                "id": 51004126,
+                "content": "So this is what a real Charon horn looks like...",
+                "npc": 700105,
+                "next": 51004127
+              },
+              {
+                "id": 51004127,
+                "content": "It's red and really delicate... it even reflects the sunlight. It looks way cuter than my pigtails.",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041271,
+                    "content": "Your pigtails are cute too.",
+                    "next": 51004128
+                  }
+                ]
+              },
+              {
+                "id": 51004128,
+                "content": "You're the first to tell me that. But my pigtails are all messed up now... I have to braid them again.",
+                "npc": 700105,
+                "next": 51004129
+              },
+              {
+                "id": 51004129,
+                "content": "(The girl takes out a comb from her bag. She then carefully combs and re-braids her pigtails. Once she's done, she lifts them up.)",
+                "next": 51004130
+              },
+              {
+                "id": 51004130,
+                "content": "Now, do they look like demon horns?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041301,
+                    "content": "Yes, they do.",
+                    "next": 51004131
+                  },
+                  {
+                    "id": 510041302,
+                    "content": "Actually, they look more like goat horns...",
+                    "next": 51004132
+                  }
+                ]
+              },
+              {
+                "id": 51004131,
+                "content": "Heheh.",
+                "npc": 700105,
+                "next": 51004133
+              },
+              {
+                "id": 51004132,
+                "content": "Haha. That's good, too.",
+                "npc": 700105,
+                "next": 51004133
+              },
+              {
+                "id": 51004133,
+                "content": "I have plenty of hairbands in my pocket. Can I braid a pigtail for you?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041331,
+                    "content": "(Accept)",
+                    "next": 51004136
+                  },
+                  {
+                    "id": 510041332,
+                    "content": "(Refuse)",
+                    "next": 51004134
+                  }
+                ]
+              },
+              {
+                "id": 51004136,
+                "content": "Come on, just squat down a little...",
+                "npc": 700105,
+                "next": 51004137
+              },
+              {
+                "id": 51004134,
+                "content": "Please! I wanna see how it looks!",
+                "npc": 700105,
+                "next": 51004135
+              },
+              {
+                "id": 51004137,
+                "content": "(You feel the girl slightly tugging your hair. She combs your hair very gently. You don't have to worry about losing any.)",
+                "next": 51004138
+              },
+              {
+                "id": 51004135,
+                "content": "(The girl stands on her toes and pushes you down to reach your hair. She seems a lot more positive and energetic than before.)",
+                "next": 51004136
+              },
+              {
+                "id": 51004138,
+                "content": "Done! Wow, you look so pretty with pigtails!",
+                "npc": 700105,
+                "next": 51004139
+              },
+              {
+                "id": 51004139,
+                "content": "Too bad I don't have a mirror...",
+                "npc": 700105,
+                "next": 51004140
+              },
+              {
+                "id": 51004140,
+                "content": "Ah...! I know! I can draw a picture of you.",
+                "npc": 700105,
+                "next": 51004141
+              },
+              {
+                "id": 51004141,
+                "content": "(The girl opens her backpack and takes out a notebook. She then tries to draw a nice picture of you.)",
+                "next": 51004142
+              },
+              {
+                "id": 51004142,
+                "content": "Oh, I forgot to ask — what's your name?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041421,
+                    "content": "{nickname}.",
+                    "next": 51004143
+                  }
+                ]
+              },
+              {
+                "id": 51004143,
+                "content": "Okay, {nickname}! I'll always remember you. Here, keep this picture I drew of you. See you around!",
+                "npc": 700105,
+                "next": 51004144
+              },
+              {
+                "id": 51004144,
+                "content": "...That is some modern abstract art.",
+                "npc": 100001,
+                "next": 51004145
+              },
+              {
+                "id": 51004145,
+                "content": "(The girl is about to leave but she suddenly turns around and gives you a serious gaze.)",
+                "next": 51004146
+              },
+              {
+                "id": 51004146,
+                "content": "Oh yeah... While I was combing your hair, I suddenly remembered something.",
+                "npc": 700105,
+                "next": 51004147
+              },
+              {
+                "id": 51004147,
+                "content": "They kept telling me that Charons are demon's children who are stupid, evil, and are always doing bad things...",
+                "npc": 700105,
+                "next": 51004148
+              },
+              {
+                "id": 51004148,
+                "content": "I don't think those words are true.",
+                "npc": 700105,
+                "next": 51004149
+              },
+              {
+                "id": 51004149,
+                "content": "They were just lies made up as an excuse to bully your kind, right?",
+                "npc": 700105,
+                "options": [
+                  {
+                    "id": 510041491,
+                    "content": "You're right.",
+                    "next": 51004150
+                  },
+                  {
+                    "id": 510041492,
+                    "content": "...",
+                    "next": 51004150
+                  }
+                ]
+              },
+              {
+                "id": 51004150,
+                "content": "You must have... suffered way more pain than I ever have.",
+                "npc": 700105,
+                "next": 51004151
+              },
+              {
+                "id": 51004151,
+                "content": "If there's anything I can do to help in the future, please do let me know... It's not because we're the same kind, but because we're friends.",
+                "npc": 700105
+              }
+            ]
           }
         ]
       },
@@ -121561,7 +123934,61 @@
       {
         "id": 20021202,
         "name": "Report to Kevin",
-        "desc": "Near Icelake, you notice a miner looking visibly uneasy, a sack of ore stained with something that might be blood lying beside him.\nThe whole situation feels off. Report it to Kevin, one of the Escort soldiers stationed at the city gate — it's the safest move."
+        "desc": "Near Icelake, you notice a miner looking visibly uneasy, a sack of ore stained with something that might be blood lying beside him.\nThe whole situation feels off. Report it to Kevin, one of the Escort soldiers stationed at the city gate — it's the safest move.",
+        "nodes": [
+          {
+            "id": "17180944232872082724",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51002601,
+                "content": "Great, {nickname} isn't around today...",
+                "npc": 700111,
+                "next": 51002602
+              },
+              {
+                "id": 51002602,
+                "content": "Looking for me?",
+                "npc": 100001,
+                "next": 51002603
+              },
+              {
+                "id": 51002603,
+                "content": "...Whoa! Speak of the devil!",
+                "npc": 700111,
+                "options": [
+                  {
+                    "id": 510026031,
+                    "content": "Kevin, there's someone illegally selling Phoxene in the slums.",
+                    "next": 51002605,
+                    "imprCheck": [
+                      1011,
+                      "Chaos",
+                      110
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51002605,
+                "content": "(The phone by the gate suddenly rings. Kevin leaps up like a startled hare and quickly picks up the phone.)",
+                "next": 51002606
+              },
+              {
+                "id": 51002606,
+                "content": "Kevin speaking. What? Suspicious guy in the city? Got it. I'm on my way.",
+                "npc": 700111,
+                "next": 51002607
+              },
+              {
+                "id": 51002607,
+                "content": "...Probably the one you just mentioned. Could you lead the way?",
+                "npc": 700111
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 20021203,
@@ -122368,7 +124795,273 @@
       {
         "id": 20021301,
         "name": "Talk to Margie",
-        "desc": "You've been in Icelake for a while now. Despite the relentless cold, Margie has been a beacon of warmth in the slums — you can always see her distributing supplies to those in need.\nIt's been a while since you helped her chase down the thief in the sewers. It's time to catch up with her."
+        "desc": "You've been in Icelake for a while now. Despite the relentless cold, Margie has been a beacon of warmth in the slums — you can always see her distributing supplies to those in need.\nIt's been a while since you helped her chase down the thief in the sewers. It's time to catch up with her.",
+        "nodes": [
+          {
+            "id": "1715481528886312979",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51005001,
+                "content": "Who are you...?",
+                "npc": 100001,
+                "next": 51005002
+              },
+              {
+                "id": 51005002,
+                "content": "(The middle-aged woman is dusting the old furniture with great efficiency. She seems so familiar with the Hypnos' House — a place that is not supposed to have any other visitors.)",
+                "next": 51005003
+              },
+              {
+                "id": 51005003,
+                "content": "Excuse me. I simply did not expect others to come to this place.",
+                "npc": 700013,
+                "next": 51005004
+              },
+              {
+                "id": 51005004,
+                "content": "I am a housekeeper employed by Mr Henrik. My job is to regularly clean and maintain his property. Today just happens to be a scheduled workday.",
+                "npc": 700013,
+                "next": 51005005
+              },
+              {
+                "id": 51005005,
+                "content": "So, may I ask who you are?",
+                "npc": 700013,
+                "next": 51005006
+              },
+              {
+                "id": 51005006,
+                "content": "I'm a tenant living in the old house next door. I just came by to check if the doors and windows of this house are properly locked.",
+                "npc": 100001,
+                "next": 51005007
+              },
+              {
+                "id": 51005007,
+                "content": "I'm not sure if you've been informed, but Mr Henrik has passed away... You no longer have to do this job.",
+                "npc": 100001,
+                "next": 51005008
+              },
+              {
+                "id": 51005008,
+                "content": "I am aware.",
+                "npc": 700013,
+                "next": 51005009
+              },
+              {
+                "id": 51005009,
+                "content": "But Mr Henrik has already made full payment. Before the contract formally expires, I shall abide by the code of conduct of my profession.",
+                "npc": 700013,
+                "next": 51005010
+              },
+              {
+                "id": 51005010,
+                "content": "It's four in the afternoon. I am here to provide about three hours of housekeeping services.",
+                "npc": 700013,
+                "next": 51005011
+              },
+              {
+                "id": 51005011,
+                "content": "Should you have any needs, please do not hesitate to inform me, and I will assist you as best as I can.",
+                "npc": 700013,
+                "next": 51005012
+              },
+              {
+                "id": 51005012,
+                "content": "(While cleaning, Lina discovers scratch marks left by Psyche during her Deterioration, and soon notices dried patches of what appears to be Henrik's blood.)",
+                "options": [
+                  {
+                    "id": 510050121,
+                    "content": "Everyone sees this house as a haunted place, but you seem neither disturbed nor surprised.",
+                    "next": 51005015,
+                    "imprCheck": [
+                      1011,
+                      "Empathy",
+                      105
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51005015,
+                "content": "I've actually... seen worse, in a house far more opulent than this. I once knew a master who burned down his manor along with his entire family.",
+                "npc": 700013,
+                "next": 51005016
+              },
+              {
+                "id": 51005016,
+                "content": "This place, by comparison, feels much more like a home. At least Mr Henrik made it look like one.",
+                "npc": 700013,
+                "next": 51005017
+              },
+              {
+                "id": 51005017,
+                "content": "(Her composure is unwavering, but you find yourself compelled to observe this poised and efficient woman more closely. Perhaps she's not as unflappable as she seems.)",
+                "options": [
+                  {
+                    "id": 510050171,
+                    "content": "Have you known Mr Henrik for a long time?",
+                    "next": 51005018
+                  }
+                ]
+              },
+              {
+                "id": 51005018,
+                "content": "He was a renowned doctor twenty years ago, and I was merely a maid in a viscount's household. Mr Henrik was called to diagnose the viscount's wife, which was when I first met him. I never thought our paths would cross again.",
+                "npc": 700013,
+                "next": 51005019
+              },
+              {
+                "id": 51005019,
+                "content": "I was tasked with escorting the doctor back to his hotel. On our way, a Charon girl collapsed right before us. Without a moment's hesitation, Mr Henrik saved her and asked me to look after her.",
+                "npc": 700013,
+                "next": 51005020
+              },
+              {
+                "id": 51005020,
+                "content": "Mr Henrik was not only a skilled doctor but also a man who cherished every life, regardless of one's background.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050201,
+                    "content": "Too bad his kindness failed to earn him the reputation he deserved.",
+                    "next": 51005021,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510050202,
+                    "content": "He upheld the fundamental values that define the humanity.",
+                    "next": 51005022,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510050203,
+                    "content": "Perhaps... that Charon girl reminded him of his own daughter.",
+                    "next": 51005023,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51005021,
+                "content": "Mr Henrik never cared for fame... My high regard for him remains unchanged.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050231,
+                    "content": "Mr Henrik would be pleased to know his home has been well cared for after his departure.",
+                    "next": 51005024
+                  }
+                ]
+              },
+              {
+                "id": 51005022,
+                "content": "That is precisely what made him a noble soul.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050231,
+                    "content": "Mr Henrik would be pleased to know his home has been well cared for after his departure.",
+                    "next": 51005024
+                  }
+                ]
+              },
+              {
+                "id": 51005023,
+                "content": "It is truly heartrending to hear the misfortunes he endured.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050231,
+                    "content": "Mr Henrik would be pleased to know his home has been well cared for after his departure.",
+                    "next": 51005024
+                  }
+                ]
+              },
+              {
+                "id": 51005024,
+                "content": "Yet, I feel I still haven't done enough.",
+                "npc": 700013,
+                "next": 51005025
+              },
+              {
+                "id": 51005025,
+                "content": "Mr Henrik likely wanted to maintain a certain distance; hence, my visits were infrequent. Otherwise, you and I might have met sooner.",
+                "npc": 700013,
+                "next": 51005026
+              },
+              {
+                "id": 51005026,
+                "content": "He probably didn't want me here too often after his passing. Thus, I believe it's time to return the key to its rightful owner. I shall place it on Mr Henrik's desk in your presence.",
+                "npc": 700013,
+                "options": [
+                  {
+                    "id": 510050261,
+                    "content": "(The key in Ms Lina's hand stirs a sense of familiarity.)",
+                    "next": 51005028,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      110
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51005028,
+                "content": "(The key you got from Margie closely resembles Lina's key to the Hypnos' House.)",
+                "next": 51005029
+              },
+              {
+                "id": 51005029,
+                "content": "(You remember seeing it on Henrik. It must have been lost during the turmoil of that night and inadvertently found by Margie.)",
+                "options": [
+                  {
+                    "id": 510050291,
+                    "content": "Ms Lina, is this key familiar to you?",
+                    "next": 51005030
+                  }
+                ]
+              },
+              {
+                "id": 51005030,
+                "content": "Mr Henrik has a chest for important documents. This key might open it.",
+                "npc": 700013,
+                "next": 51005031
+              },
+              {
+                "id": 51005031,
+                "content": "He once instructed that should any misfortune befall him, the chest is to be opened and his will read.",
+                "npc": 700013,
+                "next": 51005032
+              },
+              {
+                "id": 51005032,
+                "content": "I couldn't find the key in the house, but now it has found its way back. Thank you for taking proper care of it.",
+                "npc": 700013,
+                "next": 51005033
+              },
+              {
+                "id": 51005033,
+                "content": "May I ask you to witness as I fulfil Mr Henrik's final wishes exactly as he intended?",
+                "npc": 700013
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 20021302,
@@ -124022,6 +126715,78 @@
                 "content": "(The foreigner fumbles a retort in his mother tongue, but the ticket seller, not understanding a word, merely gives him a scornful glance before turning away. The man leaves, crestfallen.)"
               }
             ]
+          },
+          {
+            "id": "17215385938721176",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51007001,
+                "content": "You here, ask about trains? Careful, mean gatekeeper girl here!",
+                "npc": 700149,
+                "options": [
+                  {
+                    "id": 510070011,
+                    "content": "Seems par for the course in this city. You'll get used to it after a while.",
+                    "next": 51007002,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510070012,
+                    "content": "You can't even throw a comeback?",
+                    "next": 51007003,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007002,
+                "content": "Enough for me! Want to leave, very, very much!",
+                "npc": 700149,
+                "next": 51007004
+              },
+              {
+                "id": 51007003,
+                "content": "Still learning! Language here, different from home!",
+                "npc": 700149,
+                "next": 51007004
+              },
+              {
+                "id": 51007004,
+                "content": "(This ticket seller looks tough. But considering you'll eventually need to leave Icelake, crossing paths with her seems inevitable... Should you take action now?)",
+                "next": 51007005
+              },
+              {
+                "id": 51007005,
+                "content": "(Perhaps this \"intel\" you got from Margie could help break the ice...)",
+                "options": [
+                  {
+                    "id": 510070051,
+                    "content": "Excuse me, I think I can smooth things over here.",
+                    "next": 51007007,
+                    "imprCheck": [
+                      1011,
+                      "Wisdom",
+                      130
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007007,
+                "content": "Thank you! You are good! I watch you handle this!",
+                "npc": 700149
+              }
+            ]
           }
         ]
       },
@@ -125649,6 +128414,151 @@
                 "npc": 700172
               }
             ]
+          },
+          {
+            "id": "17261265595121679",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51007325,
+                "content": "Aaaahhhh, this is way too high! I can't tell if it's higher than the Hall of Adjudication in Huaxu... No, my fear of heights is back...",
+                "npc": 700173,
+                "next": 51007326
+              },
+              {
+                "id": 51007326,
+                "content": "Don't look out there yet. Just stare at your feet and calm down. ",
+                "npc": 100001,
+                "next": 51007327
+              },
+              {
+                "id": 51007327,
+                "content": "Whew...Whew... Now I feel much better.",
+                "npc": 700173,
+                "next": 51007328
+              },
+              {
+                "id": 51007328,
+                "content": "Seriously, what was the Empire architects thinking back then, making walls of such towering height? ",
+                "npc": 700173,
+                "next": 51007329
+              },
+              {
+                "id": 51007329,
+                "content": "Hmm?",
+                "npc": 700173,
+                "next": 51007330
+              },
+              {
+                "id": 51007330,
+                "content": "Why is that? If I recall correctly, according to the official chronicles, Icelake started out as a Charon settlement. ",
+                "npc": 700173,
+                "next": 51007331
+              },
+              {
+                "id": 51007331,
+                "content": "The First Emperor, Dis Galea — known as Dis Ⅰ — came to this land after the Great Migration. At first, he hoped to seek peace with the Charon tribes dwelt here. But his brother was beguiled with a promise of a feast, and slain by the locals. ",
+                "npc": 700173,
+                "next": 51007333
+              },
+              {
+                "id": 51007333,
+                "content": "That's why Dis Ⅰ believed that Charons were demons, and led his knights to subdue them, declaring the so-called \"Silverpeace.\"",
+                "npc": 700173,
+                "next": 51007334
+              },
+              {
+                "id": 51007334,
+                "content": "But if so, against whom were these towering walls raised? Filthoids? Or perhaps Charons of that times were still resisting?",
+                "npc": 700173,
+                "next": 51007335
+              },
+              {
+                "id": 51007335,
+                "content": "Got inspired again, did you?",
+                "npc": 100001,
+                "next": 51007336
+              },
+              {
+                "id": 51007336,
+                "content": "Not exactly inspiration, but something just feels... strange. Mr Qiu always told us: let no moment of strangeness pass, for therein the truth may lie concealed. ",
+                "npc": 700173,
+                "next": 51007339
+              },
+              {
+                "id": 51007339,
+                "content": "Anyway, thanks a lot, truly! Now I feel ready to write a field report full of passion!",
+                "npc": 700173,
+                "next": 51007340
+              },
+              {
+                "id": 51007340,
+                "content": "Without you, I'd probably still think Icelake held no archaeological values and write those superficial reports, like a fool overlooking all that matters. ",
+                "npc": 700173,
+                "next": 51007341
+              },
+              {
+                "id": 51007341,
+                "content": "How blind I was! Wait, could you be the true hidden archaeology master in Icelake?",
+                "npc": 700173,
+                "options": [
+                  {
+                    "id": 510073411,
+                    "content": "I was hoping to keep a low profile...",
+                    "next": 51007344,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073412,
+                    "content": "I'm just an ordinary Phoxhunter passing by.",
+                    "next": 510073441,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073413,
+                    "content": "Spare me your flattery. My reward — now.",
+                    "next": 51007342,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007344,
+                "content": "Woww... You really do have the aura of a master — no doubt about it!",
+                "npc": 700173,
+                "next": 51007342
+              },
+              {
+                "id": 510073441,
+                "content": "I get it. You're trying to keep your identity secret from others.",
+                "npc": 700173,
+                "next": 51007342
+              },
+              {
+                "id": 51007342,
+                "content": "Let me think... What reward would be worthy of a master like you?",
+                "npc": 700173,
+                "next": 51007343
+              },
+              {
+                "id": 51007343,
+                "content": "I got it! Please wait for me at the city gate.",
+                "npc": 700173
+              }
+            ]
           }
         ]
       },
@@ -125694,7 +128604,255 @@
       {
         "id": 20022105,
         "name": "Head to The Asphodel",
-        "desc": "There's never a shortage of those in need — and kindness has a way of finding its way back.\nHead to The Asphodel and see who might need a helping hand. The young woman standing off to the side — Miss Shirley — seems especially anxious."
+        "desc": "There's never a shortage of those in need — and kindness has a way of finding its way back.\nHead to The Asphodel and see who might need a helping hand. The young woman standing off to the side — Miss Shirley — seems especially anxious.",
+        "nodes": [
+          {
+            "id": "17258665755811422",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51007301,
+                "content": "True to my passion for knowledge, true to... Ugh, what exactly does it mean to say stay true to it?",
+                "npc": 700077,
+                "next": 51007302
+              },
+              {
+                "id": 51007302,
+                "content": "I am just an archaeologist! Passion has nothing to do with my studies!",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073021,
+                    "content": "Passion is the will to unravel what you really want.",
+                    "next": 510073024,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073022,
+                    "content": "Passion is the force that sustains life itself.",
+                    "next": 510073025,
+                    "impr": [
+                      1011,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073023,
+                    "content": "Passion is the unspoken that hides from the light of day.",
+                    "next": 510073026,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 510073024,
+                "content": "I don't even know what I really want...",
+                "npc": 700077,
+                "next": 51007303
+              },
+              {
+                "id": 510073025,
+                "content": "Such depth — too vast for me to grasp...",
+                "npc": 700077,
+                "next": 51007303
+              },
+              {
+                "id": 510073026,
+                "content": "Oh, I see! No wonder I didn't get it.",
+                "npc": 700077,
+                "next": 51007303
+              },
+              {
+                "id": 51007303,
+                "content": "That's an interesting take. Can you help me get what passion really means?",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073031,
+                    "content": "(Accept)",
+                    "next": 51007304
+                  },
+                  {
+                    "id": 510073032,
+                    "content": "(Refuse)"
+                  }
+                ]
+              },
+              {
+                "id": 51007304,
+                "content": "I am a researcher with the Imperial Branch of Archaeological Society of Atlasia. Lately, the research reports I've submitted keeps being returned with the same remark — no passion can be felt within. ",
+                "npc": 700077,
+                "next": 51007305
+              },
+              {
+                "id": 51007305,
+                "content": "Ugh... I just don't get what the investor want...",
+                "npc": 700077,
+                "next": 51007306
+              },
+              {
+                "id": 51007306,
+                "content": "An investor who understands research? Since when does that happen?",
+                "npc": 100001,
+                "next": 51007307
+              },
+              {
+                "id": 51007307,
+                "content": "Mr Qiu isn't just some investor. He is the investor who uncovered the century-sunken ships in the Republic of Luca, the ruins in Elysium buried for thousands of years, and the battlefield in Hyperborea lost to time. Each stands a milestone in the annals of archaeology.",
+                "npc": 700077,
+                "next": 51007308
+              },
+              {
+                "id": 51007308,
+                "content": "(With eyes brimming with reverence, Shirley poured forth tale after tale of Mr Qiu's past.)",
+                "next": 51007309
+              },
+              {
+                "id": 51007309,
+                "content": "Mr Qiu is the chief investor of Archaeological Society, as well as a renowned archaeologist and collector. Whispers persist that he is none other than a sovereign who walks within the \"shadow\" of Huaxu.",
+                "npc": 700077,
+                "next": 51007310
+              },
+              {
+                "id": 51007310,
+                "content": "If it weren't for his backing, the Archaeological Society wouldn't have developed into such a a huge organization spreading across the continent today.",
+                "npc": 700077,
+                "next": 51007311
+              },
+              {
+                "id": 51007311,
+                "content": "Ugh... He never really cared before, so why's he suddenly clinging to us now? Is life in retirement truly so idle in Huaxu?",
+                "npc": 700077,
+                "next": 51007312
+              },
+              {
+                "id": 51007312,
+                "content": "Can I read your research reports?",
+                "npc": 100001,
+                "next": 51007313
+              },
+              {
+                "id": 51007313,
+                "content": "Of course! A Brief Analysis of the Customer Flow in Icelake's Taverns, The Craft and Evolution of Drink-Brewing in Asphodel, or Observational Records of the Luno Naming Itself the Demon King. Which one would you like to read?",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073131,
+                    "content": "For an academic report, it doesn't really sound that academic.",
+                    "next": 51007314,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073132,
+                    "content": "Tell me... Has any of your work to do with true archaeology?",
+                    "next": 51007314,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007314,
+                "content": "Well, what choice have I? Nothing lies beneath the snow of Icelake. Then how am I supposed to write a proper archaeology report?",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073141,
+                    "content": "That's it — you see nothing up top and give up right away. No wonder the investor said he can't feel any passion. ",
+                    "next": 510073142,
+                    "impr": [
+                      1011,
+                      "Morality",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 510073142,
+                "content": "It's not like I want it this way! Passion, what is it? I am sure haven't found it here in Icelake.",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 51007315,
+                    "content": "Perhaps you need a proper guide. ",
+                    "next": 510073152,
+                    "imprCheck": [
+                      1011,
+                      "Morality",
+                      55
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 510073152,
+                "content": "I can't find one. Phoxhunters here only care about fights and drinks. I once asked if there were any historic ruins nearby, only to be asked back whether their stewpots counted as relics.",
+                "npc": 700077,
+                "next": 510073156
+              },
+              {
+                "id": 510073156,
+                "content": "How about.... you take me around and see if we can find some inspiration. Of all the regulars at the Asphodel, you looks like the one who drinks the least and reads the most.",
+                "npc": 700077,
+                "options": [
+                  {
+                    "id": 510073153,
+                    "content": "Alright, let's see if we can dig up some inspiration for you.",
+                    "next": 51007316,
+                    "impr": [
+                      1011,
+                      "Empathy",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073154,
+                    "content": "Pay up, and I'll help you brainstorm. ",
+                    "next": 51007316,
+                    "impr": [
+                      1011,
+                      "Benefit",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 510073155,
+                    "content": "You came to the right person — I am the top-notch intellectual. Now share some of your research funding with me and I shall help you.",
+                    "next": 51007316,
+                    "impr": [
+                      1011,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 51007316,
+                "content": "Please don't give up on me!",
+                "npc": 700077
+              }
+            ]
+          }
+        ]
       }
     ]
   },

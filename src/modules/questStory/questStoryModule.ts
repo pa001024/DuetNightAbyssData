@@ -117,6 +117,49 @@ function roundTiesToEven(value: number): number {
     return lower % 2 === 0 ? lower : lower + 1
 }
 
+function impressionQuestIds(condition: unknown): number[] {
+    const result: number[] = []
+    const visit = (value: unknown): void => {
+        if (Array.isArray(value)) {
+            for (const item of value) visit(item)
+            return
+        }
+        const node = row(value)
+        if (!node) return
+        for (const [key, child] of Object.entries(node)) {
+            if (key === "QuestStart" || key === "QuestFinish") {
+                const questId = id(row(child)?.QuestId)
+                if (questId !== undefined && !result.includes(questId)) result.push(questId)
+            } else {
+                visit(child)
+            }
+        }
+    }
+    visit(condition)
+    return result
+}
+
+/**
+ * 任务门控的印象对话故事索引：questId → 印象故事路径。
+ * 只收录触发条件以 QuestStart / QuestFinish 直接引用具体任务的 Impression 条目；
+ * QuestUnstart 只是区间上界、链级条件不归属具体任务，均不收录。
+ */
+export function collectImpressionStoryPaths(triggers: Row): Map<number, string[]> {
+    const result = new Map<number, string[]>()
+    for (const trigger of Object.values(triggers)) {
+        const item = row(trigger)
+        if (item?.Type !== "Impression") continue
+        const path = item.StoryLinePath
+        if (typeof path !== "string" || !path) continue
+        for (const questId of impressionQuestIds(item.TriggerCondition)) {
+            const list = result.get(questId) ?? []
+            if (!list.includes(path)) list.push(path)
+            result.set(questId, list)
+        }
+    }
+    return result
+}
+
 export async function questStoryModule(ctx: ModuleContext): Promise<VNodeTree> {
     const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
     if (!dialogue) throw new Error("QuestStory 需要 Dialogue 依赖")
@@ -125,6 +168,7 @@ export async function questStoryModule(ctx: ModuleContext): Promise<VNodeTree> {
     const detectiveQuestions = table(ctx, "DetectiveQuestion")
     const detectiveAnswers = table(ctx, "DetectiveAnswer")
     const specialConfigs = table(ctx, "SpecialQuestConfig")
+    const impressionIndex = collectImpressionStoryPaths(table(ctx, "TalkTrigger"))
     const guidePoints = loadGuidePoints(ctx)
     const output: VNodeTree[] = []
     const entries: Array<{ chainId: number; storyPath: unknown; story: Row; questRows: Row }> = []
@@ -143,10 +187,19 @@ export async function questStoryModule(ctx: ModuleContext): Promise<VNodeTree> {
         const story = dialogue.story(path)
         if (story) specialStories.set(path, story)
     }
-    await dialogue.prepareStoryFlows([...entries.map(entry => entry.storyPath), ...specialStories.keys()])
+    const impressionStories = new Map<string, Row>()
+    for (const paths of impressionIndex.values()) {
+        for (const path of paths) {
+            if (impressionStories.has(path)) continue
+            const story = dialogue.story(path)
+            if (story) impressionStories.set(path, story)
+        }
+    }
+    await dialogue.prepareStoryFlows([...entries.map(entry => entry.storyPath), ...specialStories.keys(), ...impressionStories.keys()])
     dialogue.prefetchReachable([
         ...entries.flatMap(entry => collectDialogueStarts(entry.story)),
         ...[...specialStories.values()].flatMap(collectDialogueStarts),
+        ...[...impressionStories.values()].flatMap(collectDialogueStarts),
     ])
 
     for (const entry of entries) {
@@ -192,12 +245,30 @@ export async function questStoryModule(ctx: ModuleContext): Promise<VNodeTree> {
             const combinedNodes = [...mainNodes, ...specialNodes]
             resolveNodeNext(combinedNodes, activeNextMap)
             const nodes = dedupeNodes(combinedNodes)
-            if (nodes.length === 0 && !nameKey && !descKey) continue
+            const starts = startIds(parents, nodes, activeIncomingMap)
+            // 印象故事节点独立去重后追加：不参与主流程的 startIds，也不与主节点二次全量去重，
+            // 避免 dedupe 的 next 重映射级联合并主流程本就保留的节点。
+            const impressionNodes: Row[] = []
+            for (const path of impressionIndex.get(questId) ?? []) {
+                const impressionStory = impressionStories.get(path)
+                if (!impressionStory) continue
+                const impressionResult = processNodes(
+                    ctx,
+                    dialogue,
+                    indexStory(impressionStory).parents,
+                    guidePoints,
+                    detectiveQuestions,
+                    detectiveAnswers
+                )
+                resolveNodeNext(impressionResult.nodes, impressionResult.nextMap)
+                impressionNodes.push(...dedupeNodes(impressionResult.nodes))
+            }
+            const allNodes = [...nodes, ...impressionNodes]
+            if (allNodes.length === 0 && !nameKey && !descKey) continue
             const quest: Record<string, VNodeTree> = { id: questId, name: nameKey ? TRaw(nameKey) : "" }
             if (descKey && descKey !== nameKey) quest.desc = TUnlessEqual(descKey, nameKey)
-            if (nodes.length > 0) {
-                quest.nodes = nodes
-                const starts = startIds(parents, nodes, activeIncomingMap)
+            if (allNodes.length > 0) {
+                quest.nodes = allNodes
                 if (starts.length > 1) quest.startIds = starts
             }
             quests.push(quest)

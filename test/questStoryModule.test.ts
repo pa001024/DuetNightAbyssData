@@ -5,7 +5,7 @@ import { afterEach, beforeEach, describe, expect, test } from "bun:test"
 import type { ModuleContext } from "../src/core/Graph.ts"
 import { renderTree } from "../src/i18n/vnode.ts"
 import type { DialogueService } from "../src/modules/dialogue/dialogueModule.ts"
-import { collectSpecialStoryPaths, questStoryModule } from "../src/modules/questStory/questStoryModule.ts"
+import { collectImpressionStoryPaths, collectSpecialStoryPaths, questStoryModule } from "../src/modules/questStory/questStoryModule.ts"
 
 describe("QuestStory special stories", () => {
     // BGM 节点只在对应音频已导出时保留：用临时目录固定音频可用性，避免依赖真实数据集。
@@ -552,4 +552,102 @@ describe("QuestStory special stories", () => {
         ])
     })
 
+    test("collects impression story paths for quest-gated triggers", () => {
+        const index = collectImpressionStoryPaths({
+            start: {
+                Type: "Impression",
+                StoryLinePath: "Impression/a.story",
+                TriggerCondition: { And: [{ QuestStart: { QuestId: 10 } }, { QuestUnstart: { QuestId: 11 } }] },
+            },
+            finish: {
+                Type: "Impression",
+                StoryLinePath: "Impression/b.story",
+                TriggerCondition: { QuestFinish: { QuestId: 10 } },
+            },
+            unstartOnly: {
+                Type: "Impression",
+                StoryLinePath: "Impression/c.story",
+                TriggerCondition: { QuestUnstart: { QuestId: 10 } },
+            },
+            gossip: {
+                Type: "Gossip",
+                StoryLinePath: "Impression/d.story",
+                TriggerCondition: { QuestStart: { QuestId: 10 } },
+            },
+        })
+        expect(index.get(10)).toEqual(["Impression/a.story", "Impression/b.story"])
+        expect(index.has(11)).toBe(false)
+    })
+
+    test("appends impression story nodes to the gated quest", async () => {
+        const story = {
+            storyNodeData: {
+                parent: {
+                    key: "parent",
+                    propsData: { QuestId: 10 },
+                    questNodeData: {
+                        lineData: [{ startQuest: "start", startPort: "QuestStart", endQuest: "talk" }],
+                        nodeData: {
+                            start: { key: "start", type: "QuestStartNode", propsData: {} },
+                            talk: { key: "talk", type: "TalkNode", name: "主线对白", propsData: { FirstDialogueId: 1 } },
+                        },
+                    },
+                },
+            },
+        }
+        const impression = {
+            storyNodeData: {
+                impressionParent: {
+                    key: "impressionParent",
+                    propsData: {},
+                    questNodeData: {
+                        lineData: [{ startQuest: "impressionStart", startPort: "QuestStart", endQuest: "impressionTalk" }],
+                        nodeData: {
+                            impressionStart: { key: "impressionStart", type: "QuestStartNode", propsData: {} },
+                            impressionTalk: {
+                                key: "impressionTalk",
+                                type: "TalkNode",
+                                name: "审问",
+                                propsData: { FirstDialogueId: 2 },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+        const dialogue = {
+            story: (path: string) => (path === "main.story" ? story : impression),
+            prepareStoryFlows: async () => {},
+            prefetchReachable: () => {},
+            chain: (dialogueId: number) => [{ id: dialogueId }],
+        } as unknown as DialogueService
+        const tables: Record<string, unknown> = {
+            QuestChain: { 1: { QuestChainId: 1, StoryPath: "main.story" } },
+            STLExportQuestChain: { 1: { Quests: { 10: {} } } },
+            DetectiveQuestion: {},
+            DetectiveAnswer: {},
+            SpecialQuestConfig: {},
+            TalkTrigger: {
+                99: {
+                    Type: "Impression",
+                    StoryLinePath: "impression.story",
+                    TriggerCondition: { QuestStart: { QuestId: 10 } },
+                },
+            },
+        }
+        const ctx = {
+            dm: {
+                getTable: (name: string) => tables[name],
+                loadScriptTableRows: () => [],
+            },
+            getArtifact: () => dialogue,
+        } as unknown as ModuleContext
+
+        const result = (await questStoryModule(ctx)) as Array<Record<string, any>>
+        expect(result[0].quests[0].nodes).toEqual([
+            { id: "talk", type: "TalkNode", name: "主线对白", dialogues: [{ id: 1 }] },
+            { id: "impressionTalk", type: "TalkNode", name: "审问", dialogues: [{ id: 2 }] },
+        ])
+        expect(result[0].quests[0]).not.toHaveProperty("startIds")
+    })
 })

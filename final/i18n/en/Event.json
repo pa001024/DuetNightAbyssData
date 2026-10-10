@@ -934,7 +934,163 @@
     "desc": "Conquer the nightmare that never ends — grow, evolve, and emerge anew.\nConfront formidable foes during the event to claim rewards.",
     "startTime": 1793584800,
     "endTime": 1795338000,
-    "rule": "<H>Nocturnal Evermore Event Rules</>\n1. During the event, several Extreme-Threat Enemies are available to challenge in Nocturnal Evermore. Each enemy has two modes: <H>Evermore</> and <H>Extreme Challenge</>.\n2. In <H>Evermore</> mode, guaranteed drops are subject to a <H>Weekly Rewards</> limit shared across all enemies. Once you have used up your weekly reward attempts, you can still challenge enemies in Evermore mode, but you will no longer receive guaranteed drops. Weekly reward attempts reset every Monday at 05:00 (server time). <H>First-clear rewards</> do not count toward this limit.\n3. In <H>Extreme Challenge</>mode, guaranteed drops are not subject to the <H>Weekly Rewards</> limit. Clearing a challenge for the first time grants additional rewards."
+    "rule": "<H>Nocturnal Evermore Event Rules</>\n1. During the event, several Extreme-Threat Enemies are available to challenge in Nocturnal Evermore. Each enemy has two modes: <H>Evermore</> and <H>Extreme Challenge</>.\n2. In <H>Evermore</> mode, guaranteed drops are subject to a <H>Weekly Rewards</> limit shared across all enemies. Once you have used up your weekly reward attempts, you can still challenge enemies in Evermore mode, but you will no longer receive guaranteed drops. Weekly reward attempts reset every Monday at 05:00 (server time). <H>First-clear rewards</> do not count toward this limit.\n3. In <H>Extreme Challenge</>mode, guaranteed drops are not subject to the <H>Weekly Rewards</> limit. Clearing a challenge for the first time grants additional rewards.",
+    "hardBossEvent": {
+      "weeklyRewards": 20,
+      "period": "Week",
+      "bosses": [
+        {
+          "id": 1,
+          "name": "Sibylle",
+          "desc": "The chief of the Hyperborean Empire's 13th Legion. Her arrival on Purgatorio Island irrevocably altered our destiny.",
+          "icon": "T_Permanent_HardBoss_Xibi_S",
+          "monster": [
+            8500801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28001,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800101,
+              "firstReward": 2800102,
+              "buff": 1001
+            },
+            {
+              "dungeonId": 28002,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2800202,
+              "firstReward": 2800201,
+              "buff": 1001,
+              "unlock": [
+                28001
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "The Eclosioner",
+          "desc": "The seed in the frozen soil that has forfeited the opportunity for a gentle descent into the night.",
+          "icon": "T_Permanent_HardBoss_Saiqi_S",
+          "monster": [
+            8502801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28003,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800301,
+              "firstReward": 2800302,
+              "buff": 1002
+            },
+            {
+              "dungeonId": 28004,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2800402,
+              "firstReward": 2800401,
+              "buff": 1002,
+              "unlock": [
+                28003
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "The Warden of the Inferno",
+          "desc": "The Warden of the Imperial Military Prison wields her chains to chastise evil and her flames to defend justice.",
+          "icon": "T_Permanent_HardBoss_Haier_S",
+          "monster": [
+            8505801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28005,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800501,
+              "firstReward": 2800502,
+              "buff": 1001
+            },
+            {
+              "dungeonId": 28006,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2800602,
+              "firstReward": 2800601,
+              "buff": 1001,
+              "unlock": [
+                28005
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Cryptid",
+          "desc": "The scarlet drape trembles as the icy breeze hums a lament of the Snowfield.",
+          "icon": "T_Permanent_HardBoss_Tuosi_S",
+          "monster": [
+            8509801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28007,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800701,
+              "firstReward": 2800702,
+              "buff": 1002
+            },
+            {
+              "dungeonId": 28008,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2800802,
+              "firstReward": 2800801,
+              "buff": 1002,
+              "unlock": [
+                28007
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "\"Judgement\" Mother Bunny",
+          "desc": "The true master of Paradise and the architect of its nightmare.",
+          "icon": "T_Permanent_HardBoss_Aida_S",
+          "monster": [
+            8520801
+          ],
+          "modes": [
+            {
+              "dungeonId": 28009,
+              "mode": "eternal",
+              "lv": 80,
+              "reward": 2800901,
+              "firstReward": 2800902,
+              "buff": 1002
+            },
+            {
+              "dungeonId": 28010,
+              "mode": "challenge",
+              "lv": 160,
+              "reward": 2801002,
+              "firstReward": 2801001,
+              "buff": 1002,
+              "unlock": [
+                28009
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "id": 103037,
