@@ -196,6 +196,9 @@
     "最大等级": 1,
     "捕获经验": 0,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 417,
       "描述": "Projette 3 projectiles autour de vous, infligeant aux ennemis à portée des dégâts équivalant à {%} de l’ATQ du personnage principal.",
@@ -242,6 +245,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 401,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et applique aléatoirement un Effet supplémentaire élémentaire pendant {} s.",
@@ -295,6 +301,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 401,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et applique aléatoirement un Effet supplémentaire élémentaire pendant {} s.",
@@ -348,6 +357,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 401,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et applique aléatoirement un Effet supplémentaire élémentaire pendant {} s.",
@@ -401,6 +413,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 402,
       "描述": "Augmente l’ATQ de soi-même et des alliés de {%} pendant {} s.",
@@ -454,6 +469,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 402,
       "描述": "Augmente l’ATQ de soi-même et des alliés de {%} pendant {} s.",
@@ -507,6 +525,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 402,
       "描述": "Augmente l’ATQ de soi-même et des alliés de {%} pendant {} s.",
@@ -560,6 +581,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 403,
       "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
@@ -606,6 +630,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 403,
       "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
@@ -652,6 +679,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 403,
       "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
@@ -698,6 +728,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 403,
       "描述": "Restaure {} de Lucidité à soi-même et aux alliés.",
@@ -744,6 +777,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 404,
       "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
@@ -825,6 +861,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 404,
       "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
@@ -906,6 +945,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 404,
       "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
@@ -987,6 +1029,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 404,
       "描述": "Octroie {} points d’Ultra-bouclier à soi-même et aux alliés, et applique aléatoirement l’un des effets suivants pendant {} s : ATQ +{%}, DÉF +{%}, Puissance de compétence +{%} ou Durée de compétence +{%}.",
@@ -1068,6 +1113,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 405,
       "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
@@ -1114,6 +1162,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 405,
       "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
@@ -1160,6 +1211,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 405,
       "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
@@ -1206,6 +1260,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 405,
       "描述": "Soigne soi-même et ses alliés à hauteur de {%} des PV max du personnage principal.",
@@ -1252,6 +1309,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 406,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal et réduit les dégâts infligés des ennemis touchés de {%} pendant {} s.",
@@ -1312,6 +1372,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 406,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal et réduit les dégâts infligés des ennemis touchés de {%} pendant {} s.",
@@ -1372,6 +1435,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 406,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal et réduit les dégâts infligés des ennemis touchés de {%} pendant {} s.",
@@ -1432,6 +1498,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 407,
       "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
@@ -1485,6 +1554,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 407,
       "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
@@ -1538,6 +1610,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 407,
       "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
@@ -1591,6 +1666,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 407,
       "描述": "Inflige des dégâts équivalents à {%} de l’ATQ du personnage principal aux ennemis proches. Détecte 1 Géniemon et 1 coffre dans un rayon de 100 m, marquant leur position pendant 30 s.",
@@ -1644,6 +1722,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 408,
       "描述": "Réduit les dégâts subis par vous et vos alliés de {%} pendant {} s.",
@@ -1704,6 +1785,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 408,
       "描述": "Réduit les dégâts subis par vous et vos alliés de {%} pendant {} s.",
@@ -1764,6 +1848,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 408,
       "描述": "Réduit les dégâts subis par vous et vos alliés de {%} pendant {} s.",
@@ -1824,6 +1911,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 409,
       "描述": "Applique une régénération continue à vous et vos alliés, restaurant {%} de leurs PV max par seconde pendant {} s.",
@@ -1884,6 +1974,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 409,
       "描述": "Applique une régénération continue à vous et vos alliés, restaurant {%} de leurs PV max par seconde pendant {} s.",
@@ -1944,6 +2037,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 409,
       "描述": "Applique une régénération continue à vous et vos alliés, restaurant {%} de leurs PV max par seconde pendant {} s.",
@@ -2004,6 +2100,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 411,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et réduit leur DÉF de {%} pendant {} s.",
@@ -2064,6 +2163,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 411,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et réduit leur DÉF de {%} pendant {} s.",
@@ -2124,6 +2226,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 411,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et réduit leur DÉF de {%} pendant {} s.",
@@ -2184,6 +2289,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 412,
       "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
@@ -2237,6 +2345,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 412,
       "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
@@ -2290,6 +2401,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 412,
       "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
@@ -2343,6 +2457,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 412,
       "描述": "Augmente l’ATQ de toutes les [Invocations] alliées de {%} pendant {} s.",
@@ -2396,6 +2513,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 413,
       "描述": "Fait apparaître un [Sel volatil stimulant], une [Goutte de rosée apaisante] et une [Caisse de munitions]. Augmente la durée de compétence de vous et vos alliés de {%} pendant {} s.",
@@ -2449,6 +2569,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 413,
       "描述": "Fait apparaître un [Sel volatil stimulant], une [Goutte de rosée apaisante] et une [Caisse de munitions]. Augmente la durée de compétence de vous et vos alliés de {%} pendant {} s.",
@@ -2502,6 +2625,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 413,
       "描述": "Fait apparaître un [Sel volatil stimulant], une [Goutte de rosée apaisante] et une [Caisse de munitions]. Augmente la durée de compétence de vous et vos alliés de {%} pendant {} s.",
@@ -2555,6 +2681,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 414,
       "描述": "Octroie à vous et vos alliés {} points d’Ultra-bouclier et restaure {} de Lucidité.",
@@ -2608,6 +2737,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 414,
       "描述": "Octroie à vous et vos alliés {} points d’Ultra-bouclier et restaure {} de Lucidité.",
@@ -2661,6 +2793,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 414,
       "描述": "Octroie à vous et vos alliés {} points d’Ultra-bouclier et restaure {} de Lucidité.",
@@ -2714,6 +2849,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 415,
       "描述": "Soigne vous-même et vos alliés à hauteur de {%} des PV max du personnage principal, et augmente la DÉF de +{%} pendant {} s.",
@@ -2774,6 +2912,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 415,
       "描述": "Soigne vous-même et vos alliés à hauteur de {%} des PV max du personnage principal, et augmente la DÉF de +{%} pendant {} s.",
@@ -2834,6 +2975,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 415,
       "描述": "Soigne vous-même et vos alliés à hauteur de {%} des PV max du personnage principal, et augmente la DÉF de +{%} pendant {} s.",
@@ -2894,6 +3038,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 416,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et augmente les Dégâts de compétence qu’ils subissent de {%} pendant {} s.",
@@ -2954,6 +3101,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 416,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et augmente les Dégâts de compétence qu’ils subissent de {%} pendant {} s.",
@@ -3014,6 +3164,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 416,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches et augmente les Dégâts de compétence qu’ils subissent de {%} pendant {} s.",
@@ -3074,6 +3227,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 417,
       "描述": "Projette 3 projectiles autour de vous, infligeant aux ennemis à portée des dégâts équivalant à {%} de l’ATQ du personnage principal.",
@@ -3120,6 +3276,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 417,
       "描述": "Projette 3 projectiles autour de vous, infligeant aux ennemis à portée des dégâts équivalant à {%} de l’ATQ du personnage principal.",
@@ -3165,6 +3324,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 421,
       "描述": "Inflige des Dégâts Umbro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et augmente [Vigueur] de {%} pour vous et vos alliés pendant {} s.",
@@ -3224,6 +3386,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 422,
       "描述": "Augmente les dégâts infligés par vous et vos alliés de {%} pour chaque [Invocation] active du personnage principal, jusqu’à un maximum de {%}, pendant {} s.",
@@ -3283,6 +3448,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 423,
       "描述": "Inflige des Dégâts Pyro équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et augmente [Tir multiple] de {%} pour vous et vos alliés pendant {} s.",
@@ -3342,6 +3510,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 424,
       "描述": "Restaure {} de Lucidité à vous et vos alliés, et augmente leurs Dégâts de compétence de {%} pendant {} s.",
@@ -3401,6 +3572,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 425,
       "描述": "Augmente [Ténacité] de {%} pour vous et vos alliés pendant {} s. Si les PV du personnage principal tombent sous 25 %, restaure immédiatement {%} PV.",
@@ -3460,6 +3634,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 426,
       "描述": "Inflige des Dégâts Lumino équivalents à {%} de l’ATQ du personnage principal aux ennemis proches, et confère +{%} de Dégâts Lumino supplémentaires à vous et vos alliés pendant {} s.",

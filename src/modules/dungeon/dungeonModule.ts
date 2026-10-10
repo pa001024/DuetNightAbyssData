@@ -394,7 +394,8 @@ class DungeonBuilder {
             if (!fromEntry && (!validRewards.length || (validRewards.length === 1 && this.isCopperOnlyReward(Number(validRewards[0])))))
                 return undefined
             item.r = validRewards
-        } else if (type !== "AsyncCombat") return undefined
+            // Raid 预热赛（分组赛，如 21701~21704）无 DungeonReward 字段：奖励走 RaidFloor/排行结算，但副本本身（怪物/胜负条件）仍需输出。
+        } else if (type !== "AsyncCombat" && type !== "SoloRaid") return undefined
         if (has(dungeon, "DungeonWinMode")) item.win = dungeon.DungeonWinMode
         return item
     }

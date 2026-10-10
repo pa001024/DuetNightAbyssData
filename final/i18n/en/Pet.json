@@ -196,6 +196,9 @@
     "最大等级": 1,
     "捕获经验": 0,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 417,
       "描述": "Fire 3 projectiles, each dealing DMG equal to {%} of the main character's ATK to nearby enemies.",
@@ -242,6 +245,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 401,
       "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
@@ -295,6 +301,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 401,
       "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
@@ -348,6 +357,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 401,
       "描述": "Deals Umbro Damage equivalent to {%} of the main character's ATK to enemies within range, with an additional random attribute-based effect for {}s.",
@@ -401,6 +413,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 402,
       "描述": "Increases ATK for self and allies by {%} for {}s.",
@@ -454,6 +469,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 402,
       "描述": "Increases ATK for self and allies by {%} for {}s.",
@@ -507,6 +525,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 402,
       "描述": "Increases ATK for self and allies by {%} for {}s.",
@@ -560,6 +581,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 403,
       "描述": "Restores {} Sanity to self and allies.",
@@ -606,6 +630,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 403,
       "描述": "Restores {} Sanity to self and allies.",
@@ -652,6 +679,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 403,
       "描述": "Restores {} Sanity to self and allies.",
@@ -698,6 +728,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 403,
       "描述": "Restores {} Sanity to self and allies.",
@@ -744,6 +777,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 404,
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
@@ -825,6 +861,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 404,
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
@@ -906,6 +945,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 404,
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
@@ -987,6 +1029,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 404,
       "描述": "Grants {} Ultra Shield points to self and allies, and randomly applies one of the following effects for {}s: +{%} ATK, +{%} DEF, +{%} Skill Intensity, or +{%} Skill Duration.",
@@ -1068,6 +1113,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 405,
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
@@ -1114,6 +1162,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 405,
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
@@ -1160,6 +1211,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 405,
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
@@ -1206,6 +1260,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 405,
       "描述": "Heals self and allies by {%} of the main character's Max HP.",
@@ -1252,6 +1309,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 406,
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
@@ -1312,6 +1372,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 406,
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
@@ -1372,6 +1435,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 70,
+    "放生": {
+      "110075": 3
+    },
     "主动": {
       "id": 406,
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to enemies within range, while decreasing their Damage Dealt by {%} for {}s.",
@@ -1432,6 +1498,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 407,
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
@@ -1485,6 +1554,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 407,
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
@@ -1538,6 +1610,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 407,
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
@@ -1591,6 +1666,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 407,
       "描述": "Deals damage equal to {%} of the main character's ATK to nearby enemies. Detects 1 Geniemon and 1 Chest within 100m, marking their positions for 30s.",
@@ -1644,6 +1722,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 408,
       "描述": "Grants self and allies -{%} Damage Taken for {}s.",
@@ -1704,6 +1785,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 408,
       "描述": "Grants self and allies -{%} Damage Taken for {}s.",
@@ -1764,6 +1848,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 408,
       "描述": "Grants self and allies -{%} Damage Taken for {}s.",
@@ -1824,6 +1911,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 409,
       "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
@@ -1884,6 +1974,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 409,
       "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
@@ -1944,6 +2037,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 409,
       "描述": "Continuously heals self and allies, restoring {%} of their Max HP per second for {}s.",
@@ -2004,6 +2100,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 411,
       "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
@@ -2064,6 +2163,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 411,
       "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
@@ -2124,6 +2226,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 411,
       "描述": "Deals Umbro Damage equal to {%} of the main character's ATK to enemies within range and reduces their DEF by {%} for {}s.",
@@ -2184,6 +2289,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 412,
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
@@ -2237,6 +2345,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 412,
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
@@ -2290,6 +2401,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 412,
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
@@ -2343,6 +2457,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 412,
       "描述": "Increases ATK of all allied [Summons] by {%} for {}s.",
@@ -2396,6 +2513,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 413,
       "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
@@ -2449,6 +2569,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 413,
       "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
@@ -2502,6 +2625,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 413,
       "描述": "Spawns 1 [Activated Sal Volatile], 1 [Tranquilizer Dewdrop], and 1 [Ammo Supply Chest]. Increases Skill Duration for self and allies by {%} for {}s.",
@@ -2555,6 +2681,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 414,
       "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
@@ -2608,6 +2737,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 414,
       "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
@@ -2661,6 +2793,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 414,
       "描述": "Grants self and allies {} Ultra Shield points and restores their Sanity by {}.",
@@ -2714,6 +2849,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 415,
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
@@ -2774,6 +2912,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 415,
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
@@ -2834,6 +2975,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 415,
       "描述": "Heals self and allies for {%} of the main character's Max HP and grants +{%} DEF for {}s.",
@@ -2894,6 +3038,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 416,
       "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
@@ -2954,6 +3101,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 416,
       "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
@@ -3014,6 +3164,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 10
+    },
     "主动": {
       "id": 416,
       "描述": "Deals Lumino Damage equal to {%} of the main character's ATK to enemies within range and increases the Skill DMG taken by them by {%} for {}s.",
@@ -3074,6 +3227,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 417,
       "描述": "Fire 3 projectiles, each dealing DMG equal to {%} of the main character's ATK to nearby enemies.",
@@ -3120,6 +3276,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 150,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 417,
       "描述": "Fire 3 projectiles, each dealing DMG equal to {%} of the main character's ATK to nearby enemies.",
@@ -3165,6 +3324,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 421,
       "描述": "Deals Umbro DMG equal to {%} of the main character's ATK to nearby enemies, and increases [Morale] for self and allies by {%} for {}s.",
@@ -3224,6 +3386,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 422,
       "描述": "For each [Summon] summoned by the main character, increases damage dealt by self and allies by {%} for {}s, up to {%}.",
@@ -3283,6 +3448,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 423,
       "描述": "Deals Pyro DMG equal to {%} of the main character's ATK to nearby enemies, and increases [Multishot] for self and allies by {%} for {}s.",
@@ -3342,6 +3510,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 424,
       "描述": "Restores {} Sanity to self and allies, and increases their Skill DMG by {%} for {}s.",
@@ -3401,6 +3572,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 425,
       "描述": "Increases [Resolve] by {%} for self and allies for {}s. If the main character's HP falls below 25%, instantly heals them for {%} HP.",
@@ -3460,6 +3634,9 @@
     "最大等级": 60,
     "捕获经验": 100,
     "经验": 100,
+    "放生": {
+      "110075": 30
+    },
     "主动": {
       "id": 426,
       "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to nearby enemies, and grants +{%} Lumino additional Damage to self and allies for {}s.",

@@ -33,6 +33,20 @@ function iconName(value: unknown): string {
     return match?.[1] ?? ""
 }
 
+/** 放生返还：Pet.ReturnReward 为资源 id→数量表，只收录正数（对齐 PetRecycleUtils 的 Count > 0 规则），空则省略。 */
+export function returnReward(pet: Record<string, any>): Record<string, number> | undefined {
+    const raw = pet.ReturnReward
+    if (!raw || typeof raw !== "object" || Array.isArray(raw)) return undefined
+    const result: Record<string, number> = {}
+    for (const [key, value] of Object.entries(raw)) {
+        const id = Number(key)
+        const count = Number(value)
+        if (!Number.isInteger(id) || id <= 0 || !Number.isFinite(count) || count <= 0) continue
+        result[String(id)] = count
+    }
+    return Object.keys(result).length > 0 ? result : undefined
+}
+
 function skillValues(ctx: ModuleContext, values: unknown): { values: number[][]; markers: string[] } {
     const source = Array.isArray(values) ? values : []
     const result: number[][] = []
@@ -103,6 +117,8 @@ export function petModule(ctx: ModuleContext): VNodeTree {
             经验: pet.PetExp ?? 0,
         }
         if (!pet.PremiumTransform) delete output.异化
+        const 放生 = returnReward(pet)
+        if (放生) output.放生 = 放生
 
         const battle = row(ctx, "BattlePet", pet.BattlePetId ?? 0)
         if (battle) {

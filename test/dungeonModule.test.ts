@@ -37,9 +37,22 @@ describe("Dungeon 副本过滤", () => {
         expect(ids.has(91601)).toBe(true)
         expect(ids.has(91602)).toBe(true)
         expect(ids.has(21001)).toBe(true) // SoloRaid
+        // Raid 预热赛（分组赛）副本无 DungeonReward 结算字段（奖励走 RaidFloor/排行），仍需输出
+        for (const preRaid of [21701, 21702, 21703, 21704]) expect(ids.has(preRaid)).toBe(true)
         expect(ids.has(40601)).toBe(true) // 联袂演绎
         expect(ids.has(90101)).toBe(true) // DefencePro（掉落魔之楔）
         expect(ids.has(90171)).toBe(true) // DefenceMove（掉落魔之楔）
+    })
+
+    test("Raid 预热赛副本保留怪物/胜负条件（无 r 结算字段）", async () => {
+        const dungeons = await buildDungeons()
+        const find = (id: number) => dungeons.find(item => item.id === id)!
+
+        // 21702 为单 Boss 分组赛本：无 MonsterID 跳层刷怪源，无 spawn，但保留 Boss 与胜负条件
+        expect(find(21702).t).toBe("SoloRaid")
+        expect(find(21702).m).toContain(8516701)
+        expect(find(21702).sm).toContain(8516701)
+        expect(find(21702).win).toBe(2)
     })
 
     test("奖励阶段波数来自 Defence 波次配置，独立于 spawn 刷怪波数", async () => {
