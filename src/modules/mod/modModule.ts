@@ -81,6 +81,74 @@ function skillDisplayName(id: number, entry: Row | undefined): VNodeTree {
     return name === "" ? String(id) : name
 }
 
+/**
+ * 收集技能节点链上的伤害任务引用（1-based 任务序号）。
+ *
+ * 仅用于新技能缺 `SkillDescKeys` 的合成兜底（如 Skill[1030302] 的 RT_143 无描述键，
+ * 伤害在 SkillNode[1030321] → SkillEffects[1030321] 的 Damage 任务里）。跟随 NextNodeId，
+ * 上限 32 步并去重防环；TaskEffects 支持数组/稀疏数字键两种形态。
+ */
+function collectChainDamageRefs(ctx: ModuleContext, entry: Row): Array<{ effectId: number; taskIndex: number }> {
+    const refs: Array<{ effectId: number; taskIndex: number }> = []
+    const seenNodes = new Set<number>()
+    let current = entry?.BeginNodeId
+    let steps = 0
+    while (current !== null && current !== undefined && current !== "" && !seenNodes.has(Number(current)) && steps < 32) {
+        seenNodes.add(Number(current))
+        steps++
+        const raw = ctx.dm.getTableItem("SkillNode", current as number) as Row | undefined
+        const node = (Array.isArray(raw) ? ((raw[0] as Row | undefined) ?? undefined) : raw) as Row | undefined
+        if (!node || typeof node !== "object") break
+        const effectIds = sequence(node.SkillNodeEffects)
+        for (const effectId of effectIds) {
+            const effectIdNum = Number(effectId)
+            if (!Number.isFinite(effectIdNum)) continue
+            const effect = ctx.dm.getTableItem("SkillEffects", effectIdNum) as Row | undefined
+            if (!effect || typeof effect !== "object") continue
+            const tasks = effect.TaskEffects
+            const entries: Array<[number, Row]> = Array.isArray(tasks)
+                ? tasks.map((task, index) => [index + 1, task as Row])
+                : Object.entries((tasks ?? {}) as Row)
+                      .filter(([key]) => /^\d+$/.test(key))
+                      .sort(([a], [b]) => Number(a) - Number(b))
+                      .map(([key, task]) => [Number(key), task as Row])
+            for (const [taskIndex, task] of entries) {
+                if (!task || typeof task !== "object" || task.Function !== "Damage") continue
+                if (task.Rate === null || task.Rate === undefined) continue
+                refs.push({ effectId: effectIdNum, taskIndex })
+            }
+        }
+        current = (node as Row).NextNodeId
+    }
+    return refs
+}
+
+/**
+ * 无描述键替换技能的字段合成：名称按顺序复用被替换旧技能的 DescKey（超出时复用最后一个），
+ * 数值表达式按新技能节点链上的 `$#SkillEffects[E].TaskEffects[I].Rate*100$%` 构造，复用
+ * `parseWeaponLikeSkillField` 做值/格式/削韧/tag/延迟/卡肉解析。旧技能亦无 DescKey 时返回空，
+ * 不凭空发明名称；多段连击的 `×N` 后缀只来自 authored DescValues，合成不补。
+ */
+function synthesizeReplacementFields(
+    ctx: ModuleContext,
+    skill: SkillArtifacts,
+    oldIdNum: number,
+    newId: number,
+    entry: Row
+): Array<Record<string, any>> {
+    const oldKeys = sequence(skillEntry(ctx, oldIdNum)?.SkillDescKeys).filter((key): key is string => typeof key === "string")
+    if (oldKeys.length === 0) return []
+    const refs = collectChainDamageRefs(ctx, entry)
+    if (refs.length === 0) return []
+    const fields: Array<Record<string, any>> = []
+    for (let i = 0; i < refs.length; i++) {
+        const descKey = oldKeys[i] ?? oldKeys[oldKeys.length - 1]
+        const descValue = `$#SkillEffects[${refs[i].effectId}].TaskEffects[${refs[i].taskIndex}].Rate*100$%`
+        fields.push(skill.parseWeaponLikeSkillField(descKey, descValue, newId, entry) as Record<string, any>)
+    }
+    return fields
+}
+
 async function skillReplacements(ctx: ModuleContext, mod: Row, skill: SkillArtifacts, assetReader: AssetReader): Promise<Row | undefined> {
     if (!mod.ModActivateSkills || typeof mod.ModActivateSkills !== "object") return undefined
     const out: Row = {}
@@ -96,6 +164,7 @@ async function skillReplacements(ctx: ModuleContext, mod: Row, skill: SkillArtif
             if (typeof keys[i] !== "string" || typeof values[i] !== "string") continue
             fields.push(skill.parseWeaponLikeSkillField(String(keys[i]), String(values[i]), newId, entry))
         }
+        if (fields.length === 0) fields.push(...synthesizeReplacementFields(ctx, skill, oldIdNum, newId, entry))
         await skill.applySkillTiming(entry, fields, {
             skillNodeData: nodeId => {
                 const node = ctx.dm.getTableItem("SkillNode", nodeId) as Row | undefined

@@ -102,4 +102,20 @@ describe("mod 模块", () => {
         expect(columns[0][0]).toBe("20.0%")
         expect(columns[0][4]).toBe("60.0%")
     })
+
+    test("无描述键的替换技能从节点链合成字段（103004→1030302）", async () => {
+        const mods = await buildMods()
+
+        // Skill[1030302] 无 SkillDescKeys，伤害在 SkillNode[1030321] → SkillEffects[1030321]；
+        // 名称按被替换旧技能 1030102 的 DescKey 顺序复用首个（蓄力攻击伤害），取消/连段随资产走不断言。
+        const replacement = (mods.find(item => item.id === 103004)?.技能替换 as Record<string, any>)?.["1030102"]
+        expect(replacement?.id).toBe(1030302)
+        const fields = replacement?.字段 as Array<Record<string, any>>
+        expect(fields).toHaveLength(1)
+        expect(fields[0].名称).toBe("蓄力攻击伤害")
+        expect(fields[0].值).toBe(5.66)
+        expect(fields[0].削韧).toBe(120)
+        expect(fields[0].tag).toEqual(expect.arrayContaining(["近战", "武器"]))
+        expect(fields[0].卡肉).toBe(0.13)
+    })
 })
