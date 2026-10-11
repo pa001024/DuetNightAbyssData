@@ -3,6 +3,7 @@
 import { existsSync, readdirSync } from "node:fs"
 import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
+import type { HardBossDataArtifact } from "../hardBoss/hardBossModule.ts"
 import { T, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
 import { getExportsRoot } from "../../lua/UAssetServer.ts"
@@ -43,7 +44,103 @@ function normalizeList(value: unknown): unknown[] {
     return result
 }
 
-function buildLinkMaps(dm: ModuleContext["dm"], resourceMap: Map<number, Row>) {
+/**
+ * 奖励可传递资源：直连 Resource、嵌套 Reward（如 4021002→4021001）、终端 Drop（如 4021001→Drop 40101→4020001）。
+ * 奖励嵌套可能成环，用 visited 截断并按顶层 RewardId 记忆化。
+ * 返回 direct（本层直连 Resource）与 all（direct + 嵌套传递）：嵌套传递只对采集类机关展开
+ * （宝箱/任务包的嵌套内容不计入地图拾取点位，见 buildLinkMaps）。
+ */
+export function createRewardResolver(
+    rewardTable: Record<string, unknown> | undefined,
+    dropToResource: Map<number, number[]>,
+    resourceMap: Map<number, Row>
+): (rewardId: number) => { direct: Set<number>; all: Set<number> } {
+    const memo = new Map<number, { direct: Set<number>; all: Set<number> }>()
+    const resolve = (rewardId: number, seen: Set<number>): { direct: Set<number>; all: Set<number> } => {
+        const cached = memo.get(rewardId)
+        if (cached) return cached
+        const direct = new Set<number>()
+        const all = new Set<number>()
+        memo.set(rewardId, { direct, all })
+        if (seen.has(rewardId)) return { direct, all }
+        seen.add(rewardId)
+        const reward = rewardTable?.[rewardId] as Row | undefined
+        if (reward && typeof reward === "object") {
+            const ids = normalizeList(reward.Id)
+            const types = normalizeList(reward.Type)
+            for (let i = 0; i < types.length; i++) {
+                if (types[i] !== "Resource" && types[i] !== "Reward" && types[i] !== "Drop") continue
+                const id = toInt(ids[i])
+                if (id === undefined) continue
+                if (types[i] === "Resource") {
+                    if (resourceMap.has(id)) {
+                        direct.add(id)
+                        all.add(id)
+                    }
+                } else if (types[i] === "Reward") {
+                    for (const resourceId of resolve(id, seen).all) all.add(resourceId)
+                } else {
+                    for (const resourceId of dropToResource.get(id) ?? []) all.add(resourceId)
+                }
+            }
+        }
+        seen.delete(rewardId)
+        return { direct, all }
+    }
+    return (rewardId: number) => resolve(rewardId, new Set<number>())
+}
+
+/** 资源是否为野外采集物：AccessKey 含 Text_Collecting_*（如坚果/矿石）；打怪掉落只有 Dungeon/Shop/Text_Monster。 */
+function hasCollectingKey(resourceMap: Map<number, Row>, resourceId: number): boolean {
+    return normalizeAccessKeys((resourceMap.get(resourceId) as Row | undefined)?.AccessKey).some(key =>
+        key.startsWith("Text_Collecting")
+    )
+}
+
+/** 资源 AccessKey 去重保序（数组或单值）。 */
+export function normalizeAccessKeys(value: unknown): string[] {
+    const list = Array.isArray(value) ? value : value === undefined || value === null ? [] : [value]
+    const result: string[] = []
+    for (const key of list) {
+        if (typeof key !== "string" || !key || result.includes(key)) continue
+        result.push(key)
+    }
+    return result
+}
+
+/** AccessKey→AccessText（如 Text_Collecting_Prologue01→Access_Collecting_Prologue01），供多语言渲染。 */
+export function buildAccessTexts(dm: ModuleContext["dm"]): Map<string, string> {
+    const result = new Map<string, string>()
+    for (const row of rows(dm.getTable("Access"))) {
+        if (typeof row.AccessKey !== "string" || typeof row.AccessText !== "string") continue
+        if (!result.has(row.AccessKey)) result.set(row.AccessKey, row.AccessText)
+    }
+    // MAIN_UI_FORGE02（铸造（可铸造：%s））的 %s 须运行时填充，静态导出无法补值，降级为基础标签 MAIN_UI_FORGE（铸造）。
+    for (const [key, text] of result) {
+        if (text === "MAIN_UI_FORGE02") result.set(key, "MAIN_UI_FORGE")
+    }
+    return result
+}
+
+/**
+ * AccessKey→AccessRule（如 Shop_Main→Return）。Return 项须运行时展开子项（在售商店/掉落委托）或跳转
+ * 系统界面，静态导出无法渲染，随获取途径文本一并隐藏；无规则与 InterfaceJump 项为直接展示文本。
+ */
+export function buildAccessRules(dm: ModuleContext["dm"]): Map<string, string> {
+    const result = new Map<string, string>()
+    for (const row of rows(dm.getTable("Access"))) {
+        if (typeof row.AccessKey !== "string" || typeof row.AccessRule !== "string") continue
+        if (!result.has(row.AccessKey)) result.set(row.AccessKey, row.AccessRule)
+    }
+    return result
+}
+
+/** 去掉 Return 规则项（需动态展开，静态不可见），保序；keep 命中的 key 直接保留（如已验证的 HardBoss）。 */
+export function visibleAccessKeys(keys: string[], rules: Map<string, string>, keep?: (key: string) => boolean): string[] {
+    return keys.filter(key => (keep?.(key) ?? false) || rules.get(key) !== "Return")
+}
+
+export function buildLinkMaps(dm: ModuleContext["dm"], resourceMap: Map<number, Row>) {
     const drops = rows(dm.getTable("Drop"))
     const rarelyToDrop = new Map<number, number[]>()
     const dropToResource = new Map<number, number[]>()
@@ -58,29 +155,40 @@ function buildLinkMaps(dm: ModuleContext["dm"], resourceMap: Map<number, Row>) {
         }
     }
 
-    const rewardToResource = new Map<number, number[]>()
-    for (const reward of rows(dm.getTable("Reward"))) {
-        const rewardId = toInt(reward.RewardId)
-        if (rewardId === undefined) continue
-        const ids = normalizeList(reward.Id)
-        const types = normalizeList(reward.Type)
-        for (let i = 0; i < types.length; i++) {
-            if (types[i] !== "Resource") continue
-            const resourceId = toInt(ids[i])
-            if (resourceId !== undefined && resourceMap.has(resourceId)) addUnique(rewardToResource, rewardId, resourceId)
-        }
-    }
+    const resolveReward = createRewardResolver(
+        dm.getTable("Reward") as Record<string, unknown> | undefined,
+        dropToResource,
+        resourceMap
+    )
 
     const mechanismToResource = new Map<number, ResourcePair[]>()
+    const pushPair = (unitId: number, resourceId: number, rewardId: number): void => {
+        const list = mechanismToResource.get(unitId) ?? []
+        if (!list.some(pair => pair[0] === resourceId && pair[1] === rewardId)) list.push([resourceId, rewardId])
+        mechanismToResource.set(unitId, list)
+    }
     for (const mechanism of rows(dm.getTable("Mechanism"))) {
         const unitId = toInt(mechanism.UnitId)
+        if (unitId === undefined) continue
+        // 嵌套/稀有传递只给野外采集物：资源 AccessKey 含 Text_Collecting_* 才计入地图拾取点位；
+        // 打怪掉落（如甲壳，AccessKey 只有 Dungeon/Shop/Text_Monster）不因宝箱战利品表含其材料而列为拾取。直连保持不变。
         const rewardId = toInt(mechanism.RewardId)
-        if (unitId === undefined || rewardId === undefined) continue
-        for (const resourceId of rewardToResource.get(rewardId) ?? []) {
-            const list = mechanismToResource.get(unitId) ?? []
-            if (!list.some(pair => pair[0] === resourceId && pair[1] === rewardId)) list.push([resourceId, rewardId])
-            mechanismToResource.set(unitId, list)
+        if (rewardId !== undefined) {
+            const resolved = resolveReward(rewardId)
+            for (const resourceId of resolved.all) {
+                if (!resolved.direct.has(resourceId) && !hasCollectingKey(resourceMap, resourceId)) continue
+                pushPair(unitId, resourceId, rewardId)
+            }
         }
+        // 稀有掉落（如矿石 1008→4020004）：仅 RareProb > 0 建模，0 表示不掉落（如 1009）。
+        const params = mechanism.UnitParams
+        const rareProb = params && typeof params === "object" ? Number((params as Row).RareProb) : NaN
+        const rareRewardId = params && typeof params === "object" ? toInt((params as Row).RareRewardId) : undefined
+        if (rareRewardId !== undefined && Number.isFinite(rareProb) && rareProb > 0)
+            for (const resourceId of resolveReward(rareRewardId).all) {
+                if (!hasCollectingKey(resourceMap, resourceId)) continue
+                pushPair(unitId, resourceId, rareRewardId)
+            }
     }
 
     const randomRuleToResource = new Map<number, ResourcePair[]>()
@@ -108,16 +216,17 @@ function addUnique(map: Map<number, number[]>, key: number, value: number): void
     map.set(key, values)
 }
 
-function buildDesignLevelUnitIds(dm: ModuleContext["dm"]): Map<number, number> {
-    const result = new Map<number, number>()
+function buildDesignLevelUnits(dm: ModuleContext["dm"]): { unitIds: Map<number, number>; creatorTypes: Map<number, string> } {
+    const unitIds = new Map<number, number>()
+    const creatorTypes = new Map<number, string>()
     const dir = join(dm.scriptDataRoot, "Script", "Datas", "DesignLevel_data")
-    if (!existsSync(dir)) return result
+    if (!existsSync(dir)) return { unitIds, creatorTypes }
     for (const file of readdirSync(dir)) {
         if (!file.endsWith(".lua")) continue
         const data = dm.getTable(`DesignLevel_data/${file.slice(0, -4)}`)
-        collectCreatorIds(data, result)
+        collectCreatorIds(data, unitIds, creatorTypes)
     }
-    return result
+    return { unitIds, creatorTypes }
 }
 
 function collectExploreUnitIds(value: unknown, result: Set<number>): void {
@@ -160,9 +269,9 @@ function buildBookPlacements(dm: ModuleContext["dm"], links: ReturnType<typeof b
     return placements
 }
 
-function collectCreatorIds(value: unknown, result: Map<number, number>): void {
+function collectCreatorIds(value: unknown, result: Map<number, number>, types?: Map<number, string>): void {
     if (Array.isArray(value)) {
-        for (const item of value) collectCreatorIds(item, result)
+        for (const item of value) collectCreatorIds(item, result, types)
         return
     }
     if (!value || typeof value !== "object") return
@@ -170,7 +279,9 @@ function collectCreatorIds(value: unknown, result: Map<number, number>): void {
     const creatorId = toInt(row.CreatorId)
     const unitId = toInt(row.UnitId)
     if (creatorId !== undefined && unitId !== undefined && !result.has(creatorId)) result.set(creatorId, unitId)
-    for (const item of Object.values(row)) collectCreatorIds(item, result)
+    const unitType = typeof row.UnitType === "string" ? row.UnitType : undefined
+    if (creatorId !== undefined && unitType !== undefined && types && !types.has(creatorId)) types.set(creatorId, unitType)
+    for (const item of Object.values(row)) collectCreatorIds(item, result, types)
 }
 
 function normalizeLevelKey(filePath: string): string | undefined {
@@ -420,11 +531,12 @@ export function extractPosition(node: Row, maps: ReturnType<typeof buildObjectMa
     return objectLocation(node, maps, false)
 }
 
-function resourcePairs(
+export function resourcePairs(
     props: Row,
     resourceMap: Map<number, Row>,
     links: ReturnType<typeof buildLinkMaps>,
-    unitIds: Map<number, number>
+    unitIds: Map<number, number>,
+    creatorTypes?: Map<number, string>
 ): ResourcePair[] {
     const result: ResourcePair[] = []
     const add = (resourceId: number | undefined, rewardId: number | undefined) => {
@@ -432,17 +544,29 @@ function resourcePairs(
             result.push([resourceId, rewardId])
     }
     add(toInt(props.ResourceId), undefined)
+    // Drop.DropId 与 Mechanism.UnitId 数值段重叠（如 90007 既是 GetResource 31005001 的掉落，也是
+    // HardBossOpenMechanism 的机关），必须按生成单位声明的 UnitType 分流，否则机关/怪物位置会被误记为资源 source。
+    // 生效类型取节点自带 UnitType，缺失时（如模板默认组件）回退到 DesignLevel_data 创角记录；两者都缺失的节点
+    // （Explore actor 等）保持原行为。
     const unitId = toInt(props.UnitId)
     const staticCreatorId = toInt(props.StaticCreatorId)
+    const assetType = typeof props.UnitType === "string" ? props.UnitType : undefined
+    const unitType = assetType ?? (staticCreatorId === undefined ? undefined : creatorTypes?.get(staticCreatorId))
+    const allowDrop = unitType === undefined || unitType === "Drop"
+    const allowMechanism = unitType === undefined || unitType === "Mechanism"
     const resolvedUnit = unitId ?? (staticCreatorId === undefined ? undefined : unitIds.get(staticCreatorId))
-    for (const resourceId of links.dropToResource.get(resolvedUnit ?? -1) ?? []) add(resourceId, undefined)
-    const rarelyId = toInt(props.RarelyId)
-    if ((unitId !== undefined || staticCreatorId !== undefined) && rarelyId !== undefined) {
-        for (const dropId of links.rarelyToDrop.get(rarelyId) ?? []) {
-            for (const resourceId of links.dropToResource.get(dropId) ?? []) add(resourceId, undefined)
+    if (allowDrop) {
+        for (const resourceId of links.dropToResource.get(resolvedUnit ?? -1) ?? []) add(resourceId, undefined)
+        const rarelyId = toInt(props.RarelyId)
+        if ((unitId !== undefined || staticCreatorId !== undefined) && rarelyId !== undefined) {
+            for (const dropId of links.rarelyToDrop.get(rarelyId) ?? []) {
+                for (const resourceId of links.dropToResource.get(dropId) ?? []) add(resourceId, undefined)
+            }
         }
     }
-    for (const [resourceId, rewardId] of links.mechanismToResource.get(resolvedUnit ?? -1) ?? []) add(resourceId, rewardId)
+    if (allowMechanism) {
+        for (const [resourceId, rewardId] of links.mechanismToResource.get(resolvedUnit ?? -1) ?? []) add(resourceId, rewardId)
+    }
     return result
 }
 
@@ -473,7 +597,8 @@ function collectAssetSources(
     links: ReturnType<typeof buildLinkMaps>,
     unitIds: Map<number, number>,
     sources: Map<number, ResourceSourceItem[]>,
-    positions: Map<number, ResourcePosition>
+    positions: Map<number, ResourcePosition>,
+    creatorTypes?: Map<number, string>
 ): void {
     const nodes = iterNodes(data)
     const maps = buildObjectMaps(nodes)
@@ -509,7 +634,7 @@ function collectAssetSources(
             if ((short && treasureNames.has(short)) || (typeof outer === "string" && outer.includes("Explore_Treasure_C'"))) continue
             if (short?.startsWith("Explore_Drop") || (typeof outer === "string" && outer.includes("Explore_Drop_C'"))) continue
         }
-        const pairs = resourcePairs(props, resourceMap, links, unitIds)
+        const pairs = resourcePairs(props, resourceMap, links, unitIds, creatorTypes)
         if (pairs.length === 0) continue
         const unit = toInt(props.UnitId)
         const creator = toInt(props.StaticCreatorId)
@@ -583,7 +708,8 @@ async function buildSources(
     ctx: ModuleContext,
     resourceMap: Map<number, Row>,
     links: ReturnType<typeof buildLinkMaps>,
-    unitIds: Map<number, number>
+    unitIds: Map<number, number>,
+    creatorTypes: Map<number, string>
 ): Promise<{
     sources: Map<number, ResourceSourceItem[]>
     placements: Map<number, ResourceSourceItem[]>
@@ -612,7 +738,7 @@ async function buildSources(
             for (const assetPath of collectDesignFiles(mapsRoot, level)) {
                 const data = await reader.readFModelAsset(assetPath)
                 if (!data) continue
-                collectAssetSources(data, srId, resourceMap, links, unitIds, sources, positions)
+                collectAssetSources(data, srId, resourceMap, links, unitIds, sources, positions, creatorTypes)
                 const nodes = iterNodes(data)
                 const maps = buildObjectMaps(nodes)
                 const randomPoints = collectRandomPoints(nodes, maps)
@@ -637,8 +763,23 @@ export async function resourceDataModule(ctx: ModuleContext): Promise<ResourceDa
         if (id !== undefined) resourceMap.set(id, resource)
     }
     const links = buildLinkMaps(ctx.dm, resourceMap)
-    const unitIds = buildDesignLevelUnitIds(ctx.dm)
-    const { sources, placements, positions } = await buildSources(ctx, resourceMap, links, unitIds)
+    const { unitIds, creatorTypes } = buildDesignLevelUnits(ctx.dm)
+    const accessTexts = buildAccessTexts(ctx.dm)
+    const accessRules = buildAccessRules(ctx.dm)
+    // 梦魇残声（HardBoss key）按末段难度奖励实际引用判定展示（用户口径），数据来自 HardBossData artifact。
+    const hardboss = ctx.getArtifact<HardBossDataArtifact>("HardBossData")
+    const hardbossResources = new Set<number>()
+    if (hardboss) {
+        const resolveReward = createRewardResolver(
+            ctx.dm.getTable("Reward") as Record<string, unknown> | undefined,
+            links.dropToResource,
+            resourceMap
+        )
+        for (const rewardId of hardboss.lastRewards()) {
+            for (const resourceId of resolveReward(rewardId).all) hardbossResources.add(resourceId)
+        }
+    }
+    const { sources, placements, positions } = await buildSources(ctx, resourceMap, links, unitIds, creatorTypes)
     const result: VNodeTree[] = []
     for (const resource of [...resourceMap.values()].sort((a, b) => Number(a.ResourceId) - Number(b.ResourceId))) {
         const resourceId = toInt(resource.ResourceId)
@@ -654,6 +795,13 @@ export async function resourceDataModule(ctx: ModuleContext): Promise<ResourceDa
         }
         if (resource.DetailDes) item.desc = T(resource.DetailDes)
         if (resource.IpDes) item.desc2 = T(resource.IpDes)
+        // 游戏内来源文本（AccessKey→AccessText，多语言渲染为字符串数组便于查看）
+        // Return 规则项（商店/委托等，须运行时展开）静态不可见，只保留直接展示项；
+        // HardBoss 例外：末段难度奖励实际引用则展示梦魇残声。
+        const accessKeys = visibleAccessKeys(normalizeAccessKeys(resource.AccessKey), accessRules, key =>
+            key === "HardBoss" ? hardbossResources.has(resourceId) : false
+        )
+        if (accessKeys.length > 0) item.access = accessKeys.map(key => T(accessTexts.get(key) ?? key))
         if (resource.UseEffectType === "RandomSelectPack") {
             const pack = toInt(resource.UseParam)
             if (pack !== undefined) item.pack = pack

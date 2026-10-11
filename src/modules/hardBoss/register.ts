@@ -1,4 +1,7 @@
 import type { ModulePlugin } from "../../core/plugin.ts"
-import { hardBossModule } from "./hardBossModule.ts"
+import { hardBossDataModule, hardBossModule } from "./hardBossModule.ts"
 
-export const plugins: ModulePlugin[] = [{ name: "HardBoss", build: ctx => ({ HardBoss: hardBossModule(ctx) }) }]
+export const plugins: ModulePlugin[] = [
+    { name: "HardBossData", outputs: false, build: ctx => hardBossDataModule(ctx) },
+    { name: "HardBoss", deps: ["HardBossData"], build: ctx => ({ HardBoss: hardBossModule(ctx) }) },
+]
