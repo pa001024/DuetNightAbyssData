@@ -103,7 +103,7 @@ export async function weaponModule(ctx: ModuleContext) {
     const skillArtifacts = ctx.getArtifact<SkillArtifacts>("Skill")!
 
     // 资产读取（uassetcli server 优先，json 回退）
-    const assetReader = new AssetReader(dm.root, true, true)
+    const assetReader = new AssetReader(dm.root, false, true)
     await assetReader.ensureServer()
 
     // 原始表
@@ -275,6 +275,30 @@ export async function weaponModule(ctx: ModuleContext) {
             const treeId = tree.WeaponSkillId ?? tree.SkillId
             const treeAttrs = (battleWeapon.AddAttrs ?? []).filter((attr: any) => Number(attr?.HyperWeaponSkillTreeID) === Number(treeId))
             const directAddon = processAddAttr({ ...battleWeapon, AddAttrs: treeAttrs }, true)
+            // 技能追伤改名：SkillDescParameter 引用的 Damage 任务含 Skill 标签且不含 Weapon
+            //（如 10199 的 SkillEffects[1019901]），则该技能 Buff 来的 BonusDamage 改记“技能追伤”；
+            // Weapon 追伤保留“追加伤害”原先路径，不新增字段。
+            const hasSkillChase = (() => {
+                for (const parameter of Array.isArray(tree.SkillDescParameter) ? tree.SkillDescParameter : []) {
+                    const expr = String(parameter)
+                    if (!/TaskEffects\[\d+\]\.(Rate|Value)/.test(expr)) continue
+                    const tags = new Set<string>()
+                    for (const m of expr.matchAll(/SkillEffects\[(\d+)\](?:\.TaskEffects\[(\d+)\])?/g)) {
+                        const effect = skillEffectsData(m[1]) as Record<string, any> | undefined
+                        const allTasks = Array.isArray(effect?.TaskEffects) ? effect.TaskEffects : []
+                        let selected: Array<Record<string, any>> = []
+                        if (m[2] === undefined) selected = allTasks
+                        else if (allTasks[Number(m[2]) - 1] !== undefined) selected = [allTasks[Number(m[2]) - 1]]
+                        for (const task of selected) {
+                            if (task?.Function !== "Damage") continue
+                            for (const tag of task.DamageTag ?? []) tags.add(String(tag))
+                        }
+                    }
+                    if (tags.has("Skill") && !tags.has("Weapon")) return true
+                }
+                return false
+            })()
+            const chaseBonusKey = hasSkillChase ? "技能追伤" : "追加伤害"
             const descAddon: Array<[VNode, VNode]> = []
             for (const parameter of Array.isArray(tree.SkillDescParameter) ? tree.SkillDescParameter : []) {
                 const match = String(parameter).match(/Buff\[(\d+)\]/)
@@ -284,18 +308,24 @@ export async function weaponModule(ctx: ModuleContext) {
                     const attrName = String(attr?.AttrName ?? "")
                     const value = Number(attr?.Rate ?? attr?.Value)
                     if (!Number.isFinite(value)) continue
-                    if (attrName === "BonusDamage") descAddon.push(["追加伤害", value])
+                    if (attrName === "BonusDamage") descAddon.push([chaseBonusKey, value])
                     else if (attrName === "DamageRate" && String(attr?.RateZone ?? "") === "Almighty") descAddon.push(["属性穿透", value])
                 }
             }
             const skillAddon = [...directAddon, ...descAddon]
             if (skillAddon.length > 0) skill.加成 = record(skillAddon)
             if (descAddon.length > 0) {
-                const bonusDamage = descAddon.find(([key]) => key === "追加伤害")?.[1]
+                const bonusDamage = descAddon.find(([key]) => key === chaseBonusKey)?.[1]
                 const penetration = descAddon.find(([key]) => key === "属性穿透")?.[1]
                 if (bonusDamage && ctx.textmap.get(String(tree.SkillDescription ?? ""), "cn").includes("追加伤害")) {
-                    skill.__fieldLangs = { 描述: ["en", "jp", "kr", "fr", "tc"] }
-                    addon.push([TLang("追加伤害", ["cn"]), bonusDamage])
+                    // 去重：描述只有 Buff 数值句时（如 10399/20599 的“自属性追加伤害+#1”），
+                    // cn 描述与加成完全重复才隐藏；一旦 SkillDescParameter 引用了 Buff 之外的
+                    // 数据源（10199 的 SkillEffects[1019901]/PassiveEffect[10199] 追伤参数），
+                    // 描述含额外效果，必须保留，否则追伤说明在 cn 包里丢失。
+                    const params = Array.isArray(tree.SkillDescParameter) ? tree.SkillDescParameter : []
+                    const onlyBuffParams = params.length > 0 && params.every(p => /Buff\[\d+\]/.test(String(p)))
+                    if (onlyBuffParams) skill.__fieldLangs = { 描述: ["en", "jp", "kr", "fr", "tc"] }
+                    addon.push([TLang(chaseBonusKey, ["cn"]), bonusDamage])
                 }
                 if (penetration) addon.push(["属性穿透", penetration])
             }

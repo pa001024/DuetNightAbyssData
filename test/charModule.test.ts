@@ -87,6 +87,32 @@ describe("char 模块", () => {
         expect(behaviors).not.toContain("Attr_SkillSpeed_Name")
     })
 
+    test("增益隐藏防御词条在行为中区分标注", async () => {
+        const graph = new Graph()
+        graph.defineModule({ name: "Skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })
+        graph.defineModule({ name: "Char", deps: ["Skill"], outputs: true, build: ctx => charModule(ctx) })
+
+        const artifacts = await graph.build({}, undefined, ["Char"])
+        const chars = (artifacts.get("Char") as { Char: Array<Record<string, any>> }).Char
+        const behaviorOf = (charId: number, skillId: number) =>
+            String(
+                renderTree(
+                    chars.find(item => item.id === charId)?.技能?.find((item: Record<string, any>) => item.id === skillId)?.行为,
+                    "cn",
+                    textmap
+                )
+            )
+        // 刻舟 150302：150327 带霸体+防抓取；同技能的 150325 无防御词条，不得误标
+        const kezhou = behaviorOf(1503, 150302)
+        expect(kezhou).toContain("增益(150327)[减伤25%, 霸体, 防抓取]")
+        expect(kezhou).toContain("增益(150325)[攻击范围加成+100, 激活技能]")
+        // 法露茜 310401：310411 仅霸体（无防抓取/无法被命中）；310402：310421 霸体+防抓取+无法被命中区分输出
+        expect(behaviorOf(3104, 310401)).toContain("增益(310411)[")
+        expect(behaviorOf(3104, 310401)).toContain("霸体")
+        expect(behaviorOf(3104, 310401)).not.toContain("防抓取")
+        expect(behaviorOf(3104, 310402)).toContain("增益(310421)[激活技能, 霸体, 防抓取, 无法被命中]")
+    })
+
     test("特质按派遣标签槽位聚合，同名标签叠加等级并保留各自突破阶段", async () => {
         const graph = new Graph()
         graph.defineModule({ name: "Skill", deps: [], outputs: false, build: ctx => skillModule(ctx) })

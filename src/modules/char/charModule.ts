@@ -9,22 +9,12 @@
  * 翻译部分一律 vnode；数值/结构普通 JS。语言无关，一次 build 多语言渲染。
  * 技能字段/值计算走游戏 SkillUtils（skill 模块 artifacts）。
  */
-import { readFileSync } from "node:fs"
-import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
 import { compile, LTemplate, record, seq, T, TFixed, TMap, TSection, type VNode, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
-import { GT_RE } from "../../lua/stubs.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
-import {
-    ACTION_CN,
-    BASE_ATTR_CN,
-    DAMAGE_TAG_CN,
-    DAMAGE_TYPE_CN,
-    extractFieldValueAndFormatFromSource,
-    P_MAP,
-    roundValue,
-} from "../skill/skillModule.ts"
+import { extractFieldValueAndFormatFromSource, roundValue } from "../skill/skillModule.ts"
+import { generateSkillBehavior, getSkillEntry, normalizeMapOrArray } from "./behaviorChain.ts"
 
 /** 阵营：Camp 表 */
 /** 属性缩写 */
@@ -54,13 +44,11 @@ const WEAPON_TYPE_CN: Record<string, string> = {
     Sword: "单手剑",
     Swordwhip: "鞭刃",
 }
-const BP_ADD_BUFF_CACHE = new Map<string, Record<string, number[]>>()
-
 export async function charModule(ctx: ModuleContext) {
     const dm = ctx.dm
     const skillArtifacts = ctx.getArtifact<SkillArtifacts>("Skill")!
-    // Char 的旧导出基于 FModel JSON；优先读取同一份 JSON，避免 UAsset 解析的时间线舍入差异。
-    const assetReader = new AssetReader(dm.root, true)
+    // 动画数据源：uasset 优先（与 FModel JSON 逐值一致，已用 Lise_Skill01 验证），json 仅回退。
+    const assetReader = new AssetReader(dm.root, false)
     await assetReader.ensureServer()
 
     // 原始表
@@ -787,72 +775,6 @@ const HINT_MAP: Record<string, string> = {
     SkillSustain: "技能耐久",
 }
 
-const BEHAVIOR_ATTR_CN: Record<string, string> = {
-    SkillIntensity: "技能威力",
-    SkillSpeed: "技能速度",
-}
-
-const PASSIVE_FUNCTION_CN: Record<string, string> = {
-    AddMspOnHit: "命中回复神智",
-    AddShield: "获得护盾",
-    AddbuffSkill02: "附加终结技增益",
-    AddbuffSkillintensity: "附加技能威力增益",
-    BombCreate: "生成炸弹",
-    CheckAndRemoveBuff: "检测并移除增益",
-    ClearSkill01TargetNum: "清空战技目标计数",
-    DownStage: "解除变身/离场",
-    ExecuteSkill01: "释放战技",
-    ExecuteSkill02: "释放终结技",
-    Falu_Skill01_On: "法露茜战技开启",
-    FunnelCreate: "生成浮游炮",
-    HenshinBuff: "变身增益",
-    HenshinOff: "解除变身",
-    LaunchShadowSword: "释放暗影剑",
-    OnZhiliuMarkRemove: "滞留标记移除时",
-    PassiveAdditionalSummon: "被动追加召唤",
-    QuitSkill02: "退出终结技",
-    SetSkill02Level: "设置终结技等级",
-    Skill1AddBuff: "战技附加增益",
-    Skill1AddMsp1: "战技回复神智1",
-    Skill1AddMsp2: "战技回复神智2",
-    Skill1AddPassive: "战技叠加被动层数",
-    Skill2AddBuff: "终结技附加增益",
-    Skill2AddPassive: "终结技叠加被动层数",
-    Skill2Off: "终结技关闭",
-    Skill2SummonAttack: "终结技召唤攻击",
-    SummonSkill1: "召唤战技实体",
-    BladeUp: "武器强化/剑气蓄力",
-    CheckBullet: "检查弹体",
-    ClearComboCount: "清空连击数",
-    ConsumeSkill02AttackBullet: "消耗终结技攻击弹体",
-    EndGrab: "结束抓取",
-    FlyingSkill1: "飞行战技",
-    GradeAutoShoot: "按等级自动射击",
-    HeavyAttackEnd: "重击结束",
-    HeavyAttackStart: "重击开始",
-    HitWall: "命中墙体",
-    OnSkill02Hit: "终结技命中",
-    OnStage: "登场",
-    OnSummonHitWall: "召唤物命中墙体",
-    PauseLifeTime: "暂停寿命计时",
-    Promotion_Queen: "升变·皇后",
-    Promotion_Rook: "升变·堡垒",
-    ResumeLifeTime: "恢复寿命计时",
-    SetRate: "设置倍率",
-    ShootJudge: "射击判定",
-    ShootLoopStart: "开始循环射击",
-    Skill01ConsumeEnergy: "战技消耗能量",
-    Skill01_GatherTarget: "战技聚怪",
-    Skill02Off: "终结技关闭",
-    Skill2AddMsp: "终结技回复神智",
-    Skill1Beat: "战技命中",
-    Skill1End: "战技结束",
-    StartDash: "开始冲刺",
-    StartGrab: "开始抓取",
-    StartShoot: "开始射击",
-    StopDash: "停止冲刺",
-}
-
 /**
  * 输出对象的字段顺序由各构建点的对象字面量/属性赋值顺序直接固定（对齐旧 Python 导出），
  * 不做写入后排序。各类对象的固定顺序：
@@ -874,16 +796,6 @@ function resourceNameKey(dm: ModuleContext["dm"], resourceId: number): string | 
         if (v && v.ResourceId === resourceId && v.ResourceName) return v.ResourceName
     }
     return undefined
-}
-
-/** 技能条目：skill[skillId][0]["0"]（兼容数组/对象 grade） */
-function getSkillEntry(dm: ModuleContext["dm"], skillId: number): Record<string, any> | null {
-    const info = dm.getTableItem("Skill", skillId) as any
-    if (!Array.isArray(info) || info.length === 0) return null
-    const gradeTable = info[0]
-    if (!gradeTable || typeof gradeTable !== "object") return null
-    const entry = gradeTable["1"] ?? gradeTable[1] ?? gradeTable["0"] ?? gradeTable[0]
-    return entry && typeof entry === "object" ? entry : null
 }
 
 /** 技能等级数 */
@@ -918,277 +830,6 @@ function skillSectionIndex(groups: unknown, index: number): number | undefined {
     return undefined
 }
 
-/** 生成老导出中的技能行为摘要；只读技能链，不参与翻译或数值解析。 */
-function generateSkillBehavior(
-    dm: ModuleContext["dm"],
-    skillArtifacts: SkillArtifacts,
-    skillId: number,
-    inheritedDescValues?: unknown[]
-): VNodeTree {
-    const nodeData = (id: number | string) => dm.getTableItem("SkillNode", id) as Record<string, any> | undefined
-    const effectData = (id: number | string) => dm.getTableItem("SkillEffects", id) as Record<string, any> | undefined
-    const buffData = (id: number | string) => dm.getTableItem("Buff", id) as Record<string, any> | undefined
-    const passiveData = (id: number | string) => dm.getTableItem("PassiveEffect", id) as Record<string, any> | undefined
-    const attrConfig = () => (dm.getTable("AttrConfig") as Record<string, any>) || {}
-    let bpAddBuff = BP_ADD_BUFF_CACHE.get(dm.root)
-    if (!bpAddBuff) {
-        bpAddBuff = JSON.parse(readFileSync(join(import.meta.dir, "data", "BPAddBuff.json"), "utf8")) as Record<string, number[]>
-        BP_ADD_BUFF_CACHE.set(dm.root, bpAddBuff)
-    }
-    const entry = getSkillEntry(dm, skillId)
-    if (!entry) return ""
-
-    const ownDescValues = normalizeMapOrArray(entry.SkillDescValues)
-    const descValues = ownDescValues.length > 0 ? ownDescValues : (inheritedDescValues ?? [])
-    const parts: string[] = []
-    const seenEffects = new Set<string>()
-    const seenNodes = new Set<string>()
-    const seenSkills = new Set<string>()
-
-    const effectRate = (effectId: number, rate: unknown): number | string | null => {
-        if (typeof rate === "number") return rate
-        const text = String(rate ?? "")
-        if (!text.startsWith("#")) {
-            return Number.isFinite(Number(text)) ? Number(text) : text || null
-        }
-        const source =
-            descValues.find(value => typeof value === "string" && value.includes(`SkillEffects[${effectId}]`) && value.includes("*100")) ??
-            descValues.find(value => typeof value === "string" && value.includes("SkillEffects[") && value.includes("*100"))
-        if (typeof source !== "string") return null
-        const ref = source.match(new RegExp(`\\$#SkillEffects\\[${effectId}\\][^$]*\\$`))?.[0] ?? source.match(/\$[^$]+\$/)?.[0]
-        if (!ref) return null
-        const computed = skillArtifacts.calcSkillDesc(ref, 1)
-        const number = computed.match(/-?\d+(?:\.\d+)?/)?.[0]
-        return number === undefined ? null : Number(number) / (ref.includes("*100") ? 100 : 1)
-    }
-
-    const add = (part: string) => {
-        if (part && !parts.includes(part)) parts.push(part)
-    }
-
-    const attrConfigKey = (attrName: string, attr: Record<string, any>): string => {
-        if (attrName === "DamageRate" || attrName === "DamagedRate") {
-            const tag = attr.DamageTag ?? attr.Tag
-            const zone = attr.RateZone
-            if (tag || zone) {
-                const tagName = tag ?? "NoTag"
-                const zoneName = zone ?? "Normal"
-                const clientKey = `${attrName}_${tagName}_${zoneName}`
-                if (attrConfig()[clientKey]) return clientKey
-                const zoneKey = `${attrName}_${zoneName}`
-                if (attrConfig()[zoneKey]) return zoneKey
-            }
-        }
-        if (attrConfig()[attrName]) return attrName
-        const normalKey = `${attrName}_Normal`
-        return attrConfig()[normalKey] ? normalKey : attrName
-    }
-
-    const attrSummaryName = (attrName: string, attr: Record<string, any>): string => {
-        const direct = BEHAVIOR_ATTR_CN[attrName]
-        if (direct) return direct
-        const config = attrConfig()[attrConfigKey(attrName, attr)]
-        if (config?.Name) return `\x01GT{${config.Name}}\x01`
-        return P_MAP[attrName] ?? attrName
-    }
-
-    const formatBuffValue = (attrName: string, attr: Record<string, any>, value: unknown): string => {
-        const number = Number(value)
-        if (!Number.isFinite(number)) return String(value ?? "")
-        const config = attrConfig()[attrConfigKey(attrName, attr)]
-        if (config?.IsPercent) return `${roundValue(number * 100)}%`
-        return String(roundValue(number))
-    }
-
-    const buffSummary = (buffId: unknown): string => {
-        const id = String(buffId ?? "")
-        const buff = buffData(id)
-        if (!buff || typeof buff !== "object") return `增益(${id})`
-        const bits: string[] = []
-        for (const attr of Array.isArray(buff.AddAttrs) ? buff.AddAttrs : []) {
-            if (!attr || typeof attr !== "object") continue
-            const attrName = String(attr.AttrName ?? "")
-            const name = attrName === "ATK" ? "攻击" : attrSummaryName(attrName, attr)
-            const rawValue = attr.Rate ?? attr.Value
-            const value = Number(rawValue)
-            if (!name || rawValue === undefined || rawValue === null) {
-                if (attr.SupLimitValue === undefined) continue
-            }
-            if (attr.Stackable && (Number.isFinite(value) || (typeof rawValue === "string" && rawValue.startsWith("#")))) {
-                const stackValue = typeof rawValue === "string" && rawValue.startsWith("#") ? rawValue : String(roundValue(value))
-                bits.push(`每层+${stackValue}${name}(最多${buff.MaxLayer ?? ""}层)`)
-            } else if (attr.SupLimitValue !== undefined) {
-                bits.push(`${name}上限${roundValue(Number(attr.SupLimitValue))}`)
-            } else {
-                const displayValue =
-                    typeof rawValue === "string" && rawValue.startsWith("#") ? rawValue : formatBuffValue(attrName, attr, rawValue)
-                bits.push(`${name}+${displayValue}`)
-            }
-        }
-        for (const dot of Array.isArray(buff.DotDatas) ? buff.DotDatas : []) {
-            if ((dot?.Type === "SpChange" || dot?.Type === "SecondSpChange") && typeof dot.Value === "number") {
-                const verb = dot.Value < 0 ? "消耗" : "回复"
-                bits.push(`每${dot.Interval ?? 1}秒${verb}${Math.abs(dot.Value)}神智`)
-            } else if (dot?.Type === "SkillEffect") {
-                bits.push(`每${dot.Interval ?? 1}秒执行技能效果(${dot.EffectId})`)
-            } else if (dot?.Type === "Dot") {
-                const damageType = DAMAGE_TYPE_CN[String(dot.DamageType)] ?? dot.DamageType ?? ""
-                const rate = dot.Rate === undefined ? "" : `×${dot.Rate}`
-                bits.push(`每${dot.Interval ?? 1}秒造成${damageType}持续伤害${rate}`)
-            }
-        }
-        if (buff.ActivateSkills) bits.push("激活技能")
-        if (buff.ReplaceActions) bits.push("替换动作")
-        if (buff.EnableFlight) bits.push("启用飞行")
-        if (buff.UseSummonWeapon) bits.push("召唤武器")
-        if (Array.isArray(buff.DisableSkills) && buff.DisableSkills.length > 0) {
-            bits.push(`禁用[${buff.DisableSkills.map((skill: unknown) => ACTION_CN[String(skill)] ?? String(skill)).join(", ")}]`)
-        }
-        return bits.length > 0 ? `增益(${id})[${bits.join(", ")}]` : `增益(${id})`
-    }
-
-    const walkEffect = (effectId: unknown): void => {
-        const key = String(effectId)
-        if (seenEffects.has(key)) return
-        seenEffects.add(key)
-        const effect = effectData(key)
-        if (!effect || typeof effect !== "object") return
-        for (const task of Array.isArray(effect.TaskEffects) ? effect.TaskEffects : []) {
-            if (!task || typeof task !== "object") continue
-            const fn = String(task.Function ?? "")
-            if (fn === "Damage") {
-                const rate = effectRate(Number(effectId), task.Rate)
-                const baseAttr = String(task.BaseAttr ?? "基础伤害")
-                const base = BASE_ATTR_CN[baseAttr] ?? attrSummaryName(baseAttr, { AttrName: baseAttr })
-                let text = `造成${base}`
-                if (typeof rate === "number" && rate > 0 && rate < 1) text += `${roundValue(rate * 100)}%`
-                else if (typeof rate === "number") text += `${(rate * 100).toFixed(1)}%`
-                else if (typeof task.Rate === "string") text += `×${task.Rate}`
-                if (rate !== null) {
-                    text += "的"
-                    text += task.DamageType ? `${DAMAGE_TYPE_CN[String(task.DamageType)] ?? task.DamageType}属性` : ""
-                    text += "伤害"
-                    const tags = (Array.isArray(task.DamageTag) ? task.DamageTag : [])
-                        .map((tag: unknown) => DAMAGE_TAG_CN[String(tag)] ?? String(tag))
-                        .filter((tag: string, index: number, list: string[]) => tag && list.indexOf(tag) === index)
-                    if (tags.length > 0) text += `(${tags.join("/")})`
-                    if (typeof task.Value === "string" && task.Value.startsWith("#")) text += `+${task.Value}`
-                    add(text)
-                }
-            } else if (fn === "CutToughness" && task.Value !== undefined) {
-                add(`削减战姿${task.Value}`)
-            } else if (fn === "AddBuff") {
-                let summary = `附加${buffSummary(task.BuffId)}`
-                if (typeof task.LastTime === "number" && task.LastTime !== -1) summary += `(持续${roundValue(task.LastTime)}秒)`
-                if (task.Delay) summary = `延迟${roundValue(Number(task.Delay))}秒后${summary}`
-                add(summary)
-            } else if (fn === "RemoveBuff") {
-                add(task.BuffId === undefined || task.BuffId === null ? "移除" : `移除${buffSummary(task.BuffId)}`)
-            } else if (fn === "AddEnergyShield") {
-                add("获得护盾")
-            } else if (["Heal", "AddHp", "AddHpByRate", "RecoverHp", "AddSp", "RecoverSp", "AddES", "RecoverES"].includes(fn)) {
-                add(`恢复类效果(${task.BaseAttr ?? task.BaseChar ?? fn})`)
-            } else if (fn === "CreateSkillCreature" && task.CreatureId !== undefined) {
-                add(`召唤实体(${task.CreatureId})`)
-            } else if (fn === "CreateUnit") {
-                add("执行[CreateUnit]")
-            } else if (fn === "ExecutePassiveFunction") {
-                const functionName = String(task.FunctionName ?? "")
-                let summary = `触发被动功能[${PASSIVE_FUNCTION_CN[functionName] ?? functionName}]`
-                const passiveId = task.PassiveEffectId
-                const passive = passiveId !== undefined ? passiveData(String(passiveId)) : undefined
-                if (passive && typeof passive === "object") {
-                    const bpPath = String(passive.BPPath ?? "")
-                    const bpName = bpPath.split("/").pop()?.split(".")[0] ?? ""
-                    summary += `(被动效果${passiveId}${bpName ? `·${bpName}` : ""})`
-                }
-                add(summary)
-            } else if (fn === "ExecuteClientPassiveFunction") {
-                add("执行[ExecuteClientPassiveFunction]")
-            } else if (
-                [
-                    "AddBullet",
-                    "AdditionalHitFX",
-                    "CallBackSkillCreature",
-                    "ChangeModel",
-                    "ChargeBullet",
-                    "Disarm",
-                    "PlayerCameraUnlock",
-                    "RemoveSkillCreature",
-                    "RemoveUnit",
-                    "SetToCondemnLoc",
-                    "StartTargetCondemn",
-                ].includes(fn)
-            ) {
-                add(`执行[${fn}]`)
-            }
-            for (const childKey of ["SkillEffect", "EffectIds"]) {
-                const children = Array.isArray(task[childKey]) ? task[childKey] : task[childKey] === undefined ? [] : [task[childKey]]
-                for (const child of children) walkEffect(child)
-            }
-        }
-    }
-
-    const walkSkill = (innerSkillId: unknown): void => {
-        const key = String(innerSkillId)
-        if (seenSkills.has(key)) return
-        seenSkills.add(key)
-        const inner = getSkillEntry(dm, Number(innerSkillId))
-        if (!inner) return
-        for (const passiveId of Array.isArray(inner.PassiveEffects) ? inner.PassiveEffects : []) {
-            const passive = passiveData(String(passiveId))
-            if (!passive || typeof passive !== "object") continue
-            const path = String(passive.BPPath ?? "")
-            const bpName = path.split("/").pop()?.split(".")[0] ?? ""
-            const label = bpName ? `被动效果(${passiveId})(${bpName})` : `被动效果(${passiveId})`
-            add(label)
-            // Python's current export does not include the static BP_Falu_Passive map entries.
-            if (bpName !== "BP_Falu_Passive") {
-                for (const buffId of bpAddBuff[bpName] ?? []) add(buffSummary(buffId))
-            }
-        }
-        let nodeId = inner.BeginNodeId
-        while (nodeId && !seenNodes.has(String(nodeId)) && seenNodes.size < 8) {
-            seenNodes.add(String(nodeId))
-            const node = nodeData(String(nodeId))
-            if (!node || typeof node !== "object") break
-            const effects = Array.isArray(node.SkillNodeEffects) ? node.SkillNodeEffects : [node.SkillNodeEffects]
-            for (const effectId of effects) walkEffect(effectId)
-            const branches = node.BranchNodeIds ?? node.ChildNodeIds
-            const branchIds = Array.isArray(branches) ? branches : branches && typeof branches === "object" ? Object.values(branches) : []
-            for (const branchId of branchIds) {
-                let branchNodeId = branchId
-                while (branchNodeId && !seenNodes.has(String(branchNodeId)) && seenNodes.size < 64) {
-                    seenNodes.add(String(branchNodeId))
-                    const branchNode = nodeData(String(branchNodeId))
-                    if (!branchNode || typeof branchNode !== "object") break
-                    const branchEffects = Array.isArray(branchNode.SkillNodeEffects)
-                        ? branchNode.SkillNodeEffects
-                        : [branchNode.SkillNodeEffects]
-                    for (const effectId of branchEffects) walkEffect(effectId)
-                    branchNodeId = branchNode.NextNodeId
-                }
-            }
-            nodeId = node.NextNodeId
-        }
-    }
-
-    walkSkill(skillId)
-    const text = parts.join(";")
-    const matches = [...text.matchAll(GT_RE)]
-    if (matches.length === 0) return text
-    const nodes: VNode[] = []
-    let last = 0
-    for (const match of matches) {
-        const index = match.index!
-        if (index > last) nodes.push(text.slice(last, index))
-        nodes.push(TMap(match[1], P_MAP))
-        last = index + match[0].length
-    }
-    if (last < text.length) nodes.push(text.slice(last))
-    return seq(nodes)
-}
-
 /**
  * 把"等级表"规范化为有序条目列表。
  * 兼容：数组、1 起始对象 {"1":..., "2":...}、0 起始对象 {"0":..., "1":...}。
@@ -1210,27 +851,6 @@ function asEntryList(v: unknown): any[] {
         .sort((a, b) => a[0] - b[0])
         .map(([, v]) => v)
     return [...rest, ...zero]
-}
-
-/**
- * 把"1 起始 map 或数组"规范化为数组（对齐老代码 _normalize_skill_desc_*）。
- * 如 {"1": a, "2": b} → [a, b]；数组原样返回。
- */
-function normalizeMapOrArray(v: unknown): any[] {
-    if (Array.isArray(v)) return v
-    if (!v || typeof v !== "object") return []
-    const items: Array<[number, any]> = []
-    let maxIndex = 0
-    for (const [k, val] of Object.entries(v as Record<string, any>)) {
-        const idx = Number(k)
-        if (!Number.isInteger(idx) || idx <= 0) continue
-        items.push([idx, val])
-        if (idx > maxIndex) maxIndex = idx
-    }
-    if (items.length === 0) return []
-    const result: any[] = new Array(maxIndex).fill(null)
-    for (const [idx, val] of items) result[idx - 1] = val
-    return result
 }
 
 /**

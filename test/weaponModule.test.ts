@@ -105,4 +105,50 @@ describe("weapon 模块", () => {
         const smelting = weapons.find(item => item.id === 10299)?.熔炼
         expect(smelting).toEqual(["可通过灾厄熔炼解锁武器潜能，潜能仅在角色的精通武器与该武器类型相同时生效。"])
     })
+
+    test("追加伤害去重只隐藏纯数值句：10199 保留追伤描述，10399/20599 仍隐藏", async () => {
+        const weapons = await buildWeapons()
+        const furnaceSkill = (weaponId: number, level: number): Record<string, any> | undefined =>
+            weapons
+                .find(item => item.id === weaponId)
+                ?.熔炉?.find((row: Record<string, any>) => row.lv === level)
+                ?.技能?.[0]
+
+        // 10199 lv5 描述有后半段追伤（SkillEffects[1019901]/PassiveEffect 参数），cn 必须保留
+        const truth = furnaceSkill(10199, 5)
+        expect(truth?.id).toBe(10199010)
+        expect(truth?.描述).toContain("3.0")
+        expect(truth?.描述).toContain("3500.0%")
+        expect(truth?.描述).toContain("1.0")
+        // Buff 来的追加伤害与 SkillEffects 来的技能追伤分开字段
+        expect(truth?.加成).toEqual({ 技能追伤: 0.5 })
+
+        // 10399/20599 描述只有“自属性追加伤害+#1”一句，与加成重复，cn 仍隐藏
+        expect(furnaceSkill(10399, 4)?.描述).toBeUndefined()
+        expect(furnaceSkill(10399, 4)?.加成).toEqual({ 追加伤害: 0.35 })
+        expect(furnaceSkill(20599, 4)?.描述).toBeUndefined()
+        expect(furnaceSkill(20599, 4)?.加成).toEqual({ 追加伤害: 0.35 })
+    })
+
+    test("技能追伤改名：带 Skill 追伤的技能改记技能追伤，Weapon 追伤走原先追加伤害", async () => {
+        const weapons = await buildWeapons()
+        const furnaceSkill = (weaponId: number, level: number): Record<string, any> | undefined =>
+            weapons
+                .find(item => item.id === weaponId)
+                ?.熔炉?.find((row: Record<string, any>) => row.lv === level)
+                ?.技能?.[0]
+
+        // 10199 lv5：只有技能追伤 0.5（改名，无追加伤害键）
+        expect(furnaceSkill(10199, 5)?.加成).toEqual({ 技能追伤: 0.5 })
+        // 顶层汇总同步改名
+        expect(weapons.find(item => item.id === 10199)?.加成).toMatchObject({ 技能追伤: 0.5 })
+        expect(weapons.find(item => item.id === 10199)?.加成).not.toHaveProperty("追加伤害")
+        // Weapon 追伤 / 纯数值句保留原先追加伤害路径
+        expect(furnaceSkill(10399, 4)?.加成).toEqual({ 追加伤害: 0.35 })
+        expect(weapons.find(item => item.id === 10399)?.加成).toMatchObject({ 追加伤害: 0.35 })
+        expect(weapons.find(item => item.id === 10399)?.加成).not.toHaveProperty("技能追伤")
+        for (const weaponId of [10299, 20599, 20298]) {
+            expect(furnaceSkill(weaponId, 0)?.加成 ?? {}).not.toHaveProperty("技能追伤")
+        }
+    })
 })

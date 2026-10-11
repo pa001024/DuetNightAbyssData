@@ -1428,7 +1428,7 @@
             "icon": "",
             "描述": "Dégâts de compétence supplémentaires de votre attribut +50.0%.\nLorsque [Recherche] atteint le nombre maximal de cumuls, vous obtenez également l’effet suivant : lorsque vous infligez des Dégâts de compétence, 3500.0% dégâts de calamité sont infligés aux ennemis dans un rayon de 3.0 m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et augmentent en fonction de la Puissance de compétence et de la Vitesse de compétence du personnage, selon le multiplicateur [Puissance de compétence × Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les 1.0 s.",
             "加成": {
-              "追加伤害": 0.5
+              "技能追伤": 0.5
             }
           }
         ]

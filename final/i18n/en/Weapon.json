@@ -1428,7 +1428,7 @@
             "icon": "",
             "描述": "Additional Skill DMG of own element +50.0%.\nWhen [Inquiry] reaches max stacks: Dealing Skill DMG also deals 3500.0% Calamity DMG to enemies within 3.0m of the target. This counts as Skill DMG and increases by [Skill Intensity × Skill Speed − 100]%. This effect can trigger at most once every 1.0s.",
             "加成": {
-              "追加伤害": 0.5
+              "技能追伤": 0.5
             }
           }
         ]
