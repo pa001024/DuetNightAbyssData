@@ -1,7 +1,8 @@
 /**
  * scriptSnapshot 测试：
  * - 纯函数：版本号段解析 / 前缀匹配（不依赖 git）
- * - 真实仓库：git 历史中 tag(1.2)+commit subject(1.6.4.1) 的解析（依赖本仓库历史）
+ * - 真实仓库：git 历史中 tag 与主线版本号的解析（依赖本仓库历史；
+ *   断言只认“最新在前 / 前缀取最新”等相对语义，不写死当前最新版本号，避免版本推进即过期）
  * - 快照冒烟：仅在 .cache 已有快照时验证复用路径（避免默认物化数百 MB 数据）
  */
 import { afterAll, describe, expect, test } from "bun:test"
@@ -57,13 +58,23 @@ describe("selectVersion", () => {
 })
 
 describe("listScriptVersions / resolveScriptVersion（真实仓库）", () => {
-    test("列表包含 tag v1.2 与主线 commit subject v1.6.4.1，且按最新在前", () => {
+    /** 版本段字典序比较（等长补 0，短者小），与 selectVersion 的排序语义一致。 */
+    function compareSegments(a: number[], b: number[]): number {
+        const len = Math.max(a.length, b.length)
+        for (let i = 0; i < len; i++) {
+            const diff = (a[i] ?? 0) - (b[i] ?? 0)
+            if (diff !== 0) return diff > 0 ? 1 : -1
+        }
+        return 0
+    }
+
+    test("列表包含 tag v1.2，且按最新在前", () => {
         const all = listScriptVersions(REPO_ROOT)
         expect(all.length).toBeGreaterThan(0)
-        const first = all[0]
-        expect(first.version).toBe("1.6.4.1")
+        const first = versionSegments(all[0].version)!
+        for (const v of all) expect(compareSegments(first, versionSegments(v.version)!)).toBeGreaterThanOrEqual(0)
         expect(all.some(v => v.version === "1.2" && v.isTag)).toBe(true)
-        expect(all.some(v => v.version === "1.6.4.1" && !v.isTag)).toBe(true)
+        expect(all.some(v => !v.isTag)).toBe(true)
     })
     test("-v 1.2 / v1.2 → tag v1.2", () => {
         const byPlain = resolveScriptVersion(REPO_ROOT, "1.2")
@@ -72,10 +83,18 @@ describe("listScriptVersions / resolveScriptVersion（真实仓库）", () => {
         const byV = resolveScriptVersion(REPO_ROOT, "v1.2")
         expect(byV.commit).toBe(byPlain.commit)
     })
-    test("-v 1.6（前缀）→ 最新 1.6.x（当前 v1.6.4.1）", () => {
+    test("-v 1.6（前缀）→ 最新 1.6.x", () => {
+        const all = listScriptVersions(REPO_ROOT)
+        const latest16 = all
+            .filter(v => {
+                const segs = versionSegments(v.version)
+                return segs !== null && segs[0] === 1 && segs[1] === 6 && segs.length > 2
+            })
+            .sort((a, b) => compareSegments(versionSegments(b.version)!, versionSegments(a.version)!))[0]
+        expect(latest16).toBeDefined()
         const resolved = resolveScriptVersion(REPO_ROOT, "1.6")
-        expect(resolved.version).toBe("1.6.4.1")
-        expect(resolved.label).toBe("v1.6.4.1")
+        expect(resolved.version).toBe(latest16.version)
+        expect(resolved.label).toBe(`v${latest16.version}`)
     })
     test("-v 1.6.4.1（精确）与 commit 哈希等价", () => {
         const byVer = resolveScriptVersion(REPO_ROOT, "1.6.4.1")

@@ -45,7 +45,7 @@ const WEAPON_TYPE_KEY: Record<string, string> = {
     Swordwhip: "WeaponType_Swordwhip",
 }
 
-const WEAPON_TYPE_CN: Record<string, string> = {
+export const WEAPON_TYPE_CN: Record<string, string> = {
     Bow: "弓",
     Bow01: "弓（短弓）",
     Bow02: "弓（长弓）",

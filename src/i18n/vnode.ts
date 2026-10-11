@@ -40,7 +40,7 @@ export interface IntNode {
 /** 可翻译键的对象（如突破材料 { "铜币": 2800 }，键按语言翻译） */
 export interface RecordNode {
     readonly __t: "rec"
-    readonly entries: Array<[VNode, VNode]>
+    readonly entries: Array<[VNode, VNodeTree]>
 }
 /** TextMap 模板 + 数值替换（如熔炼 "角色攻击+<H>#1</>。" + 值） */
 export interface LTemplateNode {
@@ -168,7 +168,7 @@ export function INT(value: number): IntNode {
 }
 
 /** 可翻译键的对象（键/值都可为 vnode；渲染时键用翻译结果） */
-export function record(entries: Array<[VNode, VNode]>): RecordNode {
+export function record(entries: Array<[VNode, VNodeTree]>): RecordNode {
     return { __t: "rec", entries }
 }
 
@@ -296,12 +296,14 @@ function renderVNode(v: VNode, lang: string, textmap: TextMap): unknown {
         case "int":
             return String(Math.round(v.value))
         case "rec": {
-            // 可翻译键的对象：键、值各自渲染
+            // 可翻译键的对象：键、值各自按完整树递归渲染（值可以是数组/对象等复合结构）
             const out: Record<string, unknown> = {}
             for (const [k, val] of v.entries) {
-                const key = renderVNode(k, lang, textmap)
+                const key = renderTree(k, lang, textmap)
                 if (key === OMIT) continue
-                out[String(key)] = renderVNode(val, lang, textmap)
+                const rendered = renderTree(val, lang, textmap)
+                if (rendered === OMIT) continue
+                out[String(key)] = rendered
             }
             return out
         }

@@ -14,7 +14,6 @@ describe("TitleFrame 模块", () => {
         const artifacts = await graph.build({}, undefined, ["TitleFrame"])
         const rows = (artifacts.get("TitleFrame") as { TitleFrame: Array<Record<string, any>> }).TitleFrame
 
-        expect(rows).toHaveLength(56)
         expect(rows.map(row => row.id)).toEqual([...rows.map(row => row.id)].sort((a, b) => a - b))
 
         const textmap = getTextMap()

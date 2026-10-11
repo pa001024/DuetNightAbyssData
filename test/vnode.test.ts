@@ -35,9 +35,11 @@ describe("TextMap", () => {
 
     test("旧 Python 文本 fallback", () => {
         const tm = makeTextMap()
-        expect(tm.get("UI_CHAR_NAME_4103", "cn")).toBe("SP黎瑟")
-        expect(tm.get("UI_CHAR_NAME_5402", "cn")).toBe("莉莉蔻")
+        // 缺 key 时走旧文本兜底（UI_ChapterNumber_Ex02 游戏表仍缺失）
         expect(tm.get("UI_ChapterNumber_Ex02", "cn")).toBe("第二章")
+        // 已实装的 key 走游戏文本，不再走兜底（4103 实装为黎瑟·浴火；5402 与兜底同文）
+        expect(tm.get("UI_CHAR_NAME_4103", "cn")).toBe("黎瑟·浴火")
+        expect(tm.get("UI_CHAR_NAME_5402", "cn")).toBe("莉莉蔻")
     })
 })
 
