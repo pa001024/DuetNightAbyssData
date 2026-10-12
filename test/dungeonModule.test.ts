@@ -44,6 +44,48 @@ describe("Dungeon 副本过滤", () => {
         expect(ids.has(90171)).toBe(true) // DefenceMove（掉落魔之楔）
     })
 
+    test("联袂演绎 ac：普通房与免费房分开存，Invalid 行过滤", async () => {
+        const dungeons = await buildDungeons()
+        const find = (id: number) => dungeons.find(item => item.id === id)!
+
+        // 40604：常规行（普通房）+ 6 行 RoomType=1（免费房，t:1）；带 Invalid 标记的 110061 两边都不含。
+        const ac40604 = find(40604).ac as Array<{ id: number; c: number; t?: number }>
+        expect(ac40604).toEqual([
+            { id: 101, c: 400000 },
+            { id: 102, c: 21600 },
+            { id: 20013, c: 200 },
+            { id: 2013, c: 135 },
+            { id: 2009, c: 200 },
+            { id: 211, c: 150 },
+            { id: 102, c: 21600, t: 1 },
+            { id: 20013, c: 200, t: 1 },
+            { id: 2013, c: 135, t: 1 },
+            { id: 2009, c: 200, t: 1 },
+            { id: 211, c: 150, t: 1 },
+            { id: 101, c: 400000, t: 1 },
+        ])
+        // 无 RoomType 行的 40601 只有普通房条目，同样不含 110061，且无 t 标记。
+        const ac40601 = find(40601).ac as Array<{ id: number; c: number; t?: number }>
+        expect(ac40601).toEqual([
+            { id: 101, c: 80000 },
+            { id: 102, c: 4320 },
+            { id: 20013, c: 40 },
+            { id: 2013, c: 30 },
+            { id: 2009, c: 45 },
+            { id: 211, c: 30 },
+        ])
+    })
+
+    test("系统房间开关门控 ac 中的免费房（t）条目", async () => {
+        // 配置项：CommonConst.AsyncCombatSysRoomOpen（随系统房间功能引入的版本级开关），关闭时 ac 不含 t 条目。
+        // 若数据更新后本断言失败，说明开关翻转，需重新确认当前版本启用的房间类型。
+        const graph = new Graph()
+        let flag: unknown
+        graph.defineModule({ name: "Probe", deps: [], build: ctx => ((flag = ctx.dm.getCommonConst("AsyncCombatSysRoomOpen")), []) })
+        await graph.build({}, undefined, ["Probe"])
+        expect(flag).toBe(true)
+    })
+
     test("Raid 预热赛副本保留怪物/胜负条件（无 r 结算字段）", async () => {
         const dungeons = await buildDungeons()
         const find = (id: number) => dungeons.find(item => item.id === id)!

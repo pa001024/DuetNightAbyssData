@@ -69,6 +69,7 @@ function has(row: Row, key: string): boolean {
 class DungeonBuilder {
     private readonly rewards: Row
     private readonly asyncCombat: Row[]
+    private readonly asyncFree: Row[]
     private readonly monsterSpawns: Row
     private readonly monsterGroups: Row
     private readonly monsterGroupSpawns: Row
@@ -86,7 +87,13 @@ class DungeonBuilder {
 
     constructor(private readonly ctx: ModuleContext) {
         this.rewards = table(ctx, "ModDungeonMonReward")
-        this.asyncCombat = rows(ctx.dm.getTable("AsyncCombat"))
+        // AsyncCombat 常规行（无 RoomType）为普通房配置；RoomType 行（如 RoomType=1）为免费房/系统房间配置，
+        // 免费房加成固定（AsyncCombatEventConstant.Async_FreeRoomBonusRate），ac 条目以可选 t 标记房间类型以示区分。
+        // 免费房是否启用看版本级开关 CommonConst.AsyncCombatSysRoomOpen；RoomType 具体取值不写死，以表实际存在的值为准。
+        // 带 Invalid 标记的行不计入（客户端建奖励/等级列表均跳过 Invalid 行：见 WBP_Activity_Coop_Create_P_C 与 CoopModel）。
+        const asyncRows = rows(ctx.dm.getTable("AsyncCombat"))
+        this.asyncCombat = asyncRows.filter(item => item.RoomType == null)
+        this.asyncFree = ctx.dm.getCommonConst("AsyncCombatSysRoomOpen") === true ? asyncRows.filter(item => item.RoomType != null) : []
         this.buildEntryDungeonIds()
         this.rewardTable = table(ctx, "Reward")
         this.monsterSpawns = table(ctx, "MonsterSpawn")
@@ -154,10 +161,22 @@ class DungeonBuilder {
 
     private buildAsyncCombatMap(): void {
         for (const item of this.asyncCombat) {
-            const dungeonId = Number(item.DungeonID)
-            if (!dungeonId) continue
-            this.asyncCombatMap.set(dungeonId, [...(this.asyncCombatMap.get(dungeonId) ?? []), { id: item.ID ?? 0, c: item.Count ?? 0 }])
+            if (item.Invalid) continue
+            this.appendAsyncCombat(this.asyncCombatMap, item)
         }
+        for (const item of this.asyncFree) {
+            if (item.Invalid) continue
+            this.appendAsyncCombat(this.asyncCombatMap, item, item.RoomType)
+        }
+    }
+
+    private appendAsyncCombat(map: Map<number, VNodeTree[]>, item: Row, roomType?: VNodeTree): void {
+        const dungeonId = Number(item.DungeonID)
+        if (!dungeonId) return
+        map.set(dungeonId, [
+            ...(map.get(dungeonId) ?? []),
+            { id: item.ID ?? 0, c: item.Count ?? 0, ...(roomType != null ? { t: roomType } : {}) },
+        ])
     }
 
     private groupMembers(groupId: unknown): VNodeTree[] {
@@ -317,7 +336,11 @@ class DungeonBuilder {
     }
 
     private asyncMonsters(dungeonId: number): VNodeTree[] {
-        return unique(this.asyncCombat.filter(item => Number(item.DungeonID) === dungeonId).flatMap(item => list(item.BossUnitID)))
+        return unique(
+            [...this.asyncCombat, ...this.asyncFree]
+                .filter(item => Number(item.DungeonID) === dungeonId)
+                .flatMap(item => list(item.BossUnitID))
+        )
     }
 
     build(dungeon: Row): Record<string, VNodeTree> | undefined {

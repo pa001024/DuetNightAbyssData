@@ -208,6 +208,24 @@ export class LuaDataManager {
         return result
     }
 
+    /**
+     * 读取全局 CommonConst 的单个字段（如 AsyncCombatSysRoomOpen 这类版本级开关）。
+     * CommonConst 在 state 初始化时已设为全局；全局缺失或字段为 nil 时返回 undefined。
+     */
+    getCommonConst(name: string): LuaValue | undefined {
+        const L = this.ensureState()
+        lua.lua_getglobal(L, "CommonConst")
+        if (lua.lua_type(L, -1) !== lua.LUA_TTABLE) {
+            lua.lua_pop(L, 1)
+            return undefined
+        }
+        lua.lua_getfield(L, -1, name)
+        const type = lua.lua_type(L, -1)
+        const result = type === lua.LUA_TNIL ? undefined : (luaValueToJs(L, -1) as LuaValue)
+        lua.lua_pop(L, 2) // value + CommonConst
+        return result
+    }
+
     /** 在同一 Fengari state 中执行一个 Script 下的 Lua 文件并读取其返回值。 */
     loadScriptFile(relativePath: string): LuaValue | undefined {
         const file = join(this.scriptDataRoot, relativePath)
