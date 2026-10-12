@@ -114251,7 +114251,7 @@ Destroy this letter after reading.
           VoiceName = "voice/$Locale$/story/1102/111096/1BD7E01A"
         },
         [11122301] = {
-          Camera = "241.59668,-731.140625,432.53125,0.000042,-14.800227,105.795197,22.0,100000.0,true,Manual,2.8,16:9 Digital Film",
+          Camera = "241.59668,-731.140625,432.53125,0.000042,-14.800227,105.795197,22.0,100000.0,false,Manual,2.8,16:9 Digital Film",
           Content = "（除了先前看到的彩旗，这间仓库里还整齐堆放着各种食物原料、玩具、服装和生活用品。仔细观察，它们几乎都长得一模一样，并且或多或少都有一些<H>完全一致</>的瑕疵。）",
           ContentEN = "(Aside from the flags seen earlier, the warehouse is neatly stacked with ingredients, toys, clothing, and other everyday supplies. On closer inspection, nearly every item is identical: the same shape, the same colour, right down to the <H>exact same</> flaws.)",
           DialogueId = 11122301,
@@ -171184,6 +171184,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12070001] = {
           Content = "卡米拉，{nickname}的下落有消息了吗？",
+          ContentEN = "Camilla, have you heard anything from {nickname}?",
           DialogueId = 12070001,
           GUID = "1E374A8A",
           NextDialogue = 12070002,
@@ -171191,6 +171192,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12070002] = {
           Content = "还没有。",
+          ContentEN = "Not yet.",
           DialogueId = 12070002,
           GUID = "1E374AB4",
           NextDialogue = 12070003,
@@ -172637,7 +172639,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12070205] = {
           Content = "你要好好活下去，因为你现在就是孩子们的榜样和支柱了。你哥哥……一定也是这么希望的。",
-          ContentEN = "They depend on you now. I’m sure Kenny would have wanted you to take care of yourself and be there for them.",
+          ContentEN = "They depend on you now. I'm sure Kenny would have wanted you to take care of yourself and be there for them.",
           DialogueId = 12070205,
           GUID = "1E376C02",
           NextDialogue = 12070206,
@@ -176202,7 +176204,7 @@ In the slums, she knocks on a weathered door. In the square, she sits beside a g
         [12070686] = {DialogueId = 12070686, GUID = "1E37BAEC"},
         [12070687] = {
           Content = "渺小的妖精飞向巨兽，但巨兽稍稍用力，就折断了它的四肢……",
-          ContentEN = "The tiny fairy flew towards the monstrous creatures, only for its delicate limbs to snap beneath their might.",
+          ContentEN = "The tiny fairy flew towards the monstrous creatures, only for its delicate limbs to snap beneath their might...",
           DialogueId = 12070687,
           GUID = "1E37BB16",
           NextDialogue = 12070688,

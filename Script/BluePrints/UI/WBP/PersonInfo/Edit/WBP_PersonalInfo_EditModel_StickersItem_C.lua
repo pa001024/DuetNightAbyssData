@@ -68,6 +68,7 @@ function M:PrepareEntryIn()
 end
 
 function M:OnItemClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/click_crystal_btn_content", nil, nil)
   if not self.HostPage then
     return
   end

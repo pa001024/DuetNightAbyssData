@@ -113768,7 +113768,7 @@ SetVisibility{ActorId{111163},Visibility{"Hide"}}
           VoiceName = "voice/$Locale$/story/1102/111096/1BD7E01A"
         },
         [11122301] = {
-          Camera = "241.59668,-731.140625,432.53125,0.000042,-14.800227,105.795197,22.0,100000.0,true,Manual,2.8,16:9 Digital Film",
+          Camera = "241.59668,-731.140625,432.53125,0.000042,-14.800227,105.795197,22.0,100000.0,false,Manual,2.8,16:9 Digital Film",
           Content = "（除了先前看到的彩旗，这间仓库里还整齐堆放着各种食物原料、玩具、服装和生活用品。仔细观察，它们几乎都长得一模一样，并且或多或少都有一些<H>完全一致</>的瑕疵。）",
           ContentKR = "(아까 본 컬러 깃발 이외에도, 이 창고 안에는 다양한 식재료와 장난감, 의류, 생활용품이 가지런히 쌓여 있다. 자세히 살펴보니, 거의 모든 물건이 똑같이 생겼을 뿐만 아니라, 결함들마저 <H>완전히 일치</>한다.)",
           DialogueId = 11122301,
@@ -170622,6 +170622,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12070001] = {
           Content = "卡米拉，{nickname}的下落有消息了吗？",
+          ContentKR = "카밀라 씨, {nickname} 씨의 행방과 관련된 새로운 소식은 없나요?",
           DialogueId = 12070001,
           GUID = "1E374A8A",
           NextDialogue = 12070002,
@@ -170629,6 +170630,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12070002] = {
           Content = "还没有。",
+          ContentKR = "아직이에요.",
           DialogueId = 12070002,
           GUID = "1E374AB4",
           NextDialogue = 12070003,
@@ -175638,7 +175640,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         [12070686] = {DialogueId = 12070686, GUID = "1E37BAEC"},
         [12070687] = {
           Content = "渺小的妖精飞向巨兽，但巨兽稍稍用力，就折断了它的四肢……",
-          ContentKR = "작은 요정은 야수에게 날아갔지만, 야수는 가볍게 요정의 사지를 꺾어버렸어요.",
+          ContentKR = "작은 요정은 야수에게 날아갔지만, 야수는 가볍게 요정의 사지를 꺾어버렸어요...",
           DialogueId = 12070687,
           GUID = "1E37BB16",
           NextDialogue = 12070688,

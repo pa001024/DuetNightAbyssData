@@ -596,7 +596,7 @@
                 "id": 10000139,
                 "itemType": "Resource",
                 "typeId": 1024102,
-                "typeName": "RESOURCE_NAME_1024102",
+                "typeName": "凝合思緒·止流",
                 "price": 1,
                 "priceType": 222,
                 "priceName": "劇目特典",
@@ -611,7 +611,7 @@
                 "id": 10000140,
                 "itemType": "Resource",
                 "typeId": 1024201,
-                "typeName": "RESOURCE_NAME_1024201",
+                "typeName": "凝合思緒·煜明",
                 "price": 1,
                 "priceType": 222,
                 "priceName": "劇目特典",
@@ -927,7 +927,7 @@
                 "id": 10000518,
                 "itemType": "Resource",
                 "typeId": 1024102,
-                "typeName": "RESOURCE_NAME_1024102",
+                "typeName": "凝合思緒·止流",
                 "price": 25000,
                 "priceType": 214,
                 "priceName": "劇目票根",
@@ -942,7 +942,7 @@
                 "id": 10000519,
                 "itemType": "Resource",
                 "typeId": 1024201,
-                "typeName": "RESOURCE_NAME_1024201",
+                "typeName": "凝合思緒·煜明",
                 "price": 25000,
                 "priceType": 214,
                 "priceName": "劇目票根",
@@ -25131,7 +25131,7 @@
                 "sequence": 1787,
                 "startTime": 1792375200,
                 "endTime": 1796590800,
-                "cond": "獲得所有近戰吶喊武器形象",
+                "cond": "獲得月梢捕夢·黛藍",
                 "isSpPopup": 1
               },
               {
@@ -25148,7 +25148,7 @@
                 "sequence": 1786,
                 "startTime": 1792375200,
                 "endTime": 1796590800,
-                "cond": "獲得月梢捕夢·黛藍",
+                "cond": "獲得月梢捕夢·銹紅",
                 "isSpPopup": 1
               },
               {
@@ -25165,7 +25165,7 @@
                 "sequence": 1785,
                 "startTime": 1792375200,
                 "endTime": 1796590800,
-                "cond": "獲得月梢捕夢·銹紅",
+                "cond": "獲得月梢捕夢·墨玉",
                 "isSpPopup": 1
               },
               {

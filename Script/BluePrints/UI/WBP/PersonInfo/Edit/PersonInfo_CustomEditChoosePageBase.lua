@@ -1055,10 +1055,10 @@ function M:_BuildTitleText()
     return GText("UI_PersonalPage_SetAction")
   end
   if self.ChooseMode == "Pet" then
-    return GText("UI_PersonalPage_AddGeniemon")
+    return GText("UI_PersonalPage_AddGeniemon_2")
   end
   if self.ChooseMode == "Item" then
-    return GText("UI_PersonInfo_CustomItem")
+    return GText("UI_PersonInfo_CustomItem_2")
   end
   return ""
 end

@@ -480,8 +480,8 @@ function Component:OnClickPersonalInfo()
 end
 
 function Component:OnClickChangeNameCard()
-  if self.ActorController then
-    self.ActorController:HideAllCharacterActors("OpenChangeNameCard", true)
+  if self.ActorController and self.ActorController.SetPreviewEntitiesHidden then
+    self.ActorController:SetPreviewEntitiesHidden("OpenChangeNameCard", true)
   end
   UIManager(self):LoadUINew("NameCard", self.IsPersonInfoPage, self)
 end

@@ -109664,7 +109664,7 @@ local Data = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
-                    TargetPosition = "241.59668,-731.140625,432.53125,0.000042,-14.800227,105.795197,22.0,100000.0,true,Manual,2.8,16:9 Digital Film"
+                    TargetPosition = "241.59668,-731.140625,432.53125,0.000042,-14.800227,105.795197,22.0,100000.0,false,Manual,2.8,16:9 Digital Film"
                   }
                 }
               }

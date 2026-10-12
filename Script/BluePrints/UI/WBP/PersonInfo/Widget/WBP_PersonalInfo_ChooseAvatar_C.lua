@@ -18,6 +18,7 @@ end
 function M:OnListItemObjectSet(ListItemObject)
   self.Content = ListItemObject
   self.bSlotSelectedVisualState = nil
+  self.bUseChoosePageStyle = nil
   self.HostPage = self.Content and self.Content.OwnerPage or nil
   if self.HostPage then
     self.HostPage:RegisterCharacterSlotEntry(self, self.Content)
@@ -29,6 +30,12 @@ function M:BP_OnEntryReleased()
   if self.HostPage then
     self.HostPage:UnregisterCharacterSlotEntry(self, self.Content)
   end
+  if self.StopAllAnimations then
+    self:StopAllAnimations()
+  end
+  if self.Normal and self.PlayAnimation then
+    self:PlayAnimation(self.Normal)
+  end
   if self.AvatarIconMaterial then
     self.AvatarIconMaterial:SetTextureParameterValue("IconMap", nil)
   end
@@ -36,6 +43,7 @@ function M:BP_OnEntryReleased()
   self.Content = nil
   self.HostPage = nil
   self.bSlotSelectedVisualState = nil
+  self.bUseChoosePageStyle = nil
 end
 
 function M:OnItemClick()
@@ -134,7 +142,15 @@ function M:_PlaySlotStateAnimation()
     return
   end
   local bSelected = Content.IsSelected == true
+  local bUseChoosePageStyle = true == Content.UseChoosePageStyle
+  local bLeavingChooseStyle = true == self.bUseChoosePageStyle and not bUseChoosePageStyle
+  self.bUseChoosePageStyle = bUseChoosePageStyle
   if self.bSlotSelectedVisualState == bSelected then
+    if bLeavingChooseStyle and not bSelected then
+      self:StopAnimation(self.Hover)
+      self:StopAnimation(self.Press)
+      self:PlayAnimation(self.Normal)
+    end
     return
   end
   self.bSlotSelectedVisualState = bSelected

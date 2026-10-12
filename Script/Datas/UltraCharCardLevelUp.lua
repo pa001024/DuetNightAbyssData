@@ -88,11 +88,33 @@ return ReadOnly("UltraCharCardLevelUp", {
   [4102] = {
     CharId = 4102,
     CollectRewardExp = 250,
+    ExtraUnlockCondition = 410280,
+    ResourceId1 = 1024102,
+    ResourceId2 = 1004102,
+    ResourceId3 = 10100,
+    ResourceId4 = 20030,
+    ResourceId5 = 10016,
+    ResourceNum1 = 1,
+    ResourceNum2 = 30,
+    ResourceNum3 = 2,
+    ResourceNum4 = 5,
+    ResourceNum5 = 20,
     UnlockDes = "CardLevel7thUnlockDEs"
   },
   [4201] = {
     CharId = 4201,
     CollectRewardExp = 250,
+    ExtraUnlockCondition = 420180,
+    ResourceId1 = 1024201,
+    ResourceId2 = 1004201,
+    ResourceId3 = 10100,
+    ResourceId4 = 20031,
+    ResourceId5 = 10016,
+    ResourceNum1 = 1,
+    ResourceNum2 = 30,
+    ResourceNum3 = 2,
+    ResourceNum4 = 5,
+    ResourceNum5 = 20,
     UnlockDes = "CardLevel7thUnlockDEs"
   }
 })

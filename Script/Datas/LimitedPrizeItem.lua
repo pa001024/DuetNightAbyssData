@@ -99,14 +99,15 @@ T.RT_34 = {510102, 150101}
 T.RT_35 = {21018, 21017}
 T.RT_36 = {40094, 40095}
 T.RT_37 = {20110, 20111}
-T.RT_38 = {30184, 30185}
-T.RT_39 = {
+T.RT_38 = {10053, 10052}
+T.RT_39 = {30184, 30185}
+T.RT_40 = {
   [1] = T.RT_34,
   [2] = T.RT_35,
   [3] = T.RT_36,
   [4] = T.RT_37,
-  [5] = T.RT_31,
-  [6] = T.RT_38,
+  [5] = T.RT_38,
+  [6] = T.RT_39,
   [7] = T.RT_8,
   [8] = T.RT_9
 }
@@ -184,7 +185,7 @@ return ReadOnly("LimitedPrizeItem", {
   [1009] = {
     CostRuleId = 1001,
     Count = T.RT_1,
-    Id = T.RT_39,
+    Id = T.RT_40,
     LimitedPrizePoolId = 1009,
     Probability = T.RT_11,
     Type = T.RT_12
@@ -192,7 +193,7 @@ return ReadOnly("LimitedPrizeItem", {
   [1010] = {
     CostRuleId = 1002,
     Count = T.RT_1,
-    Id = T.RT_39,
+    Id = T.RT_40,
     LimitedPrizePoolId = 1010,
     Probability = T.RT_11,
     Type = T.RT_12

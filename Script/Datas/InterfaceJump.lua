@@ -1244,6 +1244,22 @@ return ReadOnly("InterfaceJump", {
     JumpType = "SelfDefinedJump",
     PortalUnlockCondition = T.RT_4
   },
+  [154] = {
+    InterfaceJumpId = 154,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "133",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [155] = {
+    InterfaceJumpId = 155,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "145",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
   [1101] = {
     InterfaceJumpId = 1101,
     JumpParameter1 = "JumpToArmory",

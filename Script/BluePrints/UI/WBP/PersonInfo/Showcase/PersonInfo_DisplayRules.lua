@@ -245,6 +245,31 @@ function M:RemovePetFromSlot(Draft, SlotIndex)
   ClearPetSlot(Slot)
 end
 
+function M:DropUnownedPetSlots(Draft, OwnedPets)
+  if not Draft or nil == OwnedPets then
+    return
+  end
+  DisplayDraft:EnsurePetSlots(Draft)
+  for _, Slot in ipairs(Draft.PetSlots) do
+    if DisplayDraft:IsPetSlotOccupied(Slot) then
+      local UniqueId = GetPetUniqueKey(Slot.PetData)
+      local OwnedPet
+      if nil ~= UniqueId then
+        OwnedPet = OwnedPets[UniqueId]
+        if nil == OwnedPet then
+          local NumericId = tonumber(UniqueId)
+          if nil ~= NumericId and NumericId ~= UniqueId then
+            OwnedPet = OwnedPets[NumericId]
+          end
+        end
+      end
+      if nil == OwnedPet then
+        ClearPetSlot(Slot)
+      end
+    end
+  end
+end
+
 function M:AssignItemToSlot(Draft, SlotIndex, ItemData)
   local TargetSlot = DisplayDraft:GetItemSlot(Draft, SlotIndex)
   local ItemKey = GetItemUniqueKey(ItemData)

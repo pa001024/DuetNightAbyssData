@@ -556,6 +556,7 @@ function M:ReceiveEnterState(StackAction)
   if 1 ~= StackAction then
     return
   end
+  self:RefreshScoreInfo()
   local RestoreViewState = self.PendingTaskPopupViewState or self:CaptureTaskPopupViewState()
   local bRefreshedInPlace = self:TickRefreshTaskTypeList(self.CurActivityId)
   if not bRefreshedInPlace then

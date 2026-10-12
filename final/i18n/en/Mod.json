@@ -13980,7 +13980,7 @@
   {
     "id": 103004,
     "icon": "Fenrir01",
-    "名称": "蓄势重压",
+    "名称": "Crushing Momentum",
     "版本": "1.7",
     "系列": "Fenrir's ",
     "品质": "紫",
@@ -13994,7 +13994,7 @@
     },
     "限定": "重剑",
     "效果": [
-      "改变重剑的蓄力攻击招式和威力。蓄力攻击可造成大幅度战姿削减。"
+      "Upgrades Greatsword Charged Attacks to greatly reduce enemy Stance."
     ],
     "技能替换": {
       "1030102": {

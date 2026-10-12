@@ -2478,7 +2478,7 @@
   {
     "id": 4,
     "name": "Civilizations",
-    "count": 106,
+    "count": 107,
     "subTypes": [
       {
         "id": 401,
@@ -4660,6 +4660,23 @@
                 "id": 40900901,
                 "text": "\"Any peace born of fear will end in fear.\"\n\nWritten by AYIN & Aura\n\nIn search of the key Catalyst for the \"Second Scion Program\" mentioned in Avar's final words, {nickname2} head to Mount Arcano to investigate. To {性别2：his|her} surprise, the mountain town — believed to have been destroyed — has been swiftly rebuilt. And their lost memories seem to be tied to the town of Arcano.\n\nTo unravel the mystery hanging over the town, they step into a deadly game: \"The Parade.\"",
                 "unlock": 40900901
+              }
+            ]
+          },
+          {
+            "id": 409010,
+            "title": "Towards the Dawn",
+            "related": [
+              201011,
+              201037,
+              405005,
+              409003
+            ],
+            "texts": [
+              {
+                "id": 40901001,
+                "text": "\"Maybe... for those left behind, finding a way to go on is enough.\"\n\nWritten by Beryl\nEdited by WANDOU\n\nAfter the Charon Hunt, Rhythm leaves the Legion behind. The loss of someone dear to her and the collapse of everything she once believed in leave her adrift, with no sense of where to go next. She throws herself into one job after another, hoping to keep her mind occupied — until one day, she happens upon an old 6th Legion recruitment list among Blues's belongings.\nSeeing the names of those who suffered much like Blues, Rhythm decides to seek out their families and offer whatever help she can.\nAs she meets these families, each bearing the scars of what happened, she witnesses both cruelty and kindness in human nature, and sees echoes of the hatred and pain she knows all too well. And somewhere along the way, almost without realizing it, something within her begins to change...",
+                "unlock": 40901001
               }
             ]
           }

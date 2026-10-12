@@ -370,7 +370,7 @@ return {
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {351220219}
+              StaticCreatorIdList = {351220219, 351220218}
             }
           },
           ["17872988038522298540"] = {

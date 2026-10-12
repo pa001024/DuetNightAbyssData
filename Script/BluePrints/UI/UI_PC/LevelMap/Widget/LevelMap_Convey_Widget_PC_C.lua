@@ -165,6 +165,11 @@ function M:RemoveKey()
   self.WildMap.ModeComp:UpdateWildMapKeys()
 end
 
+function M:ResetPanel()
+  self.Group_Temple:SetVisibility(ESlateVisibility.Collapsed)
+  self:RemoveKey()
+end
+
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   self:UpdateButtonGamepadHints(CurInputDevice)
   if self.Group_Temple:GetVisibility() == ESlateVisibility.Collapsed then

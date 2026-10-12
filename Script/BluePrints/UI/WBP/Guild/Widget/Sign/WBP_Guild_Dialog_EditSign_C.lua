@@ -189,6 +189,7 @@ function M:OnLetterClicked(Content)
   if not IsValid(Content) or Content.bEmpty or not Content.Letter then
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
   self:SelectLetter(Content.Letter, Content.Index)
 end
 

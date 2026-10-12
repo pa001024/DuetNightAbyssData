@@ -60,7 +60,7 @@ function M:PlayExtraTargetAndUnlockTip()
   local bNewUnlock = CurrentUnlockFloor > HistoryUnlockFloor
   local Targets = {}
   for _, JumpTime in ipairs(RaidSeasonConf.JumpTime) do
-    if JumpTime and JumpTime > 0 and TimeRemain >= JumpTime then
+    if JumpTime and TimeRemain >= JumpTime then
       table.insert(Targets, {
         Text = string.format("%s > %d", GText("RaidDungeon_Time_Remain"), JumpTime),
         IsFinish = true

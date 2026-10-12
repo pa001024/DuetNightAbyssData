@@ -244,6 +244,7 @@ function PersonalInfoItemParam:Update(Info)
   self.Id = Info.Id
   self:SetPosition(Info.Position)
   self:SetRotation(Info.Rotation)
+  self.SlotIndex = Info.SlotIndex
 end
 
 function PersonalInfoItemParam:SetPosition(Position)

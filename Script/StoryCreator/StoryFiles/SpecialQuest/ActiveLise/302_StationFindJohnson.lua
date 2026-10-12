@@ -148,6 +148,12 @@ return {
             startPort = "Out",
             endQuest = "17870347424896721231",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17873001231094560543",
+            startPort = "Out",
+            endQuest = "17917829939025704829",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -415,6 +421,17 @@ return {
               StaticCreatorId = 352480712,
               GuideType = "M",
               GuidePointName = "Mechanism_QuestTrigger_352480712"
+            }
+          },
+          ["17917829939025704829"] = {
+            key = "17917829939025704829",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3385.09743083004, y = 130.19071146245057},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

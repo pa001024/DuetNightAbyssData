@@ -244,8 +244,8 @@ function M:Close()
       if self.ParentWidget.SetOriginFocus and type(self.ParentWidget.SetOriginFocus) == "function" then
         self.ParentWidget:SetOriginFocus()
       end
-      if self.ParentWidget.ActorController and "function" == type(self.ParentWidget.ActorController.HideAllCharacterActors) then
-        self.ParentWidget.ActorController:HideAllCharacterActors("OpenChangeNameCard", false)
+      if self.ParentWidget.ActorController and "function" == type(self.ParentWidget.ActorController.SetPreviewEntitiesHidden) then
+        self.ParentWidget.ActorController:SetPreviewEntitiesHidden("OpenChangeNameCard", false)
       end
     end
   elseif self.ParentWidget and self.ParentWidget.SetFocus_Lua and "function" == type(self.ParentWidget.SetFocus_Lua) then

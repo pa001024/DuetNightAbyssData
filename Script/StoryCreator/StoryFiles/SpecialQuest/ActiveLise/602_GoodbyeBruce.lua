@@ -124,6 +124,18 @@ return {
             startPort = "Out",
             endQuest = "178703531794815681948",
             endPort = "Fail"
+          },
+          {
+            startQuest = "178739056270024906512",
+            startPort = "Out",
+            endQuest = "179178540740714831947",
+            endPort = "In"
+          },
+          {
+            startQuest = "178739061344924907242",
+            startPort = "Out",
+            endQuest = "179178549032314832304",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -295,6 +307,28 @@ return {
               bGuideUIEnable = false,
               GuideType = "P",
               GuideName = ""
+            }
+          },
+          ["179178540740714831947"] = {
+            key = "179178540740714831947",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1962.857142857143, y = 136.85714285714278},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["179178549032314832304"] = {
+            key = "179178549032314832304",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2551.428571428571, y = 132.57142857142844},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

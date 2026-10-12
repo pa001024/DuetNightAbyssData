@@ -109579,13 +109579,13 @@
     "quests": [
       {
         "id": 12070101,
-        "name": "前往水仙平原",
-        "desc": "前往水仙平原，开启任务。"
+        "name": "Se rendre aux Asphodèles",
+        "desc": "Rendez-vous aux Asphodèles pour commencer la mission."
       },
       {
         "id": 12070102,
-        "name": "前往水仙平原",
-        "desc": "前往水仙平原，开启任务。",
+        "name": "Se rendre aux Asphodèles",
+        "desc": "Rendez-vous aux Asphodèles pour commencer la mission.",
         "nodes": [
           {
             "id": "17870424523693387",
@@ -109599,13 +109599,13 @@
             "dialogues": [
               {
                 "id": 12070001,
-                "content": "卡米拉，{nickname}的下落有消息了吗？",
+                "content": "Camilla, avez-vous des nouvelles de {nickname} ?",
                 "npc": 260001,
                 "next": 12070002
               },
               {
                 "id": 12070002,
-                "content": "还没有。",
+                "content": "Toujours rien.",
                 "npc": 260002,
                 "next": 12070003
               },
@@ -109716,8 +109716,8 @@
       },
       {
         "id": 12070103,
-        "name": "前往秘密基地",
-        "desc": "卡米拉建议你听听自己内心的声音，这让你想起了那个许久未曾踏足的地方。也许是时候面对那些回忆了，去“秘密基地”看看吧。",
+        "name": "Se rendre à la base secrète",
+        "desc": "Camilla vous conseille d’écouter la voix de votre cœur, ce qui vous rappelle un lieu où vous n’avez pas mis les pieds depuis longtemps. Il est peut-être temps d’affronter ces souvenirs. Rendez-vous à la base secrète.",
         "nodes": [
           {
             "id": "17901699603905720256",
@@ -110018,8 +110018,8 @@
     "quests": [
       {
         "id": 12070201,
-        "name": "前去拜访名单上的家庭",
-        "desc": "按照名单的指引，去雾区拜访受害者的家。",
+        "name": "Rendre visite aux familles figurant sur la liste",
+        "desc": "Suivez les indications de la liste et rendez-vous à Brumelac pour rendre visite à la famille de l’une des victimes.",
         "nodes": [
           {
             "id": "17872151228024505401",
@@ -110292,8 +110292,8 @@
       },
       {
         "id": 12070202,
-        "name": "寻找沃伦家的小儿子",
-        "desc": "罗德斯奶奶建议你去拜访沃伦家的小儿子，去他工作的百花车站找找看。",
+        "name": "Trouver le fils cadet des Warren",
+        "desc": "Mamie Rhodes vous conseille d’aller rendre visite au fils cadet des Warren. Cherchez-le à la Gare des Cent-Fleurs, où il travaille.",
         "nodes": [
           {
             "id": "17872172274671132229",
@@ -110489,8 +110489,8 @@
       },
       {
         "id": 12070203,
-        "name": "前往锻铁厂寻人",
-        "desc": "向马蒂斯打听得知沃伦在地下的锻铁厂工作，去那里找他吧。",
+        "name": "Chercher le fils cadet des Warren aux Installations de forge",
+        "desc": "Mathis vous apprend que le fils cadet des Warren travaille dans les Installations de forge souterraines. Rendez-vous sur place pour le trouver.",
         "nodes": [
           {
             "id": "17872194971655638746",
@@ -110902,8 +110902,8 @@
       },
       {
         "id": 12070204,
-        "name": "返回冰湖城",
-        "desc": "一桩事情解决，现在回到冰湖城，继续拜访名单上剩下的家庭吧。",
+        "name": "Retourner à Givrelac",
+        "desc": "Une affaire de réglée. Retournez à Givrelac et poursuivez vos visites auprès des autres familles de la liste.",
         "nodes": [
           {
             "id": "17872280407927899427",
@@ -111115,8 +111115,8 @@
     "quests": [
       {
         "id": 12070301,
-        "name": "去水仙平原休息",
-        "desc": "罗德斯奶奶的一番话让你感慨良多，你决定去水仙平原休息一会儿。",
+        "name": "Aller se reposer aux Asphodèles",
+        "desc": "Les paroles de Mamie Rhodes vous ont donné matière à réfléchir. Vous décidez d’aller vous reposer un moment aux Asphodèles.",
         "nodes": [
           {
             "id": "17872804487082878",
@@ -111419,8 +111419,8 @@
       },
       {
         "id": 12070302,
-        "name": "前往百花车站",
-        "desc": "和蕾伊一起前往百花车站，寻找约翰森中校。",
+        "name": "Se rendre à la Gare des Cent-Fleurs",
+        "desc": "Rendez-vous à la Gare des Cent-Fleurs avec Rae pour retrouver le lieutenant-colonel Johnson.",
         "nodes": [
           {
             "id": "17872999320374559409",
@@ -111678,8 +111678,8 @@
       },
       {
         "id": 12070303,
-        "name": "追上约翰森中校",
-        "desc": "约翰森中校的作风似乎和蕾伊的描述大不相同，继续跟上去看看情况。",
+        "name": "Rattraper le lieutenant-colonel Johnson",
+        "desc": "Le comportement du lieutenant-colonel Johnson semble bien différent de la description qu’en faisait Rae. Continuez à le suivre pour en savoir plus.",
         "nodes": [
           {
             "id": "17873022663985694729",
@@ -111832,8 +111832,8 @@
       },
       {
         "id": 12070311,
-        "name": "打听约翰森中校的行程",
-        "desc": "接下了名叫蕾伊的少女的委托，帮她寻找约翰森中校。休息完后就出发吧，先去街上打听一下消息。",
+        "name": "Se renseigner sur l’emploi du temps du lieutenant-colonel Johnson",
+        "desc": "Vous avez accepté la mission de Rae, qui vous demande de retrouver le lieutenant-colonel Johnson. Une fois reposée, partez vous renseigner dans les rues.",
         "nodes": [
           {
             "id": "1790173537327565",
@@ -112005,8 +112005,8 @@
       },
       {
         "id": 12070321,
-        "name": "帮助卡森准尉击退秽兽",
-        "desc": "卡森准尉遭遇了秽兽袭击，去帮助他击退秽兽吧。",
+        "name": "Aider l’adjudant Carson à repousser les Souillés",
+        "desc": "L’adjudant Carson a été attaqué par des Souillés. Aidez-le à les repousser.",
         "nodes": [
           {
             "id": "1790173744869853",
@@ -112159,8 +112159,8 @@
       },
       {
         "id": 12070331,
-        "name": "回水仙平原找蕾伊",
-        "desc": "打听到了约翰森中校的情报，回水仙平原告知蕾伊。",
+        "name": "Retourner aux Asphodèles retrouver Rae",
+        "desc": "Vous avez obtenu des informations sur le lieutenant-colonel Johnson. Retournez aux Asphodèles pour en informer Rae.",
         "nodes": [
           {
             "id": "1790174002077241",
@@ -112206,8 +112206,8 @@
     "quests": [
       {
         "id": 12070401,
-        "name": "前往水仙平原",
-        "desc": "蕾伊的行为让你感到隐约的不对劲，去水仙平原向卡米拉询问一下有关蕾伊的事吧。",
+        "name": "Se rendre aux Asphodèles",
+        "desc": "Le comportement de Rae vous laisse une impression étrange. Retournez aux Asphodèles et demandez à Camilla ce qu’elle sait sur Rae.",
         "nodes": [
           {
             "id": "17873672142452135",
@@ -112313,8 +112313,8 @@
       },
       {
         "id": 12070402,
-        "name": "进入下水道",
-        "desc": "雾区的小朋友告诉你蕾伊很可能在下水道，进去一探究竟吧。",
+        "name": "Entrer dans les égouts",
+        "desc": "Les enfants de Brumelac vous apprennent que Rae se trouve probablement dans les égouts. Entrez-y pour voir ce qu’il en est.",
         "nodes": [
           {
             "id": "178737953253713548982",
@@ -112376,7 +112376,7 @@
                   120708,
                   120709
                 ],
-                "tips": "推测蕾伊的真实目的"
+                "tips": "Déduire les véritables intentions de Rae"
               }
             ]
           },
@@ -112433,15 +112433,15 @@
               {
                 "id": 120701,
                 "qid": 1207,
-                "name": "人偶脸上贴着酷似约翰森中校的肖像画",
-                "desc": "在蕾伊的秘密基地中发现了一个人偶，人偶面部贴着酷似约翰森中校的肖像画。",
+                "name": "Un portrait ressemblant fortement au lieutenant-colonel Johnson est collé sur le visage du mannequin",
+                "desc": "Un mannequin a été découvert dans la « base secrète » de Rae. Un portrait ressemblant fortement au lieutenant-colonel Johnson est collé sur son visage.",
                 "icon": "CharIcon"
               },
               {
                 "id": 120702,
                 "qid": 1207,
-                "name": "人偶的身上有大量砍刺痕迹",
-                "desc": "在人偶身上发现了大量砍刺痕迹，从中能够感觉到强烈的恨意。",
+                "name": "Le mannequin est couvert de nombreuses entailles",
+                "desc": "Le corps du mannequin est couvert de nombreuses entailles, qui témoignent d’une haine particulièrement intense.",
                 "icon": "InformtIcon"
               }
             ]
@@ -112457,15 +112457,15 @@
               {
                 "id": 120704,
                 "qid": 1207,
-                "name": "蕾伊知道姐姐已遭遇不测",
-                "desc": "从日记内容看，蕾伊似乎已经知道姐姐遭遇了不测。",
+                "name": "Rae sait qu’un malheur est arrivé à sa sœur",
+                "desc": "D’après le contenu du journal, Rae semble déjà savoir qu’un malheur est arrivé à sa sœur.",
                 "icon": "CharIcon"
               },
               {
                 "id": 120705,
                 "qid": 1207,
-                "name": "蕾伊似乎掌握一些有关改造实验的信息",
-                "desc": "日记中的怪物涂鸦与被改造后的布鲁斯形象相似，表明蕾伊可能掌握关于改造实验的信息。",
+                "name": "Rae semble détenir des informations sur les expériences de transformation",
+                "desc": "Les dessins de monstres dans le journal ressemblent à Blues après sa transformation, ce qui laisse penser que Rae possède des informations sur les expériences de transformation.",
                 "icon": "InformtIcon"
               }
             ]
@@ -112481,8 +112481,8 @@
               {
                 "id": 120703,
                 "qid": 1207,
-                "name": "蕾伊在测试火药和毒药的威力",
-                "desc": "蕾伊在老鼠身上测试了火药和毒药的威力，而她真正的目标是某个人。",
+                "name": "Rae teste la puissance de la poudre à canon et du poison",
+                "desc": "Rae a testé la puissance de la poudre à canon et du poison sur des rats. Sa véritable cible est cependant une personne.",
                 "icon": "InformtIcon"
               }
             ]
@@ -112545,8 +112545,8 @@
       },
       {
         "id": 12070411,
-        "name": "前往蕾伊家拜访",
-        "desc": "在水仙平原得到的情报让你感到不安，你决定前往蕾伊家中拜访，将事情弄清楚。",
+        "name": "Se rendre chez Rae",
+        "desc": "Les informations obtenues aux Asphodèles vous inquiètent. Vous décidez de vous rendre chez Rae pour tirer les choses au clair.",
         "nodes": [
           {
             "id": "1790176046292520",
@@ -112664,8 +112664,8 @@
     "quests": [
       {
         "id": 12070501,
-        "name": "前往剧院",
-        "desc": "根据你的推测，蕾伊极有可能打算在剧院对约翰森中校动手，你决定前往剧院阻止她。",
+        "name": "Se rendre au théâtre",
+        "desc": "D’après vos déductions, Rae compte très probablement s’en prendre au lieutenant-colonel Johnson au théâtre. Vous décidez de vous y rendre pour l’arrêter.",
         "nodes": [
           {
             "id": "178738783664518108068",
@@ -113275,8 +113275,8 @@
       },
       {
         "id": 12070502,
-        "name": "前往下水道小舞台",
-        "desc": "你暂时说服了蕾伊不要动手，现在，和她一起前往下水道小舞台，告诉她关于第六军团的真相。",
+        "name": "Se rendre à la petite scène des égouts",
+        "desc": "Vous avez réussi à convaincre Rae, pour l’instant, de ne rien tenter. Rendez-vous avec elle à la petite scène des égouts pour lui révéler la vérité sur la VIᵉ Légion.",
         "nodes": [
           {
             "id": "178738883356719242917",
@@ -113700,8 +113700,8 @@
       },
       {
         "id": 12070503,
-        "name": "送蕾伊回家",
-        "desc": "在你的劝说下，蕾伊终于同意放弃复仇。送她回家休息吧。",
+        "name": "Raccompagner Rae chez elle",
+        "desc": "Grâce à vos paroles, Rae accepte enfin de renoncer à sa vengeance. Raccompagnez-la chez elle pour qu’elle puisse se reposer.",
         "nodes": [
           {
             "id": "178738943523721508624",
@@ -113868,8 +113868,8 @@
     "quests": [
       {
         "id": 12070601,
-        "name": "前往剧院",
-        "desc": "名单上的下一个名字“帕西法尔”曾是《雪国的孩子》的主演，你猜测他有可能是布鲁斯回忆中的那位朋友。去剧院打听消息确认一下。",
+        "name": "Se rendre au théâtre",
+        "desc": "Le prochain nom sur la liste, « Parsifal », était l’interprète principal de <I>Né du blizzard</>. Vous pensez qu’il pourrait être l’ami apparaissant dans les souvenirs de Blues. Rendez-vous au théâtre pour vous renseigner et confirmer votre intuition.",
         "nodes": [
           {
             "id": "178739018299922644013",
@@ -113934,7 +113934,7 @@
             "dialogues": [
               {
                 "id": 12070687,
-                "content": "La frêle fée s’envola vers la bête gigantesque. Mais d’un simple geste, celle-ci lui brisa les membres.",
+                "content": "La frêle fée s’envola vers la bête gigantesque. Mais d’un simple geste, celle-ci lui brisa les membres...",
                 "npc": 260028,
                 "next": 12070688
               },
@@ -114057,8 +114057,8 @@
       },
       {
         "id": 12070602,
-        "name": "登上城墙",
-        "desc": "你回想起了曾经与布鲁斯在城墙上畅谈未来的时光。再一次登上城墙，向过去正式告别。",
+        "name": "Monter sur les remparts",
+        "desc": "Vous vous souvenez des moments où vous discutiez avec Blues de l’avenir sur les remparts. Montez-y une nouvelle fois pour faire enfin vos adieux au passé.",
         "nodes": [
           {
             "id": "178739056270024906512",

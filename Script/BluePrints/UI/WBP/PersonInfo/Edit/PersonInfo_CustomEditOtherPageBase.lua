@@ -53,20 +53,31 @@ function M:OnEnterOtherTab()
   if self.EditModel_Filters and self.EditModel_Filters.SyncSelectionFromWorkingFilter then
     self.EditModel_Filters:SyncSelectionFromWorkingFilter()
   end
-  self:_SetExpandedSection("Filter")
+  self:_SetExpandedSection(nil, false)
 end
 
 function M:FocusGamepadDefaultOtherItem()
-  if self.ExpandedSectionName == "Sticker" and self.EditModel_Stickers and self.EditModel_Stickers.FocusGamepadSelectedStickerItem and self.EditModel_Stickers:FocusGamepadSelectedStickerItem() then
+  if self.ExpandedSectionName == "Sticker" then
+    if self.EditModel_Stickers and self.EditModel_Stickers.FocusGamepadSelectedStickerItem and self.EditModel_Stickers:FocusGamepadSelectedStickerItem() then
+      return
+    end
+    self:SetFocus()
     return
   end
-  if self.ExpandedSectionName ~= "Filter" then
-    self:_SetExpandedSection("Filter")
+  if self.ExpandedSectionName == "Filter" then
+    if self.EditModel_Filters and self.EditModel_Filters.SyncSelectionFromWorkingFilter then
+      self.EditModel_Filters:SyncSelectionFromWorkingFilter()
+    end
+    if self.EditModel_Filters and self.EditModel_Filters.FocusGamepadSelectedFilterItem and self.EditModel_Filters:FocusGamepadSelectedFilterItem() then
+      return
+    end
+    self:SetFocus()
+    return
   end
   if self.EditModel_Filters and self.EditModel_Filters.SyncSelectionFromWorkingFilter then
     self.EditModel_Filters:SyncSelectionFromWorkingFilter()
   end
-  if self.EditModel_Filters and self.EditModel_Filters.FocusGamepadSelectedFilterItem and self.EditModel_Filters:FocusGamepadSelectedFilterItem() then
+  if self.EditModel_Filters and self.EditModel_Filters.FocusGamepadSectionTitle and self.EditModel_Filters:FocusGamepadSectionTitle() then
     return
   end
   self:SetFocus()

@@ -1264,6 +1264,29 @@ function WBP_Battle_Button_Phone:RefreshWeaponInfo()
   self.AtkRanged:UpdateWeaponIcon()
 end
 
+function WBP_Battle_Button_Phone:SetUltimateAttackIconOverride(Source, IconPath)
+  if not Source then
+    return
+  end
+  if not IconPath or "" == IconPath then
+    if self.UltimateAttackIconSource ~= Source then
+      return
+    end
+    self.UltimateAttackIconSource = nil
+    self.UltimateAttackIconPath = nil
+  else
+    if type(IconPath) ~= "string" then
+      return
+    end
+    if self.UltimateAttackIconSource == Source and self.UltimateAttackIconPath == IconPath then
+      return
+    end
+    self.UltimateAttackIconSource = Source
+    self.UltimateAttackIconPath = IconPath
+  end
+  self:RefreshUltimateAttackGuide()
+end
+
 function WBP_Battle_Button_Phone:RefreshUltimateAttackGuide()
   local State = UltimateAttackGuideHelper:GetUltimateAttackGuideState(self.OwnerPlayer)
   self.UltimateGuideState = State
@@ -1284,8 +1307,9 @@ function WBP_Battle_Button_Phone:RefreshUltimateAttackGuide()
     self.AtkMelee:LoadUltimateIcon(self.OwnerPlayer)
     self.AtkRangedLeft:LoadUltimateIcon(self.OwnerPlayer)
   elseif State.IsActionSwap then
-    if State.ReplaceMobileAttackButtonIcon then
-      self.AtkMelee:LoadUltimateIcon(self.OwnerPlayer)
+    local IconPath = self.UltimateAttackIconPath
+    if IconPath or State.ReplaceMobileAttackButtonIcon then
+      self.AtkMelee:LoadUltimateIcon(self.OwnerPlayer, IconPath)
     end
     self.AtkRangedLeft:RestoreDefaultIcon()
   else
@@ -1305,6 +1329,7 @@ function WBP_Battle_Button_Phone:ApplyAttackButtonVisualState()
   if self.AutoMeleeVisualBanApplied and not MeleeAutoBan then
     self.AtkMelee.IsBan = false
     self.AtkMelee.AutoCombatBan = false
+    self.AtkMelee.IsUltimateEnabled = false
     EMUIAnimationSubsystem:EMStopAnimation(self.AtkMelee, self.AtkMelee.Ban)
     if self.AtkMelee.CurrentUltimateAnim then
       EMUIAnimationSubsystem:EMStopAnimation(self.AtkMelee, self.AtkMelee.CurrentUltimateAnim)
@@ -1314,6 +1339,8 @@ function WBP_Battle_Button_Phone:ApplyAttackButtonVisualState()
   if self.AutoRangedVisualBanApplied and not RangedAutoBan then
     self.AtkRanged.AutoCombatBan = false
     self.AtkRangedLeft.AutoCombatBan = false
+    self.AtkRanged.IsUltimateEnabled = false
+    self.AtkRangedLeft.IsUltimateEnabled = false
     if self.AtkRanged.CurrentUltimateAnim then
       EMUIAnimationSubsystem:EMStopAnimation(self.AtkRanged, self.AtkRanged.CurrentUltimateAnim)
     end

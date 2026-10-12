@@ -388,6 +388,10 @@ function M:RefreshCurrentBGVideo()
     return
   end
   self:PlayCurrentActiveBgInAnimation()
+  local CurrentActiveBg = self.CurrentActiveBg
+  if IsValid(CurrentActiveBg) and CurrentActiveBg.In ~= nil and CurrentActiveBg:IsAnimationPlaying(CurrentActiveBg.In) then
+    return
+  end
   VideoBgWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:RemoveTimer(RefreshActivityEntryVideoTimerName)
   self:AddTimer(0.01, function()
@@ -401,6 +405,9 @@ end
 function M:PlayCurrentActiveBgInAnimation()
   local CurrentActiveBg = self.CurrentActiveBg
   if not IsValid(CurrentActiveBg) or CurrentActiveBg.In == nil then
+    return
+  end
+  if CurrentActiveBg:IsAnimationPlaying(CurrentActiveBg.In) then
     return
   end
   CurrentActiveBg:StopAnimation(CurrentActiveBg.In)

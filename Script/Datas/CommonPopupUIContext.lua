@@ -2828,7 +2828,7 @@ return ReadOnly("CommonPopupUIContext", {
   [100378] = {
     Id = 100378,
     NoButtonText = "UI_PATCH_CANCEL",
-    PopoverText = "UI_AppearanceCollect_ConfirmUnlock",
+    PopoverText = "UI_AppearanceCollect_ConfirmUnlock2",
     Style = "ShortTextDefault",
     Title = "UI_COMMONPOP_TITLE_100010",
     YesButtonText = "UI_PATCH_ENSURE"

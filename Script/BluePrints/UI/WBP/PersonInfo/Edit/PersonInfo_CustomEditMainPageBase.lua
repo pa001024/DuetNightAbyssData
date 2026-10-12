@@ -57,6 +57,8 @@ function M:InitMainPage(EditRootController)
   self.BottomKeyPlanIndex = nil
   self.CharacterSlotItemContents = {}
   self.CharacterSlotEntryWidgetMap = {}
+  self.SlotListChangeAnimToken = 0
+  self.PendingSlotListChangeAnim = nil
   self.IsHudBubbleInitialized = false
   self.IsAddCharacterBubbleShowing = false
   self.IsChangePetBubbleInitialized = false
@@ -1130,6 +1132,7 @@ function M:_SetButtonEnabled(ButtonWidget, bEnabled)
 end
 
 function M:_RefreshCharacterSlotList()
+  self:_CancelPendingSlotListChangeAnimation()
   local SlotViewList = self.EditRootController:BuildCharacterSlotViewList()
   self.CharacterSlotItemContents = {}
   self.CharacterSlotEntryWidgetMap = {}
@@ -1156,6 +1159,7 @@ function M:_RefreshItemSlotList()
     end
     return
   end
+  self:_CancelPendingSlotListChangeAnimation()
   self.CharacterSlotItemContents = {}
   self.CharacterSlotEntryWidgetMap = {}
   self.List_Model:ClearListItems()
@@ -1167,6 +1171,7 @@ function M:_RefreshItemSlotList()
 end
 
 function M:_RefreshPetSlotList()
+  self:_CancelPendingSlotListChangeAnimation()
   local SlotViewList = self.EditRootController:BuildPetSlotViewList()
   self.CharacterSlotItemContents = {}
   self.CharacterSlotEntryWidgetMap = {}
@@ -1178,15 +1183,20 @@ function M:_RefreshPetSlotList()
   end
 end
 
+function M:_GetExpectedSlotKind()
+  if not self.EditRootController or not self.EditRootController.GetExpectedSlotKind then
+    return nil
+  end
+  return self.EditRootController:GetExpectedSlotKind()
+end
+
 function M:_EnsureCharacterSlotListInitialized()
   if not self.EditRootController then
     return
   end
-  local ExpectedSlotKind = "Char"
-  if self.EditRootController:ShouldShowItemSlotArea() then
-    ExpectedSlotKind = "Item"
-  elseif self.EditRootController:IsPetPageActive() then
-    ExpectedSlotKind = "Pet"
+  local ExpectedSlotKind = self:_GetExpectedSlotKind()
+  if not ExpectedSlotKind then
+    return
   end
   local FirstContent = self.CharacterSlotItemContents and self.CharacterSlotItemContents[1] or nil
   local bListEmpty = self.CharacterSlotItemContents == nil or #self.CharacterSlotItemContents <= 0
@@ -1206,16 +1216,16 @@ function M:RefreshCharacterSlotItem(SlotIndex)
   if not self.EditRootController or type(SlotIndex) ~= "number" then
     return
   end
-  if self.EditRootController:ShouldShowItemSlotArea() then
-    self:RefreshItemSlotItem(SlotIndex)
+  if self:_GetExpectedSlotKind() ~= "Char" then
+    return
+  end
+  local Content = self.CharacterSlotItemContents and self.CharacterSlotItemContents[SlotIndex] or nil
+  if not Content or "Char" ~= Content.SlotKind then
+    self:_RefreshCharacterSlotList()
     return
   end
   local SlotViewData = self.EditRootController:BuildCharacterSlotViewData(SlotIndex)
   if not SlotViewData then
-    return
-  end
-  local Content = self.CharacterSlotItemContents and self.CharacterSlotItemContents[SlotIndex] or nil
-  if not Content then
     return
   end
   self:_ApplyCharacterSlotItemContent(Content, SlotViewData, SlotIndex)
@@ -1229,9 +1239,16 @@ function M:RefreshItemSlotItem(SlotIndex)
   if not self.EditRootController or type(SlotIndex) ~= "number" then
     return
   end
-  local SlotViewData = self.EditRootController:BuildItemSlotViewData(SlotIndex)
+  if self:_GetExpectedSlotKind() ~= "Item" then
+    return
+  end
   local Content = self.CharacterSlotItemContents and self.CharacterSlotItemContents[SlotIndex] or nil
-  if not SlotViewData or not Content then
+  if not Content or "Item" ~= Content.SlotKind then
+    self:_RefreshItemSlotList()
+    return
+  end
+  local SlotViewData = self.EditRootController:BuildItemSlotViewData(SlotIndex)
+  if not SlotViewData then
     return
   end
   self:_ApplyCharacterSlotItemContent(Content, SlotViewData, SlotIndex)
@@ -1242,6 +1259,9 @@ function M:RefreshItemSlotItem(SlotIndex)
 end
 
 function M:RefreshItemSlotSelection()
+  if self:_GetExpectedSlotKind() ~= "Item" then
+    return
+  end
   self:_ApplyCharacterSlotSelectionLocally(self.EditRootController:GetSelectedItemSlotIndex())
 end
 
@@ -1249,12 +1269,16 @@ function M:RefreshPetSlotItem(SlotIndex)
   if not self.EditRootController or type(SlotIndex) ~= "number" then
     return
   end
-  local SlotViewData = self.EditRootController:BuildPetSlotViewData(SlotIndex)
-  if not SlotViewData then
+  if self:_GetExpectedSlotKind() ~= "Pet" then
     return
   end
   local Content = self.CharacterSlotItemContents and self.CharacterSlotItemContents[SlotIndex] or nil
-  if not Content then
+  if not Content or "Pet" ~= Content.SlotKind then
+    self:_RefreshPetSlotList()
+    return
+  end
+  local SlotViewData = self.EditRootController:BuildPetSlotViewData(SlotIndex)
+  if not SlotViewData then
     return
   end
   self:_ApplyCharacterSlotItemContent(Content, SlotViewData, SlotIndex)
@@ -1267,6 +1291,13 @@ end
 function M:_RefreshCharacterSlotSelection()
   local SelectedSlotIndex = self.EditRootController:GetSelectedCharacterSlotIndex()
   self:_ApplyCharacterSlotSelectionLocally(SelectedSlotIndex)
+end
+
+function M:ClearCharacterSlotSelection()
+  self:_ApplyCharacterSlotSelectionLocally(nil)
+  if self.List_Model and self.List_Model.BP_ClearSelection then
+    self.List_Model:BP_ClearSelection()
+  end
 end
 
 function M:OnClickCharacterSlotItem(Content)
@@ -1568,6 +1599,121 @@ function M:_SetAddBubbleShowing(BubbleWidget, bShouldShow, TextKey, ShowingFlagN
   BubbleWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
+function M:_CancelPendingSlotListChangeAnimation()
+  self.PendingSlotListChangeAnim = nil
+  self.SlotListChangeAnimToken = (self.SlotListChangeAnimToken or 0) + 1
+end
+
+function M:_GetPendingSlotListChangeExpectedCount()
+  local Contents = self.CharacterSlotItemContents
+  return Contents and #Contents or 0
+end
+
+function M:PlaySlotListChangeAnimation(Options)
+  Options = Options or {}
+  if not IsValid(self) then
+    return
+  end
+  if Options.ClearSlotSelection == true then
+    self:ClearCharacterSlotSelection()
+  end
+  if self.Change and self.PlayAnimation then
+    if self.StopAnimation then
+      self:StopAnimation(self.Change)
+    end
+    self:PlayAnimation(self.Change)
+  end
+  if self.Change_List and self.PlayAnimation then
+    if self.StopAnimation then
+      self:StopAnimation(self.Change_List)
+    end
+    self:PlayAnimation(self.Change_List)
+  end
+end
+
+function M:_CollectAlreadyReadySlotEntriesForChangeAnim()
+  local Pending = self.PendingSlotListChangeAnim
+  if not Pending then
+    return
+  end
+  for SlotIndex, EntryWidget in pairs(self.CharacterSlotEntryWidgetMap or {}) do
+    if type(SlotIndex) == "number" and IsValid(EntryWidget) then
+      Pending.ReadyMap[SlotIndex] = true
+    end
+  end
+  if not self.List_Model or not self.List_Model.GetDisplayedEntryWidgets then
+    return
+  end
+  local DisplayedEntries = self.List_Model:GetDisplayedEntryWidgets()
+  if DisplayedEntries and DisplayedEntries.ToTable then
+    DisplayedEntries = DisplayedEntries:ToTable() or {}
+  end
+  for _, EntryWidget in pairs(DisplayedEntries or {}) do
+    if IsValid(EntryWidget) and EntryWidget.Content and "number" == type(EntryWidget.Content.SlotIndex) then
+      Pending.ReadyMap[EntryWidget.Content.SlotIndex] = true
+    end
+  end
+end
+
+function M:_TryFlushPendingSlotListChangeAnimation()
+  local Pending = self.PendingSlotListChangeAnim
+  if not Pending then
+    return
+  end
+  if not IsValid(self) then
+    self.PendingSlotListChangeAnim = nil
+    return
+  end
+  if Pending.Token ~= self.SlotListChangeAnimToken then
+    self.PendingSlotListChangeAnim = nil
+    return
+  end
+  local ReadyCount = 0
+  for _ in pairs(Pending.ReadyMap or {}) do
+    ReadyCount = ReadyCount + 1
+  end
+  if ReadyCount < Pending.ExpectedCount then
+    return
+  end
+  local Options = Pending.Options
+  self.PendingSlotListChangeAnim = nil
+  self:PlaySlotListChangeAnimation(Options)
+end
+
+function M:_MarkSlotEntryReadyForChangeAnim(Content)
+  local Pending = self.PendingSlotListChangeAnim
+  if not (Pending and Content) or type(Content.SlotIndex) ~= "number" then
+    return
+  end
+  if Pending.Token ~= self.SlotListChangeAnimToken then
+    return
+  end
+  Pending.ReadyMap[Content.SlotIndex] = true
+  self:_TryFlushPendingSlotListChangeAnimation()
+end
+
+function M:RequestPlaySlotListChangeAnimation(Options)
+  if not IsValid(self) then
+    return
+  end
+  Options = Options or {}
+  self:_CancelPendingSlotListChangeAnimation()
+  local ExpectedCount = self:_GetPendingSlotListChangeExpectedCount()
+  if ExpectedCount <= 0 or not self.List_Model then
+    self:PlaySlotListChangeAnimation(Options)
+    return
+  end
+  self.SlotListChangeAnimToken = (self.SlotListChangeAnimToken or 0) + 1
+  self.PendingSlotListChangeAnim = {
+    Token = self.SlotListChangeAnimToken,
+    ExpectedCount = ExpectedCount,
+    ReadyMap = {},
+    Options = Options
+  }
+  self:_CollectAlreadyReadySlotEntriesForChangeAnim()
+  self:_TryFlushPendingSlotListChangeAnimation()
+end
+
 function M:_BindCharacterSlotListEvents()
   self.List_Model.BP_OnItemClicked:Clear()
   self.List_Model.BP_OnItemClicked:Add(self, self.OnClickCharacterSlotItem)
@@ -1604,6 +1750,9 @@ end
 
 function M:OnCharacterSlotEntryInitialized(Content, EntryWidget)
   if not Content or not EntryWidget then
+    return
+  end
+  if not IsValid(self) or not IsValid(EntryWidget) then
     return
   end
   self:RegisterCharacterSlotEntry(EntryWidget, Content)
@@ -1653,8 +1802,15 @@ function M:_ApplyCharacterSlotItemContent(Content, SlotViewData, SlotIndex)
 end
 
 function M:RegisterCharacterSlotEntry(EntryWidget, Content)
+  if not Content or type(Content.SlotIndex) ~= "number" or not IsValid(EntryWidget) then
+    return
+  end
+  if not IsValid(self) then
+    return
+  end
   self.CharacterSlotEntryWidgetMap[Content.SlotIndex] = EntryWidget
   self:_RefreshCharacterSlotEntryWidget(EntryWidget, Content)
+  self:_MarkSlotEntryReadyForChangeAnim(Content)
 end
 
 function M:UnregisterCharacterSlotEntry(EntryWidget, Content)

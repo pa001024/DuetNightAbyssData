@@ -47,6 +47,9 @@ return ReadOnly("QuestChain", {
     Episode = "Episode_00",
     EpisodeName = "Episode_00_03",
     IfAutoStart = true,
+    LoginPlayerTransform = {
+      [10010305] = "QuestPoint10502"
+    },
     MainStoryUnlockMessage = "Textmap_UnlockTitle",
     QuestChainId = 100103,
     QuestChainName = "Name_100103",

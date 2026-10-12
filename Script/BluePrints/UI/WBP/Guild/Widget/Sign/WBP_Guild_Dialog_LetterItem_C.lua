@@ -281,9 +281,6 @@ function M:OnClick()
     return
   end
   Parent:OnLetterClicked(Content)
-  if IsValid(self) then
-    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
-  end
 end
 
 return M

@@ -81,7 +81,9 @@ function M:UpdateRangeWeaponButtonByState(CurButtonState)
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Forbidden)
   elseif self.CurButtonState == "ChangeMagazine" then
     self.ImageMat:SetScalarParameterValue("IconState", 1)
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+    if not self.IsUltimateEnabled then
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+    end
   elseif self.CurButtonState == "Normal" then
     self.ImageMat:SetScalarParameterValue("IconState", 2)
     if not self.IsUltimateEnabled then
@@ -132,10 +134,14 @@ end
 
 function M:OnUltimateStateChanged(IsActive, IsType1)
   if IsActive then
-    self.IsUltimateEnabled = true
     local Anim = IsType1 and self.Enable or self.Enable_2
+    local bStateChanged = not self.IsUltimateEnabled or self.CurrentUltimateAnim ~= Anim
+    self.IsUltimateEnabled = true
+    if bStateChanged and self.CurrentUltimateAnim and self.CurrentUltimateAnim ~= Anim then
+      EMUIAnimationSubsystem:EMStopAnimation(self, self.CurrentUltimateAnim)
+    end
     self.CurrentUltimateAnim = Anim
-    if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, Anim) then
+    if bStateChanged and not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, Anim) then
       EMUIAnimationSubsystem:EMPlayAnimation(self, Anim)
     end
   elseif self.IsUltimateEnabled then

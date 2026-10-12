@@ -102436,6 +102436,18 @@
     ]
   },
   {
+    "id": 360015,
+    "m": "Fixed",
+    "child": [
+      {
+        "id": 120007,
+        "t": "Resource",
+        "c": 1,
+        "n": "Bon d’accessoires – En marche vers l’aube"
+      }
+    ]
+  },
+  {
     "id": 370001,
     "m": "Fixed",
     "child": [
@@ -122099,7 +122111,7 @@
         "id": 120008,
         "t": "Resource",
         "c": 1,
-        "n": "碧霄吟代金券"
+        "n": "Bon de Chant du Firmament"
       },
       {
         "id": 101,
@@ -122675,7 +122687,7 @@
         "id": 30180,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "盛典·1"
+        "n": "1er anniversaire"
       }
     ]
   },

@@ -133,13 +133,22 @@ function M:CanTriggerRewardPreview()
   return self:CanHandleGamepadShortcuts() and self.Board and self.Board.OpenGuildWarRewardPop and self.Board.Panel_RewardBtn and self.Board.Panel_RewardBtn:GetVisibility() ~= ESlateVisibility.Collapsed
 end
 
+function M:CanTriggerMonsterDetails()
+  return self:CanHandleGamepadShortcuts() and self.CurrentTabIdx == self.MonsterTabId and self.CurSelectedDungeonId and self.Key_MonsterInfo and self.Key_MonsterInfo:GetVisibility() ~= ESlateVisibility.Collapsed
+end
+
 function M:StartRewardPreviewGamepadLongPress()
-  if self:CanTriggerRewardPreview() and self.Board.Key_Reward then
+  if self:CanTriggerMonsterDetails() then
+    self.Key_MonsterInfo:OnButtonPressed()
+  elseif self:CanTriggerRewardPreview() and self.Board.Key_Reward then
     self.Board.Key_Reward:OnButtonPressed()
   end
 end
 
 function M:StopRewardPreviewGamepadLongPress()
+  if self.Key_MonsterInfo then
+    self.Key_MonsterInfo:OnButtonReleased()
+  end
   if self.Board and self.Board.Key_Reward then
     self.Board.Key_Reward:OnButtonReleased()
   end
@@ -155,7 +164,9 @@ end
 
 function M:OnGamepadRewardPreviewLongPress()
   self:StopRewardPreviewGamepadLongPress()
-  if self:CanTriggerRewardPreview() then
+  if self:CanTriggerMonsterDetails() then
+    self:OpenMonsterDetails()
+  elseif self:CanTriggerRewardPreview() then
     self.PreRewardPopFocus = self.SelectCell
     self.Board:OpenGuildWarRewardPop()
   end
@@ -573,7 +584,7 @@ function M:InitLevelList(DungeonList)
     end
   else
     self.Btn_Shop.Text_Name:SetText(GText("RaidDungeon_Shop_Name"))
-    self.Btn_Shop:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Btn_Shop:SetVisibility(ESlateVisibility.Collapsed)
     self.Consume:SetVisibility(ESlateVisibility.Collapsed)
     self.Btn_Ranking:SetVisibility(ESlateVisibility.Collapsed)
   end
@@ -1741,6 +1752,13 @@ end
 
 function M:SelectMonsterInfoItem(MonsterId)
   UIManager(self):LoadUINew("MonsterDetailInfo", self.CurSelectedDungeonId, self, MonsterId)
+end
+
+function M:OpenMonsterDetails()
+  if not self.CurSelectedDungeonId then
+    return
+  end
+  UIManager(self):LoadUINew("MonsterDetailInfo", self.CurSelectedDungeonId, self)
 end
 
 function M.HandleEnterDungeonRetCode(RetCode, ...)

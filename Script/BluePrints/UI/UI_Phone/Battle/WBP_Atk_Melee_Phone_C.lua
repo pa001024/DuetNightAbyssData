@@ -159,10 +159,14 @@ function M:OnUltimateStateChanged(IsActive, IsType1)
       self:RestoreDefaultIcon()
     end
     self.bUltimateVisualActive = true == IsType1
-    self.IsUltimateEnabled = true
     local Anim = IsType1 and self.Enable or self.Enable_2
+    local bStateChanged = not self.IsUltimateEnabled or self.CurrentUltimateAnim ~= Anim
+    self.IsUltimateEnabled = true
+    if bStateChanged and self.CurrentUltimateAnim and self.CurrentUltimateAnim ~= Anim then
+      EMUIAnimationSubsystem:EMStopAnimation(self, self.CurrentUltimateAnim)
+    end
     self.CurrentUltimateAnim = Anim
-    if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, Anim) then
+    if bStateChanged and not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, Anim) then
       EMUIAnimationSubsystem:EMPlayAnimation(self, Anim)
     end
     if IsType1 and self.Button_Area then
@@ -202,23 +206,56 @@ function M:OnUltimateIconLoadFinish(Object)
   end
 end
 
-function M:LoadUltimateIcon(OwnerPlayer)
-  if not OwnerPlayer or not OwnerPlayer.UltraWeapon then
+function M:LoadUltimateIcon(OwnerPlayer, IconPath)
+  if not IconPath then
+    if not OwnerPlayer or not OwnerPlayer.UltraWeapon then
+      return
+    end
+    local WeaponId = OwnerPlayer.UltraWeapon.WeaponId
+    local BattleWeaponConfig = DataMgr.BattleWeapon[WeaponId]
+    if not BattleWeaponConfig or not BattleWeaponConfig.WeaponHUDIcon then
+      return
+    end
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/Weapon/T_" .. BattleWeaponConfig.WeaponHUDIcon
+  end
+  if self.UltimateIconPath ~= IconPath then
+    self.UltimateIconPath = IconPath
+    self.UltimateIconObject = nil
+    self.UltimateIconRequest = nil
+    self.IsUltimateIconActive = false
+  end
+  if self.UltimateIconRequest then
     return
   end
-  local WeaponId = OwnerPlayer.UltraWeapon.WeaponId
-  local BattleWeaponConfig = DataMgr.BattleWeapon[WeaponId]
-  if not BattleWeaponConfig or not BattleWeaponConfig.WeaponHUDIcon then
+  if IsValid(self.UltimateIconObject) then
+    if not self.IsUltimateIconActive then
+      self:OnUltimateIconLoadFinish(self.UltimateIconObject)
+    end
     return
   end
-  local IconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/Weapon/T_" .. BattleWeaponConfig.WeaponHUDIcon
-  UE.UResourceLibrary.LoadObjectAsync(self, IconPath, {
+  local Request = {}
+  self.UltimateIconRequest = Request
+  local Handle = UE.UResourceLibrary.LoadObjectAsync(self, IconPath, {
     self,
-    M.OnUltimateIconLoadFinish
+    function(_, Object)
+      if not IsValid(self) or self.UltimateIconRequest ~= Request then
+        return
+      end
+      self.UltimateIconRequest = nil
+      if not Object or not self.bUltimateVisualActive then
+        return
+      end
+      self.UltimateIconObject = Object
+      self:OnUltimateIconLoadFinish(Object)
+    end
   })
+  if self.UltimateIconRequest == Request and not UE.UResourceLibrary.IsValidResource(self, Handle) then
+    self.UltimateIconRequest = nil
+  end
 end
 
 function M:RestoreDefaultIcon()
+  self.UltimateIconRequest = nil
   if not self.IsUltimateIconActive and not self.bUltimateVisualActive then
     return
   end

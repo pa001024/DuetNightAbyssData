@@ -586,8 +586,8 @@
   },
   {
     "id": 4103,
-    "name": "黎瑟・浴火的衣饰",
-    "desc": "她披着一身干练的红色衣装，如暖阳、如火焰、如灯火般闪耀在寒冷的大地上。",
+    "name": "[Rhythm: Flamewrought]'s Accessory",
+    "desc": "Clad in vivid red, she shines against the frozen land — warm as sunlight, radiant as flame, soft as lamplight.",
     "icon": "T_Head_SpLise",
     "rarity": 5,
     "bust": "T_Bust_SpLise",
@@ -1274,7 +1274,7 @@
       "HeadSculpture": [
         {
           "id": 30191,
-          "name": "逐灯者的肖像·夜行",
+          "name": "Portrait: The Light Chaser – Nightwalk",
           "num": 1
         }
       ],
@@ -2667,7 +2667,7 @@
     "id": 32020161,
     "name": "Civic Ordinance",
     "desc": "Peace in our precinct.",
-    "icon": "T_Pack_Police",
+    "icon": "T_Pack_Police_Kami",
     "rarity": 5,
     "charId": 3202,
     "release": "1.6"

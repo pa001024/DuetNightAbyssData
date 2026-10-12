@@ -1238,7 +1238,7 @@
             "id": 10199001,
             "名称": "Insoluble – Méditation",
             "icon": "",
-            "描述": "Lorsque cette arme inflige des dégâts, elle confère 1.0 points de calamité. Le maximum de calamité est de 150.0 points.\nLorsque le maximum est atteint, tous les points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de 10.0% pendant 9.0 s, jusqu’à 6.0 cumuls."
+            "描述": "Lorsque cette arme inflige des dégâts, elle confère 1.0 points de calamité. Le maximum de calamité est de 100 points.\nLorsque le maximum est atteint, tous les points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de 10.0% pendant 15.0 s, jusqu’à 6.0 cumuls."
           }
         ]
       },
@@ -1255,7 +1255,7 @@
             "id": 10199002,
             "名称": "Insoluble – Aspiration",
             "icon": "",
-            "描述": "Lorsque vous consommez du [Désordre], vous obtenez [12.0 × nombre de cumuls consommés] points de calamité.",
+            "描述": "Lorsque vous consommez du [Désordre], vous obtenez [12.0 × nombre de cumuls consommés × Vitesse de compétence] points de calamité.",
             "解锁": {
               "Prototype : Énigme insoluble": 30,
               "Cristal Électro": 90,
@@ -1354,7 +1354,7 @@
             "id": 10199007,
             "名称": "Énigme – Preuve",
             "icon": "",
-            "描述": "Sous l’effet de [Recherche], si votre Vitesse de compétence dépasse 2.2, la Pénétration de compétence augmente de 30.0%.",
+            "描述": "Sous l’effet de [Recherche], si votre Vitesse de compétence dépasse 2.2, les Dégâts de compétence ignorent 30.0% de la Défense de la cible.",
             "解锁": {
               "Prototype : Énigme insoluble": 30,
               "Cristal Électro": 90,
@@ -1426,7 +1426,7 @@
             "id": 10199010,
             "名称": "Insoluble – Vérité",
             "icon": "",
-            "描述": "Dégâts de compétence supplémentaires de votre attribut +50.0%.\nLorsque [Recherche] atteint le nombre maximal de cumuls, vous obtenez également l’effet suivant : lorsque vous infligez des Dégâts de compétence, 3500.0% dégâts de calamité sont infligés aux ennemis dans un rayon de 3.0 m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et augmentent en fonction de la Puissance de compétence et de la Vitesse de compétence du personnage, selon le multiplicateur [Puissance de compétence × Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les 1.0 s.",
+            "描述": "Dégâts de compétence supplémentaires de votre attribut +50.0%.\nLorsque [Recherche] atteint le nombre maximal de cumuls, infliger des Dégâts de compétence inflige également 3500.0% dégâts de calamité aux ennemis dans un rayon de 3.0 m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et leur bonus de dégâts est calculé selon [Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les 1.0 s.",
             "加成": {
               "技能追伤": 0.5
             }
@@ -13112,7 +13112,7 @@
       }
     ],
     "熔炼": [
-      "Vitesse d’attaque +#1. Tirer une flèche pendant la 3e phase de charge augmente les dégâts qu’elle inflige de 100.0% et augmente le Rayon de l’explosion de #2 pendant 5.0 s.",
+      "Vitesse d’attaque +#1. Tirer une flèche pendant la 3e phase de charge augmente le Rayon de l’explosion de #2 pendant 5.0 s.",
       [
         "25.0%",
         "30.0%",

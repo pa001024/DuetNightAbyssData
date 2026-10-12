@@ -658,6 +658,15 @@ end
 
 function Component:OnCharacterReady(Info)
   self:SetActorHideTag("login", false)
+  if Info.UltraWeapons then
+    local ValidUltraWeapons = {}
+    for _, WeaponInfo in ipairs(Info.UltraWeapons) do
+      if WeaponInfo.WeaponId and 0 ~= WeaponInfo.WeaponId then
+        table.insert(ValidUltraWeapons, WeaponInfo)
+      end
+    end
+    Info.UltraWeapons = ValidUltraWeapons
+  end
   if Info.FromOtherWorld then
     if self.PreviewModel then
       self:ClearWeapon()

@@ -9,6 +9,7 @@ local STICKER_ITEM_BP_PATH = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/E
 local NONE_STICKER_ENTRY_KEY = "__NONE_STICKER__"
 local STICKER_ITEM_IN_STAGGER_INTERVAL = 0.015
 local STICKER_ITEM_IN_STAGGER_TIMER_KEY = "StickerItemInStagger"
+local TITLE_ICON_PATH = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Personal_Sticker.T_Tab_Personal_Sticker'"
 
 function M:Initialize(Initializer)
   self.EditRootController = nil
@@ -30,6 +31,12 @@ function M:InitStickerPanel(EditRootController, OwnerOtherPage)
   self:_PlayTitleNormal()
   if self.Text_Title then
     self.Text_Title:SetText(GText("UI_PersonalPage_Sticker"))
+  end
+  if self.Image_TitleIcon then
+    local TitleIcon = LoadObject(TITLE_ICON_PATH)
+    if TitleIcon then
+      self.Image_TitleIcon:SetBrushFromTexture(TitleIcon, false)
+    end
   end
 end
 
@@ -247,6 +254,7 @@ function M:_BindTitleEvents()
 end
 
 function M:OnTitleClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/click_crystal_btn_tab", nil, nil)
   if UIUtils.IsGamepadInput() then
     if self.bListExpanded then
       if self.OwnerOtherPage and self.OwnerOtherPage.RequestToggleSection then

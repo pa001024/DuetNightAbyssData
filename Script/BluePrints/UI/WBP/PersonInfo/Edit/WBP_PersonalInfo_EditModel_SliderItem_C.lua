@@ -1,5 +1,6 @@
 require("UnLua")
 local MiscUtils = require("Utils.MiscUtils")
+local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 local GAMEPAD_SLIDER_KEY = UIConst.GamePadImgKey.LeftThumb
 local GAMEPAD_SLIDER_THUMB_KEY = "LH"
@@ -84,7 +85,7 @@ end
 function M:RefreshSliderPresentation(SliderConfig, CurrentValue)
   local SliderValue = self:_ConvertBusinessValueToSliderValue(SliderConfig, CurrentValue)
   self.Text_SliderTitle:SetText(SliderConfig.Title)
-  self.Text_Num:SetText(tostring(math.floor((CurrentValue or 0) + 0.5)))
+  self.Text_Num:SetText(tostring(PersonInfoCommon.RoundEditInteger(CurrentValue)))
   self:SetSliderValue(SliderValue)
 end
 

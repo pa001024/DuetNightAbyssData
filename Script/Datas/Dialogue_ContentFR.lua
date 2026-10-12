@@ -113680,7 +113680,7 @@ SetVisibility{ActorId{111163},Visibility{"Hide"}}
           VoiceName = "voice/$Locale$/story/1102/111096/1BD7E01A"
         },
         [11122301] = {
-          Camera = "241.59668,-731.140625,432.53125,0.000042,-14.800227,105.795197,22.0,100000.0,true,Manual,2.8,16:9 Digital Film",
+          Camera = "241.59668,-731.140625,432.53125,0.000042,-14.800227,105.795197,22.0,100000.0,false,Manual,2.8,16:9 Digital Film",
           Content = "（除了先前看到的彩旗，这间仓库里还整齐堆放着各种食物原料、玩具、服装和生活用品。仔细观察，它们几乎都长得一模一样，并且或多或少都有一些<H>完全一致</>的瑕疵。）",
           ContentFR = "Outre les fanions aperçus plus tôt, l’entrepôt contient également des réserves soigneusement empilées de matières premières alimentaires, de jouets, de vêtements et d’objets du quotidien. En y regardant de plus près, presque tous ces objets sont identiques, et présentent même des défauts <H>strictement identiques</> à plusieurs endroits.",
           DialogueId = 11122301,
@@ -170530,6 +170530,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12070001] = {
           Content = "卡米拉，{nickname}的下落有消息了吗？",
+          ContentFR = "Camilla, avez-vous des nouvelles de {nickname} ?",
           DialogueId = 12070001,
           GUID = "1E374A8A",
           NextDialogue = 12070002,
@@ -170537,6 +170538,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12070002] = {
           Content = "还没有。",
+          ContentFR = "Toujours rien.",
           DialogueId = 12070002,
           GUID = "1E374AB4",
           NextDialogue = 12070003,
@@ -175546,7 +175548,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         [12070686] = {DialogueId = 12070686, GUID = "1E37BAEC"},
         [12070687] = {
           Content = "渺小的妖精飞向巨兽，但巨兽稍稍用力，就折断了它的四肢……",
-          ContentFR = "La frêle fée s’envola vers la bête gigantesque. Mais d’un simple geste, celle-ci lui brisa les membres.",
+          ContentFR = "La frêle fée s’envola vers la bête gigantesque. Mais d’un simple geste, celle-ci lui brisa les membres...",
           DialogueId = 12070687,
           GUID = "1E37BB16",
           NextDialogue = 12070688,

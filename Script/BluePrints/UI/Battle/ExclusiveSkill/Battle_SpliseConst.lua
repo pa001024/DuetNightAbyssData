@@ -1,4 +1,7 @@
 local M = {}
+M.Visibility = {
+  ScopeInactiveTag = "SpliseScopeInactive"
+}
 M.Spectrum = {
   BuffId = 410311,
   ActiveOpacity = 1,
@@ -109,6 +112,7 @@ M.Input = {
     ShootKey = "Attack",
     ExitKey = "Fire"
   },
+  MobileScopeFireIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Battle/Weapon/T_SPLise_ScopeFire.T_SPLise_ScopeFire'",
   Descriptions = {
     Shoot = "SKILL_DESC_4103Skill02_Button01",
     Exit = "SKILL_DESC_4103Skill02_Button02"

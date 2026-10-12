@@ -19133,7 +19133,7 @@
         "id": 120008,
         "t": "Resource",
         "c": 1,
-        "n": "碧霄吟代金券"
+        "n": "Bon de Chant du Firmament"
       }
     ]
   },
@@ -19227,7 +19227,7 @@
       {
         "id": 30180,
         "t": "HeadSculpture",
-        "n": "盛典·1"
+        "n": "1er anniversaire"
       }
     ]
   },
@@ -29041,14 +29041,14 @@
         "n": "Module de transfert d’affinité d’arme"
       },
       {
-        "id": 2013,
+        "id": 2014,
         "t": "Resource",
-        "n": "Mélodie de combat III"
+        "n": "Mélodie de combat IV"
       },
       {
-        "id": 2009,
+        "id": 2010,
         "t": "Resource",
-        "n": "Manuel d’arme III"
+        "n": "Manuel d’arme IV"
       }
     ]
   },

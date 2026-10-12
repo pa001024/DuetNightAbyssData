@@ -318,6 +318,23 @@ function BP_EMGameInstance_C:ClearTBHDeathState()
   end
 end
 
+function BP_EMGameInstance_C:IsTBHWidgetAvailable()
+  if self.TBHWidgetAvailable ~= nil then
+    return self.TBHWidgetAvailable
+  end
+  local Available = false
+  local Paths = UE4.UBlueprintPathsLibrary
+  if Paths then
+    local ProjectDir = Paths.ProjectDir()
+    local DevPath = ProjectDir .. "Tools/DNA_TBH/TBH_TaskbarRewardWidget/bin/Release/net8.0-windows/win-x64/AFKSupport.exe"
+    local ShippingPath = ProjectDir .. "Binaries/Win64/AFKSupport/AFKSupport.exe"
+    Available = Paths.FileExists(DevPath) or Paths.FileExists(ShippingPath)
+    DebugPrint(string.format("[TBH] Widget availability: available=%s, projectDir=%s", tostring(Available), tostring(ProjectDir)))
+  end
+  self.TBHWidgetAvailable = Available
+  return Available
+end
+
 function BP_EMGameInstance_C:SendTBHLang()
   if not UE4.UEMTaskbarRewardLibrary then
     return false

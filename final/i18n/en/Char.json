@@ -14264,6 +14264,28 @@
       "Consecutively using the same Combat Skill or Ultimate Skill grants 1 stack of [Hexagram]. Each stack grants +6% Skill Speed and causes Skill DMG to ignore 6% of the target's DEF for 10s, stacking up to 5 times.\nAt max [Hexagram] stacks, the duration of [Four Realms Align] is paused. [Zhen-Xun Convergence] consumes 1 stacks of [Electro Disruption] from the target when dealing damage to increase its DMG multiplier by [600% × Overflow Intensity]."
     ],
     "碎片": 1004102,
+    "第七溯源消耗": [
+      [
+        1024102,
+        1
+      ],
+      [
+        1004102,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20030,
+        5
+      ],
+      [
+        10016,
+        20
+      ]
+    ],
     "专武": 10304
   },
   {
@@ -14620,7 +14642,7 @@
         ],
         "术语解释": {
           "Deadeye Domain": "Continuously calibrates Accuracy. Shooting with [Arcshot] resets Accuracy and launches a [Sniper Bullet], dealing Electro DMG to all enemies in its path. At 100% Accuracy, shoots an [Electrified Sniper Bullet] instead and becomes immune to Hitstun when taking damage.",
-          "Steady Aim": "Increases Skill Speed and reduces Sanity Cost when shooting with [Arcshot]. Lasts indefinitely and stacks up to 30 times. All stacks are removed upon exiting [Deadeye Domain].",
+          "Steady Aim": "Increases Skill Speed and reduces Sanity Cost when shooting with [Arcshot]. Lasts indefinitely and stacks up to 30 times. Upon exiting [Deadeye Domain], removes 1 stack every 0.5s.",
           "Volt Rifle": "Repeats [Arcshot] shot and [Surge Strike]."
         },
         "子技能": [
@@ -14734,7 +14756,7 @@
         "id": 410304,
         "名称": "Honed Technique",
         "类型": "Passive",
-        "描述": "DMG dealt by [Arcshot] and [Volt Rifle] increases by [Ranged Weapon CRIT Chance × (Ranged Weapon CRIT Damage - 1)]%, with a minimum of 0.",
+        "描述": "DMG dealt by [Arcshot] and [Volt Rifle] increases by [Ranged Weapon CRIT Chance × (Ranged Weapon CRIT Damage - 100%)], with a minimum of 0.",
         "icon": "ExtraPassive",
         "行为": "被动效果(410302)(BP_SPLise_Passive2)"
       },
@@ -14755,7 +14777,7 @@
     ],
     "溯源": [
       "[Arcshot] shots have no recoil. Firing an [Electrified Sniper Bullet] with [Arcshot] additionally triggers [Surge Strike] once. This trigger consumes no Sanity and does not end [Deadeye Domain].",
-      "While in [Deadeye Domain], gain Invisibility if other allies are detectable by enemies. When Skill Speed exceeds 2, Skill DMG dealt in [Deadeye Domain] gains an independent damage multiplier equal to [Skill Speed × 15].",
+      "While in [Deadeye Domain], gain Invisibility if other allies are detectable by enemies. Hold the Combat Skill to automatically lock onto elite enemies. Hold the Combat Skill again or exit [Deadeye Domain] to cancel the lock.\nWhile in [Deadeye Domain], when Skill Speed exceeds 2, Skill DMG dealt gains an independent damage multiplier equal to [Skill Speed × 15]%.",
       "[Surge Strike] Level +2; [Vortex Shot] Level +1.",
       "While in [Deadeye Domain], gain a additional stack of [Steady Aim] every 0.2s. Each stack of [Steady Aim] additionally grants +3% Morale.",
       "[Electro Coordination] Level +2; [Vortex Shot] Level +1.",
@@ -15316,6 +15338,28 @@
       "Using [Starstorm Descent] grants Yuming and allies stacks of [Xuanjiao's Blessing] equal to the number of Electro characters in the team, lasting 10s, up to 3 stacks. Each application resets the stack count.\nEach stack of [Xuanjiao's Blessing] grants +30% Morale and +12.5% Electro DMG Dealt.\nAt 2 or more stacks, grants +20% PEN stats.\nAt 3 stacks, Xuanjiao absorbs HP damage taken by allied characters other than [Yuming]."
     ],
     "碎片": 1004201,
+    "第七溯源消耗": [
+      [
+        1024201,
+        1
+      ],
+      [
+        1004201,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20031,
+        5
+      ],
+      [
+        10016,
+        20
+      ]
+    ],
     "专武": 10203
   },
   {

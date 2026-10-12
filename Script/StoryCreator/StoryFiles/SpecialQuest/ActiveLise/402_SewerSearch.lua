@@ -280,6 +280,18 @@ return {
             startPort = "Out",
             endQuest = "178703500219310080751",
             endPort = "Fail"
+          },
+          {
+            startQuest = "178737952445313548740",
+            startPort = "Out",
+            endQuest = "179178424337110266657",
+            endPort = "In"
+          },
+          {
+            startQuest = "178738599490213579181",
+            startPort = "Out",
+            endQuest = "179178447075310268072",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -978,6 +990,33 @@ return {
               NewDescription = "Description_120704_4",
               NewDetail = "Content_120704_4",
               SubTaskTargetIndex = 0
+            }
+          },
+          ["179178424337110266657"] = {
+            key = "179178424337110266657",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2150.3846153846152, y = 765.5384615384614},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {101701},
+              bStoreToServer = true
+            }
+          },
+          ["179178447075310268072"] = {
+            key = "179178447075310268072",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 5931.538461538462, y = 456.30769230769204},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

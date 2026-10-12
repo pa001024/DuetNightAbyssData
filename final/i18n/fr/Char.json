@@ -14264,6 +14264,28 @@
       "Lorsque vous utilisez plusieurs fois de suite la même Compétence de combat ou Compétence ultime, vous obtenez 1 cumul d’[Hexagramme]. Chaque cumul augmente votre Vitesse de compétence de 6% et permet aux Dégâts de compétence d’ignorer 6% de la DÉF de la cible pendant 10 s, jusqu’à 5 cumuls.\nLorsque [Hexagramme] atteint le nombre maximal de cumuls, la durée du champ d’[Harmonie des Quatre Royaumes] est suspendue. Lorsque [Convergence Zhen-Xun] inflige des dégâts, elle consomme 1 cumuls de [Désordre Électro] de la cible pour augmenter son multiplicateur de dégâts de [600% × Puissance de Surabondance]."
     ],
     "碎片": 1004102,
+    "第七溯源消耗": [
+      [
+        1024102,
+        1
+      ],
+      [
+        1004102,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20030,
+        5
+      ],
+      [
+        10016,
+        20
+      ]
+    ],
     "专武": 10304
   },
   {
@@ -14620,7 +14642,7 @@
         ],
         "术语解释": {
           "Mode sniper": "Calibre en continu la précision. Lorsque le [Fusil de précision] tire, la précision est réinitialisée et une [Balle de précision] est tirée, infligeant des Dégâts Électro à tous les ennemis sur sa trajectoire. Si la progression du calibrage de précision atteint 100 % au moment du tir, tire à la place une [Balle de précision renforcée]. Pendant ce temps, les dégâts subis n’interrompent pas vos actions.",
-          "Concentration": "Augmente la Vitesse de compétence et réduit le coût en Lucidité des tirs du [Fusil de précision]. Durée permanente, jusqu’à 30 cumuls. Retiré en quittant le [Mode sniper].",
+          "Concentration": "Augmente la Vitesse de compétence et réduit le coût en Lucidité des tirs du [Fusil de précision]. Durée illimitée, jusqu’à 30 cumuls. Après avoir quitté le [Mode sniper], 1 cumul est retiré toutes les 0,5 s.",
           "Fusil électrique": "Répète les tirs du [Fusil de précision] et [Tir fulgurant]."
         },
         "子技能": [
@@ -14734,7 +14756,7 @@
         "id": 410304,
         "名称": "Perfectionnement technique",
         "类型": "Passive",
-        "描述": "Les dégâts du [Fusil de précision] et du [Fusil électrique] augmentent selon le multiplicateur [Taux CRIT de l’arme à distance × (DGT CRIT de l’arme à distance - 1)], avec un minimum de 0.",
+        "描述": "Les dégâts du [Fusil de précision] et du [Fusil électrique] augmentent selon le multiplicateur [Taux CRIT de l’arme à distance × (DGT CRIT de l’arme à distance - 100 %)], avec un minimum de 0.",
         "icon": "ExtraPassive",
         "行为": "被动效果(410302)(BP_SPLise_Passive2)"
       },
@@ -14755,7 +14777,7 @@
     ],
     "溯源": [
       "Les tirs du [Fusil de précision] n’ont plus de recul. Lorsque le [Fusil de précision] tire une [Balle de précision renforcée], vous libérez 1 [Tir fulgurant] supplémentaire. Cette utilisation ne consomme pas de Lucidité et ne vous fait pas quitter le [Mode sniper].",
-      "Pendant le [Mode sniper], si d’autres alliés peuvent être détectés par les ennemis, vous ne pouvez pas être détecté. En [Mode sniper], si votre Vitesse de compétence dépasse 2, les Dégâts de compétence infligés bénéficient d’un bonus indépendant selon le multiplicateur [Vitesse de compétence × 15].",
+      "Pendant le [Mode sniper], si d’autres alliés peuvent être détectés par les ennemis, vous ne pouvez pas être détecté. Maintenez la compétence pour verrouiller automatiquement les ennemis d’élite. Maintenez à nouveau la compétence ou quittez le [Mode sniper] pour annuler le verrouillage.\nEn [Mode sniper], si votre Vitesse de compétence dépasse 2, les Dégâts de compétence infligés bénéficient d’un bonus indépendant selon le multiplicateur [Vitesse de compétence × 15] %.",
       "[Tir fulgurant] niveau +2 ; [Tir vortex] niveau +1.",
       "Pendant le [Mode sniper], vous obtenez 1 cumul supplémentaire de [Concentration] toutes les 0.2 s. Chaque cumul de [Concentration] augmente également la Vigueur de 3%.",
       "[Synergie électrique] niveau +2 ; [Tir vortex] niveau +1.",
@@ -15316,6 +15338,28 @@
       "Lors de l’utilisation de [Fracas astral], applique à Yuming et à ses alliés un nombre de cumuls de [Protection de Xuanjiao] égal au nombre de personnages Électro dans l’équipe, pendant 10 s, jusqu’à 3 cumuls. Chaque application réinitialise le nombre de cumuls.\nChaque cumul de [Protection de Xuanjiao] augmente la Vigueur de 30% et les Dégâts Électro infligés de 12.5%.\nÀ 2 cumuls ou plus, la Pénétration de tous les attributs augmente de 20%.\nÀ 3 cumuls, lorsque des alliés autres que [Yuming] subissent des dégâts affectant leurs PV, Xuanjiao peut absorber ces dégâts."
     ],
     "碎片": 1004201,
+    "第七溯源消耗": [
+      [
+        1024201,
+        1
+      ],
+      [
+        1004201,
+        30
+      ],
+      [
+        10100,
+        2
+      ],
+      [
+        20031,
+        5
+      ],
+      [
+        10016,
+        20
+      ]
+    ],
     "专武": 10203
   },
   {

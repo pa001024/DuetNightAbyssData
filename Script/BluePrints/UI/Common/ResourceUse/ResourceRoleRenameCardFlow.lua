@@ -36,6 +36,9 @@ function ResourceRoleRenameCardFlow.Open(Host, StuffConfigData, Extra)
       State.IsSubmitting = true
       SubmitRename(Avatar, ResourceId, Name, function(ErrCode)
         State.IsSubmitting = false
+        if ErrCode == ErrorCode.RET_SUCCESS and IsValid(Host) and Host.RefreshConsumedResourceGrid then
+          Host:RefreshConsumedResourceGrid(ResourceId)
+        end
         if State.IsClosed or not IsValid(InputWidget) then
           return
         end

@@ -935,6 +935,7 @@ return ReadOnly("WeaponAccessory", {
   },
   [10060] = {
     AccessorySocket = "Wp_Accessory",
+    ChangeColor = 2,
     Des = "UI_WeaponAccessory_Desc_10041",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon43_02.T_Fashion_Weapon43_02'",
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part22_SM.Player_WP_Part22_SM'",
@@ -952,6 +953,7 @@ return ReadOnly("WeaponAccessory", {
   },
   [10061] = {
     AccessorySocket = "Wp_Accessory",
+    ChangeColor = 3,
     Des = "UI_WeaponAccessory_Desc_10041",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Weapon43_01.T_Fashion_Weapon43_01'",
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Part/Weapon/Mesh/Player_WP_Part22_SM.Player_WP_Part22_SM'",

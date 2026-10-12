@@ -2,6 +2,7 @@ local DisplayDraft = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_D
 local DisplayConfig = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayConfig")
 local DisplayRules = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayRules")
 local DisplayPersistence = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayPersistence")
+local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local M = {}
 
 function M:Init(Params)
@@ -119,6 +120,57 @@ function M:AcceptPreviewTransaction()
   self.ActivePreviewTransaction = nil
   self:RefreshDirtyState()
   return true
+end
+
+function M:CommitSlotChoosePreviewTransaction()
+  local Transaction = self.ActivePreviewTransaction
+  if not Transaction or not Transaction.Active then
+    return false
+  end
+  local OperationMeta
+  if Transaction.Key == "pet_choose" then
+    OperationMeta = {
+      Type = "PetSlotChange",
+      AffectedSlotIndices = self:_BuildChangedPetSlotIndexMap(Transaction.StartDraft, self.Draft)
+    }
+  elseif Transaction.Key == "item_choose" then
+    OperationMeta = {
+      Type = "ItemChoose",
+      AffectedItemSlotIndices = self:_BuildChangedItemSlotIndexMap(Transaction.StartDraft, self.Draft)
+    }
+  end
+  if not OperationMeta then
+    return false
+  end
+  Transaction.Operation = self:_CloneHistoryOperation(OperationMeta)
+  Transaction.Changed = true
+  return self:CommitPreviewTransaction()
+end
+
+function M:CommitCharacterEquipChoosePreviewTransaction()
+  local Transaction = self.ActivePreviewTransaction
+  if not Transaction or not Transaction.Active then
+    return false
+  end
+  Transaction.Operation = self:_CloneHistoryOperation({
+    Type = "CharacterWeaponAction",
+    AffectedSlotIndices = self:_BuildChangedCharacterWeaponSlotIndexMap(Transaction.StartDraft, self.Draft)
+  })
+  Transaction.Changed = true
+  return self:CommitPreviewTransaction()
+end
+
+function M:_BuildChangedCharacterWeaponSlotIndexMap(PreviousDraft, NextDraft)
+  local AffectedSlotIndices = {}
+  local SlotCount = DisplayConfig:GetCharacterSlotCount()
+  for SlotIndex = 1, SlotCount do
+    local LeftIdentity = self:_GetCharacterWeaponActionIdentity(DisplayDraft:GetCharacterSlot(PreviousDraft, SlotIndex))
+    local RightIdentity = self:_GetCharacterWeaponActionIdentity(DisplayDraft:GetCharacterSlot(NextDraft, SlotIndex))
+    if not self:_IsSameCharacterWeaponActionIdentity(LeftIdentity, RightIdentity) then
+      AffectedSlotIndices[SlotIndex] = true
+    end
+  end
+  return AffectedSlotIndices
 end
 
 function M:CancelPreviewTransaction()
@@ -326,7 +378,152 @@ function M:SetCharacterAction(SlotIndex, ActionData)
   return true
 end
 
+function M:_GetTransformSlot(Draft, Kind, SlotIndex)
+  if not Draft or type(SlotIndex) ~= "number" then
+    return nil
+  end
+  local SlotGroup
+  if "Character" == Kind then
+    SlotGroup = Draft.CharacterSlots
+  elseif "Pet" == Kind then
+    SlotGroup = Draft.PetSlots
+  elseif "Item" == Kind then
+    SlotGroup = Draft.ItemSlots
+  end
+  if not SlotGroup then
+    return nil
+  end
+  return SlotGroup[SlotIndex]
+end
+
+function M:_GetIntegerTransformBaselineSlot(Kind, SlotIndex)
+  local Draft = self.Draft
+  local Transaction = self.ActivePreviewTransaction
+  if Transaction and Transaction.Active and Transaction.StartDraft then
+    Draft = Transaction.StartDraft
+  end
+  return self:_GetTransformSlot(Draft, Kind, SlotIndex)
+end
+
+function M:_IsSameEditIntegerTransform(Slot, Transform, TransformRotation)
+  if not Slot then
+    return false
+  end
+  local OldTranslation = Slot.Transform and Slot.Transform.Translation or nil
+  local NewTranslation = Transform and Transform.Translation or nil
+  local OldX = PersonInfoCommon.RoundEditInteger(OldTranslation and OldTranslation.X)
+  local OldY = PersonInfoCommon.RoundEditInteger(OldTranslation and OldTranslation.Y)
+  local OldZ = PersonInfoCommon.RoundEditInteger(OldTranslation and OldTranslation.Z)
+  local NewX = PersonInfoCommon.RoundEditInteger(NewTranslation and NewTranslation.X)
+  local NewY = PersonInfoCommon.RoundEditInteger(NewTranslation and NewTranslation.Y)
+  local NewZ = PersonInfoCommon.RoundEditInteger(NewTranslation and NewTranslation.Z)
+  if OldX ~= NewX or OldY ~= NewY or OldZ ~= NewZ then
+    return false
+  end
+  local OldRotation = Slot.TransformRotation or {}
+  local NewRotation = TransformRotation or {}
+  local OldPitch = PersonInfoCommon.RoundEditInteger(OldRotation.Pitch)
+  local OldYaw = PersonInfoCommon.RoundEditInteger(OldRotation.Yaw)
+  local OldRoll = PersonInfoCommon.RoundEditInteger(OldRotation.Roll)
+  local NewPitch = PersonInfoCommon.RoundEditInteger(NewRotation.Pitch)
+  local NewYaw = PersonInfoCommon.RoundEditInteger(NewRotation.Yaw)
+  local NewRoll = PersonInfoCommon.RoundEditInteger(NewRotation.Roll)
+  return OldPitch == NewPitch and OldYaw == NewYaw and OldRoll == NewRoll
+end
+
+function M:_ReapplySlotTransform(Kind, SlotIndex, Transform)
+  local Renderer = self.Renderer
+  if "Character" == Kind and Renderer and Renderer.ApplyCharacterTransform then
+    if Renderer:ApplyCharacterTransform(SlotIndex, Transform, self.Draft) == true then
+      return
+    end
+  elseif "Pet" == Kind and Renderer and Renderer.ApplyPetTransform then
+    if true == Renderer:ApplyPetTransform(SlotIndex, Transform, self.Draft) then
+      return
+    end
+  elseif "Item" == Kind and Renderer and Renderer.ApplyItemTransform and true == Renderer:ApplyItemTransform(SlotIndex, Transform, self.Draft) then
+    return
+  end
+  self:Render()
+end
+
+function M:_BuildIntegerTransformOperation(Kind, SlotIndex)
+  if "Pet" == Kind then
+    return {
+      Type = "PetTransform",
+      SlotIndex = SlotIndex,
+      AffectedSlotIndices = {
+        [SlotIndex] = true
+      }
+    }
+  end
+  if "Item" == Kind then
+    return {
+      Type = "ItemTransform",
+      AffectedItemSlotIndices = {
+        [SlotIndex] = true
+      }
+    }
+  end
+  return {
+    Type = "CharacterTransform",
+    SlotIndex = SlotIndex,
+    AffectedSlotIndices = {
+      [SlotIndex] = true
+    }
+  }
+end
+
+function M:_RestoreIntegerTransformSlot(LiveSlot, SourceSlot)
+  local SourceRotation = SourceSlot.TransformRotation
+  LiveSlot.Transform = SourceSlot.Transform
+  if type(SourceRotation) == "table" then
+    LiveSlot.TransformRotation = {
+      Pitch = SourceRotation.Pitch,
+      Yaw = SourceRotation.Yaw,
+      Roll = SourceRotation.Roll
+    }
+  else
+    LiveSlot.TransformRotation = nil
+  end
+end
+
+function M:_MarkIntegerTransformTransaction(Kind, SlotIndex)
+  local Transaction = self.ActivePreviewTransaction
+  if not Transaction or not Transaction.Active then
+    self:RefreshDirtyState()
+    return
+  end
+  Transaction.Changed = true
+  Transaction.Operation = self:_CloneHistoryOperation(self:_BuildIntegerTransformOperation(Kind, SlotIndex))
+  self.RedoStack = {}
+end
+
+function M:_TryKeepIntegerTransform(Kind, SlotIndex, Transform, TransformRotation)
+  local SaveSlot = self:_GetTransformSlot(self.BaselineDraft, Kind, SlotIndex)
+  local GestureSlot = self:_GetIntegerTransformBaselineSlot(Kind, SlotIndex)
+  local KeepSlot
+  if self:_IsSameEditIntegerTransform(SaveSlot, Transform, TransformRotation) then
+    KeepSlot = SaveSlot
+  elseif self:_IsSameEditIntegerTransform(GestureSlot, Transform, TransformRotation) then
+    KeepSlot = GestureSlot
+  end
+  if not KeepSlot then
+    return false
+  end
+  local LiveSlot = self:_GetTransformSlot(self.Draft, Kind, SlotIndex)
+  if LiveSlot and LiveSlot.Transform ~= KeepSlot.Transform then
+    self:_RestoreIntegerTransformSlot(LiveSlot, KeepSlot)
+    self:_ReapplySlotTransform(Kind, SlotIndex, LiveSlot.Transform)
+    self:_MarkIntegerTransformTransaction(Kind, SlotIndex)
+  end
+  return true
+end
+
 function M:SetCharacterTransform(SlotIndex, Transform, TransformRotation)
+  if self:_TryKeepIntegerTransform("Character", SlotIndex, Transform, TransformRotation) then
+    return false
+  end
   local Draft = self:_CloneDraft(self.Draft)
   local Slot = DisplayDraft:GetCharacterSlot(Draft, SlotIndex)
   if Slot then
@@ -339,14 +536,54 @@ end
 function M:SetCharacterSlotsDraft(CharacterDraft)
   local Draft = self:_CloneDraft(self.Draft)
   Draft.CharacterSlots = DisplayDraft:Clone(CharacterDraft).CharacterSlots
-  local AffectedSlotIndices = {}
-  for SlotIndex = 1, 4 do
-    AffectedSlotIndices[SlotIndex] = true
-  end
+  local AffectedSlotIndices = self:_BuildChangedCharacterSlotIndexMap(self.Draft, Draft)
   return self:_CommitDraftIfChanged(Draft, {
     Type = "CharacterChooseCommit",
     AffectedSlotIndices = AffectedSlotIndices
   }, true)
+end
+
+function M:_BuildCharacterSlotContentIdentity(Slot)
+  if not DisplayDraft:IsCharacterSlotOccupied(Slot) then
+    return nil
+  end
+  local CharData = Slot.CharData
+  local WeaponData = Slot.WeaponData
+  local Action = Slot.Action
+  local Appearance = Slot.Appearance
+  local AppearanceKey
+  if type(Appearance) == "table" then
+    AppearanceKey = Appearance.AppearancePlan or Appearance.PlanIndex or Appearance.SuitIndex
+  end
+  local ContentIdentity = self:_BuildSlotTransformCompareIdentity(Slot)
+  ContentIdentity.CharKey = CharData.Uuid or CharData.CharId
+  ContentIdentity.WeaponId = WeaponData and WeaponData.WeaponId or nil
+  ContentIdentity.ActionMode = Action and Action.Mode or nil
+  ContentIdentity.ActionPoseId = Action and Action.PoseId or nil
+  ContentIdentity.ActionPoseTag = Action and Action.PoseTag or nil
+  ContentIdentity.ActionMontagePath = Action and Action.MontagePath or nil
+  ContentIdentity.ActionDocument = Action and Action.Document or nil
+  ContentIdentity.ActionPoseName = Action and Action.PoseName or nil
+  ContentIdentity.ActionReleaseWheel = Action and Action.ReleaseWheel or nil
+  ContentIdentity.AppearanceKey = AppearanceKey
+  return ContentIdentity
+end
+
+function M:_IsSameCharacterSlotContent(LeftSlot, RightSlot)
+  return DisplayDraft:IsEquivalent(self:_BuildCharacterSlotContentIdentity(LeftSlot), self:_BuildCharacterSlotContentIdentity(RightSlot)) == true
+end
+
+function M:_BuildChangedCharacterSlotIndexMap(LeftDraft, RightDraft)
+  local AffectedSlotIndices = {}
+  local CharacterSlotCount = DisplayConfig:GetCharacterSlotCount()
+  for SlotIndex = 1, CharacterSlotCount do
+    local LeftSlot = LeftDraft and DisplayDraft:GetCharacterSlot(LeftDraft, SlotIndex) or nil
+    local RightSlot = RightDraft and DisplayDraft:GetCharacterSlot(RightDraft, SlotIndex) or nil
+    if not self:_IsSameCharacterSlotContent(LeftSlot, RightSlot) then
+      AffectedSlotIndices[SlotIndex] = true
+    end
+  end
+  return AffectedSlotIndices
 end
 
 function M:_BuildPetAffectedSlotIndexMap(SlotIndex, ExtraSlotIndex)
@@ -394,13 +631,50 @@ function M:_GetPetSlotIdentity(Slot)
   return PetData.UniqueId or PetData.PetId
 end
 
+function M:_BuildSlotTransformCompareIdentity(Slot)
+  local Translation = Slot and Slot.Transform and Slot.Transform.Translation or nil
+  local Rotation = Slot and Slot.TransformRotation or nil
+  if type(Rotation) ~= "table" and Slot and Slot.Transform and Slot.Transform.Rotation then
+    local Quat = Slot.Transform.Rotation
+    if Quat and Quat.ToRotator then
+      local Rotator = Quat:ToRotator()
+      Rotation = {
+        Pitch = Rotator and Rotator.Pitch,
+        Yaw = Rotator and Rotator.Yaw,
+        Roll = Rotator and Rotator.Roll
+      }
+    end
+  end
+  Rotation = Rotation or {}
+  return {
+    TransformX = PersonInfoCommon.RoundEditInteger(Translation and Translation.X),
+    TransformY = PersonInfoCommon.RoundEditInteger(Translation and Translation.Y),
+    TransformZ = PersonInfoCommon.RoundEditInteger(Translation and Translation.Z),
+    TransformPitch = PersonInfoCommon.RoundEditInteger(Rotation.Pitch),
+    TransformYaw = PersonInfoCommon.RoundEditInteger(Rotation.Yaw),
+    TransformRoll = PersonInfoCommon.RoundEditInteger(Rotation.Roll)
+  }
+end
+
+function M:_IsSamePetSlotContent(LeftSlot, RightSlot)
+  local LeftIdentity = self:_GetPetSlotIdentity(LeftSlot)
+  local RightIdentity = self:_GetPetSlotIdentity(RightSlot)
+  if LeftIdentity ~= RightIdentity then
+    return false
+  end
+  if nil == LeftIdentity then
+    return true
+  end
+  return DisplayDraft:IsEquivalent(self:_BuildSlotTransformCompareIdentity(LeftSlot), self:_BuildSlotTransformCompareIdentity(RightSlot)) == true
+end
+
 function M:_BuildChangedPetSlotIndexMap(LeftDraft, RightDraft)
   local AffectedSlotIndices = {}
   local PetSlotCount = DisplayConfig:GetPetSlotCount()
   for SlotIndex = 1, PetSlotCount do
-    local LeftIdentity = self:_GetPetSlotIdentity(DisplayDraft:GetPetSlot(LeftDraft, SlotIndex))
-    local RightIdentity = self:_GetPetSlotIdentity(DisplayDraft:GetPetSlot(RightDraft, SlotIndex))
-    if LeftIdentity ~= RightIdentity then
+    local LeftSlot = LeftDraft and DisplayDraft:GetPetSlot(LeftDraft, SlotIndex) or nil
+    local RightSlot = RightDraft and DisplayDraft:GetPetSlot(RightDraft, SlotIndex) or nil
+    if not self:_IsSamePetSlotContent(LeftSlot, RightSlot) then
       AffectedSlotIndices[SlotIndex] = true
     end
   end
@@ -427,6 +701,28 @@ function M:_CommitPetSlotDraftIfChanged(Draft, AffectedSlotIndices)
   self:RefreshDirtyState()
   self:_ApplyPetSlotIndexMap(AffectedSlotIndices)
   return true
+end
+
+function M:_ApplyCharacterSlotIndexMap(AffectedSlotIndices)
+  if not self.Renderer or not self.Renderer.ApplyCharacterSlot then
+    self:Render()
+    return
+  end
+  local bOccupiedFailed = false
+  for SlotIndex, bAffected in pairs(AffectedSlotIndices or {}) do
+    if true == bAffected and type(SlotIndex) == "number" and SlotIndex > 0 then
+      local bApplied = true == self.Renderer:ApplyCharacterSlot(SlotIndex, self.Draft)
+      if not bApplied then
+        local Slot = DisplayDraft:GetCharacterSlot(self.Draft, SlotIndex)
+        if DisplayDraft:IsCharacterSlotOccupied(Slot) then
+          bOccupiedFailed = true
+        end
+      end
+    end
+  end
+  if bOccupiedFailed then
+    self:Render()
+  end
 end
 
 function M:_ApplyPetSlotIndexMap(AffectedSlotIndices)
@@ -456,6 +752,9 @@ function M:_ApplyChangedPetSlots(PreviousDraft, NextDraft)
 end
 
 function M:SetPetTransform(SlotIndex, Transform, TransformRotation)
+  if self:_TryKeepIntegerTransform("Pet", SlotIndex, Transform, TransformRotation) then
+    return false
+  end
   if self.ActivePreviewTransaction and self.ActivePreviewTransaction.Active then
     return self:_ApplyPetTransformPreview(SlotIndex, Transform, TransformRotation)
   end
@@ -516,13 +815,25 @@ function M:_GetItemSlotIdentity(Slot)
   return ItemData.ItemId or ItemData.Id
 end
 
+function M:_IsSameItemSlotContent(LeftSlot, RightSlot)
+  local LeftIdentity = self:_GetItemSlotIdentity(LeftSlot)
+  local RightIdentity = self:_GetItemSlotIdentity(RightSlot)
+  if LeftIdentity ~= RightIdentity then
+    return false
+  end
+  if nil == LeftIdentity then
+    return true
+  end
+  return DisplayDraft:IsEquivalent(self:_BuildSlotTransformCompareIdentity(LeftSlot), self:_BuildSlotTransformCompareIdentity(RightSlot)) == true
+end
+
 function M:_BuildChangedItemSlotIndexMap(LeftDraft, RightDraft)
   local AffectedItemSlotIndices = {}
   local ItemSlotCount = DisplayConfig:GetItemSlotCount()
   for SlotIndex = 1, ItemSlotCount do
-    local LeftIdentity = self:_GetItemSlotIdentity(DisplayDraft:GetItemSlot(LeftDraft, SlotIndex))
-    local RightIdentity = self:_GetItemSlotIdentity(DisplayDraft:GetItemSlot(RightDraft, SlotIndex))
-    if LeftIdentity ~= RightIdentity then
+    local LeftSlot = LeftDraft and DisplayDraft:GetItemSlot(LeftDraft, SlotIndex) or nil
+    local RightSlot = RightDraft and DisplayDraft:GetItemSlot(RightDraft, SlotIndex) or nil
+    if not self:_IsSameItemSlotContent(LeftSlot, RightSlot) then
       AffectedItemSlotIndices[SlotIndex] = true
     end
   end
@@ -581,6 +892,9 @@ function M:SetItemTransform(SlotIndex, Transform, TransformRotation)
   local Draft = self:_CloneDraft(self.Draft)
   local Slot = DisplayDraft:GetItemSlot(Draft, SlotIndex)
   if not DisplayDraft:IsItemSlotOccupied(Slot) then
+    return false
+  end
+  if self:_TryKeepIntegerTransform("Item", SlotIndex, Transform, TransformRotation) then
     return false
   end
   Slot.Transform = Transform
@@ -909,7 +1223,11 @@ function M:MoveCameraLocalRotation(PitchDelta, YawDelta, RollDelta, LimitConfig)
 end
 
 function M:PrepareDraftForSave()
-  return self:_CloneDraft(self.Draft)
+  local SaveDraft = self:_CloneDraft(self.Draft)
+  local Avatar = GWorld and GWorld.GetAvatar and GWorld:GetAvatar() or nil
+  local OwnedPets = Avatar and Avatar.Pets or nil
+  DisplayRules:DropUnownedPetSlots(SaveDraft, OwnedPets)
+  return SaveDraft
 end
 
 function M:ExportSaveData()
@@ -1178,6 +1496,15 @@ function M:_ApplyDraftByHistoryOperation(Operation)
     end
     return
   elseif "StickerSwitch" == OperationType or "StickerRemove" == OperationType or "StickerTransform" == OperationType then
+    return
+  elseif "PetSlotChange" == OperationType then
+    self:_ApplyPetSlotIndexMap(Operation and Operation.AffectedSlotIndices or nil)
+    return
+  elseif "ItemChoose" == OperationType then
+    self:_ApplyItemSlotIndexMap(Operation and Operation.AffectedItemSlotIndices or nil)
+    return
+  elseif "CharacterChooseCommit" == OperationType then
+    self:_ApplyCharacterSlotIndexMap(Operation and Operation.AffectedSlotIndices or nil)
     return
   end
   self:Render()

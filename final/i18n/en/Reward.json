@@ -17176,7 +17176,7 @@
         "id": 1004103,
         "t": "Resource",
         "c": 10,
-        "n": "Thought: Rhythm: Flamewrought"
+        "n": "Thought: [Rhythm: Flamewrought]"
       }
     ]
   },
@@ -17188,7 +17188,7 @@
         "id": 1004103,
         "t": "Resource",
         "c": 1,
-        "n": "Thought: Rhythm: Flamewrought"
+        "n": "Thought: [Rhythm: Flamewrought]"
       },
       {
         "id": 1002,
@@ -35454,7 +35454,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 4,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 214,
@@ -35496,7 +35496,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 4,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 214,
@@ -35538,7 +35538,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 4,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 214,
@@ -35580,7 +35580,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 4,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 214,
@@ -35622,7 +35622,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 4,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 214,
@@ -37740,7 +37740,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 7,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 214,
@@ -37776,7 +37776,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 7,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 214,
@@ -37800,7 +37800,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 4,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 214,
@@ -37818,7 +37818,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 4,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 214,
@@ -102436,6 +102436,18 @@
     ]
   },
   {
+    "id": 360015,
+    "m": "Fixed",
+    "child": [
+      {
+        "id": 120007,
+        "t": "Resource",
+        "c": 1,
+        "n": "Towards the Dawn Coupon"
+      }
+    ]
+  },
+  {
     "id": 370001,
     "m": "Fixed",
     "child": [
@@ -105316,21 +105328,21 @@
         "t": "Walnut",
         "c": 3,
         "p": 10000,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 1028,
         "t": "Walnut",
         "c": 1,
         "p": 8000,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 1028,
         "t": "Walnut",
         "c": 1,
         "p": 2000,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 10102,
@@ -122099,7 +122111,7 @@
         "id": 120008,
         "t": "Resource",
         "c": 1,
-        "n": "碧霄吟代金券"
+        "n": "Verdant Finale Coupon"
       },
       {
         "id": 101,
@@ -122675,7 +122687,7 @@
         "id": 30180,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "盛典·1"
+        "n": "Gala Ⅰ"
       }
     ]
   },

@@ -124,6 +124,18 @@ return {
             startPort = "Out",
             endQuest = "17870345838954481547",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17872280407927899427",
+            startPort = "Out",
+            endQuest = "17917820677973423987",
+            endPort = "In"
+          },
+          {
+            startQuest = "17872282021667900956",
+            startPort = "Out",
+            endQuest = "17917825538703424498",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -326,6 +338,28 @@ return {
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
+            }
+          },
+          ["17917820677973423987"] = {
+            key = "17917820677973423987",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1894.0620490620488, y = 145.935064935065},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17917825538703424498"] = {
+            key = "17917825538703424498",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2450.7287157287155, y = 143.71284271284284},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

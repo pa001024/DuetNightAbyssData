@@ -21,6 +21,9 @@ function M:OnListItemObjectSet(ListItemObject)
   self:_BindTitleEvents()
   self:_InitFilterSlider()
   self:RefreshEntry()
+  if not self.bSliderExpanded then
+    self:_PlayTitleNormal()
+  end
 end
 
 function M:BP_OnEntryReleased()
@@ -139,6 +142,7 @@ function M:PrepareEntryIn()
 end
 
 function M:OnClickFilterButton()
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/click_crystal_btn_content", nil, nil)
   if not self.bSliderExpanded and self.Click then
     self:PlayAnimation(self.Click)
   end

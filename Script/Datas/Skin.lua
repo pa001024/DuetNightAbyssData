@@ -3823,7 +3823,7 @@ return ReadOnly("Skin", {
     CommonSkinSettingId = 3202,
     Des = "UI_Skin_Des_0161",
     ExcludeCollect = true,
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police.T_Pack_Police'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police_Kami.T_Pack_Police_Kami'",
     LongIcon = "/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_Nvzhu_TP08",
     NpcSkinModelId = 32020161,
     Rarity = 5,

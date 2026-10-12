@@ -469,11 +469,14 @@ function M:AlignHeaderColumnWidth()
   if not self.HeaderColumns then
     return
   end
+  if not self._bRankingShown then
+    return
+  end
   if self.ForceLayoutPrepass then
     self:ForceLayoutPrepass()
   end
   local RefWidths = self:GetRefColumnWidths()
-  if not RefWidths then
+  if not self:IsValidHeaderColumnWidths(RefWidths) then
     return
   end
   self.HeaderColumnWidths = RefWidths
@@ -489,7 +492,25 @@ function M:AlignHeaderColumnWidth()
   end
 end
 
+function M:IsValidHeaderColumnWidths(RefWidths)
+  if type(RefWidths) ~= "table" then
+    return false
+  end
+  if #self.HeaderColumns ~= #RefWidths then
+    return false
+  end
+  for _, Width in ipairs(RefWidths) do
+    if type(Width) ~= "number" or Width <= 0 then
+      return false
+    end
+  end
+  return true
+end
+
 function M:SetHeaderColumnWidth(ColumnWidget, Width)
+  if not ColumnWidget or type(Width) ~= "number" or Width <= 0 then
+    return
+  end
   local RootWidget = ColumnWidget.WidgetTree and ColumnWidget.WidgetTree.RootWidget
   if RootWidget and RootWidget.SetWidthOverride then
     RootWidget:SetWidthOverride(Width)
@@ -510,8 +531,11 @@ function M:GetRefColumnWidths()
   for i = 0, ChildCount - 1 do
     local Child = RefWidget.HBox_Info:GetChildAt(i)
     if Child then
-      Widths[i + 1] = Child:GetDesiredSize().X
+      Widths[#Widths + 1] = Child:GetDesiredSize().X
     end
+  end
+  if #Widths < 1 then
+    return nil
   end
   return Widths
 end
@@ -720,6 +744,7 @@ end
 function M:MarkRankingListScrollReady()
   self.bRankingListScrollReady = true
   self:FlushPendingMyselfScroll()
+  self:AlignHeaderColumnWidth()
 end
 
 function M:FlushPendingMyselfScroll()

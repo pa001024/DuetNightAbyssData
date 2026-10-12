@@ -1275,8 +1275,8 @@ return ReadOnly("EventTab", {
   },
   [146] = {
     EventId = {10302104},
-    EventTabBg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_LimitedPrizePool_Doll.T_Activity_Tab_Head_LimitedPrizePool_Doll'",
-    EventTabIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_LimitedPrizePool_Doll.T_Activity_Tab_Sign_LimitedPrizePool_Doll'",
+    EventTabBg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_LimitedPrizePool_Halloween.T_Activity_Tab_Head_LimitedPrizePool_Halloween'",
+    EventTabIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_LimitedPrizePool_Halloween.T_Activity_Tab_Sign_LimitedPrizePool_Halloween'",
     EventTabId = 146,
     EventTabName = "Event_Title_10302104",
     ReddotNode = "Acti_LimitedPrize_10302104",

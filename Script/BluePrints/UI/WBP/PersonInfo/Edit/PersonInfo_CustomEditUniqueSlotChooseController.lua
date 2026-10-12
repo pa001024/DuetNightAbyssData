@@ -128,8 +128,8 @@ function M:_ConfirmUniqueSlotChoosePage(Mode)
   if not CanConfirm or true ~= CanConfirm(self) then
     return false
   end
-  if self.DisplayEditor.IsPreviewTransactionActive and self.DisplayEditor:IsPreviewTransactionActive(Config.TransactionKey) and self.DisplayEditor.AcceptPreviewTransaction then
-    self.DisplayEditor:AcceptPreviewTransaction()
+  if self.DisplayEditor.IsPreviewTransactionActive and self.DisplayEditor:IsPreviewTransactionActive(Config.TransactionKey) and self.DisplayEditor.CommitSlotChoosePreviewTransaction then
+    self.DisplayEditor:CommitSlotChoosePreviewTransaction()
   end
   self[Config.SkipCancelField] = true
   self[Config.BaseDraftField] = nil

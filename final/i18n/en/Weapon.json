@@ -1238,7 +1238,7 @@
             "id": 10199001,
             "名称": "Endless – Ponder",
             "icon": "",
-            "描述": "Dealing damage with this weapon grants 1.0 Calamity. Calamity is capped at 150.0.\nWhen Calamity reaches its cap, all Calamity is consumed to grant 1 stack of [Inquiry]: Skill Speed +10.0% for 9.0s, up to 6.0 stacks."
+            "描述": "Dealing damage with this weapon grants 1.0 Calamity. Calamity is capped at 100.\nWhen Calamity reaches its cap, all Calamity is consumed to grant 1 stack of [Inquiry]: Skill Speed +10.0% for 15.0s, up to 6.0 stacks."
           }
         ]
       },
@@ -1255,7 +1255,7 @@
             "id": 10199002,
             "名称": "Endless – Desire",
             "icon": "",
-            "描述": "When consuming [Disruption], gains 12.0 Calamity for each stack consumed.",
+            "描述": "When consuming [Disruption], gains [12.0 × Skill Speed] Calamity for each stack consumed.",
             "解锁": {
               "Prototype: Endless Enigma": 30,
               "Electro Crystal": 90,
@@ -1340,7 +1340,7 @@
             "id": 10199006,
             "名称": "Endless – Answer",
             "icon": "",
-            "描述": "While under [Inquiry], if Skill Speed exceeds 220.0%, Skill DMG +90.0%.",
+            "描述": "While [Inquiry] is active and Skill Speed exceeds 220.0%, Skill DMG +90.0%.",
             "解锁": {
               "Prototype: Endless Enigma": 30,
               "Electro Crystal": 90,
@@ -1354,7 +1354,7 @@
             "id": 10199007,
             "名称": "Enigma – Attest",
             "icon": "",
-            "描述": "While under [Inquiry], if Skill Speed exceeds 2.2, Skill DMG PEN +30.0%.",
+            "描述": "While [Inquiry] is active and Skill Speed exceeds 2.2, Skill DMG ignores 30.0% of the target's DEF.",
             "解锁": {
               "Prototype: Endless Enigma": 30,
               "Electro Crystal": 90,
@@ -1426,7 +1426,7 @@
             "id": 10199010,
             "名称": "Endless – Truth",
             "icon": "",
-            "描述": "Additional Skill DMG of own element +50.0%.\nWhen [Inquiry] reaches max stacks: Dealing Skill DMG also deals 3500.0% Calamity DMG to enemies within 3.0m of the target. This counts as Skill DMG and increases by [Skill Intensity × Skill Speed − 100]%. This effect can trigger at most once every 1.0s.",
+            "描述": "Additional Skill DMG of the character's element +50.0%.\nAt maximum [Inquiry] stacks, dealing Skill DMG also deals 3500.0% Calamity DMG to enemies within 3.0m of the target. This damage counts as Skill DMG, with its DMG bonus calculated as [Skill Speed - 100%]. This effect can trigger once every 1.0 seconds.",
             "加成": {
               "技能追伤": 0.5
             }
@@ -13112,7 +13112,7 @@
       }
     ],
     "熔炼": [
-      "ATK Speed +#1. Arrows fired during Charged Attack Stage 3 deal 100.0% more damage and grant +#2 Explosion Range for 5.0s.",
+      "ATK Speed +#1. Arrows fired during Charged Attack Stage 3 grant +#2 Explosion Range for 5.0s.",
       [
         "25.0%",
         "30.0%",

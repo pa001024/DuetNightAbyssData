@@ -14615,21 +14615,21 @@
     "name": "Attrape-rêves lunaire – Bleu indigo",
     "icon": "T_Resource_Gesture_SPLise01",
     "rarity": 6,
-    "desc": "在月亮的肩头，捕获群星的梦境。"
+    "desc": "Sur l’épaule de la lune, capturez les rêves des étoiles."
   },
   {
     "id": 41073,
     "name": "Attrape-rêves lunaire – Rouille",
     "icon": "T_Resource_Gesture_SPLise02",
     "rarity": 6,
-    "desc": "在月亮的肩头，捕获群星的梦境。"
+    "desc": "Sur l’épaule de la lune, capturez les rêves des étoiles."
   },
   {
     "id": 41074,
     "name": "Attrape-rêves lunaire – Jade noir",
     "icon": "T_Resource_Gesture_SPLise03",
     "rarity": 6,
-    "desc": "在月亮的肩头，捕获群星的梦境。"
+    "desc": "Sur l’épaule de la lune, capturez les rêves des étoiles."
   },
   {
     "id": 41075,
@@ -14670,17 +14670,17 @@
   },
   {
     "id": 49983,
-    "name": "RESOURCE_NAME_49983",
-    "icon": "T_Mounts_Gesture_0603",
+    "name": "Trône de contemplation – Gris plomb",
+    "icon": "T_Mounts_Gesture_0602",
     "rarity": 4,
-    "desc": "RESOURCE_DESC_49983"
+    "desc": "J’ai entendu les appels de la loyauté et vu les étoiles se consumer."
   },
   {
     "id": 49984,
-    "name": "RESOURCE_NAME_49984",
-    "icon": "T_Mounts_Gesture_0603",
+    "name": "Trône de contemplation – Blanc ivoire",
+    "icon": "T_Mounts_Gesture_0604",
     "rarity": 4,
-    "desc": "RESOURCE_DESC_49984"
+    "desc": "J’ai entendu les appels de la loyauté et vu les étoiles se consumer."
   },
   {
     "id": 49985,
@@ -15327,7 +15327,7 @@
     "name": "Coffret de sélection d’apparence – Gardien II",
     "icon": "T_Pack_Police02",
     "rarity": 5,
-    "desc": "使用后可从贝蕾妮卡，芙罗拉，丽蓓卡，希尔妲，法露茜，海尔法，止流，赛琪中自选一套角色形象。",
+    "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Flora, Rebecca, Hilda, Falsi, Vulcera, Zhiliu ou Psyche.",
     "select": 5011
   },
   {
@@ -15381,10 +15381,10 @@
   },
   {
     "id": 120008,
-    "name": "碧霄吟代金券",
+    "name": "Bon de Chant du Firmament",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
-    "desc": "商品满1280月石晶胚减300月石晶胚"
+    "desc": "Réduction de 300 Gemmes de Phoxène pour tout achat d’au moins 1 280 Gemmes de Phoxène"
   },
   {
     "id": 1001101,
@@ -15972,7 +15972,7 @@
   },
   {
     "id": 1024102,
-    "name": "RESOURCE_NAME_1024102",
+    "name": "Pensée condensée : Zhiliu",
     "icon": "T_CharPiece_Zhiliu01",
     "rarity": 5,
     "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
@@ -15980,7 +15980,7 @@
   },
   {
     "id": 1024201,
-    "name": "RESOURCE_NAME_1024201",
+    "name": "Pensée condensée : Yuming",
     "icon": "T_CharPiece_Yuming01",
     "rarity": 5,
     "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",

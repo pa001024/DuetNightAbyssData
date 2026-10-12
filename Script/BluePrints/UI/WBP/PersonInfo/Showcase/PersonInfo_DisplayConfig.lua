@@ -41,6 +41,31 @@ local function HasVector3(RawValue)
   return type(RawValue) == "table" and nil ~= RawValue[1] and nil ~= RawValue[2] and nil ~= RawValue[3]
 end
 
+local function AddVector3(Left, Right)
+  local Result
+  if HasVector3(Left) then
+    Result = {
+      Left[1] or 0,
+      Left[2] or 0,
+      Left[3] or 0
+    }
+  end
+  if HasVector3(Right) then
+    if Result then
+      Result[1] = Result[1] + (Right[1] or 0)
+      Result[2] = Result[2] + (Right[2] or 0)
+      Result[3] = Result[3] + (Right[3] or 0)
+    else
+      Result = {
+        Right[1] or 0,
+        Right[2] or 0,
+        Right[3] or 0
+      }
+    end
+  end
+  return Result
+end
+
 local function GetCustomItemConfig(ItemData)
   if type(ItemData) ~= "table" then
     return nil
@@ -242,17 +267,8 @@ end
 function M:GetDefaultItemTransform(SlotIndex, ItemData)
   local PointConfig = GetPointConfig(ITEM_GROUP_ID, SlotIndex or 1)
   local ItemConfig = GetCustomItemConfig(ItemData)
-  local Position, Rotation
-  if ItemConfig and HasVector3(ItemConfig.DefaultLocation) then
-    Position = ItemConfig.DefaultLocation
-  elseif PointConfig then
-    Position = PointConfig.OffsetPosition
-  end
-  if ItemConfig and HasVector3(ItemConfig.DefaultRotation) then
-    Rotation = ItemConfig.DefaultRotation
-  elseif PointConfig then
-    Rotation = PointConfig.OffsetRotation
-  end
+  local Position = AddVector3(PointConfig and PointConfig.OffsetPosition or nil, ItemConfig and ItemConfig.DefaultLocation or nil)
+  local Rotation = AddVector3(PointConfig and PointConfig.OffsetRotation or nil, ItemConfig and ItemConfig.DefaultRotation or nil)
   Position = Position or {}
   Rotation = Rotation or {}
   local ScaleValue = ResolvePositiveScale(ItemConfig and ItemConfig.Scale or nil)

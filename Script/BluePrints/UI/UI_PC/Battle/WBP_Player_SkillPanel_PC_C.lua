@@ -654,7 +654,7 @@ end
 
 function WBP_Player_SkillPanel_PC_C:RefreshWeaponIcon()
   local RangedWeapon, WeaponId
-  if -1 ~= self.OwnerPlayer.BuffManager.UseSummonWeapon then
+  if -1 ~= self.OwnerPlayer.BuffManager.UseSummonWeapon and IsValid(self.OwnerPlayer.UltraWeapon) then
     WeaponId = self.OwnerPlayer.UltraWeapon.WeaponId
     local WeaponTags = DataMgr.BattleWeapon[WeaponId].WeaponTag
     if CommonUtils.HasValue(WeaponTags, "Ranged") then
@@ -1049,7 +1049,7 @@ end
 
 function WBP_Player_SkillPanel_PC_C:OnWeaponBulletNotEnough()
   local RangedWeapon
-  if -1 ~= self.OwnerPlayer.BuffManager.UseSummonWeapon then
+  if -1 ~= self.OwnerPlayer.BuffManager.UseSummonWeapon and IsValid(self.OwnerPlayer.UltraWeapon) then
     local WeaponId = self.OwnerPlayer.UltraWeapon.WeaponId
     local WeaponTags = DataMgr.BattleWeapon[WeaponId].WeaponTag
     if CommonUtils.HasValue(WeaponTags, "Ranged") then

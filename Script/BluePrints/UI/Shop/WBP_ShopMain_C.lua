@@ -538,7 +538,7 @@ function M:UpdateRightCornerBySubTab(SubTabData)
   if not self.WS_RightCorner then
     return
   end
-  local bIsQuickAddTab = SubTabData and SubTabData.SubTabId == 1601
+  local bIsQuickAddTab = SubTabData and SubTabData.SubTabId == 1601 and ShopUtils:IsShoppingCartAvailable()
   if bIsQuickAddTab then
     self:SwitchGamepadXToShopCart()
     self.WS_RightCorner:SetActiveWidgetIndex(1)
@@ -591,6 +591,9 @@ function M:RefreshQuickAddToggleState()
 end
 
 function M:OnClickShopCart()
+  if not ShopUtils:IsShoppingCartAvailable() then
+    return
+  end
   if ShopUtils:IsShoppingCartPending() then
     return
   end
@@ -621,6 +624,9 @@ function M:PlayShoppingCartAddEffect(SourceWidget)
 end
 
 function M:OnClickQuickAdd()
+  if not ShopUtils:IsShoppingCartAvailable() then
+    return
+  end
   if ShopUtils:IsShoppingCartPending() then
     return
   end

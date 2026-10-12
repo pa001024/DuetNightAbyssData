@@ -63,6 +63,31 @@ function Component:RefreshWuyoushengNewLevelReddot()
   if not CacheDetail then
     return
   end
+  local OpenEventIds = {}
+  for _, EventId in ipairs(ActivityUtils.GetWuyoushengEventIds()) do
+    local PageConfigData = DataMgr.EventPortal[EventId]
+    local bLocked = PageConfigData and ActivityUtils.CheckIsActivityLock(PageConfigData)
+    if not bLocked and ActivityUtils.CheckEventIsOpen(EventId, nil, false, nil) then
+      table.insert(OpenEventIds, EventId)
+    end
+  end
+  local LastOpenEventIds = {}
+  for IdStr in string.gmatch(tostring(CacheDetail.EventId or ""), "%d+") do
+    LastOpenEventIds[tonumber(IdStr)] = true
+  end
+  local bNewPeriod = false
+  for _, EventId in ipairs(OpenEventIds) do
+    if not LastOpenEventIds[EventId] then
+      bNewPeriod = true
+      break
+    end
+  end
+  if bNewPeriod then
+    for Key in pairs(CacheDetail) do
+      CacheDetail[Key] = nil
+    end
+  end
+  CacheDetail.EventId = table.concat(OpenEventIds, ",")
   for DungeonId, _ in pairs(DataMgr.WuyoushengEventLevel or {}) do
     if true == CacheDetail[DungeonId] then
       CacheDetail[DungeonId] = nil
@@ -90,7 +115,6 @@ function Component:_TryAddWuyoushengNewLevelReddot(EventId)
     return
   end
   if not ActivityUtils.CheckEventIsOpen(EventId, nil, false, nil) then
-    ReddotManager.ClearLeafNodeCount(WuyoushengLevelReddotName, true)
     return
   end
   local CurrentTime = TimeUtils.NowTime()

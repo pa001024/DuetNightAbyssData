@@ -1067,6 +1067,11 @@ function CommonUtils:SetActorTickableWhenPaused(TargetActor, bTickable)
         self:SetActorsTickableWhenPaused(Attaches, bTickable)
       end
     end
+    if TargetActor.CharacterFashion and TargetActor.CharacterFashion.NiagaraGroup1 then
+      for _, _Component in pairs(TargetActor.CharacterFashion.NiagaraGroup1) do
+        URuntimeCommonFunctionLibrary.SetComponentTickableWhenPaused(_Component, bTickable)
+      end
+    end
   end
 end
 

@@ -2667,7 +2667,7 @@
     "id": 32020161,
     "name": "城市守则",
     "desc": "守护安宁。",
-    "icon": "T_Pack_Police",
+    "icon": "T_Pack_Police_Kami",
     "rarity": 5,
     "charId": 3202,
     "release": "1.6"

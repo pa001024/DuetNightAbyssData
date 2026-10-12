@@ -249,10 +249,6 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "FeinaEvent_SimpleDungeonDes_2",
     WildcardClassification = "Story"
   },
-  GRADEUP_4103_06 = {
-    TextMapId = "GRADEUP_4103_06",
-    WildcardClassification = "Story"
-  },
   GuildBoss_TestClear = {
     TextMapId = "GuildBoss_TestClear",
     WildcardClassification = "Story"

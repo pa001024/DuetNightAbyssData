@@ -26,4 +26,9 @@ PersonInfoCommon.DataPageCameraOffset = {
   TickInterval = 0.016
 }
 PersonInfoCommon.OpenPageCameraDelay = 0.2
+
+function PersonInfoCommon.RoundEditInteger(Value)
+  return math.floor((tonumber(Value) or 0) + 0.5)
+end
+
 return PersonInfoCommon

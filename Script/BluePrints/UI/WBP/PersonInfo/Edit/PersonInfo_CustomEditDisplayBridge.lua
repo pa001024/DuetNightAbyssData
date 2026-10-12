@@ -80,7 +80,10 @@ function M:ApplyItemSelection(ItemData)
   end
   local bSuccess = self.DisplayEditor:SetItemToSlot(SlotIndex, ItemData) == true
   if bSuccess and self.RootViewPanel then
-    self.RootViewPanel:RefreshItemSlotItem(SlotIndex)
+    local SlotCount = DisplayConfig:GetItemSlotCount()
+    for RefreshSlotIndex = 1, SlotCount do
+      self.RootViewPanel:RefreshItemSlotItem(RefreshSlotIndex)
+    end
     self.RootViewPanel:RefreshCommonActionState()
   end
   return bSuccess

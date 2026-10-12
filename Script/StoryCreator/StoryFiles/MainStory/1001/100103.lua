@@ -1749,7 +1749,7 @@ return {
       key = "story_1685588427049905",
       type = "StoryNode",
       name = "山崖跑酷",
-      pos = {x = 1596.0087186099354, y = 123.86365150608687},
+      pos = {x = 1596.0087186099354, y = 121.86365150608687},
       propsData = {
         QuestId = 10010305,
         QuestDescriptionComment = "逃离这里",
@@ -1770,7 +1770,7 @@ return {
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
-        SubRegionId = 0,
+        SubRegionId = 100103,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "QuestTrigger10504",

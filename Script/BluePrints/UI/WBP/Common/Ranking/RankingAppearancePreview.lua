@@ -2,7 +2,9 @@ require("UnLua")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local AvatarUtils = require("BluePrints.Client.AvatarUtils")
 local CommonUtils = require("Utils.CommonUtils")
+local DisplayConfig = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayConfig")
 local DisplayDraft = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayDraft")
+local DisplayPersistence = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayPersistence")
 local DisplayTypes = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayTypes")
 local ComRankingUtils = require("BluePrints.UI.WBP.Common.Ranking.ComRankingUtils")
 local M = {}
@@ -626,6 +628,18 @@ local function BuildDraftFromArmoryData(RankAccessoryInfo)
   return BuildDraftFromConvertedCharInfos(CharInfos, WeaponInfos)
 end
 
+local function ApplyRankingDefaultScene(Draft)
+  if type(Draft) ~= "table" then
+    return
+  end
+  if "table" ~= type(Draft.Scene) then
+    Draft.Scene = {}
+  end
+  local SceneId = DisplayConfig:GetDefaultSceneId()
+  Draft.Scene.SceneId = SceneId
+  Draft.Scene.LightParam = DisplayPersistence:BuildSceneInitialLightParam(SceneId)
+end
+
 local function ExtractPreviewPayloadUid(Ret)
   if type(Ret) ~= "table" then
     return nil
@@ -668,6 +682,7 @@ function M:HandlePreviewPayload(Context, Ret, Source)
     DebugPrint(TAG .. " V2 build draft failed")
     return false
   end
+  ApplyRankingDefaultScene(Draft)
   Context.PendingPreviewUid = nil
   Context.PendingPreviewRankInfo = nil
   Context.Scene:Show(Draft)

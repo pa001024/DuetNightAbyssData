@@ -62,6 +62,7 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
   self:SetActorHideTag("login", true)
   self.DisableInputTags = TArray("")
   MiscUtils.InitializeSettings(self)
+  MiscUtils.PreloadNextPassMaterials()
   self:RefreshTeamMemberInfo("ReceiveBeginPlay")
   if self:IsMainPlayer() then
     EventManager:AddEvent(EventID.ChangeRole, self, self.OnChangeRole)
@@ -3189,6 +3190,7 @@ function BP_PlayerCharacter_C:GetBattleExtraInfo()
     AvatarInfo.UltraWeapons = {}
     for _, weapon in pairs(self.UltraWeapons) do
       table.insert(AvatarInfo.UltraWeapons, {
+        WeaponId = weapon.WeaponId,
         Level = weapon:GetAttr("Level"),
         Exp = weapon:GetAttr("Exp")
       })

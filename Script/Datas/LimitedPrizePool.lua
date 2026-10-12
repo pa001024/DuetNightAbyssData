@@ -101,6 +101,7 @@ return ReadOnly("LimitedPrizePool", {
   [10302104] = {
     BigPrizeBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_SelectPrize_Halloween_P.WBP_LimitedPrizePool_SelectPrize_Halloween_P'",
     BigPrizeMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_SelectPrize_Halloween_M.WBP_LimitedPrizePool_SelectPrize_Halloween_M'",
+    BigPrizeSoundEffects = "event:/ui/activity/limit_gift_pool_sub_page_in",
     BigPrizeVideoPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/Activity/Video_LimitedPrizePool_BG03.Video_LimitedPrizePool_BG03'",
     EventId = 10302104,
     ExtraItem = {
@@ -129,6 +130,7 @@ return ReadOnly("LimitedPrizePool", {
     LimitedPrizePoolId = {1009, 1010},
     ProcessBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_Gacha_Halloween_P.WBP_LimitedPrizePool_Gacha_Halloween_P'",
     ProcessMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_Gacha_Halloween_M.WBP_LimitedPrizePool_Gacha_Halloween_M'",
+    ProcessSoundEffects = "event:/ui/activity/limit_gift_pool_gacha_show_lingren",
     ResultBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_GetReward_Halloween_P.WBP_LimitedPrizePool_GetReward_Halloween_P'",
     ResultMobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_GetReward_Halloween_M.WBP_LimitedPrizePool_GetReward_Halloween_M'",
     RoundBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Halloween/WBP_LimitedPrizePool_RewardSwitchTip_Halloween.WBP_LimitedPrizePool_RewardSwitchTip_Halloween'"

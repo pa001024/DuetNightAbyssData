@@ -136,6 +136,7 @@ function M:InitPageController(TabName, OpenContext)
 end
 
 function M:OnDestructPageController()
+  self:_CancelChoosePageCloseAnimation()
   self:_ClearPendingDefaultSelectTimer()
   if self.DisplayEditor and self.DisplayEditor.IsPreviewTransactionActive and self.DisplayEditor:IsPreviewTransactionActive("item_choose") and self.DisplayEditor.CancelPreviewTransaction then
     self.DisplayEditor:CancelPreviewTransaction()
@@ -200,6 +201,9 @@ function M:OnDestructPageController()
   self.CurrentEditUIState = nil
   self.CurrentEditUIStateName = nil
   self.EditUIStateMap = nil
+  if self.RootViewPanel and self.RootViewPanel._CancelPendingSlotListChangeAnimation then
+    self.RootViewPanel:_CancelPendingSlotListChangeAnimation()
+  end
   self.RootViewPanel = nil
   self.OwnerWidget = nil
 end
@@ -393,6 +397,15 @@ function M:_EnsureSelectedCharacterSlotAfterCharacterChange()
     end
     return false
   end
+  if not self:IsCharacterChoosePageActive() then
+    self.SelectedCharacterSlotIndex = nil
+    self.SelectCharIndex = nil
+    self:_SyncFocusedCharacterHighlight()
+    if self.RootViewPanel and self.RootViewPanel.ClearCharacterSlotSelection then
+      self.RootViewPanel:ClearCharacterSlotSelection()
+    end
+    return true
+  end
   local FallbackSlotIndex = self:_FindFirstEmptyCharacterSlotIndex()
   if not FallbackSlotIndex then
     self.SelectedCharacterSlotIndex = nil
@@ -529,19 +542,32 @@ function M:_RefreshAfterHistoryOperation(Operation)
   self:_SyncCurrentEditUIState()
   self:RefreshPreviewCameraRoamState()
   local OperationType = Operation.Type
+  local ExpectedSlotKind = self:GetExpectedSlotKind()
   if "CharacterChooseCommit" == OperationType then
-    self:_EnsureSelectedCharacterFocusAfterHistoryChange()
-    self:_RefreshAffectedCharacterSlotItems(Operation.AffectedSlotIndices)
+    local bRefreshCharacterSlotUi = "Char" == ExpectedSlotKind
+    if bRefreshCharacterSlotUi then
+      self:_EnsureSelectedCharacterFocusAfterHistoryChange()
+      self:_RefreshAffectedCharacterSlotItems(Operation.AffectedSlotIndices)
+    end
     if self:IsChoosePageActive() then
-      self:_RefreshCharacterChooseRootState()
-      self:_RefreshChoosePageEquippedEntryState()
-      if self.ActiveChooseMode == "Weapon" or self.ActiveChooseMode == "Action" then
-        self.ChoosePagePanel:RefreshTitle()
+      if bRefreshCharacterSlotUi then
+        self:_RefreshCharacterChooseRootState()
+        self:_RefreshChoosePageEquippedEntryState()
+        if self.ActiveChooseMode == "Weapon" or self.ActiveChooseMode == "Action" then
+          self.ChoosePagePanel:RefreshTitle()
+        end
+        self.ChoosePagePanel:RefreshBottomKeyInfo()
+        return
       end
-      self.ChoosePagePanel:RefreshBottomKeyInfo()
+      if self.RootViewPanel then
+        self.RootViewPanel:RefreshCommonActionState()
+        self.RootViewPanel:RefreshTitleText()
+      end
       return
     end
-    self:RefreshSelectedCharacterSlotContext()
+    if bRefreshCharacterSlotUi then
+      self:RefreshSelectedCharacterSlotContext()
+    end
     if self.RootViewPanel then
       self.RootViewPanel:RefreshCommonActionState()
       self.RootViewPanel:RefreshTitleText()
@@ -577,19 +603,22 @@ function M:_RefreshAfterHistoryOperation(Operation)
   end
   if "ItemChoose" == OperationType then
     self:_InitSelectedItemSlotIndex()
-    if self.RootViewPanel and self.RootViewPanel.RefreshItemSlotItem then
-      for SlotIndex in pairs(Operation.AffectedItemSlotIndices or {}) do
-        self.RootViewPanel:RefreshItemSlotItem(SlotIndex)
+    local bRefreshItemSlotUi = "Item" == ExpectedSlotKind
+    if bRefreshItemSlotUi then
+      if self.RootViewPanel and self.RootViewPanel.RefreshItemSlotItem then
+        for SlotIndex in pairs(Operation.AffectedItemSlotIndices or {}) do
+          self.RootViewPanel:RefreshItemSlotItem(SlotIndex)
+        end
+        self.RootViewPanel:RefreshItemSlotSelection()
       end
-      self.RootViewPanel:RefreshItemSlotSelection()
-    end
-    if self:IsChoosePageActive() and self.ActiveChooseMode == "Item" then
-      self:_RefreshChoosePageEquippedEntryState()
-      if self.ChoosePagePanel then
-        self.ChoosePagePanel:RefreshTitle()
+      if self:IsChoosePageActive() and self.ActiveChooseMode == "Item" then
+        self:_RefreshChoosePageEquippedEntryState()
+        if self.ChoosePagePanel then
+          self.ChoosePagePanel:RefreshTitle()
+        end
+      else
+        self:RefreshSelectedItemSlotContext()
       end
-    else
-      self:RefreshSelectedItemSlotContext()
     end
     if self.RootViewPanel then
       self.RootViewPanel:RefreshCommonActionState()
@@ -598,35 +627,52 @@ function M:_RefreshAfterHistoryOperation(Operation)
     return
   end
   if "PetSlotChange" == OperationType then
-    local SlotCount = DisplayConfig:GetPetSlotCount()
-    if self.RootViewPanel and self.RootViewPanel.RefreshPetSlotItem then
-      for SlotIndex = 1, SlotCount do
-        self.RootViewPanel:RefreshPetSlotItem(SlotIndex)
-      end
-    else
-      self:_RefreshAffectedPetSlotItems(Operation.AffectedSlotIndices)
+    self:_InitSelectedPetSlotIndex()
+    if "Pet" ~= ExpectedSlotKind and type(self.SelectedPetSlotIndex) == "number" and not self:HasSelectedPet() then
+      self.SelectedPetSlotIndex = nil
     end
-    if self:IsChoosePageActive() and self.ActiveChooseMode == "Pet" then
-      if self.ChoosePagePanel then
-        if self.ChoosePagePanel.RefreshBottomKeyInfo then
-          self.ChoosePagePanel:RefreshBottomKeyInfo()
+    local bRefreshPetSlotUi = "Pet" == ExpectedSlotKind
+    if bRefreshPetSlotUi then
+      local SlotCount = DisplayConfig:GetPetSlotCount()
+      if self.RootViewPanel and self.RootViewPanel.RefreshPetSlotItem then
+        for SlotIndex = 1, SlotCount do
+          self.RootViewPanel:RefreshPetSlotItem(SlotIndex)
         end
-        if self.ChoosePagePanel.RefreshView then
-          self.ChoosePagePanel:RefreshView()
-        end
+      else
+        self:_RefreshAffectedPetSlotItems(Operation.AffectedSlotIndices)
       end
-      if self.RootViewPanel then
-        if self.RootViewPanel.RefreshCommonActionState then
-          self.RootViewPanel:RefreshCommonActionState()
+      if self:IsChoosePageActive() and self.ActiveChooseMode == "Pet" then
+        if self.ChoosePagePanel then
+          if self.ChoosePagePanel.RefreshBottomKeyInfo then
+            self.ChoosePagePanel:RefreshBottomKeyInfo()
+          end
+          if self.ChoosePagePanel.RefreshView then
+            self.ChoosePagePanel:RefreshView()
+          end
         end
-        if self.RootViewPanel.RefreshTitleText then
-          self.RootViewPanel:RefreshTitleText()
+        if self.RootViewPanel then
+          if self.RootViewPanel.RefreshCommonActionState then
+            self.RootViewPanel:RefreshCommonActionState()
+          end
+          if self.RootViewPanel.RefreshTitleText then
+            self.RootViewPanel:RefreshTitleText()
+          end
         end
+        self:_SyncFocusedPetHighlight()
+        return
       end
-      self:_SyncFocusedPetHighlight()
-      return
+      local SelectedPetSlotIndex = self:GetSelectedPetSlotIndex()
+      if type(SelectedPetSlotIndex) == "number" and SelectedPetSlotIndex > 0 and self:HasSelectedPet() then
+        self:_SelectPetSlot(SelectedPetSlotIndex, {
+          OpenHighlight = true,
+          OpenDetail = true,
+          ForceRefresh = true
+        })
+      else
+        self.ActivePetPanelState = "Main"
+        self:RefreshSelectedPetSlotContext()
+      end
     end
-    self:RefreshSelectedPetSlotContext()
     if self.RootViewPanel then
       if self.RootViewPanel.RefreshCommonActionState then
         self.RootViewPanel:RefreshCommonActionState()
@@ -900,10 +946,6 @@ function M:SetActiveMainTab(TabName)
     self:HideStickerEdit()
   end
   self.ActiveTabName = TabName
-  if self.RootViewPanel and self.RootViewPanel.Change and self.RootViewPanel.PlayAnimation then
-    self.RootViewPanel:PlayAnimation(self.RootViewPanel.Change)
-    self.RootViewPanel:PlayAnimation(self.RootViewPanel.Change_List)
-  end
   if "Scene" == TabName then
     self.ActiveSubPageName = "Scene"
     self.ActiveCharacterPanelState = "Main"
@@ -944,13 +986,24 @@ function M:SetActiveMainTab(TabName)
       self.OtherPagePanel:PlayChangeListAnimation()
     end
   end
-  if "Pet" == TabName and self.SelectedPetSlotIndex then
-    local bHasPet = self:HasSelectedPet()
-    self:_SelectPetSlot(self.SelectedPetSlotIndex, {
-      OpenHighlight = bHasPet,
-      OpenDetail = bHasPet,
-      ForceRefresh = true
-    })
+  local ChangeAnimOptions = {}
+  if "Pet" == TabName then
+    if self.SelectedPetSlotIndex then
+      local bHasPet = self:HasSelectedPet()
+      self:_SelectPetSlot(self.SelectedPetSlotIndex, {OpenHighlight = bHasPet, OpenDetail = bHasPet})
+    else
+      ChangeAnimOptions.ClearSlotSelection = true
+    end
+  end
+  if self.RootViewPanel then
+    if self:ShouldShowSlotArea() and self.RootViewPanel.RequestPlaySlotListChangeAnimation then
+      self.RootViewPanel:RequestPlaySlotListChangeAnimation(ChangeAnimOptions)
+    elseif self.RootViewPanel.PlaySlotListChangeAnimation then
+      self.RootViewPanel:PlaySlotListChangeAnimation(ChangeAnimOptions)
+    elseif self.RootViewPanel.Change and self.RootViewPanel.PlayAnimation then
+      self.RootViewPanel:PlayAnimation(self.RootViewPanel.Change)
+      self.RootViewPanel:PlayAnimation(self.RootViewPanel.Change_List)
+    end
   end
   local RootView = self.RootViewPanel or self.OwnerWidget
   if RootView and RootView.ApplyCurrentEditStateGamepadFocus then
@@ -2077,7 +2130,7 @@ function M:OpenCharacterChoosePage()
   self.CharacterChooseBaseDraft = DisplayDraft:Clone(self.DisplayEditor:GetDraft())
   self.PendingCharacterChoosePreview = nil
   self.CharacterChoosePreviewSceneSlotIndex = nil
-  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "PersonInfoChoosePageOpen", nil)
+  self:_PlayChoosePageOpenSound()
   self.ActiveChooseMode = "Character"
   self.ActiveSubPageName = "Choose"
   self.ActiveCharacterPanelState = "Main"
@@ -2096,7 +2149,7 @@ end
 function M:OpenWeaponChoosePage()
   self.WeaponChooseBaseDraft = DisplayDraft:Clone(self.DisplayEditor:GetDraft())
   self.SkipCancelWeaponChooseOnce = false
-  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "PersonInfoChoosePageOpen", nil)
+  self:_PlayChoosePageOpenSound()
   self.ActiveChooseMode = "Weapon"
   self.ActiveSubPageName = "Choose"
   self.ActiveCharacterPanelState = "Detail"
@@ -2117,7 +2170,7 @@ function M:OpenActionChoosePage()
   end
   self.ActionChooseBaseDraft = DisplayDraft:Clone(self.DisplayEditor:GetDraft())
   self.SkipCancelActionChooseOnce = false
-  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "PersonInfoChoosePageOpen", nil)
+  self:_PlayChoosePageOpenSound()
   self.ActiveChooseMode = "Action"
   self.ActiveSubPageName = "Choose"
   self.ActiveCharacterPanelState = "Detail"
@@ -2167,8 +2220,8 @@ function M:_ConfirmCharacterEquipChoosePage(Mode)
   if not CanConfirm or true ~= CanConfirm(self) then
     return false
   end
-  if self.DisplayEditor.IsPreviewTransactionActive and self.DisplayEditor:IsPreviewTransactionActive(Config.TransactionKey) and self.DisplayEditor.AcceptPreviewTransaction then
-    self.DisplayEditor:AcceptPreviewTransaction()
+  if self.DisplayEditor.IsPreviewTransactionActive and self.DisplayEditor:IsPreviewTransactionActive(Config.TransactionKey) and self.DisplayEditor.CommitCharacterEquipChoosePreviewTransaction then
+    self.DisplayEditor:CommitCharacterEquipChoosePreviewTransaction()
   end
   self[Config.SkipCancelField] = true
   self[Config.BaseDraftField] = nil
@@ -2195,7 +2248,7 @@ end
 function M:OpenItemChoosePage()
   self.ItemChooseBaseDraft = DisplayDraft:Clone(self.DisplayEditor:GetDraft())
   self.SkipCancelItemChooseOnce = false
-  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "PersonInfoChoosePageOpen", nil)
+  self:_PlayChoosePageOpenSound()
   self.ActiveChooseMode = "Item"
   self.ActiveSubPageName = "Choose"
   self.ActiveCharacterPanelState = "Main"
@@ -2214,7 +2267,7 @@ function M:OpenPetChoosePage()
   self.PetChooseBaseDraft = DisplayDraft:Clone(self.DisplayEditor:GetDraft())
   self.SkipCancelPetChooseOnce = false
   self:_BeginUniqueSlotChoosePreview("Pet")
-  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "PersonInfoChoosePageOpen", nil)
+  self:_PlayChoosePageOpenSound()
   self.ActiveChooseMode = "Pet"
   self.ActiveSubPageName = "Choose"
   self.ActiveCharacterPanelState = "Main"
@@ -2285,9 +2338,15 @@ function M:_ReallyCloseChoosePageAndReturn()
     self.ActiveSubPageName = "PetMain"
     self.ActiveCharacterPanelState = "Main"
     self.ActivePetPanelState = "Main"
+    if bIsPetChoosePage then
+      self.SelectedPetSlotIndex = self:_ResolvePreferredPetSlotIndex(self.SelectedPetSlotIndex)
+    end
   elseif "Item" == self.ActiveTabName then
     self.ActiveSubPageName = "ItemMain"
     self.ActiveCharacterPanelState = "Main"
+    if bIsItemChoosePage then
+      self:_InitSelectedItemSlotIndex()
+    end
   else
     self.ActiveSubPageName = "CharacterMain"
     self.ActiveCharacterPanelState = "Detail"
@@ -2317,8 +2376,65 @@ function M:_ReallyCloseChoosePageAndReturn()
   end
 end
 
+function M:_PlayChoosePageOpenSound()
+  local SoundObject = self.OwnerWidget or self.RootViewPanel
+  if not IsValid(SoundObject) then
+    return
+  end
+  AudioManager(SoundObject):PlayUISound(SoundObject, "event:/ui/armory/open", "PersonInfoChoosePageOpen", nil)
+end
+
+function M:_StopChoosePageOpenSound()
+  local SoundObject = self.OwnerWidget or self.RootViewPanel
+  if not IsValid(SoundObject) then
+    return
+  end
+  AudioManager(SoundObject):SetEventSoundParam(SoundObject, "PersonInfoChoosePageOpen", {ToEnd = 1})
+end
+
+function M:_CancelChoosePageCloseAnimation()
+  if not self.bChoosePageClosing then
+    return
+  end
+  local ChoosePagePanel = self.ChoosePagePanel
+  if IsValid(ChoosePagePanel) and ChoosePagePanel.List_Out and ChoosePagePanel.UnbindAllFromAnimationFinished then
+    ChoosePagePanel:UnbindAllFromAnimationFinished(ChoosePagePanel.List_Out)
+  end
+  self.bChoosePageClosing = false
+end
+
+function M:_OnChoosePageListOutFinished()
+  if not self.bChoosePageClosing then
+    return
+  end
+  local ChoosePagePanel = self.ChoosePagePanel
+  if IsValid(ChoosePagePanel) and ChoosePagePanel.List_Out and ChoosePagePanel.UnbindAllFromAnimationFinished then
+    ChoosePagePanel:UnbindAllFromAnimationFinished(ChoosePagePanel.List_Out)
+  end
+  self.bChoosePageClosing = false
+  self:_ReallyCloseChoosePageAndReturn()
+  local TipsWidget = ChoosePagePanel and ChoosePagePanel.Pos_Tips or nil
+  if IsValid(TipsWidget) then
+    TipsWidget:SetRenderOpacity(1)
+  end
+end
+
 function M:CloseChoosePageAndReturn()
-  AudioManager(self):SetEventSoundParam(self, "PersonInfoChoosePageOpen", {ToEnd = 1})
+  if self.bChoosePageClosing then
+    return
+  end
+  self:_StopChoosePageOpenSound()
+  local ChoosePagePanel = self.ChoosePagePanel
+  if IsValid(ChoosePagePanel) and ChoosePagePanel.List_Out and ChoosePagePanel.PlayAnimation then
+    self.bChoosePageClosing = true
+    ChoosePagePanel:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    ChoosePagePanel:UnbindAllFromAnimationFinished(ChoosePagePanel.List_Out)
+    ChoosePagePanel:BindToAnimationFinished(ChoosePagePanel.List_Out, function()
+      self:_OnChoosePageListOutFinished()
+    end)
+    ChoosePagePanel:PlayAnimation(ChoosePagePanel.List_Out, 0, 1, UE4.EUMGSequencePlayMode.Forward, 1, false)
+    return
+  end
   self:_ReallyCloseChoosePageAndReturn()
 end
 
@@ -2534,6 +2650,8 @@ function M:_CloseOwnerEditPage()
   if self.bClosingOwnerEditPageByOutAnimation then
     return
   end
+  self:_CancelChoosePageCloseAnimation()
+  self:_StopChoosePageOpenSound()
   AudioManager(self):SetEventSoundParam(self, "PersonInfoCustomEditPageOpen", {ToEnd = 1})
   if self.OwnerWidget.Out then
     self.bClosingOwnerEditPageByOutAnimation = true

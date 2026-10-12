@@ -109585,13 +109585,13 @@
     "quests": [
       {
         "id": 12070101,
-        "name": "前往水仙平原",
-        "desc": "前往水仙平原，开启任务。"
+        "name": "Head to The Asphodel",
+        "desc": "Go to The Asphodel to begin the quest."
       },
       {
         "id": 12070102,
-        "name": "前往水仙平原",
-        "desc": "前往水仙平原，开启任务。",
+        "name": "Head to The Asphodel",
+        "desc": "Go to The Asphodel to begin the quest.",
         "nodes": [
           {
             "id": "17870424523693387",
@@ -109605,13 +109605,13 @@
             "dialogues": [
               {
                 "id": 12070001,
-                "content": "卡米拉，{nickname}的下落有消息了吗？",
+                "content": "Camilla, have you heard anything from {nickname}?",
                 "npc": 260001,
                 "next": 12070002
               },
               {
                 "id": 12070002,
-                "content": "还没有。",
+                "content": "Not yet.",
                 "npc": 260002,
                 "next": 12070003
               },
@@ -109722,8 +109722,8 @@
       },
       {
         "id": 12070103,
-        "name": "前往秘密基地",
-        "desc": "卡米拉建议你听听自己内心的声音，这让你想起了那个许久未曾踏足的地方。也许是时候面对那些回忆了，去“秘密基地”看看吧。",
+        "name": "Head to the secret base",
+        "desc": "Camilla's advice to listen to your heart brought to mind a place you haven't visited in a long time. Perhaps it's time to face those memories. Return to your secret base.",
         "nodes": [
           {
             "id": "17901699603905720256",
@@ -110024,8 +110024,8 @@
     "quests": [
       {
         "id": 12070201,
-        "name": "前去拜访名单上的家庭",
-        "desc": "按照名单的指引，去雾区拜访受害者的家。",
+        "name": "Visit the families on the list",
+        "desc": "Follow the list and visit the victims' families in Mist Aken.",
         "nodes": [
           {
             "id": "17872151228024505401",
@@ -110298,8 +110298,8 @@
       },
       {
         "id": 12070202,
-        "name": "寻找沃伦家的小儿子",
-        "desc": "罗德斯奶奶建议你去拜访沃伦家的小儿子，去他工作的百花车站找找看。",
+        "name": "Find the Warren family's younger son",
+        "desc": "Mrs Rhodes suggested you visit the Warren family's younger son. Look for him at Bloomfield Station, where he works.",
         "nodes": [
           {
             "id": "17872172274671132229",
@@ -110495,8 +110495,8 @@
       },
       {
         "id": 12070203,
-        "name": "前往锻铁厂寻人",
-        "desc": "向马蒂斯打听得知沃伦在地下的锻铁厂工作，去那里找他吧。",
+        "name": "Look for Warren at the ironworks",
+        "desc": "Mathis told you that Warren works at the underground ironworks. Go there to find him.",
         "nodes": [
           {
             "id": "17872194971655638746",
@@ -110881,7 +110881,7 @@
               },
               {
                 "id": 12070205,
-                "content": "They depend on you now. I’m sure Kenny would have wanted you to take care of yourself and be there for them.",
+                "content": "They depend on you now. I'm sure Kenny would have wanted you to take care of yourself and be there for them.",
                 "npc": 260001,
                 "next": 12070206
               },
@@ -110908,8 +110908,8 @@
       },
       {
         "id": 12070204,
-        "name": "返回冰湖城",
-        "desc": "一桩事情解决，现在回到冰湖城，继续拜访名单上剩下的家庭吧。",
+        "name": "Return to Icelake",
+        "desc": "That's one problem solved. Return to Icelake and visit the remaining families on the list.",
         "nodes": [
           {
             "id": "17872280407927899427",
@@ -111121,8 +111121,8 @@
     "quests": [
       {
         "id": 12070301,
-        "name": "去水仙平原休息",
-        "desc": "罗德斯奶奶的一番话让你感慨良多，你决定去水仙平原休息一会儿。",
+        "name": "Take a break at The Asphodel",
+        "desc": "Mrs Rhodes's words have left you with a lot to think about. You've decided to take a short break at The Asphodel.",
         "nodes": [
           {
             "id": "17872804487082878",
@@ -111425,8 +111425,8 @@
       },
       {
         "id": 12070302,
-        "name": "前往百花车站",
-        "desc": "和蕾伊一起前往百花车站，寻找约翰森中校。",
+        "name": "Head to Bloomfield Station",
+        "desc": "Go with Rae to Bloomfield Station to find Lieutenant Colonel Johnson.",
         "nodes": [
           {
             "id": "17872999320374559409",
@@ -111684,8 +111684,8 @@
       },
       {
         "id": 12070303,
-        "name": "追上约翰森中校",
-        "desc": "约翰森中校的作风似乎和蕾伊的描述大不相同，继续跟上去看看情况。",
+        "name": "Catch up with Lieutenant Colonel Johnson",
+        "desc": "Lieutenant Colonel Johnson isn't quite the man Rae described. Keep following him to find out what's going on.",
         "nodes": [
           {
             "id": "17873022663985694729",
@@ -111838,8 +111838,8 @@
       },
       {
         "id": 12070311,
-        "name": "打听约翰森中校的行程",
-        "desc": "接下了名叫蕾伊的少女的委托，帮她寻找约翰森中校。休息完后就出发吧，先去街上打听一下消息。",
+        "name": "Ask about Lieutenant Colonel Johnson's whereabouts",
+        "desc": "You've agreed to help Rae find Lieutenant Colonel Johnson. After a short break, head out and ask around.",
         "nodes": [
           {
             "id": "1790173537327565",
@@ -112011,8 +112011,8 @@
       },
       {
         "id": 12070321,
-        "name": "帮助卡森准尉击退秽兽",
-        "desc": "卡森准尉遭遇了秽兽袭击，去帮助他击退秽兽吧。",
+        "name": "Help Warrant Officer Carson fight off the Filthoids",
+        "desc": "Warrant Officer Carson is under attack from Filthoids. Help him fight them off.",
         "nodes": [
           {
             "id": "1790173744869853",
@@ -112165,8 +112165,8 @@
       },
       {
         "id": 12070331,
-        "name": "回水仙平原找蕾伊",
-        "desc": "打听到了约翰森中校的情报，回水仙平原告知蕾伊。",
+        "name": "Return to Rae at The Asphodel",
+        "desc": "Return to The Asphodel and tell Rae what you've learned about Lieutenant Colonel Johnson.",
         "nodes": [
           {
             "id": "1790174002077241",
@@ -112212,8 +112212,8 @@
     "quests": [
       {
         "id": 12070401,
-        "name": "前往水仙平原",
-        "desc": "蕾伊的行为让你感到隐约的不对劲，去水仙平原向卡米拉询问一下有关蕾伊的事吧。",
+        "name": "Head to The Asphodel",
+        "desc": "Something about Rae doesn't feel right. Go to The Asphodel and ask Camilla about her.",
         "nodes": [
           {
             "id": "17873672142452135",
@@ -112319,8 +112319,8 @@
       },
       {
         "id": 12070402,
-        "name": "进入下水道",
-        "desc": "雾区的小朋友告诉你蕾伊很可能在下水道，进去一探究竟吧。",
+        "name": "Enter the sewers",
+        "desc": "The children in Mist Aken told you that Rae is probably in the sewers. Head into the sewers and look for her.",
         "nodes": [
           {
             "id": "178737953253713548982",
@@ -112382,7 +112382,7 @@
                   120708,
                   120709
                 ],
-                "tips": "推测蕾伊的真实目的"
+                "tips": "Work out what Rae is really up to"
               }
             ]
           },
@@ -112439,15 +112439,15 @@
               {
                 "id": 120701,
                 "qid": 1207,
-                "name": "人偶脸上贴着酷似约翰森中校的肖像画",
-                "desc": "在蕾伊的秘密基地中发现了一个人偶，人偶面部贴着酷似约翰森中校的肖像画。",
+                "name": "A portrait resembling Lieutenant Colonel Johnson has been pasted over the doll's face",
+                "desc": "A doll found in Rae's secret hideout. A portrait bearing a striking resemblance to Lieutenant Colonel Johnson has been pasted over its face.",
                 "icon": "CharIcon"
               },
               {
                 "id": 120702,
                 "qid": 1207,
-                "name": "人偶的身上有大量砍刺痕迹",
-                "desc": "在人偶身上发现了大量砍刺痕迹，从中能够感觉到强烈的恨意。",
+                "name": "The doll is covered in cuts and stab marks",
+                "desc": "The many cuts and stab marks on the doll betray a deep hatred.",
                 "icon": "InformtIcon"
               }
             ]
@@ -112463,15 +112463,15 @@
               {
                 "id": 120704,
                 "qid": 1207,
-                "name": "蕾伊知道姐姐已遭遇不测",
-                "desc": "从日记内容看，蕾伊似乎已经知道姐姐遭遇了不测。",
+                "name": "Rae knows something terrible happened to her older sister",
+                "desc": "The diary suggests Rae already knows that something terrible happened to her older sister.",
                 "icon": "CharIcon"
               },
               {
                 "id": 120705,
                 "qid": 1207,
-                "name": "蕾伊似乎掌握一些有关改造实验的信息",
-                "desc": "日记中的怪物涂鸦与被改造后的布鲁斯形象相似，表明蕾伊可能掌握关于改造实验的信息。",
+                "name": "Rae may know about the augmentation experiments",
+                "desc": "The monster sketched in the diary resembles Blues after his augmentation, suggesting Rae may know about the augmentation experiments.",
                 "icon": "InformtIcon"
               }
             ]
@@ -112487,8 +112487,8 @@
               {
                 "id": 120703,
                 "qid": 1207,
-                "name": "蕾伊在测试火药和毒药的威力",
-                "desc": "蕾伊在老鼠身上测试了火药和毒药的威力，而她真正的目标是某个人。",
+                "name": "Rae has been testing gunpowder and poison",
+                "desc": "Rae has been testing gunpowder and poison on rats. Her intended target is human.",
                 "icon": "InformtIcon"
               }
             ]
@@ -112551,8 +112551,8 @@
       },
       {
         "id": 12070411,
-        "name": "前往蕾伊家拜访",
-        "desc": "在水仙平原得到的情报让你感到不安，你决定前往蕾伊家中拜访，将事情弄清楚。",
+        "name": "Visit Rae's home",
+        "desc": "What you heard at The Asphodel has left you uneasy. Visit Rae's home to find out what's going on.",
         "nodes": [
           {
             "id": "1790176046292520",
@@ -112670,8 +112670,8 @@
     "quests": [
       {
         "id": 12070501,
-        "name": "前往剧院",
-        "desc": "根据你的推测，蕾伊极有可能打算在剧院对约翰森中校动手，你决定前往剧院阻止她。",
+        "name": "Head to the Galea Theatre",
+        "desc": "You think Rae may be going after Lieutenant Colonel Johnson at the theatre. Go there and stop her.",
         "nodes": [
           {
             "id": "178738783664518108068",
@@ -113281,8 +113281,8 @@
       },
       {
         "id": 12070502,
-        "name": "前往下水道小舞台",
-        "desc": "你暂时说服了蕾伊不要动手，现在，和她一起前往下水道小舞台，告诉她关于第六军团的真相。",
+        "name": "Go to the small makeshift stage in the sewers",
+        "desc": "Rae has agreed to back down for now. Go with her to the small stage in the sewers and tell her the truth about the 6th Legion.",
         "nodes": [
           {
             "id": "178738883356719242917",
@@ -113706,8 +113706,8 @@
       },
       {
         "id": 12070503,
-        "name": "送蕾伊回家",
-        "desc": "在你的劝说下，蕾伊终于同意放弃复仇。送她回家休息吧。",
+        "name": "Walk Rae home",
+        "desc": "You've finally talked Rae out of seeking revenge. Walk her home so she can rest.",
         "nodes": [
           {
             "id": "178738943523721508624",
@@ -113874,8 +113874,8 @@
     "quests": [
       {
         "id": 12070601,
-        "name": "前往剧院",
-        "desc": "名单上的下一个名字“帕西法尔”曾是《雪国的孩子》的主演，你猜测他有可能是布鲁斯回忆中的那位朋友。去剧院打听消息确认一下。",
+        "name": "Head to the Galea Theatre",
+        "desc": "Next on the list is Parsifal, who once starred in <I>Children From the Snowfield</>. He may be the friend who appeared in Blues's memories. Ask around at the theatre to find out.",
         "nodes": [
           {
             "id": "178739018299922644013",
@@ -113940,7 +113940,7 @@
             "dialogues": [
               {
                 "id": 12070687,
-                "content": "The tiny fairy flew towards the monstrous creatures, only for its delicate limbs to snap beneath their might.",
+                "content": "The tiny fairy flew towards the monstrous creatures, only for its delicate limbs to snap beneath their might...",
                 "npc": 260028,
                 "next": 12070688
               },
@@ -114063,8 +114063,8 @@
       },
       {
         "id": 12070602,
-        "name": "登上城墙",
-        "desc": "你回想起了曾经与布鲁斯在城墙上畅谈未来的时光。再一次登上城墙，向过去正式告别。",
+        "name": "Head up to the ramparts",
+        "desc": "You remember talking with Blues on the city wall about what the future might hold. Return to the ramparts and lay the past to rest.",
         "nodes": [
           {
             "id": "178739056270024906512",

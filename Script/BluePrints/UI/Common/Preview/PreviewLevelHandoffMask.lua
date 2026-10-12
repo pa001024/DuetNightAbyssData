@@ -6,7 +6,7 @@ function M.Show(WorldContext)
   if not Manager then
     return
   end
-  Manager:ShowCommonBlackScreen({BlackScreenHandle = HandleName})
+  Manager:ShowCommonBlackScreen({BlackScreenHandle = HandleName, OutAnimationPlayTime = 0.3})
 end
 
 function M.Hide(WorldContext)

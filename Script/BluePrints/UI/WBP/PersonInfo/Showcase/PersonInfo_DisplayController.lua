@@ -293,10 +293,42 @@ function M:OnHelperBecomeViewTarget(PC)
     self.OnFirstBecomeViewTarget = nil
     Callback()
   end
+  self:UpdatePreviewAudioListener()
 end
 
 function M:OnHelperEndViewTarget(PC)
   self.IsControlled = false
+  self:RecoverPreviewAudioListener()
+end
+
+function M:UpdatePreviewAudioListener()
+  local Listener
+  if self.PreviewCameraRuntime and self.PreviewCameraRuntime.GetCameraComponent then
+    Listener = self.PreviewCameraRuntime:GetCameraComponent()
+  end
+  if not IsValid(Listener) and IsValid(self.ArmoryHelper) and IsValid(self.ArmoryHelper.Camera) then
+    Listener = self.ArmoryHelper.Camera
+  end
+  if not IsValid(Listener) or not self.ViewUI then
+    return
+  end
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
+  if not IsValid(PlayerController) then
+    return
+  end
+  PlayerController:SetAudioListenerOverride(Listener, Const.ZeroVector, Const.ZeroRotator)
+end
+
+function M:RecoverPreviewAudioListener()
+  if not self.ViewUI then
+    return
+  end
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0)
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
+  if not (IsValid(Player) and IsValid(PlayerController)) or not IsValid(Player.AudioListener) then
+    return
+  end
+  PlayerController:SetAudioListenerOverride(Player.AudioListener, Const.ZeroVector, Const.ZeroRotator)
 end
 
 function M:OnAfterHelperEndViewTarget(NewTarget)
@@ -464,6 +496,7 @@ function M:RebuildEntities(EntitySpecs)
         CharacterHandle:SetTransform(EntitySpec.Transform)
       end
       self:_ApplyCharacterVisualState(CharacterHandle, EntitySpec.Source and EntitySpec.Source.WeaponData or nil, EntitySpec.Anim)
+      CharacterHandle.AppliedDisplayWeaponId = EntitySpec.Source and EntitySpec.Source.WeaponData and EntitySpec.Source.WeaponData.WeaponId or nil
       self.EntityHandles[EntitySpec.Id] = CharacterHandle
       DebugPrint(string.format("PersonInfoDisplayController: RebuildEntities createdChar entityId=%s actor=%s", tostring(EntitySpec.Id), GetObjectNameSafe(CharacterHandle.GetActor and CharacterHandle:GetActor() or nil)))
     end
@@ -790,10 +823,13 @@ function M:_ApplyCharacterVisualState(CharacterHandle, WeaponData, ActionData)
     return
   end
   if bDisplayWeaponReady then
-    self:_ApplyCharacterActionPreview(CharacterHandle, BuildDefaultWeaponPoseActionData(WeaponData))
+    local DefaultActionData = BuildDefaultWeaponPoseActionData(WeaponData)
+    self:_ApplyCharacterActionPreview(CharacterHandle, DefaultActionData)
+    CharacterHandle.AppliedActionIdentity = BuildActionIdentity(DefaultActionData)
     return
   end
   self:_ApplyCharacterActionPreview(CharacterHandle, nil)
+  CharacterHandle.AppliedActionIdentity = nil
 end
 
 function M:ApplyCharacterTransform(SlotIndex, Transform, Draft)
@@ -824,6 +860,42 @@ function M:ApplyPetTransform(SlotIndex, Transform, Draft)
   end
   PetHandle:SetTransform(Transform)
   return true
+end
+
+function M:ApplyCharacterSlot(SlotIndex, Draft)
+  if type(SlotIndex) ~= "number" or SlotIndex <= 0 then
+    return false
+  end
+  if nil ~= Draft then
+    self.SceneDraft = Draft
+  end
+  local Slot = Draft and DisplayDraft:GetCharacterSlot(Draft, SlotIndex) or nil
+  if not DisplayDraft:IsCharacterSlotOccupied(Slot) then
+    return self:RestoreCharacterChooseSlotPreview(SlotIndex, Slot) == true
+  end
+  local CharacterHandle = self:GetCharacterHandleBySlotIndex(SlotIndex)
+  local DraftCharKey = Slot.CharData.Uuid or Slot.CharData.CharId
+  local CurrentCharKey = CharacterHandle and CharacterHandle.CharInfo and (CharacterHandle.CharInfo.Uuid or CharacterHandle.CharInfo.CharId) or nil
+  if CharacterHandle and nil ~= DraftCharKey and DraftCharKey == CurrentCharKey then
+    if Slot.Appearance and self.AppearanceService then
+      self.AppearanceService:ApplyCharacterAppearance(CharacterHandle, Slot.Appearance)
+    end
+    if Slot.Transform then
+      CharacterHandle:SetTransform(Slot.Transform)
+    end
+    local NextActionIdentity = BuildActionIdentity(Slot.Action)
+    local bSameAction = nil == CharacterHandle.AppliedActionIdentity and nil == NextActionIdentity or IsSameActionIdentity(CharacterHandle.AppliedActionIdentity, NextActionIdentity)
+    local NextWeaponId = Slot.WeaponData and Slot.WeaponData.WeaponId or nil
+    local AppliedWeaponId = CharacterHandle.AppliedDisplayWeaponId
+    local bNeedVisualRefresh = not bSameAction or AppliedWeaponId ~= NextWeaponId
+    if bNeedVisualRefresh then
+      self:_ApplyCharacterVisualState(CharacterHandle, Slot.WeaponData, Slot.Action)
+      CharacterHandle.AppliedDisplayWeaponId = NextWeaponId
+    end
+    self:_RefreshFocusedCharacterSlotHighlight(SlotIndex)
+    return true
+  end
+  return self:RestoreCharacterChooseSlotPreview(SlotIndex, Slot) == true
 end
 
 function M:ApplyPetSlot(SlotIndex, Draft)
@@ -957,6 +1029,7 @@ function M:ApplyCharacterWeaponAndAction(SlotIndex, Draft)
   end
   DebugPrint(string.format("PersonInfoDisplayController: ApplyCharacterWeaponAndAction slot=%s actor=%s weaponId=%s actionPose=%s actionMode=%s", tostring(SlotIndex), GetObjectNameSafe(CharacterHandle.GetActor and CharacterHandle:GetActor() or nil), tostring(SlotDraft.WeaponData and SlotDraft.WeaponData.WeaponId or nil), tostring(SlotDraft.Action and SlotDraft.Action.PoseTag or nil), tostring(SlotDraft.Action and SlotDraft.Action.Mode or nil)))
   self:_ApplyCharacterVisualState(CharacterHandle, SlotDraft.WeaponData, SlotDraft.Action)
+  CharacterHandle.AppliedDisplayWeaponId = SlotDraft.WeaponData and SlotDraft.WeaponData.WeaponId or nil
   if self.FocusEntityId == self:_BuildCharacterEntityId(SlotIndex) and self.HighlightComponent then
     self.HighlightComponent:RefreshFocusHighlight(self.FocusEntityId, self.FocusEntityId)
   end
@@ -982,6 +1055,7 @@ function M:FinalizeCharacterWeaponPose(SlotIndex, Draft)
     self.SceneDraft = Draft
   end
   self:_ApplyCharacterVisualState(CharacterHandle, SlotDraft.WeaponData, nil)
+  CharacterHandle.AppliedDisplayWeaponId = SlotDraft.WeaponData and SlotDraft.WeaponData.WeaponId or nil
   return true
 end
 
@@ -1734,6 +1808,7 @@ function M:RestoreCharacterChooseSlotPreview(SlotIndex, SlotDraft)
     CharacterHandle:SetTransform(SlotDraft.Transform)
   end
   self:_ApplyCharacterVisualState(CharacterHandle, SlotDraft.WeaponData, SlotDraft.Action)
+  CharacterHandle.AppliedDisplayWeaponId = SlotDraft.WeaponData and SlotDraft.WeaponData.WeaponId or nil
   self:_RefreshFocusedCharacterSlotHighlight(SlotIndex)
   DebugPrint(string.format("PersonInfoDeleteChar: restore filled success slot=%s entity=%s draftUuid=%s", tostring(SlotIndex), tostring(EntityId), tostring(SlotDraft and SlotDraft.CharData and SlotDraft.CharData.Uuid or nil)))
   return true

@@ -450,6 +450,59 @@ function M:LoadScene(SceneType)
   end
 end
 
+local function FlushPreviewCameraManager(PlayerController)
+  if not IsValid(PlayerController) then
+    return
+  end
+  UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(PlayerController)
+end
+
+local function FlushPreviewCameraWhenUnloaded(WorldLoader, StreamingLevel, PlayerController)
+  local LoadedLevel = IsValid(StreamingLevel) and StreamingLevel.GetLoadedLevel and StreamingLevel:GetLoadedLevel() or nil
+  if not (IsValid(LoadedLevel) and StreamingLevel.OnLevelUnloaded) or not IsValid(WorldLoader) then
+    FlushPreviewCameraManager(PlayerController)
+    return
+  end
+  
+  local function OnPreviewLevelUnloaded()
+    if IsValid(StreamingLevel) and IsValid(WorldLoader) and StreamingLevel.OnLevelUnloaded then
+      StreamingLevel.OnLevelUnloaded:Remove(WorldLoader, OnPreviewLevelUnloaded)
+    end
+    FlushPreviewCameraManager(PlayerController)
+  end
+  
+  StreamingLevel.OnLevelUnloaded:Add(WorldLoader, OnPreviewLevelUnloaded)
+end
+
+function M:RestoreViewTargetToPlayer()
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0)
+  local ViewController = UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
+  local Controller = ViewController or self.ArmoryHelper and UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
+  if ViewController and IsValid(Player) and ViewController:GetViewTarget() ~= Player then
+    ViewController:SetViewTargetWithBlend(Player, 0, UE4.EViewTargetBlendFunction.VTBlend_Linear, 0, false)
+  end
+  FlushPreviewCameraManager(Controller)
+end
+
+function M:ScheduleOpenWorldEnvironmentRecover()
+  if not IsValid(self.ArmoryHelper) then
+    return
+  end
+  self.ArmoryHelper:AddTimer(0.03, function()
+    local EnvironmentManager
+    if IsValid(self.ViewUI) then
+      EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(self.ViewUI, UE4.AEnvironmentManager:StaticClass())
+    end
+    if EnvironmentManager then
+      EnvironmentManager:Refresh(true)
+    end
+    if IsValid(self.ArmoryHelper) then
+      local PlayerController = UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
+      FlushPreviewCameraManager(PlayerController)
+    end
+  end, false, 0, TIMER_NAME_RECOVER_ENVIRONMENT_AFTER_UNLOAD, true)
+end
+
 function M:UnloadScene(bKeepWorldLoaded)
   if self.SceneState == ESceneState.Idle then
     return
@@ -467,16 +520,12 @@ function M:UnloadScene(bKeepWorldLoaded)
     return
   end
   self:DisableEnvirSystem(true)
-  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0)
-  local ViewController = UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
-  local Controller = ViewController or self.ArmoryHelper and UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
-  if not bKeepWorldLoaded then
-    if ViewController and IsValid(Player) and ViewController:GetViewTarget() ~= Player then
-      ViewController:SetViewTargetWithBlend(Player, 0, UE4.EViewTargetBlendFunction.VTBlend_Linear, 0, false)
-    end
-    if Controller then
-      UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(Controller)
-    end
+  if bKeepWorldLoaded then
+    local ViewController = UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
+    local Controller = ViewController or self.ArmoryHelper and UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
+    FlushPreviewCameraWhenUnloaded(WorldLoader, WorldLoader[PreviewLevelName], Controller)
+  else
+    self:RestoreViewTargetToPlayer()
   end
   WorldLoader:UnloadPreviewLevel(PreviewLevelName, bKeepWorldLoaded)
   BindPreviewLevelActor(self, nil)
@@ -488,17 +537,8 @@ function M:UnloadScene(bKeepWorldLoaded)
   end
   self.PreviewRootActor = nil
   self.PreviewLevelName = nil
-  if self.ArmoryHelper then
-    self.ArmoryHelper:AddTimer(0.03, function()
-      local EnvironmentManager = UE4.UGameplayStatics.GetActorOfClass(self.ViewUI, UE4.AEnvironmentManager:StaticClass())
-      if EnvironmentManager then
-        EnvironmentManager:Refresh(true)
-      end
-      local PlayerController = UE4.UGameplayStatics.GetPlayerController(self.ArmoryHelper, 0)
-      if PlayerController then
-        UTalkSequenceFunctionLibrary.UpdatePlayerCameraManager(PlayerController)
-      end
-    end, false, 0, TIMER_NAME_RECOVER_ENVIRONMENT_AFTER_UNLOAD, true)
+  if not bKeepWorldLoaded then
+    self:ScheduleOpenWorldEnvironmentRecover()
   end
 end
 
@@ -721,12 +761,15 @@ function M:ChangeSkyBox(Index)
 end
 
 function M:OnPreviewSceneLoaded()
-  PreviewLevelHandoffMask.Hide(self.ViewUI)
   self:DoDeferredSceneBehavior()
   self:RefreshUIArtNiagara()
   if self.bPendingLightingUpdate then
     self:NotifyHelperUpdateLighting()
   end
+  if IsValid(self.ArmoryHelper) and self.ArmoryHelper.CallBP_OnCameraRotated then
+    self.ArmoryHelper:CallBP_OnCameraRotated()
+  end
+  PreviewLevelHandoffMask.Hide(self.ViewUI)
 end
 
 function M:Dispose()

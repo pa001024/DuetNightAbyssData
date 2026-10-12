@@ -154,6 +154,24 @@ return {
             startPort = "Out",
             endQuest = "178703506374711200767",
             endPort = "Fail"
+          },
+          {
+            startQuest = "178738792599718109208",
+            startPort = "Out",
+            endQuest = "179178478348111408879",
+            endPort = "In"
+          },
+          {
+            startQuest = "178738808937118110691",
+            startPort = "Out",
+            endQuest = "179178481926511409320",
+            endPort = "In"
+          },
+          {
+            startQuest = "178738803476318110081",
+            startPort = "Out",
+            endQuest = "179178498763911409930",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -479,6 +497,44 @@ return {
               bResetCamera = true,
               bForceAsyncLoading = false,
               IsWhite = false
+            }
+          },
+          ["179178478348111408879"] = {
+            key = "179178478348111408879",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2860.7922077922076, y = 474.15584415584425},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["179178481926511409320"] = {
+            key = "179178481926511409320",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3152.6103896103896, y = 472.7922077922078},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {101901},
+              bStoreToServer = true
+            }
+          },
+          ["179178498763911409930"] = {
+            key = "179178498763911409930",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 4003.0649350649346, y = 119.61038961038946},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

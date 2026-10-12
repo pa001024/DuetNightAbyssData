@@ -228,6 +228,7 @@ function Component:OnRegionPointClick(Id, IgnoreCheckSelect)
     self.LevelMap_Convey_Widget_PC.Describe:SetVisibility(ESlateVisibility.Collapsed)
   end
   self.LevelMap_Convey_Widget_PC.Lock:SetVisibility(ESlateVisibility.Collapsed)
+  self.LevelMap_Convey_Widget_PC:ResetPanel()
   self.LevelMap_Convey_Widget_PC:SetFocus()
   self.LevelMap_Convey_Widget_PC.Img_GuidePoint_Icon:SetBrushFromTexture(self.CurrentSelectPoint.Img_Point.Brush.ResourceObject)
   self:OnPanelOpen(2)

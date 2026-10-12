@@ -1,4 +1,19 @@
 require("UnLua")
+local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
+
+local function BuildRoundedTransformEditData(Translation, Rotation)
+  Translation = Translation or {}
+  Rotation = Rotation or {}
+  return {
+    X = PersonInfoCommon.RoundEditInteger(Translation.X),
+    Y = PersonInfoCommon.RoundEditInteger(Translation.Y),
+    Z = PersonInfoCommon.RoundEditInteger(Translation.Z),
+    Pitch = PersonInfoCommon.RoundEditInteger(Rotation.Pitch),
+    Yaw = PersonInfoCommon.RoundEditInteger(Rotation.Yaw),
+    Roll = PersonInfoCommon.RoundEditInteger(Rotation.Roll)
+  }
+end
+
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 M.SliderConfigMap = {
   FrontBack = {
@@ -94,14 +109,7 @@ function M:RefreshSelectedCharacterPanel()
   self:_RefreshHeadIcon(CharCfg)
   self.Text_TitlePosition:SetText(GText("UI_Accessory_Custom_Location"))
   self.Text_TitleRotate:SetText(GText("UI_Opition_ToCharacter"))
-  self.CurrentTransformEditData = {
-    X = ViewData.Translation.X or 0,
-    Y = ViewData.Translation.Y or 0,
-    Z = ViewData.Translation.Z or 0,
-    Pitch = ViewData.Rotation.Pitch or 0,
-    Yaw = ViewData.Rotation.Yaw or 0,
-    Roll = ViewData.Rotation.Roll or 0
-  }
+  self.CurrentTransformEditData = BuildRoundedTransformEditData(ViewData.Translation, ViewData.Rotation)
   self.CurrentTransformSliderRangeMap = ViewData.TransformRange or {}
   self:_RefreshSliderPresentation("FrontBack")
   self:_RefreshSliderPresentation("LeftRight")
@@ -117,14 +125,7 @@ function M:RefreshSelectedPetPanel()
   self.Text_TitlePosition:SetText(GText("UI_Accessory_Custom_Location"))
   self.Text_TitleRotate:SetText(GText("UI_Accessory_Custom_Rotation"))
   local Rotation = ViewData.Rotation or {}
-  self.CurrentTransformEditData = {
-    X = ViewData.Translation.X or 0,
-    Y = ViewData.Translation.Y or 0,
-    Z = ViewData.Translation.Z or 0,
-    Pitch = Rotation.Pitch or 0,
-    Yaw = Rotation.Yaw or 0,
-    Roll = Rotation.Roll or 0
-  }
+  self.CurrentTransformEditData = BuildRoundedTransformEditData(ViewData.Translation, Rotation)
   self.CurrentTransformSliderRangeMap = ViewData.TransformRange or {}
   self:_RefreshSliderPresentation("FrontBack")
   self:_RefreshSliderPresentation("LeftRight")
@@ -139,14 +140,7 @@ function M:RefreshSelectedItemPanel()
   self.Text_TitlePosition:SetText(GText("UI_Accessory_Custom_Location"))
   self.Text_TitleRotate:SetText(GText("UI_Accessory_Custom_Rotation"))
   local Rotation = ViewData.Rotation or {}
-  self.CurrentTransformEditData = {
-    X = ViewData.Translation.X or 0,
-    Y = ViewData.Translation.Y or 0,
-    Z = ViewData.Translation.Z or 0,
-    Pitch = Rotation.Pitch or 0,
-    Yaw = Rotation.Yaw or 0,
-    Roll = Rotation.Roll or 0
-  }
+  self.CurrentTransformEditData = BuildRoundedTransformEditData(ViewData.Translation, Rotation)
   self.CurrentTransformSliderRangeMap = ViewData.TransformRange or {}
   self:_RefreshSliderPresentation("FrontBack")
   self:_RefreshSliderPresentation("LeftRight")
@@ -478,7 +472,8 @@ end
 function M:_ConvertSliderValueToBusinessValue(SliderConfig, SliderValue)
   local MinValue = SliderConfig.Min or 0
   local MaxValue = SliderConfig.Max or 1
-  return MinValue + (MaxValue - MinValue) * (SliderValue or 0)
+  local BusinessValue = MinValue + (MaxValue - MinValue) * (SliderValue or 0)
+  return PersonInfoCommon.RoundEditInteger(BusinessValue)
 end
 
 function M:_ConvertBusinessValueToSliderValue(SliderConfig, BusinessValue)

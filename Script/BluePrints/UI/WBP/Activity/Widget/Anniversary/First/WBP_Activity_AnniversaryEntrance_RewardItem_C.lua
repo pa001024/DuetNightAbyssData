@@ -45,7 +45,7 @@ function M:UpdateRewardList()
   for Index = 1, #RewardData.Id do
     local ResourceData = DataMgr[RewardData.Type[Index]][RewardData.Id[Index]]
     local ItemContent = NewObject(UIUtils.GetCommonItemContentClass())
-    ItemContent.Id = ResourceData.ResourceId
+    ItemContent.Id = ResourceData.ResourceId or ResourceData.HeadId or ResourceData.TitleID
     ItemContent.ItemType = RewardData.Type[Index]
     ItemContent.Rarity = ResourceData.Rarity
     ItemContent.Icon = ResourceData.Icon

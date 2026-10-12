@@ -14,9 +14,9 @@ local function ExportVectorToArray(VectorValue)
     }
   end
   return {
-    VectorValue.X or 0,
-    VectorValue.Y or 0,
-    VectorValue.Z or 0
+    PersonInfoCommon.RoundEditInteger(VectorValue.X),
+    PersonInfoCommon.RoundEditInteger(VectorValue.Y),
+    PersonInfoCommon.RoundEditInteger(VectorValue.Z)
   }
 end
 
@@ -29,9 +29,9 @@ local function ExportRotatorToArray(RotatorValue)
     }
   end
   return {
-    RotatorValue.Roll or 0,
-    RotatorValue.Pitch or 0,
-    RotatorValue.Yaw or 0
+    PersonInfoCommon.RoundEditInteger(RotatorValue.Roll),
+    PersonInfoCommon.RoundEditInteger(RotatorValue.Pitch),
+    PersonInfoCommon.RoundEditInteger(RotatorValue.Yaw)
   }
 end
 
@@ -218,13 +218,12 @@ end
 
 local function ExportPetParamGroup(Draft)
   local PetParamGroup = {}
-  local PackedIndex = 0
-  for _, Slot in ipairs(Draft and Draft.PetSlots or {}) do
+  for SlotIndex, Slot in ipairs(Draft and Draft.PetSlots or {}) do
     local PetData = Slot and Slot.PetData or nil
     if DisplayDraft:IsPetSlotOccupied(Slot) and PetData then
-      PackedIndex = PackedIndex + 1
+      local ExportSlotIndex = Slot.SlotIndex or SlotIndex
       local TransformInfo = ExportTransform(Slot.Transform, Slot.TransformRotation)
-      PetParamGroup[PackedIndex] = {
+      PetParamGroup[ExportSlotIndex] = {
         PetId = PetData.PetId,
         UniqueId = PetData.UniqueId,
         Position = TransformInfo.Position,

@@ -59,6 +59,7 @@ function M:ReceiveEnterState(StackAction)
   if not Page or not Page.bStackCovered then
     return
   end
+  PreviewLevelHandoffMask.Show(self)
   Page.bStackCovered = nil
   if Page.ApplyDisplayPreviewDraft then
     Page:ApplyDisplayPreviewDraft()

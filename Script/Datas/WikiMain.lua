@@ -1639,5 +1639,15 @@ return ReadOnly("WikiMain", {
     EntryTitle = "EntryTitle_409009",
     MainType = 4,
     SubType = 409
+  },
+  [409010] = {
+    AssociatedEntry1 = 201011,
+    AssociatedEntry2 = 201037,
+    AssociatedEntry3 = 405005,
+    AssociatedEntry4 = 409003,
+    EntryId = 409010,
+    EntryTitle = "EntryTitle_409010",
+    MainType = 4,
+    SubType = 409
   }
 })

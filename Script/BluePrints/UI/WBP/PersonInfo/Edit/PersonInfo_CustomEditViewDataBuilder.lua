@@ -945,6 +945,19 @@ function M:ShouldShowSlotArea()
   return self:ShouldShowCharacterSlotArea() or self:ShouldShowItemSlotArea()
 end
 
+function M:GetExpectedSlotKind()
+  if not self:ShouldShowSlotArea() then
+    return nil
+  end
+  if self:ShouldShowItemSlotArea() then
+    return "Item"
+  end
+  if self:IsPetPageActive() then
+    return "Pet"
+  end
+  return "Char"
+end
+
 function M:_ShouldDefaultShowMobileLeftPanel()
   return self:IsMobileCharacterEditToggleAvailable()
 end

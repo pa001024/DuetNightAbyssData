@@ -20,9 +20,8 @@ function Component:HandleAvatarBattleInfo(Callback, AvatarBattleInfos)
     local DungeonInfo = DataMgr.Dungeon[GameMode.DungeonId]
     local PreInitInfo = Info.PlayerInfo and Info.PlayerInfo.PreInitInfo
     if DungeonInfo and DungeonInfo.DungeonType == CommonConst.DungeonType.SoloRaid and PreInitInfo and PreInitInfo.FloorId then
-      GameMode.PreInitInfo = GameMode.PreInitInfo or {}
-      GameMode.PreInitInfo.FloorId = PreInitInfo.FloorId
-      GameMode:SetGameModeLevel(DataMgr.RaidFloor[PreInitInfo.FloorId].MonsterLevel)
+      GameMode.PreInitInfo = CommonUtils.CopyTable(PreInitInfo)
+      GameMode:TriggerDungeonComponentFun("HandlePreInitInfo")
     end
     self:DungeonObjectAddPlayer(AvatarEid)
     self:AddMoreInfoForDungeonObject(Info)

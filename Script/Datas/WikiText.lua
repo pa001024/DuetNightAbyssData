@@ -2316,5 +2316,11 @@ return ReadOnly("WikiText", {
     TextDetail = "WikiText_40900901",
     TextId = 40900901,
     TextUnlock = 40900901
+  },
+  [40901001] = {
+    EntryId = 409010,
+    TextDetail = "WikiText_40901001",
+    TextId = 40901001,
+    TextUnlock = 40901001
   }
 })

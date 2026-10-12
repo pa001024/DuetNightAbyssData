@@ -40,6 +40,7 @@ function M:InitMultiplier(OwnerPlayer)
   self.DragStart = false
   self.SliderAccum = 0
   self.bScopeActive = false
+  self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, true)
   self.DialConfig = Const.Multiplier.DialConfig.Mobile
   self:CreateMultiplierEntries()
   if self.DynamicEntryBox_Multiplier then
@@ -142,7 +143,7 @@ function M:SetScopeActive(bActive)
   self.DragStart = false
   self.SliderPressFrame = nil
   self.SliderAccum = 0
-  self:SetVisibility(self.bScopeActive and UE4.ESlateVisibility.SelfHitTestInvisible or UE4.ESlateVisibility.Collapsed)
+  self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, not self.bScopeActive)
   self:RemoveTimer("UpdateDial")
   if self.bScopeActive then
     self:UpdateDial(true)

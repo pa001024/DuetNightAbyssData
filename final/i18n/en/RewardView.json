@@ -19133,7 +19133,7 @@
         "id": 120008,
         "t": "Resource",
         "c": 1,
-        "n": "碧霄吟代金券"
+        "n": "Verdant Finale Coupon"
       }
     ]
   },
@@ -19227,7 +19227,7 @@
       {
         "id": 30180,
         "t": "HeadSculpture",
-        "n": "盛典·1"
+        "n": "Gala Ⅰ"
       }
     ]
   },
@@ -28826,7 +28826,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 65,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       },
       {
         "id": 2068,
@@ -29041,14 +29041,14 @@
         "n": "Weapon Track-Shift Module"
       },
       {
-        "id": 2013,
+        "id": 2014,
         "t": "Resource",
-        "n": "Combat Melody Ⅲ"
+        "n": "Combat Melody Ⅳ"
       },
       {
-        "id": 2009,
+        "id": 2010,
         "t": "Resource",
-        "n": "Weapon Manual Ⅲ"
+        "n": "Weapon Manual Ⅳ"
       }
     ]
   },
@@ -31671,7 +31671,7 @@
         "id": 1028,
         "t": "Walnut",
         "c": 3,
-        "n": "Secret Letter: Rhythm: Flamewrought"
+        "n": "Secret Letter: [Rhythm: Flamewrought]"
       }
     ]
   },

@@ -1360,7 +1360,18 @@ function M:OpenLockConditionPopup(ShopItemData)
   UIManager(self):ShowCommonPopupUI(100292, Params)
 end
 
+function M:IsShoppingCartAvailable()
+  if CommonUtils.GetDeviceTypeByPlatformName() ~= "PC" then
+    return false
+  end
+  local Channel = UE.UUsdkSettings:GetDefaultObject().Channel
+  return Channel == UE.EHeroUSDKChannel.Mainland or Channel == UE.EHeroUSDKChannel.Overseas or Channel == UE.EHeroUSDKChannel.Hero_TapTap
+end
+
 function M:IsShoppingCartSupported(ShopItemId)
+  if not self:IsShoppingCartAvailable() then
+    return false
+  end
   if not ShopItemId then
     return false
   end

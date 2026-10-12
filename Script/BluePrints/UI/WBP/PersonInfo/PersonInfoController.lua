@@ -377,7 +377,7 @@ function M:OpenGuildWarHistoryRank()
           PreviewLevelHandoffMask.Show(Entry)
           local Service = Page.ActorController and Page.ActorController.SceneService
           if Service and Service.UnloadScene then
-            Service:UnloadScene()
+            Service:UnloadScene(true)
           end
         end
       end

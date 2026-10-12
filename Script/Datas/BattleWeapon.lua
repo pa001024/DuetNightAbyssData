@@ -805,6 +805,7 @@ return ReadOnly("BattleWeapon", {
     ModVolume = 1,
     PassiveEffects = {10199},
     PassiveEffectsDesc = "SKILL_Psionic_DESC",
+    PassiveEffectsWeapon = true,
     ShowWeaponModel = true,
     TriggerProbability = 0.22,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Sword/BP_Sword_01.BP_Sword_01",

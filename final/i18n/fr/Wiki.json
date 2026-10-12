@@ -2478,7 +2478,7 @@
   {
     "id": 4,
     "name": "Civilisations",
-    "count": 106,
+    "count": 107,
     "subTypes": [
       {
         "id": 401,
@@ -4660,6 +4660,23 @@
                 "id": 40900901,
                 "text": "« Toute paix née de la peur finira par périr par la peur. »\nScénario : AYIN / Aura\n \nAfin de retrouver le Catalyseur, élément clé du Projet Nouvel Héritier évoqué dans les dernières paroles d’Avar, {nickname2} se rend dans les Montagnes d’Arcano pour enquêter.\n \nÀ sa grande surprise, {性别2:il|elle} découvre que le village de montagne, pourtant censé avoir été détruit, a été reconstruit en un temps étonnamment court. Plus surprenant encore, les souvenirs qu’{性别2:il|elle} a perdus semblent étroitement liés à Arcano.\n \nDéterminé à lever le voile sur les mystères qui enveloppent le village, {nickname2} se retrouve entraîné dans un jeu mortel... la Parade du Paradis.",
                 "unlock": 40900901
+              }
+            ]
+          },
+          {
+            "id": 409010,
+            "title": "En marche vers l’aube",
+            "related": [
+              201011,
+              201037,
+              405005,
+              409003
+            ],
+            "texts": [
+              {
+                "id": 40901001,
+                "text": "« Oui... Peut-être que continuer à vivre du mieux que l’on peut suffit déjà. »\nScénario : Beryl\nSupervision : WANDOU\n\nAprès la Traque aux Charons, Rhythm quitta la Légion. La perte d’un être cher et l’effondrement de ses convictions lui firent momentanément perdre le cap. Elle ne trouva alors d’autre refuge que de multiplier les petits boulots pour s’engourdir l’esprit, jusqu’au jour où elle découvrit par hasard, dans les affaires personnelles de Blues, la liste d’admission de la VIᵉ Légion de l’époque. \nEn voyant les noms de personnes ayant connu une tragédie semblable à celle de son frère cadet, Rhythm décida de rendre visite à leurs familles et de leur apporter toute l’aide dont elle était capable. \nAu contact de familles de victimes aux parcours variés, elle découvrit la froideur comme la chaleur de l’être humain, et retrouva des haines et des souffrances qui lui semblaient familières. Sans même s’en rendre compte, son propre état d’esprit commença lui aussi à changer...",
+                "unlock": 40901001
               }
             ]
           }

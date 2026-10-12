@@ -10,19 +10,30 @@ function M:InitSoloRaidComponent()
   if Avatar and Avatar.RaidSeasons and Avatar.CurrentRaidSeasonId and Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId] then
     self.HistoryMaxScore = Avatar.RaidSeasons[Avatar.CurrentRaidSeasonId]:GetMaxRaidScore()
   end
-  local PreInitInfo = self.GameMode.PreInitInfo
-  if PreInitInfo and PreInitInfo.FloorId then
-    local FloorId = PreInitInfo.FloorId
-    local RaidFloorConf = DataMgr.RaidFloor[FloorId]
-    if RaidFloorConf then
-      local Level = RaidFloorConf.MonsterLevel
-      self.GameMode:SetGameModeLevel(Level)
-      DebugPrint("SoloRaidComponent:Init FloorId", FloorId, "Level", Level)
-    else
-      DebugPrint("SoloRaidComponent:Init FloorId读表失败", FloorId)
-    end
-  end
+  self:HandlePreInitInfo()
   DebugPrint("SoloRaidComponent:Init!", self.GameMode.DungeonId)
+end
+
+function M:HandlePreInitInfo()
+  if not self.GameMode then
+    self.GameMode = self:GetOwner()
+  end
+  local PreInitInfo = self.GameMode.PreInitInfo
+  if not PreInitInfo then
+    return
+  end
+  if not PreInitInfo.FloorId then
+    return
+  end
+  local FloorId = PreInitInfo.FloorId
+  local RaidFloorConf = DataMgr.RaidFloor[FloorId]
+  if RaidFloorConf then
+    local Level = RaidFloorConf.MonsterLevel
+    self.GameMode:SetGameModeLevel(Level)
+    DebugPrint("SoloRaidComponent:Init FloorId", FloorId, "Level", Level)
+  else
+    DebugPrint("SoloRaidComponent:Init FloorId读表失败", FloorId)
+  end
 end
 
 function M:InitSoloRaidBaseInfo()

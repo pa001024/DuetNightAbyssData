@@ -1591,7 +1591,7 @@
   },
   {
     "id": 1028,
-    "名称": "Secret Letter: Rhythm: Flamewrought",
+    "名称": "Secret Letter: [Rhythm: Flamewrought]",
     "获取途径": [
       "沉浸式戏剧"
     ],
@@ -1600,13 +1600,13 @@
         "id": 1004103,
         "type": "Resource",
         "count": 10,
-        "name": "Thought: Rhythm: Flamewrought"
+        "name": "Thought: [Rhythm: Flamewrought]"
       },
       {
         "id": 1004103,
         "type": "Resource",
         "count": 2,
-        "name": "Thought: Rhythm: Flamewrought"
+        "name": "Thought: [Rhythm: Flamewrought]"
       },
       {
         "id": 30001,

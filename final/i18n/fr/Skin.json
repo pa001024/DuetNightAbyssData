@@ -586,8 +586,8 @@
   },
   {
     "id": 4103,
-    "name": "黎瑟・浴火的衣饰",
-    "desc": "她披着一身干练的红色衣装，如暖阳、如火焰、如灯火般闪耀在寒冷的大地上。",
+    "name": "Tenue de Rhythm – Née des flammes",
+    "desc": "Dans sa tenue rouge, sobre et élégante, elle rayonne sur les terres glacées comme un soleil chaleureux, une flamme ou une lueur.",
     "icon": "T_Head_SpLise",
     "rarity": 5,
     "bust": "T_Bust_SpLise",
@@ -1274,7 +1274,7 @@
       "HeadSculpture": [
         {
           "id": 30191,
-          "name": "逐灯者的肖像·夜行",
+          "name": "Portrait : Chasseuse de lumière – Marche nocturne",
           "num": 1
         }
       ],
@@ -2667,7 +2667,7 @@
     "id": 32020161,
     "name": "Code urbain",
     "desc": "Préserver la paix.",
-    "icon": "T_Pack_Police",
+    "icon": "T_Pack_Police_Kami",
     "rarity": 5,
     "charId": 3202,
     "release": "1.6"

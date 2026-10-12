@@ -14615,21 +14615,21 @@
     "name": "달빛과 드림캐처 사이·다크 블루",
     "icon": "T_Resource_Gesture_SPLise01",
     "rarity": 6,
-    "desc": "在月亮的肩头，捕获群星的梦境。"
+    "desc": "달의 어깨에 올라, 별들의 꿈을 붙잡는다."
   },
   {
     "id": 41073,
     "name": "달빛과 드림캐처 사이·러스트 레드",
     "icon": "T_Resource_Gesture_SPLise02",
     "rarity": 6,
-    "desc": "在月亮的肩头，捕获群星的梦境。"
+    "desc": "달의 어깨에 올라, 별들의 꿈을 붙잡는다."
   },
   {
     "id": 41074,
     "name": "달빛과 드림캐처 사이·제트 블랙",
     "icon": "T_Resource_Gesture_SPLise03",
     "rarity": 6,
-    "desc": "在月亮的肩头，捕获群星的梦境。"
+    "desc": "달의 어깨에 올라, 별들의 꿈을 붙잡는다."
   },
   {
     "id": 41075,
@@ -14670,17 +14670,17 @@
   },
   {
     "id": 49983,
-    "name": "RESOURCE_NAME_49983",
-    "icon": "T_Mounts_Gesture_0603",
+    "name": "사색의 왕좌·그레이",
+    "icon": "T_Mounts_Gesture_0602",
     "rarity": 4,
-    "desc": "RESOURCE_DESC_49983"
+    "desc": "나는 들었다, 그 충성의 외침을. 나는 보았다, 그 불타는 별들을!"
   },
   {
     "id": 49984,
-    "name": "RESOURCE_NAME_49984",
-    "icon": "T_Mounts_Gesture_0603",
+    "name": "사색의 왕좌·아이보리",
+    "icon": "T_Mounts_Gesture_0604",
     "rarity": 4,
-    "desc": "RESOURCE_DESC_49984"
+    "desc": "나는 들었다, 그 충성의 외침을. 나는 보았다, 그 불타는 별들을!"
   },
   {
     "id": 49985,
@@ -15327,7 +15327,7 @@
     "name": "선택 코스튬 패키지·수호 Ⅱ",
     "icon": "T_Pack_Police02",
     "rarity": 5,
-    "desc": "使用后可从贝蕾妮卡，芙罗拉，丽蓓卡，希尔妲，法露茜，海尔法，止流，赛琪中自选一套角色形象。",
+    "desc": "사용 시 베레니카, 플로라, 레베카, 힐다, 펄시, 헬파이어, 지류, 프시케 캐릭터 코스튬 중 1세트를 선택할 수 있다.",
     "select": 5011
   },
   {
@@ -15381,10 +15381,10 @@
   },
   {
     "id": 120008,
-    "name": "碧霄吟代金券",
+    "name": "푸른 하늘의 노래 쿠폰",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
-    "desc": "商品满1280月石晶胚减300月石晶胚"
+    "desc": "월석의 싹x1280 이상 상품 구매 시 월석의 싹x300 할인"
   },
   {
     "id": 1001101,
@@ -15972,7 +15972,7 @@
   },
   {
     "id": 1024102,
-    "name": "RESOURCE_NAME_1024102",
+    "name": "응집된 아이디어·지류",
     "icon": "T_CharPiece_Zhiliu01",
     "rarity": 5,
     "desc": "기억의 모래 속에서 건져낸 온전한 아이디어. 과거 또는 미래에 있는 어떤 이에 대한 기억이 담겨있다.",
@@ -15980,7 +15980,7 @@
   },
   {
     "id": 1024201,
-    "name": "RESOURCE_NAME_1024201",
+    "name": "응집된 아이디어·욱명",
     "icon": "T_CharPiece_Yuming01",
     "rarity": 5,
     "desc": "기억의 모래 속에서 건져낸 온전한 아이디어. 과거 또는 미래에 있는 어떤 이에 대한 기억이 담겨있다.",

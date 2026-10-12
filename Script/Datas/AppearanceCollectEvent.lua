@@ -16,24 +16,11 @@ T.RT_5 = {
   [10] = "CharAccessory",
   [11] = "CharAccessory"
 }
-T.RT_6 = {
-  [1] = "136",
-  [2] = "136",
-  [3] = "136",
-  [4] = "136",
-  [5] = "136",
-  [6] = "136",
-  [7] = "136",
-  [8] = "136",
-  [9] = "136",
-  [10] = "136",
-  [11] = "136"
-}
-T.RT_7 = {10050}
-T.RT_8 = {10134}
-T.RT_9 = {10059}
-T.RT_10 = {10061}
-T.RT_11 = {10060}
+T.RT_6 = {10050}
+T.RT_7 = {10134}
+T.RT_8 = {10059}
+T.RT_9 = {10061}
+T.RT_10 = {10060}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -136,7 +123,7 @@ return ReadOnly("AppearanceCollectEvent", {
       [26] = {10047},
       [27] = {10046},
       [28] = {10048},
-      [29] = T.RT_7,
+      [29] = T.RT_6,
       [30] = {10049},
       [31] = {50004}
     },
@@ -535,7 +522,7 @@ return ReadOnly("AppearanceCollectEvent", {
     AppId = {
       [1] = {30070},
       [2] = {10093},
-      [3] = T.RT_8,
+      [3] = T.RT_7,
       [4] = {40089},
       [5] = T.RT_4
     },
@@ -564,9 +551,9 @@ return ReadOnly("AppearanceCollectEvent", {
     AppId = {
       [1] = {310401},
       [2] = {3010615},
-      [3] = T.RT_9,
-      [4] = T.RT_10,
-      [5] = T.RT_11,
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_10,
       [6] = {13053},
       [7] = {13054},
       [8] = {13055},
@@ -670,7 +657,7 @@ return ReadOnly("AppearanceCollectEvent", {
       [11] = T.RT_2,
       [12] = T.RT_1,
       [13] = T.RT_3,
-      [14] = T.RT_8,
+      [14] = T.RT_7,
       [15] = {10156},
       [16] = {10157},
       [17] = {10158},
@@ -678,11 +665,11 @@ return ReadOnly("AppearanceCollectEvent", {
       [19] = {20104},
       [20] = {20105},
       [21] = {30017},
-      [22] = T.RT_7,
+      [22] = T.RT_6,
       [23] = {30022},
-      [24] = T.RT_9,
+      [24] = T.RT_8,
       [25] = {30024},
-      [26] = T.RT_11,
+      [26] = T.RT_10,
       [27] = {10058},
       [28] = {30023},
       [29] = {40014},
@@ -696,7 +683,7 @@ return ReadOnly("AppearanceCollectEvent", {
       [37] = {30027},
       [38] = {30026},
       [39] = {10056},
-      [40] = T.RT_10,
+      [40] = T.RT_9,
       [41] = {10062},
       [42] = {20042},
       [43] = {20051},
@@ -838,7 +825,19 @@ return ReadOnly("AppearanceCollectEvent", {
     EventId = 10302402,
     Highlight = false,
     IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx45_03.T_Fashion_Fx45_03'",
-    JumpLink = T.RT_6,
+    JumpLink = {
+      [1] = "136",
+      [2] = "136",
+      [3] = "136",
+      [4] = "136",
+      [5] = "136",
+      [6] = "136",
+      [7] = "136",
+      [8] = "136",
+      [9] = "136",
+      [10] = "136",
+      [11] = "136"
+    },
     PointsPerTarget = 1,
     TaskName = "Event_Title_10302103"
   },
@@ -870,20 +869,29 @@ return ReadOnly("AppearanceCollectEvent", {
   },
   [11] = {
     AppId = {
-      [1] = T.RT_3
+      [1] = T.RT_3,
+      [2] = {32020161},
+      [3] = {10148},
+      [4] = {10150}
     },
     AppTarget = {
-      [1] = "CharAccessory"
+      [1] = "CharAccessory",
+      [2] = "Skin",
+      [3] = "CharAccessory",
+      [4] = "CharAccessory"
     },
     EntranceId = 11,
     EventId = 10302403,
     Highlight = true,
-    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Head53.T_Fashion_Head53'",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Pack_Police_Kami.T_Pack_Police_Kami'",
     JumpLink = {
-      [1] = "113"
+      [1] = "155",
+      [2] = "154",
+      [3] = "154",
+      [4] = "154"
     },
     PointsPerTarget = 1,
-    TaskName = "MAIN_UI_AppearanceScore"
+    TaskName = "UI_AppearanceCollectEvent_Task1"
   },
   [12] = {
     AppId = {
@@ -908,9 +916,8 @@ return ReadOnly("AppearanceCollectEvent", {
       [19] = {41072},
       [20] = {41073},
       [21] = {41074},
-      [22] = {31008},
-      [23] = {21020},
-      [24] = {11010}
+      [22] = {21020},
+      [23] = {11010}
     },
     AppTarget = {
       [1] = "Skin",
@@ -935,13 +942,12 @@ return ReadOnly("AppearanceCollectEvent", {
       [20] = "Resource",
       [21] = "Resource",
       [22] = "CharAccessory",
-      [23] = "CharAccessory",
-      [24] = "CharAccessory"
+      [23] = "CharAccessory"
     },
     EntranceId = 12,
     EventId = 10302403,
-    Highlight = false,
-    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back28.T_Fashion_Back28",
+    Highlight = true,
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Cannon_Kugu.T_Head_Cannon_Kugu'",
     JumpLink = {
       [1] = "113",
       [2] = "113",
@@ -965,11 +971,10 @@ return ReadOnly("AppearanceCollectEvent", {
       [20] = "113",
       [21] = "113",
       [22] = "113",
-      [23] = "113",
-      [24] = "113"
+      [23] = "113"
     },
     PointsPerTarget = 1,
-    TaskName = "MAIN_UI_AppearanceScore"
+    TaskName = "SkinGacha_Name_Special_8"
   },
   [13] = {
     AppId = {
@@ -993,7 +998,7 @@ return ReadOnly("AppearanceCollectEvent", {
     EntranceId = 13,
     EventId = 10302403,
     Highlight = true,
-    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Face30_04.T_Fashion_Face30_04'",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Claymore_Yejin.T_Head_Claymore_Yejin'",
     JumpLink = {
       [1] = "Shop_Main",
       [2] = "Shop_Main",
@@ -1004,7 +1009,7 @@ return ReadOnly("AppearanceCollectEvent", {
       [7] = "Shop_Main"
     },
     PointsPerTarget = 1,
-    TaskName = "MAIN_UI_AppearanceScore"
+    TaskName = "UI_AppearanceCollectEvent_Task2"
   },
   [14] = {
     AppId = {
@@ -1024,10 +1029,22 @@ return ReadOnly("AppearanceCollectEvent", {
     EntranceId = 14,
     EventId = 10302403,
     Highlight = false,
-    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx45_03.T_Fashion_Fx45_03'",
-    JumpLink = T.RT_6,
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx54.T_Fashion_Fx54'",
+    JumpLink = {
+      [1] = "151",
+      [2] = "151",
+      [3] = "151",
+      [4] = "151",
+      [5] = "151",
+      [6] = "151",
+      [7] = "151",
+      [8] = "151",
+      [9] = "151",
+      [10] = "151",
+      [11] = "151"
+    },
     PointsPerTarget = 1,
-    TaskName = "MAIN_UI_AppearanceScore"
+    TaskName = "Event_Title_10302104"
   },
   [15] = {
     AppId = {
@@ -1041,12 +1058,12 @@ return ReadOnly("AppearanceCollectEvent", {
     EntranceId = 15,
     EventId = 10302403,
     Highlight = false,
-    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back54.T_Fashion_Back54'",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Sword_Huanyu.T_Head_Sword_Huanyu'",
     JumpLink = {
       [1] = "111",
       [2] = "111"
     },
     PointsPerTarget = 1,
-    TaskName = "MAIN_UI_AppearanceScore"
+    TaskName = "UI_AppearanceCollectEvent_Task3"
   }
 })

@@ -514,8 +514,8 @@ local function BuildTransformFromServerParam(ParamInfo)
   if type(Position) ~= "table" and type(Rotation) ~= "table" then
     return nil
   end
-  local Location = FVector(Position and Position[1] or 0, Position and Position[2] or 0, Position and Position[3] or 0)
-  local Rotator = FRotator(Rotation and Rotation[2] or 0, Rotation and Rotation[3] or 0, Rotation and Rotation[1] or 0)
+  local Location = FVector(PersonInfoCommon.RoundEditInteger(Position and Position[1]), PersonInfoCommon.RoundEditInteger(Position and Position[2]), PersonInfoCommon.RoundEditInteger(Position and Position[3]))
+  local Rotator = FRotator(PersonInfoCommon.RoundEditInteger(Rotation and Rotation[2]), PersonInfoCommon.RoundEditInteger(Rotation and Rotation[3]), PersonInfoCommon.RoundEditInteger(Rotation and Rotation[1]))
   return FTransform(Rotator:ToQuat(), Location, FVector(1, 1, 1))
 end
 
@@ -525,9 +525,9 @@ local function BuildTransformRotationFromServerParam(ParamInfo)
     return nil
   end
   return {
-    Roll = Rotation[1] or 0,
-    Pitch = Rotation[2] or 0,
-    Yaw = Rotation[3] or 0
+    Roll = PersonInfoCommon.RoundEditInteger(Rotation[1]),
+    Pitch = PersonInfoCommon.RoundEditInteger(Rotation[2]),
+    Yaw = PersonInfoCommon.RoundEditInteger(Rotation[3])
   }
 end
 

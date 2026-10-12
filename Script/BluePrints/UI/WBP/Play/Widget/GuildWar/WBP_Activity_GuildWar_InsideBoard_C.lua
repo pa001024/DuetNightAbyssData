@@ -189,7 +189,7 @@ function M:UpdateShow_Floor()
   if CommonConst.RaidSeasonType.Floor == self.RaidSeasonType then
     self.Panel_Ban:SetVisibility(ESlateVisibility.Collapsed)
     self.Panel_Tip01:SetVisibility(ESlateVisibility.Collapsed)
-    self.WS_Row02:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.WS_Row02:SetVisibility(ESlateVisibility.Collapsed)
     if self.RaidSeasons:IsBaned() then
       self.Panel_Ban:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.Text_Ban:SetText(GText("RaidDungeon_Rank_Ban"))
@@ -200,30 +200,35 @@ function M:UpdateShow_Floor()
     if CommonConst.RaidState.PreRaid == self.RaidDungeonType then
       if self.RankInfo and self.RankInfo.PreRaidGroupId > 0 then
         self.WS_Row01:SetActiveWidgetIndex(2)
-        self.WS_Row02:SetActiveWidgetIndex(1)
         self.Text_History:SetText(GText("Raid_Season_Floor_History"))
         self.Text_HistoryFloor:SetText(self.RaidSeasons.PreRaidFloor)
         self.Text_HistoryTime:SetText(UIUtils.FormatSeconds(self:GetDungeonTimeLimit() - self.RaidSeasons.PreRaidFloorPassTime))
-        self.Text_Advance:SetText(GText("Raid_Season_Floor_Standard"))
-        self.Text_AdvanceFloor:SetText(self.RankInfo.NextFloor)
-        self.Text_AdvanceTime:SetText(UIUtils.FormatSeconds(self:GetDungeonTimeLimit() - self.RankInfo.NextPassTime))
-        if 1 == self.RankInfo.PreRaidGroupId then
+        if not (1 ~= self.RankInfo.PreRaidGroupId and self.RankInfo.NextFloor) or not self.RankInfo.NextPassTime then
           self.WS_Row02:SetVisibility(ESlateVisibility.Collapsed)
+        else
+          self.WS_Row02:SetActiveWidgetIndex(1)
+          self.Text_Advance:SetText(GText("Raid_Season_Floor_Standard"))
+          self.Text_AdvanceFloor:SetText(self.RankInfo.NextFloor)
+          self.Text_AdvanceTime:SetText(UIUtils.FormatSeconds(self:GetDungeonTimeLimit() - self.RankInfo.NextPassTime))
+          self.WS_Row02:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
         end
       else
         self.WS_Rank:SetActiveWidgetIndex(1)
         self.WS_Row01:SetActiveWidgetIndex(1)
         self.Text_Tip02:SetText(GText("RaidDungeon_PreRaid_Abandon"))
+        self.WS_Row02:SetVisibility(ESlateVisibility.Collapsed)
       end
     elseif CommonConst.RaidState.Raid == self.RaidDungeonType then
       if self.RaidSeasons and self.RaidSeasons.PreRaidGroupId > 0 then
-        if 0 == self.Rank then
+        if not self.Rank or self.Rank <= 0 then
           self.WS_Row01:SetActiveWidgetIndex(1)
           self.Text_Tip02:SetText(GText("UI_AppearanceScore_NoRanktoast"))
+          self.WS_Row02:SetVisibility(ESlateVisibility.Collapsed)
         else
           self.WS_Row01:SetActiveWidgetIndex(0)
           self.Text_Standard:SetText(GText("RaidDungeon_Raid_Rank_Title"))
           self.Text_Num:SetText(self.Rank or GText("UI_CHAR_FORCE_1101"))
+          self.WS_Row02:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
           self.WS_Row02:SetActiveWidgetIndex(1)
           self.Text_Advance:SetText(GText("Raid_Season_Floor_History"))
           self.Text_AdvanceFloor:SetText(self.RaidSeasons.RaidFloor)
@@ -232,6 +237,7 @@ function M:UpdateShow_Floor()
       else
         self.WS_Row01:SetActiveWidgetIndex(1)
         self.Text_Tip02:SetText(GText("RaidDungeon_PreRaid_Abandon"))
+        self.WS_Row02:SetVisibility(ESlateVisibility.Collapsed)
         self.WS_Rank:SetActiveWidgetIndex(1)
       end
     end

@@ -931,7 +931,7 @@ return ReadOnly("PassiveEffect", {
     ID = 10199,
     Vars = {
       Lv0AddWeaponSp = 1,
-      Lv0BuffLastTime = 9,
+      Lv0BuffLastTime = 15,
       Lv11AddSpRate = 12,
       Lv12AddSpValue = 2,
       Lv3SkillSpeedMin = 2.2,

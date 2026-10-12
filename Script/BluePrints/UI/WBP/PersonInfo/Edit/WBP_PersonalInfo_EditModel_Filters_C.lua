@@ -10,6 +10,7 @@ local DEFAULT_FILTER_INTENSITY = 50
 local FORBIDDEN_FILTER_INTENSITY = 100
 local FILTER_ITEM_IN_STAGGER_INTERVAL = 0.015
 local FILTER_ITEM_IN_STAGGER_TIMER_KEY = "FilterItemInStagger"
+local TITLE_ICON_PATH = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Personal_Filter.T_Tab_Personal_Filter'"
 
 function M:Initialize(Initializer)
   self.EditRootController = nil
@@ -35,6 +36,12 @@ function M:InitFilterPanel(EditRootController, OwnerOtherPage)
   self:_PlayTitleNormal()
   if self.Text_Title then
     self.Text_Title:SetText(GText("UI_PersonalPage_Filter"))
+  end
+  if self.Image_TitleIcon then
+    local TitleIcon = LoadObject(TITLE_ICON_PATH)
+    if TitleIcon then
+      self.Image_TitleIcon:SetBrushFromTexture(TitleIcon, false)
+    end
   end
 end
 
@@ -215,6 +222,18 @@ function M:FocusGamepadSelectedFilterItem(bForceScroll)
   return true
 end
 
+function M:FocusGamepadSectionTitle()
+  if self.Btn_Click and self.Btn_Click.SetFocus then
+    self.Btn_Click:SetFocus()
+    return true
+  end
+  if self.SetFocus then
+    self:SetFocus()
+    return true
+  end
+  return false
+end
+
 function M:ScrollGamepadFocusedWidgetIntoView(Widget, bForceScroll)
   if self.OwnerOtherPage and self.OwnerOtherPage.ScrollGamepadFocusedWidgetIntoView then
     self.OwnerOtherPage:ScrollGamepadFocusedWidgetIntoView(Widget, bForceScroll)
@@ -339,6 +358,7 @@ function M:OnFilterEntryInitialized(Item, Widget)
 end
 
 function M:OnTitleClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/click_crystal_btn_tab", nil, nil)
   if UIUtils.IsGamepadInput() then
     if self.bListExpanded then
       if self.OwnerOtherPage and self.OwnerOtherPage.RequestToggleSection then

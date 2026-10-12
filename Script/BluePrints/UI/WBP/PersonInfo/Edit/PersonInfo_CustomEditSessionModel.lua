@@ -1,5 +1,6 @@
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
 local PersonInfoModel = PersonInfoController:GetModel()
+local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local DisplayConfig = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayConfig")
 local DisplayDraft = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayDraft")
 local DisplayRules = require("BluePrints.UI.WBP.PersonInfo.Showcase.PersonInfo_DisplayRules")
@@ -245,31 +246,47 @@ function M:_FindNextEmptyCharacterSlotIndex(StartSlotIndex)
   return nil
 end
 
-local function RoundCompareNumber(Value)
-  return math.floor((tonumber(Value) or 0) * 100 + 0.5) / 100
-end
-
 local function BuildTransformCompareTable(Transform)
-  if type(Transform) ~= "userdata" then
-    return Transform
+  if nil == Transform then
+    return nil
   end
-  local Location = Transform.Translation
-  local Scale = Transform.Scale3D
-  local Rotation = Transform.Rotation
-  local Rotator
-  if Rotation and Rotation.ToRotator then
-    Rotator = Rotation:ToRotator()
+  local Location, Rotator, Scale
+  if type(Transform) == "userdata" then
+    Location = Transform.Translation
+    Scale = Transform.Scale3D
+    local Rotation = Transform.Rotation
+    if Rotation and Rotation.ToRotator then
+      Rotator = Rotation:ToRotator()
+    end
+  elseif type(Transform) == "table" then
+    Location = Transform.Translation or Transform
+    Rotator = Transform.Rotator or Transform.Rotation
+    if type(Rotator) == "userdata" and Rotator.ToRotator then
+      Rotator = Rotator:ToRotator()
+    end
+    Scale = Transform.Scale3D or Transform.Scale
+  else
+    return nil
   end
+  local LocationX = Location and (Location.X or Location[1]) or nil
+  local LocationY = Location and (Location.Y or Location[2]) or nil
+  local LocationZ = Location and (Location.Z or Location[3]) or nil
+  local Pitch = Rotator and (Rotator.Pitch or Rotator[2]) or nil
+  local Yaw = Rotator and (Rotator.Yaw or Rotator[3]) or nil
+  local Roll = Rotator and (Rotator.Roll or Rotator[1]) or nil
+  local ScaleX = Scale and (Scale.X or Scale[1]) or nil
+  local ScaleY = Scale and (Scale.Y or Scale[2]) or nil
+  local ScaleZ = Scale and (Scale.Z or Scale[3]) or nil
   return {
-    X = RoundCompareNumber(Location and Location.X),
-    Y = RoundCompareNumber(Location and Location.Y),
-    Z = RoundCompareNumber(Location and Location.Z),
-    Pitch = RoundCompareNumber(Rotator and Rotator.Pitch),
-    Yaw = RoundCompareNumber(Rotator and Rotator.Yaw),
-    Roll = RoundCompareNumber(Rotator and Rotator.Roll),
-    ScaleX = RoundCompareNumber(Scale and Scale.X),
-    ScaleY = RoundCompareNumber(Scale and Scale.Y),
-    ScaleZ = RoundCompareNumber(Scale and Scale.Z)
+    X = PersonInfoCommon.RoundEditInteger(LocationX),
+    Y = PersonInfoCommon.RoundEditInteger(LocationY),
+    Z = PersonInfoCommon.RoundEditInteger(LocationZ),
+    Pitch = PersonInfoCommon.RoundEditInteger(Pitch),
+    Yaw = PersonInfoCommon.RoundEditInteger(Yaw),
+    Roll = PersonInfoCommon.RoundEditInteger(Roll),
+    ScaleX = PersonInfoCommon.RoundEditInteger(ScaleX),
+    ScaleY = PersonInfoCommon.RoundEditInteger(ScaleY),
+    ScaleZ = PersonInfoCommon.RoundEditInteger(ScaleZ)
   }
 end
 
@@ -352,6 +369,85 @@ local function IsIncomingDraftSameForRender(CurrentDraft, IncomingDraft)
   return DisplayDraft:IsEquivalent(CurrentIdentity, IncomingIdentity) == true
 end
 
+local function ApplySavedDraftPreviewByDiff(Editor, PreviousDraft)
+  local NextDraft = Editor and Editor.GetDraft and Editor:GetDraft() or nil
+  local Renderer = Editor and Editor.Renderer or nil
+  if not Editor or not NextDraft then
+    return false
+  end
+  local PreviousSceneId = PreviousDraft and PreviousDraft.Scene and PreviousDraft.Scene.SceneId or nil
+  local NextSceneId = NextDraft.Scene and NextDraft.Scene.SceneId or nil
+  local bFullRendered = false
+  if PreviousSceneId ~= NextSceneId then
+    local bSceneApplied = Renderer and Renderer.ApplySceneSwitch and Renderer:ApplySceneSwitch(NextDraft) == true
+    if not bSceneApplied then
+      local NextPath = DisplayConfig:GetScenePath(NextSceneId)
+      local CurrentPath = Renderer and Renderer.SceneService and Renderer.SceneService.PreviewScenePath or nil
+      if type(NextPath) == "string" and "" ~= NextPath and CurrentPath ~= NextPath then
+        if Editor.Render then
+          Editor:Render()
+        end
+        bFullRendered = true
+      elseif Renderer then
+        if Renderer.ApplySceneColor and nil ~= NextSceneId then
+          Renderer:ApplySceneColor(NextSceneId)
+        end
+        if Renderer.ApplyDraftSceneLight then
+          Renderer:ApplyDraftSceneLight(NextDraft)
+        end
+      end
+    end
+  end
+  if bFullRendered then
+    return true
+  end
+  if not Renderer then
+    if Editor.Render then
+      Editor:Render()
+    end
+    return true
+  end
+  local bOccupiedFailed = false
+  local CharacterChanged = Editor:_BuildChangedCharacterSlotIndexMap(PreviousDraft, NextDraft)
+  for SlotIndex, bAffected in pairs(CharacterChanged or {}) do
+    if true == bAffected and type(SlotIndex) == "number" and SlotIndex > 0 and (not Renderer.ApplyCharacterSlot or true ~= Renderer:ApplyCharacterSlot(SlotIndex, NextDraft)) then
+      local Slot = DisplayDraft:GetCharacterSlot(NextDraft, SlotIndex)
+      if DisplayDraft:IsCharacterSlotOccupied(Slot) then
+        bOccupiedFailed = true
+      end
+    end
+  end
+  local PetChanged = Editor:_BuildChangedPetSlotIndexMap(PreviousDraft, NextDraft)
+  for SlotIndex, bAffected in pairs(PetChanged or {}) do
+    if true == bAffected and type(SlotIndex) == "number" and SlotIndex > 0 and (not Renderer.ApplyPetSlot or true ~= Renderer:ApplyPetSlot(SlotIndex, NextDraft)) then
+      local Slot = DisplayDraft:GetPetSlot(NextDraft, SlotIndex)
+      if DisplayDraft:IsPetSlotOccupied(Slot) then
+        bOccupiedFailed = true
+      end
+    end
+  end
+  local ItemChanged = Editor:_BuildChangedItemSlotIndexMap(PreviousDraft, NextDraft)
+  for SlotIndex, bAffected in pairs(ItemChanged or {}) do
+    if true == bAffected and type(SlotIndex) == "number" and SlotIndex > 0 and (not Renderer.ApplyItemSlot or true ~= Renderer:ApplyItemSlot(SlotIndex, NextDraft)) then
+      local Slot = DisplayDraft:GetItemSlot(NextDraft, SlotIndex)
+      if DisplayDraft:IsItemSlotOccupied(Slot) then
+        bOccupiedFailed = true
+      end
+    end
+  end
+  if bOccupiedFailed then
+    if Editor.Render then
+      Editor:Render()
+    end
+    return true
+  end
+  Renderer.SceneDraft = NextDraft
+  if Renderer.ApplyDraftFilter then
+    Renderer:ApplyDraftFilter(NextDraft)
+  end
+  return false
+end
+
 function M:_LoadInitialDraftFromServer()
   if not self.DisplayEditor then
     return
@@ -412,16 +508,11 @@ function M:_ApplySavedDraftToEditor()
   end
   local SavedDraft = PersonInfoModel:GetCustomDisplayDraft()
   SavedDraft = SavedDraft or self:_BuildInitialEmptyDraft()
+  local PreviousDraft = Editor:GetDraft()
   self.InitialSavedDraft = DisplayDraft:Clone(SavedDraft)
   self.UsedSceneId = SavedDraft and SavedDraft.Scene and SavedDraft.Scene.SceneId or nil
-  local bSkipRender = IsIncomingDraftSameForRender(Editor:GetDraft(), SavedDraft)
-  Editor:SetDraft(SavedDraft, bSkipRender)
-  if true == bSkipRender then
-    local Renderer = Editor.Renderer
-    if Renderer and Renderer.ApplyDraftFilter then
-      Renderer:ApplyDraftFilter(Editor:GetDraft())
-    end
-  end
+  Editor:SetDraft(SavedDraft, true)
+  ApplySavedDraftPreviewByDiff(Editor, PreviousDraft)
   self.ValidCharacterSlotIndices = self:_CollectOccupiedCharacterSlotIndices(SavedDraft)
   self.PendingCharacterChoosePreview = nil
   self.StagedCharacterChooseSelections = {}

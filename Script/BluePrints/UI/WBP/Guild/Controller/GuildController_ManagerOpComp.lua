@@ -336,6 +336,7 @@ function Component:OpenGuildRenameCardDialog(ResourceId, ParentWidget)
   if not IsValid(ParentWidget) then
     ParentWidget = nil
   end
+  SubmitState.ParentWidget = ParentWidget
   local DialogHolder = {Dialog = nil}
   
   function SubmitState.OnCheckNameCallback(SameName)
@@ -440,7 +441,14 @@ function Component:OnGuildRenameCardSubmit(Dialog, ResourceId, SubmitState)
     end
     self:SendUseChangeGuildNameResourceInBag(ResourceId, Name, function(Ret)
       SubmitState.IsSubmitting = false
-      if Ret == ErrorCode.RET_SUCCESS and not SubmitState.IsClosed and IsValid(Dialog) then
+      if Ret ~= ErrorCode.RET_SUCCESS then
+        return
+      end
+      local BagWidget = SubmitState.ParentWidget
+      if IsValid(BagWidget) and BagWidget.RefreshConsumedResourceGrid then
+        BagWidget:RefreshConsumedResourceGrid(ResourceId)
+      end
+      if not SubmitState.IsClosed and IsValid(Dialog) then
         Dialog:OnClose()
       end
     end)

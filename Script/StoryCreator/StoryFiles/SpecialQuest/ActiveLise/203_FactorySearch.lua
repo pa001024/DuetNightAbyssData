@@ -190,6 +190,12 @@ return {
             startPort = "Out",
             endQuest = "17870345233493361952",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17872275674185645578",
+            startPort = "Out",
+            endQuest = "17917818690721143922",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -547,6 +553,17 @@ return {
               NewDescription = "Description_120702_3_3",
               NewDetail = "Content_120702_3_3",
               SubTaskTargetIndex = 0
+            }
+          },
+          ["17917818690721143922"] = {
+            key = "17917818690721143922",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 4173.660732714139, y = 138.68361411550268},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

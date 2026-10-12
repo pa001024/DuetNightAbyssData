@@ -1386,8 +1386,7 @@ function M:ClosePanel(IsImmediately)
   if not IsImmediately and IsValid(self.LevelMap_Convey_Widget_PC) and self.LevelMap_Convey_Widget_PC:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
     self.CurrentConveyId = nil
     self:OnScaleChange(self.CurrentPercent)
-    self.LevelMap_Convey_Widget_PC.Group_Temple:SetVisibility(ESlateVisibility.Collapsed)
-    self.LevelMap_Convey_Widget_PC:RemoveKey()
+    self.LevelMap_Convey_Widget_PC:ResetPanel()
     if not self.LevelMap_Convey_Widget_PC:IsAnimationPlaying(self.LevelMap_Convey_Widget_PC.Auto_Out) then
       self.LevelMap_Convey_Widget_PC:PlayAnimation(self.LevelMap_Convey_Widget_PC.Auto_Out)
       return true
@@ -1508,10 +1507,22 @@ function M:OnPanelOpen(panel)
     self:RefreshAllDispatchPoint()
     self:RefreshDispatchSelect()
     self.ModeComp:CloseDispatchDetailIfAny()
+    if IsValid(self.LevelMap_Convey_Widget_PC) then
+      self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
+      if self.LevelMap_Convey_Widget_PC.ResetPanel then
+        self.LevelMap_Convey_Widget_PC:ResetPanel()
+      end
+    end
   elseif 5 == panel then
     self.RegionInfo:SetVisibility(ESlateVisibility.Collapsed)
     self.FloorWidget:SetVisibility(ESlateVisibility.Collapsed)
     self.ModeComp:SetEntranceDispatchVisible(false)
+    if IsValid(self.LevelMap_Convey_Widget_PC) then
+      self.LevelMap_Convey_Widget_PC:SetVisibility(ESlateVisibility.Collapsed)
+      if self.LevelMap_Convey_Widget_PC.ResetPanel then
+        self.LevelMap_Convey_Widget_PC:ResetPanel()
+      end
+    end
   elseif 6 == panel then
     if self.MarkPanel then
       self.MarkPanel:SetVisibility(ESlateVisibility.Collapsed)

@@ -11752,6 +11752,26 @@ return ReadOnly("Condition", {
     },
     Remark = "获得80级卡米拉"
   },
+  [410280] = {
+    ConditionId = 410280,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      OwnCharIdAndLevel = {
+        {4102, 80}
+      }
+    },
+    Remark = "获得80级止流"
+  },
+  [420180] = {
+    ConditionId = 420180,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      OwnCharIdAndLevel = {
+        {4201, 80}
+      }
+    },
+    Remark = "获得80级煜明"
+  },
   [443000] = {
     ConditionId = 443000,
     ConditionLogic = "AND",
@@ -17449,6 +17469,12 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = T.RT_169,
     Remark = "第22只乐园的白兔"
+  },
+  [40901001] = {
+    ConditionId = 40901001,
+    ConditionLogic = "OR",
+    ConditionMap = T.RT_262,
+    Remark = "行于破晓"
   },
   [51001601] = {
     ConditionId = 51001601,

@@ -622,7 +622,7 @@ function Menu_World_PC_C:InitSystemItem()
   for _, Value in pairs(self.SystemSortList) do
     local id = Value.Id
     if 20 == id and UIUtils.AmIInGuildScene() then
-    elseif id == self.TBSupportEntranceId and (CommonUtils.GetDeviceTypeByPlatformName(self) ~= "PC" or UE4.UUCloudGameInstanceSubsystem.IsCloudGame()) then
+    elseif id == self.TBSupportEntranceId and (CommonUtils.GetDeviceTypeByPlatformName(self) ~= "PC" or UE4.UUCloudGameInstanceSubsystem.IsCloudGame() or not GWorld.GameInstance:IsTBHWidgetAvailable()) then
     else
       local MainUIConfig = DataMgr.MainUI[Value.Id]
       local bUnlocked = true
@@ -666,9 +666,9 @@ function Menu_World_PC_C:InitSystemItem()
             Item = self.Entrance_Activity
           end
         elseif id == self.RelatedProductEntranceId and UE.AHotUpdateGameMode.IsGlobalPak() then
-          goto lbl_313
+          goto lbl_319
         elseif id == self.CloudGameEntranceId and (UE.AHotUpdateGameMode.IsGlobalPak() or IgnoreCNChannelIds[ChannelId]) then
-          goto lbl_313
+          goto lbl_319
         else
           local TaskName = "MenuEntranceBtn_" .. id
           Item = UIManager(GWorld.GameInstance):_CreateWidgetNew(WidgetName)
@@ -715,7 +715,7 @@ function Menu_World_PC_C:InitSystemItem()
         end
       end
     end
-    ::lbl_313::
+    ::lbl_319::
   end
   ItemNum = ItemNum + 4 - ItemNum % 4
   local EmptyNum = ItemNum - InitSuccNum

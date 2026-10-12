@@ -71,6 +71,12 @@ return ReadOnly("DataSetIgnore", {
   SpLiseSkill02Percent = {
     ID = "SpLiseSkill02Percent"
   },
+  SpLiseSkill02Range = {
+    ID = "SpLiseSkill02Range"
+  },
+  SpliseScopeComplete = {
+    ID = "SpliseScopeComplete"
+  },
   ToExplode = {ID = "ToExplode"},
   Weapon20402_Scale = {
     ID = "Weapon20402_Scale"

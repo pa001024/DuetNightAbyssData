@@ -978,4 +978,18 @@ function MiscUtils.GLink(LinkId)
   return Link
 end
 
+function MiscUtils.PreloadNextPassMaterials()
+  if not Const.NextPassMaterialPreloaded then
+    for i, v in pairs(DataMgr.BuffNextPass) do
+      if v.MaterialPath then
+        local Material = LoadObject(v.MaterialPath)
+        if Material then
+          AddToRoot(Material)
+        end
+      end
+    end
+    Const.NextPassMaterialPreloaded = true
+  end
+end
+
 return MiscUtils

@@ -146,7 +146,7 @@ return ReadOnly("AbyssSeasonList", {
   },
   [1015] = {
     Abyss = {Infinite = 1702, Rotate = 1701},
-    AbyssEndTime = LocalTimeProxy(1794189600),
+    AbyssEndTime = LocalTimeProxy(1794276000),
     AbyssSeasonId = 1015,
     AbyssSeasonName = "Event_STitle_103002",
     AbyssStartTime = LocalTimeProxy(1792400400),
@@ -159,7 +159,7 @@ return ReadOnly("AbyssSeasonList", {
     AbyssEndTime = LocalTimeProxy(1796029200),
     AbyssSeasonId = 1016,
     AbyssSeasonName = "Event_STitle_103002",
-    AbyssStartTime = LocalTimeProxy(1794189600),
+    AbyssStartTime = LocalTimeProxy(1794276000),
     EventId = 1030037,
     LastSeason = 1015,
     ResourceId = 15005

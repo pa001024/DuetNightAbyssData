@@ -130,19 +130,18 @@ function Component:RefreshAbyssRoomInfo(index)
   local bShowTime = false
   local bIsNextRoom = false
   local AbyssBattleTime = false
-  DisplayRemainTime = CommonUtils.GetClientTimerStructRemainTime("AbyssNextRoom")
-  if DisplayRemainTime >= 0 then
-    bIsNextRoom = true
-  end
-  if DisplayRemainTime <= 0 then
+  local bHasNextRoom = CommonUtils.HasClientTimerStruct("AbyssNextRoom")
+  local bHasBattle = CommonUtils.HasClientTimerStruct("AbyssBattle")
+  local bHasBattleNew = CommonUtils.HasClientTimerStruct("AbyssBattleNew")
+  bIsNextRoom = bHasNextRoom
+  bShowTime = bHasNextRoom or bHasBattle or bHasBattleNew
+  AbyssBattleTime = not bHasBattle
+  if bHasNextRoom then
+    DisplayRemainTime = CommonUtils.GetClientTimerStructRemainTime("AbyssNextRoom")
+  elseif bHasBattle then
     DisplayRemainTime = CommonUtils.GetClientTimerStructRemainTime("AbyssBattle")
-  end
-  if DisplayRemainTime <= 0 then
-    AbyssBattleTime = true
+  elseif bHasBattleNew then
     DisplayRemainTime = CommonUtils.GetClientTimerStructRemainTime("AbyssBattleNew")
-  end
-  if DisplayRemainTime >= 0 then
-    bShowTime = true
   end
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   for i = 1, totalRooms do

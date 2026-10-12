@@ -289,10 +289,13 @@ function Component:OnTeleportPointClick(Id)
       if nil ~= Dungeons and #Dungeons > 0 then
         self.LevelMap_Convey_Widget_PC.Group_Temple:SetVisibility(self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad and ESlateVisibility.HitTestInvisible or ESlateVisibility.SelfHitTestInvisible)
         self.LevelMap_Convey_Widget_PC:InitialTempleAndPartyInfo(Dungeons, self.CurrentSelectPoint.Img_Point.Brush.ResourceObject, self.RegionIcon)
+      else
+        self.LevelMap_Convey_Widget_PC:ResetPanel()
       end
     else
       self.LevelMap_Convey_Widget_PC.Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.LevelMap_Convey_Widget_PC.Switch_Button:SetActiveWidgetIndex(1)
+      self.LevelMap_Convey_Widget_PC:ResetPanel()
     end
     local floorId = self.TeleportPoint2FloorId[data.Id]
     if floorId then

@@ -6,7 +6,7 @@ local M = Class("BluePrints.UI.UI_PC.Battle.ExclusiveSkill.Base.Battle_Skill_UI_
 function M:OnLoaded(OwnerPlayer, Params)
   self.Super.OnLoaded(self)
   self.OwnerPlayer = OwnerPlayer
-  self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, true)
 end
 
 function M:InitBattleCharUI(CharUIId, GradeLevel)
@@ -30,6 +30,7 @@ function M:InitBattleCharUI(CharUIId, GradeLevel)
   self.ChargeMID = nil
   self:LeaveUltReload()
   self:StopAllAnimations()
+  self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, true)
   self.Super.InitBattleCharUI(self, CharUIId, GradeLevel)
   self.BattleInstance = nil
   self.OwnerEid = self.OwnerPlayer.Eid
@@ -42,6 +43,7 @@ function M:InitBattleCharUI(CharUIId, GradeLevel)
   self.bIsMobile = CommonUtils.GetDeviceTypeByPlatformName(self) ~= "PC"
   self.DialConfig = self.bIsMobile and Const.Multiplier.DialConfig.Mobile or Const.Multiplier.DialConfig.PC
   self:SetWeaponShootHintCovered(false)
+  self:SetMobileScopeFireIconOverride(true)
   self:K2_SetBuffsOwner(self.OwnerPlayer)
   self:RegisterOnBuffsChangedDelegate()
   self:CreateMultiplierEntries()
@@ -431,6 +433,32 @@ function M:SetWeaponShootHintCovered(bCovered)
   end
 end
 
+function M:SetMobileScopeFireIconOverride(bEnabled)
+  if not self.bIsMobile then
+    return
+  end
+  local PreviousPanel = self.MobileScopeFireIconPanel
+  if not bEnabled then
+    self.MobileScopeFireIconPanel = nil
+    if IsValid(PreviousPanel) and PreviousPanel.SetUltimateAttackIconOverride then
+      PreviousPanel:SetUltimateAttackIconOverride(self, nil)
+    end
+    return
+  end
+  local UIMgr = UIManager(self)
+  local BattleMain = UIMgr and UIMgr.GetUIObj and UIMgr:GetUIObj("BattleMain")
+  local SkillPanel = BattleMain and BattleMain.Char_Skill
+  if not IsValid(SkillPanel) or not SkillPanel.SetUltimateAttackIconOverride then
+    return
+  end
+  if IsValid(PreviousPanel) and PreviousPanel ~= SkillPanel then
+    PreviousPanel:SetUltimateAttackIconOverride(self, nil)
+  end
+  self.MobileScopeFireIconPanel = SkillPanel
+  local IconPath = self.SkinProfile and self.SkinProfile.MobileScopeFireIconPath or Const.Input.MobileScopeFireIconPath
+  SkillPanel:SetUltimateAttackIconOverride(self, IconPath)
+end
+
 function M:ReceiveOnBuffsChanged()
   local Buffs = self.OwnerPlayer.BuffManager.Buffs
   local HasScopeBuff = false
@@ -456,6 +484,7 @@ function M:ReceiveOnBuffsChanged()
       local BattleMain = UIMgr and UIMgr.GetUIObj and UIMgr:GetUIObj("BattleMain")
       local MobileSkillPanel = BattleMain and BattleMain.Char_Skill
       if MobileSkillPanel and MobileSkillPanel.RefreshUltimateAttackGuide then
+        self:SetMobileScopeFireIconOverride(true)
         MobileSkillPanel:RefreshUltimateAttackGuide()
       end
     end, false, 0, "RefreshMobileAttackGuide")
@@ -477,7 +506,7 @@ function M:SwitchCrossHairState(bScoping)
   if bScoping then
     self.LastAppliedChargeProgress = nil
     self:LeaveUltReload()
-    self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, false)
     self:SetWeaponShootHintCovered(true)
     if self.Out then
       self:StopAnimation(self.Out)
@@ -491,16 +520,16 @@ function M:SwitchCrossHairState(bScoping)
       self:PlayAnimation(self.Out)
       self:AddTimer(self.Out:GetEndTime(), function()
         if not self.bScoping then
-          self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+          self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, true)
           self:SetWeaponShootHintCovered(false)
         end
       end, false, 0, "ScopeOutAnim")
     else
-      self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+      self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, true)
       self:SetWeaponShootHintCovered(false)
     end
   else
-    self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, true)
     self:SetWeaponShootHintCovered(false)
   end
   if IsValid(self.MultiplierUI) then
@@ -712,10 +741,14 @@ function M:RemoveSelf()
     self:PlayAnimation(self.Out)
     local EndTime = self.Out:GetEndTime()
     self:AddTimer(EndTime, function()
+      self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, true)
+      self:SetMobileScopeFireIconOverride(false)
       self:SetWeaponShootHintCovered(false)
       self:Close()
     end, false, 0, "OutAnimFinished")
   else
+    self:SetUIVisibilityTag(Const.Visibility.ScopeInactiveTag, true)
+    self:SetMobileScopeFireIconOverride(false)
     self:SetWeaponShootHintCovered(false)
     self:Close()
   end

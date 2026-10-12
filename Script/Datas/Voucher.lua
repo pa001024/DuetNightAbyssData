@@ -602,7 +602,7 @@ return ReadOnly("Voucher", {
       120470,
       120471
     },
-    ResourceId = 12007,
+    ResourceId = 120007,
     ThresholdPrice = 480,
     VoucherId = 1007
   },
@@ -610,7 +610,7 @@ return ReadOnly("Voucher", {
     CoinResourceId = 99,
     DiscountPrice = 300,
     ItemId = {120190, 120191},
-    ResourceId = 12008,
+    ResourceId = 120008,
     ThresholdPrice = 1280,
     VoucherId = 1008
   }
