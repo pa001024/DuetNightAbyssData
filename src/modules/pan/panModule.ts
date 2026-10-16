@@ -10,8 +10,11 @@
  *   70795~70803）的 group；精确 x,y 与 Resource 同管线（SubRegionLevel→srId +
  *   UAsset Design 文件节点坐标，CreatorId/ExploreGroupId 精确归属）。
  *
- * 条目按 Region 聚合（对话是故事级数据，无法逐 group 硬挂载）；点位对齐 Resource 的
- * source 规则：按 srId 聚合坐标，不暴露内部机关 UnitId/CreatorId。
+ * 点位↔对话：UAsset Design 中 Explore_Pan_Common_C 根 actor 的 ExploreGroupId 与 TalkTriggerID
+ * 同节点，TalkTriggerID → TalkTrigger.StoryLinePath → 故事内 BranchTriggerNode 的对应分支出口
+ * → 该分支可达的 TalkNode（FirstDialogueId）。
+ *
+ * 条目按 Region 聚合，对话挂在各 group 上；点位对齐 Resource 的 source 规则：按 srId 聚合坐标，不暴露内部机关 UnitId/CreatorId。
  */
 
 import { existsSync, readdirSync } from "node:fs"
@@ -21,7 +24,6 @@ import { T, type VNodeTree } from "../../i18n/vnode.ts"
 import { AssetReader } from "../../lua/AssetReader.ts"
 import { getExportsRoot } from "../../lua/UAssetServer.ts"
 import type { DialogueService } from "../dialogue/dialogueModule.ts"
-import { npcStoryDialogues } from "../npc/npcModule.ts"
 import { buildObjectMaps, collectDesignFiles, extractPosition, iterNodes, roundEven } from "../resource/resourceModule.ts"
 import { type Row, table } from "../shared/dataHelpers.ts"
 
@@ -30,45 +32,6 @@ export const PAN_NAME_KEY = "UI_Npc_Name_Pan_Common"
 export const PAN_REWARD_ID = 3011
 /** PanMechanism 的 UnitId 全集（Mechanism 表 UnitRealType = "PanMechanism"）。 */
 export const PAN_UNITS = new Set([70701, 70702, 70703, 70704, 70705, 70706, 70795, 70796, 70797, 70798, 70799, 70800, 70801, 70802, 70803])
-
-export interface PanRegionDef {
-    /** 规范 RegionId（Region 表主键，条目 id）。 */
-    id: number
-    story: string
-    levels: string[]
-}
-
-/**
- * Region→故事/关卡归属（核实依据）：
- * Prologue/Sew/Chezhan/Icelake/KuangKeng 按关卡名精确匹配故事内节点名
- * （序章/下水道/火车站区域/冰湖区域）；Secr 属 Region 1011（冰湖城东区）故归 Icelake；
- * EX01 归 Longsha（Region 1021 RegionType = "EX"，RegionMapImage 系 EXChapter01）；
- * FT（童话镇区域）归 Thc_Lxzs（排除法 + TalkTrigger 14 = Lxzs 系 group 14 精确吻合）。
- * 车站故事跨 1060（BHCZ）/1063（CZDX），FT 跨 1070/1071/1072，故按 Region 拆条，
- * 同故事的 dialogues 在条目间复用（对话是故事级数据）。
- * 注：TalkTrigger 声明 "A_PanTalk_KuangKeng.story"，磁盘实为 "A_PanTalk_Kuangkeng.lua"，
- * 此处使用磁盘真实名以保证大小写敏感文件系统可加载。
- */
-export const PAN_REGIONS: PanRegionDef[] = [
-    { id: 1001, story: "Explore/A_PanTalk_Prologue.story", levels: ["Prologue_Village", "Prologue_Balcony"] },
-    { id: 1017, story: "Explore/A_PanTalk_Sew.story", levels: ["Chapter01_Sew01", "Chapter01_Sew02", "Chapter01_Sew03"] },
-    { id: 1060, story: "Explore/A_PanTalk_Chezhan.story", levels: ["Haiboliya_Chezhan_BHCZ"] },
-    { id: 1063, story: "Explore/A_PanTalk_Chezhan.story", levels: ["Haiboliya_Chezhan_CZDX"] },
-    {
-        id: 1011,
-        story: "Explore/A_PanTalk_Icelake.story",
-        levels: ["Chapter01_IcelakeCity", "Chapter01_Icelake", "Chapter01_Secr"],
-    },
-    {
-        id: 1013,
-        story: "Explore/A_PanTalk_Kuangkeng.story",
-        levels: ["Chapter01_Kuangkeng_Part_01", "Chapter01_Kuangkeng_Part_04"],
-    },
-    { id: 1021, story: "Explore/A_PanTalk_EX01.story", levels: ["Haiboliya_Longsha01", "Haiboliya_Longsha02"] },
-    { id: 1070, story: "Explore/A_PanTalk_FT.story", levels: ["Haiboliya_Thc_Lxzs01"] },
-    { id: 1071, story: "Explore/A_PanTalk_FT.story", levels: ["Haiboliya_Thc_Lxzs02"] },
-    { id: 1072, story: "Explore/A_PanTalk_FT.story", levels: ["Haiboliya_Thc_Lxzx"] },
-]
 
 export interface PanGroup {
     id: number
@@ -118,12 +81,6 @@ function normList(value: unknown): unknown[] {
     return Object.entries(value as Row)
         .sort(([a], [b]) => Number(a) - Number(b))
         .map(([, item]) => item)
-}
-
-/** 关卡名→RegionId，未命中返回 undefined（由调用方 fail loud）。 */
-export function regionOfLevel(level: string): number | undefined {
-    for (const def of PAN_REGIONS) if (def.levels.includes(level)) return def.id
-    return undefined
 }
 
 /**
@@ -178,12 +135,24 @@ export function collectPanGroups(ctx: ModuleContext): { groups: PanGroup[]; crea
 /** 关卡名（小写）→srId；缺失直接抛错，不静默丢点位。 */
 export function levelSrMap(ctx: ModuleContext): Map<string, number> {
     const result = new Map<string, number>()
+    for (const [level, info] of levelRegionMap(ctx)) result.set(level, info.srId)
+    return result
+}
+
+/**
+ * 关卡名（小写）→{srId, regionId}：以快照自身的 SubRegion 表为准（Region/SubRegion 表各版本自带，
+ * 老快照同样适用），不依赖代码里只覆盖当前版本的静态关卡表。
+ */
+export function levelRegionMap(ctx: ModuleContext): Map<string, { srId: number; regionId: number }> {
+    const result = new Map<string, { srId: number; regionId: number }>()
     for (const sub of Object.values(table(ctx, "SubRegion"))) {
         if (!sub || typeof sub !== "object") continue
         const row = sub as Row
         if (typeof row.SubRegionLevel !== "string") continue
         const srId = toInt(row.SubRegionId)
-        if (srId !== undefined && !result.has(row.SubRegionLevel.toLowerCase())) result.set(row.SubRegionLevel.toLowerCase(), srId)
+        const regionId = toInt(row.RegionId)
+        const level = row.SubRegionLevel.toLowerCase()
+        if (srId !== undefined && regionId !== undefined && !result.has(level)) result.set(level, { srId, regionId })
     }
     return result
 }
@@ -203,8 +172,11 @@ export async function collectPanPositions(
     ctx: ModuleContext,
     groups: PanGroup[],
     creatorToGroup: Map<number, number>
-): Promise<Map<number, PanCandidate[]>> {
+): Promise<{ positions: Map<number, PanCandidate[]>; talkTriggers: Map<number, number[]> }> {
     const result = new Map<number, PanCandidate[]>()
+    // Pan 根 actor（Explore_Pan_*_C）同时带 ExploreGroupId 与对话触发器属性，即点位↔对话的精确对应。
+    // 属性名随蓝图而异（TalkTriggerID / Talk Trigger ID / Start·Finish Talk Trigger Id），按出现顺序收集。
+    const talkTriggers = new Map<number, number[]>()
     const append = (groupId: number, creator: number | undefined, pos: number[], type: string): void => {
         const point = [roundEven(pos[0]), roundEven(pos[1])]
         const list = result.get(groupId) ?? []
@@ -214,7 +186,7 @@ export async function collectPanPositions(
     }
     const exportsRoot = getExportsRoot()
     const mapsRoot = exportsRoot ? join(exportsRoot, "EM", "Content", "Maps", "Levels") : undefined
-    if (!mapsRoot || !existsSync(mapsRoot)) return result
+    if (!mapsRoot || !existsSync(mapsRoot)) return { positions: result, talkTriggers }
     const byId = new Map(groups.map(group => [group.id, group] as const))
     const levels = [...new Set(groups.map(group => group.level))]
     const reader = new AssetReader(ctx.dm.root)
@@ -241,6 +213,11 @@ export async function collectPanPositions(
                     } else if (groupId !== undefined) {
                         const group = byId.get(groupId)
                         if (!group || group.level !== level) continue
+                        const ids = Object.entries(props)
+                            .filter(([name]) => name.replaceAll(" ", "").toLowerCase().includes("talktrigger"))
+                            .map(([, value]) => toInt(value))
+                            .filter((id): id is number => id !== undefined)
+                        if (ids.length > 0) talkTriggers.set(group.id, [...new Set([...(talkTriggers.get(group.id) ?? []), ...ids])])
                         targets = [{ group, creator: undefined }]
                     } else {
                         const unitId = toInt(props.UnitId)
@@ -257,50 +234,113 @@ export async function collectPanPositions(
     } finally {
         await reader.close()
     }
+    return { positions: result, talkTriggers }
+}
+
+/** 经 TalkTrigger 表取触发器所属故事；缺失或不在潘神故事内返回 undefined。 */
+function storyOfTrigger(ctx: ModuleContext, triggerId: number): string | undefined {
+    const path = (table(ctx, "TalkTrigger")[String(triggerId)] as Row | undefined)?.StoryLinePath
+    return typeof path === "string" && path ? path : undefined
+}
+
+/**
+ * 故事内 BranchTriggerNode：Branches[i] 为 TalkTriggerId，对应出口端口 Branch_{i+1}；
+ * 沿连线先序收集该出口可达的全部 TalkNode 的对话链（含 QuestSuccess/Fail 之后的追加节点）。
+ */
+export function storyTriggerTalks(dialogue: DialogueService, story: string): Map<number, VNodeTree[]> {
+    const result = new Map<number, VNodeTree[]>()
+    const parents = (dialogue.story(story)?.storyNodeData ?? {}) as Row
+    for (const parent of Object.values(parents) as Row[]) {
+        const quest = parent?.questNodeData as Row | undefined
+        const nodes = quest?.nodeData as Row | undefined
+        if (!nodes) continue
+        const branch = Object.values(nodes).find(node => (node as Row)?.type === "BranchTriggerNode") as Row | undefined
+        if (!branch) continue
+        const edges = normList(quest?.lineData) as Row[]
+        const triggers = normList((branch.propsData as Row | undefined)?.Branches).map(toInt)
+        triggers.forEach((triggerId, index) => {
+            if (triggerId === undefined) return
+            const talks: VNodeTree[] = []
+            const seen = new Set<string>()
+            const walk = (key: string): void => {
+                if (seen.has(key) || !nodes[key]) return
+                seen.add(key)
+                const node = nodes[key] as Row
+                const firstId = (node.propsData as Row | undefined)?.FirstDialogueId
+                if (node.type === "TalkNode" && firstId) talks.push(...(dialogue.chain(firstId) as VNodeTree[]))
+                for (const edge of edges) if (edge.startQuest === key) walk(String(edge.endQuest))
+            }
+            for (const edge of edges)
+                if (edge.startQuest === branch.key && edge.startPort === `Branch_${index + 1}`) walk(String(edge.endQuest))
+            result.set(triggerId, talks)
+        })
+    }
     return result
 }
 
 export async function panModule(ctx: ModuleContext): Promise<VNodeTree> {
     const { groups, creatorToGroup } = collectPanGroups(ctx)
-    const srByLevel = levelSrMap(ctx)
-    for (const group of groups) {
-        if (regionOfLevel(group.level) === undefined) throw new Error(`Pan 关卡未归属 Region：${group.level}（group ${group.id}）`)
-        if (!srByLevel.has(group.level.toLowerCase())) throw new Error(`Pan 关卡缺少 SubRegion 映射：${group.level}`)
-    }
+    if (groups.length === 0) return []
+    const regionByLevel = levelRegionMap(ctx)
+    // 鲁棒导出：归属以快照自身的 SubRegion 表为准；未覆盖的关卡（如已被删除的老关卡）只 warn 跳过，
+    // 保证任何版本快照都能导完，不因单个关卡的数据形态差异中断整包。
+    const usable = groups.filter(group => {
+        if (!regionByLevel.has(group.level.toLowerCase())) {
+            ctx.log(`[warn] Pan 跳过 SubRegion 未覆盖的关卡：${group.level}（group ${group.id}）`)
+            return false
+        }
+        return true
+    })
+    if (usable.length === 0) return []
     assertPanReward(ctx)
     const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
     if (!dialogue) throw new Error("Pan 需要 Dialogue 依赖")
-    const positions = await collectPanPositions(ctx, groups, creatorToGroup)
-    const dialogueCache = new Map<string, VNodeTree[]>()
-    const dialoguesOf = (story: string): VNodeTree[] => {
-        const cached = dialogueCache.get(story)
-        if (cached) return cached
+    const { positions, talkTriggers } = await collectPanPositions(ctx, usable, creatorToGroup)
+    const storyTalks = new Map<string, Map<number, VNodeTree[]>>()
+    // 仅外语有文本的过场节点（chain 打 __langs 标记、无中文 Content，如潘神出场/退场演出
+    // 配的 {空格} 占位）会在中文渲染时被整节点 OMIT，导致跨语言成员/顺序不一致。
+    // Pan 统一按中文成员输出：中文补了文本的节点会自动保留，无需改动。
+    const dialoguesOf = (groupId: number): VNodeTree[] => {
+        const triggerIds = talkTriggers.get(groupId)
+        if (!triggerIds) {
+            ctx.log(`[warn] Pan group ${groupId} 无对话触发器，对话为空`)
+            return []
+        }
+        const talks: VNodeTree[] = []
+        for (const triggerId of triggerIds) {
+            const story = storyOfTrigger(ctx, triggerId)
+            if (!story) {
+                ctx.log(`[warn] Pan group ${groupId} 的 TalkTrigger ${triggerId} 无故事路径`)
+                continue
+            }
+            if (!storyTalks.has(story)) storyTalks.set(story, storyTriggerTalks(dialogue, story))
+            const branch = storyTalks.get(story)!.get(triggerId)
+            if (!branch) ctx.log(`[warn] Pan group ${groupId} 的 TalkTrigger ${triggerId} 不在故事 ${story} 的分支内`)
+            else talks.push(...branch)
+        }
         const seen = new Set<string>()
-        // 仅外语有文本的过场节点（chain 打 __langs 标记、无中文 Content，如潘神出场/退场演出
-        // 配的 {空格} 占位）会在中文渲染时被整节点 OMIT，导致跨语言成员/顺序不一致。
-        // Pan 统一按中文成员输出：中文补了文本的节点会自动保留，无需改动。
-        const dialogues = (npcStoryDialogues(dialogue, story) as Row[]).filter(talk => {
+        return (talks as Row[]).filter(talk => {
             if (Array.isArray(talk.__langs) && !talk.__langs.includes("cn")) return false
             const key = String(talk.id)
             if (seen.has(key)) return false
             seen.add(key)
             return true
         })
-        dialogueCache.set(story, dialogues)
-        return dialogues
     }
-    return PAN_REGIONS.map(def => ({
-        id: def.id,
+    // 条目按快照实际出现的 Region 动态生成（升序）；无组数据的 Region 不输出。
+    const presentIds = [...new Set(usable.map(group => regionByLevel.get(group.level.toLowerCase())!.regionId))].sort((a, b) => a - b)
+    return presentIds.map(id => ({
+        id,
         name: T(PAN_NAME_KEY),
         rewardId: PAN_REWARD_ID,
-        dialogues: dialoguesOf(def.story),
-        // 同一魔灵（一次奖励领取 = 一个 group）只出首点；对话相同但位置不同的组各自保留，不合并。
-        groups: groups
-            .filter(group => regionOfLevel(group.level) === def.id)
+        // 同一魔灵（一次奖励领取 = 一个 group）只出首点；对话按 group 自身的 TalkTriggerID 精确挂载。
+        groups: usable
+            .filter(group => regionByLevel.get(group.level.toLowerCase())?.regionId === id)
             .map(group => ({
                 id: group.id,
-                srId: srByLevel.get(group.level.toLowerCase())!,
+                srId: regionByLevel.get(group.level.toLowerCase())!.srId,
                 pos: firstPoint(positions.get(group.id) ?? []) ?? [],
+                dialogues: dialoguesOf(group.id),
             })),
     }))
 }

@@ -3,92 +3,6 @@
     "id": 1001,
     "name": "Paniemon",
     "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72003802,
-        "content": "Mm... what do you need the three flowers for?",
-        "npc": 820000,
-        "next": 72003803
-      },
-      {
-        "id": 72003803,
-        "content": "One for the sun, one for the moon, and one for the stars?",
-        "npc": 820000,
-        "next": 72003804
-      },
-      {
-        "id": 72003902,
-        "content": "The birds that move, the birds that don't, and the people who don't move are all still here.",
-        "npc": 820000,
-        "next": 72003903
-      },
-      {
-        "id": 72003903,
-        "content": "But the people who moved are all gone... Will they ever come back?",
-        "npc": 820000,
-        "next": 72003904
-      },
-      {
-        "id": 72000002,
-        "content": "兄弟，你好",
-        "npc": 820000,
-        "next": 72000003
-      },
-      {
-        "id": 72000003,
-        "content": "很高兴见到你",
-        "npc": 820000,
-        "next": 72000004
-      },
-      {
-        "id": 72000202,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72000203
-      },
-      {
-        "id": 72000203,
-        "content": "The trees hold me so warmly... but I can't stay curled up here forever.",
-        "npc": 820000,
-        "next": 72000204
-      },
-      {
-        "id": 72000302,
-        "content": "Someone lit the lamp.",
-        "npc": 820000,
-        "next": 72000303
-      },
-      {
-        "id": 72000303,
-        "content": "Do you think... the sun might be someone's lantern too?",
-        "npc": 820000,
-        "next": 72000304
-      },
-      {
-        "id": 72000402,
-        "content": "If I drift like the wind... do you think the wind might befriend me?",
-        "npc": 820000,
-        "next": 72000403
-      },
-      {
-        "id": 72000403,
-        "content": "Would you like to be its friend, too?",
-        "npc": 820000,
-        "next": 72000404
-      },
-      {
-        "id": 72000502,
-        "content": "Thank you, leafy human... I was stuck in this cold, round bucket for ages...",
-        "npc": 820000,
-        "next": 72000503
-      },
-      {
-        "id": 72000503,
-        "content": "Hmm, the grass is gone... But thank you anyway, snowy human.",
-        "npc": 820000,
-        "next": 72000504
-      }
-    ],
     "groups": [
       {
         "id": 7000054,
@@ -96,6 +10,20 @@
         "pos": [
           3306,
           5100
+        ],
+        "dialogues": [
+          {
+            "id": 72000202,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72000203
+          },
+          {
+            "id": 72000203,
+            "content": "The trees hold me so warmly... but I can't stay curled up here forever.",
+            "npc": 820000,
+            "next": 72000204
+          }
         ]
       },
       {
@@ -104,6 +32,20 @@
         "pos": [
           6161,
           -1757
+        ],
+        "dialogues": [
+          {
+            "id": 72000302,
+            "content": "Someone lit the lamp.",
+            "npc": 820000,
+            "next": 72000303
+          },
+          {
+            "id": 72000303,
+            "content": "Do you think... the sun might be someone's lantern too?",
+            "npc": 820000,
+            "next": 72000304
+          }
         ]
       },
       {
@@ -112,6 +54,20 @@
         "pos": [
           3920,
           470
+        ],
+        "dialogues": [
+          {
+            "id": 72003902,
+            "content": "The birds that move, the birds that don't, and the people who don't move are all still here.",
+            "npc": 820000,
+            "next": 72003903
+          },
+          {
+            "id": 72003903,
+            "content": "But the people who moved are all gone... Will they ever come back?",
+            "npc": 820000,
+            "next": 72003904
+          }
         ]
       },
       {
@@ -120,6 +76,20 @@
         "pos": [
           22429,
           -5823
+        ],
+        "dialogues": [
+          {
+            "id": 72000402,
+            "content": "If I drift like the wind... do you think the wind might befriend me?",
+            "npc": 820000,
+            "next": 72000403
+          },
+          {
+            "id": 72000403,
+            "content": "Would you like to be its friend, too?",
+            "npc": 820000,
+            "next": 72000404
+          }
         ]
       },
       {
@@ -128,877 +98,20 @@
         "pos": [
           27339,
           5982
-        ]
-      }
-    ]
-  },
-  {
-    "id": 1017,
-    "name": "Paniemon",
-    "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72002902,
-        "content": "Eek! Please don't take that treasure chest!",
-        "npc": 820000,
-        "next": 72002903
-      },
-      {
-        "id": 72002903,
-        "content": "My home's been taken over by nasty rats! I was gonna use these coins to hire a brave little cat to chase them away.",
-        "npc": 820000,
-        "next": 72002904
-      },
-      {
-        "id": 72000002,
-        "content": "兄弟，你好",
-        "npc": 820000,
-        "next": 72000003
-      },
-      {
-        "id": 72000003,
-        "content": "很高兴见到你",
-        "npc": 820000,
-        "next": 72000004
-      },
-      {
-        "id": 72003002,
-        "content": "Whoa, you're amazing! Whoosh—swish—BAM! You wiped out all the rats!",
-        "npc": 820000,
-        "next": 72003003
-      },
-      {
-        "id": 72003003,
-        "content": "Thank you, you can have this chest!",
-        "npc": 820000,
-        "next": 72003004
-      },
-      {
-        "id": 72004302,
-        "content": "Floaty float, I'm a free little ducky!",
-        "npc": 820000,
-        "next": 72004303
-      },
-      {
-        "id": 72004303,
-        "content": "Eek! Why did you drain my swimming pool?",
-        "npc": 820000,
-        "next": 72004304
-      },
-      {
-        "id": 72004402,
-        "content": "Hiiii, little mushroom-picking human!",
-        "npc": 820000,
-        "next": 72004403
-      },
-      {
-        "id": 72004403,
-        "content": "Mushrooms are yummy, but you have to make sure they're fully cooked, okay?",
-        "npc": 820000,
-        "next": 72004404
-      },
-      {
-        "id": 72004502,
-        "content": "Dum-dum, dum-dum-dum!",
-        "npc": 820000,
-        "next": 72004503
-      },
-      {
-        "id": 72004503,
-        "content": "I'm learning to play this pipe organ!",
-        "npc": 820000,
-        "next": 72004504
-      },
-      {
-        "id": 72004602,
-        "content": "Ta-daa! Congrats on finding my secret base!",
-        "npc": 820000,
-        "next": 72004603
-      },
-      {
-        "id": 72004603,
-        "content": "The vines, the water plants, the pond, and me... we're our own little ecosystem!",
-        "npc": 820000,
-        "next": 72004604
-      }
-    ],
-    "groups": [
-      {
-        "id": 7020075,
-        "srId": 101701,
-        "pos": [
-          -6075,
-          5070
-        ]
-      },
-      {
-        "id": 7021028,
-        "srId": 101701,
-        "pos": [
-          -22090,
-          5830
-        ]
-      },
-      {
-        "id": 7021030,
-        "srId": 101702,
-        "pos": [
-          -35270,
-          -16890
-        ]
-      },
-      {
-        "id": 7022013,
-        "srId": 101703,
-        "pos": [
-          -11660,
-          -5460
-        ]
-      }
-    ]
-  },
-  {
-    "id": 1060,
-    "name": "Paniemon",
-    "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72005902,
-        "content": "Such a neat forest!",
-        "npc": 820000,
-        "next": 72005903
-      },
-      {
-        "id": 72005903,
-        "content": "Did these trees all come from the same mother? Why do they all look the same?",
-        "npc": 820000,
-        "next": 72005904
-      },
-      {
-        "id": 72005904,
-        "content": "Huh? Man-made? Can people give birth to steel frames? I've never heard of that. You better not be tricking me.",
-        "npc": 820000,
-        "next": 72005905
-      },
-      {
-        "id": 72006002,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006003
-      },
-      {
-        "id": 72006003,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006004
-      },
-      {
-        "id": 72006004,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006005
-      },
-      {
-        "id": 72006102,
-        "content": "Hmm... It's quiet here. No people, no passengers, no train sounds—",
-        "npc": 820000,
-        "next": 72006103
-      },
-      {
-        "id": 72006103,
-        "content": "That's what I thought, but when I got here, I realised the echoes actually make the train sounds clearer.",
-        "npc": 820000,
-        "next": 72006104
-      },
-      {
-        "id": 72006104,
-        "content": "I think I'll leave now. Here I go. Bye-bye!",
-        "npc": 820000,
-        "next": 72006105
-      },
-      {
-        "id": 72006202,
-        "content": "Shh... I've figured it out. This is a station too.",
-        "npc": 820000,
-        "next": 72006203
-      },
-      {
-        "id": 72006203,
-        "content": "Lots of animals leave together when the train departs.",
-        "npc": 820000,
-        "next": 72006204
-      },
-      {
-        "id": 72006204,
-        "content": "Huh? You're saying they're just scared?",
-        "npc": 820000,
-        "next": 72006205
-      },
-      {
-        "id": 72006205,
-        "content": "Alright, I'll tell them — trains are just loud. As long as you don't get in their way, everything will be fine!",
-        "npc": 820000,
-        "next": 72006206
-      },
-      {
-        "id": 72004802,
-        "content": "Messy, messy. Dirty, dirty.",
-        "npc": 820000,
-        "next": 72004803
-      },
-      {
-        "id": 72004803,
-        "content": "It's a mess here, and everyone's busy. So I stay here, waiting to see when someone will notice me.",
-        "npc": 820000,
-        "next": 72004804
-      },
-      {
-        "id": 72004804,
-        "content": "How long has it been? Hmm... can't see the sun in here, so I don't really know.",
-        "npc": 820000,
-        "next": 72004805
-      },
-      {
-        "id": 72004805,
-        "content": "But I've been counting — people have come and gone over nine thousand times now.",
-        "npc": 820000,
-        "next": 72004806
-      },
-      {
-        "id": 72004902,
-        "content": "This bronze flower is broken! Flowers have stamens!",
-        "npc": 820000,
-        "next": 72004903
-      },
-      {
-        "id": 72004903,
-        "content": "A flower without a stamen is like a person without a heart.",
-        "npc": 820000,
-        "next": 72004904
-      },
-      {
-        "id": 72004904,
-        "content": "So I'm here pretending to be the stamen. Hello, yes, I'm the stamen.",
-        "npc": 820000,
-        "next": 72004905
-      },
-      {
-        "id": 72005002,
-        "content": "Woke up, and everything was in a different place! Felt like I'd taken a train ride.",
-        "npc": 820000,
-        "next": 72005003
-      },
-      {
-        "id": 72005003,
-        "content": "Thanks, train driver. But this one's made of wood. So I guess... a wood train?",
-        "npc": 820000,
-        "next": 72005004
-      },
-      {
-        "id": 72005102,
-        "content": "Everyone has their own room.",
-        "npc": 820000,
-        "next": 72005103
-      },
-      {
-        "id": 72005103,
-        "content": "I want my own room too. Right here!",
-        "npc": 820000,
-        "next": 72005104
-      },
-      {
-        "id": 72005104,
-        "content": "Welcome to my place. Next up, I'm gonna get some furniture!",
-        "npc": 820000,
-        "next": 72005105
-      },
-      {
-        "id": 72005202,
-        "content": "A slide! This is the best slide ever.",
-        "npc": 820000,
-        "next": 72005203
-      },
-      {
-        "id": 72005203,
-        "content": "People keep flattening my slide, but that's okay.",
-        "npc": 820000,
-        "next": 72005204
-      },
-      {
-        "id": 72005204,
-        "content": "I can just ice-skate on these flat crates instead!",
-        "npc": 820000,
-        "next": 72005205
-      },
-      {
-        "id": 72005302,
-        "content": "All the iron boxes here look the same.",
-        "npc": 820000,
-        "next": 72005303
-      },
-      {
-        "id": 72005303,
-        "content": "How do they tell their brothers and sisters apart?",
-        "npc": 820000,
-        "next": 72005304
-      },
-      {
-        "id": 72005304,
-        "content": "No need to tell them apart? No, that can't be right. Without family, you'd be lonely.",
-        "npc": 820000,
-        "next": 72005305
-      },
-      {
-        "id": 72005402,
-        "content": "Humans weave flowers into rings and put them on people they like.",
-        "npc": 820000,
-        "next": 72005403
-      },
-      {
-        "id": 72005403,
-        "content": "I like this place. So I drew a circle with my footprints and put it on here!",
-        "npc": 820000,
-        "next": 72005404
-      },
-      {
-        "id": 72005502,
-        "content": "This place is dangerous! It's as tall as dozens of me stacked up.",
-        "npc": 820000,
-        "next": 72005503
-      },
-      {
-        "id": 72005503,
-        "content": "So I left a mark right in the middle of every board.",
-        "npc": 820000,
-        "next": 72005504
-      },
-      {
-        "id": 72005504,
-        "content": "Follow the marks, and you won't have to worry about falling down.",
-        "npc": 820000,
-        "next": 72005505
-      },
-      {
-        "id": 72005602,
-        "content": "The guards are patrolling.",
-        "npc": 820000,
-        "next": 72005603
-      },
-      {
-        "id": 72005603,
-        "content": "But they can't see what's behind them.",
-        "npc": 820000,
-        "next": 72005604
-      },
-      {
-        "id": 72005604,
-        "content": "I patrol too — going the opposite way.",
-        "npc": 820000,
-        "next": 72005605
-      },
-      {
-        "id": 72005605,
-        "content": "That way, no bad guys can get close. Perfect!",
-        "npc": 820000,
-        "next": 72005606
-      },
-      {
-        "id": 72005702,
-        "content": "A vehicle that follows a fixed path is a train.",
-        "npc": 820000,
-        "next": 72005703
-      },
-      {
-        "id": 72005703,
-        "content": "A Paniemon that follows a fixed path is a Trainiemon.",
-        "npc": 820000,
-        "next": 72005704
-      },
-      {
-        "id": 72005704,
-        "content": "What do you think? I really like this name!",
-        "npc": 820000,
-        "next": 72005705
-      },
-      {
-        "id": 72005802,
-        "content": "Trains are so silly. They need a track in front to lead them across a bridge.",
-        "npc": 820000,
-        "next": 72005803
-      },
-      {
-        "id": 72005803,
-        "content": "So I'll show them — just jump like me! Problem solved!",
-        "npc": 820000,
-        "next": 72005804
-      },
-      {
-        "id": 72005804,
-        "content": "If they can't jump... that's their problem. They're always running, so they should be light on their feet.",
-        "npc": 820000,
-        "next": 72005805
-      },
-      {
-        "id": 72005805,
-        "content": "What's wrong with them?",
-        "npc": 820000,
-        "next": 72005806
-      },
-      {
-        "id": 72006302,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006303
-      },
-      {
-        "id": 72006303,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006304
-      },
-      {
-        "id": 72004702,
-        "content": "Glass is see-through, so nobody pays it any mind.",
-        "npc": 820000,
-        "next": 72004703
-      },
-      {
-        "id": 72004703,
-        "content": "Unless its face gets dirty — then someone comes to wash it.",
-        "npc": 820000,
-        "next": 72004704
-      },
-      {
-        "id": 72004704,
-        "content": "So, did you come to me because I got something dirty?",
-        "npc": 820000,
-        "next": 72004705
-      }
-    ],
-    "groups": [
-      {
-        "id": 7090063,
-        "srId": 106001,
-        "pos": [
-          -10873,
-          -4790
-        ]
-      },
-      {
-        "id": 7090064,
-        "srId": 106001,
-        "pos": [
-          -3045,
-          4865
-        ]
-      },
-      {
-        "id": 7090065,
-        "srId": 106001,
-        "pos": [
-          -7976,
-          10
-        ]
-      },
-      {
-        "id": 7090070,
-        "srId": 106001,
-        "pos": [
-          -7982,
-          -655
-        ]
-      },
-      {
-        "id": 7090071,
-        "srId": 106001,
-        "pos": [
-          -6704,
-          7194
-        ]
-      },
-      {
-        "id": 7090075,
-        "srId": 106001,
-        "pos": [
-          -31907,
-          19386
-        ]
-      }
-    ]
-  },
-  {
-    "id": 1063,
-    "name": "Paniemon",
-    "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72005902,
-        "content": "Such a neat forest!",
-        "npc": 820000,
-        "next": 72005903
-      },
-      {
-        "id": 72005903,
-        "content": "Did these trees all come from the same mother? Why do they all look the same?",
-        "npc": 820000,
-        "next": 72005904
-      },
-      {
-        "id": 72005904,
-        "content": "Huh? Man-made? Can people give birth to steel frames? I've never heard of that. You better not be tricking me.",
-        "npc": 820000,
-        "next": 72005905
-      },
-      {
-        "id": 72006002,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006003
-      },
-      {
-        "id": 72006003,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006004
-      },
-      {
-        "id": 72006004,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006005
-      },
-      {
-        "id": 72006102,
-        "content": "Hmm... It's quiet here. No people, no passengers, no train sounds—",
-        "npc": 820000,
-        "next": 72006103
-      },
-      {
-        "id": 72006103,
-        "content": "That's what I thought, but when I got here, I realised the echoes actually make the train sounds clearer.",
-        "npc": 820000,
-        "next": 72006104
-      },
-      {
-        "id": 72006104,
-        "content": "I think I'll leave now. Here I go. Bye-bye!",
-        "npc": 820000,
-        "next": 72006105
-      },
-      {
-        "id": 72006202,
-        "content": "Shh... I've figured it out. This is a station too.",
-        "npc": 820000,
-        "next": 72006203
-      },
-      {
-        "id": 72006203,
-        "content": "Lots of animals leave together when the train departs.",
-        "npc": 820000,
-        "next": 72006204
-      },
-      {
-        "id": 72006204,
-        "content": "Huh? You're saying they're just scared?",
-        "npc": 820000,
-        "next": 72006205
-      },
-      {
-        "id": 72006205,
-        "content": "Alright, I'll tell them — trains are just loud. As long as you don't get in their way, everything will be fine!",
-        "npc": 820000,
-        "next": 72006206
-      },
-      {
-        "id": 72004802,
-        "content": "Messy, messy. Dirty, dirty.",
-        "npc": 820000,
-        "next": 72004803
-      },
-      {
-        "id": 72004803,
-        "content": "It's a mess here, and everyone's busy. So I stay here, waiting to see when someone will notice me.",
-        "npc": 820000,
-        "next": 72004804
-      },
-      {
-        "id": 72004804,
-        "content": "How long has it been? Hmm... can't see the sun in here, so I don't really know.",
-        "npc": 820000,
-        "next": 72004805
-      },
-      {
-        "id": 72004805,
-        "content": "But I've been counting — people have come and gone over nine thousand times now.",
-        "npc": 820000,
-        "next": 72004806
-      },
-      {
-        "id": 72004902,
-        "content": "This bronze flower is broken! Flowers have stamens!",
-        "npc": 820000,
-        "next": 72004903
-      },
-      {
-        "id": 72004903,
-        "content": "A flower without a stamen is like a person without a heart.",
-        "npc": 820000,
-        "next": 72004904
-      },
-      {
-        "id": 72004904,
-        "content": "So I'm here pretending to be the stamen. Hello, yes, I'm the stamen.",
-        "npc": 820000,
-        "next": 72004905
-      },
-      {
-        "id": 72005002,
-        "content": "Woke up, and everything was in a different place! Felt like I'd taken a train ride.",
-        "npc": 820000,
-        "next": 72005003
-      },
-      {
-        "id": 72005003,
-        "content": "Thanks, train driver. But this one's made of wood. So I guess... a wood train?",
-        "npc": 820000,
-        "next": 72005004
-      },
-      {
-        "id": 72005102,
-        "content": "Everyone has their own room.",
-        "npc": 820000,
-        "next": 72005103
-      },
-      {
-        "id": 72005103,
-        "content": "I want my own room too. Right here!",
-        "npc": 820000,
-        "next": 72005104
-      },
-      {
-        "id": 72005104,
-        "content": "Welcome to my place. Next up, I'm gonna get some furniture!",
-        "npc": 820000,
-        "next": 72005105
-      },
-      {
-        "id": 72005202,
-        "content": "A slide! This is the best slide ever.",
-        "npc": 820000,
-        "next": 72005203
-      },
-      {
-        "id": 72005203,
-        "content": "People keep flattening my slide, but that's okay.",
-        "npc": 820000,
-        "next": 72005204
-      },
-      {
-        "id": 72005204,
-        "content": "I can just ice-skate on these flat crates instead!",
-        "npc": 820000,
-        "next": 72005205
-      },
-      {
-        "id": 72005302,
-        "content": "All the iron boxes here look the same.",
-        "npc": 820000,
-        "next": 72005303
-      },
-      {
-        "id": 72005303,
-        "content": "How do they tell their brothers and sisters apart?",
-        "npc": 820000,
-        "next": 72005304
-      },
-      {
-        "id": 72005304,
-        "content": "No need to tell them apart? No, that can't be right. Without family, you'd be lonely.",
-        "npc": 820000,
-        "next": 72005305
-      },
-      {
-        "id": 72005402,
-        "content": "Humans weave flowers into rings and put them on people they like.",
-        "npc": 820000,
-        "next": 72005403
-      },
-      {
-        "id": 72005403,
-        "content": "I like this place. So I drew a circle with my footprints and put it on here!",
-        "npc": 820000,
-        "next": 72005404
-      },
-      {
-        "id": 72005502,
-        "content": "This place is dangerous! It's as tall as dozens of me stacked up.",
-        "npc": 820000,
-        "next": 72005503
-      },
-      {
-        "id": 72005503,
-        "content": "So I left a mark right in the middle of every board.",
-        "npc": 820000,
-        "next": 72005504
-      },
-      {
-        "id": 72005504,
-        "content": "Follow the marks, and you won't have to worry about falling down.",
-        "npc": 820000,
-        "next": 72005505
-      },
-      {
-        "id": 72005602,
-        "content": "The guards are patrolling.",
-        "npc": 820000,
-        "next": 72005603
-      },
-      {
-        "id": 72005603,
-        "content": "But they can't see what's behind them.",
-        "npc": 820000,
-        "next": 72005604
-      },
-      {
-        "id": 72005604,
-        "content": "I patrol too — going the opposite way.",
-        "npc": 820000,
-        "next": 72005605
-      },
-      {
-        "id": 72005605,
-        "content": "That way, no bad guys can get close. Perfect!",
-        "npc": 820000,
-        "next": 72005606
-      },
-      {
-        "id": 72005702,
-        "content": "A vehicle that follows a fixed path is a train.",
-        "npc": 820000,
-        "next": 72005703
-      },
-      {
-        "id": 72005703,
-        "content": "A Paniemon that follows a fixed path is a Trainiemon.",
-        "npc": 820000,
-        "next": 72005704
-      },
-      {
-        "id": 72005704,
-        "content": "What do you think? I really like this name!",
-        "npc": 820000,
-        "next": 72005705
-      },
-      {
-        "id": 72005802,
-        "content": "Trains are so silly. They need a track in front to lead them across a bridge.",
-        "npc": 820000,
-        "next": 72005803
-      },
-      {
-        "id": 72005803,
-        "content": "So I'll show them — just jump like me! Problem solved!",
-        "npc": 820000,
-        "next": 72005804
-      },
-      {
-        "id": 72005804,
-        "content": "If they can't jump... that's their problem. They're always running, so they should be light on their feet.",
-        "npc": 820000,
-        "next": 72005805
-      },
-      {
-        "id": 72005805,
-        "content": "What's wrong with them?",
-        "npc": 820000,
-        "next": 72005806
-      },
-      {
-        "id": 72006302,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006303
-      },
-      {
-        "id": 72006303,
-        "content": "{空格}",
-        "npc": 820000,
-        "next": 72006304
-      },
-      {
-        "id": 72004702,
-        "content": "Glass is see-through, so nobody pays it any mind.",
-        "npc": 820000,
-        "next": 72004703
-      },
-      {
-        "id": 72004703,
-        "content": "Unless its face gets dirty — then someone comes to wash it.",
-        "npc": 820000,
-        "next": 72004704
-      },
-      {
-        "id": 72004704,
-        "content": "So, did you come to me because I got something dirty?",
-        "npc": 820000,
-        "next": 72004705
-      }
-    ],
-    "groups": [
-      {
-        "id": 7091038,
-        "srId": 106301,
-        "pos": [
-          -14669,
-          8847
-        ]
-      },
-      {
-        "id": 7091039,
-        "srId": 106301,
-        "pos": [
-          -9064,
-          17552
-        ]
-      },
-      {
-        "id": 7091040,
-        "srId": 106301,
-        "pos": [
-          -12266,
-          15492
-        ]
-      },
-      {
-        "id": 7091041,
-        "srId": 106301,
-        "pos": [
-          -19590,
-          11386
-        ]
-      },
-      {
-        "id": 7091042,
-        "srId": 106301,
-        "pos": [
-          -12930,
-          368
-        ]
-      },
-      {
-        "id": 7091043,
-        "srId": 106301,
-        "pos": [
-          -13386,
-          7056
-        ]
-      },
-      {
-        "id": 7091044,
-        "srId": 106301,
-        "pos": [
-          -16072,
-          13405
+        ],
+        "dialogues": [
+          {
+            "id": 72000502,
+            "content": "Thank you, leafy human... I was stuck in this cold, round bucket for ages...",
+            "npc": 820000,
+            "next": 72000503
+          },
+          {
+            "id": 72000503,
+            "content": "Hmm, the grass is gone... But thank you anyway, snowy human.",
+            "npc": 820000,
+            "next": 72000504
+          }
         ]
       }
     ]
@@ -1007,236 +120,6 @@
     "id": 1011,
     "name": "Paniemon",
     "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72001002,
-        "content": "The wall says it only keeps out what it wants to keep out.",
-        "npc": 820000,
-        "next": 72001003
-      },
-      {
-        "id": 72001003,
-        "content": "But if it likes you... it lets you through.",
-        "npc": 820000,
-        "next": 72001004
-      },
-      {
-        "id": 72000002,
-        "content": "兄弟，你好",
-        "npc": 820000,
-        "next": 72000003
-      },
-      {
-        "id": 72000003,
-        "content": "很高兴见到你",
-        "npc": 820000,
-        "next": 72000004
-      },
-      {
-        "id": 72001102,
-        "content": "I thought this box was a Bro Boxie. I spent forever trying to talk him into moving.",
-        "npc": 820000,
-        "next": 72001103
-      },
-      {
-        "id": 72001103,
-        "content": "Turns out he wasn't. Maybe I should've given him a teeny kick...",
-        "npc": 820000,
-        "next": 72001104
-      },
-      {
-        "id": 72001202,
-        "content": "This tree looks tired... It's just lying down for a nap.",
-        "npc": 820000,
-        "next": 72001203
-      },
-      {
-        "id": 72001203,
-        "content": "Do you think the snow on the ground is tired too? Maybe it just wanted a little rest.",
-        "npc": 820000,
-        "next": 72001204
-      },
-      {
-        "id": 72001302,
-        "content": "It's nice and warm here. You can sit with me if you like.",
-        "npc": 820000,
-        "next": 72001303
-      },
-      {
-        "id": 72001303,
-        "content": "Just don't stay too long — my other friends might get chilly.",
-        "npc": 820000,
-        "next": 72001304
-      },
-      {
-        "id": 72001402,
-        "content": "This is a dead end... mm...",
-        "npc": 820000,
-        "next": 72001403
-      },
-      {
-        "id": 72001403,
-        "content": "Or maybe what I meant was — I want to be alone for a while. Would you like to be alone with me?",
-        "npc": 820000,
-        "next": 72001404
-      },
-      {
-        "id": 72001404,
-        "content": "But... does that still count as being alone?",
-        "npc": 820000,
-        "next": 72001405
-      },
-      {
-        "id": 72001502,
-        "content": "These houses look so tired. Their skin's all spotty and peeling...",
-        "npc": 820000,
-        "next": 72001503
-      },
-      {
-        "id": 72001503,
-        "content": "I hope they get better soon.",
-        "npc": 820000,
-        "next": 72001504
-      },
-      {
-        "id": 72001602,
-        "content": "This mountain is so tall! So bright! Look at me — on the top! I'm amazing!",
-        "npc": 820000,
-        "next": 72001603
-      },
-      {
-        "id": 72001603,
-        "content": "Eeya? This isn't a mountain? Uh-uh!",
-        "npc": 820000,
-        "next": 72001604
-      },
-      {
-        "id": 72001604,
-        "content": "It's tall and pointy... totally a mountain!",
-        "npc": 820000,
-        "next": 72001605
-      },
-      {
-        "id": 72001702,
-        "content": "If you can see the path right under your feet... Would you still be less scared of the Filthoids?",
-        "npc": 820000,
-        "next": 72001703
-      },
-      {
-        "id": 72001703,
-        "content": "Ta-da~! Now it's all nice and bright.",
-        "npc": 820000,
-        "next": 72001704
-      },
-      {
-        "id": 72001802,
-        "content": "I smell many people here... But I don't see them.",
-        "npc": 820000,
-        "next": 72001803
-      },
-      {
-        "id": 72001803,
-        "content": "Where did they go?",
-        "npc": 820000,
-        "next": 72001804
-      },
-      {
-        "id": 72001902,
-        "content": "Hmph! Everyone's here — except that one who ran away!",
-        "npc": 820000,
-        "next": 72001903
-      },
-      {
-        "id": 72001903,
-        "content": "Alright, now, let's start the Boxie Party!",
-        "npc": 820000,
-        "next": 72001904
-      },
-      {
-        "id": 72002202,
-        "content": "I want to race the cars.",
-        "npc": 820000,
-        "next": 72002203
-      },
-      {
-        "id": 72002203,
-        "content": "But what if they go too fast and slip? I'd feel bad for them...",
-        "npc": 820000,
-        "next": 72002204
-      },
-      {
-        "id": 72002302,
-        "content": "Flowers are so kind. They always make people smile.",
-        "npc": 820000,
-        "next": 72002303
-      },
-      {
-        "id": 72002303,
-        "content": "Do you think they whisper little secrets to them when we're not looking?",
-        "npc": 820000,
-        "next": 72002304
-      },
-      {
-        "id": 72002402,
-        "content": "Do you think... someone super strong — like a god, maybe — could pick up the whole Lamenting Lake and eat it like candy?",
-        "npc": 820000,
-        "next": 72002403
-      },
-      {
-        "id": 72002403,
-        "content": "I wonder what it tastes like. It's blue, so... maybe it tastes like the sky?",
-        "npc": 820000,
-        "next": 72002404
-      },
-      {
-        "id": 72002502,
-        "content": "Are you taking this flower with you? She'll be really happy.",
-        "npc": 820000,
-        "next": 72002503
-      },
-      {
-        "id": 72002503,
-        "content": "Because now she gets to go on a little trip.",
-        "npc": 820000,
-        "next": 72002504
-      },
-      {
-        "id": 72002602,
-        "content": "Mm~ Thank you for building a cabin for me.",
-        "npc": 820000,
-        "next": 72002603
-      },
-      {
-        "id": 72002603,
-        "content": "If you ever grow as tall as me, you can move in too — and we'll be neighbours.",
-        "npc": 820000,
-        "next": 72002604
-      },
-      {
-        "id": 72002702,
-        "content": "Where are you off to?",
-        "npc": 820000,
-        "next": 72002703
-      },
-      {
-        "id": 72002703,
-        "content": "If you see that human who looks like a piece of broken glass... try to be her friend, okay?",
-        "npc": 820000,
-        "next": 72002704
-      },
-      {
-        "id": 72002802,
-        "content": "Ding ding ding~! Clink clink clink!",
-        "npc": 820000,
-        "next": 72002803
-      },
-      {
-        "id": 72002803,
-        "content": "That's how the bottles sing! ...Well? Did I get it right?",
-        "npc": 820000,
-        "next": 72002804
-      }
-    ],
     "groups": [
       {
         "id": 7010091,
@@ -1244,6 +127,20 @@
         "pos": [
           -6800,
           14207
+        ],
+        "dialogues": [
+          {
+            "id": 72001102,
+            "content": "I thought this box was a Bro Boxie. I spent forever trying to talk him into moving.",
+            "npc": 820000,
+            "next": 72001103
+          },
+          {
+            "id": 72001103,
+            "content": "Turns out he wasn't. Maybe I should've given him a teeny kick...",
+            "npc": 820000,
+            "next": 72001104
+          }
         ]
       },
       {
@@ -1252,6 +149,20 @@
         "pos": [
           2622,
           15568
+        ],
+        "dialogues": [
+          {
+            "id": 72001202,
+            "content": "This tree looks tired... It's just lying down for a nap.",
+            "npc": 820000,
+            "next": 72001203
+          },
+          {
+            "id": 72001203,
+            "content": "Do you think the snow on the ground is tired too? Maybe it just wanted a little rest.",
+            "npc": 820000,
+            "next": 72001204
+          }
         ]
       },
       {
@@ -1260,6 +171,20 @@
         "pos": [
           -5764,
           3585
+        ],
+        "dialogues": [
+          {
+            "id": 72001302,
+            "content": "It's nice and warm here. You can sit with me if you like.",
+            "npc": 820000,
+            "next": 72001303
+          },
+          {
+            "id": 72001303,
+            "content": "Just don't stay too long — my other friends might get chilly.",
+            "npc": 820000,
+            "next": 72001304
+          }
         ]
       },
       {
@@ -1268,6 +193,26 @@
         "pos": [
           -1875,
           2287
+        ],
+        "dialogues": [
+          {
+            "id": 72001402,
+            "content": "This is a dead end... mm...",
+            "npc": 820000,
+            "next": 72001403
+          },
+          {
+            "id": 72001403,
+            "content": "Or maybe what I meant was — I want to be alone for a while. Would you like to be alone with me?",
+            "npc": 820000,
+            "next": 72001404
+          },
+          {
+            "id": 72001404,
+            "content": "But... does that still count as being alone?",
+            "npc": 820000,
+            "next": 72001405
+          }
         ]
       },
       {
@@ -1276,6 +221,20 @@
         "pos": [
           -3618,
           -10058
+        ],
+        "dialogues": [
+          {
+            "id": 72001502,
+            "content": "These houses look so tired. Their skin's all spotty and peeling...",
+            "npc": 820000,
+            "next": 72001503
+          },
+          {
+            "id": 72001503,
+            "content": "I hope they get better soon.",
+            "npc": 820000,
+            "next": 72001504
+          }
         ]
       },
       {
@@ -1284,6 +243,26 @@
         "pos": [
           -2836,
           -1235
+        ],
+        "dialogues": [
+          {
+            "id": 72001602,
+            "content": "This mountain is so tall! So bright! Look at me — on the top! I'm amazing!",
+            "npc": 820000,
+            "next": 72001603
+          },
+          {
+            "id": 72001603,
+            "content": "Eeya? This isn't a mountain? Uh-uh!",
+            "npc": 820000,
+            "next": 72001604
+          },
+          {
+            "id": 72001604,
+            "content": "It's tall and pointy... totally a mountain!",
+            "npc": 820000,
+            "next": 72001605
+          }
         ]
       },
       {
@@ -1292,6 +271,20 @@
         "pos": [
           -11678,
           279
+        ],
+        "dialogues": [
+          {
+            "id": 72001002,
+            "content": "The wall says it only keeps out what it wants to keep out.",
+            "npc": 820000,
+            "next": 72001003
+          },
+          {
+            "id": 72001003,
+            "content": "But if it likes you... it lets you through.",
+            "npc": 820000,
+            "next": 72001004
+          }
         ]
       },
       {
@@ -1300,6 +293,20 @@
         "pos": [
           -25486,
           -3701
+        ],
+        "dialogues": [
+          {
+            "id": 72002202,
+            "content": "I want to race the cars.",
+            "npc": 820000,
+            "next": 72002203
+          },
+          {
+            "id": 72002203,
+            "content": "But what if they go too fast and slip? I'd feel bad for them...",
+            "npc": 820000,
+            "next": 72002204
+          }
         ]
       },
       {
@@ -1308,6 +315,20 @@
         "pos": [
           -31822,
           -12454
+        ],
+        "dialogues": [
+          {
+            "id": 72001702,
+            "content": "If you can see the path right under your feet... Would you still be less scared of the Filthoids?",
+            "npc": 820000,
+            "next": 72001703
+          },
+          {
+            "id": 72001703,
+            "content": "Ta-da~! Now it's all nice and bright.",
+            "npc": 820000,
+            "next": 72001704
+          }
         ]
       },
       {
@@ -1316,6 +337,20 @@
         "pos": [
           -29450,
           -9128
+        ],
+        "dialogues": [
+          {
+            "id": 72001902,
+            "content": "Hmph! Everyone's here — except that one who ran away!",
+            "npc": 820000,
+            "next": 72001903
+          },
+          {
+            "id": 72001903,
+            "content": "Alright, now, let's start the Boxie Party!",
+            "npc": 820000,
+            "next": 72001904
+          }
         ]
       },
       {
@@ -1324,6 +359,20 @@
         "pos": [
           -12528,
           -1850
+        ],
+        "dialogues": [
+          {
+            "id": 72002402,
+            "content": "Do you think... someone super strong — like a god, maybe — could pick up the whole Lamenting Lake and eat it like candy?",
+            "npc": 820000,
+            "next": 72002403
+          },
+          {
+            "id": 72002403,
+            "content": "I wonder what it tastes like. It's blue, so... maybe it tastes like the sky?",
+            "npc": 820000,
+            "next": 72002404
+          }
         ]
       },
       {
@@ -1332,6 +381,20 @@
         "pos": [
           -33946,
           11686
+        ],
+        "dialogues": [
+          {
+            "id": 72002602,
+            "content": "Mm~ Thank you for building a cabin for me.",
+            "npc": 820000,
+            "next": 72002603
+          },
+          {
+            "id": 72002603,
+            "content": "If you ever grow as tall as me, you can move in too — and we'll be neighbours.",
+            "npc": 820000,
+            "next": 72002604
+          }
         ]
       },
       {
@@ -1340,6 +403,20 @@
         "pos": [
           -45413,
           -7469
+        ],
+        "dialogues": [
+          {
+            "id": 72001802,
+            "content": "I smell many people here... But I don't see them.",
+            "npc": 820000,
+            "next": 72001803
+          },
+          {
+            "id": 72001803,
+            "content": "Where did they go?",
+            "npc": 820000,
+            "next": 72001804
+          }
         ]
       },
       {
@@ -1348,6 +425,20 @@
         "pos": [
           37795,
           13388
+        ],
+        "dialogues": [
+          {
+            "id": 72002702,
+            "content": "Where are you off to?",
+            "npc": 820000,
+            "next": 72002703
+          },
+          {
+            "id": 72002703,
+            "content": "If you see that human who looks like a piece of broken glass... try to be her friend, okay?",
+            "npc": 820000,
+            "next": 72002704
+          }
         ]
       }
     ]
@@ -1356,56 +447,6 @@
     "id": 1013,
     "name": "Paniemon",
     "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72000002,
-        "content": "兄弟，你好",
-        "npc": 820000,
-        "next": 72000003
-      },
-      {
-        "id": 72000003,
-        "content": "很高兴见到你",
-        "npc": 820000,
-        "next": 72000004
-      },
-      {
-        "id": 72004002,
-        "content": "Every light that goes out is someone who didn't make it home...",
-        "npc": 820000,
-        "next": 72004003
-      },
-      {
-        "id": 72004003,
-        "content": "Then every light that turns on must be someone who found their way back, right?",
-        "npc": 820000,
-        "next": 72004004
-      },
-      {
-        "id": 72004102,
-        "content": "Eeeek! You broke my little house!",
-        "npc": 820000,
-        "next": 72004103
-      },
-      {
-        "id": 72004103,
-        "content": "They say sleeping on a super hard bed can help train your willpower!",
-        "npc": 820000,
-        "next": 72004104
-      },
-      {
-        "id": 72004202,
-        "content": "What's the point of stacking boxes so high?",
-        "npc": 820000,
-        "next": 72004203
-      },
-      {
-        "id": 72004203,
-        "content": "You should just let me have them for my house!",
-        "npc": 820000,
-        "next": 72004204
-      }
-    ],
     "groups": [
       {
         "id": 7012018,
@@ -1413,6 +454,20 @@
         "pos": [
           10360,
           4110
+        ],
+        "dialogues": [
+          {
+            "id": 72004002,
+            "content": "Every light that goes out is someone who didn't make it home...",
+            "npc": 820000,
+            "next": 72004003
+          },
+          {
+            "id": 72004003,
+            "content": "Then every light that turns on must be someone who found their way back, right?",
+            "npc": 820000,
+            "next": 72004004
+          }
         ]
       },
       {
@@ -1421,6 +476,127 @@
         "pos": [
           17200,
           34020
+        ],
+        "dialogues": [
+          {
+            "id": 72004202,
+            "content": "What's the point of stacking boxes so high?",
+            "npc": 820000,
+            "next": 72004203
+          },
+          {
+            "id": 72004203,
+            "content": "You should just let me have them for my house!",
+            "npc": 820000,
+            "next": 72004204
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1017,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "groups": [
+      {
+        "id": 7020075,
+        "srId": 101701,
+        "pos": [
+          -6075,
+          5070
+        ],
+        "dialogues": [
+          {
+            "id": 72004302,
+            "content": "Floaty float, I'm a free little ducky!",
+            "npc": 820000,
+            "next": 72004303
+          },
+          {
+            "id": 72004303,
+            "content": "Eek! Why did you drain my swimming pool?",
+            "npc": 820000,
+            "next": 72004304
+          }
+        ]
+      },
+      {
+        "id": 7021028,
+        "srId": 101701,
+        "pos": [
+          -22090,
+          5830
+        ],
+        "dialogues": [
+          {
+            "id": 72004602,
+            "content": "Ta-daa! Congrats on finding my secret base!",
+            "npc": 820000,
+            "next": 72004603
+          },
+          {
+            "id": 72004603,
+            "content": "The vines, the water plants, the pond, and me... we're our own little ecosystem!",
+            "npc": 820000,
+            "next": 72004604
+          }
+        ]
+      },
+      {
+        "id": 7021030,
+        "srId": 101702,
+        "pos": [
+          -35270,
+          -16890
+        ],
+        "dialogues": [
+          {
+            "id": 72004502,
+            "content": "Dum-dum, dum-dum-dum!",
+            "npc": 820000,
+            "next": 72004503
+          },
+          {
+            "id": 72004503,
+            "content": "I'm learning to play this pipe organ!",
+            "npc": 820000,
+            "next": 72004504
+          }
+        ]
+      },
+      {
+        "id": 7022013,
+        "srId": 101703,
+        "pos": [
+          -11660,
+          -5460
+        ],
+        "dialogues": [
+          {
+            "id": 72002902,
+            "content": "Eek! Please don't take that treasure chest!",
+            "npc": 820000,
+            "next": 72002903
+          },
+          {
+            "id": 72002903,
+            "content": "My home's been taken over by nasty rats! I was gonna use these coins to hire a brave little cat to chase them away.",
+            "npc": 820000,
+            "next": 72002904
+          },
+          {
+            "id": 72003002,
+            "content": "Whoa, you're amazing! Whoosh—swish—BAM! You wiped out all the rats!",
+            "npc": 820000,
+            "next": 72003003
+          },
+          {
+            "id": 72003003,
+            "content": "Thank you, you can have this chest!",
+            "npc": 820000,
+            "next": 72003004
+          }
         ]
       }
     ]
@@ -1429,156 +605,6 @@
     "id": 1021,
     "name": "Paniemon",
     "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72000002,
-        "content": "兄弟，你好",
-        "npc": 820000,
-        "next": 72000003
-      },
-      {
-        "id": 72000003,
-        "content": "很高兴见到你",
-        "npc": 820000,
-        "next": 72000004
-      },
-      {
-        "id": 72003102,
-        "content": "What are you looking for?",
-        "npc": 820000,
-        "next": 72003103
-      },
-      {
-        "id": 72003103,
-        "content": "If you're not looking for me, I can help.",
-        "npc": 820000,
-        "next": 72003104
-      },
-      {
-        "id": 72003302,
-        "content": "So many people came, and so many left.",
-        "npc": 820000,
-        "next": 72003303
-      },
-      {
-        "id": 72003303,
-        "content": "So many scents lingering... I can't remember them all. Can you?",
-        "npc": 820000,
-        "next": 72003304
-      },
-      {
-        "id": 72003402,
-        "content": "This is my treasure trove! Only those who pass the trial of wisdom may enter!",
-        "npc": 820000,
-        "next": 72003403
-      },
-      {
-        "id": 72003403,
-        "content": "So tell me — here, in this fortress... What colour lets you through?",
-        "npc": 820000
-      },
-      {
-        "id": 72003502,
-        "content": "Owie...! That steam hit me.",
-        "npc": 820000,
-        "next": 72003503
-      },
-      {
-        "id": 72003503,
-        "content": "He's mean. I don't like him. And you shouldn't be his friend, either!",
-        "npc": 820000,
-        "next": 72003504
-      },
-      {
-        "id": 72003602,
-        "content": "Mmm... this place smells a bit like the outside world. It smells happy, and awesome!",
-        "npc": 820000,
-        "next": 72003603
-      },
-      {
-        "id": 72003603,
-        "content": "Not like those other places full of the smell of yelling and fighting.",
-        "npc": 820000,
-        "next": 72003604
-      },
-      {
-        "id": 72003407,
-        "content": "That's right! You picked the right colour — so in you go!",
-        "npc": 820000,
-        "next": 72003409
-      },
-      {
-        "id": 72003408,
-        "content": "Nope! Have another think. A really good one this time!",
-        "npc": 820000,
-        "next": 72003409
-      },
-      {
-        "id": 72003702,
-        "content": "So... if Catizz counts as a car... How many cars are there in this room?",
-        "npc": 820000
-      },
-      {
-        "id": 72003706,
-        "content": "Eeya~ Better count again, just to be sure!",
-        "npc": 820000,
-        "next": 72003708
-      },
-      {
-        "id": 72003707,
-        "content": "So was it the cars that came first... or Catizz?",
-        "npc": 820000,
-        "next": 72003708
-      },
-      {
-        "id": 72000602,
-        "content": "Spin, spin, spin... oh no, I'm dizzy.",
-        "npc": 820000,
-        "next": 72000603
-      },
-      {
-        "id": 72000603,
-        "content": "This thing's dangerous! It's full of Phoxichor, but it just keeps turning and turning. Is it a trap?",
-        "npc": 820000,
-        "next": 72000604
-      },
-      {
-        "id": 72000702,
-        "content": "Some run, some chase...",
-        "npc": 820000,
-        "next": 72000703
-      },
-      {
-        "id": 72000703,
-        "content": "Do humans like playing hide-and-seek too? But none of you look like you're having fun...",
-        "npc": 820000,
-        "next": 72000704
-      },
-      {
-        "id": 72000802,
-        "content": "Three soldiers went to the zoo... Two ran off to chase the sun...",
-        "npc": 820000,
-        "next": 72000803
-      },
-      {
-        "id": 72000803,
-        "content": "And one... will be just fine.",
-        "npc": 820000,
-        "next": 72000804
-      },
-      {
-        "id": 72000902,
-        "content": "There. Now no one's sitting the wrong way round.",
-        "npc": 820000,
-        "next": 72000903
-      },
-      {
-        "id": 72000903,
-        "content": "No more bumped knees either — even if your legs are super long.",
-        "npc": 820000,
-        "next": 72000904
-      }
-    ],
     "groups": [
       {
         "id": 7030055,
@@ -1586,6 +612,20 @@
         "pos": [
           -4267,
           -47051
+        ],
+        "dialogues": [
+          {
+            "id": 72000602,
+            "content": "Spin, spin, spin... oh no, I'm dizzy.",
+            "npc": 820000,
+            "next": 72000603
+          },
+          {
+            "id": 72000603,
+            "content": "This thing's dangerous! It's full of Phoxichor, but it just keeps turning and turning. Is it a trap?",
+            "npc": 820000,
+            "next": 72000604
+          }
         ]
       },
       {
@@ -1594,6 +634,20 @@
         "pos": [
           -6281,
           -3629
+        ],
+        "dialogues": [
+          {
+            "id": 72000702,
+            "content": "Some run, some chase...",
+            "npc": 820000,
+            "next": 72000703
+          },
+          {
+            "id": 72000703,
+            "content": "Do humans like playing hide-and-seek too? But none of you look like you're having fun...",
+            "npc": 820000,
+            "next": 72000704
+          }
         ]
       },
       {
@@ -1602,6 +656,20 @@
         "pos": [
           11421,
           -48647
+        ],
+        "dialogues": [
+          {
+            "id": 72003102,
+            "content": "What are you looking for?",
+            "npc": 820000,
+            "next": 72003103
+          },
+          {
+            "id": 72003103,
+            "content": "If you're not looking for me, I can help.",
+            "npc": 820000,
+            "next": 72003104
+          }
         ]
       },
       {
@@ -1610,6 +678,20 @@
         "pos": [
           -2443,
           -42175
+        ],
+        "dialogues": [
+          {
+            "id": 72003302,
+            "content": "So many people came, and so many left.",
+            "npc": 820000,
+            "next": 72003303
+          },
+          {
+            "id": 72003303,
+            "content": "So many scents lingering... I can't remember them all. Can you?",
+            "npc": 820000,
+            "next": 72003304
+          }
         ]
       },
       {
@@ -1618,6 +700,20 @@
         "pos": [
           11012,
           -31063
+        ],
+        "dialogues": [
+          {
+            "id": 72000802,
+            "content": "Three soldiers went to the zoo... Two ran off to chase the sun...",
+            "npc": 820000,
+            "next": 72000803
+          },
+          {
+            "id": 72000803,
+            "content": "And one... will be just fine.",
+            "npc": 820000,
+            "next": 72000804
+          }
         ]
       },
       {
@@ -1626,6 +722,20 @@
         "pos": [
           -5805,
           -20124
+        ],
+        "dialogues": [
+          {
+            "id": 72003602,
+            "content": "Mmm... this place smells a bit like the outside world. It smells happy, and awesome!",
+            "npc": 820000,
+            "next": 72003603
+          },
+          {
+            "id": 72003603,
+            "content": "Not like those other places full of the smell of yelling and fighting.",
+            "npc": 820000,
+            "next": 72003604
+          }
         ]
       },
       {
@@ -1634,6 +744,20 @@
         "pos": [
           -17744,
           -8834
+        ],
+        "dialogues": [
+          {
+            "id": 72003502,
+            "content": "Owie...! That steam hit me.",
+            "npc": 820000,
+            "next": 72003503
+          },
+          {
+            "id": 72003503,
+            "content": "He's mean. I don't like him. And you shouldn't be his friend, either!",
+            "npc": 820000,
+            "next": 72003504
+          }
         ]
       },
       {
@@ -1642,6 +766,404 @@
         "pos": [
           -10601,
           3126
+        ],
+        "dialogues": [
+          {
+            "id": 72000902,
+            "content": "There. Now no one's sitting the wrong way round.",
+            "npc": 820000,
+            "next": 72000903
+          },
+          {
+            "id": 72000903,
+            "content": "No more bumped knees either — even if your legs are super long.",
+            "npc": 820000,
+            "next": 72000904
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1060,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "groups": [
+      {
+        "id": 7090063,
+        "srId": 106001,
+        "pos": [
+          -10873,
+          -4790
+        ],
+        "dialogues": [
+          {
+            "id": 72004702,
+            "content": "Glass is see-through, so nobody pays it any mind.",
+            "npc": 820000,
+            "next": 72004703
+          },
+          {
+            "id": 72004703,
+            "content": "Unless its face gets dirty — then someone comes to wash it.",
+            "npc": 820000,
+            "next": 72004704
+          },
+          {
+            "id": 72004704,
+            "content": "So, did you come to me because I got something dirty?",
+            "npc": 820000,
+            "next": 72004705
+          }
+        ]
+      },
+      {
+        "id": 7090064,
+        "srId": 106001,
+        "pos": [
+          -3045,
+          4865
+        ],
+        "dialogues": [
+          {
+            "id": 72004802,
+            "content": "Messy, messy. Dirty, dirty.",
+            "npc": 820000,
+            "next": 72004803
+          },
+          {
+            "id": 72004803,
+            "content": "It's a mess here, and everyone's busy. So I stay here, waiting to see when someone will notice me.",
+            "npc": 820000,
+            "next": 72004804
+          },
+          {
+            "id": 72004804,
+            "content": "How long has it been? Hmm... can't see the sun in here, so I don't really know.",
+            "npc": 820000,
+            "next": 72004805
+          },
+          {
+            "id": 72004805,
+            "content": "But I've been counting — people have come and gone over nine thousand times now.",
+            "npc": 820000,
+            "next": 72004806
+          }
+        ]
+      },
+      {
+        "id": 7090065,
+        "srId": 106001,
+        "pos": [
+          -7976,
+          10
+        ],
+        "dialogues": [
+          {
+            "id": 72004902,
+            "content": "This bronze flower is broken! Flowers have stamens!",
+            "npc": 820000,
+            "next": 72004903
+          },
+          {
+            "id": 72004903,
+            "content": "A flower without a stamen is like a person without a heart.",
+            "npc": 820000,
+            "next": 72004904
+          },
+          {
+            "id": 72004904,
+            "content": "So I'm here pretending to be the stamen. Hello, yes, I'm the stamen.",
+            "npc": 820000,
+            "next": 72004905
+          }
+        ]
+      },
+      {
+        "id": 7090070,
+        "srId": 106001,
+        "pos": [
+          -7982,
+          -655
+        ],
+        "dialogues": [
+          {
+            "id": 72005402,
+            "content": "Humans weave flowers into rings and put them on people they like.",
+            "npc": 820000,
+            "next": 72005403
+          },
+          {
+            "id": 72005403,
+            "content": "I like this place. So I drew a circle with my footprints and put it on here!",
+            "npc": 820000,
+            "next": 72005404
+          }
+        ]
+      },
+      {
+        "id": 7090071,
+        "srId": 106001,
+        "pos": [
+          -6704,
+          7194
+        ],
+        "dialogues": [
+          {
+            "id": 72005502,
+            "content": "This place is dangerous! It's as tall as dozens of me stacked up.",
+            "npc": 820000,
+            "next": 72005503
+          },
+          {
+            "id": 72005503,
+            "content": "So I left a mark right in the middle of every board.",
+            "npc": 820000,
+            "next": 72005504
+          },
+          {
+            "id": 72005504,
+            "content": "Follow the marks, and you won't have to worry about falling down.",
+            "npc": 820000,
+            "next": 72005505
+          }
+        ]
+      },
+      {
+        "id": 7090075,
+        "srId": 106001,
+        "pos": [
+          -31907,
+          19386
+        ],
+        "dialogues": [
+          {
+            "id": 72005902,
+            "content": "Such a neat forest!",
+            "npc": 820000,
+            "next": 72005903
+          },
+          {
+            "id": 72005903,
+            "content": "Did these trees all come from the same mother? Why do they all look the same?",
+            "npc": 820000,
+            "next": 72005904
+          },
+          {
+            "id": 72005904,
+            "content": "Huh? Man-made? Can people give birth to steel frames? I've never heard of that. You better not be tricking me.",
+            "npc": 820000,
+            "next": 72005905
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1063,
+    "name": "Paniemon",
+    "rewardId": 3011,
+    "groups": [
+      {
+        "id": 7091038,
+        "srId": 106301,
+        "pos": [
+          -14669,
+          8847
+        ],
+        "dialogues": [
+          {
+            "id": 72005002,
+            "content": "Woke up, and everything was in a different place! Felt like I'd taken a train ride.",
+            "npc": 820000,
+            "next": 72005003
+          },
+          {
+            "id": 72005003,
+            "content": "Thanks, train driver. But this one's made of wood. So I guess... a wood train?",
+            "npc": 820000,
+            "next": 72005004
+          }
+        ]
+      },
+      {
+        "id": 7091039,
+        "srId": 106301,
+        "pos": [
+          -9064,
+          17552
+        ],
+        "dialogues": [
+          {
+            "id": 72005102,
+            "content": "Everyone has their own room.",
+            "npc": 820000,
+            "next": 72005103
+          },
+          {
+            "id": 72005103,
+            "content": "I want my own room too. Right here!",
+            "npc": 820000,
+            "next": 72005104
+          },
+          {
+            "id": 72005104,
+            "content": "Welcome to my place. Next up, I'm gonna get some furniture!",
+            "npc": 820000,
+            "next": 72005105
+          }
+        ]
+      },
+      {
+        "id": 7091040,
+        "srId": 106301,
+        "pos": [
+          -12266,
+          15492
+        ],
+        "dialogues": [
+          {
+            "id": 72005202,
+            "content": "A slide! This is the best slide ever.",
+            "npc": 820000,
+            "next": 72005203
+          },
+          {
+            "id": 72005203,
+            "content": "People keep flattening my slide, but that's okay.",
+            "npc": 820000,
+            "next": 72005204
+          },
+          {
+            "id": 72005204,
+            "content": "I can just ice-skate on these flat crates instead!",
+            "npc": 820000,
+            "next": 72005205
+          }
+        ]
+      },
+      {
+        "id": 7091041,
+        "srId": 106301,
+        "pos": [
+          -19590,
+          11386
+        ],
+        "dialogues": [
+          {
+            "id": 72005302,
+            "content": "All the iron boxes here look the same.",
+            "npc": 820000,
+            "next": 72005303
+          },
+          {
+            "id": 72005303,
+            "content": "How do they tell their brothers and sisters apart?",
+            "npc": 820000,
+            "next": 72005304
+          },
+          {
+            "id": 72005304,
+            "content": "No need to tell them apart? No, that can't be right. Without family, you'd be lonely.",
+            "npc": 820000,
+            "next": 72005305
+          }
+        ]
+      },
+      {
+        "id": 7091042,
+        "srId": 106301,
+        "pos": [
+          -12930,
+          368
+        ],
+        "dialogues": [
+          {
+            "id": 72005602,
+            "content": "The guards are patrolling.",
+            "npc": 820000,
+            "next": 72005603
+          },
+          {
+            "id": 72005603,
+            "content": "But they can't see what's behind them.",
+            "npc": 820000,
+            "next": 72005604
+          },
+          {
+            "id": 72005604,
+            "content": "I patrol too — going the opposite way.",
+            "npc": 820000,
+            "next": 72005605
+          },
+          {
+            "id": 72005605,
+            "content": "That way, no bad guys can get close. Perfect!",
+            "npc": 820000,
+            "next": 72005606
+          }
+        ]
+      },
+      {
+        "id": 7091043,
+        "srId": 106301,
+        "pos": [
+          -13386,
+          7056
+        ],
+        "dialogues": [
+          {
+            "id": 72005702,
+            "content": "A vehicle that follows a fixed path is a train.",
+            "npc": 820000,
+            "next": 72005703
+          },
+          {
+            "id": 72005703,
+            "content": "A Paniemon that follows a fixed path is a Trainiemon.",
+            "npc": 820000,
+            "next": 72005704
+          },
+          {
+            "id": 72005704,
+            "content": "What do you think? I really like this name!",
+            "npc": 820000,
+            "next": 72005705
+          }
+        ]
+      },
+      {
+        "id": 7091044,
+        "srId": 106301,
+        "pos": [
+          -16072,
+          13405
+        ],
+        "dialogues": [
+          {
+            "id": 72005802,
+            "content": "Trains are so silly. They need a track in front to lead them across a bridge.",
+            "npc": 820000,
+            "next": 72005803
+          },
+          {
+            "id": 72005803,
+            "content": "So I'll show them — just jump like me! Problem solved!",
+            "npc": 820000,
+            "next": 72005804
+          },
+          {
+            "id": 72005804,
+            "content": "If they can't jump... that's their problem. They're always running, so they should be light on their feet.",
+            "npc": 820000,
+            "next": 72005805
+          },
+          {
+            "id": 72005805,
+            "content": "What's wrong with them?",
+            "npc": 820000,
+            "next": 72005806
+          }
         ]
       }
     ]
@@ -1650,176 +1172,6 @@
     "id": 1070,
     "name": "Paniemon",
     "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72007002,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007003
-      },
-      {
-        "id": 72007003,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007004
-      },
-      {
-        "id": 72006502,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006503
-      },
-      {
-        "id": 72006503,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006504
-      },
-      {
-        "id": 72007202,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007203
-      },
-      {
-        "id": 72007203,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007204
-      },
-      {
-        "id": 72007302,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007303
-      },
-      {
-        "id": 72007303,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007304
-      },
-      {
-        "id": 72007402,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007403
-      },
-      {
-        "id": 72007403,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007404
-      },
-      {
-        "id": 72007502,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007503
-      },
-      {
-        "id": 72007503,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007504
-      },
-      {
-        "id": 72007602,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007603
-      },
-      {
-        "id": 72007603,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007604
-      },
-      {
-        "id": 72007702,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007703
-      },
-      {
-        "id": 72007703,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007704
-      },
-      {
-        "id": 72006902,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006903
-      },
-      {
-        "id": 72006903,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006904
-      },
-      {
-        "id": 72006402,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006403
-      },
-      {
-        "id": 72006403,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006404
-      },
-      {
-        "id": 72006602,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006603
-      },
-      {
-        "id": 72006603,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006604
-      },
-      {
-        "id": 72006702,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006703
-      },
-      {
-        "id": 72006703,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006704
-      },
-      {
-        "id": 72006802,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006803
-      },
-      {
-        "id": 72006803,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006804
-      },
-      {
-        "id": 72007102,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007103
-      },
-      {
-        "id": 72007103,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007104
-      }
-    ],
     "groups": [
       {
         "id": 7085013,
@@ -1827,6 +1179,20 @@
         "pos": [
           -8008,
           -74933
+        ],
+        "dialogues": [
+          {
+            "id": 72006402,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72006403
+          },
+          {
+            "id": 72006403,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72006404
+          }
         ]
       },
       {
@@ -1835,6 +1201,20 @@
         "pos": [
           -17930,
           -83700
+        ],
+        "dialogues": [
+          {
+            "id": 72006502,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72006503
+          },
+          {
+            "id": 72006503,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72006504
+          }
         ]
       },
       {
@@ -1843,6 +1223,20 @@
         "pos": [
           -12670,
           -76496
+        ],
+        "dialogues": [
+          {
+            "id": 72006602,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72006603
+          },
+          {
+            "id": 72006603,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72006604
+          }
         ]
       },
       {
@@ -1851,6 +1245,20 @@
         "pos": [
           -1647,
           -28375
+        ],
+        "dialogues": [
+          {
+            "id": 72006702,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72006703
+          },
+          {
+            "id": 72006703,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72006704
+          }
         ]
       },
       {
@@ -1859,6 +1267,20 @@
         "pos": [
           -30750,
           -84730
+        ],
+        "dialogues": [
+          {
+            "id": 72007602,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72007603
+          },
+          {
+            "id": 72007603,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72007604
+          }
         ]
       },
       {
@@ -1867,6 +1289,20 @@
         "pos": [
           -27640,
           -79290
+        ],
+        "dialogues": [
+          {
+            "id": 72007702,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72007703
+          },
+          {
+            "id": 72007703,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72007704
+          }
         ]
       }
     ]
@@ -1875,176 +1311,6 @@
     "id": 1071,
     "name": "Paniemon",
     "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72007002,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007003
-      },
-      {
-        "id": 72007003,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007004
-      },
-      {
-        "id": 72006502,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006503
-      },
-      {
-        "id": 72006503,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006504
-      },
-      {
-        "id": 72007202,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007203
-      },
-      {
-        "id": 72007203,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007204
-      },
-      {
-        "id": 72007302,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007303
-      },
-      {
-        "id": 72007303,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007304
-      },
-      {
-        "id": 72007402,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007403
-      },
-      {
-        "id": 72007403,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007404
-      },
-      {
-        "id": 72007502,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007503
-      },
-      {
-        "id": 72007503,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007504
-      },
-      {
-        "id": 72007602,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007603
-      },
-      {
-        "id": 72007603,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007604
-      },
-      {
-        "id": 72007702,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007703
-      },
-      {
-        "id": 72007703,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007704
-      },
-      {
-        "id": 72006902,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006903
-      },
-      {
-        "id": 72006903,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006904
-      },
-      {
-        "id": 72006402,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006403
-      },
-      {
-        "id": 72006403,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006404
-      },
-      {
-        "id": 72006602,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006603
-      },
-      {
-        "id": 72006603,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006604
-      },
-      {
-        "id": 72006702,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006703
-      },
-      {
-        "id": 72006703,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006704
-      },
-      {
-        "id": 72006802,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006803
-      },
-      {
-        "id": 72006803,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006804
-      },
-      {
-        "id": 72007102,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007103
-      },
-      {
-        "id": 72007103,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007104
-      }
-    ],
     "groups": [
       {
         "id": 7086014,
@@ -2052,6 +1318,20 @@
         "pos": [
           -33580,
           -28827
+        ],
+        "dialogues": [
+          {
+            "id": 72007002,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72007003
+          },
+          {
+            "id": 72007003,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72007004
+          }
         ]
       },
       {
@@ -2060,6 +1340,20 @@
         "pos": [
           -48060,
           -36140
+        ],
+        "dialogues": [
+          {
+            "id": 72007102,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72007103
+          },
+          {
+            "id": 72007103,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72007104
+          }
         ]
       },
       {
@@ -2068,6 +1362,20 @@
         "pos": [
           -29480,
           -29400
+        ],
+        "dialogues": [
+          {
+            "id": 72007302,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72007303
+          },
+          {
+            "id": 72007303,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72007304
+          }
         ]
       },
       {
@@ -2076,6 +1384,20 @@
         "pos": [
           -29120,
           -37110
+        ],
+        "dialogues": [
+          {
+            "id": 72007402,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72007403
+          },
+          {
+            "id": 72007403,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72007404
+          }
         ]
       },
       {
@@ -2084,6 +1406,20 @@
         "pos": [
           -27032,
           -22056
+        ],
+        "dialogues": [
+          {
+            "id": 72007502,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72007503
+          },
+          {
+            "id": 72007503,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72007504
+          }
         ]
       }
     ]
@@ -2092,176 +1428,6 @@
     "id": 1072,
     "name": "Paniemon",
     "rewardId": 3011,
-    "dialogues": [
-      {
-        "id": 72007002,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007003
-      },
-      {
-        "id": 72007003,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007004
-      },
-      {
-        "id": 72006502,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006503
-      },
-      {
-        "id": 72006503,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006504
-      },
-      {
-        "id": 72007202,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007203
-      },
-      {
-        "id": 72007203,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007204
-      },
-      {
-        "id": 72007302,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007303
-      },
-      {
-        "id": 72007303,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007304
-      },
-      {
-        "id": 72007402,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007403
-      },
-      {
-        "id": 72007403,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007404
-      },
-      {
-        "id": 72007502,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007503
-      },
-      {
-        "id": 72007503,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007504
-      },
-      {
-        "id": 72007602,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007603
-      },
-      {
-        "id": 72007603,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007604
-      },
-      {
-        "id": 72007702,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007703
-      },
-      {
-        "id": 72007703,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007704
-      },
-      {
-        "id": 72006902,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006903
-      },
-      {
-        "id": 72006903,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006904
-      },
-      {
-        "id": 72006402,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006403
-      },
-      {
-        "id": 72006403,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006404
-      },
-      {
-        "id": 72006602,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006603
-      },
-      {
-        "id": 72006603,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006604
-      },
-      {
-        "id": 72006702,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006703
-      },
-      {
-        "id": 72006703,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006704
-      },
-      {
-        "id": 72006802,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72006803
-      },
-      {
-        "id": 72006803,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72006804
-      },
-      {
-        "id": 72007102,
-        "content": "Eeya~ You found me.",
-        "npc": 820000,
-        "next": 72007103
-      },
-      {
-        "id": 72007103,
-        "content": "Paradise is full of surprises~ I'll see you at the next stop.",
-        "npc": 820000,
-        "next": 72007104
-      }
-    ],
     "groups": [
       {
         "id": 7087012,
@@ -2269,6 +1435,20 @@
         "pos": [
           20806,
           -2349
+        ],
+        "dialogues": [
+          {
+            "id": 72006902,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72006903
+          },
+          {
+            "id": 72006903,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72006904
+          }
         ]
       },
       {
@@ -2277,6 +1457,20 @@
         "pos": [
           12672,
           -28134
+        ],
+        "dialogues": [
+          {
+            "id": 72006802,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72006803
+          },
+          {
+            "id": 72006803,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72006804
+          }
         ]
       },
       {
@@ -2285,6 +1479,20 @@
         "pos": [
           -31480,
           -13270
+        ],
+        "dialogues": [
+          {
+            "id": 72007202,
+            "content": "Eeya~ You found me.",
+            "npc": 820000,
+            "next": 72007203
+          },
+          {
+            "id": 72007203,
+            "content": "Paradise is full of surprises~ I'll see you at the next stop.",
+            "npc": 820000,
+            "next": 72007204
+          }
         ]
       }
     ]

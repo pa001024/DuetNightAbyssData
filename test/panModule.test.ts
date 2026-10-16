@@ -4,7 +4,7 @@ import { tmpdir } from "node:os"
 import { describe, expect, test } from "bun:test"
 import type { ModuleContext } from "../src/core/Graph.ts"
 import type { DialogueService } from "../src/modules/dialogue/dialogueModule.ts"
-import { PAN_REWARD_ID, assertPanReward, collectPanGroups, firstPoint, levelSrMap, panModule, regionOfLevel } from "../src/modules/pan/panModule.ts"
+import { PAN_REWARD_ID, assertPanReward, collectPanGroups, firstPoint, storyTriggerTalks, levelRegionMap, levelSrMap, panModule } from "../src/modules/pan/panModule.ts"
 
 function designFile(dir: string, level: string): void {
     writeFileSync(join(dir, `${level}.lua`), "-- stub")
@@ -14,24 +14,26 @@ function fakeCtx(
     tables: Record<string, unknown>,
     levels: string[],
     dialogue?: { story?: unknown; chains?: Record<number, Array<Record<string, unknown>>> }
-): { ctx: ModuleContext; cleanup: () => void } {
+): { ctx: ModuleContext; logs: string[]; cleanup: () => void } {
     const root = mkdtempSync(join(tmpdir(), "dna-pan-test-"))
     const designDir = join(root, "Script", "Datas", "DesignLevel_data")
     mkdirSync(designDir, { recursive: true })
     for (const level of levels) designFile(designDir, level)
+    const logs: string[] = []
     const ctx = {
         dm: {
             root,
             scriptDataRoot: root,
             getTable: (name: string) => (tables[name] ?? {}) as Record<string, unknown>,
         },
+        log: (msg: string) => logs.push(msg),
         getArtifact: () =>
             ({
                 story: () => dialogue?.story,
                 chain: (id: unknown) => dialogue?.chains?.[Number(id)] ?? [{ id }],
             }) as unknown as DialogueService,
     } as unknown as ModuleContext
-    return { ctx, cleanup: () => rmSync(root, { recursive: true, force: true }) }
+    return { ctx, logs, cleanup: () => rmSync(root, { recursive: true, force: true }) }
 }
 
 const EXPLORE_TABLES = {
@@ -62,8 +64,8 @@ const EXPLORE_TABLES = {
         7021030: { ExploreGroupId: 7021030, RewardId: 3011 },
     },
     SubRegion: {
-        100101: { SubRegionId: 100101, SubRegionLevel: "Prologue_Village" },
-        101702: { SubRegionId: 101702, SubRegionLevel: "Chapter01_Sew02" },
+        100101: { SubRegionId: 100101, SubRegionLevel: "Prologue_Village", RegionId: 1001 },
+        101702: { SubRegionId: 101702, SubRegionLevel: "Chapter01_Sew02", RegionId: 1017 },
     },
     Reward: {
         3011: { RewardId: 3011, Id: [211, 3006], Type: ["Resource", "Resource"], Count: [1, 1] },
@@ -102,12 +104,40 @@ describe("Pan groups", () => {
         }
     })
 
-    test("未归属 Region 的关卡 fail loud，不静默丢弃", () => {
+    test("SubRegion 未覆盖的关卡 warn 跳过，不中断导出", async () => {
+        const tables = {
+            ...EXPLORE_TABLES,
+            "DesignLevel_data/Removed_Level": {
+                Explore: {
+                    7999999: { c1: { CreatorId: 91, UnitType: "Mechanism", UnitId: 70701, RarelyId: 7999999 } },
+                },
+            },
+            ExploreGroupReward: {
+                ...(EXPLORE_TABLES.ExploreGroupReward as Record<string, unknown>),
+                7999999: { ExploreGroupId: 7999999, RewardId: 3011 },
+            },
+        }
+        const { ctx, logs, cleanup } = fakeCtx(tables, ["Prologue_Village", "Chapter01_Sew02", "Removed_Level"])
+        try {
+            const output = (await panModule(ctx)) as Array<{ id: number; groups: Array<{ id: number; srId: number }> }>
+            // 条目按快照实际出现的 Region 动态生成：只有 1001/1017 有可用组
+            expect(output.map(entry => entry.id)).toEqual([1001, 1017])
+            expect(output[0].groups.map(group => group.id)).toEqual([7000054, 7000055])
+            expect(output[0].groups[0].srId).toBe(100101)
+            expect(output[1].groups.map(group => group.id)).toEqual([7021030])
+            // 被删关卡只 warn 跳过
+            expect(logs.some(msg => msg.includes("Removed_Level"))).toBe(true)
+        } finally {
+            cleanup()
+        }
+    })
+
+    test("归属以 SubRegion 表为准：各版本自带，老快照同样适用", () => {
         const { ctx, cleanup } = fakeCtx(EXPLORE_TABLES, ["Prologue_Village"])
         try {
-            expect(regionOfLevel("Prologue_Village")).toBe(1001)
-            expect(regionOfLevel("Chapter01_Sew02")).toBe(1017)
-            expect(regionOfLevel("SomeFuture_Level")).toBeUndefined()
+            expect(levelRegionMap(ctx).get("prologue_village")).toEqual({ srId: 100101, regionId: 1001 })
+            expect(levelRegionMap(ctx).get("chapter01_sew02")).toEqual({ srId: 101702, regionId: 1017 })
+            expect(levelRegionMap(ctx).get("somefuture_level")).toBeUndefined()
             expect(levelSrMap(ctx).get("prologue_village")).toBe(100101)
         } finally {
             cleanup()
@@ -136,33 +166,39 @@ describe("Pan first point", () => {
 })
 
 describe("Pan dialogues", () => {
-    test("仅外语有文本的过场节点在所有语言统一丢弃", async () => {
-        const story = {
-            storyNodeData: {
-                s: {
-                    type: "StoryNode",
-                    questNodeData: {
-                        nodeData: {
-                            a: { type: "TalkNode", propsData: { FirstDialogueId: 1 } },
-                            b: { type: "TalkNode", propsData: { FirstDialogueId: 2 } },
-                            c: { type: "TalkNode", propsData: { FirstDialogueId: 3 } },
-                        },
+    const talk = (id: number, firstId: number) => ({ key: `t${id}`, type: "TalkNode", propsData: { FirstDialogueId: firstId } })
+    const story = {
+        storyNodeData: {
+            s: {
+                type: "StoryNode",
+                questNodeData: {
+                    lineData: [
+                        { startQuest: "b", startPort: "Branch_1", endQuest: "t1", endPort: "In" },
+                        { startQuest: "b", startPort: "Branch_2", endQuest: "t2", endPort: "In" },
+                        { startQuest: "t2", startPort: "Out", endQuest: "ok", endPort: "In" },
+                        { startQuest: "ok", startPort: "Out", endQuest: "t3", endPort: "In" },
+                    ],
+                    nodeData: {
+                        b: { key: "b", type: "BranchTriggerNode", propsData: { Branches: [720000, 720002] } },
+                        t1: talk(1, 10),
+                        t2: talk(2, 20),
+                        ok: { key: "ok", type: "QuestSuccessNode" },
+                        t3: talk(3, 30),
                     },
                 },
             },
-        }
-        const chains = {
-            1: [{ id: 1 }],
-            2: [{ id: 2, __langs: ["en"] }],
-            3: [{ id: 3 }, { id: 3 }],
-        }
-        const { ctx, cleanup } = fakeCtx(EXPLORE_TABLES, ["Prologue_Village"], { story, chains })
+        },
+    }
+
+    test("按 BranchTriggerNode 分支出口把 TalkTrigger 精确对应到各自对话链", () => {
+        const { ctx, cleanup } = fakeCtx({}, [], { story })
         try {
-            const entries = (await panModule(ctx)) as Array<Record<string, unknown>>
-            for (const entry of entries) {
-                const ids = (entry.dialogues as Array<Record<string, unknown>>).map(talk => talk.id)
-                expect(ids).toEqual([1, 3])
-            }
+            const dialogue = ctx.getArtifact<DialogueService>("Dialogue")
+            const talks = storyTriggerTalks(dialogue, "Explore/A_PanTalk_X.story")
+            expect(talks.get(720000)).toEqual([{ id: 10 }])
+            // 沿连线可达的后续 TalkNode 一并收集
+            expect(talks.get(720002)).toEqual([{ id: 20 }, { id: 30 }])
+            expect(talks.has(720099)).toBe(false)
         } finally {
             cleanup()
         }
@@ -170,12 +206,12 @@ describe("Pan dialogues", () => {
 })
 
 describe("Pan entries", () => {
-    test("输出无 story 字段、奖励只写 rewardId，id 为规范 RegionId", async () => {
+    test("条目按快照实际 Region 动态生成：无 story 字段、奖励只写 rewardId", async () => {
         const { ctx, cleanup } = fakeCtx(EXPLORE_TABLES, ["Prologue_Village", "Huaxu_Haojing_Jlc", "Chapter01_Sew02"])
         try {
             const entries = (await panModule(ctx)) as Array<Record<string, unknown>>
-            expect(entries).toHaveLength(10)
-            expect(entries.map(entry => entry.id)).toEqual([1001, 1017, 1060, 1063, 1011, 1013, 1021, 1070, 1071, 1072])
+            // 只有 1001/1017 有可用组：无组数据的 Region 不输出
+            expect(entries.map(entry => entry.id)).toEqual([1001, 1017])
             for (const entry of entries) {
                 expect(entry).not.toHaveProperty("story")
                 expect(entry.rewardId).toBe(3011)
@@ -183,7 +219,7 @@ describe("Pan entries", () => {
             const prologue = entries.find(entry => entry.id === 1001)!
             expect(prologue.groups).toHaveLength(2)
             for (const group of prologue.groups as Array<Record<string, unknown>>) {
-                expect(Object.keys(group).sort()).toEqual(["id", "pos", "srId"])
+                expect(Object.keys(group).sort()).toEqual(["dialogues", "id", "pos", "srId"])
                 expect(Array.isArray(group.pos)).toBe(true)
             }
             const sew = entries.find(entry => entry.id === 1017)!
