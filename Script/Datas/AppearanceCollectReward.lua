@@ -87,7 +87,7 @@ return ReadOnly("AppearanceCollectReward", {
       [7] = true
     },
     ListBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/PopupItem/WBP_Activity_SkinCollect_Task_PopupItemList1_6.WBP_Activity_SkinCollect_Task_PopupItemList1_6'",
-    MaxRewardPoint = 4000,
+    MaxRewardPoint = 2200,
     PointsReward = {
       [1] = 360012,
       [2] = 360002,

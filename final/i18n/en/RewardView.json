@@ -30167,6 +30167,27 @@
     ]
   },
   {
+    "id": 1039009,
+    "child": [
+      {
+        "id": 410301,
+        "t": "Skin",
+        "c": 1,
+        "n": "Veil In Shadows"
+      },
+      {
+        "id": 111,
+        "t": "Resource",
+        "n": "Iridescent Prism"
+      },
+      {
+        "id": 110,
+        "t": "Resource",
+        "n": "Lucent Prism"
+      }
+    ]
+  },
+  {
     "id": 1040001,
     "child": [
       {

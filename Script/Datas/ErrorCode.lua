@@ -5301,22 +5301,47 @@ return ReadOnly("ErrorCode", {
     ErrorCodeId = 14023
   },
   [14024] = {
+    ContentEN = "Cannot add item to shopping cart.",
+    ContentFR = "Impossible d’ajouter cet article au panier",
+    ContentJP = "商品をカートに追加できません",
+    ContentKR = "해당 상품은 장바구니에서 바로 구매할 수 없습니다.",
+    ContentTC = "商品不能新增至購物車",
     ErrorCodeContent = "商品不能添加至购物车",
     ErrorCodeId = 14024
   },
   [14025] = {
+    ContentEN = "Your cart is empty.",
+    ContentFR = "Le panier est vide",
+    ContentJP = "カートは空です",
+    ContentKR = "장바구니에 담은 상품이 없습니다.",
+    ContentTC = "購物車空空如也",
     ErrorCodeContent = "购物车空空如也",
     ErrorCodeId = 14025
   },
   [14026] = {
+    ContentEN = "Shopping cart has been updated.",
+    ContentFR = "Le panier a été mis à jour",
+    ContentJP = "カートの状態が変更されました",
+    ContentKR = "장바구니 버전이 이미 변경되었습니다.",
+    ContentTC = "購物車版本已變化",
     ErrorCodeContent = "购物车版本已变化",
     ErrorCodeId = 14026
   },
   [14027] = {
+    ContentEN = "Item not found in shopping cart.",
+    ContentFR = "Cet article n’existe pas dans le panier",
+    ContentJP = "カート内の商品が存在しません",
+    ContentKR = "장바구니에 담긴 상품이 존재하지 않습니다.",
+    ContentTC = "購物車商品不存在",
     ErrorCodeContent = "购物车商品不存在",
     ErrorCodeId = 14027
   },
   [14028] = {
+    ContentEN = "Invalid price for item in cart.",
+    ContentFR = "Le prix de l’article dans le panier est invalide",
+    ContentJP = "カート内の商品価格が無効です",
+    ContentKR = "장바구니에 담긴 상품의 가격이 유효하지 않습니다.",
+    ContentTC = "購物車商品價格無效",
     ErrorCodeContent = "购物车商品价格无效",
     ErrorCodeId = 14028
   },
@@ -13031,6 +13056,14 @@ return ReadOnly("ErrorCode", {
     ContentTC = "招募資訊已失效",
     ErrorCodeContent = "招募信息已失效",
     ErrorCodeId = 120011
+  },
+  [131001] = {
+    ErrorCodeContent = "不在活动时间内",
+    ErrorCodeId = 131001
+  },
+  [131002] = {
+    ErrorCodeContent = "当前挑战不属于该活动",
+    ErrorCodeId = 131002
   },
   [600003] = {
     ContentEN = "Demon Wedge loadout not found",

@@ -1364,6 +1364,9 @@ function M:IsShoppingCartAvailable()
   if CommonUtils.GetDeviceTypeByPlatformName() ~= "PC" then
     return false
   end
+  if UE.UUCloudGameInstanceSubsystem and UE.UUCloudGameInstanceSubsystem.IsCloudGame() then
+    return false
+  end
   local Channel = UE.UUsdkSettings:GetDefaultObject().Channel
   return Channel == UE.EHeroUSDKChannel.Mainland or Channel == UE.EHeroUSDKChannel.Overseas or Channel == UE.EHeroUSDKChannel.Hero_TapTap
 end

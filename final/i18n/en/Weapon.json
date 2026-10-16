@@ -1238,7 +1238,7 @@
             "id": 10199001,
             "名称": "Endless – Ponder",
             "icon": "",
-            "描述": "Dealing damage with this weapon grants 1.0 Calamity. Calamity is capped at 100.\nWhen Calamity reaches its cap, all Calamity is consumed to grant 1 stack of [Inquiry]: Skill Speed +10.0% for 15.0s, up to 6.0 stacks."
+            "描述": "Dealing damage with this weapon grants 1.0 Calamity. Calamity is capped at 150.\nWhen Calamity reaches 100, consumes 100 Calamity to grant 1 stack of [Inquiry]: Skill Speed +10.0% for 15.0s, up to 6.0 stacks."
           }
         ]
       },
@@ -1269,7 +1269,7 @@
             "id": 10199003,
             "名称": "Enigma – Obscurity",
             "icon": "",
-            "描述": "When Skill DMG triggers, gains [2.0 × Skill Speed] Calamity.",
+            "描述": "When Skill DMG triggers a Bonus Effect, gains [2.0 × Skill Speed] Calamity.",
             "解锁": {
               "Prototype: Endless Enigma": 30,
               "Electro Crystal": 90,
@@ -1426,7 +1426,7 @@
             "id": 10199010,
             "名称": "Endless – Truth",
             "icon": "",
-            "描述": "Additional Skill DMG of the character's element +50.0%.\nAt maximum [Inquiry] stacks, dealing Skill DMG also deals 3500.0% Calamity DMG to enemies within 3.0m of the target. This damage counts as Skill DMG, with its DMG bonus calculated as [Skill Speed - 100%]. This effect can trigger once every 1.0 seconds.",
+            "描述": "Additional Skill DMG of the character's element +50.0%.\nAt maximum [Inquiry] stacks, when Skill DMG triggers a Bonus Effect, also deals 3500.0% Calamity DMG to enemies within 3.0m of the target. This counts as Skill DMG, with its DMG bonus calculated as [Skill Speed - 100%]. This effect can trigger at most once every 1.0 seconds.",
             "加成": {
               "技能追伤": 0.5
             }
@@ -9872,7 +9872,7 @@
     "icon": "Cannon_Huozhe",
     "名称": "Blessed Burden",
     "版本": "1.7",
-    "描述": "活下去，是生者需要背负的祝福。",
+    "描述": "To live on is a blessing the living must bear.",
     "类型": [
       "远程",
       "榴炮"

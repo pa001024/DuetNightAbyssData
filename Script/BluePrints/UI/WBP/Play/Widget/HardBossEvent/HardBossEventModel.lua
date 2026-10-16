@@ -52,7 +52,7 @@ end
 
 function M:GetRewardTimes(EventId)
   local EventConfig = self:GetEventConfig(EventId)
-  local Avatar = self:GetAvatar()
+  local Avatar = GWorld:GetAvatar()
   local HardBossEvent = Avatar and Avatar.HardBossEvent
   local RemainTimes = HardBossEvent and HardBossEvent.RewardTimesLeft or 0
   local TotalTimes = EventConfig and EventConfig.PeriodRewardTime or 0

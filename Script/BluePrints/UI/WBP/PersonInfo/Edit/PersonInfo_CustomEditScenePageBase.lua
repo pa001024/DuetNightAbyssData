@@ -19,21 +19,21 @@ local SCENE_LIGHT_SLIDER_CONFIG_MAP = {
     DecimalPlaces = 1
   },
   Roll = {
-    Title = "X轴",
+    TitleKey = "UI_PersonalPage_LightAxis_X",
     Field = "Roll",
     Min = -80,
     Max = 80,
     ValueSuffix = "°"
   },
   Pitch = {
-    Title = "Y轴",
+    TitleKey = "UI_PersonalPage_LightAxis_Y",
     Field = "Pitch",
     Min = -80,
     Max = 80,
     ValueSuffix = "°"
   },
   Yaw = {
-    Title = "Z轴",
+    TitleKey = "UI_PersonalPage_LightAxis_Z",
     Field = "Yaw",
     Min = -80,
     Max = 80,
@@ -67,16 +67,16 @@ function M:_GetSceneLightSliderConfig(AxisName)
   if not BaseConfig then
     return nil
   end
-  local Range = DisplayConfig:GetSceneLightRange(self.CurrentSceneId, AxisName)
-  if not Range then
-    return BaseConfig
-  end
   local SliderConfig = {}
   for Key, Value in pairs(BaseConfig) do
     SliderConfig[Key] = Value
   end
-  SliderConfig.Min = Range.Min
-  SliderConfig.Max = Range.Max
+  SliderConfig.Title = BaseConfig.TitleKey and GText(BaseConfig.TitleKey) or ""
+  local Range = DisplayConfig:GetSceneLightRange(self.CurrentSceneId, AxisName)
+  if Range then
+    SliderConfig.Min = Range.Min
+    SliderConfig.Max = Range.Max
+  end
   return SliderConfig
 end
 

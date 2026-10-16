@@ -143,7 +143,7 @@
     "warning": "<Title>Objet légendaire garanti</>\nNombre d’évocations en cours : <highlight>%d</>/90\n\n<Title>Probabilités de la Myriade limitée</>\nTaux de base d’obtention d’un objet légendaire par évocation : <highlight>0,3 %%</>.\nTaux global (incluant la garantie) : <highlight>1,42 %%</>.\nUn objet légendaire est garanti dans un maximum de <highlight>90</> évocations.\n\nTaux individuels :\n— Sentinelle d’émeraude : <highlight>0,641 %%</>\n— Prisme iridescent ×25 : <highlight>0,641 %%</>\n— Prisme iridescent ×50 : <highlight>0,142 %%</>\n\nTaux de base d’obtention d’un objet épique : <highlight>5,1 %%</>.\nTaux global (incluant la garantie) : <highlight>12,46 %%</>.\nUn objet épique est garanti dans un maximum de <highlight>10</> évocations.\nLorsque la garantie s’active, la probabilité d’obtenir un objet épique est de <highlight>99,7 %%</>, et un objet légendaire de <highlight>0,3 %%</>.\nEn cas de bonus de taux ou d’ajustement de garantie, veuillez vous référer aux règles spécifiques de la bannière.\n\n<Title>À propos des doublons</>\nSi vous obtenez à nouveau l’apparence légendaire « Sentinelle d’émeraude », elle sera convertie en Prismes iridescents ×<highlight>25</>.\nLes autres apparences déjà obtenues sont automatiquement converties en Prismes azurés :\n— Apparence épique → ×<highlight>4</>\n— Apparence rare → ×<highlight>1</>\n\n<Title>Transfert de progression entre Myriades</>\nLes évocations de <highlight>L’Envol vers l’azur</> sont comptabilisées séparément et ne sont pas partagées avec les autres bannières de la Myriade.",
     "coreDes": "Apparence lumineuse",
     "coreDesColor": 5,
-    "type": "Myriade limitée",
+    "type": "Retour limité",
     "subTabId": 1401,
     "tabId": 5,
     "sequence": 5,

@@ -20850,7 +20850,7 @@ Looking back on all that has happened, you have seen the changes in Huaxu with y
     ContentEN = "A decoration for Profile Customisation",
     ContentFR = "Permet de modifier les objets dans la personnalisation",
     ContentJP = "カスタマイズ編集のアイテムを変更できる",
-    ContentKR = "개인 편집의 오브젝트를 변경할 수 있다.",
+    ContentKR = "개인 편집의 물건을 변경할 수 있다.",
     ContentTC = "可變更個性編輯中的物件",
     TextMapContent = "可变更个性编辑中的物件",
     TextMapId = "CustomItem_Des_Normal"
@@ -103565,11 +103565,21 @@ It was originally set up so the Drifters could spar and hone their craft, but ov
     TextMapId = "READ_FUNCTION_READ"
   },
   READ_NAME_12070401 = {
-    TextMapContent = "【待包装】蕾伊的笔记",
+    ContentEN = "Rae's Diary",
+    ContentFR = "Journal de Rae",
+    ContentJP = "レイの日記",
+    ContentKR = "레이의 일기",
+    ContentTC = "蕾伊的日記",
+    TextMapContent = "蕾伊的日记",
     TextMapId = "READ_NAME_12070401"
   },
   READ_NAME_12070402 = {
-    TextMapContent = "【待包装】蕾伊的实验记录",
+    ContentEN = "Scribbled Notes",
+    ContentFR = "Notes griffonnées",
+    ContentJP = "乱雑なメモ",
+    ContentKR = "엉성한 메모",
+    ContentTC = "潦草的筆記",
+    TextMapContent = "潦草的笔记",
     TextMapId = "READ_NAME_12070402"
   },
   READ_NAME_2000001 = {
@@ -105195,7 +105205,7 @@ Please... just let me see you one more time.
 (Several crude sketches have been drawn at the bottom of the page. The creatures bear a vague resemblance to Blues after his augmentation.)]],
     ContentFR = "Ma sœur... Tu me manques tellement.\nPourquoi est-ce que je ne rêve plus jamais de toi ?\nQu’étaient donc ces monstres terrifiants que tu as vus ?\n \nMa sœur... Où es-tu... ? Es-tu encore en vie ?\nJe t’en supplie, laisse-moi te revoir, rien qu’une fois...\n \n(Au bas de la feuille figurent plusieurs dessins de monstres ressemblant à Blues après sa transformation.)",
     ContentJP = "お姉さん……会いたい。\nどうして、もう夢に出てきてくれない？\nお姉ちゃんが見た、あの怖い怪物は何だった？\n\nお姉ちゃん……どこにいるの……まだ生きてる？\nお願い。もう一度だけ、姿を見せて……\n\n（紙の下部には、怪物の落書きがいくつも描かれている。改造されたブルースと、どこか似ている。）",
-    ContentKR = "언니... 너무 보고 싶어.\n왜 이젠 꿈에 나오지 않는 거야?\n언니가 본 그 끔찍한 괴물들은 대체 뭐였어?\n\n언니... 어디 있는 거야... 아직 살아 있어?\n제발, 한 번만이라도 다시 얼굴을 보게 해 줘...\n\n(종이 아래쪽에는 괴물 몇 마리를 그린 낙서가 있다. 개조당한 블루스와 어딘가 닮았다는 생각이 든다.)",
+    ContentKR = "언니... 너무 보고 싶어.\n왜 이젠 꿈에 나오지 않는 거야?\n언니가 본 그 끔찍한 괴물들은 대체 뭐였어?\n\n언니... 어디 있는 거야... 아직 살아 있어?\n제발, 한 번만이라도 다시 꿈에 나와 줘...\n\n(종이 아래쪽에는 괴물 몇 마리를 그린 낙서가 있다. 개조당한 블루스와 어딘가 닮았다는 생각이 든다.)",
     ContentTC = "姐姐……我好想你。\n為什麼我再也夢不到你了？\n你看到的那些可怕的怪物到底是什麼？\n\n姐姐……你在哪裡……你還活著嗎？\n求求你，讓我再看一看你好嗎……\n\n（紙張底部畫著幾個怪物的塗鴉，和被改造後的布魯斯有些相似。）",
     TextMapContent = "姐姐……我好想你。\n为什么我再也梦不到你了？\n你看到的那些可怕的怪物到底是什么？\n\n姐姐……你在哪里……你还活着吗？\n求求你，让我再看一看你好吗……\n\n（纸张底部画着几个怪物的涂鸦，和被改造后的布鲁斯有些相似。）",
     TextMapId = "READ_TEXT_12070401"
@@ -111346,9 +111356,9 @@ So tasty, it's literally transformative.]],
     ContentEN = "Use to immediately rename your Phoxhunter",
     ContentFR = "Après utilisation, permet de changer immédiatement le nom du Chasseur de Phoxène",
     ContentJP = "使用すると、月狩り人の名前をすぐに変更できる",
-    ContentKR = "사용 시 즉시 월석 사냥꾼의 이름을 변경할 수 있다.",
-    ContentTC = "使用後可立即變更狩月人的名字",
-    TextMapContent = "使用后可立即变更狩月人的名字",
+    ContentKR = "사용 시 즉시 월석 사냥꾼의 닉네임을 변경할 수 있다.",
+    ContentTC = "使用後可立即變更狩月人的暱稱",
+    TextMapContent = "使用后可立即变更狩月人的昵称",
     TextMapId = "RESOURCE_DESC_4008"
   },
   RESOURCE_DESC_4010001 = {
@@ -114718,9 +114728,9 @@ Acquired through special means. Can be used as smelting material for Calamity We
     ContentEN = "Rename your Phoxhunter",
     ContentFR = "Permet de changer le nom du Chasseur de Phoxène",
     ContentJP = "月狩り人の名前を変更できる",
-    ContentKR = "월석 사냥꾼 이름 변경 가능",
-    ContentTC = "可變更狩月人名字",
-    TextMapContent = "可变更狩月人名字",
+    ContentKR = "월석 사냥꾼 닉네임 변경 가능",
+    ContentTC = "可變更狩月人暱稱",
+    TextMapContent = "可变更狩月人昵称",
     TextMapId = "RESOURCE_FUNCTION_GUILD_8"
   },
   RESOURCE_FUNCTION_HYPERWEAPON = {
@@ -126390,12 +126400,12 @@ Explore Mount Arcano. Listen, look around, and watch the summer fireworks bloom.
     TextMapId = "RESOURCE_TEXT_4007"
   },
   RESOURCE_TEXT_4008 = {
-    ContentEN = "\"Out in the world, you are whoever you say you are. So I got you a few new papers. Miner, fisherman, bodyguard, even blacksmith — take your pick. Just put your name on whichever one you like.\"\n\n— Outsider",
+    ContentEN = "\"Out in the world, you are whoever you say you are. So I got you a few new papers. Miner, fisherman, bodyguard, even blacksmith — take your pick. Just put your nickname on whichever one you like.\"\n\n— Outsider",
     ContentFR = "« Quand on est sur les routes, on est qui on veut être. Je t’ai dégotté quelques nouveaux permis de circulation : mineur, pêcheur, garde du corps, même forgeron... Choisis celui qui te plaît, mets ton nom dessus, et le tour est joué. »\n \n— L’Étranger",
     ContentJP = "「外で名乗る身分なんて、自分で決めればいいのさ。ほら、新しい通行許可証を何枚か用意してやったぞ。職業は鉱山労働者、漁師、用心棒、鍛冶師まで、何でもある。好きなのを選んで、自分の名前を書き込めばいい。」\n——アウトサイダー",
-    ContentKR = "\"밖에선 어떤 신분으로 지낼지는 자기가 정하는 거야. 그래서 통행증을 몇 장 새로 마련해 왔지. 광부, 어부, 경호원... 심지어 대장장이까지, 웬만한 직업은 다 있어. 마음에 드는 걸 하나 골라 네 이름만 적어 넣으면 돼.\"\n—— 아웃사이더",
-    ContentTC = "「出門在外身份都是自己給的，這是我給你新搞的幾張通行證。職業從礦工、漁夫、保鏢甚至是鐵匠全都有，你挑個喜歡的，把你名字填上去就好。」\n——奧特賽德",
-    TextMapContent = "“出门在外身份都是自己给的，这是我给你新搞的几张通行证。职业从矿工、渔夫、保镖甚至是铁匠全都有，你挑个喜欢的，把你名字填上去就好。”\n——奥特赛德",
+    ContentKR = "\"밖에선 어떤 신분으로 지낼지는 자기가 정하는 거야. 그래서 통행증을 몇 장 새로 마련해 왔지. 광부, 어부, 경호원... 심지어 대장장이까지, 웬만한 직업은 다 있어. 마음에 드는 걸 하나 골라 네 닉네임만 적어 넣으면 돼.\"\n—— 아웃사이더",
+    ContentTC = "「出門在外身份都是自己給的，這是我給你新搞的幾張通行證。職業從礦工、漁夫、保鏢甚至是鐵匠全都有，你挑個喜歡的，把你暱稱填上去就好。」\n——奧特賽德",
+    TextMapContent = "“出门在外身份都是自己给的，这是我给你新搞的几张通行证。职业从矿工、渔夫、保镖甚至是铁匠全都有，你挑个喜欢的，把你昵称填上去就好。”\n——奥特赛德",
     TextMapId = "RESOURCE_TEXT_4008"
   },
   RESOURCE_TEXT_4010001 = {
@@ -137009,7 +137019,7 @@ When the character consumes Disruption, their Skill Damage ignores #5 of the tar
     ContentEN = "Uncleared stages before Stage %s have been automatically cleared. You have obtained the following first-clear rewards:",
     ContentFR = "Les étages non terminés précédant l’étage %s ont été automatiquement considérés comme terminés. Vous obtenez les récompenses de première réussite suivantes :",
     ContentJP = "%s層までの未クリア階層を自動的にクリアしました。\n以下の初回クリア報酬を獲得しました：",
-    ContentKR = "%s 층 이전의 미클리어 층을 자동으로 클리어했습니다. 다음 첫 클리어 보상을 획득하세요:",
+    ContentKR = "%s층 이전의 미클리어 층을 자동으로 클리어했습니다. 다음 첫 클리어 보상을 획득하세요:",
     ContentTC = "已自動通關第 %s 層之前的未完成層數，獲得如下首通獎勵：",
     TextMapContent = "已自动通关第 %s 层之前的未完成层数，获得如下首通奖励：",
     TextMapId = "Raid_Season_Floor_JumpReward"
@@ -137054,7 +137064,7 @@ When the character consumes Disruption, their Skill Damage ignores #5 of the tar
     ContentEN = "Unlock More",
     ContentFR = "Débloquer plus",
     ContentJP = "さらに解放",
-    ContentKR = "계속 해제하기",
+    ContentKR = "더 많은 층 해제",
     ContentTC = "解鎖更多",
     TextMapContent = "解锁更多",
     TextMapId = "Raid_Season_Floor_More"
@@ -137132,7 +137142,7 @@ When the character consumes Disruption, their Skill Damage ignores #5 of the tar
     TextMapId = "Raid_Season_Floor_Speed_Enter"
   },
   Raid_Season_Floor_Standard = {
-    ContentEN = "Promotion Requirement:{空格}",
+    ContentEN = "To Advance:{空格}",
     ContentFR = "Requis pour la promotion :{空格}",
     ContentJP = "進出 まで：",
     ContentKR = "승급 조건:{空格}",
@@ -137182,7 +137192,7 @@ When the character consumes Disruption, their Skill Damage ignores #5 of the tar
     ContentEN = "Next %d Stages Unlocked",
     ContentFR = "Défis des %d prochains étages débloqués",
     ContentJP = "以降の %d 階の挑戦が解放されました",
-    ContentKR = "이후 %d 층 도전 해제",
+    ContentKR = "이후 %d층 도전 해제",
     ContentTC = "已解鎖後續 %d 層挑戰",
     TextMapContent = "已解锁后续 %d 层挑战",
     TextMapId = "Raid_Season_Floor_Unlock_Floor"
@@ -140647,6 +140657,7 @@ Civil & Martial Tokens were issued to contestants as a way to record their score
     ContentJP = "{空格}",
     ContentKR = "{空格}",
     ContentTC = "{空格}",
+    TextMapContent = " ",
     TextMapId = "SCEREAD_NAME_1000001"
   },
   SCEREAD_NAME_1000002 = {
@@ -140655,6 +140666,7 @@ Civil & Martial Tokens were issued to contestants as a way to record their score
     ContentJP = "{空格}",
     ContentKR = "{空格}",
     ContentTC = "{空格}",
+    TextMapContent = " ",
     TextMapId = "SCEREAD_NAME_1000002"
   },
   SCEREAD_TEXT_1000001 = {
@@ -140851,12 +140863,12 @@ Increases Skill DMG for the user and allies.]],
   },
   SKILL_10199_01_DESC = {
     ContentEN = [[
-Dealing damage with this weapon grants <H>#1</> Calamity. Calamity is capped at 100.
-When Calamity reaches its cap, all Calamity is consumed to grant 1 stack of [Inquiry]: Skill Speed +<H>#3</> for <H>#4</>s, up to <H>#5</> stacks.]],
-    ContentFR = "Lorsque cette arme inflige des dégâts, elle confère <H>#1</> points de calamité. Le maximum de calamité est de 100 points.\nLorsque le maximum est atteint, tous les points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de <H>#3</> pendant <H>#4</> s, jusqu’à <H>#5</> cumuls.",
-    ContentJP = "この武器でダメージを与えると、 <H>#1</>ポイントの災厄値を獲得する。災厄値の上限は100ポイント。\n災厄値が上限に達すると、災厄値をすべて消費し、自身に[探求]を1スタック付与する：[探求]1スタックにつきスキル速度が<H>#3</> アップする。 <H>#4</>秒間持続し、最大 <H>#5</>スタック。",
-    ContentKR = "해당 무기로 대미지를 입힐 시 재앙도를 <H>#1</> 획득한다(최대치 100).\n재앙도가 최대치에 도달하면 모든 재앙도를 소모해 자신이 [탐구] 1단계를 획득한다. 스킬 속도가 <H>#3</> 상승한다. 지속 시간 <H>#4</>초, 최대 <H>#5</>단계 중첩.",
-    ContentTC = "使用此武器造成傷害時，獲得<H>#1</>點災厄值，災厄值上限為100點。\n災厄值達到上限時，消耗全部災厄值，自身獲得1層[求索]：技能速度提高<H>#3</>，持續<H>#4</>秒，最多疊加<H>#5</>層。",
+Dealing damage with this weapon grants <H>#1</> Calamity. Calamity is capped at 150.
+When Calamity reaches 100, consumes 100 Calamity to grant 1 stack of [Inquiry]: Skill Speed +<H>#3</> for <H>#4</>s, up to <H>#5</> stacks.]],
+    ContentFR = "Lorsque cette arme inflige des dégâts, elle confère <H>#1</> points de calamité. Le maximum de calamité est de 150 points.\nLorsque vous atteignez 100 points de calamité, 100 points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de <H>#3</> pendant <H>#4</> s, jusqu’à <H>#5</> cumuls.",
+    ContentJP = "この武器でダメージを与えると、<H>#1</>ポイントの災厄値を獲得する。災厄値の上限は150ポイント。\n災厄値が100ポイントに達すると、100ポイントの災厄値を消費し、自身に[探求]を1スタック付与する：スキル速度が<H>#3</>アップする。<H>#4</>秒間持続し、最大#5スタック。",
+    ContentKR = "해당 무기로 대미지를 입힐 시 재앙도를 <H>#1</> 획득한다(최대치 150).\n재앙도가 100에 도달하면 재앙도를 100 소모해 자신이 [탐구] 1단계를 획득한다. 스킬 속도가 <H>#3</> 상승한다. 지속 시간 <H>#4</>초, 최대 <H>#5</>단계 중첩.",
+    ContentTC = "使用此武器造成傷害時，獲得<H>#1</>點災厄值，災厄值上限為150點。\n災厄值達到100點時，消耗100點災厄值，自身獲得1層[求索]：技能速度提高<H>#3</>，持續<H>#4</>秒，最多疊加<H>#5</>層。",
     TextMapContent = "使用此武器造成伤害时，获得<H>#1</>点灾厄值，灾厄值上限为150点。\n灾厄值达到100点时，消耗100点灾厄值，自身获得1层[求索]：技能速度提高<H>#3</>，持续<H>#4</>秒，最多叠加<H>#5</>层。",
     TextMapId = "SKILL_10199_01_DESC"
   },
@@ -140888,11 +140900,11 @@ When Calamity reaches its cap, all Calamity is consumed to grant 1 stack of [Inq
     TextMapId = "SKILL_10199_02_Name"
   },
   SKILL_10199_03_DESC = {
-    ContentEN = "When Skill DMG triggers, gains <H>[#1 × Skill Speed]</> Calamity.",
-    ContentFR = "Lorsque des Dégâts de compétence se déclenchent, vous obtenez <H>[#1 × Vitesse de compétence]</> points de calamité.",
-    ContentJP = "スキルダメージが発生すると、災厄値を [#1×スキル速度] 獲得する。",
-    ContentKR = "스킬 대미지 발동 시 재앙도를 <H>[#1×스킬 속도]</> 획득한다.",
-    ContentTC = "技能傷害觸發時，獲得<H>[#1×技能速度]</>點災厄值。",
+    ContentEN = "When Skill DMG triggers a Bonus Effect, gains <H>[#1 × Skill Speed]</> Calamity.",
+    ContentFR = "Lorsque des Dégâts de compétence déclenchent un Effet supplémentaire, vous obtenez <H>[#1 × Vitesse de compétence]</> points de calamité.",
+    ContentJP = "スキルダメージで追加効果が発動すると、災厄値を<H>[#1×スキル速度]</>獲得する。",
+    ContentKR = "스킬 대미지로 추가 효과 발동 시 재앙도를 <H>[#1×스킬 속도]</> 획득한다.",
+    ContentTC = "技能傷害觸發額外效果時，獲得<H>[#1×技能速度]</>點災厄值。",
     TextMapContent = "技能伤害触发额外效果时，获得<H>[#1×技能速度]</>点灾厄值。",
     TextMapId = "SKILL_10199_03_DESC"
   },
@@ -140980,11 +140992,11 @@ When Calamity reaches its cap, all Calamity is consumed to grant 1 stack of [Inq
   SKILL_10199_10_DESC = {
     ContentEN = [[
 Additional Skill DMG of the character's element +<H>#1</>.
-At maximum [Inquiry] stacks, dealing Skill DMG also deals <H>#3</> Calamity DMG to enemies within <H>#2</>m of the target. This damage counts as Skill DMG, with its DMG bonus calculated as [Skill Speed - 100%]. This effect can trigger once every <H>#4</> seconds.]],
-    ContentFR = "Dégâts de compétence supplémentaires de votre attribut +<H>#1</>.\nLorsque [Recherche] atteint le nombre maximal de cumuls, infliger des Dégâts de compétence inflige également <H>#3</> dégâts de calamité aux ennemis dans un rayon de <H>#2</> m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et leur bonus de dégâts est calculé selon [Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les <H>#4</> s.",
-    ContentJP = "自身と同じ属性のスキル追加ダメージ+<H>#1</>。\n[探求]の重複数が最大の時、追加効果を獲得する：スキルダメージ発生時、対象から半径<H>#2</>m以内の敵に<H>#3</>の災厄ダメージを与える。このダメージはスキルダメージとみなされ、キャラクターのスキル速度に応じて上昇する。上昇倍率は[スキル速度のステータス値-100%]となる。最大で<H>#4</>秒に1回発動する。",
-    ContentKR = "자체 속성 스킬 추가 대미지+<H>#1</>.\n[탐구] 최대 중첩 단계 도달 시 추가 효과를 획득한다. 스킬 대미지 발동 시 대상 반경 <H>#2</>m 내의 적에게 재앙 대미지를 <H>#3</> 입힌다. 해당 대미지는 스킬 대미지로 간주되며, 캐릭터의 스킬 속도에 따라 상승한다. 상승 배율은 [스킬 위력 속성치-100%]이며, <H>#4</>초마다 최대 1회 발동한다.",
-    ContentTC = "自屬性技能追加傷害+<H>#1</>。\n[求索]滿層時額外獲得效果：技能傷害觸發時，對目標半徑<H>#2</>米內的敵人造成<H>#3</>災厄傷害，視為技能傷害，該傷害基於角色技能速度提高，提高倍率為[技能速度屬性值-100%]，每<H>#4</>秒最多觸發1次。",
+At maximum [Inquiry] stacks, when Skill DMG triggers a Bonus Effect, also deals <H>#3</> Calamity DMG to enemies within <H>#2</>m of the target. This counts as Skill DMG, with its DMG bonus calculated as [Skill Speed - 100%]. This effect can trigger at most once every <H>#4</> seconds.]],
+    ContentFR = "Dégâts de compétence supplémentaires de votre attribut +<H>#1</>. Lorsque [Recherche] atteint le nombre maximal de cumuls, les Dégâts de compétence qui déclenchent un Effet supplémentaire infligent également <H>#3</> dégâts de calamité aux ennemis dans un rayon de <H>#2</> m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et leur bonus de dégâts est calculé selon [Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les <H>#4</> s.",
+    ContentJP = "自身と同じ属性のスキル追加ダメージ+<H>#1</>。\n[探求]の重複数が最大の時、追加効果を獲得する：スキルダメージで追加効果が発動すると、対象から半径<H>#2</>m以内の敵に<H>#3</>の災厄ダメージを与える。このダメージはスキルダメージとみなされ、キャラクターのスキル速度に応じて上昇する。上昇倍率は[スキル速度のステータス値-100%]となる。最大で<H>#4</>秒に1回発動する。",
+    ContentKR = "자체 속성 스킬 추가 대미지+<H>#1</>.\n[탐구] 최대 중첩 단계 도달 시 추가 효과를 획득한다. 스킬 대미지로 추가 효과 발동 시 대상 반경 <H>#2</>m 내의 적에게 재앙 대미지를 <H>#3</> 입힌다. 해당 대미지는 스킬 대미지로 간주되며, 캐릭터의 스킬 속도에 따라 상승한다. 상승 배율은 [스킬 위력 속성치-100%]이며, <H>#4</>초마다 최대 1회 발동한다.",
+    ContentTC = "自屬性技能追加傷害+<H>#1</>。\n[求索]滿層時額外獲得效果：技能傷害觸發額外效果時，對目標半徑<H>#2</>米內的敵人造成<H>#3</>災厄傷害，視為技能傷害，該傷害基於角色技能速度提高，提高倍率為[技能速度屬性值-100%]，每<H>#4</>秒最多觸發1次。",
     TextMapContent = "自属性技能追加伤害+<H>#1</>。\n[求索]满层时额外获得效果：技能伤害触发额外效果时，对目标半径<H>#2</>米内的敌人造成<H>#3</>灾厄伤害，视为技能伤害，该伤害基于角色技能速度提高，提高倍率为[技能速度属性值-100%]，每<H>#4</>秒最多触发1次。",
     TextMapId = "SKILL_10199_10_DESC"
   },
@@ -142725,7 +142737,7 @@ This effect is removed when switching to another weapon.]],
     ContentEN = "CRIT Damage +<H>#1</>. Shooting by an Electro character grants +<H>#2</> Skill Intensity. This effect is removed upon exiting Shooting or charging a Ranged Weapon.",
     ContentFR = "DGT CRIT +<H>#1</>. Lorsqu’un personnage Électro tire, il obtient un effet augmentant la Puissance de compétence de <H>#2</>. Cet effet est retiré lorsqu’il cesse de tirer ou prépare une attaque chargée avec une arme à distance.",
     ContentJP = "クリティカルダメージ+ #1 。雷属性のキャラクターが射撃すると、自身のスキル威力が #2 アップする。射撃を終了するか、遠隔武器のチャージを行うと解除される。",
-    ContentKR = "크리티컬 대미지+<H>#1</>. 번개 속성 캐릭터가 사격 시 스킬 위력 <H>#2</> 상승 효과를 획득한다. 사격을 종료하거나 원거리 무기를 차지하면 효과가 해제된다.",
+    ContentKR = "크리티컬 대미지+<H>#1</>. 번개 속성 캐릭터가 사격 시 스킬 위력 <H>#2</> 상승 효과를 획득한다. 사격을 종료하거나 원거리 무기로 차지하면 효과가 해제된다.",
     ContentTC = "暴擊傷害+<H>#1</>。雷屬性角色射擊時，自身獲得技能威力提高<H>#2</>，退出射擊或遠端武器蓄力時清除。",
     TextMapContent = "暴击伤害+<H>#1</>。雷属性角色射击时，自身获得技能威力提高<H>#2</>，退出射击或远程武器蓄力时清除。",
     TextMapId = "SKILL_20306_DESC"
@@ -147100,6 +147112,15 @@ per stack of [Poison of Love]]=],
     TextMapContent = "[电流掌握]技能伤害提高",
     TextMapId = "SKILL_DESC_4103Passive01_Buff02"
   },
+  SKILL_DESC_4103Passive01_LastTime = {
+    ContentEN = "[Arc Mastery] Duration",
+    ContentFR = "Durée de [Maîtrise du courant]",
+    ContentJP = "[電流掌握]持続時間",
+    ContentKR = "[전류 숙달] 지속 시간",
+    ContentTC = "[電流掌握]持續時間",
+    TextMapContent = "[电流掌握]持续时间",
+    TextMapId = "SKILL_DESC_4103Passive01_LastTime"
+  },
   SKILL_DESC_4103Skill02_Buff01 = {
     ContentEN = "Skill SPD Bonus per [Steady Aim] Stack",
     ContentFR = "Bonus de Vitesse de compétence par cumul de [Concentration]",
@@ -148397,10 +148418,10 @@ per stack of [Poison of Love]]=],
     TextMapId = "SKILL_DESC_Hot"
   },
   SKILL_DESC_KillEnemy = {
-    ContentEN = "Defeat the enemies",
-    ContentFR = "Ennemi vaincu",
-    ContentJP = "敵をノックダウンする",
-    ContentKR = "적 처치",
+    ContentEN = "Enemies defeated",
+    ContentFR = "Ennemis vaincus",
+    ContentJP = "撃破数",
+    ContentKR = "명 처치",
     ContentTC = "擊倒敵人",
     TextMapContent = "击倒敌人",
     TextMapId = "SKILL_DESC_KillEnemy"
@@ -153133,7 +153154,7 @@ When Zhiliu has 2 [Talismans: Xun], [Heaven-Earth Divination] is replaced with [
     TextMapId = "TERMEXP_4103_Skill02_01"
   },
   TERMEXP_4103_Skill02_02 = {
-    ContentEN = "Increases Skill Speed and reduces Sanity Cost when shooting with [Arcshot]. Lasts indefinitely and stacks up to 30 times. Upon exiting [Deadeye Domain], removes 1 stack every 0.5s.",
+    ContentEN = "Increases Skill Speed and reduces Sanity Cost when shooting with [Arcshot]. Lasts for the rest of the battle and stacks up to 30 times. Upon exiting [Deadeye Domain], removes 1 stack every 0.5s.",
     ContentFR = "Augmente la Vitesse de compétence et réduit le coût en Lucidité des tirs du [Fusil de précision]. Durée illimitée, jusqu’à 30 cumuls. Après avoir quitté le [Mode sniper], 1 cumul est retiré toutes les 0,5 s.",
     ContentJP = "スキル速度がアップし、[狙撃銃]射撃時のSP消費がダウンする。永続効果で、最大30スタックまで重複可能。[狙撃モード]解除後、0.5秒ごとに1スタック解除される。",
     ContentKR = "스킬 속도가 상승하고 [저격총] 사격 시 정신력 소모가 감소한다. 지속 시간은 무제한이며, 최대 30단계까지 중첩된다. [저격 모드] 종료 후 0.5초마다 1중첩씩 제거된다.",
@@ -166758,6 +166779,7 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     ContentJP = "{空格}",
     ContentKR = "{空格}",
     ContentTC = "{空格}",
+    TextMapContent = " ",
     TextMapId = "UI_Accessory_Desc_50004"
   },
   UI_Accessory_Desc_60001 = {
@@ -166766,6 +166788,7 @@ Once it is removed, you can damage them. Destroy both Justiciar Basalt Sentinels
     ContentJP = "{空格}",
     ContentKR = "{空格}",
     ContentTC = "{空格}",
+    TextMapContent = " ",
     TextMapId = "UI_Accessory_Desc_60001"
   },
   UI_Accessory_Desc_60002 = {
@@ -184567,11 +184590,30 @@ Lynn's Headpiece
     TextMapContent = "是否确认消耗<highlight>月石*900</>解锁奖励？",
     TextMapId = "UI_AppearanceCollect_ConfirmUnlock"
   },
+  UI_AppearanceCollect_ConfirmUnlock2 = {
+    ContentEN = "Spend <highlight>Phoxene ×600</> to unlock the rewards?",
+    ContentFR = "Confirmer le déblocage de la récompense contre <highlight>600 Phoxènes</> ?",
+    ContentJP = "<highlight>月ノ石*600</>を消費して報酬を解放しますか？",
+    ContentKR = "<highlight>월석x600</>을 소모하여 보상을 해제하시겠습니까?",
+    ContentTC = "是否確認消耗<highlight>月石*600</>解鎖獎勵？",
+    TextMapContent = "是否确认消耗<highlight>月石*600</>解锁奖励？",
+    TextMapId = "UI_AppearanceCollect_ConfirmUnlock2"
+  },
   UI_AppearanceCollect_CurrentProgress = {
+    ContentEN = "Collection Progress: %d/%d",
+    ContentFR = "Progression : %d/%d",
+    ContentJP = "収集進捗：%d/%d",
+    ContentKR = "수집 진행도: %d/%d",
+    ContentTC = "收集進度：%d/%d",
     TextMapContent = "收集进度：%d/%d",
     TextMapId = "UI_AppearanceCollect_CurrentProgress"
   },
   UI_AppearanceCollect_CurrentProgressDetail = {
+    ContentEN = "View Points for each cosmetic when previewing or purchasing it, as well as your current Points in Vibrant Strokes.",
+    ContentFR = "Lors de la prévisualisation ou de l’achat d’une apparence, vous pouvez consulter les points d’apparence qu’elle rapporte ainsi que vos points d’apparence actuels dans « Fresques chatoyantes ».",
+    ContentJP = "外見のプレビュー・購入時に、その外見の外見ポイントを確認できます。また、「彩りの絵とき」の現在の外見ポイントも確認できます。",
+    ContentKR = "외형을 미리보기하거나 구매할 때 해당 외형의 외형 포인트 및 현재 [수려한 화폭]의 외형 포인트를 확인할 수 있습니다.",
+    ContentTC = "在預覽、購買外觀時可查看該外觀對應的外觀積分，同時可以查看華彩圖記的當前外觀積分",
     TextMapContent = "在预览、购买外观时可查看该外观对应的外观积分，同时可以查看华彩图记的当前外观积分",
     TextMapId = "UI_AppearanceCollect_CurrentProgressDetail"
   },
@@ -184638,10 +184680,20 @@ Lynn's Headpiece
     TextMapId = "UI_AppearanceCollect_StatusPending"
   },
   UI_AppearanceCollect_Switch = {
+    ContentEN = "Show Points",
+    ContentFR = "Afficher les points d’apparence",
+    ContentJP = "外見ポイントを表示",
+    ContentKR = "외형 포인트 표시",
+    ContentTC = "顯示外觀積分",
     TextMapContent = "显示外观积分",
     TextMapId = "UI_AppearanceCollect_Switch"
   },
   UI_AppearanceCollect_SwitchDetail = {
+    ContentEN = "View Points for each cosmetic when previewing or purchasing it, as well as your current Points in Vibrant Strokes.",
+    ContentFR = "Lors de la prévisualisation ou de l’achat d’une apparence, vous pouvez consulter les points d’apparence qu’elle rapporte ainsi que vos points d’apparence actuels dans « Fresques chatoyantes ».",
+    ContentJP = "外見のプレビュー・購入時に、その外見の外見ポイントを確認できます。また、「彩りの絵とき」の現在の外見ポイントも確認できます。",
+    ContentKR = "외형을 미리보기하거나 구매할 때 해당 외형의 외형 포인트 및 현재 [수려한 화폭]의 외형 포인트를 확인할 수 있습니다.",
+    ContentTC = "在預覽、購買外觀時可查看該外觀對應的外觀積分，同時可以查看華彩圖記的當前外觀積分",
     TextMapContent = "在预览、购买外观时可查看该外观对应的外观积分，同时可以查看华彩图记的当前外观积分",
     TextMapId = "UI_AppearanceCollect_SwitchDetail"
   },
@@ -191586,10 +191638,20 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
     TextMapId = "UI_Banner_Tab_Sale161"
   },
   UI_Banner_Tab_Sale171 = {
+    ContentEN = "Limited-Time Offer: 88% Off",
+    ContentFR = "Offre limitée : –88 %",
+    ContentJP = "期間限定88%OFF",
+    ContentKR = "기간 한정 88% 할인",
+    ContentTC = "限時1.2折特惠",
     TextMapContent = "限时1.2折特惠",
     TextMapId = "UI_Banner_Tab_Sale171"
   },
   UI_Banner_Tab_Sale172 = {
+    ContentEN = "80% OFF",
+    ContentFR = "–80 %",
+    ContentJP = "80％オフお得セール",
+    ContentKR = "80% 할인",
+    ContentTC = "2折特惠",
     TextMapContent = "2折特惠",
     TextMapId = "UI_Banner_Tab_Sale172"
   },
@@ -191642,7 +191704,7 @@ Please go to the [Cosmetics] screen to purchase the Skin Selection Chest.]],
     ContentEN = "94% OFF",
     ContentFR = "94 % de réduction",
     ContentJP = "94％オフお得セール",
-    ContentKR = "40% 할인",
+    ContentKR = "94% 할인",
     ContentTC = "0.6折特惠",
     TextMapContent = "0.6折特惠",
     TextMapId = "UI_Banner_Tab_WeaponSkinForNew"
@@ -217427,7 +217489,7 @@ Proceed with the purchase?]],
     ContentEN = "Knock",
     ContentFR = "Frapper à la porte",
     ContentJP = "ノックする",
-    ContentKR = "노크하기",
+    ContentKR = "두드리기",
     ContentTC = "敲門",
     TextMapContent = "敲门",
     TextMapId = "UI_Drop_120706"
@@ -230482,6 +230544,60 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapContent = "获得任意月梢捕梦展示动作",
     TextMapId = "UI_Locked_Des_4030054"
   },
+  UI_Locked_Des_4040001 = {
+    ContentEN = "Reach Stage 1 in Apex Rankings",
+    ContentFR = "Classement suprême : étage 1",
+    ContentJP = "頂点ランキングで1階層に到達する",
+    ContentKR = "정상 랭킹 1층 달성",
+    ContentTC = "巔峰排名達到1層",
+    TextMapContent = "巅峰排名达到1层",
+    TextMapId = "UI_Locked_Des_4040001"
+  },
+  UI_Locked_Des_4040002 = {
+    ContentEN = "Reach Stage 5 in Apex Rankings",
+    ContentFR = "Classement suprême : étage 5",
+    ContentJP = "頂点ランキングで5階層に到達する",
+    ContentKR = "정상 랭킹 5층 달성",
+    ContentTC = "巔峰排名達到5層",
+    TextMapContent = "巅峰排名达到5层",
+    TextMapId = "UI_Locked_Des_4040002"
+  },
+  UI_Locked_Des_4040003 = {
+    ContentEN = "Reach Stage 10 in Apex Rankings",
+    ContentFR = "Classement suprême : étage 10",
+    ContentJP = "頂点ランキングで10階層に到達する",
+    ContentKR = "정상 랭킹 10층 달성",
+    ContentTC = "巔峰排名達到10層",
+    TextMapContent = "巅峰排名达到10层",
+    TextMapId = "UI_Locked_Des_4040003"
+  },
+  UI_Locked_Des_4040004 = {
+    ContentEN = "Reach Stage 15 in Apex Rankings",
+    ContentFR = "Classement suprême : étage 15",
+    ContentJP = "頂点ランキングで15階層に到達する",
+    ContentKR = "정상 랭킹 15층 달성",
+    ContentTC = "巔峰排名達到15層",
+    TextMapContent = "巅峰排名达到15层",
+    TextMapId = "UI_Locked_Des_4040004"
+  },
+  UI_Locked_Des_4040005 = {
+    ContentEN = "Reach Stage 30 in Apex Rankings",
+    ContentFR = "Classement suprême : étage 30",
+    ContentJP = "頂点ランキングで30階層に到達する",
+    ContentKR = "정상 랭킹 30층 달성",
+    ContentTC = "巔峰排名達到30層",
+    TextMapContent = "巅峰排名达到30层",
+    TextMapId = "UI_Locked_Des_4040005"
+  },
+  UI_Locked_Des_4040006 = {
+    ContentEN = "Reach Stage 60 in Apex Rankings",
+    ContentFR = "Classement suprême : étage 60",
+    ContentJP = "頂点ランキングで60階層に到達する",
+    ContentKR = "정상 랭킹 60층 달성",
+    ContentTC = "巔峰排名達到60層",
+    TextMapContent = "巅峰排名达到60层",
+    TextMapId = "UI_Locked_Des_4040006"
+  },
   UI_Locked_Des_451001 = {
     ContentEN = "Join Guild",
     ContentFR = "Rejoindre une guilde",
@@ -243255,8 +243371,8 @@ If you or your family have a history of epilepsy or have experienced similar sym
     TextMapId = "UI_Npc_Name_260003"
   },
   UI_Npc_Name_260004 = {
-    ContentEN = "Forlorn Old Man",
-    ContentFR = "Vieil homme abattu",
+    ContentEN = "Forlorn Old Woman",
+    ContentFR = "Vieille femme abattue",
     ContentJP = "寂しげな老人",
     ContentKR = "쓸쓸해 보이는 노인",
     ContentTC = "落寞的老人",
@@ -243391,7 +243507,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
   },
   UI_Npc_Name_260019 = {
     ContentEN = "Cheerful Citizen",
-    ContentFR = "Citadin enjoué",
+    ContentFR = "Citadine enjouée",
     ContentJP = "明るい市民",
     ContentKR = "활기찬 시민",
     ContentTC = "開朗的市民",
@@ -243436,7 +243552,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
   },
   UI_Npc_Name_260024 = {
     ContentEN = "Kind-Hearted Patron",
-    ContentFR = "Client serviable",
+    ContentFR = "Cliente serviable",
     ContentJP = "世話好きな酒場の客",
     ContentKR = "마음씨 좋은 술꾼",
     ContentTC = "熱心腸的酒客",
@@ -243454,7 +243570,7 @@ If you or your family have a history of epilepsy or have experienced similar sym
   },
   UI_Npc_Name_260026 = {
     ContentEN = "Theatre Attendant",
-    ContentFR = "Employé du théâtre",
+    ContentFR = "Employée du théâtre",
     ContentJP = "劇場のスタッフ",
     ContentKR = "극장 직원",
     ContentTC = "劇院工作人員",
@@ -250670,7 +250786,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentEN = "Place Items",
     ContentFR = "Ajouter un objet",
     ContentJP = "タップしてアイテムを追加",
-    ContentKR = "오브젝트 추가",
+    ContentKR = "물건 추가",
     ContentTC = "點擊添加物件",
     TextMapContent = "点击添加物件",
     TextMapId = "UI_PersonInfo_AddItem"
@@ -250679,10 +250795,19 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentEN = "Item",
     ContentFR = "Objet",
     ContentJP = "アイテム",
-    ContentKR = "오브젝트",
+    ContentKR = "물건",
     ContentTC = "物件",
     TextMapContent = "物件",
     TextMapId = "UI_PersonInfo_CustomItem"
+  },
+  UI_PersonInfo_CustomItem_2 = {
+    ContentEN = "Items",
+    ContentFR = "Sélectionner un objet",
+    ContentJP = "アイテムを選択",
+    ContentKR = "물건 선택",
+    ContentTC = "選擇物件",
+    TextMapContent = "选择物件",
+    TextMapId = "UI_PersonInfo_CustomItem_2"
   },
   UI_PersonInfo_Detail_Char = {
     ContentEN = "Character Info",
@@ -250827,6 +250952,15 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentTC = "點擊添加魔靈",
     TextMapContent = "点击添加魔灵",
     TextMapId = "UI_PersonalPage_AddGeniemon"
+  },
+  UI_PersonalPage_AddGeniemon_2 = {
+    ContentEN = "Geniemons",
+    ContentFR = "Sélectionner un Géniemon",
+    ContentJP = "ジェネモンを選択",
+    ContentKR = "마령 선택",
+    ContentTC = "選擇魔靈",
+    TextMapContent = "选择魔灵",
+    TextMapId = "UI_PersonalPage_AddGeniemon_2"
   },
   UI_PersonalPage_Adjust = {
     ContentEN = "Adjust",
@@ -250994,7 +251128,7 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentEN = "Decorations",
     ContentFR = "Objet",
     ContentJP = "アイテム",
-    ContentKR = "오브젝트",
+    ContentKR = "물건",
     ContentTC = "物件",
     TextMapContent = "物件",
     TextMapId = "UI_PersonalPage_ItemTips"
@@ -251007,6 +251141,33 @@ Complete the Avian Spirit Trial and achieve a certain star rating for the first 
     ContentTC = "光源%d",
     TextMapContent = "光源%d",
     TextMapId = "UI_PersonalPage_Light"
+  },
+  UI_PersonalPage_LightAxis_X = {
+    ContentEN = "X-Axis",
+    ContentFR = "Axe X",
+    ContentJP = "X軸",
+    ContentKR = "X축",
+    ContentTC = "X軸",
+    TextMapContent = "X轴",
+    TextMapId = "UI_PersonalPage_LightAxis_X"
+  },
+  UI_PersonalPage_LightAxis_Y = {
+    ContentEN = "Y-Axis",
+    ContentFR = "Axe Y",
+    ContentJP = "Y軸",
+    ContentKR = "Y축",
+    ContentTC = "Y軸",
+    TextMapContent = "Y轴",
+    TextMapId = "UI_PersonalPage_LightAxis_Y"
+  },
+  UI_PersonalPage_LightAxis_Z = {
+    ContentEN = "Z-Axis",
+    ContentFR = "Axe Z",
+    ContentJP = "Z軸",
+    ContentKR = "Z축",
+    ContentTC = "Z軸",
+    TextMapContent = "Z轴",
+    TextMapId = "UI_PersonalPage_LightAxis_Z"
   },
   UI_PersonalPage_LightDirection = {
     ContentEN = "Light Direction",
@@ -272363,6 +272524,11 @@ Yet he did not stop, certain that ever more followers would gather beneath his b
     TextMapId = "UI_WEAPON_DESC_20305"
   },
   UI_WEAPON_DESC_20306 = {
+    ContentEN = "To live on is a blessing the living must bear.",
+    ContentFR = "Continuer à vivre est une bénédiction dont les vivants doivent porter le poids.",
+    ContentJP = "生き続けることは、生者が背負うべき祝福。",
+    ContentKR = "살아간다는 것, 그것은 살아 있는 자가 짊어져야 할 축복이다.",
+    ContentTC = "活下去，是生者需要背負的祝福。",
     TextMapContent = "活下去，是生者需要背负的祝福。",
     TextMapId = "UI_WEAPON_DESC_20306"
   },
@@ -283462,10 +283628,10 @@ Just as Rhythm and the Noctoyagers reached a dead end, the creature came to them
   },
   WikiText_40901001 = {
     ContentEN = "\"Maybe... for those left behind, finding a way to go on is enough.\"\n\nWritten by Beryl\nEdited by WANDOU\n\nAfter the Charon Hunt, Rhythm leaves the Legion behind. The loss of someone dear to her and the collapse of everything she once believed in leave her adrift, with no sense of where to go next. She throws herself into one job after another, hoping to keep her mind occupied — until one day, she happens upon an old 6th Legion recruitment list among Blues's belongings.\nSeeing the names of those who suffered much like Blues, Rhythm decides to seek out their families and offer whatever help she can.\nAs she meets these families, each bearing the scars of what happened, she witnesses both cruelty and kindness in human nature, and sees echoes of the hatred and pain she knows all too well. And somewhere along the way, almost without realizing it, something within her begins to change...",
-    ContentFR = "« Oui... Peut-être que continuer à vivre du mieux que l’on peut suffit déjà. »\nScénario : Beryl\nSupervision : WANDOU\n\nAprès la Traque aux Charons, Rhythm quitta la Légion. La perte d’un être cher et l’effondrement de ses convictions lui firent momentanément perdre le cap. Elle ne trouva alors d’autre refuge que de multiplier les petits boulots pour s’engourdir l’esprit, jusqu’au jour où elle découvrit par hasard, dans les affaires personnelles de Blues, la liste d’admission de la VIᵉ Légion de l’époque. \nEn voyant les noms de personnes ayant connu une tragédie semblable à celle de son frère cadet, Rhythm décida de rendre visite à leurs familles et de leur apporter toute l’aide dont elle était capable. \nAu contact de familles de victimes aux parcours variés, elle découvrit la froideur comme la chaleur de l’être humain, et retrouva des haines et des souffrances qui lui semblaient familières. Sans même s’en rendre compte, son propre état d’esprit commença lui aussi à changer...",
+    ContentFR = "« Oui... Peut-être que continuer à vivre du mieux que l’on peut suffit déjà. »\nScénario : Beryl\nSupervision : WANDOU\n \nAprès la Traque aux Charons, Rhythm quitta la Légion. La perte d’un être cher et l’effondrement de ses convictions lui firent momentanément perdre le cap. Elle ne trouva alors d’autre refuge que de multiplier les petits boulots pour s’engourdir l’esprit, jusqu’au jour où elle découvrit par hasard, dans les affaires personnelles de Blues, la liste d’admission de la VIᵉ Légion de l’époque. \nEn voyant les noms de personnes ayant connu une tragédie semblable à celle de son frère cadet, Rhythm décida de rendre visite à leurs familles et de leur apporter toute l’aide dont elle était capable. \nAu contact de familles de victimes aux parcours variés, elle découvrit la froideur comme la chaleur de l’être humain, et retrouva des haines et des souffrances qui lui semblaient familières. Sans même s’en rendre compte, son propre état d’esprit commença lui aussi à changer...",
     ContentJP = "「そうだね……ちゃんと生きていく。それだけで十分かもしれない。」\n脚本：Beryl\n監修：エンドウ\n\nカロン狩り事件を経て、リズムは軍団を離れた。最愛の人を失い、信じていたものが崩れたことで、一時は人生の行き先を見失い、ひたすら働くことで自分を麻痺させるしかなかった。そんなある日、ブルースの遺品から、かつての第六軍団の採用者名簿を偶然見つける。弟と同じように悲劇に見舞われた者たちの名前を目にしたリズムは、その家族を訪ね、自分にできる限りの支援をすることを決意した。さまざまな被害者の家族と接する中で、彼女は人間の冷たさと温かさを目の当たりにし、どこか見覚えのある憎しみや苦しみに触れていく。そして、彼女自身の心境も、いつしか少しずつ変化していった…… |",
     ContentKR = "\"그래... 꿋꿋이 잘 살아가는 것만으로도 충분할지 몰라.\"\n각본: Beryl\n감수: Wandou\n\n카론 사냥 사건을 겪은 후, 리듬은 군단을 떠났다. 하나뿐인 가족을 잃고 신앙마저 무너진 그녀는 한동안 삶의 방향을 잃은 채, 닥치는 대로 일을 하며 스스로를 마비시킬 수밖에 없었다. 그러던 어느 날, 블루스의 유품 속에서 우연히 당시 제6군단의 합격자 명단을 발견했다. 그곳에 적힌 이름들을 바라보던 리듬은 동생과 같은 비극을 겪은 이들이 있다는 것을 깨닫고, 그들의 가족을 찾아가 할 수 있는 일이라면 무엇이든 돕기로 마음먹었다. 저마다 다른 사연을 품은 피해자 가족들을 만나면서, 그녀는 사람들의 냉정함과 따뜻함을 동시에 마주했고, 자신에게도 어딘가 익숙한 증오와 고통을 들여다보는 사이 자신도 모르는 새 마음이 조금씩 변해 가고 있었다...",
-    ContentTC = "「是啊……好好活下去，也許就足夠了。」 \n編劇：小綠 \n監修：豌豆 \n\n經歷卡戎狩獵事件後，黎瑟離開了軍團。至親的離世、信仰的崩塌讓她一時迷失了人生的方向，只能依靠不停地打工來麻痹自己，直到某一天，她在布魯斯的遺物中偶然發現了當年第六軍團的錄取名單——看著那些與弟弟一樣遭遇了悲劇的名字，黎瑟決定去拜訪他們的家人，力所能及地提供幫助。 \n在與形形色色的受害者家庭接觸的過程中，她見證了人性的冷漠與溫暖，看到了似曾相識的仇恨與痛苦，自身的心境也在不知不覺中發生了轉變……",
+    ContentTC = "「是啊……好好活下去，也許就足夠了。」\n編劇：小綠\n監修：豌豆\n\n經歷卡戎狩獵事件後，黎瑟離開了軍團。至親的離世、信仰的崩塌讓她一時迷失了人生的方向，只能依靠不停地打工來麻痹自己，直到某一天，她在布魯斯的遺物中偶然發現了當年第六軍團的錄取名單——看著那些與弟弟一樣遭遇了悲劇的名字，黎瑟決定去拜訪他們的家人，力所能及地提供幫助。\n在與形形色色的受害者家庭接觸的過程中，她見證了人性的冷漠與溫暖，看到了似曾相識的仇恨與痛苦，自身的心境也在不知不覺中發生了轉變……",
     TextMapContent = "“是啊……好好活下去，也许就足够了。”\n编剧：小绿\n监修：豌豆\n\n经历卡戎狩猎事件后，黎瑟离开了军团。至亲的离世、信仰的崩塌让她一时迷失了人生的方向，只能依靠不停地打工来麻痹自己，直到某一天，她在布鲁斯的遗物中偶然发现了当年第六军团的录取名单——看着那些与弟弟一样遭遇了悲剧的名字，黎瑟决定去拜访他们的家人，力所能及地提供帮助。\n在与形形色色的受害者家庭接触的过程中，她见证了人性的冷漠与温暖，看到了似曾相识的仇恨与痛苦，自身的心境也在不知不觉中发生了转变……",
     TextMapId = "WikiText_40901001"
   },

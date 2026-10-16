@@ -3960,7 +3960,7 @@
   },
   {
     "id": 31007,
-    "name": "勝利·初雪小夜曲",
+    "name": "勝利·地獄咆哮",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -5060,7 +5060,8 @@
     "desc": "迴響在深夜的腳步聲，是希望的路標，還是誘惑的陷阱？",
     "icon": "T_Fashion_Fx32_03",
     "rarity": 5,
-    "unlock": "透過活動獲得"
+    "unlock": "透過活動獲得",
+    "hide": 1
   },
   {
     "id": 70071,

@@ -110068,7 +110068,7 @@
                 "id": 12070081,
                 "content": "...",
                 "npc": 260005,
-                "speakerName": "Vieil homme abattu",
+                "speakerName": "Vieille femme abattue",
                 "next": 12070082
               },
               {
@@ -111960,7 +111960,7 @@
               },
               {
                 "id": 12070310,
-                "content": "Ce n’est rien. Si vous ne voulez pas en parler, n’en parlons pas. Je suis simplement surpris.",
+                "content": "Ce n’est rien. Si vous ne voulez pas en parler, n’en parlons pas. Je suis simplement surprise.",
                 "npc": 260019,
                 "next": 12070311
               },
@@ -114065,7 +114065,8 @@
             "type": "TalkNode",
             "name": "无缝对话看城墙",
             "next": [
-              "178739061344924907242"
+              "178739061344924907242",
+              "17918787001821142268"
             ],
             "dialogues": [
               {
@@ -114207,6 +114208,12 @@
                 "npc": 260001
               }
             ]
+          },
+          {
+            "id": "17918787001821142268",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM节点",
+            "resource": "bgm/cbt03/0071_lise_secret"
           }
         ]
       }

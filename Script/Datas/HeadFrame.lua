@@ -430,7 +430,7 @@ return ReadOnly("HeadFrame", {
     Des = "UI_HeadFrame_Des_Common",
     FrameID = 10052,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame48.T_Head_Frame48'",
-    Name = "UI_HeadFrame_Name_10052",
+    Name = "UI_HeadFrame_Name_10053",
     SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame48.T_Head_Frame48'"
   },
   [10053] = {
@@ -439,7 +439,7 @@ return ReadOnly("HeadFrame", {
     Des = "UI_HeadFrame_Des_Common",
     FrameID = 10053,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/HeadFrame/T_Head_Frame49.T_Head_Frame49'",
-    Name = "UI_HeadFrame_Name_10053",
+    Name = "UI_HeadFrame_Name_10052",
     SmallIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head_Frame/T_Head_Frame49.T_Head_Frame49'"
   }
 })

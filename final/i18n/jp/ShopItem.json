@@ -1560,96 +1560,6 @@
                 "sequence": 95,
                 "startTime": 1790215200,
                 "endTime": 1791752400
-              },
-              {
-                "id": 10008019,
-                "itemType": "Resource",
-                "typeId": 211,
-                "typeName": "依頼密書の手がかり",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "スターコイン",
-                "num": 10,
-                "limit": 10,
-                "subTabId": 100081,
-                "sequence": 100,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008020,
-                "itemType": "Resource",
-                "typeId": 101,
-                "typeName": "銅貨",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "スターコイン",
-                "num": 20000,
-                "limit": 20,
-                "subTabId": 100081,
-                "sequence": 99,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008021,
-                "itemType": "Resource",
-                "typeId": 2013,
-                "typeName": "戦闘の調べ 3",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "スターコイン",
-                "num": 1,
-                "limit": 10,
-                "subTabId": 100081,
-                "sequence": 98,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008022,
-                "itemType": "Resource",
-                "typeId": 2009,
-                "typeName": "武器取扱説明書 3",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "スターコイン",
-                "num": 1,
-                "limit": 10,
-                "subTabId": 100081,
-                "sequence": 97,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008023,
-                "itemType": "Resource",
-                "typeId": 102,
-                "typeName": "深紅のビーズ",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "スターコイン",
-                "num": 200,
-                "limit": 20,
-                "subTabId": 100081,
-                "sequence": 96,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008024,
-                "itemType": "Resource",
-                "typeId": 20013,
-                "typeName": "ルーナ族の印",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "スターコイン",
-                "num": 10,
-                "limit": 20,
-                "subTabId": 100081,
-                "sequence": 95,
-                "startTime": 1793844000,
-                "endTime": 1794819600
               }
             ]
           }
@@ -1669,6 +1579,96 @@
             "id": 100151,
             "name": "スターショップ",
             "items": [
+              {
+                "id": 10008019,
+                "itemType": "Resource",
+                "typeId": 211,
+                "typeName": "依頼密書の手がかり",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "スターコイン",
+                "num": 10,
+                "limit": 10,
+                "subTabId": 100151,
+                "sequence": 100,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008020,
+                "itemType": "Resource",
+                "typeId": 101,
+                "typeName": "銅貨",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "スターコイン",
+                "num": 20000,
+                "limit": 20,
+                "subTabId": 100151,
+                "sequence": 99,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008021,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "戦闘の調べ 3",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "スターコイン",
+                "num": 1,
+                "limit": 10,
+                "subTabId": 100151,
+                "sequence": 98,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008022,
+                "itemType": "Resource",
+                "typeId": 2009,
+                "typeName": "武器取扱説明書 3",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "スターコイン",
+                "num": 1,
+                "limit": 10,
+                "subTabId": 100151,
+                "sequence": 97,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008023,
+                "itemType": "Resource",
+                "typeId": 102,
+                "typeName": "深紅のビーズ",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "スターコイン",
+                "num": 200,
+                "limit": 20,
+                "subTabId": 100151,
+                "sequence": 96,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008024,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "ルーナ族の印",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "スターコイン",
+                "num": 10,
+                "limit": 20,
+                "subTabId": 100151,
+                "sequence": 95,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
               {
                 "id": 100151001,
                 "itemType": "Resource",
@@ -8826,7 +8826,7 @@
                 "sequence": 105,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到15层"
+                "cond": "頂点ランキングで15階層に到達する"
               },
               {
                 "id": 10004282,
@@ -8842,7 +8842,7 @@
                 "sequence": 104,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到10层"
+                "cond": "頂点ランキングで10階層に到達する"
               },
               {
                 "id": 10004283,
@@ -8858,7 +8858,7 @@
                 "sequence": 103,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到5层"
+                "cond": "頂点ランキングで5階層に到達する"
               },
               {
                 "id": 10004284,
@@ -8874,7 +8874,7 @@
                 "sequence": 102,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到5层"
+                "cond": "頂点ランキングで5階層に到達する"
               },
               {
                 "id": 10004285,
@@ -9145,7 +9145,7 @@
                 "sequence": 95,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到1层"
+                "cond": "頂点ランキングで1階層に到達する"
               },
               {
                 "id": 10004303,
@@ -9161,7 +9161,7 @@
                 "sequence": 96,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到10层"
+                "cond": "頂点ランキングで10階層に到達する"
               },
               {
                 "id": 10004304,
@@ -9177,7 +9177,7 @@
                 "sequence": 97,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到60层"
+                "cond": "頂点ランキングで60階層に到達する"
               }
             ]
           }
@@ -24336,7 +24336,7 @@
                 "id": 140459,
                 "itemType": "HeadSculpture",
                 "typeId": 30173,
-                "typeName": "狩猟・スカイブルー",
+                "typeName": "地獄の咆哮・インディゴ",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -24352,7 +24352,7 @@
                 "id": 140460,
                 "itemType": "HeadSculpture",
                 "typeId": 30174,
-                "typeName": "狩猟・ペルシアンレッド",
+                "typeName": "地獄の咆哮・ペルシアンレッド",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -24368,7 +24368,7 @@
                 "id": 140461,
                 "itemType": "HeadSculpture",
                 "typeId": 30175,
-                "typeName": "狩猟・マリーゴールド",
+                "typeName": "地獄の咆哮・マリーゴールド",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -24704,7 +24704,7 @@
                 "id": 140482,
                 "itemType": "CharAccessory",
                 "typeId": 31007,
-                "typeName": "勝利・初雪のセレナーデ",
+                "typeName": "勝利・地獄の咆哮",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -25121,7 +25121,7 @@
                 "id": 140541,
                 "itemType": "HeadSculpture",
                 "typeId": 30181,
-                "typeName": "骨塚の花・レッドパープル",
+                "typeName": "月枝夢狩·インディゴ",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -25138,7 +25138,7 @@
                 "id": 140542,
                 "itemType": "HeadSculpture",
                 "typeId": 30182,
-                "typeName": "骨塚の花・マリーゴールド",
+                "typeName": "月枝夢狩·ペルシアンレッド",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -25155,7 +25155,7 @@
                 "id": 140543,
                 "itemType": "HeadSculpture",
                 "typeId": 30183,
-                "typeName": "骨塚の花・アイボリー",
+                "typeName": "月枝夢狩·ジェットブラック",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "虹色のプリズム",
@@ -25231,6 +25231,22 @@
                 "sequence": 9999,
                 "startTime": 1792375200,
                 "endTime": 1796590800
+              },
+              {
+                "id": 140582,
+                "itemType": "WeaponAccessory",
+                "typeId": 20005,
+                "typeName": "新月の渦",
+                "price": 6,
+                "priceType": 111,
+                "priceName": "虹色のプリズム",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1401,
+                "sequence": 1782,
+                "startTime": 1792375200,
+                "endTime": 1796590800,
+                "isSpPopup": 1
               },
               {
                 "id": 160165,
@@ -28106,6 +28122,48 @@
                 "subTabId": 1403,
                 "sequence": 1259,
                 "startTime": 1788814800
+              },
+              {
+                "id": 140165,
+                "itemType": "Resource",
+                "typeId": 41029,
+                "typeName": "幻想騎士・一式",
+                "price": 30,
+                "priceType": 110,
+                "priceName": "水色のプリズム",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1403,
+                "sequence": 257,
+                "startTime": 1792375200
+              },
+              {
+                "id": 140166,
+                "itemType": "Resource",
+                "typeId": 41030,
+                "typeName": "幻想騎士・二式",
+                "price": 30,
+                "priceType": 110,
+                "priceName": "水色のプリズム",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1403,
+                "sequence": 258,
+                "startTime": 1792375200
+              },
+              {
+                "id": 140167,
+                "itemType": "Resource",
+                "typeId": 41023,
+                "typeName": "自分アピール",
+                "price": 30,
+                "priceType": 110,
+                "priceName": "水色のプリズム",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1403,
+                "sequence": 259,
+                "startTime": 1792375200
               }
             ]
           }

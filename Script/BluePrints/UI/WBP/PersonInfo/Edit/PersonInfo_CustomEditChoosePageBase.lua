@@ -61,6 +61,7 @@ function M:InitChoosePage(EditRootController, ChooseMode, Params)
   self.bItemDetailsOpened = false
   self:_EnsureEditDataModel()
   self:BindPageEvents()
+  self:_ResetCharacterTipsHostOpacity()
   self:_InitCharacterTips()
   self:_InitItemDetailsWidget()
   self:_InitChoosePageTab()
@@ -1467,6 +1468,15 @@ function M:_DelayFocusCharacterTips()
   end, false, 0, "DelayFocusCharacterTips", true)
 end
 
+function M:_ResetCharacterTipsHostOpacity()
+  if self.List_Out and self.IsAnimationPlaying and self.StopAnimation and self:IsAnimationPlaying(self.List_Out) then
+    self:StopAnimation(self.List_Out)
+  end
+  if IsValid(self.Pos_Tips) and self.Pos_Tips.SetRenderOpacity then
+    self.Pos_Tips:SetRenderOpacity(1)
+  end
+end
+
 function M:_InitCharacterTips()
   if self.CharacterTipsInitialized or not self.WBP_PersonalInfo_Edit_Tips then
     return
@@ -1498,6 +1508,7 @@ function M:_OpenCharacterTips(Content)
   end
   self:_PreviewCharacterContent(Content, DefaultAppearancePlan)
   if self.WBP_PersonalInfo_Edit_Tips then
+    self:_ResetCharacterTipsHostOpacity()
     self.WBP_PersonalInfo_Edit_Tips:FreahCharView(Content.UnitName, Content.Rarity, DefaultAppearancePlan, DefaultModPlan, Content.Uuid)
     self.WBP_PersonalInfo_Edit_Tips:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     if self.WBP_PersonalInfo_Edit_Tips.PlayAnimation and self.WBP_PersonalInfo_Edit_Tips.In then

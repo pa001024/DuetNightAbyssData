@@ -940,7 +940,7 @@ return ReadOnly("NpcGossipTrigger", {
   [920204] = {
     BubbleWaitTime = 10,
     GossipPoint = T.RT_2,
-    NpcCombination = {84103, 81503},
+    NpcCombination = {84103, 81103},
     NpcGossipId = 920204,
     RelatedTalks = 920204,
     TriggerArea = 500

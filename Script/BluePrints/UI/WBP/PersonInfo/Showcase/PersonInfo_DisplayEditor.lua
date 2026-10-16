@@ -16,6 +16,7 @@ function M:Init(Params)
   self.RedoStack = {}
   self.ActivePreviewTransaction = nil
   self.LastHistoryOperation = nil
+  self.HistoryMainTabName = nil
 end
 
 function M:New(Params)
@@ -206,6 +207,10 @@ function M:IsPreviewTransactionActive(TransactionKey)
     return true
   end
   return Transaction.Key == TransactionKey
+end
+
+function M:SetHistoryMainTabName(MainTabName)
+  self.HistoryMainTabName = MainTabName
 end
 
 function M:Undo()
@@ -1446,6 +1451,9 @@ function M:_CloneHistoryOperation(Operation)
       Result[Key] = Value
     end
   end
+  if Result.MainTabName == nil then
+    Result.MainTabName = self.HistoryMainTabName
+  end
   return Result
 end
 
@@ -1471,6 +1479,10 @@ function M:_ApplyDraftByHistoryOperation(Operation)
     end
   elseif "PetTransform" == OperationType then
     if self:_ApplyPetTransformHistory(Operation) then
+      return
+    end
+  elseif "ItemTransform" == OperationType then
+    if self:_ApplyItemTransformHistory(Operation) then
       return
     end
   elseif "CharacterWeaponAction" == OperationType then
@@ -1538,6 +1550,23 @@ function M:_ApplyPetTransformHistory(Operation)
       local Slot = DisplayDraft:GetPetSlot(self.Draft, SlotIndex)
       local Transform = Slot and Slot.Transform or nil
       local bApplied = self.Renderer:ApplyPetTransform(SlotIndex, Transform, self.Draft)
+      bAppliedAny = bAppliedAny or true == bApplied
+    end
+  end
+  return bAppliedAny
+end
+
+function M:_ApplyItemTransformHistory(Operation)
+  if not self.Renderer or not self.Renderer.ApplyItemTransform then
+    return false
+  end
+  local AffectedSlotIndices = Operation and Operation.AffectedItemSlotIndices or nil
+  local bAppliedAny = false
+  for SlotIndex, bAffected in pairs(AffectedSlotIndices or {}) do
+    if true == bAffected and type(SlotIndex) == "number" and SlotIndex > 0 then
+      local Slot = DisplayDraft:GetItemSlot(self.Draft, SlotIndex)
+      local Transform = Slot and Slot.Transform or nil
+      local bApplied = self.Renderer:ApplyItemTransform(SlotIndex, Transform, self.Draft)
       bAppliedAny = bAppliedAny or true == bApplied
     end
   end

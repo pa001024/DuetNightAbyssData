@@ -54,6 +54,22 @@ local CharacterEquipChooseConfig = {
     SkipCancelField = "SkipCancelActionChooseOnce"
   }
 }
+local HistoryOperationMainTabMap = {
+  CharacterChooseCommit = "Char",
+  CharacterTransform = "Char",
+  CharacterWeaponAction = "Char",
+  PetSlotChange = "Pet",
+  PetTransform = "Pet",
+  ItemChoose = "Item",
+  ItemTransform = "Item",
+  SceneSwitch = "Scene",
+  SceneLight = "Scene",
+  FilterSwitch = "Other",
+  FilterIntensity = "Other",
+  StickerSwitch = "Other",
+  StickerRemove = "Other",
+  StickerTransform = "Other"
+}
 
 function M:New(OwnerWidget)
   local Obj = {}
@@ -126,6 +142,7 @@ function M:InitPageController(TabName, OpenContext)
   self.PendingDefaultSelectTimerHandle = nil
   self.bOpenDetailOnNextRootEnter = true
   self:_BindRuntimeContext(OpenContext)
+  self:_SyncHistoryMainTabName()
   self:_InitEditUIStates()
   self:_LoadInitialDraftFromServer()
   self:_InitSelectedCharacterSlotIndex()
@@ -566,6 +583,9 @@ function M:_RefreshAfterHistoryOperation(Operation)
       return
     end
     if bRefreshCharacterSlotUi then
+      if self:HasSelectedCharacter() then
+        self:OpenSelectedCharacterDetailPanelWithoutFocus()
+      end
       self:RefreshSelectedCharacterSlotContext()
     end
     if self.RootViewPanel then
@@ -946,6 +966,7 @@ function M:SetActiveMainTab(TabName)
     self:HideStickerEdit()
   end
   self.ActiveTabName = TabName
+  self:_SyncHistoryMainTabName(TabName)
   if "Scene" == TabName then
     self.ActiveSubPageName = "Scene"
     self.ActiveCharacterPanelState = "Main"
@@ -977,6 +998,7 @@ function M:SetActiveMainTab(TabName)
     self:_CreateCharacterEditPanelIfNeeded()
   end
   self:_SyncFocusedCharacterHighlight()
+  self.CurrentUIModel = nil
   self:RefreshRootView()
   if "Other" == TabName and self.OtherPagePanel then
     if self.OtherPagePanel.OnEnterOtherTab then
@@ -2102,12 +2124,40 @@ function M:_IsCameraNumberEqual(ValueA, ValueB)
   return math.abs(NumberA - NumberB) <= 0.01
 end
 
+function M:_SyncHistoryMainTabName(TabName)
+  local MainTabName = TabName or self:GetActiveMainTabName()
+  if self.DisplayEditor and self.DisplayEditor.SetHistoryMainTabName then
+    self.DisplayEditor:SetHistoryMainTabName(MainTabName)
+  end
+end
+
+function M:_ResolveHistoryMainTabName(Operation)
+  if type(Operation) ~= "table" then
+    return nil
+  end
+  local RecordedTabName = Operation.MainTabName
+  if "Char" == RecordedTabName or "Pet" == RecordedTabName or "Item" == RecordedTabName or "Scene" == RecordedTabName or "Other" == RecordedTabName then
+    return RecordedTabName
+  end
+  return HistoryOperationMainTabMap[Operation.Type]
+end
+
+function M:_SwitchMainTabByHistoryOperation(Operation)
+  local TargetTabName = self:_ResolveHistoryMainTabName(Operation)
+  if not TargetTabName or TargetTabName == self:GetActiveMainTabName() then
+    return false
+  end
+  self:SetActiveMainTab(TargetTabName)
+  return true
+end
+
 function M:UndoEdit()
   local BeforeSummary = self:_BuildHistoryDraftSummary(self.DisplayEditor and self.DisplayEditor:GetDraft() or nil)
   local bSuccess, Operation = self.DisplayEditor:Undo()
   if bSuccess then
     local AfterSummary = self:_BuildHistoryDraftSummary(self.DisplayEditor and self.DisplayEditor:GetDraft() or nil)
     GreenPrint(self:_BuildHistoryOperationLog("撤销", Operation, BeforeSummary, AfterSummary))
+    self:_SwitchMainTabByHistoryOperation(Operation)
     self:_RefreshAfterHistoryOperation(Operation)
   end
   return bSuccess
@@ -2119,6 +2169,7 @@ function M:RedoEdit()
   if bSuccess then
     local AfterSummary = self:_BuildHistoryDraftSummary(self.DisplayEditor and self.DisplayEditor:GetDraft() or nil)
     GreenPrint(self:_BuildHistoryOperationLog("复原", Operation, BeforeSummary, AfterSummary))
+    self:_SwitchMainTabByHistoryOperation(Operation)
     self:_RefreshAfterHistoryOperation(Operation)
   end
   return bSuccess

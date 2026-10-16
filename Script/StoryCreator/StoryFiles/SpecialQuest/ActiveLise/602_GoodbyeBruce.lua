@@ -136,6 +136,12 @@ return {
             startPort = "Out",
             endQuest = "179178549032314832304",
             endPort = "In"
+          },
+          {
+            startQuest = "178739059489024906927",
+            startPort = "Out",
+            endQuest = "17918787001821142268",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -329,6 +335,22 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["17918787001821142268"] = {
+            key = "17918787001821142268",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2257.3863636363635, y = 134.7272727272727},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/cbt03/0071_lise_secret",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {101101},
+              bStoreToServer = true
             }
           }
         },

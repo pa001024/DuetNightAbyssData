@@ -356,13 +356,14 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     self.IsFocusSelectFloor = false
     self.IsFocusList = false
   end
+  local KeyHintVis = CurInputDevice == ECommonInputType.Gamepad and UE4.ESlateVisibility.Visible or UE4.ESlateVisibility.Collapsed
   if self.Panel_Controller_Retry then
-    self.Panel_Controller_Retry:SetVisibility(CurInputDevice == ECommonInputType.MouseAndKeyboard and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.Visible)
+    self.Panel_Controller_Retry:SetVisibility(KeyHintVis)
   end
   if self.Controller_Retry then
-    self.Controller_Retry:SetVisibility(CurInputDevice == ECommonInputType.MouseAndKeyboard and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.Visible)
+    self.Controller_Retry:SetVisibility(KeyHintVis)
   end
-  self:ApplyBtnGamePad(self.Btn_GotoFloor, CurInputDevice == ECommonInputType.MouseAndKeyboard and UE4.ESlateVisibility.Collapsed or UE4.ESlateVisibility.Visible, false)
+  self:ApplyBtnGamePad(self.Btn_GotoFloor, KeyHintVis, false)
 end
 
 function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)

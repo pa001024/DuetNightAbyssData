@@ -1288,7 +1288,7 @@ return ReadOnly("EventTab", {
     EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_DoubleMod.T_Activity_Tab_Sign_DoubleMod",
     EventTabId = 147,
     EventTabName = "Event_Tab_103009001",
-    ReddotNode = "Acti_DoubleMod160",
+    ReddotNode = "Acti_DoubleMod170",
     Sequence = 1786
   },
   [148] = {
@@ -1297,7 +1297,7 @@ return ReadOnly("EventTab", {
     EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_DoubleMod.T_Activity_Tab_Sign_DoubleMod",
     EventTabId = 148,
     EventTabName = "Event_Tab_103009001",
-    ReddotNode = "Acti_DoubleMod165",
+    ReddotNode = "Acti_DoubleMod175",
     Sequence = 1786
   },
   [149] = {

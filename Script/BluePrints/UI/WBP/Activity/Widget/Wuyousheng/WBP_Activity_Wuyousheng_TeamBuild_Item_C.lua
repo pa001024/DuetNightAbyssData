@@ -14,11 +14,7 @@ function M:OnListItemObjectSet(ItemObject)
     self.WS_Item:SetActiveWidgetIndex(1)
   else
     self.WS_Item:SetActiveWidgetIndex(0)
-    if ItemObject.Level then
-      self.Item_TryOut.Com_Item_Level.Text_Lv:SetText(ItemObject.Level)
-    else
-      self.Item_TryOut.Com_Item_Level:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    end
+    self.Item_TryOut.Com_Item_Level:SetVisibility(UIConst.VisibilityOp.Collapsed)
     if ItemObject.IsTryout and ItemObject.Tag ~= "Pet" then
       self.Item_TryOut.Text_TryOut:SetText(GText("UI_Wuyousheng_ArmoryTrial"))
       self.Item_TryOut.Text_TryOut:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)

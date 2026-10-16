@@ -7104,6 +7104,12 @@
         "t": "Resource",
         "c": 65,
         "n": "Globule cramoisi"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 20,
+        "n": "Phoxène"
       }
     ]
   },
@@ -7254,6 +7260,12 @@
         "t": "Resource",
         "c": 70,
         "n": "Globule cramoisi"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 20,
+        "n": "Phoxène"
       }
     ]
   },
@@ -7404,6 +7416,12 @@
         "t": "Resource",
         "c": 75,
         "n": "Globule cramoisi"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 20,
+        "n": "Phoxène"
       }
     ]
   },
@@ -7554,6 +7572,12 @@
         "t": "Resource",
         "c": 80,
         "n": "Globule cramoisi"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 20,
+        "n": "Phoxène"
       }
     ]
   },
@@ -7704,6 +7728,12 @@
         "t": "Resource",
         "c": 85,
         "n": "Globule cramoisi"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 20,
+        "n": "Phoxène"
       }
     ]
   },
@@ -7854,6 +7884,12 @@
         "t": "Resource",
         "c": 90,
         "n": "Globule cramoisi"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 20,
+        "n": "Phoxène"
       }
     ]
   },
@@ -8004,6 +8040,12 @@
         "t": "Resource",
         "c": 95,
         "n": "Globule cramoisi"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 20,
+        "n": "Phoxène"
       }
     ]
   },
@@ -8154,6 +8196,12 @@
         "t": "Resource",
         "c": 100,
         "n": "Globule cramoisi"
+      },
+      {
+        "id": 100,
+        "t": "Resource",
+        "c": 20,
+        "n": "Phoxène"
       }
     ]
   },

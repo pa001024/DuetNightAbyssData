@@ -1321,19 +1321,19 @@
   },
   {
     "id": 30173,
-    "name": "Hunt: Celeste",
+    "name": "Hellborne Roar: Azure",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0061"
   },
   {
     "id": 30174,
-    "name": "Hunt: Rust Red",
+    "name": "Hellborne Roar: Rust Red",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0060"
   },
   {
     "id": 30175,
-    "name": "Hunt: Gilt",
+    "name": "Hellborne Roar: Gilt",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Other0059"
   },
@@ -1369,19 +1369,19 @@
   },
   {
     "id": 30181,
-    "name": "Ivorybloom: Violet",
+    "name": "Crescent Wishes: Azure",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Art_0041_01"
   },
   {
     "id": 30182,
-    "name": "Ivorybloom: Gilt",
+    "name": "Crescent Wishes: Rust Red",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Art_0041_02"
   },
   {
     "id": 30183,
-    "name": "Ivorybloom: Opaque White",
+    "name": "Crescent Wishes: Dark Jade",
     "desc": "Used as an avatar.",
     "icon": "T_Head_Art_0041_03"
   },

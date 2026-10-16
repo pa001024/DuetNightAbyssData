@@ -1405,7 +1405,7 @@ function AvatarUtils:GetCharacterAttributeBySexOrWaitSex(Avatar, PlayerTag)
   end
   local CharId = Avatar.CharacterAttributeSwitch[CharGroupId]
   if nil == CharId then
-    return nil
+    return "Default"
   end
   local tabCharacterAttributeSwitch = DataMgr.CharacterAttributeSwitch[CharId]
   if nil == tabCharacterAttributeSwitch then

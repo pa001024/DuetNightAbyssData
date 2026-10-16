@@ -455,6 +455,7 @@ end
 function M:OnLoaded(EventId)
   self.bIsFocusable = true
   self.CurActivityId = NormalizeEventId(EventId)
+  EMCache:Set("SkinCollectTaskEventId", self.CurActivityId)
   self:RefreshTaskTypeListWidgetByActivityId(EventId)
   self:StopNativeUINavigation()
   self:AddDispatcher(EventID.OnAppearanceCollectEventChanged, self, self.OnAppearanceCollectEventChanged)

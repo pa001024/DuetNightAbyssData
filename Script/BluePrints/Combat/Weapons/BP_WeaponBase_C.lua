@@ -67,6 +67,9 @@ function BP_WeaponBase_C:SetServerBornInfo()
 end
 
 function BP_WeaponBase_C:Lua_InitWeaponAppearance()
+  if self.bChildWeapon and not self.IsChild then
+    self.IsChild = true
+  end
   self:InitWeaponAppearance(self.AppearanceInfo)
 end
 

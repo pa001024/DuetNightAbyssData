@@ -1007,6 +1007,12 @@ return ReadOnly("AppearanceSingleScore", {
     SingleScoreId = 3003,
     Type = "WeaponAccessory"
   },
+  [3004] = {
+    Id = 20005,
+    Score = 150,
+    SingleScoreId = 3004,
+    Type = "WeaponAccessory"
+  },
   [4001] = {
     Id = 1001,
     Score = 1000,

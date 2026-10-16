@@ -212,7 +212,15 @@ function M:SetIntron(Type, Id, Num)
     if "Character" == Type then
       MaxIntron = DataMgr.GlobalConstant.CharCardLevelMax.ConstantValue
     else
-      MaxIntron = DataMgr.WeaponCardLevel[Id].CardLevelMax
+      local CardLevelData = DataMgr.WeaponCardLevel[Id]
+      if CardLevelData then
+        MaxIntron = CardLevelData.CardLevelMax
+      else
+        local HyperWeaponCardLevelData = DataMgr.HyperWeaponCardLevel[Id]
+        if HyperWeaponCardLevelData and #HyperWeaponCardLevelData > 0 then
+          MaxIntron = #HyperWeaponCardLevelData
+        end
+      end
     end
     if MaxIntron and Num >= MaxIntron then
       self.Item:PlayAnimation(self.Item.Max)

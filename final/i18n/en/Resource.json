@@ -6359,7 +6359,7 @@
     "icon": "T_Resource_Rename_Char",
     "rarity": 5,
     "desc": "Use to immediately rename your Phoxhunter",
-    "desc2": "\"Out in the world, you are whoever you say you are. So I got you a few new papers. Miner, fisherman, bodyguard, even blacksmith — take your pick. Just put your name on whichever one you like.\"\n\n— Outsider",
+    "desc2": "\"Out in the world, you are whoever you say you are. So I got you a few new papers. Miner, fisherman, bodyguard, even blacksmith — take your pick. Just put your nickname on whichever one you like.\"\n\n— Outsider",
     "access": [
       "Forge"
     ]

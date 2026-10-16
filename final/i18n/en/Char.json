@@ -14642,7 +14642,7 @@
         ],
         "术语解释": {
           "Deadeye Domain": "Continuously calibrates Accuracy. Shooting with [Arcshot] resets Accuracy and launches a [Sniper Bullet], dealing Electro DMG to all enemies in its path. At 100% Accuracy, shoots an [Electrified Sniper Bullet] instead and becomes immune to Hitstun when taking damage.",
-          "Steady Aim": "Increases Skill Speed and reduces Sanity Cost when shooting with [Arcshot]. Lasts indefinitely and stacks up to 30 times. Upon exiting [Deadeye Domain], removes 1 stack every 0.5s.",
+          "Steady Aim": "Increases Skill Speed and reduces Sanity Cost when shooting with [Arcshot]. Lasts for the rest of the battle and stacks up to 30 times. Upon exiting [Deadeye Domain], removes 1 stack every 0.5s.",
           "Volt Rifle": "Repeats [Arcshot] shot and [Surge Strike]."
         },
         "子技能": [
@@ -14691,6 +14691,12 @@
               0.172,
               0.184
             ]
+          },
+          {
+            "名称": "[Arc Mastery] Duration",
+            "影响": "技能耐久",
+            "值": 10,
+            "格式": "{}s"
           }
         ],
         "升级": [

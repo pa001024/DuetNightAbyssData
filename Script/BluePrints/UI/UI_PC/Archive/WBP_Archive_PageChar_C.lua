@@ -8,6 +8,12 @@ WBP_Archive_PageChar_C._components = {
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
 local NumberModel = require("BluePrints.UI.UI_PC.Archive.WBP_Archive_Number_Model")
 
+function WBP_Archive_PageChar_C:Initialize(Initializer)
+  self.Super.Initialize(self, Initializer)
+  self.MeleeShowHyperWeapon = nil
+  self.RangedShowHyperWeapon = nil
+end
+
 function WBP_Archive_PageChar_C:Construct()
   self.Super.Construct(self)
   self.FirstFocus = false
@@ -38,6 +44,8 @@ function WBP_Archive_PageChar_C:Construct()
 end
 
 function WBP_Archive_PageChar_C:Destruct()
+  self.MeleeShowHyperWeapon = nil
+  self.RangedShowHyperWeapon = nil
   if self.ActorController then
     self.ActorController:OnDestruct()
   end
@@ -342,7 +350,8 @@ end
 function WBP_Archive_PageChar_C:GetMeleeData(TabId)
   local ShowHyperWeapon = NumberModel:CheckHyperWeaponCanShow()
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
-  if not self.AllMeleeIds then
+  if not self.AllMeleeIds or self.MeleeShowHyperWeapon ~= ShowHyperWeapon then
+    self.MeleeShowHyperWeapon = ShowHyperWeapon
     self.AllMeleeIds = {}
     for _, Info in pairs(DataMgr.Weapon) do
       if (Info.WeaponSubType ~= "Hyper" or ShowHyperWeapon) and not Info.IsNotOpen and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) and self:DoesWeaponHaveTag(Info.WeaponId, "Melee") then
@@ -379,7 +388,8 @@ end
 function WBP_Archive_PageChar_C:GetRangedData(TabId)
   local ShowHyperWeapon = NumberModel:CheckHyperWeaponCanShow()
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
-  if not self.AllRangedIds then
+  if not self.AllRangedIds or self.RangedShowHyperWeapon ~= ShowHyperWeapon then
+    self.RangedShowHyperWeapon = ShowHyperWeapon
     self.AllRangedIds = {}
     for _, Info in pairs(DataMgr.Weapon) do
       if (Info.WeaponSubType ~= "Hyper" or ShowHyperWeapon) and not Info.IsNotOpen and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) and self:DoesWeaponHaveTag(Info.WeaponId, "Ranged") then

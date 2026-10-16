@@ -6367,12 +6367,19 @@ T.RT_1586 = {
 }
 T.RT_1587 = {65}
 T.RT_1588 = {
+  [1] = 211,
+  [2] = 2000,
+  [3] = 206,
+  [4] = 102,
+  [5] = 100
+}
+T.RT_1589 = {
   [1] = T.RT_25,
   [2] = T.RT_1540,
   [3] = T.RT_25,
   [4] = T.RT_19
 }
-T.RT_1589 = {
+T.RT_1590 = {
   [1] = 130,
   [2] = 131,
   [3] = 132,
@@ -6382,108 +6389,108 @@ T.RT_1589 = {
   [7] = 136,
   [8] = 137
 }
-T.RT_1590 = {
+T.RT_1591 = {
   [1] = 2001,
   [2] = 211,
   [3] = 101
 }
-T.RT_1591 = {
+T.RT_1592 = {
   [1] = T.RT_147,
   [2] = T.RT_675
 }
-T.RT_1592 = {
+T.RT_1593 = {
   [1] = 100,
   [2] = 2001
 }
-T.RT_1593 = {
+T.RT_1594 = {
   [1] = 2001,
   [2] = 211,
   [3] = 102
 }
-T.RT_1594 = {
+T.RT_1595 = {
   [1] = T.RT_734,
   [2] = T.RT_25,
   [3] = T.RT_1
 }
-T.RT_1595 = {
+T.RT_1596 = {
   [1] = 2001,
   [2] = 211,
   [3] = 2011
 }
-T.RT_1596 = {
+T.RT_1597 = {
   [1] = T.RT_596,
   [2] = T.RT_25,
   [3] = T.RT_1
 }
-T.RT_1597 = {
+T.RT_1598 = {
   [1] = 2001,
   [2] = 211,
   [3] = 2008
 }
-T.RT_1598 = {
+T.RT_1599 = {
   [1] = 2001,
   [2] = 211,
   [3] = 2012
 }
-T.RT_1599 = {
+T.RT_1600 = {
   [1] = T.RT_601,
   [2] = T.RT_25,
   [3] = T.RT_32
 }
-T.RT_1600 = {
+T.RT_1601 = {
   [1] = T.RT_655,
   [2] = T.RT_1,
   [3] = T.RT_1
 }
-T.RT_1601 = {
+T.RT_1602 = {
   [1] = "Resource",
   [2] = "Weapon",
   [3] = "Reward"
 }
-T.RT_1602 = {
+T.RT_1603 = {
   [1] = "Resource",
   [2] = "Title",
   [3] = "Title"
 }
-T.RT_1603 = {
+T.RT_1604 = {
   [1] = T.RT_17,
   [2] = T.RT_1
 }
-T.RT_1604 = {
+T.RT_1605 = {
   [1] = T.RT_32,
   [2] = T.RT_1,
   [3] = T.RT_1
 }
-T.RT_1605 = {
+T.RT_1606 = {
   [1] = T.RT_17,
   [2] = T.RT_1,
   [3] = T.RT_1
 }
-T.RT_1606 = {
+T.RT_1607 = {
   [1] = 211,
   [2] = 10006
 }
-T.RT_1607 = {
+T.RT_1608 = {
   [1] = "Resource",
   [2] = "Title",
   [3] = "TitleFrame"
 }
-T.RT_1608 = {
+T.RT_1609 = {
   [1] = 206
 }
-T.RT_1609 = {
+T.RT_1610 = {
   [1] = 10015
 }
-T.RT_1610 = {
+T.RT_1611 = {
   [1] = "HeadFrame"
 }
-T.RT_1611 = {
+T.RT_1612 = {
   [1] = 2011
 }
-T.RT_1612 = {
+T.RT_1613 = {
   [1] = "Pet"
 }
-T.RT_1613 = {
+T.RT_1614 = {
   [1] = T.RT_594,
   [2] = T.RT_1,
   [3] = T.RT_62,
@@ -6493,7 +6500,7 @@ T.RT_1613 = {
   [7] = T.RT_10,
   [8] = T.RT_1
 }
-T.RT_1614 = {
+T.RT_1615 = {
   [1] = "Resource",
   [2] = "CharAccessory",
   [3] = "Resource",
@@ -6503,31 +6510,31 @@ T.RT_1614 = {
   [7] = "Resource",
   [8] = "CharAccessory"
 }
-T.RT_1615 = {
+T.RT_1616 = {
   [1] = 10003
 }
-T.RT_1616 = {
+T.RT_1617 = {
   [1] = 10004
 }
-T.RT_1617 = {
+T.RT_1618 = {
   [1] = 10006
 }
-T.RT_1618 = {
+T.RT_1619 = {
   [1] = 10007
 }
-T.RT_1619 = {
+T.RT_1620 = {
   [1] = 10008
 }
-T.RT_1620 = {
+T.RT_1621 = {
   [1] = 10009
 }
-T.RT_1621 = {
+T.RT_1622 = {
   [1] = 10010
 }
-T.RT_1622 = {
+T.RT_1623 = {
   [1] = 10011
 }
-T.RT_1623 = {
+T.RT_1624 = {
   [1] = 230,
   [2] = 231,
   [3] = 232,
@@ -6537,10 +6544,10 @@ T.RT_1623 = {
   [7] = 236,
   [8] = 237
 }
-T.RT_1624 = {
+T.RT_1625 = {
   [1] = "Skin"
 }
-T.RT_1625 = {
+T.RT_1626 = {
   [1] = 4,
   [2] = 15,
   [3] = 15,
@@ -6548,7 +6555,7 @@ T.RT_1625 = {
   [5] = 28,
   [6] = 28
 }
-T.RT_1626 = {
+T.RT_1627 = {
   [1] = "Drop",
   [2] = "Drop",
   [3] = "Drop",
@@ -6556,7 +6563,7 @@ T.RT_1626 = {
   [5] = "Draft",
   [6] = "Draft"
 }
-T.RT_1627 = {
+T.RT_1628 = {
   [1] = 1,
   [2] = 4,
   [3] = 4,
@@ -6566,7 +6573,7 @@ T.RT_1627 = {
   [7] = 25,
   [8] = 25
 }
-T.RT_1628 = {
+T.RT_1629 = {
   [1] = "Drop",
   [2] = "Drop",
   [3] = "Drop",
@@ -6576,7 +6583,7 @@ T.RT_1628 = {
   [7] = "Draft",
   [8] = "Draft"
 }
-T.RT_1629 = {
+T.RT_1630 = {
   [1] = 2,
   [2] = 4,
   [3] = 4,
@@ -6586,7 +6593,7 @@ T.RT_1629 = {
   [7] = 25,
   [8] = 25
 }
-T.RT_1630 = {
+T.RT_1631 = {
   [1] = "WeaponAccessory"
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -7086,7 +7093,7 @@ return ReadOnly("Reward", {
   },
   [73] = {
     Count = T.RT_979,
-    Id = T.RT_1589,
+    Id = T.RT_1590,
     IsFixedByBonus = true,
     Mode = "Level",
     Param = T.RT_1581,
@@ -7095,7 +7102,7 @@ return ReadOnly("Reward", {
   },
   [74] = {
     Count = T.RT_979,
-    Id = T.RT_1589,
+    Id = T.RT_1590,
     IsFixedByBonus = true,
     Mode = "Level",
     Param = T.RT_1581,
@@ -7205,7 +7212,7 @@ return ReadOnly("Reward", {
   },
   [83] = {
     Count = T.RT_979,
-    Id = T.RT_1623,
+    Id = T.RT_1624,
     IsFixedByBonus = true,
     Mode = "Level",
     Param = T.RT_1581,
@@ -7214,7 +7221,7 @@ return ReadOnly("Reward", {
   },
   [84] = {
     Count = T.RT_979,
-    Id = T.RT_1623,
+    Id = T.RT_1624,
     IsFixedByBonus = true,
     Mode = "Level",
     Param = T.RT_1581,
@@ -9673,12 +9680,13 @@ return ReadOnly("Reward", {
       [1] = T.RT_16,
       [2] = T.RT_781,
       [3] = T.RT_10,
-      [4] = T.RT_1587
+      [4] = T.RT_1587,
+      [5] = T.RT_589
     },
-    Id = T.RT_1585,
+    Id = T.RT_1588,
     Mode = "Fixed",
     RewardId = 7214,
-    Type = T.RT_24
+    Type = T.RT_792
   },
   [7215] = {
     Count = {
@@ -9733,12 +9741,13 @@ return ReadOnly("Reward", {
       [1] = T.RT_16,
       [2] = T.RT_734,
       [3] = T.RT_10,
-      [4] = T.RT_1536
+      [4] = T.RT_1536,
+      [5] = T.RT_589
     },
-    Id = T.RT_1585,
+    Id = T.RT_1588,
     Mode = "Fixed",
     RewardId = 7219,
-    Type = T.RT_24
+    Type = T.RT_792
   },
   [7220] = {
     Count = {
@@ -9793,12 +9802,13 @@ return ReadOnly("Reward", {
       [1] = T.RT_16,
       [2] = T.RT_738,
       [3] = T.RT_10,
-      [4] = T.RT_693
+      [4] = T.RT_693,
+      [5] = T.RT_589
     },
-    Id = T.RT_1585,
+    Id = T.RT_1588,
     Mode = "Fixed",
     RewardId = 7224,
-    Type = T.RT_24
+    Type = T.RT_792
   },
   [7225] = {
     Count = {
@@ -9853,12 +9863,13 @@ return ReadOnly("Reward", {
       [1] = T.RT_16,
       [2] = T.RT_50,
       [3] = T.RT_10,
-      [4] = T.RT_734
+      [4] = T.RT_734,
+      [5] = T.RT_589
     },
-    Id = T.RT_1585,
+    Id = T.RT_1588,
     Mode = "Fixed",
     RewardId = 7229,
-    Type = T.RT_24
+    Type = T.RT_792
   },
   [7230] = {
     Count = {
@@ -9913,12 +9924,13 @@ return ReadOnly("Reward", {
       [1] = T.RT_16,
       [2] = T.RT_91,
       [3] = T.RT_10,
-      [4] = {85}
+      [4] = {85},
+      [5] = T.RT_589
     },
-    Id = T.RT_1585,
+    Id = T.RT_1588,
     Mode = "Fixed",
     RewardId = 7234,
-    Type = T.RT_24
+    Type = T.RT_792
   },
   [7235] = {
     Count = {
@@ -9973,12 +9985,13 @@ return ReadOnly("Reward", {
       [1] = T.RT_16,
       [2] = T.RT_596,
       [3] = T.RT_10,
-      [4] = T.RT_738
+      [4] = T.RT_738,
+      [5] = T.RT_589
     },
-    Id = T.RT_1585,
+    Id = T.RT_1588,
     Mode = "Fixed",
     RewardId = 7239,
-    Type = T.RT_24
+    Type = T.RT_792
   },
   [7240] = {
     Count = {
@@ -10005,7 +10018,7 @@ return ReadOnly("Reward", {
     Type = T.RT_24
   },
   [7242] = {
-    Count = T.RT_1588,
+    Count = T.RT_1589,
     Id = T.RT_1586,
     Mode = "Fixed",
     RewardId = 7242,
@@ -10028,12 +10041,13 @@ return ReadOnly("Reward", {
       [1] = T.RT_16,
       [2] = T.RT_1540,
       [3] = T.RT_10,
-      [4] = {95}
+      [4] = {95},
+      [5] = T.RT_589
     },
-    Id = T.RT_1585,
+    Id = T.RT_1588,
     Mode = "Fixed",
     RewardId = 7244,
-    Type = T.RT_24
+    Type = T.RT_792
   },
   [7245] = {
     Count = {
@@ -10060,7 +10074,7 @@ return ReadOnly("Reward", {
     Type = T.RT_24
   },
   [7247] = {
-    Count = T.RT_1588,
+    Count = T.RT_1589,
     Id = T.RT_1586,
     Mode = "Fixed",
     RewardId = 7247,
@@ -10083,12 +10097,13 @@ return ReadOnly("Reward", {
       [1] = T.RT_16,
       [2] = T.RT_1540,
       [3] = T.RT_10,
-      [4] = T.RT_50
+      [4] = T.RT_50,
+      [5] = T.RT_589
     },
-    Id = T.RT_1585,
+    Id = T.RT_1588,
     Mode = "Fixed",
     RewardId = 7249,
-    Type = T.RT_24
+    Type = T.RT_792
   },
   [7301] = {
     Count = {
@@ -10096,7 +10111,7 @@ return ReadOnly("Reward", {
       [2] = T.RT_25,
       [3] = T.RT_17
     },
-    Id = T.RT_1590,
+    Id = T.RT_1591,
     Mode = "Fixed",
     RewardId = 7301,
     Type = T.RT_629
@@ -10107,13 +10122,13 @@ return ReadOnly("Reward", {
       [2] = T.RT_25,
       [3] = T.RT_50
     },
-    Id = T.RT_1593,
+    Id = T.RT_1594,
     Mode = "Fixed",
     RewardId = 7302,
     Type = T.RT_629
   },
   [7303] = {
-    Count = T.RT_1594,
+    Count = T.RT_1595,
     Id = {
       [1] = 2001,
       [2] = 211,
@@ -10124,15 +10139,15 @@ return ReadOnly("Reward", {
     Type = T.RT_629
   },
   [7304] = {
-    Count = T.RT_1594,
-    Id = T.RT_1595,
+    Count = T.RT_1595,
+    Id = T.RT_1596,
     Mode = "Fixed",
     RewardId = 7304,
     Type = T.RT_629
   },
   [7305] = {
-    Count = T.RT_1594,
-    Id = T.RT_1595,
+    Count = T.RT_1595,
+    Id = T.RT_1596,
     Mode = "Fixed",
     RewardId = 7305,
     Type = T.RT_629
@@ -10143,7 +10158,7 @@ return ReadOnly("Reward", {
       [2] = T.RT_25,
       [3] = T.RT_29
     },
-    Id = T.RT_1590,
+    Id = T.RT_1591,
     Mode = "Fixed",
     RewardId = 7306,
     Type = T.RT_629
@@ -10154,49 +10169,49 @@ return ReadOnly("Reward", {
       [2] = T.RT_25,
       [3] = T.RT_450
     },
-    Id = T.RT_1593,
+    Id = T.RT_1594,
     Mode = "Fixed",
     RewardId = 7307,
     Type = T.RT_629
   },
   [7308] = {
-    Count = T.RT_1596,
-    Id = T.RT_1597,
+    Count = T.RT_1597,
+    Id = T.RT_1598,
     Mode = "Fixed",
     RewardId = 7308,
     Type = T.RT_629
   },
   [7309] = {
-    Count = T.RT_1596,
-    Id = T.RT_1598,
+    Count = T.RT_1597,
+    Id = T.RT_1599,
     Mode = "Fixed",
     RewardId = 7309,
     Type = T.RT_629
   },
   [7310] = {
-    Count = T.RT_1596,
-    Id = T.RT_1598,
+    Count = T.RT_1597,
+    Id = T.RT_1599,
     Mode = "Fixed",
     RewardId = 7310,
     Type = T.RT_629
   },
   [7311] = {
-    Count = T.RT_1596,
-    Id = T.RT_1597,
+    Count = T.RT_1597,
+    Id = T.RT_1598,
     Mode = "Fixed",
     RewardId = 7311,
     Type = T.RT_629
   },
   [7312] = {
-    Count = T.RT_1599,
-    Id = T.RT_1598,
+    Count = T.RT_1600,
+    Id = T.RT_1599,
     Mode = "Fixed",
     RewardId = 7312,
     Type = T.RT_629
   },
   [7313] = {
-    Count = T.RT_1599,
-    Id = T.RT_1598,
+    Count = T.RT_1600,
+    Id = T.RT_1599,
     Mode = "Fixed",
     RewardId = 7313,
     Type = T.RT_629
@@ -10207,7 +10222,7 @@ return ReadOnly("Reward", {
       [2] = T.RT_25,
       [3] = T.RT_456
     },
-    Id = T.RT_1593,
+    Id = T.RT_1594,
     Mode = "Fixed",
     RewardId = 7314,
     Type = T.RT_629
@@ -10279,7 +10294,7 @@ return ReadOnly("Reward", {
     Type = T.RT_1376
   },
   [7321] = {
-    Count = T.RT_1600,
+    Count = T.RT_1601,
     Id = {
       [1] = 2001,
       [2] = 10601,
@@ -10287,10 +10302,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7321,
-    Type = T.RT_1601
+    Type = T.RT_1602
   },
   [7322] = {
-    Count = T.RT_1600,
+    Count = T.RT_1601,
     Id = {
       [1] = 2001,
       [2] = 10503,
@@ -10298,10 +10313,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7322,
-    Type = T.RT_1601
+    Type = T.RT_1602
   },
   [7323] = {
-    Count = T.RT_1600,
+    Count = T.RT_1601,
     Id = {
       [1] = 2001,
       [2] = 10403,
@@ -10309,10 +10324,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7323,
-    Type = T.RT_1601
+    Type = T.RT_1602
   },
   [7324] = {
-    Count = T.RT_1600,
+    Count = T.RT_1601,
     Id = {
       [1] = 2001,
       [2] = 20502,
@@ -10320,10 +10335,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7324,
-    Type = T.RT_1601
+    Type = T.RT_1602
   },
   [7325] = {
-    Count = T.RT_1600,
+    Count = T.RT_1601,
     Id = {
       [1] = 2001,
       [2] = 20301,
@@ -10331,10 +10346,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7325,
-    Type = T.RT_1601
+    Type = T.RT_1602
   },
   [7326] = {
-    Count = T.RT_1600,
+    Count = T.RT_1601,
     Id = {
       [1] = 2001,
       [2] = 20602,
@@ -10342,7 +10357,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7326,
-    Type = T.RT_1601
+    Type = T.RT_1602
   },
   [7401] = {
     Count = T.RT_71,
@@ -10373,7 +10388,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7403,
-    Type = T.RT_1602
+    Type = T.RT_1603
   },
   [7404] = {
     Count = T.RT_2,
@@ -10384,7 +10399,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7404,
-    Type = T.RT_1602
+    Type = T.RT_1603
   },
   [7405] = {
     Count = T.RT_6,
@@ -10467,7 +10482,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7413] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10064
@@ -10487,7 +10502,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7415] = {
-    Count = T.RT_1604,
+    Count = T.RT_1605,
     Id = {
       [1] = 211,
       [2] = 10062,
@@ -10495,10 +10510,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7415,
-    Type = T.RT_1602
+    Type = T.RT_1603
   },
   [7416] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 20049
@@ -10508,7 +10523,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7417] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10029
@@ -10558,7 +10573,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7422] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 20016
@@ -10568,7 +10583,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7423] = {
-    Count = T.RT_1605,
+    Count = T.RT_1606,
     Id = {
       [1] = 101,
       [2] = 10005,
@@ -10576,7 +10591,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7423,
-    Type = T.RT_1602
+    Type = T.RT_1603
   },
   [7424] = {
     Count = T.RT_71,
@@ -10609,7 +10624,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7427] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10015
@@ -10649,7 +10664,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7431] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10014
@@ -10769,7 +10784,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7443] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10038
@@ -10789,7 +10804,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7445] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10031
@@ -10849,7 +10864,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7451] = {
-    Count = T.RT_1604,
+    Count = T.RT_1605,
     Id = {
       [1] = 211,
       [2] = 10020,
@@ -10857,7 +10872,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7451,
-    Type = T.RT_1602
+    Type = T.RT_1603
   },
   [7452] = {
     Count = T.RT_71,
@@ -10870,7 +10885,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7453] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10040
@@ -10931,7 +10946,7 @@ return ReadOnly("Reward", {
   },
   [7459] = {
     Count = T.RT_71,
-    Id = T.RT_1606,
+    Id = T.RT_1607,
     Mode = "Fixed",
     RewardId = 7459,
     Type = T.RT_446
@@ -10947,7 +10962,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7461] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10052
@@ -11054,7 +11069,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7472] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10037
@@ -11074,7 +11089,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7474] = {
-    Count = T.RT_1605,
+    Count = T.RT_1606,
     Id = {
       [1] = 101,
       [2] = 10035,
@@ -11082,10 +11097,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7474,
-    Type = T.RT_1607
+    Type = T.RT_1608
   },
   [7475] = {
-    Count = T.RT_1604,
+    Count = T.RT_1605,
     Id = {
       [1] = 211,
       [2] = 10044,
@@ -11093,7 +11108,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7475,
-    Type = T.RT_1607
+    Type = T.RT_1608
   },
   [7476] = {
     Count = T.RT_71,
@@ -11116,7 +11131,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7478] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 20042
@@ -11136,7 +11151,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [7480] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10028
@@ -11168,7 +11183,7 @@ return ReadOnly("Reward", {
     }
   },
   [7482] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 10025
@@ -11179,7 +11194,7 @@ return ReadOnly("Reward", {
   },
   [7483] = {
     Count = T.RT_6,
-    Id = T.RT_1606,
+    Id = T.RT_1607,
     Mode = "Fixed",
     RewardId = 7483,
     Type = {
@@ -11336,7 +11351,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 7498,
-    Type = T.RT_1602
+    Type = T.RT_1603
   },
   [7499] = {
     Count = T.RT_6,
@@ -11378,7 +11393,7 @@ return ReadOnly("Reward", {
   },
   [7505] = {
     Count = T.RT_33,
-    Id = T.RT_1608,
+    Id = T.RT_1609,
     Mode = "Fixed",
     RewardId = 7505,
     Type = T.RT_22
@@ -11392,7 +11407,7 @@ return ReadOnly("Reward", {
   },
   [7507] = {
     Count = T.RT_33,
-    Id = T.RT_1608,
+    Id = T.RT_1609,
     Mode = "Fixed",
     RewardId = 7507,
     Type = T.RT_22
@@ -11434,7 +11449,7 @@ return ReadOnly("Reward", {
   },
   [7513] = {
     Count = T.RT_33,
-    Id = T.RT_1608,
+    Id = T.RT_1609,
     Mode = "Fixed",
     RewardId = 7513,
     Type = T.RT_22
@@ -11455,7 +11470,7 @@ return ReadOnly("Reward", {
   },
   [7516] = {
     Count = T.RT_33,
-    Id = T.RT_1608,
+    Id = T.RT_1609,
     Mode = "Fixed",
     RewardId = 7516,
     Type = T.RT_22
@@ -11483,7 +11498,7 @@ return ReadOnly("Reward", {
   },
   [7520] = {
     Count = T.RT_33,
-    Id = T.RT_1608,
+    Id = T.RT_1609,
     Mode = "Fixed",
     RewardId = 7520,
     Type = T.RT_22
@@ -11504,7 +11519,7 @@ return ReadOnly("Reward", {
   },
   [7523] = {
     Count = T.RT_33,
-    Id = T.RT_1608,
+    Id = T.RT_1609,
     Mode = "Fixed",
     RewardId = 7523,
     Type = T.RT_22
@@ -11532,7 +11547,7 @@ return ReadOnly("Reward", {
   },
   [7527] = {
     Count = T.RT_26,
-    Id = T.RT_1608,
+    Id = T.RT_1609,
     Mode = "Fixed",
     RewardId = 7527,
     Type = T.RT_22
@@ -11644,7 +11659,7 @@ return ReadOnly("Reward", {
   },
   [7707] = {
     Count = T.RT_46,
-    Id = T.RT_1608,
+    Id = T.RT_1609,
     Mode = "Fixed",
     RewardId = 7707,
     Type = T.RT_22
@@ -11742,7 +11757,7 @@ return ReadOnly("Reward", {
   },
   [7721] = {
     Count = T.RT_46,
-    Id = T.RT_1608,
+    Id = T.RT_1609,
     Mode = "Fixed",
     RewardId = 7721,
     Type = T.RT_22
@@ -11819,10 +11834,10 @@ return ReadOnly("Reward", {
   },
   [7741] = {
     Count = T.RT_13,
-    Id = T.RT_1609,
+    Id = T.RT_1610,
     Mode = "Fixed",
     RewardId = 7741,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [7742] = {
     Count = T.RT_13,
@@ -11971,7 +11986,7 @@ return ReadOnly("Reward", {
   },
   [7919] = {
     Count = T.RT_46,
-    Id = T.RT_1611,
+    Id = T.RT_1612,
     Mode = "Fixed",
     RewardId = 7919,
     Type = T.RT_22
@@ -11992,7 +12007,7 @@ return ReadOnly("Reward", {
   },
   [7922] = {
     Count = T.RT_46,
-    Id = T.RT_1611,
+    Id = T.RT_1612,
     Mode = "Fixed",
     RewardId = 7922,
     Type = T.RT_22
@@ -34716,15 +34731,15 @@ return ReadOnly("Reward", {
     Type = T.RT_52
   },
   [73010] = {
-    Count = T.RT_1591,
-    Id = T.RT_1592,
+    Count = T.RT_1592,
+    Id = T.RT_1593,
     Mode = "Fixed",
     RewardId = 73010,
     Type = T.RT_52
   },
   [73011] = {
-    Count = T.RT_1591,
-    Id = T.RT_1592,
+    Count = T.RT_1592,
+    Id = T.RT_1593,
     Mode = "Fixed",
     RewardId = 73011,
     Type = T.RT_52
@@ -34808,7 +34823,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 74107,
-    Type = T.RT_1602
+    Type = T.RT_1603
   },
   [74108] = {
     Count = T.RT_6,
@@ -34976,7 +34991,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 74124,
-    Type = T.RT_1602
+    Type = T.RT_1603
   },
   [74125] = {
     Count = T.RT_6,
@@ -35067,7 +35082,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 74133,
-    Type = T.RT_1602
+    Type = T.RT_1603
   },
   [74134] = {
     Count = T.RT_6,
@@ -35155,7 +35170,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [74142] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 20101
@@ -35165,7 +35180,7 @@ return ReadOnly("Reward", {
     Type = T.RT_446
   },
   [74143] = {
-    Count = T.RT_1603,
+    Count = T.RT_1604,
     Id = {
       [1] = 101,
       [2] = 20102
@@ -35206,7 +35221,7 @@ return ReadOnly("Reward", {
   },
   [79001] = {
     Count = T.RT_46,
-    Id = T.RT_1611,
+    Id = T.RT_1612,
     Mode = "Fixed",
     RewardId = 79001,
     Type = T.RT_22
@@ -35246,7 +35261,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79006,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79007] = {
     Count = T.RT_13,
@@ -35255,7 +35270,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79007,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79008] = {
     Count = T.RT_13,
@@ -35264,7 +35279,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79008,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79009] = {
     Count = T.RT_13,
@@ -35273,7 +35288,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79009,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79010] = {
     Count = T.RT_13,
@@ -35282,7 +35297,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79010,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79011] = {
     Count = T.RT_13,
@@ -35291,7 +35306,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79011,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79012] = {
     Count = T.RT_13,
@@ -35300,7 +35315,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79012,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79013] = {
     Count = T.RT_13,
@@ -35309,7 +35324,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79013,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79014] = {
     Count = T.RT_13,
@@ -35318,7 +35333,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79014,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79015] = {
     Count = T.RT_13,
@@ -35327,7 +35342,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79015,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79016] = {
     Count = T.RT_13,
@@ -35336,7 +35351,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79016,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79017] = {
     Count = T.RT_13,
@@ -35345,7 +35360,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79017,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79018] = {
     Count = T.RT_13,
@@ -35354,7 +35369,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79018,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79019] = {
     Count = T.RT_13,
@@ -35363,7 +35378,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79019,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79020] = {
     Count = T.RT_13,
@@ -35372,7 +35387,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79020,
-    Type = T.RT_1612
+    Type = T.RT_1613
   },
   [79021] = {
     Count = {
@@ -35406,7 +35421,7 @@ return ReadOnly("Reward", {
     }
   },
   [79022] = {
-    Count = T.RT_1613,
+    Count = T.RT_1614,
     Id = {
       [1] = 1001,
       [2] = 10014,
@@ -35419,10 +35434,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79022,
-    Type = T.RT_1614
+    Type = T.RT_1615
   },
   [79023] = {
-    Count = T.RT_1613,
+    Count = T.RT_1614,
     Id = {
       [1] = 1001,
       [2] = 10014,
@@ -35435,10 +35450,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79023,
-    Type = T.RT_1614
+    Type = T.RT_1615
   },
   [79024] = {
-    Count = T.RT_1613,
+    Count = T.RT_1614,
     Id = {
       [1] = 1001,
       [2] = 10014,
@@ -35451,10 +35466,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79024,
-    Type = T.RT_1614
+    Type = T.RT_1615
   },
   [79025] = {
-    Count = T.RT_1613,
+    Count = T.RT_1614,
     Id = {
       [1] = 1001,
       [2] = 10014,
@@ -35467,10 +35482,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79025,
-    Type = T.RT_1614
+    Type = T.RT_1615
   },
   [79026] = {
-    Count = T.RT_1613,
+    Count = T.RT_1614,
     Id = {
       [1] = 1001,
       [2] = 10014,
@@ -35483,10 +35498,10 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79026,
-    Type = T.RT_1614
+    Type = T.RT_1615
   },
   [79027] = {
-    Count = T.RT_1613,
+    Count = T.RT_1614,
     Id = {
       [1] = 1001,
       [2] = 10014,
@@ -35499,7 +35514,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 79027,
-    Type = T.RT_1614
+    Type = T.RT_1615
   },
   [81001] = {
     Count = T.RT_13,
@@ -35517,56 +35532,56 @@ return ReadOnly("Reward", {
   },
   [81003] = {
     Count = T.RT_13,
-    Id = T.RT_1615,
+    Id = T.RT_1616,
     Mode = "Fixed",
     RewardId = 81003,
     Type = T.RT_707
   },
   [81004] = {
     Count = T.RT_13,
-    Id = T.RT_1616,
+    Id = T.RT_1617,
     Mode = "Fixed",
     RewardId = 81004,
     Type = T.RT_707
   },
   [81006] = {
     Count = T.RT_13,
-    Id = T.RT_1617,
+    Id = T.RT_1618,
     Mode = "Fixed",
     RewardId = 81006,
     Type = T.RT_707
   },
   [81007] = {
     Count = T.RT_13,
-    Id = T.RT_1618,
+    Id = T.RT_1619,
     Mode = "Fixed",
     RewardId = 81007,
     Type = T.RT_707
   },
   [81008] = {
     Count = T.RT_13,
-    Id = T.RT_1619,
+    Id = T.RT_1620,
     Mode = "Fixed",
     RewardId = 81008,
     Type = T.RT_707
   },
   [81009] = {
     Count = T.RT_13,
-    Id = T.RT_1620,
+    Id = T.RT_1621,
     Mode = "Fixed",
     RewardId = 81009,
     Type = T.RT_707
   },
   [81010] = {
     Count = T.RT_13,
-    Id = T.RT_1621,
+    Id = T.RT_1622,
     Mode = "Fixed",
     RewardId = 81010,
     Type = T.RT_707
   },
   [81011] = {
     Count = T.RT_13,
-    Id = T.RT_1622,
+    Id = T.RT_1623,
     Mode = "Fixed",
     RewardId = 81011,
     Type = T.RT_707
@@ -35576,28 +35591,28 @@ return ReadOnly("Reward", {
     Id = T.RT_1055,
     Mode = "Fixed",
     RewardId = 82001,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82002] = {
     Count = T.RT_13,
     Id = T.RT_1056,
     Mode = "Fixed",
     RewardId = 82002,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82003] = {
     Count = T.RT_13,
-    Id = T.RT_1615,
+    Id = T.RT_1616,
     Mode = "Fixed",
     RewardId = 82003,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82004] = {
     Count = T.RT_13,
-    Id = T.RT_1616,
+    Id = T.RT_1617,
     Mode = "Fixed",
     RewardId = 82004,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82005] = {
     Count = T.RT_13,
@@ -35606,49 +35621,49 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82005,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82006] = {
     Count = T.RT_13,
-    Id = T.RT_1617,
+    Id = T.RT_1618,
     Mode = "Fixed",
     RewardId = 82006,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82007] = {
     Count = T.RT_13,
-    Id = T.RT_1618,
+    Id = T.RT_1619,
     Mode = "Fixed",
     RewardId = 82007,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82008] = {
     Count = T.RT_13,
-    Id = T.RT_1619,
+    Id = T.RT_1620,
     Mode = "Fixed",
     RewardId = 82008,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82009] = {
     Count = T.RT_13,
-    Id = T.RT_1620,
+    Id = T.RT_1621,
     Mode = "Fixed",
     RewardId = 82009,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82010] = {
     Count = T.RT_13,
-    Id = T.RT_1621,
+    Id = T.RT_1622,
     Mode = "Fixed",
     RewardId = 82010,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82011] = {
     Count = T.RT_13,
-    Id = T.RT_1622,
+    Id = T.RT_1623,
     Mode = "Fixed",
     RewardId = 82011,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82012] = {
     Count = T.RT_13,
@@ -35657,7 +35672,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82012,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82013] = {
     Count = T.RT_13,
@@ -35666,7 +35681,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82013,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82014] = {
     Count = T.RT_13,
@@ -35675,14 +35690,14 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82014,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82015] = {
     Count = T.RT_13,
-    Id = T.RT_1609,
+    Id = T.RT_1610,
     Mode = "Fixed",
     RewardId = 82015,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82016] = {
     Count = T.RT_13,
@@ -35691,7 +35706,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82016,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82017] = {
     Count = T.RT_13,
@@ -35700,7 +35715,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82017,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82018] = {
     Count = T.RT_13,
@@ -35709,7 +35724,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82018,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82019] = {
     Count = T.RT_13,
@@ -35718,7 +35733,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82019,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82020] = {
     Count = T.RT_13,
@@ -35727,7 +35742,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82020,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82021] = {
     Count = T.RT_13,
@@ -35736,7 +35751,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82021,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82022] = {
     Count = T.RT_13,
@@ -35745,7 +35760,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82022,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82023] = {
     Count = T.RT_13,
@@ -35754,7 +35769,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82023,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82024] = {
     Count = T.RT_13,
@@ -35763,7 +35778,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82024,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82025] = {
     Count = T.RT_13,
@@ -35772,7 +35787,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82025,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82026] = {
     Count = T.RT_13,
@@ -35781,7 +35796,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82026,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82027] = {
     Count = T.RT_13,
@@ -35790,7 +35805,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82027,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82028] = {
     Count = T.RT_13,
@@ -35799,7 +35814,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82028,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82029] = {
     Count = T.RT_13,
@@ -35808,7 +35823,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82029,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82030] = {
     Count = T.RT_13,
@@ -35817,7 +35832,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82030,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82031] = {
     Count = T.RT_13,
@@ -35826,7 +35841,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82031,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82032] = {
     Count = T.RT_13,
@@ -35835,7 +35850,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82032,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82033] = {
     Count = T.RT_13,
@@ -35844,7 +35859,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82033,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82034] = {
     Count = T.RT_13,
@@ -35853,7 +35868,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82034,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82035] = {
     Count = T.RT_13,
@@ -35862,7 +35877,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82035,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82036] = {
     Count = T.RT_13,
@@ -35871,7 +35886,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82036,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82037] = {
     Count = T.RT_13,
@@ -35880,7 +35895,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82037,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82038] = {
     Count = T.RT_13,
@@ -35889,7 +35904,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82038,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82039] = {
     Count = T.RT_13,
@@ -35898,7 +35913,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82039,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82040] = {
     Count = T.RT_13,
@@ -35907,7 +35922,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82040,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82041] = {
     Count = T.RT_13,
@@ -35916,7 +35931,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82041,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82042] = {
     Count = T.RT_13,
@@ -35925,7 +35940,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82042,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82043] = {
     Count = T.RT_13,
@@ -35934,7 +35949,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82043,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82044] = {
     Count = T.RT_13,
@@ -35943,7 +35958,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82044,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82045] = {
     Count = T.RT_13,
@@ -35952,7 +35967,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82045,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82046] = {
     Count = T.RT_13,
@@ -35961,7 +35976,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82046,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82047] = {
     Count = T.RT_13,
@@ -35970,7 +35985,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82047,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82048] = {
     Count = T.RT_13,
@@ -35979,7 +35994,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82048,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82049] = {
     Count = T.RT_13,
@@ -35988,7 +36003,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82049,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [82050] = {
     Count = T.RT_13,
@@ -35997,7 +36012,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 82050,
-    Type = T.RT_1610
+    Type = T.RT_1611
   },
   [91001] = {
     Count = T.RT_13,
@@ -36006,7 +36021,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 91001,
-    Type = T.RT_1624
+    Type = T.RT_1625
   },
   [91002] = {
     Count = T.RT_13,
@@ -36015,7 +36030,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 91002,
-    Type = T.RT_1624
+    Type = T.RT_1625
   },
   [91003] = {
     Count = T.RT_13,
@@ -36024,7 +36039,7 @@ return ReadOnly("Reward", {
     },
     Mode = "Fixed",
     RewardId = 91003,
-    Type = T.RT_1624
+    Type = T.RT_1625
   },
   [91149] = {
     Count = T.RT_13,
@@ -36107,14 +36122,14 @@ return ReadOnly("Reward", {
     Id = T.RT_1055,
     Mode = "Fixed",
     RewardId = 93001,
-    Type = T.RT_1630
+    Type = T.RT_1631
   },
   [93002] = {
     Count = T.RT_13,
     Id = T.RT_1056,
     Mode = "Fixed",
     RewardId = 93002,
-    Type = T.RT_1630
+    Type = T.RT_1631
   },
   [100001] = {
     Count = T.RT_18,
@@ -52585,9 +52600,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1625,
+    Param = T.RT_1626,
     RewardId = 9137001,
-    Type = T.RT_1626
+    Type = T.RT_1627
   },
   [9137002] = {
     Count = T.RT_921,
@@ -52601,9 +52616,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1625,
+    Param = T.RT_1626,
     RewardId = 9137002,
-    Type = T.RT_1626
+    Type = T.RT_1627
   },
   [9137003] = {
     Count = T.RT_921,
@@ -52617,9 +52632,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1625,
+    Param = T.RT_1626,
     RewardId = 9137003,
-    Type = T.RT_1626
+    Type = T.RT_1627
   },
   [9137004] = {
     Count = T.RT_921,
@@ -52633,9 +52648,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1625,
+    Param = T.RT_1626,
     RewardId = 9137004,
-    Type = T.RT_1626
+    Type = T.RT_1627
   },
   [9137005] = {
     Count = T.RT_921,
@@ -52649,9 +52664,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1625,
+    Param = T.RT_1626,
     RewardId = 9137005,
-    Type = T.RT_1626
+    Type = T.RT_1627
   },
   [9137006] = {
     Count = T.RT_921,
@@ -52665,9 +52680,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1625,
+    Param = T.RT_1626,
     RewardId = 9137006,
-    Type = T.RT_1626
+    Type = T.RT_1627
   },
   [9138001] = {
     Count = T.RT_979,
@@ -52683,9 +52698,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9138001,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138002] = {
     Count = T.RT_979,
@@ -52701,9 +52716,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9138002,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138003] = {
     Count = T.RT_979,
@@ -52719,9 +52734,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9138003,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138004] = {
     Count = T.RT_979,
@@ -52737,9 +52752,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9138004,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138005] = {
     Count = T.RT_979,
@@ -52755,9 +52770,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9138005,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138006] = {
     Count = T.RT_979,
@@ -52773,9 +52788,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9138006,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138007] = {
     Count = T.RT_979,
@@ -52791,9 +52806,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9138007,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138008] = {
     Count = T.RT_979,
@@ -52809,9 +52824,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9138008,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138009] = {
     Count = T.RT_979,
@@ -52827,9 +52842,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9138009,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138010] = {
     Count = T.RT_979,
@@ -52845,9 +52860,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9138010,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138011] = {
     Count = T.RT_979,
@@ -52863,9 +52878,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9138011,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138012] = {
     Count = T.RT_979,
@@ -52881,9 +52896,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9138012,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9138013] = {
     Count = T.RT_979,
@@ -52899,9 +52914,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9138013,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139001] = {
     Count = T.RT_979,
@@ -52917,9 +52932,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9139001,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139002] = {
     Count = T.RT_979,
@@ -52935,9 +52950,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9139002,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139003] = {
     Count = T.RT_979,
@@ -52953,9 +52968,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9139003,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139004] = {
     Count = T.RT_979,
@@ -52971,9 +52986,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9139004,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139005] = {
     Count = T.RT_979,
@@ -52989,9 +53004,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9139005,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139006] = {
     Count = T.RT_979,
@@ -53007,9 +53022,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9139006,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139007] = {
     Count = T.RT_979,
@@ -53025,9 +53040,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9139007,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139008] = {
     Count = T.RT_979,
@@ -53043,9 +53058,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9139008,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139009] = {
     Count = T.RT_979,
@@ -53061,9 +53076,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9139009,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139010] = {
     Count = T.RT_979,
@@ -53079,9 +53094,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9139010,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139011] = {
     Count = T.RT_979,
@@ -53097,9 +53112,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1629,
+    Param = T.RT_1630,
     RewardId = 9139011,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [9139012] = {
     Count = T.RT_979,
@@ -53115,9 +53130,9 @@ return ReadOnly("Reward", {
     },
     IsFixedByBonus = true,
     Mode = "Sequence",
-    Param = T.RT_1627,
+    Param = T.RT_1628,
     RewardId = 9139012,
-    Type = T.RT_1628
+    Type = T.RT_1629
   },
   [10000000] = {
     Count = T.RT_13,

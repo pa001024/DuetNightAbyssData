@@ -1850,8 +1850,7 @@ return ReadOnly("EffectCreature", {
     EffectCreatureId = 70009,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_09.BP_EffectCreature_FootFx_09",
     EffectCreatureTag = T.RT_18,
-    IsDestroyWithOwner = true,
-    SoundId = 3111
+    IsDestroyWithOwner = true
   },
   [70011] = {
     EffectCreatureId = 70011,
@@ -1995,22 +1994,19 @@ return ReadOnly("EffectCreature", {
     EffectCreatureId = 70091,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_09_01.BP_EffectCreature_FootFx_09_01",
     EffectCreatureTag = T.RT_18,
-    IsDestroyWithOwner = true,
-    SoundId = 3111
+    IsDestroyWithOwner = true
   },
   [70092] = {
     EffectCreatureId = 70092,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_09_02.BP_EffectCreature_FootFx_09_02",
     EffectCreatureTag = T.RT_18,
-    IsDestroyWithOwner = true,
-    SoundId = 3111
+    IsDestroyWithOwner = true
   },
   [70093] = {
     EffectCreatureId = 70093,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/FootFx/BP_EffectCreature_FootFx_09_03.BP_EffectCreature_FootFx_09_03",
     EffectCreatureTag = T.RT_18,
-    IsDestroyWithOwner = true,
-    SoundId = 3111
+    IsDestroyWithOwner = true
   },
   [80051] = {
     EffectCreatureId = 80051,
@@ -2049,28 +2045,32 @@ return ReadOnly("EffectCreature", {
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/BodyFx/BP_EffectCreature_BodyFx_SpLise.BP_EffectCreature_BodyFx_SpLise",
     EffectCreatureTag = T.RT_19,
     IsDestroyWithOwner = true,
-    SocketName = "Root_Effect"
+    SocketName = "Root_Effect",
+    SoundId = 3111
   },
   [80071] = {
     EffectCreatureId = 80071,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/BodyFx/BP_EffectCreature_BodyFx_SpLise.BP_EffectCreature_BodyFx_SpLise",
     EffectCreatureTag = T.RT_19,
     IsDestroyWithOwner = true,
-    SocketName = "Root_Effect"
+    SocketName = "Root_Effect",
+    SoundId = 3111
   },
   [80072] = {
     EffectCreatureId = 80072,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/BodyFx/BP_EffectCreature_BodyFx_SpLise.BP_EffectCreature_BodyFx_SpLise",
     EffectCreatureTag = T.RT_19,
     IsDestroyWithOwner = true,
-    SocketName = "Root_Effect"
+    SocketName = "Root_Effect",
+    SoundId = 3111
   },
   [80073] = {
     EffectCreatureId = 80073,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/BodyFx/BP_EffectCreature_BodyFx_SpLise.BP_EffectCreature_BodyFx_SpLise",
     EffectCreatureTag = T.RT_19,
     IsDestroyWithOwner = true,
-    SocketName = "Root_Effect"
+    SocketName = "Root_Effect",
+    SoundId = 3111
   },
   [80074] = {
     EffectCreatureId = 80074,

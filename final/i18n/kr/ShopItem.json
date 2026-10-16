@@ -1560,96 +1560,6 @@
                 "sequence": 95,
                 "startTime": 1790215200,
                 "endTime": 1791752400
-              },
-              {
-                "id": 10008019,
-                "itemType": "Resource",
-                "typeId": 211,
-                "typeName": "의뢰 편지 단서",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "별빛 코인",
-                "num": 10,
-                "limit": 10,
-                "subTabId": 100081,
-                "sequence": 100,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008020,
-                "itemType": "Resource",
-                "typeId": 101,
-                "typeName": "쿠퍼",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "별빛 코인",
-                "num": 20000,
-                "limit": 20,
-                "subTabId": 100081,
-                "sequence": 99,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008021,
-                "itemType": "Resource",
-                "typeId": 2013,
-                "typeName": "전투 선율 Ⅲ",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "별빛 코인",
-                "num": 1,
-                "limit": 10,
-                "subTabId": 100081,
-                "sequence": 98,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008022,
-                "itemType": "Resource",
-                "typeId": 2009,
-                "typeName": "무기 설명서 Ⅲ",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "별빛 코인",
-                "num": 1,
-                "limit": 10,
-                "subTabId": 100081,
-                "sequence": 97,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008023,
-                "itemType": "Resource",
-                "typeId": 102,
-                "typeName": "진홍 구슬",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "별빛 코인",
-                "num": 200,
-                "limit": 20,
-                "subTabId": 100081,
-                "sequence": 96,
-                "startTime": 1793844000,
-                "endTime": 1794819600
-              },
-              {
-                "id": 10008024,
-                "itemType": "Resource",
-                "typeId": 20013,
-                "typeName": "루나의 증표",
-                "price": 1,
-                "priceType": 223,
-                "priceName": "별빛 코인",
-                "num": 10,
-                "limit": 20,
-                "subTabId": 100081,
-                "sequence": 95,
-                "startTime": 1793844000,
-                "endTime": 1794819600
               }
             ]
           }
@@ -1669,6 +1579,96 @@
             "id": 100151,
             "name": "별빛 상점",
             "items": [
+              {
+                "id": 10008019,
+                "itemType": "Resource",
+                "typeId": 211,
+                "typeName": "의뢰 편지 단서",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "별빛 코인",
+                "num": 10,
+                "limit": 10,
+                "subTabId": 100151,
+                "sequence": 100,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008020,
+                "itemType": "Resource",
+                "typeId": 101,
+                "typeName": "쿠퍼",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "별빛 코인",
+                "num": 20000,
+                "limit": 20,
+                "subTabId": 100151,
+                "sequence": 99,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008021,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "전투 선율 Ⅲ",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "별빛 코인",
+                "num": 1,
+                "limit": 10,
+                "subTabId": 100151,
+                "sequence": 98,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008022,
+                "itemType": "Resource",
+                "typeId": 2009,
+                "typeName": "무기 설명서 Ⅲ",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "별빛 코인",
+                "num": 1,
+                "limit": 10,
+                "subTabId": 100151,
+                "sequence": 97,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008023,
+                "itemType": "Resource",
+                "typeId": 102,
+                "typeName": "진홍 구슬",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "별빛 코인",
+                "num": 200,
+                "limit": 20,
+                "subTabId": 100151,
+                "sequence": 96,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
+              {
+                "id": 10008024,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "루나의 증표",
+                "price": 1,
+                "priceType": 224,
+                "priceName": "별빛 코인",
+                "num": 10,
+                "limit": 20,
+                "subTabId": 100151,
+                "sequence": 95,
+                "startTime": 1793844000,
+                "endTime": 1794819600
+              },
               {
                 "id": 100151001,
                 "itemType": "Resource",
@@ -8826,7 +8826,7 @@
                 "sequence": 105,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到15层"
+                "cond": "정상 랭킹 15층 달성"
               },
               {
                 "id": 10004282,
@@ -8842,7 +8842,7 @@
                 "sequence": 104,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到10层"
+                "cond": "정상 랭킹 10층 달성"
               },
               {
                 "id": 10004283,
@@ -8858,7 +8858,7 @@
                 "sequence": 103,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到5层"
+                "cond": "정상 랭킹 5층 달성"
               },
               {
                 "id": 10004284,
@@ -8874,7 +8874,7 @@
                 "sequence": 102,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到5层"
+                "cond": "정상 랭킹 5층 달성"
               },
               {
                 "id": 10004285,
@@ -9145,7 +9145,7 @@
                 "sequence": 95,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到1层"
+                "cond": "정상 랭킹 1층 달성"
               },
               {
                 "id": 10004303,
@@ -9161,7 +9161,7 @@
                 "sequence": 96,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到10层"
+                "cond": "정상 랭킹 10층 달성"
               },
               {
                 "id": 10004304,
@@ -9177,7 +9177,7 @@
                 "sequence": 97,
                 "startTime": 1794967200,
                 "endTime": 1796418000,
-                "cond": "巅峰赛达到60层"
+                "cond": "정상 랭킹 60층 달성"
               }
             ]
           }
@@ -24336,7 +24336,7 @@
                 "id": 140459,
                 "itemType": "HeadSculpture",
                 "typeId": 30173,
-                "typeName": "쟁취·스카이 블루",
+                "typeName": "지옥의 포효·다크 블루",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "무지개빛 프리즘",
@@ -24352,7 +24352,7 @@
                 "id": 140460,
                 "itemType": "HeadSculpture",
                 "typeId": 30174,
-                "typeName": "쟁취·러스트 레드",
+                "typeName": "지옥의 포효·러스트 레드",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "무지개빛 프리즘",
@@ -24368,7 +24368,7 @@
                 "id": 140461,
                 "itemType": "HeadSculpture",
                 "typeId": 30175,
-                "typeName": "쟁취·골드",
+                "typeName": "지옥의 포효·골드",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "무지개빛 프리즘",
@@ -24704,7 +24704,7 @@
                 "id": 140482,
                 "itemType": "CharAccessory",
                 "typeId": 31007,
-                "typeName": "클리어·첫눈의 세레나데",
+                "typeName": "클리어·지옥의 포효",
                 "price": 6,
                 "priceType": 111,
                 "priceName": "무지개빛 프리즘",
@@ -25121,7 +25121,7 @@
                 "id": 140541,
                 "itemType": "HeadSculpture",
                 "typeId": 30181,
-                "typeName": "뼈무덤의 꽃·보라",
+                "typeName": "달빛과 드림캐처 사이·다크 블루",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "무지개빛 프리즘",
@@ -25138,7 +25138,7 @@
                 "id": 140542,
                 "itemType": "HeadSculpture",
                 "typeId": 30182,
-                "typeName": "뼈무덤의 꽃·골드",
+                "typeName": "달빛과 드림캐처 사이·러스트 레드",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "무지개빛 프리즘",
@@ -25155,7 +25155,7 @@
                 "id": 140543,
                 "itemType": "HeadSculpture",
                 "typeId": 30183,
-                "typeName": "뼈무덤의 꽃·아이보리",
+                "typeName": "달빛과 드림캐처 사이·제트 블랙",
                 "price": 0,
                 "priceType": 111,
                 "priceName": "무지개빛 프리즘",
@@ -25231,6 +25231,22 @@
                 "sequence": 9999,
                 "startTime": 1792375200,
                 "endTime": 1796590800
+              },
+              {
+                "id": 140582,
+                "itemType": "WeaponAccessory",
+                "typeId": 20005,
+                "typeName": "선회하는 초승달",
+                "price": 6,
+                "priceType": 111,
+                "priceName": "무지개빛 프리즘",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1401,
+                "sequence": 1782,
+                "startTime": 1792375200,
+                "endTime": 1796590800,
+                "isSpPopup": 1
               },
               {
                 "id": 160165,
@@ -28106,6 +28122,48 @@
                 "subTabId": 1403,
                 "sequence": 1259,
                 "startTime": 1788814800
+              },
+              {
+                "id": 140165,
+                "itemType": "Resource",
+                "typeId": 41029,
+                "typeName": "환상의 기사 Ⅰ",
+                "price": 30,
+                "priceType": 110,
+                "priceName": "물빛 프리즘",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1403,
+                "sequence": 257,
+                "startTime": 1792375200
+              },
+              {
+                "id": 140166,
+                "itemType": "Resource",
+                "typeId": 41030,
+                "typeName": "환상의 기사 Ⅱ",
+                "price": 30,
+                "priceType": 110,
+                "priceName": "물빛 프리즘",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1403,
+                "sequence": 258,
+                "startTime": 1792375200
+              },
+              {
+                "id": 140167,
+                "itemType": "Resource",
+                "typeId": 41023,
+                "typeName": "개성 표현",
+                "price": 30,
+                "priceType": 110,
+                "priceName": "물빛 프리즘",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1403,
+                "sequence": 259,
+                "startTime": 1792375200
               }
             ]
           }

@@ -7250,7 +7250,7 @@ return ReadOnly("CharAccessory", {
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/SettlementAction/T_SettlementAction_07.T_SettlementAction_07'",
     MVPKey = "Diyu",
     Montage = "MVPShow_07_Montage",
-    Name = "UI_Accessory_Name_31007",
+    Name = "UI_Accessory_Name_31008",
     Rarity = 5,
     Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Exchange"
@@ -9187,6 +9187,7 @@ return ReadOnly("CharAccessory", {
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx32_03.T_Fashion_Fx32_03'",
+    IsHide = true,
     Name = "UI_Accessory_Name_70062",
     Rarity = 5,
     SortPriority = 506,

@@ -290,6 +290,7 @@ return ReadOnly("Appearance2Score", {
     Id2Score = {
       [20001] = 150,
       [20004] = 150,
+      [20005] = 150,
       [40001] = 150
     },
     Rarity2Score = {

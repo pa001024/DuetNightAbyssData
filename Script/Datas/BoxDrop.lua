@@ -1,13 +1,5 @@
 local T = {}
 T.RT_1 = {
-  1030200201,
-  1030200202,
-  1030200203,
-  1030200204,
-  1030200205,
-  1030200206
-}
-T.RT_2 = {
   [1] = 16
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -51,8 +43,15 @@ return ReadOnly("BoxDrop", {
     BoxPerDay = 2,
     CoinPerBox = 3,
     EventId = 10302002,
-    QuestId = T.RT_1,
-    RewardCount = T.RT_2,
+    QuestId = {
+      1030200201,
+      1030200202,
+      1030200203,
+      1030200204,
+      1030200205,
+      1030200206
+    },
+    RewardCount = T.RT_1,
     RewardId = {
       [1] = 114107,
       [2] = 114104
@@ -64,7 +63,7 @@ return ReadOnly("BoxDrop", {
     BoxPerDay = 2,
     CoinPerBox = 3,
     EventId = 10302003,
-    RewardCount = T.RT_2,
+    RewardCount = T.RT_1,
     RewardId = {
       [1] = 114109,
       [2] = 114108
@@ -76,8 +75,15 @@ return ReadOnly("BoxDrop", {
     BoxPerDay = 2,
     CoinPerBox = 3,
     EventId = 10302004,
-    QuestId = T.RT_1,
-    RewardCount = T.RT_2,
+    QuestId = {
+      1030200401,
+      1030200402,
+      1030200403,
+      1030200404,
+      1030200405,
+      1030200406
+    },
+    RewardCount = T.RT_1,
     RewardId = {
       [1] = 114110,
       [2] = 114108

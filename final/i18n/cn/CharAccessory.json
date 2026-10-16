@@ -3960,7 +3960,7 @@
   },
   {
     "id": 31007,
-    "name": "胜利·初雪小夜曲",
+    "name": "胜利·地狱咆哮",
     "desc": "可变更胜利动作。",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -5060,7 +5060,8 @@
     "desc": "回响在深夜的脚步声，是希望的路标，还是诱惑的陷阱？",
     "icon": "T_Fashion_Fx32_03",
     "rarity": 5,
-    "unlock": "通过活动获得"
+    "unlock": "通过活动获得",
+    "hide": 1
   },
   {
     "id": 70071,

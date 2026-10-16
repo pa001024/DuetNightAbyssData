@@ -21,7 +21,7 @@
   },
   {
     "type": "GACHA_SKIN_TYPE_SPECIAL_4",
-    "name": "Myriade limitée",
+    "name": "Retour limité",
     "subTabId": 1401
   },
   {
@@ -42,11 +42,6 @@
   {
     "type": "GACHA_SKIN_TYPE_SPECIAL_8",
     "name": "Myriade limitée",
-    "subTabId": 1401
-  },
-  {
-    "type": "GACHA_SKIN_TYPE_SPECIAL_9",
-    "name": "Retour limité",
     "subTabId": 1401
   }
 ]

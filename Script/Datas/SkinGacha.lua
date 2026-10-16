@@ -145,9 +145,9 @@ return ReadOnly("SkinGacha", {
     BgBGM = "event:/bgm/1_3/0159_suyi_skin01",
     BgMusic = "event:/ui/btc/gacha_pool_suyi_skin01",
     BubbleShowGoods = {
-      140294,
-      140295,
-      140296
+      140548,
+      140549,
+      140550
     },
     ConditionId = 4041,
     DisplayCostRes = T.RT_1,
@@ -242,6 +242,13 @@ return ReadOnly("SkinGacha", {
     TabId = 8
   },
   [9009] = {
+    BgBGM = "event:/bgm/1_7/0194_splise_skin",
+    BgMusic = "event:/ui/btc/gacha_pool_splise_skin01",
+    BubbleShowGoods = {
+      140538,
+      140539,
+      140540
+    },
     ConditionId = 4041,
     DisplayCostRes = T.RT_1,
     GachaCoreDes = "UI_SkinGacha_Core_GoldSkin",
@@ -249,7 +256,7 @@ return ReadOnly("SkinGacha", {
     GachaCostNum10 = 10,
     GachaCostRes = T.RT_2,
     GachaDes = "SkinGacha_Des_Special",
-    GachaDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_Pool_Falu01.Gacha_Pool_Falu01'",
+    GachaDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_Pool_SPLise01.Gacha_Pool_SPLise01'",
     GachaDisplayType = 1,
     GachaEndTime = LocalTimeProxy(1796029200),
     GachaHistoryType = 2,

@@ -32519,7 +32519,7 @@ Allez voir ce qui se passe.]]
   },
   {
     MinKey = "READ_DESC_2000049",
-    MaxKey = "READ_NAME_2000124",
+    MaxKey = "READ_NAME_2000122",
     Loader = function()
       return {
         READ_DESC_2000049 = {
@@ -32748,6 +32748,12 @@ Allez voir ce qui se passe.]]
           ContentFR = "Feuille perdue"
         },
         READ_FUNCTION_READ = {ContentFR = "Lecture"},
+        READ_NAME_12070401 = {
+          ContentFR = "Journal de Rae"
+        },
+        READ_NAME_12070402 = {
+          ContentFR = "Notes griffonnées"
+        },
         READ_NAME_2000001 = {
           ContentFR = "Inscription sur la statue"
         },
@@ -33113,21 +33119,21 @@ Allez voir ce qui se passe.]]
         },
         READ_NAME_2000122 = {
           ContentFR = "Rapport d’analyse des activités quotidiennes du Chef de gare Eisenbahn"
-        },
-        READ_NAME_2000123 = {
-          ContentFR = "Registre sacré"
-        },
-        READ_NAME_2000124 = {
-          ContentFR = "L’Invincible Chef de Gare I"
         }
       }
     end
   },
   {
-    MinKey = "READ_NAME_2000125",
-    MaxKey = "READ_TEXT_20605",
+    MinKey = "READ_NAME_2000123",
+    MaxKey = "READ_TEXT_20603",
     Loader = function()
       return {
+        READ_NAME_2000123 = {
+          ContentFR = "Registre sacré"
+        },
+        READ_NAME_2000124 = {
+          ContentFR = "L’Invincible Chef de Gare I"
+        },
         READ_NAME_2000125 = {
           ContentFR = "Registre des comptes annuels de la Gare des Cent-Fleurs"
         },
@@ -33721,21 +33727,21 @@ Allez voir ce qui se passe.]]
         },
         READ_TEXT_20603 = {
           ContentFR = "Berry,\n\nSi tu lis cette lettre, c’est que tu es revenue ici.\nTu as toujours été une fille réfléchie, et je suis sûr que tu avais une bonne raison de revenir.\nJ’ai laissé des provisions pour ton voyage, enterrées <H>près du dirigeable</> — elles devraient suffire à quitter l’Île du Purgatoire.\n\nPuisses-tu voyager en sécurité."
-        },
-        READ_TEXT_20604 = {
-          ContentFR = "La Déesse du Destin tisse la course des étoiles et nous offre la lumière pour guider nos pas vers le bonheur éternel.\n\nPourtant, les humains ont trahi Ses enseignements.\nNous avons oublié l’amour et la compassion, et brandissons à présent des lames glacées les uns contre les autres.\nLes terres sacrées se sont effondrées, et même Ses temples ont été souillés.\n\nSi cette épreuve est bien celle qu’Elle a voulue — la nuit avant l’aube — alors, à toi, voyageur du futur, je lègue une bénédiction venue d’un autre temps.\n\nDans <H>un lieu que Son regard ne frôlera jamais</>, j’ai enfoui l’héritage d’une ère où l’humanité croyait encore en l’amour et en la fraternité.\n\nQue Ses fils du destin te guident vers la véritable aurore."
-        },
-        READ_TEXT_20605 = {
-          ContentFR = "Le temps s’efface, la mémoire s’endort.\nLes visages changent, les vents se souviennent.\nSous les collines, la lumière des dieux persiste.\nLes racines murmurent au voyageur patient.\nDans la caverne, la vérité sommeille.\nLà où tout se fane, un nouveau cycle s’éveille."
         }
       }
     end
   },
   {
-    MinKey = "READ_TEXT_20608",
-    MaxKey = "RESOURCE_DESC_12071",
+    MinKey = "READ_TEXT_20604",
+    MaxKey = "RESOURCE_DESC_12069",
     Loader = function()
       return {
+        READ_TEXT_20604 = {
+          ContentFR = "La Déesse du Destin tisse la course des étoiles et nous offre la lumière pour guider nos pas vers le bonheur éternel.\n\nPourtant, les humains ont trahi Ses enseignements.\nNous avons oublié l’amour et la compassion, et brandissons à présent des lames glacées les uns contre les autres.\nLes terres sacrées se sont effondrées, et même Ses temples ont été souillés.\n\nSi cette épreuve est bien celle qu’Elle a voulue — la nuit avant l’aube — alors, à toi, voyageur du futur, je lègue une bénédiction venue d’un autre temps.\n\nDans <H>un lieu que Son regard ne frôlera jamais</>, j’ai enfoui l’héritage d’une ère où l’humanité croyait encore en l’amour et en la fraternité.\n\nQue Ses fils du destin te guident vers la véritable aurore."
+        },
+        READ_TEXT_20605 = {
+          ContentFR = "Le temps s’efface, la mémoire s’endort.\nLes visages changent, les vents se souviennent.\nSous les collines, la lumière des dieux persiste.\nLes racines murmurent au voyageur patient.\nDans la caverne, la vérité sommeille.\nLà où tout se fane, un nouveau cycle s’éveille."
+        },
         READ_TEXT_20608 = {
           ContentFR = "Désolé ma belle, j’ai eu quelques ennuis à la maison. Ce mois-ci, je ne pourrai pas t’emmener vivre dans la cité intérieure comme promis. Mais ne t’en fais pas — dès que tout sera réglé, je viendrai te chercher. Fais-moi confiance, une dernière fois, d’accord ?\nPour me faire pardonner, j’ai caché quelques pièces <H>sous le carré d’herbe à gauche du passage</> vers la cité intérieure. N’oublie pas d’aller les chercher. Je t’aime.\n\n<W>Sale menteur ! Salaud ! À chaque fois, tu crois pouvoir m’acheter avec ton fric ! Je ne suis pas ton chien ! Je ne veux rien de toi ! Garde ton argent et casse-toi !</>"
         },
@@ -34329,21 +34335,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_DESC_12069 = {
           ContentFR = "Forgée d’après les plans du Trancheur d’ambre, sa lame miroitante tranche l’air avec une grâce mortelle, née uniquement pour le duel."
-        },
-        RESOURCE_DESC_12070 = {
-          ContentFR = "Façonné selon les plans de l’Écho du passé, ce manche relie passé et présent — un prolongement naturel de la mémoire du porteur."
-        },
-        RESOURCE_DESC_12071 = {
-          ContentFR = "Forgée selon les plans d’Écho du passé, cette lame silencieuse fend le temps lui-même — chaque coup une réminiscence."
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_DESC_12072",
-    MaxKey = "RESOURCE_DESC_29002",
+    MinKey = "RESOURCE_DESC_12070",
+    MaxKey = "RESOURCE_DESC_227",
     Loader = function()
       return {
+        RESOURCE_DESC_12070 = {
+          ContentFR = "Façonné selon les plans de l’Écho du passé, ce manche relie passé et présent — un prolongement naturel de la mémoire du porteur."
+        },
+        RESOURCE_DESC_12071 = {
+          ContentFR = "Forgée selon les plans d’Écho du passé, cette lame silencieuse fend le temps lui-même — chaque coup une réminiscence."
+        },
         RESOURCE_DESC_12072 = {
           ContentFR = "Assemblé selon les plans de l’Hallebarde de jade printanier, ce manche capture la naissance d’un souffle printanier — un prolongement souple du bras du porteur."
         },
@@ -34937,21 +34943,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_DESC_227 = {
           ContentFR = "Des missions éprouvantes et des aventures extraordinaires ont tissé la légende des Chasseurs de Phoxène, que même les Géniemon chantent à présent.\nPeut être utilisé pour acheter des Coffrets surprise de Géniemon."
-        },
-        RESOURCE_DESC_29001 = {
-          ContentFR = "Sphères d’exploration recueillies aux quatre coins de l’Île du Purgatoire. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses."
-        },
-        RESOURCE_DESC_29002 = {
-          ContentFR = "Sphères d’exploration recueillies dans tout Givrelac. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses."
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_DESC_29003",
-    MaxKey = "RESOURCE_DESC_49996",
+    MinKey = "RESOURCE_DESC_29001",
+    MaxKey = "RESOURCE_DESC_49991",
     Loader = function()
       return {
+        RESOURCE_DESC_29001 = {
+          ContentFR = "Sphères d’exploration recueillies aux quatre coins de l’Île du Purgatoire. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses."
+        },
+        RESOURCE_DESC_29002 = {
+          ContentFR = "Sphères d’exploration recueillies dans tout Givrelac. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses."
+        },
         RESOURCE_DESC_29003 = {
           ContentFR = "Sphères d’exploration recueillies aux abords de la Forteresse de Lonza. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses."
         },
@@ -35545,21 +35551,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_DESC_49991 = {
           ContentFR = "J’ai entendu les appels de la loyauté et vu les étoiles se consumer."
-        },
-        RESOURCE_DESC_49995 = {
-          ContentFR = "À dos de lame, je chevauche le vent."
-        },
-        RESOURCE_DESC_49996 = {
-          ContentFR = "Groin groin ? Groin groin !"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_DESC_49997",
-    MaxKey = "RESOURCE_FUNCTION_20526",
+    MinKey = "RESOURCE_DESC_49995",
+    MaxKey = "RESOURCE_FUNCTION_20510",
     Loader = function()
       return {
+        RESOURCE_DESC_49995 = {
+          ContentFR = "À dos de lame, je chevauche le vent."
+        },
+        RESOURCE_DESC_49996 = {
+          ContentFR = "Groin groin ? Groin groin !"
+        },
         RESOURCE_DESC_49997 = {
           ContentFR = "Même l’immortel finit par se perdre, comme des larmes dans la pluie."
         },
@@ -36145,21 +36151,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_FUNCTION_20510 = {
           ContentFR = "Permet d’ouvrir un coffre verrouillé"
-        },
-        RESOURCE_FUNCTION_20511 = {
-          ContentFR = "Permet d’ouvrir un coffre verrouillé"
-        },
-        RESOURCE_FUNCTION_20526 = {
-          ContentFR = "Permet de débloquer le défi du stand de tir"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_FUNCTION_211",
-    MaxKey = "RESOURCE_NAME_1013202",
+    MinKey = "RESOURCE_FUNCTION_20511",
+    MaxKey = "RESOURCE_NAME_1013104",
     Loader = function()
       return {
+        RESOURCE_FUNCTION_20511 = {
+          ContentFR = "Permet d’ouvrir un coffre verrouillé"
+        },
+        RESOURCE_FUNCTION_20526 = {
+          ContentFR = "Permet de débloquer le défi du stand de tir"
+        },
         RESOURCE_FUNCTION_211 = {
           ContentFR = "Une fois les Mandats scellés déverrouillés, peut être utilisé pour en acheter différents types dans la boutique."
         },
@@ -36745,21 +36751,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_NAME_1013104 = {
           ContentFR = "Emblème : Falsi"
-        },
-        RESOURCE_NAME_1013201 = {
-          ContentFR = "Emblème : Vulcera"
-        },
-        RESOURCE_NAME_1013202 = {
-          ContentFR = "Emblème : Camilla"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_1013203",
-    MaxKey = "RESOURCE_NAME_12073",
+    MinKey = "RESOURCE_NAME_1013201",
+    MaxKey = "RESOURCE_NAME_12071",
     Loader = function()
       return {
+        RESOURCE_NAME_1013201 = {
+          ContentFR = "Emblème : Vulcera"
+        },
+        RESOURCE_NAME_1013202 = {
+          ContentFR = "Emblème : Camilla"
+        },
         RESOURCE_NAME_1013203 = {
           ContentFR = "Emblème : Katya"
         },
@@ -37351,21 +37357,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_NAME_12071 = {
           ContentFR = "Écho du passé : Lame"
-        },
-        RESOURCE_NAME_12072 = {
-          ContentFR = "Hallebarde de jade printanier : Poignée"
-        },
-        RESOURCE_NAME_12073 = {
-          ContentFR = "Hallebarde de jade printanier : Lame"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_12074",
-    MaxKey = "RESOURCE_NAME_2009",
+    MinKey = "RESOURCE_NAME_12072",
+    MaxKey = "RESOURCE_NAME_2007",
     Loader = function()
       return {
+        RESOURCE_NAME_12072 = {
+          ContentFR = "Hallebarde de jade printanier : Poignée"
+        },
+        RESOURCE_NAME_12073 = {
+          ContentFR = "Hallebarde de jade printanier : Lame"
+        },
         RESOURCE_NAME_12074 = {
           ContentFR = "Brise-fer : Poignée"
         },
@@ -37953,21 +37959,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_NAME_2007 = {
           ContentFR = "Manuel d’arme I"
-        },
-        RESOURCE_NAME_2008 = {
-          ContentFR = "Manuel d’arme II"
-        },
-        RESOURCE_NAME_2009 = {
-          ContentFR = "Manuel d’arme III"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_201",
-    MaxKey = "RESOURCE_NAME_31011003",
+    MinKey = "RESOURCE_NAME_2008",
+    MaxKey = "RESOURCE_NAME_31011001",
     Loader = function()
       return {
+        RESOURCE_NAME_2008 = {
+          ContentFR = "Manuel d’arme II"
+        },
+        RESOURCE_NAME_2009 = {
+          ContentFR = "Manuel d’arme III"
+        },
         RESOURCE_NAME_201 = {
           ContentFR = "Module de transfert d’affinité"
         },
@@ -38541,21 +38547,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_NAME_31011001 = {
           ContentFR = "Le Rossignol au pays des merveilles I"
-        },
-        RESOURCE_NAME_31011002 = {
-          ContentFR = "Le Rossignol au pays des merveilles II"
-        },
-        RESOURCE_NAME_31011003 = {
-          ContentFR = "Quand les rêves se parent de nuit"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_31011004",
-    MaxKey = "RESOURCE_NAME_5022030",
+    MinKey = "RESOURCE_NAME_31011002",
+    MaxKey = "RESOURCE_NAME_5022020",
     Loader = function()
       return {
+        RESOURCE_NAME_31011002 = {
+          ContentFR = "Le Rossignol au pays des merveilles II"
+        },
+        RESOURCE_NAME_31011003 = {
+          ContentFR = "Quand les rêves se parent de nuit"
+        },
         RESOURCE_NAME_31011004 = {
           ContentFR = "Pensées du Royaume des Sables"
         },
@@ -39099,19 +39105,19 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_NAME_5022020 = {
           ContentFR = "Crabe engrenage"
-        },
-        RESOURCE_NAME_5022021 = {
-          ContentFR = "Crabe engrenage variant"
-        },
-        RESOURCE_NAME_5022030 = {ContentFR = "Pendiperle"}
+        }
       }
     end
   },
   {
-    MinKey = "RESOURCE_NAME_5022031",
-    MaxKey = "RESOURCE_TEXT_10205",
+    MinKey = "RESOURCE_NAME_5022021",
+    MaxKey = "RESOURCE_TEXT_10203",
     Loader = function()
       return {
+        RESOURCE_NAME_5022021 = {
+          ContentFR = "Crabe engrenage variant"
+        },
+        RESOURCE_NAME_5022030 = {ContentFR = "Pendiperle"},
         RESOURCE_NAME_5022031 = {
           ContentFR = "Pendiperle variant"
         },
@@ -39681,21 +39687,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_TEXT_10203 = {
           ContentFR = "« J’ai allumé la première chandelle — j’y ai vu un jeune garçon privé de voix.\nJ’ai allumé la deuxième — j’y ai vu un croyant aveuglé.\nJ’ai allumé la troisième — j’y ai vu un prêtre dévot.\nLa lueur tiède, portée par les hymnes, a effleuré mes paupières...\nEt j’ai compris que tous ces visages... étaient les miens. »\n\n— Un Émissaire Céleste anonyme, perdu dans l’Abysse"
-        },
-        RESOURCE_TEXT_10204 = {
-          ContentFR = "« J’ai allumé la première chandelle — j’y ai vu un jeune garçon privé de voix.\nJ’ai allumé la deuxième — j’y ai vu un croyant aveuglé.\nJ’ai allumé la troisième — j’y ai vu un prêtre dévot.\nLa lueur tiède, portée par les hymnes, a effleuré mes paupières...\nEt j’ai compris que tous ces visages... étaient les miens. »\n\n— Un Émissaire Céleste anonyme, perdu dans l’Abysse"
-        },
-        RESOURCE_TEXT_10205 = {
-          ContentFR = "« J’ai allumé la première chandelle — j’y ai vu un jeune garçon privé de voix.\nJ’ai allumé la deuxième — j’y ai vu un croyant aveuglé.\nJ’ai allumé la troisième — j’y ai vu un prêtre dévot.\nLa lueur tiède, portée par les hymnes, a effleuré mes paupières...\nEt j’ai compris que tous ces visages... étaient les miens. »\n\n— Un Émissaire Céleste anonyme, perdu dans l’Abysse"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_TEXT_10206",
-    MaxKey = "RESOURCE_TEXT_5022020",
+    MinKey = "RESOURCE_TEXT_10204",
+    MaxKey = "RESOURCE_TEXT_5021050",
     Loader = function()
       return {
+        RESOURCE_TEXT_10204 = {
+          ContentFR = "« J’ai allumé la première chandelle — j’y ai vu un jeune garçon privé de voix.\nJ’ai allumé la deuxième — j’y ai vu un croyant aveuglé.\nJ’ai allumé la troisième — j’y ai vu un prêtre dévot.\nLa lueur tiède, portée par les hymnes, a effleuré mes paupières...\nEt j’ai compris que tous ces visages... étaient les miens. »\n\n— Un Émissaire Céleste anonyme, perdu dans l’Abysse"
+        },
+        RESOURCE_TEXT_10205 = {
+          ContentFR = "« J’ai allumé la première chandelle — j’y ai vu un jeune garçon privé de voix.\nJ’ai allumé la deuxième — j’y ai vu un croyant aveuglé.\nJ’ai allumé la troisième — j’y ai vu un prêtre dévot.\nLa lueur tiède, portée par les hymnes, a effleuré mes paupières...\nEt j’ai compris que tous ces visages... étaient les miens. »\n\n— Un Émissaire Céleste anonyme, perdu dans l’Abysse"
+        },
         RESOURCE_TEXT_10206 = {
           ContentFR = "« Biru, d’un vert profond et d’un goût astringent, laisse poindre une légère douceur un instant après ingestion. Pris en quantité raisonnable, il apaise l’esprit, calme le cœur et favorise la cicatrisation. À trop forte dose, toutefois, il peut entraîner un engourdissement. »\n\n— Fufeng, apothicaire de Huaxu, <I>Guide des plantes médicinales</>"
         },
@@ -40289,21 +40295,21 @@ Allez voir ce qui se passe.]]
         },
         RESOURCE_TEXT_5021050 = {
           ContentFR = "Un cœur trop longtemps en cage s’emplit de brume,\nEt nul ne pousse à la chute celui qui se consume.\nLa mer obscure pourrait servir de tombeau,\nPourtant, dans ses profondeurs, veille un être d’en haut.\n\nLes branches brisées de l’Arbre Céleste sont ses ailes,\nSes fleurs et ses feuilles, un voile de lumière irréelle.\nJ’ai entendu Son chant, résonner dans le flot profond,\nEt mon corps défait s’est vu guider vers l’horizon...\nNon vers la chute — mais vers un renouveau.\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
-        },
-        RESOURCE_TEXT_5022010 = {
-          ContentFR = "La bête dépassait deux toises, griffes brandies, crocs ruisselants, rage aux aguets.\nEn un éclair, elle frappa — mais le Magistrat de Yingtian l’attendait déjà.\nSans un mot, sans un souffle, la lame fendit l’air... et son visage.\n\nQuel sabre ! Ainsi dit la chanson :\n\nCuir de Requin perligrane serré entre les doigts,\nAcier de maîtres forgé dans la flamme et le poids.\nPar grâce céleste et pour l’honneur du Dragon d’Argent,\nJe trancherai ta tête — serment éclatant.\n\n— <I>Chroniques de Yingtian</>, classique des conteurs de Huaxu"
-        },
-        RESOURCE_TEXT_5022020 = {
-          ContentFR = "Nous ignorons encore ce qui a poussé ces crabes à développer un tel sens esthétique... mais imaginez des centaines de carcasses mécaniques d’où jaillissent des pattes articulées, avançant en vagues sur la plage. Un spectacle inoubliable — hormis lorsqu’elles ont failli me pincer les orteils.\n\n— Un explorateur chevronné, resté anonyme"
         }
       }
     end
   },
   {
-    MinKey = "RESOURCE_TEXT_5022030",
-    MaxKey = "RLBlessing_Desc_310",
+    MinKey = "RESOURCE_TEXT_5022010",
+    MaxKey = "RLBlessing_Desc_308",
     Loader = function()
       return {
+        RESOURCE_TEXT_5022010 = {
+          ContentFR = "La bête dépassait deux toises, griffes brandies, crocs ruisselants, rage aux aguets.\nEn un éclair, elle frappa — mais le Magistrat de Yingtian l’attendait déjà.\nSans un mot, sans un souffle, la lame fendit l’air... et son visage.\n\nQuel sabre ! Ainsi dit la chanson :\n\nCuir de Requin perligrane serré entre les doigts,\nAcier de maîtres forgé dans la flamme et le poids.\nPar grâce céleste et pour l’honneur du Dragon d’Argent,\nJe trancherai ta tête — serment éclatant.\n\n— <I>Chroniques de Yingtian</>, classique des conteurs de Huaxu"
+        },
+        RESOURCE_TEXT_5022020 = {
+          ContentFR = "Nous ignorons encore ce qui a poussé ces crabes à développer un tel sens esthétique... mais imaginez des centaines de carcasses mécaniques d’où jaillissent des pattes articulées, avançant en vagues sur la plage. Un spectacle inoubliable — hormis lorsqu’elles ont failli me pincer les orteils.\n\n— Un explorateur chevronné, resté anonyme"
+        },
         RESOURCE_TEXT_5022030 = {
           ContentFR = "Les anciens croyaient que la petite lanterne du Pendiperle n’était autre que la mythique Perle Nocturne. Mais sitôt la créature morte, sa lueur s’éteignait. De là vient, dit-on, le proverbe : « La perle jetée perd son éclat. »\n\n— Rovetta, autrice de voyage, <I>Rovetta à Huaxu</>"
         },
@@ -40887,21 +40893,21 @@ Allez voir ce qui se passe.]]
         },
         RLBlessing_Desc_308 = {
           ContentFR = "Lorsque le pourcentage de Lucidité est inférieur à <Highlight>$2</>, les dégâts subis sont réduits de <Highlight>$1</>."
-        },
-        RLBlessing_Desc_309 = {
-          ContentFR = "Lorsque le pourcentage de Lucidité tombe sous <Highlight>$3</>, restaure <Highlight>$1</> de Lucidité par seconde pendant <Highlight>$4</> s. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s."
-        },
-        RLBlessing_Desc_310 = {
-          ContentFR = "Lors de l’utilisation d’une compétence, confère <Highlight>$1</> cumuls de [Lueur]."
         }
       }
     end
   },
   {
-    MinKey = "RLBlessing_Desc_311",
-    MaxKey = "RLBlessing_SimpleDesc_214",
+    MinKey = "RLBlessing_Desc_309",
+    MaxKey = "RLBlessing_SimpleDesc_212",
     Loader = function()
       return {
+        RLBlessing_Desc_309 = {
+          ContentFR = "Lorsque le pourcentage de Lucidité tombe sous <Highlight>$3</>, restaure <Highlight>$1</> de Lucidité par seconde pendant <Highlight>$4</> s. Cet effet ne peut se déclencher qu’une fois toutes les <Highlight>$2</> s."
+        },
+        RLBlessing_Desc_310 = {
+          ContentFR = "Lors de l’utilisation d’une compétence, confère <Highlight>$1</> cumuls de [Lueur]."
+        },
         RLBlessing_Desc_311 = {
           ContentFR = "Sous [Éclat], restaure <Highlight>$1</> de Lucidité par seconde."
         },
@@ -41495,21 +41501,21 @@ Allez voir ce qui se passe.]]
         },
         RLBlessing_SimpleDesc_212 = {
           ContentFR = "Augmentation du Tir multiple des armes à distance."
-        },
-        RLBlessing_SimpleDesc_213 = {
-          ContentFR = "Augmentation de la Vitesse d’attaque des armes à distance."
-        },
-        RLBlessing_SimpleDesc_214 = {
-          ContentFR = "Les armes à distance infligent davantage de dégâts plus la cible est éloignée."
         }
       }
     end
   },
   {
-    MinKey = "RLBlessing_SimpleDesc_215",
-    MaxKey = "RLTalent_Desc_202",
+    MinKey = "RLBlessing_SimpleDesc_213",
+    MaxKey = "RLTalent_Desc_109",
     Loader = function()
       return {
+        RLBlessing_SimpleDesc_213 = {
+          ContentFR = "Augmentation de la Vitesse d’attaque des armes à distance."
+        },
+        RLBlessing_SimpleDesc_214 = {
+          ContentFR = "Les armes à distance infligent davantage de dégâts plus la cible est éloignée."
+        },
         RLBlessing_SimpleDesc_215 = {
           ContentFR = "Après avoir maintenu le mouvement pendant plus de <Highlight>2</> secondes, les dégâts subis diminuent jusqu’à l’arrêt.\nAprès être resté immobile pendant plus de <Highlight>2</> secondes, les dégâts infligés augmentent jusqu’à la reprise du mouvement."
         },
@@ -42099,21 +42105,21 @@ Allez voir ce qui se passe.]]
         },
         RLTalent_Desc_109 = {
           ContentFR = "Dégâts infligés +<Highlight>#1</>"
-        },
-        RLTalent_Desc_201 = {
-          ContentFR = "PV max +<Highlight>#1</>"
-        },
-        RLTalent_Desc_202 = {
-          ContentFR = "DÉF +<Highlight>#1</>"
         }
       }
     end
   },
   {
-    MinKey = "RLTalent_Desc_203",
-    MaxKey = "RLTreasure_IPDesc_15201",
+    MinKey = "RLTalent_Desc_201",
+    MaxKey = "RLTreasure_IPDesc_14301",
     Loader = function()
       return {
+        RLTalent_Desc_201 = {
+          ContentFR = "PV max +<Highlight>#1</>"
+        },
+        RLTalent_Desc_202 = {
+          ContentFR = "DÉF +<Highlight>#1</>"
+        },
         RLTalent_Desc_203 = {
           ContentFR = "Bouclier +<Highlight>#1</>"
         },
@@ -42707,21 +42713,21 @@ Allez voir ce qui se passe.]]
         },
         RLTreasure_IPDesc_14301 = {
           ContentFR = "L’ombre se dissipe, comme si elle n’avait jamais existé. Elle comprend enfin : l’âme perdue de sa sœur ne reviendra jamais.\nSi je ne t’avais pas autant admirée...\nSi je n’avais pas été si heureuse lorsque tu as été choisie...\nSerais-tu restée ? Est-ce moi qui t’ai menée à la mort, ma sœur ?\nSeul l’Abysse silencieux entend ses sanglots."
-        },
-        RLTreasure_IPDesc_15101 = {
-          ContentFR = "Alors pourquoi, à présent, traîne-t-elle ce corps meurtri dans un labyrinthe sans fin, avançant avec l’obstination de l’inutile ?\nParce que, quel que soit l’angle où elle se cache, Cathy finit toujours par la trouver. Parce que, aussi absurde que soit l’excuse, Flynn ne se fâche jamais.\nParce qu’elle serre encore ce badge taché de sang, lourd de la confiance entière et du mandat d’un autre.\nParce qu’elle a déjà... une raison qu’elle ne peut plus abandonner."
-        },
-        RLTreasure_IPDesc_15201 = {
-          ContentFR = "Depuis l’enfance, elle n’a cessé d’abandonner. À l’école, elle manqua volontairement la sélection de l’Académie de l’Arbre Sacré ; après avoir rejoint l’ordre des chevaliers, elle ne se présenta jamais à la moindre épreuve de promotion.\nPersonne ne peut grimper éternellement. Plutôt que de poursuivre un sommet qui, un jour, précipite au fond du ravin, elle préféra rester là où tout avait commencé."
         }
       }
     end
   },
   {
-    MinKey = "RLTreasure_Name_10101",
-    MaxKey = "RL_Event316_Select_1",
+    MinKey = "RLTreasure_IPDesc_15101",
+    MaxKey = "RL_Event315_Select_2",
     Loader = function()
       return {
+        RLTreasure_IPDesc_15101 = {
+          ContentFR = "Alors pourquoi, à présent, traîne-t-elle ce corps meurtri dans un labyrinthe sans fin, avançant avec l’obstination de l’inutile ?\nParce que, quel que soit l’angle où elle se cache, Cathy finit toujours par la trouver. Parce que, aussi absurde que soit l’excuse, Flynn ne se fâche jamais.\nParce qu’elle serre encore ce badge taché de sang, lourd de la confiance entière et du mandat d’un autre.\nParce qu’elle a déjà... une raison qu’elle ne peut plus abandonner."
+        },
+        RLTreasure_IPDesc_15201 = {
+          ContentFR = "Depuis l’enfance, elle n’a cessé d’abandonner. À l’école, elle manqua volontairement la sélection de l’Académie de l’Arbre Sacré ; après avoir rejoint l’ordre des chevaliers, elle ne se présenta jamais à la moindre épreuve de promotion.\nPersonne ne peut grimper éternellement. Plutôt que de poursuivre un sommet qui, un jour, précipite au fond du ravin, elle préféra rester là où tout avait commencé."
+        },
         RLTreasure_Name_10101 = {
           ContentFR = "Flamme éternelle de l’artisan"
         },
@@ -43303,21 +43309,21 @@ Allez voir ce qui se passe.]]
         },
         RL_Event315_Select_2 = {
           ContentFR = "[-100 Braises] Sélectionner une Lucimèche <Highlight>épique</>."
-        },
-        RL_Event315_Select_3 = {
-          ContentFR = "[-200 Braises] Sélectionner une Lucimèche <Highlight>légendaire</>."
-        },
-        RL_Event316_Select_1 = {
-          ContentFR = "Sélectionner un Artéfact <Highlight>rare</>."
         }
       }
     end
   },
   {
-    MinKey = "RL_Event316_Select_2",
-    MaxKey = "RegionReputation_EntrustContent_huaxv_19",
+    MinKey = "RL_Event315_Select_3",
+    MaxKey = "RegionReputation_EntrustContent_huaxv_17",
     Loader = function()
       return {
+        RL_Event315_Select_3 = {
+          ContentFR = "[-200 Braises] Sélectionner une Lucimèche <Highlight>légendaire</>."
+        },
+        RL_Event316_Select_1 = {
+          ContentFR = "Sélectionner un Artéfact <Highlight>rare</>."
+        },
         RL_Event316_Select_2 = {
           ContentFR = "[-150 Braises] Sélectionner un Artéfact <Highlight>épique</> ou <Highlight>légendaire</>."
         },
@@ -43867,21 +43873,21 @@ Allez voir ce qui se passe.]]
         },
         RegionReputation_EntrustContent_huaxv_17 = {
           ContentFR = "Mon {性别:ami|amie}, pourquoi t’empresses-tu de m’éviter dès que tu me vois ? Serais-je donc une bête féroce ? Cette fois, je viens te trouver pour une mission particulière. Si tu ne m’aides pas, je ne vois vraiment personne d’assez compétent à qui la confier. Quant à la récompense, elle te sera bien entendu remise une fois l’affaire réglée."
-        },
-        RegionReputation_EntrustContent_huaxv_18 = {
-          ContentFR = "Il y a quelques jours, je suis retourné aux Pics Extérieurs et j’y ai remarqué un enfant assez singulier. Sa manière raide et sérieuse de s’entraîner aux arts martiaux m’a rappelé celle que j’avais à son âge. J’aimerais lui acheter quelques objets, mais mes fonctions m’accaparent et je ne peux pas m’absenter. Pourrais-tu peut-être... Si cela te dérange, je ne t’importunerai pas davantage."
-        },
-        RegionReputation_EntrustContent_huaxv_19 = {
-          ContentFR = "Yo ! Il y a quelques jours, j’ai un peu trop bu et je me suis endormi dans l’entrepôt où Grande-tante garde ses méchapoupées. Sauf que le bouchon de la jarre était mal fermé, et l’alcool a détrempé tous ces blocs de bois ! Elle veut maintenant me passer un savon. Avant qu’elle ne me mette la main dessus, je n’ai plus qu’à venir te demander de l’aide !"
         }
       }
     end
   },
   {
-    MinKey = "RegionReputation_EntrustContent_huaxv_20",
-    MaxKey = "ReputationLevel_RewardPreview",
+    MinKey = "RegionReputation_EntrustContent_huaxv_18",
+    MaxKey = "ReputationLevel_GrandReward_Title",
     Loader = function()
       return {
+        RegionReputation_EntrustContent_huaxv_18 = {
+          ContentFR = "Il y a quelques jours, je suis retourné aux Pics Extérieurs et j’y ai remarqué un enfant assez singulier. Sa manière raide et sérieuse de s’entraîner aux arts martiaux m’a rappelé celle que j’avais à son âge. J’aimerais lui acheter quelques objets, mais mes fonctions m’accaparent et je ne peux pas m’absenter. Pourrais-tu peut-être... Si cela te dérange, je ne t’importunerai pas davantage."
+        },
+        RegionReputation_EntrustContent_huaxv_19 = {
+          ContentFR = "Yo ! Il y a quelques jours, j’ai un peu trop bu et je me suis endormi dans l’entrepôt où Grande-tante garde ses méchapoupées. Sauf que le bouchon de la jarre était mal fermé, et l’alcool a détrempé tous ces blocs de bois ! Elle veut maintenant me passer un savon. Avant qu’elle ne me mette la main dessus, je n’ai plus qu’à venir te demander de l’aide !"
+        },
         RegionReputation_EntrustContent_huaxv_20 = {
           ContentFR = "Depuis la réforme des Neuf Chapitres de Dafeng, le peuple de Huaxu reprend peu à peu les armes. Mais après avoir si longtemps délaissé les arts martiaux, rares sont ceux qui savent vraiment se battre, hormis quelques Magistrats de Yingtian et Vagabonds. Je me dis que si tu pouvais leur donner un coup de main et leur montrer quelques techniques, ce serait peut-être plus approprié que si j’y allais moi-même."
         },
@@ -44449,21 +44455,21 @@ Allez voir ce qui se passe.]]
         },
         ReputationLevel_GrandReward_Title = {
           ContentFR = "Récompenses de Réputation – Niveau <highlight>%s</>"
-        },
-        ReputationLevel_ListContent = {
-          ContentFR = "Atteindre le Niveau de Réputation <highlight>%s</>"
-        },
-        ReputationLevel_RewardPreview = {
-          ContentFR = "Aperçu des récompenses"
         }
       }
     end
   },
   {
-    MinKey = "ReputationLevel_Title",
-    MaxKey = "SKILL_10399_03_Name",
+    MinKey = "ReputationLevel_ListContent",
+    MaxKey = "SKILL_10399_02_Name",
     Loader = function()
       return {
+        ReputationLevel_ListContent = {
+          ContentFR = "Atteindre le Niveau de Réputation <highlight>%s</>"
+        },
+        ReputationLevel_RewardPreview = {
+          ContentFR = "Aperçu des récompenses"
+        },
         ReputationLevel_Title = {
           ContentFR = "Niveau de réputation"
         },
@@ -44874,7 +44880,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Vigueur +<H>#1</>. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de <H>{float4}#2</> par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [<H>{float4}#3</> × points consommés] pendant <H>#4</> s."
         },
         SKILL_10199_01_DESC = {
-          ContentFR = "Lorsque cette arme inflige des dégâts, elle confère <H>#1</> points de calamité. Le maximum de calamité est de 100 points.\nLorsque le maximum est atteint, tous les points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de <H>#3</> pendant <H>#4</> s, jusqu’à <H>#5</> cumuls."
+          ContentFR = "Lorsque cette arme inflige des dégâts, elle confère <H>#1</> points de calamité. Le maximum de calamité est de 150 points.\nLorsque vous atteignez 100 points de calamité, 100 points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de <H>#3</> pendant <H>#4</> s, jusqu’à <H>#5</> cumuls."
         },
         SKILL_10199_01_Name = {
           ContentFR = "Insoluble – Méditation"
@@ -44886,7 +44892,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Insoluble – Aspiration"
         },
         SKILL_10199_03_DESC = {
-          ContentFR = "Lorsque des Dégâts de compétence se déclenchent, vous obtenez <H>[#1 × Vitesse de compétence]</> points de calamité."
+          ContentFR = "Lorsque des Dégâts de compétence déclenchent un Effet supplémentaire, vous obtenez <H>[#1 × Vitesse de compétence]</> points de calamité."
         },
         SKILL_10199_03_Name = {
           ContentFR = "Énigme – Inconnu"
@@ -44916,7 +44922,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Énigme – Vigueur"
         },
         SKILL_10199_10_DESC = {
-          ContentFR = "Dégâts de compétence supplémentaires de votre attribut +<H>#1</>.\nLorsque [Recherche] atteint le nombre maximal de cumuls, infliger des Dégâts de compétence inflige également <H>#3</> dégâts de calamité aux ennemis dans un rayon de <H>#2</> m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et leur bonus de dégâts est calculé selon [Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les <H>#4</> s."
+          ContentFR = "Dégâts de compétence supplémentaires de votre attribut +<H>#1</>. Lorsque [Recherche] atteint le nombre maximal de cumuls, les Dégâts de compétence qui déclenchent un Effet supplémentaire infligent également <H>#3</> dégâts de calamité aux ennemis dans un rayon de <H>#2</> m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et leur bonus de dégâts est calculé selon [Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les <H>#4</> s."
         },
         SKILL_10199_10_Name = {
           ContentFR = "Insoluble – Vérité"
@@ -45019,21 +45025,21 @@ Allez voir ce qui se passe.]]
         },
         SKILL_10399_02_Name = {
           ContentFR = "Braise – Étincelle"
-        },
-        SKILL_10399_03_DESC = {
-          ContentFR = "Chaque déclenchement d’un Effet supplémentaire confère <H>#1</> points de calamité."
-        },
-        SKILL_10399_03_Name = {
-          ContentFR = "Vacillante – Ascension"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_10399_04_DESC",
-    MaxKey = "SKILL_210104_NAME",
+    MinKey = "SKILL_10399_03_DESC",
+    MaxKey = "SKILL_210103_NAME",
     Loader = function()
       return {
+        SKILL_10399_03_DESC = {
+          ContentFR = "Chaque déclenchement d’un Effet supplémentaire confère <H>#1</> points de calamité."
+        },
+        SKILL_10399_03_Name = {
+          ContentFR = "Vacillante – Ascension"
+        },
         SKILL_10399_04_DESC = {
           ContentFR = "Lorsque l’effet [Flammes dévorantes] est actif, les dégâts des Attaques chargées de l’Arme de Consonance de mêlée augmentent de <H>#1</>."
         },
@@ -45615,21 +45621,21 @@ Allez voir ce qui se passe.]]
         },
         SKILL_210103_NAME = {
           ContentFR = "Jugement du cœur"
-        },
-        SKILL_210104_DESC = {
-          ContentFR = "Les Attaques normales avec une arme de mêlée ont une chance de déclencher immédiatement les dégâts de [Venin de l’amour] appliqués à la cible.\nLes attaques de [Rosée de Lada] déclenchent toujours cet effet."
-        },
-        SKILL_210104_NAME = {
-          ContentFR = "Amour toxique"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_210105_DESC",
-    MaxKey = "SKILL_DESC_1101WaveDamageOn",
+    MinKey = "SKILL_210104_DESC",
+    MaxKey = "SKILL_DESC_1101WaveDamage4",
     Loader = function()
       return {
+        SKILL_210104_DESC = {
+          ContentFR = "Les Attaques normales avec une arme de mêlée ont une chance de déclencher immédiatement les dégâts de [Venin de l’amour] appliqués à la cible.\nLes attaques de [Rosée de Lada] déclenchent toujours cet effet."
+        },
+        SKILL_210104_NAME = {
+          ContentFR = "Amour toxique"
+        },
         SKILL_210105_DESC = {
           ContentFR = "Lorsque l’Invocation : Aurelia attaque, elle a une probabilité d’appliquer directement 8 cumuls de [Venin de l’amour], équivalente à #2 du Taux CRIT de votre arme de mêlée.\nLorsque l’Invocation : Aurelia attaque, elle a #1 de chances de déclencher une fois supplémentaire les dégâts de [Venin de l’amour] de la cible.\nPour chaque Invocation : Aurelia présente sur le terrain, les dégâts que vous infligez ainsi que ceux de l’invocation sont augmentés de #3."
         },
@@ -46221,21 +46227,21 @@ Allez voir ce qui se passe.]]
         },
         SKILL_DESC_1101WaveDamage4 = {
           ContentFR = "Dégâts de la 4ᵉ onde tranchante"
-        },
-        SKILL_DESC_1101WaveDamage5 = {
-          ContentFR = "Dégâts de la 5ᵉ onde tranchante"
-        },
-        SKILL_DESC_1101WaveDamageOn = {
-          ContentFR = "Dégâts de l’onde tranchante"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_DESC_1101WaveWidth",
-    MaxKey = "SKILL_DESC_4102Skill02_Dmg02",
+    MinKey = "SKILL_DESC_1101WaveDamage5",
+    MaxKey = "SKILL_DESC_4102Skill02_Dmg00",
     Loader = function()
       return {
+        SKILL_DESC_1101WaveDamage5 = {
+          ContentFR = "Dégâts de la 5ᵉ onde tranchante"
+        },
+        SKILL_DESC_1101WaveDamageOn = {
+          ContentFR = "Dégâts de l’onde tranchante"
+        },
         SKILL_DESC_1101WaveWidth = {
           ContentFR = "Largeur de l’onde tranchante"
         },
@@ -46809,21 +46815,21 @@ Allez voir ce qui se passe.]]
         },
         SKILL_DESC_4102Skill02_Dmg00 = {
           ContentFR = "Dégâts de [Divination cosmique]"
-        },
-        SKILL_DESC_4102Skill02_Dmg01 = {
-          ContentFR = "Dégâts de [Voix du tonnerre]"
-        },
-        SKILL_DESC_4102Skill02_Dmg02 = {
-          ContentFR = "Dégâts de [Convergence primordiale]"
         }
       }
     end
   },
   {
-    MinKey = "SKILL_DESC_4102Skill02_Dmg03",
-    MaxKey = "SKILL_DESC_Skill02_BuffLastTime",
+    MinKey = "SKILL_DESC_4102Skill02_Dmg01",
+    MaxKey = "SKILL_DESC_ShootingRate3",
     Loader = function()
       return {
+        SKILL_DESC_4102Skill02_Dmg01 = {
+          ContentFR = "Dégâts de [Voix du tonnerre]"
+        },
+        SKILL_DESC_4102Skill02_Dmg02 = {
+          ContentFR = "Dégâts de [Convergence primordiale]"
+        },
         SKILL_DESC_4102Skill02_Dmg03 = {
           ContentFR = "Dégâts de [Convergence Zhen-Xun]"
         },
@@ -46871,6 +46877,9 @@ Allez voir ce qui se passe.]]
         },
         SKILL_DESC_4103Passive01_Buff02 = {
           ContentFR = "Bonus de Dégâts de compétence de [Maîtrise du courant]"
+        },
+        SKILL_DESC_4103Passive01_LastTime = {
+          ContentFR = "Durée de [Maîtrise du courant]"
         },
         SKILL_DESC_4103Skill02_Buff01 = {
           ContentFR = "Bonus de Vitesse de compétence par cumul de [Concentration]"
@@ -47289,7 +47298,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Régénération PV/s"
         },
         SKILL_DESC_KillEnemy = {
-          ContentFR = "Ennemi vaincu"
+          ContentFR = "Ennemis vaincus"
         },
         SKILL_DESC_MaxEs = {
           ContentFR = "Bouclier max"
@@ -47388,7 +47397,15 @@ Allez voir ce qui se passe.]]
         },
         SKILL_DESC_ShootingRate3 = {
           ContentFR = "Intervalle de tir — Phase 3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "SKILL_DESC_ShootingRate4",
+    MaxKey = "StarterQuest_Des_102001_8_2",
+    Loader = function()
+      return {
         SKILL_DESC_ShootingRate4 = {
           ContentFR = "Intervalle de tir — Phase 4"
         },
@@ -47397,15 +47414,7 @@ Allez voir ce qui se passe.]]
         },
         SKILL_DESC_Skill02_BuffLastTime = {
           ContentFR = "Durée d’[Errance céleste]"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "SKILL_DESC_Skill02_BulletNumPer",
-    MaxKey = "StarterQuest_Des_102001_8_5",
-    Loader = function()
-      return {
+        },
         SKILL_DESC_Skill02_BulletNumPer = {
           ContentFR = "Quantité obtenue de [Poudre d’artifice]"
         },
@@ -47948,7 +47957,15 @@ Allez voir ce qui se passe.]]
         },
         StarterQuest_Des_102001_8_2 = {
           ContentFR = "Terminer « Représentation classique » Acte V du Théâtre immersif"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "StarterQuest_Des_102001_8_3",
+    MaxKey = "TARGET_DUNGEON_EXTERMINATE_101",
+    Loader = function()
+      return {
         StarterQuest_Des_102001_8_3 = {
           ContentFR = "Remporter une fois [Échos nocturnes : L’Éclose] en difficulté 50"
         },
@@ -47957,15 +47974,7 @@ Allez voir ce qui se passe.]]
         },
         StarterQuest_Des_102001_8_5 = {
           ContentFR = "Améliorer 4 armes au Niv. 50"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "StarterQuest_Des_102001_9_1",
-    MaxKey = "TARGET_DUNGEON_RESCUE_103",
-    Loader = function()
-      return {
+        },
         StarterQuest_Des_102001_9_1 = {
           ContentFR = "Terminer toutes les « Représentations classiques » du Théâtre immersif"
         },
@@ -48476,7 +48485,15 @@ Allez voir ce qui se passe.]]
         },
         TARGET_DUNGEON_EXTERMINATE_101 = {
           ContentFR = "Éliminer les ennemis"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TARGET_DUNGEON_RESCUE_101",
+    MaxKey = "TERM_4202_Skill01Buff",
+    Loader = function()
+      return {
         TARGET_DUNGEON_RESCUE_101 = {
           ContentFR = "Se rendre dans la zone des cellules"
         },
@@ -48485,15 +48502,7 @@ Allez voir ce qui se passe.]]
         },
         TARGET_DUNGEON_RESCUE_103 = {
           ContentFR = "Escorter la cible jusqu’au Point d’évacuation"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TARGET_DUNGEON_ROUND",
-    MaxKey = "TERM_4301_Skill02Damage",
-    Loader = function()
-      return {
+        },
         TARGET_DUNGEON_ROUND = {
           ContentFR = "Vague actuelle :"
         },
@@ -49044,7 +49053,15 @@ Allez voir ce qui se passe.]]
         TERM_4202_Skill01 = {ContentFR = "Barrière"},
         TERM_4202_Skill01Buff = {
           ContentFR = "Lassitude amère"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TERM_4301_Skill01",
+    MaxKey = "TextMap_AnswerName_100402",
+    Loader = function()
+      return {
         TERM_4301_Skill01 = {
           ContentFR = "Châtiment de la Légion"
         },
@@ -49053,15 +49070,7 @@ Allez voir ce qui se passe.]]
         },
         TERM_4301_Skill02Damage = {
           ContentFR = "Tempête destructrice"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TERM_5101_Skill01",
-    MaxKey = "TextMap_AnswerName_100501",
-    Loader = function()
-      return {
+        },
         TERM_5101_Skill01 = {
           ContentFR = "Filbert fonce !"
         },
@@ -49616,7 +49625,15 @@ Allez voir ce qui se passe.]]
         },
         TextMap_AnswerName_100402 = {
           ContentFR = "Traces de Phoxichor dans la neige"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "TextMap_AnswerName_100403",
+    MaxKey = "TitleFrame_10059",
+    Loader = function()
+      return {
         TextMap_AnswerName_100403 = {
           ContentFR = "Agresseur fortement imprégné de Phoxichor"
         },
@@ -49625,15 +49642,7 @@ Allez voir ce qui se passe.]]
         },
         TextMap_AnswerName_100501 = {
           ContentFR = "L’agresseur serait amateur d’opéra ?"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "TextMap_AnswerName_100502",
-    MaxKey = "Title_10002",
-    Loader = function()
-      return {
+        },
         TextMap_AnswerName_100502 = {
           ContentFR = "Chant étrange de l’agresseur"
         },
@@ -50204,20 +50213,20 @@ Allez voir ce qui se passe.]]
         },
         TitleFrame_10059 = {
           ContentFR = "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} B – VII"
-        },
-        TitleFrame_Des = {
-          ContentFR = "Peut être équipé dans les [Cadres] des titres"
-        },
-        Title_10001 = {ContentFR = "opulent"},
-        Title_10002 = {ContentFR = "écarlate"}
+        }
       }
     end
   },
   {
-    MinKey = "Title_10003",
-    MaxKey = "Title_20072",
+    MinKey = "TitleFrame_Des",
+    MaxKey = "Title_20069",
     Loader = function()
       return {
+        TitleFrame_Des = {
+          ContentFR = "Peut être équipé dans les [Cadres] des titres"
+        },
+        Title_10001 = {ContentFR = "opulent"},
+        Title_10002 = {ContentFR = "écarlate"},
         Title_10003 = {ContentFR = "ardent"},
         Title_10004 = {ContentFR = "aguerri"},
         Title_10005 = {ContentFR = "festif"},
@@ -50540,18 +50549,18 @@ Allez voir ce qui se passe.]]
           ContentFR = "Roi de l’empressement"
         },
         Title_20068 = {ContentFR = "Roi Démon"},
-        Title_20069 = {ContentFR = "Berenica"},
-        Title_20070 = {ContentFR = "Phantasio"},
-        Title_20071 = {ContentFR = "Lisbell"},
-        Title_20072 = {ContentFR = "Dame Nifle"}
+        Title_20069 = {ContentFR = "Berenica"}
       }
     end
   },
   {
-    MinKey = "Title_20073",
-    MaxKey = "UIGuide_FuWen_1",
+    MinKey = "Title_20070",
+    MaxKey = "UIGuide_Fort_1_PC",
     Loader = function()
       return {
+        Title_20070 = {ContentFR = "Phantasio"},
+        Title_20071 = {ContentFR = "Lisbell"},
+        Title_20072 = {ContentFR = "Dame Nifle"},
         Title_20073 = {ContentFR = "Kezhou"},
         Title_20074 = {ContentFR = "Su Yi"},
         Title_20075 = {ContentFR = "Fina"},
@@ -51072,7 +51081,15 @@ Allez voir ce qui se passe.]]
         },
         UIGuide_Fort_1_PC = {
           ContentFR = "Approchez-vous et appuyez sur &Interactive& pour activer la Tourelle 4. Cette tourelle est chargée avec des <H>Obus explosifs</> et des <H>Obus à tir rapide</>."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Fort_1_Phone",
+    MaxKey = "UIGuide_Title_EX01Mechanism_2",
+    Loader = function()
+      return {
         UIGuide_Fort_1_Phone = {
           ContentFR = "Approchez-vous et <H>interagissez</> pour activer la Tourelle 4. Cette tourelle est chargée avec des <H>Obus explosifs</> et des <H>Obus à tir rapide</>."
         },
@@ -51081,15 +51098,7 @@ Allez voir ce qui se passe.]]
         },
         UIGuide_FuWen_1 = {
           ContentFR = "Des Runes de Taixu flottent dans l’air de Huaxu. Utiliser la fonction Attraction du Nexus mécanique pour les collecter."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_FuWen_2",
-    MaxKey = "UIGuide_Title_ExplorationMechanism_2",
-    Loader = function()
-      return {
+        },
         UIGuide_FuWen_2 = {
           ContentFR = "Les Runes de Taixu peuvent être échangées contre des récompenses à l’échoppe des Œufs porte-bonheur de Luno, la carpe."
         },
@@ -51676,22 +51685,22 @@ Allez voir ce qui se passe.]]
         },
         UIGuide_Title_EX01Mechanism_2 = {
           ContentFR = "État d’activation des câbles et dispositifs"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UIGuide_Title_Elevator",
+    MaxKey = "UI_Accessory_Desc_10088",
+    Loader = function()
+      return {
         UIGuide_Title_Elevator = {ContentFR = "Ascenseur"},
         UIGuide_Title_ExplorationMechanism_1 = {
           ContentFR = "Défi de Luno, l’exploratrice"
         },
         UIGuide_Title_ExplorationMechanism_2 = {
           ContentFR = "Défi de vitesse"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UIGuide_Title_ExplorationMechanism_3",
-    MaxKey = "UI_Accessory_Desc_10091",
-    Loader = function()
-      return {
+        },
         UIGuide_Title_ExplorationMechanism_3 = {
           ContentFR = "Défi de tir"
         },
@@ -52252,7 +52261,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Desc_10088 = {
           ContentFR = "Réparer les fissures du monde et restaurer l’harmonie ancestrale."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Desc_10089",
+    MaxKey = "UI_Accessory_Desc_80003",
+    Loader = function()
+      return {
         UI_Accessory_Desc_10089 = {
           ContentFR = "La longue nuit a toujours une fin. Puissent-elles éclairer votre chemin vers la maison."
         },
@@ -52261,15 +52278,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Desc_10091 = {
           ContentFR = "Écrivons l’histoire qui n’appartient qu’à nous."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Desc_10092",
-    MaxKey = "UI_Accessory_Desc_80006",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Desc_10092 = {
           ContentFR = "Que l’ordre soit exécuté sans faille."
         },
@@ -52856,7 +52865,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Desc_80003 = {
           ContentFR = "Par le sang se scelle le lien, par l’or se conclut le pacte ; que cette bénédiction protège les peuples à travers les âges."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Desc_80004",
+    MaxKey = "UI_Accessory_Name_11003",
+    Loader = function()
+      return {
         UI_Accessory_Desc_80004 = {
           ContentFR = "Tourner, tomber... parfait !"
         },
@@ -52865,15 +52882,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Desc_80006 = {
           ContentFR = "Dans ces cristaux de glace éternels se reflètent d’innombrables contes merveilleux."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Desc_80059",
-    MaxKey = "UI_Accessory_Name_11007",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Desc_80059 = {
           ContentFR = "Les cartes virevoltantes et la douce mélodie composent un ultime salut."
         },
@@ -53454,7 +53463,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Name_11003 = {
           ContentFR = "Semer l’Été"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_11004",
+    MaxKey = "UI_Accessory_Name_20104",
+    Loader = function()
+      return {
         UI_Accessory_Name_11004 = {
           ContentFR = "Pluie d’astres"
         },
@@ -53463,15 +53480,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Name_11007 = {
           ContentFR = "Mer de lycoris éternels"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_11008",
-    MaxKey = "UI_Accessory_Name_20107",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_11008 = {
           ContentFR = "Entraves glacées"
         },
@@ -54060,7 +54069,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Name_20104 = {
           ContentFR = "Parure frontale du silence – Jade noir"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_20105",
+    MaxKey = "UI_Accessory_Name_70003",
+    Loader = function()
+      return {
         UI_Accessory_Name_20105 = {
           ContentFR = "Parure frontale du silence – Blanc ivoire"
         },
@@ -54069,15 +54086,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Name_20107 = {
           ContentFR = "Fleur d’ossuaire – Pourpre profond"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_20108",
-    MaxKey = "UI_Accessory_Name_70007",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_20108 = {
           ContentFR = "Fleur d’ossuaire – Doré"
         },
@@ -54666,7 +54675,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Name_70003 = {
           ContentFR = "Feux d’éclat – Doré"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Accessory_Name_70005",
+    MaxKey = "UI_Achievement_Des_1500102",
+    Loader = function()
+      return {
         UI_Accessory_Name_70005 = {
           ContentFR = "Bouquet de lycoris éternels – Pourpre profond"
         },
@@ -54675,15 +54692,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Accessory_Name_70007 = {
           ContentFR = "Floraison figée dans la glace – Lavande"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Accessory_Name_70008",
-    MaxKey = "UI_Achievement_Des_1500105",
-    Loader = function()
-      return {
+        },
         UI_Accessory_Name_70008 = {
           ContentFR = "Braises du feu spectral – Bleu céleste"
         },
@@ -55270,7 +55279,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Des_1500102 = {
           ContentFR = "Terminer <highlight>#1</> fois toutes les « Représentations à l’affiche » de la période en cours du Théâtre immersif"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_1500103",
+    MaxKey = "UI_Achievement_Des_505004",
+    Loader = function()
+      return {
         UI_Achievement_Des_1500103 = {
           ContentFR = "Terminer toutes les « Représentations à l’affiche » du Théâtre immersif pendant <highlight>2</> périodes consécutives"
         },
@@ -55279,15 +55296,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Des_1500105 = {
           ContentFR = "Terminer toutes les « Représentations à l’affiche » du Théâtre immersif pendant <highlight>5</> périodes consécutives"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_1500106",
-    MaxKey = "UI_Achievement_Des_505007",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_1500106 = {
           ContentFR = "Terminer « Représentation immortelle » <highlight>Acte III</> du Théâtre immersif"
         },
@@ -55878,7 +55887,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Des_505004 = {
           ContentFR = "Trouver <highlight>#1</> trésors indiqués sur les Feuilles perdues de la Fosse de Glevum"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_505005",
+    MaxKey = "UI_Achievement_Fishing_Des_3006",
+    Loader = function()
+      return {
         UI_Achievement_Des_505005 = {
           ContentFR = "Trouver <highlight>#1</> trésors indiqués sur les Feuilles perdues de la Forteresse de Lonza"
         },
@@ -55887,15 +55904,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Des_505007 = {
           ContentFR = "Enregistrer <highlight>#1</> positions de Givrelac grâce à l’Oiseau onirique"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_505008",
-    MaxKey = "UI_Achievement_GetAllReward",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_505008 = {
           ContentFR = "Enregistrer <highlight>#1</> positions des Égouts de Givrelac grâce à l’Oiseau onirique"
         },
@@ -56486,7 +56495,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Fishing_Des_3006 = {
           ContentFR = "Débloquer toutes les entrées de poissons propres au Quai-aux-Étoiles"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Fishing_Des_3007",
+    MaxKey = "UI_Achievement_Name_200103",
+    Loader = function()
+      return {
         UI_Achievement_Fishing_Des_3007 = {
           ContentFR = "Débloquer toutes les entrées de poissons propres au Pavillon de l’Éphémère"
         },
@@ -56495,15 +56512,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_GetAllReward = {
           ContentFR = "Tout réclamer"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_GetReward",
-    MaxKey = "UI_Achievement_Name_200203",
-    Loader = function()
-      return {
+        },
         UI_Achievement_GetReward = {ContentFR = "Réclamer"},
         UI_Achievement_HiddenDes = {
           ContentFR = "Les conditions de déblocage de ce succès n’ont pas encore été révélées"
@@ -57092,7 +57101,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Name_200103 = {
           ContentFR = "Préservation de l’environnement III"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_200201",
+    MaxKey = "UI_Achievement_Name_5010101",
+    Loader = function()
+      return {
         UI_Achievement_Name_200201 = {
           ContentFR = "Némésis d’Hyperborea I"
         },
@@ -57101,15 +57118,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Name_200203 = {
           ContentFR = "Némésis d’Hyperborea III"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_200301",
-    MaxKey = "UI_Achievement_Name_5012001",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_200301 = {
           ContentFR = "Némésis d’Élysium I"
         },
@@ -57700,7 +57709,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Name_5010101 = {
           ContentFR = "Mission : Trésor merveilleux, où es-tu ?"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_501101",
+    MaxKey = "UI_Achievement_Name_7015901",
+    Loader = function()
+      return {
         UI_Achievement_Name_501101 = {
           ContentFR = "Silence nocturne — Solo : Sibylle"
         },
@@ -57709,15 +57726,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Name_5012001 = {
           ContentFR = "Réserves pour l’hibernation"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_501201",
-    MaxKey = "UI_Achievement_Name_7016201",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_501201 = {
           ContentFR = "Silence nocturne — Solo : Cristallophage"
         },
@@ -58306,7 +58315,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Name_7015901 = {
           ContentFR = "Retour triomphal ?"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_7016001",
+    MaxKey = "UI_AppearanceScore_RewardProgress",
+    Loader = function()
+      return {
         UI_Achievement_Name_7016001 = {
           ContentFR = "Le Paradis des Lapins blancs"
         },
@@ -58315,15 +58332,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Achievement_Name_7016201 = {
           ContentFR = "Frissons d’une nuit d’été"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_7016301",
-    MaxKey = "UI_AppearanceScore_Soldout",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_7016301 = {
           ContentFR = "Il est presque l’heure !"
         },
@@ -58729,6 +58738,15 @@ Allez voir ce qui se passe.]]
         UI_AppearanceCollect_ConfirmUnlock = {
           ContentFR = "Confirmer le déblocage de la récompense contre <highlight>900 Phoxènes</> ?"
         },
+        UI_AppearanceCollect_ConfirmUnlock2 = {
+          ContentFR = "Confirmer le déblocage de la récompense contre <highlight>600 Phoxènes</> ?"
+        },
+        UI_AppearanceCollect_CurrentProgress = {
+          ContentFR = "Progression : %d/%d"
+        },
+        UI_AppearanceCollect_CurrentProgressDetail = {
+          ContentFR = "Lors de la prévisualisation ou de l’achat d’une apparence, vous pouvez consulter les points d’apparence qu’elle rapporte ainsi que vos points d’apparence actuels dans « Fresques chatoyantes »."
+        },
         UI_AppearanceCollect_CurrentScore = {
           ContentFR = "Points d’apparence"
         },
@@ -58745,6 +58763,12 @@ Allez voir ce qui se passe.]]
         UI_AppearanceCollect_StatusObtained = {ContentFR = "Collecté"},
         UI_AppearanceCollect_StatusPending = {
           ContentFR = "À collecter"
+        },
+        UI_AppearanceCollect_Switch = {
+          ContentFR = "Afficher les points d’apparence"
+        },
+        UI_AppearanceCollect_SwitchDetail = {
+          ContentFR = "Lors de la prévisualisation ou de l’achat d’une apparence, vous pouvez consulter les points d’apparence qu’elle rapporte ainsi que vos points d’apparence actuels dans « Fresques chatoyantes »."
         },
         UI_AppearanceCollect_UnlockReward = {ContentFR = "Débloquer"},
         UI_AppearanceScore_AppIllustrated = {
@@ -58833,7 +58857,15 @@ Allez voir ce qui se passe.]]
         },
         UI_AppearanceScore_RewardProgress = {
           ContentFR = "Non atteint"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AppearanceScore_RewardTotalStatus",
+    MaxKey = "UI_AsyncCombat_CurrentContribution",
+    Loader = function()
+      return {
         UI_AppearanceScore_RewardTotalStatus = {
           ContentFR = "Progression"
         },
@@ -58857,15 +58889,7 @@ Allez voir ce qui se passe.]]
         },
         UI_AppearanceScore_Soldout = {
           ContentFR = "Achat impossible"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AppearanceScore_Solution",
-    MaxKey = "UI_AsyncCombat_Expand",
-    Loader = function()
-      return {
+        },
         UI_AppearanceScore_Solution = {
           ContentFR = "Configurations d’apparence"
         },
@@ -59371,7 +59395,15 @@ Allez voir ce qui se passe.]]
         },
         UI_AsyncCombat_CurrentContribution = {
           ContentFR = "Contribution actuelle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AsyncCombat_CurrentHostCount",
+    MaxKey = "UI_AutoChess_ExtraBuffDesc_38",
+    Loader = function()
+      return {
         UI_AsyncCombat_CurrentHostCount = {
           ContentFR = "Nombre actuel de premiers rôles : %d"
         },
@@ -59393,15 +59425,7 @@ Allez voir ce qui se passe.]]
         UI_AsyncCombat_EndInTime = {
           ContentFR = "{空格}avant la fin"
         },
-        UI_AsyncCombat_Expand = {ContentFR = "Déplier"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_AsyncCombat_FilterRooms",
-    MaxKey = "UI_AutoChess_ExtraBuffDesc_45",
-    Loader = function()
-      return {
+        UI_AsyncCombat_Expand = {ContentFR = "Déplier"},
         UI_AsyncCombat_FilterRooms = {
           ContentFR = "Filtrer les scènes"
         },
@@ -59899,7 +59923,15 @@ Allez voir ce qui se passe.]]
         },
         UI_AutoChess_ExtraBuffDesc_38 = {
           ContentFR = "<Title>Effet du trait :</> Augmente légèrement l’ATQ de toutes vos méchapoupées."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_AutoChess_ExtraBuffDesc_39",
+    MaxKey = "UI_BTN_REJECT",
+    Loader = function()
+      return {
         UI_AutoChess_ExtraBuffDesc_39 = {
           ContentFR = "<Title>Effet du trait :</> Augmente modérément l’ATQ de vos méchapoupées de type Souillé."
         },
@@ -59923,15 +59955,7 @@ Allez voir ce qui se passe.]]
         },
         UI_AutoChess_ExtraBuffDesc_45 = {
           ContentFR = "<Title>Effet du trait :</> Augmente modérément les PV des méchapoupées ennemies."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AutoChess_ExtraBuffDesc_46",
-    MaxKey = "UI_Background_Des_1",
-    Loader = function()
-      return {
+        },
         UI_AutoChess_ExtraBuffDesc_46 = {
           ContentFR = "<Title>Effet du trait :</> Augmente modérément la DÉF des méchapoupées ennemies."
         },
@@ -60461,7 +60485,15 @@ Allez voir ce qui se passe.]]
         UI_BTN_LONGPRESS_CONFIRM = {
           ContentFR = "Maintenir pour confirmer"
         },
-        UI_BTN_REJECT = {ContentFR = "Refuser"},
+        UI_BTN_REJECT = {ContentFR = "Refuser"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_BTN_Start_RecordVedio",
+    MaxKey = "UI_BattleRoom_Count",
+    Loader = function()
+      return {
         UI_BTN_Start_RecordVedio = {
           ContentFR = "Commencer l’enregistrement"
         },
@@ -60481,15 +60513,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Background_Des_1 = {
           ContentFR = "Permet de modifier l’arrière-plan du menu et de certaines interfaces."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Background_InUse",
-    MaxKey = "UI_BookArchive_MainProgress",
-    Loader = function()
-      return {
+        },
         UI_Background_InUse = {
           ContentFR = "En cours d’utilisation"
         },
@@ -60827,6 +60851,10 @@ Allez voir ce qui se passe.]]
         UI_Banner_Tab_Sale161 = {
           ContentFR = "Offre limitée : –74 %"
         },
+        UI_Banner_Tab_Sale171 = {
+          ContentFR = "Offre limitée : –88 %"
+        },
+        UI_Banner_Tab_Sale172 = {ContentFR = "–80 %"},
         UI_Banner_Tab_SaleForNew = {
           ContentFR = "Bonus 2930 %"
         },
@@ -60979,7 +61007,15 @@ Allez voir ce qui se passe.]]
         },
         UI_BattleRoom_Count = {
           ContentFR = "Umbrés dissipés :{空格}"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_BattleWheel_CharHasEquiped",
+    MaxKey = "UI_CHAR_DATA_TEXT_18010101",
+    Loader = function()
+      return {
         UI_BattleWheel_CharHasEquiped = {
           ContentFR = "Utilisée par : %s"
         },
@@ -61007,15 +61043,7 @@ Allez voir ce qui se passe.]]
         },
         UI_BookArchive_MainProgress = {
           ContentFR = "Lectures obtenues :"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_BookArchive_Read",
-    MaxKey = "UI_CHAR_DATA_TEXT_18010301",
-    Loader = function()
-      return {
+        },
         UI_BookArchive_Read = {ContentFR = "Lire"},
         UI_BookArchive_SeriesLockedEntrance = {
           ContentFR = "Série non obtenue"
@@ -61561,7 +61589,15 @@ Allez voir ce qui se passe.]]
         },
         UI_CHAR_DATA_TEXT_18010101 = {
           ContentFR = "<I>Extrait de Chant du Rossignol Blanc</>, page 2 :\n\nQuand elle était petite, le petit rossignol vivait dans un nid bien chaud, avec papa et maman rossignol. Papa rossignol avait de grandes ailes pour la protéger du vent et de la pluie. Maman rossignol chantait des berceuses très douces, qui faisaient fuir les cauchemars. Grâce à eux, le petit rossignol grandissait de jour en jour. Son duvet tombait, et de jolies plumes toutes blanches poussaient à la place. Elle avait hâte de pouvoir voler avec ses parents, dans le ciel tout bleu, quand ses ailes seraient prêtes.\n\n« Les jours passés avec papa et maman étaient les plus heureux de toute la vie du petit rossignol. »"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_18010102",
+    MaxKey = "UI_CHAR_DATA_TEXT_33010101",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_18010102 = {
           ContentFR = "<I>Extrait de Chant du Rossignol Blanc</>, page 6 :\n\n... Un jour, sans prévenir, des étrangers appelés « les chasseurs » firent irruption dans la forêt. Ils détruisirent le nid douillet de la famille rossignol et capturèrent le père, aux plumes épaisses et chaleureuses.\nLa mère, effrayée, s’enfuit avec son petit, dont les ailes n’étaient pas encore formées, et chercha refuge dans les terres des bêtes. Mais là-bas, nul ne voulait d’elles. Le petit rossignol vécut dans la peur, chaque jour. Il ne trouvait un peu de paix que blotti sous l’aile de sa mère, seul souvenir tiède de l’ancien foyer.\n\n« Comme dans tous les contes tristes... Les plus belles choses qu’on voit au début... sont toujours celles qu’on détruit à la fin. »"
         },
@@ -61591,15 +61627,7 @@ Allez voir ce qui se passe.]]
         },
         UI_CHAR_DATA_TEXT_18010301 = {
           ContentFR = "Quand elle est malade ou à peine éveillée, Fina appelle parfois les gens autour d’elle « maman », sans s’en rendre compte.\nLa première fois, tu as été un peu {性别:pris|prise} de court. C’était étrange, presque déplacé. Mais en la voyant si paisible dans son sommeil, le front légèrement froncé comme si un cauchemar la guettait... tu n’as rien dit. Tu t’es {性别:contenté|contentée} d’acquiescer."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_18010302",
-    MaxKey = "UI_CHAR_DATA_TEXT_33010302",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_18010302 = {
           ContentFR = "Fina est née dans un foyer mixte : un père Charon, une mère Sola, une union presque impensable en Hyperborea.\nEn réalité, ses deux parents étaient des fidèles clandestins des Neuf Dieux d’Élysium. Selon leur foi, Charons et Solariens ne différaient que par l’apparence et les dons physiques. Mais cette croyance était strictement proscrite en Hyperborea.\nLe père de Fina fut arrêté puis exécuté pour hérésie. Jusqu’au bout, il affirma que les écrits interdits retrouvés chez eux lui appartenaient à lui seul, espérant ainsi protéger sa femme et sa fille."
         },
@@ -62169,7 +62197,15 @@ Allez voir ce qui se passe.]]
         },
         UI_CHAR_DATA_TEXT_33010101 = {
           ContentFR = "Tu l’as rencontrée pour la première fois dans les Asphodèles. Face au calme de l’aubergiste, la jeune fille semblait pressée, décoiffée... visiblement en quête d’une aide urgente.\nPeut-être venait-elle de perdre la recette du jour, se condamnant à passer la nuit le ventre vide, peut-être sortait-elle d’une dispute stérile et cherchait désespérément quelqu’un pour prendre sa défense, ou peut-être, comme toi, n’était-elle qu’une étrangère égarée, sans savoir quelle route emprunter.\nCe que tu ignorais alors, c’est que cette inconnue avait bel et bien perdu une somme importante, qu’elle était réellement en difficulté, et qu’elle était, tout comme toi, une étrangère ici. Mais ses pas ne couraient pas pour elle-même : ils couraient pour une poignée de parfaits inconnus, dont la vie dépendait de son aide."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_33010102",
+    MaxKey = "UI_CHAR_DATA_TEXT_54010405",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_33010102 = {
           ContentFR = "Il y a mille façons de découvrir une cité... et celle que t’a apprise Margie porte sa marque bien particulière.\nUne ordonnance, une boîte d’étoiles en papier, une clé : trois objets sans lien apparent, trois énigmes pleines de secrets. Comme {性别:un|une} détective, tu as suivi la piste, écouté les histoires qu’elle menait à révéler, chacune teintée d’amour, de regret, de rancune ou d’espoir.\nEt lorsque tu es revenu vers Margie avec les réponses, elle t’a accueilli à nouveau à Givrelac... mais cette fois, la cité n’était plus pour toi qu’un dessin pâle sur une carte. Elle s’était emplie de couleurs, de voix et d’odeurs, et tu avais désormais ta propre vision de cette ville."
         },
@@ -62199,15 +62235,7 @@ Allez voir ce qui se passe.]]
         },
         UI_CHAR_DATA_TEXT_33010302 = {
           ContentFR = "Peut-être parce qu’elle passe ses journées à fouiller des poubelles, Margie fait particulièrement attention à son hygiène.\nSi quelqu’un s’avise de pincer le nez ou de lui agiter la main devant le visage comme pour chasser une odeur, elle bondit comme un chat effarouché et disparaît dans un coin à l’abri des regards. Les jours suivants, cette personne n’aura aucune chance de la croiser, tout au plus devinera-t-elle sa présence à un parfum un peu plus prononcé que d’ordinaire.\nSi tu tiens à ne pas briser le cœur d’une fille de son âge... évite ce genre de plaisanterie."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_33010303",
-    MaxKey = "UI_CHAR_DATA_UNLOCK_task05",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_33010303 = {
           ContentFR = "Margie adore tirer la queue des petits animaux. Elle a même essayé avec certains Souillés, ces créatures répugnantes, ce qui lui a valu un rare sermon du vieux Martin.\nVexée, Margie a juré de ne jamais lui pardonner ce « manque total de respect, de compréhension et d’acceptation de ses goûts personnels »... jusqu’à ce qu’il en ait une, comme les petits animaux.\nLe conflit a pris fin quand Martin, dans une mise en scène un peu folle, s’est mis à sauter sur un balai, affirmant qu’il avait fait pousser une queue magique en forme de sapin. Margie, ne pouvant retenir son rire, a alors prononcé un discours passionné intitulé<I> Les plus mignonnes sont les plus touffues</>, ce qui a brisé leur silence d’un mois et mis fin à leur communication faite uniquement de gestes."
         },
@@ -62777,7 +62805,15 @@ Allez voir ce qui se passe.]]
         },
         UI_CHAR_DATA_TEXT_54010405 = {
           ContentFR = "Daphne fait un rêve interminable.\n\nDans ce rêve, elle marche dans les rues de Dismania. L’air y est toujours humide, lourd, collant. Les gouttes glissent des lèvres des gargouilles et dessinent sur les murs des traînées brun sombre.\n\nDe chaque côté de la rue se tiennent des silhouettes familières, toutes sous un parapluie à long manche.\n\n— « L’alchimie est une science destinée à apporter le bonheur aux gens », dit une vieille femme.\n— « Daphne, tu seras ma fierté », dit une femme aux yeux brillants.\n— « Moi, je veux seulement que tu sois heureuse », dit un homme au sourire doux.\n\nElle veut s’approcher, vérifier si ce sont bien les visages de sa mémoire. Mais leurs traits se brouillent, comme détrempés par la pluie, noyés dans une brume humide.\n\n— « Ceux que la douleur ronge... iront-ils un peu mieux grâce à nous ? » demande une jeune chercheuse.\n— « Si je connais assez de mots, si j’apprends l’alchimie... est-ce que je pourrai éviter de finir comme mon frère ? » demande une petite fille en uniforme d’hôpital.\n— « Dismania est trop loin... il pleut trop fort, la route est de boue... est-ce qu’on pourra rentrer ? » demande un soldat agonisant.\n\nDaphne entrouvre les lèvres, veut répondre oui — simplement oui. Mais sa voix se casse. Comme si l’on avait arraché ses cordes vocales. Aucun son ne sort.\n\n— « Tes idéaux existent-ils encore ? »\nLe regard de la Commandante de Légion tombe d’en haut.\n\nCe regard lui brûle les yeux. Daphne voudrait fuir, mais lorsqu’elle se retourne, une tranchée béante s’ouvre sous ses pieds, profonde, sans fond.\n\n— « Continuez à vous battre. Continuez à vivre. »\nUn camarade aux cheveux d’argent et aux yeux rouges pose sa main sur son épaule.\n— « Souvenez-vous de ce que vous avez dit. »\n\nOui... vivre ensemble. C’était cela, autrefois, son unique désir.\n\n— « Daphne, te souviens-tu de ton idéal d’enfant ? »\nUne petite fille sort du coin de la rue. Sa voix est jeune, et ses sourcils, ses yeux... ressemblent tant aux siens. Oui : c’est elle, autrefois.\n\n— « Par l’alchimie, apporter le bonheur aux gens », répond Daphne. « Je ne l’ai jamais oublié. »\n— « Mais chaque idéal a un prix », dit une autre voix derrière elle.\nC’est encore sa propre voix, mais froide, d’une froideur qu’elle n’a jamais entendue.\n— « Pour obtenir quelque chose, il faut renoncer à quelque chose. Daphne... l’idéal est aussi un privilège de ceux qui sont forts. »\n— « Alors... que dois-je faire ? » demande Daphne.\n— « Jette tes principes et ta fausse bonté. Va parmi eux. Deviens l’une des leurs », dit la voix froide.\n— « Non ! Comment ne pas devenir une bête, quand on se lie d’amitié avec les bêtes ? » s’écrie la voix d’enfant.\n— « Il faut être assez haut placée pour avoir le droit de tout changer », insiste la voix froide.\n— « Si tu fais ce pas... tu ne pourras plus jamais revenir en arrière ! » réplique la voix d’enfant.\n\nElles se disputent sans fin. Daphne sent sa tête prête à éclater. Elle a l’impression qu’on va la déchirer en deux. Elle s’accroupit, serre son crâne entre ses mains. Peu à peu, les voix s’éteignent — jusqu’à ce que la dernière trace de lumière disparaisse du ciel de Dismania.\n\nDaphne Theodore se réveille dans sa chambre. La pluie s’est arrêtée. Le soleil accroche les feuilles du lierre, au dehors.\n\nOn frappe à la porte.\n\n— « Mademoiselle, quelqu’un demande à vous voir », dit la domestique. « Cela vient de la Légion. Et... il semblerait... qu’ils ne soient pas mal intentionnés. »\n\nAlors Daphne passe un manteau et sort dans le jardin. Un homme en uniforme d’officier attend, immobile. Elle le reconnaît : c’est l’adjudant de Sibylle Mason.\n\n— « Mademoiselle Theodore, la Commandante Sibylle m’envoie. Elle vous invite à prendre part à un projet... si cela vous intéresse. »\nIl marque une courte pause.\n— « Le projet s’appelle... Nouvel Héritier. »"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_UNLOCK_20",
+    MaxKey = "UI_CMNpc_Chezhan_Name_BuanBoy",
+    Loader = function()
+      return {
         UI_CHAR_DATA_UNLOCK_20 = {
           ContentFR = "Atteindre le Niv. 20 du personnage"
         },
@@ -62807,15 +62843,7 @@ Allez voir ce qui se passe.]]
         },
         UI_CHAR_DATA_UNLOCK_task05 = {
           ContentFR = "Atteindre le Niv. 40 du personnage\nTerminer la quête : « Requiem pour les sans-nom »"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_UNLOCK_task06",
-    MaxKey = "UI_CMNpc_Chezhan_Name_Geluoruiya",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_UNLOCK_task06 = {
           ContentFR = "Atteindre le Niv. 50 du personnage\nTerminer la quête : « Requiem pour les sans-nom »"
         },
@@ -63263,7 +63291,15 @@ Allez voir ce qui se passe.]]
         },
         UI_CMNpc_Chezhan_Name_BuanBoy = {
           ContentFR = "Garçon anxieux"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Chezhan_Name_BuganWorker",
+    MaxKey = "UI_CMNpc_Name_Laina",
+    Loader = function()
+      return {
         UI_CMNpc_Chezhan_Name_BuganWorker = {
           ContentFR = "Ouvrier tenace"
         },
@@ -63285,15 +63321,7 @@ Allez voir ce qui se passe.]]
         UI_CMNpc_Chezhan_Name_GegeburuBeggar = {
           ContentFR = "Mendiant incongru"
         },
-        UI_CMNpc_Chezhan_Name_Geluoruiya = {ContentFR = "Gloria"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Chezhan_Name_Guide",
-    MaxKey = "UI_CMNpc_Name_Lingling",
-    Loader = function()
-      return {
+        UI_CMNpc_Chezhan_Name_Geluoruiya = {ContentFR = "Gloria"},
         UI_CMNpc_Chezhan_Name_Guide = {
           ContentFR = "Guide « McRae le Joyeux »"
         },
@@ -63667,7 +63695,15 @@ Allez voir ce qui se passe.]]
         UI_CMNpc_Name_Kongkongjiaojiao = {
           ContentFR = "Luno, l’étourdie"
         },
-        UI_CMNpc_Name_Laina = {ContentFR = "Lina"},
+        UI_CMNpc_Name_Laina = {ContentFR = "Lina"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Name_Lali",
+    MaxKey = "UI_COMMONPOP_TEXT_100033_2",
+    Loader = function()
+      return {
         UI_CMNpc_Name_Lali = {ContentFR = "Larry"},
         UI_CMNpc_Name_Langshu = {
           ContentFR = "Monsieur Loup"
@@ -63681,15 +63717,7 @@ Allez voir ce qui se passe.]]
         UI_CMNpc_Name_Liande = {ContentFR = "Li An’de"},
         UI_CMNpc_Name_Liao = {ContentFR = "Riola"},
         UI_CMNpc_Name_Lier = {ContentFR = "Riel"},
-        UI_CMNpc_Name_Lingling = {ContentFR = "Lingling"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_Lio",
-    MaxKey = "UI_COMMONPOP_TEXT_100051",
-    Loader = function()
-      return {
+        UI_CMNpc_Name_Lingling = {ContentFR = "Lingling"},
         UI_CMNpc_Name_Lio = {ContentFR = "Leo"},
         UI_CMNpc_Name_LuKas = {ContentFR = "Lucas"},
         UI_CMNpc_Name_Luna = {ContentFR = "Luna"},
@@ -64095,7 +64123,15 @@ Allez voir ce qui se passe.]]
         },
         UI_COMMONPOP_TEXT_100033_2 = {
           ContentFR = "Entrez la touche souhaitée"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_COMMONPOP_TEXT_100034",
+    MaxKey = "UI_CTL_EditChess",
+    Loader = function()
+      return {
         UI_COMMONPOP_TEXT_100034 = {
           ContentFR = "Confirmez la modification de la touche"
         },
@@ -64125,15 +64161,7 @@ Allez voir ce qui se passe.]]
         },
         UI_COMMONPOP_TEXT_100051 = {
           ContentFR = "Votre compte (UID : %d) a été suspendu jusqu’au %s pour comportement inapproprié.\nEn cas de question, veuillez contacter le service client officiel."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_TEXT_100052",
-    MaxKey = "UI_CTL_Focus_ModList",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_TEXT_100052 = {
           ContentFR = "Votre compte (UID : %d) est suspendu pour %s jusqu’au %s. Pour toute question, veuillez contacter le service client officiel."
         },
@@ -64673,7 +64701,15 @@ Allez voir ce qui se passe.]]
         },
         UI_CTL_EditChess = {
           ContentFR = "Modifier le plateau"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CTL_Esc_Mod",
+    MaxKey = "UI_CharTrial_ClosePop",
+    Loader = function()
+      return {
         UI_CTL_Esc_Mod = {ContentFR = "Quitter"},
         UI_CTL_Expand = {ContentFR = "Déplier"},
         UI_CTL_ExpandList = {
@@ -64697,15 +64733,7 @@ Allez voir ce qui se passe.]]
         },
         UI_CTL_Focus_ModList = {
           ContentFR = "Voir la liste des Sceaux démoniaques"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CTL_Fold",
-    MaxKey = "UI_CharVoice_Normal",
-    Loader = function()
-      return {
+        },
         UI_CTL_Fold = {ContentFR = "Replier"},
         UI_CTL_Forging_Set = {
           ContentFR = "Définir comme objectif"
@@ -65159,7 +65187,15 @@ Allez voir ce qui se passe.]]
         UI_CharTrial_CharIntro = {
           ContentFR = "Présentation du personnage"
         },
-        UI_CharTrial_ClosePop = {ContentFR = "Fermer"},
+        UI_CharTrial_ClosePop = {ContentFR = "Fermer"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_CharTrial_FinishText",
+    MaxKey = "UI_Chat_JustNow",
+    Loader = function()
+      return {
         UI_CharTrial_FinishText = {
           ContentFR = "Défi d’essai du personnage terminé. Vous pouvez rejoindre le <H>Point d’évacuation</> pour terminer le niveau, ou rester pour poursuivre l’expérience."
         },
@@ -65185,15 +65221,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Vaincre tous les ennemis"
         },
         UI_CharVoice_Battle = {ContentFR = "Combat"},
-        UI_CharVoice_Normal = {ContentFR = "Discussion"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_CharVoice_Tab",
-    MaxKey = "UI_Chat_NotSaveEmpty",
-    Loader = function()
-      return {
+        UI_CharVoice_Normal = {ContentFR = "Discussion"},
         UI_CharVoice_Tab = {ContentFR = "Voix"},
         UI_Char_Accessory = {
           ContentFR = "Accessoires de personnage"
@@ -65579,7 +65607,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Chat_JustNow = {
           ContentFR = "À l’instant"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chat_LeagueEmpty",
+    MaxKey = "UI_CommonQuest_11100106",
+    Loader = function()
+      return {
         UI_Chat_LeagueEmpty = {
           ContentFR = "Aucun message"
         },
@@ -65609,15 +65645,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Chat_NotSaveEmpty = {
           ContentFR = "Impossible d’enregistrer un message vide"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Chat_PublicEmpty",
-    MaxKey = "UI_ConfirmDissolveGuild",
-    Loader = function()
-      return {
+        },
         UI_Chat_PublicEmpty = {
           ContentFR = "Aucun message"
         },
@@ -66157,7 +66185,15 @@ Allez voir ce qui se passe.]]
         },
         UI_CommonQuest_11100106 = {
           ContentFR = "Terminer <highlight>20</> défis de phase de groupes"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CommonQuest_11100107",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_132",
+    Loader = function()
+      return {
         UI_CommonQuest_11100107 = {
           ContentFR = "Terminer <highlight>1</> défi de classement suprême"
         },
@@ -66185,15 +66221,7 @@ Allez voir ce qui se passe.]]
         },
         UI_ConfirmDissolveGuild = {
           ContentFR = "Dissoudre la guilde actuelle ?"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ConfirmGuildCreation",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_141",
-    Loader = function()
-      return {
+        },
         UI_ConfirmGuildCreation = {
           ContentFR = "Confirmer la création de la guilde <H>%s</> ?"
         },
@@ -66705,7 +66733,15 @@ Allez voir ce qui se passe.]]
         },
         UI_DUNGEON_AUTOCHESS_132 = {
           ContentFR = "Partie sans fin 112"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_AUTOCHESS_133",
+    MaxKey = "UI_DUNGEON_DES_TRAINING_28",
+    Loader = function()
+      return {
         UI_DUNGEON_AUTOCHESS_133 = {
           ContentFR = "Partie sans fin 113"
         },
@@ -66735,15 +66771,7 @@ Allez voir ce qui se passe.]]
         },
         UI_DUNGEON_AUTOCHESS_141 = {
           ContentFR = "Partie sans fin 121"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_AUTOCHESS_142",
-    MaxKey = "UI_DUNGEON_DES_TRAINING_37",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_AUTOCHESS_142 = {
           ContentFR = "Partie sans fin 122"
         },
@@ -67299,7 +67327,15 @@ Allez voir ce qui se passe.]]
         UI_DUNGEON_DES_TRAINING_27 = {
           ContentFR = "Compétences"
         },
-        UI_DUNGEON_DES_TRAINING_28 = {ContentFR = "Quitter"},
+        UI_DUNGEON_DES_TRAINING_28 = {ContentFR = "Quitter"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_DES_TRAINING_29",
+    MaxKey = "UI_Disabled_Des_SwitchMaster",
+    Loader = function()
+      return {
         UI_DUNGEON_DES_TRAINING_29 = {ContentFR = "Activé"},
         UI_DUNGEON_DES_TRAINING_3 = {
           ContentFR = "Vaincre tous les ennemis"
@@ -67323,15 +67359,7 @@ Allez voir ce qui se passe.]]
         },
         UI_DUNGEON_DES_TRAINING_37 = {
           ContentFR = "Invincibilité activée"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_DES_TRAINING_38",
-    MaxKey = "UI_DispatchTag_Des_Battle",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_DES_TRAINING_38 = {
           ContentFR = "Invincibilité désactivée"
         },
@@ -67853,7 +67881,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Disabled_Des_SwitchMaster = {
           ContentFR = "Changement de protagoniste temporairement indisponible"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Disabled_Des_TeamHall",
+    MaxKey = "UI_Dye_Apply",
+    Loader = function()
+      return {
         UI_Disabled_Des_TeamHall = {
           ContentFR = "Le Salon d’équipe est temporairement indisponible"
         },
@@ -67879,15 +67915,7 @@ Allez voir ce qui se passe.]]
         UI_DispatchTag_Collect = {ContentFR = "Collecteur"},
         UI_DispatchTag_Des_Battle = {
           ContentFR = "Compétent en combat."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DispatchTag_Des_Benefit",
-    MaxKey = "UI_Dye_Input_Content",
-    Loader = function()
-      return {
+        },
         UI_DispatchTag_Des_Benefit = {
           ContentFR = "Privilégie le gain et l’efficacité des résultats."
         },
@@ -68379,7 +68407,15 @@ Allez voir ce qui se passe.]]
         UI_Dungeon_Type_List = {
           ContentFR = "Choix de l’attribut ennemi"
         },
-        UI_Dye_Apply = {ContentFR = "Appliquer"},
+        UI_Dye_Apply = {ContentFR = "Appliquer"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_Dye_Area",
+    MaxKey = "UI_Event_RaceLottery_ExpectedMaxReward",
+    Loader = function()
+      return {
         UI_Dye_Area = {
           ContentFR = "Zone sélectionnée"
         },
@@ -68407,15 +68443,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Dye_Input_Content = {
           ContentFR = "Saisissez le code de configuration"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Dye_Input_Invaluable",
-    MaxKey = "UI_Event_RaceLottery_InResultProgressDes_TobeReleased",
-    Loader = function()
-      return {
+        },
         UI_Dye_Input_Invaluable = {
           ContentFR = "Échec de l’importation. Veuillez saisir un code de configuration valide."
         },
@@ -68885,7 +68913,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Event_RaceLottery_ExpectedMaxReward = {
           ContentFR = "Récompense maximale possible"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Event_RaceLottery_ExpectedReward",
+    MaxKey = "UI_ExtreactionTreasure_Type_5",
+    Loader = function()
+      return {
         UI_Event_RaceLottery_ExpectedReward = {
           ContentFR = "Récompense estimée"
         },
@@ -68915,15 +68951,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Event_RaceLottery_InResultProgressDes_TobeReleased = {
           ContentFR = "Rendez-vous sur le circuit pour consulter les résultats et récupérer votre récompense"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Event_RaceLottery_LackofCoin",
-    MaxKey = "UI_FNNpc_Name_AnimalNvzhu",
-    Loader = function()
-      return {
+        },
         UI_Event_RaceLottery_LackofCoin = {
           ContentFR = "Insignes de Géniemon insuffisants"
         },
@@ -69433,7 +69461,15 @@ Allez voir ce qui se passe.]]
         UI_ExtreactionTreasure_Type_4 = {
           ContentFR = "Objet de collection"
         },
-        UI_ExtreactionTreasure_Type_5 = {ContentFR = "Clé Jishu"},
+        UI_ExtreactionTreasure_Type_5 = {ContentFR = "Clé Jishu"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_Extreaction_StartRain",
+    MaxKey = "UI_GameEvent_BagGame_LockDes_Time",
+    Loader = function()
+      return {
         UI_Extreaction_StartRain = {
           ContentFR = "La pluie commence à tomber"
         },
@@ -69457,15 +69493,7 @@ Allez voir ce qui se passe.]]
         UI_FNNpc_Name_AnimalJerry = {ContentFR = "Rat"},
         UI_FNNpc_Name_AnimalNvzhu = {
           ContentFR = "{性别:Monsieur|Mademoiselle} Licorne"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_FNNpc_Name_AnimalSaiqi",
-    MaxKey = "UI_GameEvent_BagGame_Toast_SettlementFailed",
-    Loader = function()
-      return {
+        },
         UI_FNNpc_Name_AnimalSaiqi = {ContentFR = "Papillon"},
         UI_FNNpc_Name_AnimalTom = {
           ContentFR = "Chat errant"
@@ -69945,7 +69973,15 @@ Allez voir ce qui se passe.]]
         },
         UI_GameEvent_BagGame_LockDes_Time = {
           ContentFR = "Débloqué dans %s"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_GameEvent_BagGame_PutBackItem",
+    MaxKey = "UI_Hammer_InfoClick",
+    Loader = function()
+      return {
         UI_GameEvent_BagGame_PutBackItem = {
           ContentFR = "Remettre l’objet en place"
         },
@@ -69975,15 +70011,7 @@ Allez voir ce qui se passe.]]
         },
         UI_GameEvent_BagGame_Toast_SettlementFailed = {
           ContentFR = "Hors période d’événement"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_GameEvent_BagGame_Toast_StackFull",
-    MaxKey = "UI_HardBossEvent_Environment_Title",
-    Loader = function()
-      return {
+        },
         UI_GameEvent_BagGame_Toast_StackFull = {
           ContentFR = "Limite d’empilement atteinte"
         },
@@ -70465,7 +70493,15 @@ Allez voir ce qui se passe.]]
         UI_Hammer_Count = {ContentFR = "Succès"},
         UI_Hammer_InfoClick = {
           ContentFR = "Appuyez sur la touche correspondante au bon moment pendant la charge"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Hammer_InfoClickPhone",
+    MaxKey = "UI_HyperWeapon_ClaimForgeLevelReward",
+    Loader = function()
+      return {
         UI_Hammer_InfoClickPhone = {
           ContentFR = "Appuyez sur le bouton au bon moment pendant la charge"
         },
@@ -70487,15 +70523,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Cauchemar éternel"
         },
         UI_HardBossEvent_ChallengeType = {ContentFR = "Extrême"},
-        UI_HardBossEvent_Environment_Title = {ContentFR = "Cauchemar"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_HardBossEvent_Haier",
-    MaxKey = "UI_HyperWeapon_ForgeLevelRewardLocked",
-    Loader = function()
-      return {
+        UI_HardBossEvent_Environment_Title = {ContentFR = "Cauchemar"},
         UI_HardBossEvent_Haier = {
           ContentFR = "Cauchemar éternel : Geôlière de la fournaise"
         },
@@ -71029,7 +71057,15 @@ Allez voir ce qui se passe.]]
         },
         UI_HyperWeapon_ClaimForgeLevelReward = {
           ContentFR = "Réclamer et monter de niveau"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_HyperWeapon_CurrentForgeLevel",
+    MaxKey = "UI_LIMITEXPLORE_ONGOING",
+    Loader = function()
+      return {
         UI_HyperWeapon_CurrentForgeLevel = {
           ContentFR = "Fourneau de calamité"
         },
@@ -71057,15 +71093,7 @@ Allez voir ce qui se passe.]]
         },
         UI_HyperWeapon_ForgeLevelRewardLocked = {
           ContentFR = "Terminez les missions pour obtenir les récompenses et monter de niveau"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_HyperWeapon_ForgeLevelTask",
-    MaxKey = "UI_LOGIN_ENTERGAME",
-    Loader = function()
-      return {
+        },
         UI_HyperWeapon_ForgeLevelTask = {
           ContentFR = "Missions du Fourneau"
         },
@@ -71537,7 +71565,15 @@ Allez voir ce qui se passe.]]
         },
         UI_LIMITEXPLORE_ONGOING = {
           ContentFR = "Défi à durée limitée en cours"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_LIMITEXPLORE_START",
+    MaxKey = "UI_Locked_Des_PlayTaskRoot",
+    Loader = function()
+      return {
         UI_LIMITEXPLORE_START = {
           ContentFR = "Défi commencé. Suivez les instructions pour l’accomplir !"
         },
@@ -71565,15 +71601,7 @@ Allez voir ce qui se passe.]]
         UI_LOGIN_ENSURE = {ContentFR = "Confirmer"},
         UI_LOGIN_ENTERGAME = {
           ContentFR = "Entrer dans le jeu"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_LOGIN_HoldPress",
-    MaxKey = "UI_Login_Fail",
-    Loader = function()
-      return {
+        },
         UI_LOGIN_HoldPress = {
           ContentFR = "(Maintenir) Quitter"
         },
@@ -71928,6 +71956,24 @@ Allez voir ce qui se passe.]]
         UI_Locked_Des_4030054 = {
           ContentFR = "Débloqué avec une posture Attrape-rêves lunaire"
         },
+        UI_Locked_Des_4040001 = {
+          ContentFR = "Classement suprême : étage 1"
+        },
+        UI_Locked_Des_4040002 = {
+          ContentFR = "Classement suprême : étage 5"
+        },
+        UI_Locked_Des_4040003 = {
+          ContentFR = "Classement suprême : étage 10"
+        },
+        UI_Locked_Des_4040004 = {
+          ContentFR = "Classement suprême : étage 15"
+        },
+        UI_Locked_Des_4040005 = {
+          ContentFR = "Classement suprême : étage 30"
+        },
+        UI_Locked_Des_4040006 = {
+          ContentFR = "Classement suprême : étage 60"
+        },
         UI_Locked_Des_451001 = {
           ContentFR = "Rejoindre une guilde"
         },
@@ -72083,7 +72129,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Locked_Des_PlayTaskRoot = {
           ContentFR = "Plan du jour non débloqué"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Locked_Des_Polarity",
+    MaxKey = "UI_MECHANISM_118024",
+    Loader = function()
+      return {
         UI_Locked_Des_Polarity = {
           ContentFR = "Modification d’affinité pas encore disponible"
         },
@@ -72131,15 +72185,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Login_Fail = {
           ContentFR = "Échec de la connexion"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Login_Shader",
-    MaxKey = "UI_MECHANISM_400",
-    Loader = function()
-      return {
+        },
         UI_Login_Shader = {
           ContentFR = "Compilation des shaders %s %%"
         },
@@ -72641,7 +72687,15 @@ Allez voir ce qui se passe.]]
         },
         UI_MECHANISM_118024 = {
           ContentFR = "Panier d’osier aux trésors"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_118025",
+    MaxKey = "UI_ModGuideBook_Task_Title_Collect_02",
+    Loader = function()
+      return {
         UI_MECHANISM_118025 = {
           ContentFR = "Chambre Jishu n° 2"
         },
@@ -72683,15 +72737,7 @@ Allez voir ce qui se passe.]]
         UI_MECHANISM_39046 = {
           ContentFR = "Monter à bord"
         },
-        UI_MECHANISM_400 = {ContentFR = "Lancer"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_MECHANISM_401",
-    MaxKey = "UI_ModGuideBook_Task_Title_Collect_18",
-    Loader = function()
-      return {
+        UI_MECHANISM_400 = {ContentFR = "Lancer"},
         UI_MECHANISM_401 = {ContentFR = "Ramasser"},
         UI_MECHANISM_926 = {ContentFR = "Lire"},
         UI_MECHANISM_928 = {ContentFR = "Paralysé"},
@@ -73201,7 +73247,15 @@ Allez voir ce qui se passe.]]
         },
         UI_ModGuideBook_Task_Title_Collect_02 = {
           ContentFR = "Collection de Sceaux démoniaques II"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ModGuideBook_Task_Title_Collect_03",
+    MaxKey = "UI_NPC_Name_hanzhong_Sce",
+    Loader = function()
+      return {
         UI_ModGuideBook_Task_Title_Collect_03 = {
           ContentFR = "Collection de Sceaux démoniaques III"
         },
@@ -73249,15 +73303,7 @@ Allez voir ce qui se passe.]]
         },
         UI_ModGuideBook_Task_Title_Collect_18 = {
           ContentFR = "Collection de Sceaux démoniaques d’arme de mêlée II"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_ModGuideBook_Task_Title_Collect_19",
-    MaxKey = "UI_NPC_Name_jiumo_Sce",
-    Loader = function()
-      return {
+        },
         UI_ModGuideBook_Task_Title_Collect_19 = {
           ContentFR = "Collection de Sceaux démoniaques d’arme de mêlée III"
         },
@@ -73657,7 +73703,15 @@ Allez voir ce qui se passe.]]
         UI_NPC_Name_hananshi_Sce = {ContentFR = "Han Anshi"},
         UI_NPC_Name_hanlaodie_Sce = {ContentFR = "Vieux Han"},
         UI_NPC_Name_hanling_Sce = {ContentFR = "Han Ling"},
-        UI_NPC_Name_hanzhong_Sce = {ContentFR = "Han Zhong"},
+        UI_NPC_Name_hanzhong_Sce = {ContentFR = "Han Zhong"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_NPC_Name_hedaowei_Sce",
+    MaxKey = "UI_Name_Memory_1002_1002011",
+    Loader = function()
+      return {
         UI_NPC_Name_hedaowei_Sce = {ContentFR = "He Daowei"},
         UI_NPC_Name_heshui_Sce = {ContentFR = "He Sui"},
         UI_NPC_Name_heziyu_Sce = {ContentFR = "He Ziyu"},
@@ -73685,15 +73739,7 @@ Allez voir ce qui se passe.]]
         UI_NPC_Name_jinpopo_Sce = {
           ContentFR = "Grand-mère Jin"
         },
-        UI_NPC_Name_jiumo_Sce = {ContentFR = "Jiu Mo"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_NPC_Name_junke_Sce",
-    MaxKey = "UI_Name_Memory_1003_1003008",
-    Loader = function()
-      return {
+        UI_NPC_Name_jiumo_Sce = {ContentFR = "Jiu Mo"},
         UI_NPC_Name_junke_Sce = {ContentFR = "Juan Ke"},
         UI_NPC_Name_keer_Sce = {ContentFR = "Ke’er"},
         UI_NPC_Name_lanting_Sce = {ContentFR = "Lan Ting"},
@@ -74015,7 +74061,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Name_Memory_1002_1002011 = {
           ContentFR = "Brise caresseuse"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Memory_1002_1002012",
+    MaxKey = "UI_Name_Walnut_151723",
+    Loader = function()
+      return {
         UI_Name_Memory_1002_1002012 = {
           ContentFR = "Porte close"
         },
@@ -74053,15 +74107,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Name_Memory_1003_1003008 = {
           ContentFR = "Quel chemin prendre ?"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Memory_1003_1003009",
-    MaxKey = "UI_Name_Walnut_151743",
-    Loader = function()
-      return {
+        },
         UI_Name_Memory_1003_1003009 = {
           ContentFR = "Le phare veille"
         },
@@ -74589,7 +74635,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Name_Walnut_151723 = {
           ContentFR = "Mandat scellé : Ardeur du Pactisant · Inspiration"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Walnut_151724",
+    MaxKey = "UI_Npc_Name_1.5_baozaosound",
+    Loader = function()
+      return {
         UI_Name_Walnut_151724 = {
           ContentFR = "Mandat scellé : Ailes du Pactisant · Décision"
         },
@@ -74637,15 +74691,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Name_Walnut_151743 = {
           ContentFR = "Mandat scellé : Ardeur du Pactisant · Décision"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_151744",
-    MaxKey = "UI_Npc_Name_1.5_paizhuonan",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_151744 = {
           ContentFR = "Mandat scellé : Dévotion du Pactisant · Éternité"
         },
@@ -75177,7 +75223,15 @@ Allez voir ce qui se passe.]]
         ["UI_Npc_Name_1.5_aolafu"] = {ContentFR = "Olaf"},
         ["UI_Npc_Name_1.5_baozaosound"] = {
           ContentFR = "Voix colérique"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_1.5_beiweisound",
+    MaxKey = "UI_Npc_Name_790074",
+    Loader = function()
+      return {
         ["UI_Npc_Name_1.5_beiweisound"] = {
           ContentFR = "Voix timide"
         },
@@ -75215,15 +75269,7 @@ Allez voir ce qui se passe.]]
         },
         ["UI_Npc_Name_1.5_paizhuonan"] = {
           ContentFR = "Homme à la table"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_1.5_paizhuonv",
-    MaxKey = "UI_Npc_Name_790097",
-    Loader = function()
-      return {
+        },
         ["UI_Npc_Name_1.5_paizhuonv"] = {
           ContentFR = "Femme à la table"
         },
@@ -75496,7 +75542,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Habitant de Brumelac"
         },
         UI_Npc_Name_260004 = {
-          ContentFR = "Vieil homme abattu"
+          ContentFR = "Vieille femme abattue"
         },
         UI_Npc_Name_260005 = {
           ContentFR = "Mamie Rhodes"
@@ -75533,7 +75579,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Marchand enthousiaste"
         },
         UI_Npc_Name_260019 = {
-          ContentFR = "Citadin enjoué"
+          ContentFR = "Citadine enjouée"
         },
         UI_Npc_Name_260020 = {ContentFR = "Carson"},
         UI_Npc_Name_260021 = {
@@ -75546,11 +75592,11 @@ Allez voir ce qui se passe.]]
           ContentFR = "Garde affolé"
         },
         UI_Npc_Name_260024 = {
-          ContentFR = "Client serviable"
+          ContentFR = "Cliente serviable"
         },
         UI_Npc_Name_260025 = {ContentFR = "Freda"},
         UI_Npc_Name_260026 = {
-          ContentFR = "Employé du théâtre"
+          ContentFR = "Employée du théâtre"
         },
         UI_Npc_Name_260027 = {ContentFR = "Kori"},
         UI_Npc_Name_260028 = {ContentFR = "Susanna"},
@@ -75587,7 +75633,15 @@ Allez voir ce qui se passe.]]
         UI_Npc_Name_790073 = {ContentFR = "Buxia"},
         UI_Npc_Name_790074 = {
           ContentFR = "Yan Shanting"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_790075",
+    MaxKey = "UI_Npc_Name_Man_17",
+    Loader = function()
+      return {
         UI_Npc_Name_790075 = {ContentFR = "Vagabond"},
         UI_Npc_Name_790076 = {ContentFR = "Zhiliu"},
         UI_Npc_Name_790077 = {ContentFR = "Wangchun"},
@@ -75613,15 +75667,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Femme anxieuse"
         },
         UI_Npc_Name_790096 = {ContentFR = "Heve"},
-        UI_Npc_Name_790097 = {ContentFR = "Barton"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Ada",
-    MaxKey = "UI_Npc_Name_Nanzhu",
-    Loader = function()
-      return {
+        UI_Npc_Name_790097 = {ContentFR = "Barton"},
         UI_Npc_Name_Ada = {
           ContentFR = "« La Papesse » Ada"
         },
@@ -76049,7 +76095,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Npc_Name_Man_17 = {
           ContentFR = "Jeune homme désinvolte"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Man_2",
+    MaxKey = "UI_Number_ClearText",
+    Loader = function()
+      return {
         UI_Npc_Name_Man_2 = {
           ContentFR = "Soldat lourdement armé"
         },
@@ -76089,15 +76143,7 @@ Allez voir ce qui se passe.]]
         UI_Npc_Name_MrQiu = {
           ContentFR = "Maître Qiu"
         },
-        UI_Npc_Name_Nanzhu = {ContentFR = "{nickname}"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_NervouseMaer",
-    MaxKey = "UI_OPTION_AutoBulletJump",
-    Loader = function()
-      return {
+        UI_Npc_Name_Nanzhu = {ContentFR = "{nickname}"},
         UI_Npc_Name_NervouseMaer = {
           ContentFR = "Récupératrice impatiente"
         },
@@ -76535,7 +76581,15 @@ Allez voir ce qui se passe.]]
         UI_Npc_WhaleSoldier = {
           ContentFR = "Soldat des Narvals"
         },
-        UI_Number_ClearText = {ContentFR = "Effacer"},
+        UI_Number_ClearText = {ContentFR = "Effacer"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_Number_ConfirmText",
+    MaxKey = "UI_OPTION_ThirdPartySDK",
+    Loader = function()
+      return {
         UI_Number_ConfirmText = {ContentFR = "Confirmer"},
         UI_Number_MaxNumber = {
           ContentFR = "Limite de saisie atteinte"
@@ -76577,15 +76631,7 @@ Allez voir ce qui se passe.]]
         },
         UI_OPTION_AutoBulletJump = {
           ContentFR = "Maintenir pour déclencher automatiquement le Bond Cyclonique"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_AutoFashion",
-    MaxKey = "UI_OPTION_XeSS",
-    Loader = function()
-      return {
+        },
         UI_OPTION_AutoFashion = {
           ContentFR = "Utiliser l’apparence personnalisée du protagoniste dans les cinématiques"
         },
@@ -77073,7 +77119,15 @@ Allez voir ce qui se passe.]]
         },
         UI_OPTION_ThirdPartySDK = {
           ContentFR = "Accord de partage avec les services tiers (SDK)"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_ThisKeyIsUsed",
+    MaxKey = "UI_PersonalPage_Adjust",
+    Loader = function()
+      return {
         UI_OPTION_ThisKeyIsUsed = {
           ContentFR = "Déjà utilisé par la commande non modifiable <Highlight>%s</>"
         },
@@ -77117,15 +77171,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Qualité de l’eau"
         },
         UI_OPTION_Weak = {ContentFR = "Faible"},
-        UI_OPTION_XeSS = {ContentFR = "XeSS"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_bEnableStrafeCircle",
-    MaxKey = "UI_PersonalPage_ItemTips",
-    Loader = function()
-      return {
+        UI_OPTION_XeSS = {ContentFR = "XeSS"},
         UI_OPTION_bEnableStrafeCircle = {
           ContentFR = "Recentrage dynamique de la caméra"
         },
@@ -77525,6 +77571,9 @@ Allez voir ce qui se passe.]]
           ContentFR = "Ajouter un objet"
         },
         UI_PersonInfo_CustomItem = {ContentFR = "Objet"},
+        UI_PersonInfo_CustomItem_2 = {
+          ContentFR = "Sélectionner un objet"
+        },
         UI_PersonInfo_Detail_Char = {
           ContentFR = "Détails du personnage"
         },
@@ -77567,7 +77616,18 @@ Allez voir ce qui se passe.]]
         UI_PersonalPage_AddGeniemon = {
           ContentFR = "Ajouter un Géniemon"
         },
-        UI_PersonalPage_Adjust = {ContentFR = "Ajuster"},
+        UI_PersonalPage_AddGeniemon_2 = {
+          ContentFR = "Sélectionner un Géniemon"
+        },
+        UI_PersonalPage_Adjust = {ContentFR = "Ajuster"}
+      }
+    end
+  },
+  {
+    MinKey = "UI_PersonalPage_AdjustParameters",
+    MaxKey = "UI_PlayerHead_Name_10009",
+    Loader = function()
+      return {
         UI_PersonalPage_AdjustParameters = {
           ContentFR = "Ajuster les paramètres"
         },
@@ -77607,18 +77667,13 @@ Allez voir ce qui se passe.]]
         UI_PersonalPage_Friend = {
           ContentFR = "Visible par les amis"
         },
-        UI_PersonalPage_ItemTips = {ContentFR = "Objet"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_PersonalPage_Light",
-    MaxKey = "UI_PlayerHead_Name_10030",
-    Loader = function()
-      return {
+        UI_PersonalPage_ItemTips = {ContentFR = "Objet"},
         UI_PersonalPage_Light = {
           ContentFR = "Source lumineuse %d"
         },
+        UI_PersonalPage_LightAxis_X = {ContentFR = "Axe X"},
+        UI_PersonalPage_LightAxis_Y = {ContentFR = "Axe Y"},
+        UI_PersonalPage_LightAxis_Z = {ContentFR = "Axe Z"},
         UI_PersonalPage_LightDirection = {
           ContentFR = "Direction de l’éclairage"
         },
@@ -78062,7 +78117,15 @@ Allez voir ce qui se passe.]]
         },
         UI_PlayerHead_Name_10009 = {
           ContentFR = "Portrait : Chercheuse d’amour"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_10010",
+    MaxKey = "UI_PlayerHead_Name_30160",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_10010 = {
           ContentFR = "Portrait : Commissaire"
         },
@@ -78125,15 +78188,7 @@ Allez voir ce qui se passe.]]
         },
         UI_PlayerHead_Name_10030 = {
           ContentFR = "Portrait : La stratège"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_10031",
-    MaxKey = "UI_PlayerHead_Name_30182",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_10031 = {
           ContentFR = "Portrait : Demoiselle Jishu"
         },
@@ -78654,7 +78709,15 @@ Allez voir ce qui se passe.]]
         },
         UI_PlayerHead_Name_30160 = {
           ContentFR = "Sérénade des premières neiges – Bleu céleste"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_30161",
+    MaxKey = "UI_RL_InRouge",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_30161 = {
           ContentFR = "Grand chaos des Méchapoupées – Célébration"
         },
@@ -78713,15 +78776,7 @@ Allez voir ce qui se passe.]]
         },
         UI_PlayerHead_Name_30182 = {
           ContentFR = "Fleur d’ossuaire – Doré"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_30183",
-    MaxKey = "UI_RaceLottery_PlayerRaceRank",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_30183 = {
           ContentFR = "Fleur d’ossuaire – Blanc ivoire"
         },
@@ -79206,7 +79261,15 @@ Allez voir ce qui se passe.]]
         },
         UI_RL_InRouge = {
           ContentFR = "Exploration en cours"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_RL_LevelLimit",
+    MaxKey = "UI_Rou_Toast_27027",
+    Loader = function()
+      return {
         UI_RL_LevelLimit = {
           ContentFR = "Niv.{空格}"
         },
@@ -79251,15 +79314,7 @@ Allez voir ce qui se passe.]]
         UI_RaceLottery_PlayerNum = {
           ContentFR = "N°{空格}"
         },
-        UI_RaceLottery_PlayerRaceRank = {ContentFR = "%sᵉ"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_RaceLottery_StartPoint",
-    MaxKey = "UI_RougeLike_End_Treasure",
-    Loader = function()
-      return {
+        UI_RaceLottery_PlayerRaceRank = {ContentFR = "%sᵉ"},
         UI_RaceLottery_StartPoint = {ContentFR = "Départ"},
         UI_RaceLottery_Toast_MaxAntenum = {
           ContentFR = "Limite quotidienne de tickets de soutien atteinte"
@@ -79752,7 +79807,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Rou_Toast_27027 = {
           ContentFR = "Niveau d’Aventure insuffisant. Impossible de s’enfoncer jusqu’à cette profondeur de l’Abysse."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_RougeBag_Name",
+    MaxKey = "UI_STAT_DAMAGE_Pet",
+    Loader = function()
+      return {
         UI_RougeBag_Name = {ContentFR = "Sacoche"},
         UI_RougeBag_Tab_Name_1 = {ContentFR = "Lucimèche"},
         UI_RougeBag_Tab_Name_2 = {ContentFR = "Artéfact"},
@@ -79795,15 +79858,7 @@ Allez voir ce qui se passe.]]
           ContentFR = "Exploration réussie"
         },
         UI_RougeLike_End_TalentPoints = {ContentFR = "Lumistella"},
-        UI_RougeLike_End_Treasure = {ContentFR = "Artéfact"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_RougeLike_End__ClickEmpty",
-    MaxKey = "UI_STAT_Online_Kill_4P",
-    Loader = function()
-      return {
+        UI_RougeLike_End_Treasure = {ContentFR = "Artéfact"},
         UI_RougeLike_End__ClickEmpty = {
           ContentFR = "Cliquer sur une zone vide pour fermer"
         },
@@ -80214,7 +80269,15 @@ Allez voir ce qui se passe.]]
         },
         UI_STAT_DAMAGE_Pet = {
           ContentFR = "Dégâts du Géniemon"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_STAT_DAMAGE_RANGE",
+    MaxKey = "UI_SendGift_SendTimes",
+    Loader = function()
+      return {
         UI_STAT_DAMAGE_RANGE = {
           ContentFR = "Arme à distance"
         },
@@ -80277,15 +80340,7 @@ Allez voir ce qui se passe.]]
         },
         UI_STAT_Online_Kill_4P = {
           ContentFR = "Ennemis vaincus (J4)"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_STAT_Online_P1",
-    MaxKey = "UI_SetTime_CurrentTime",
-    Loader = function()
-      return {
+        },
         UI_STAT_Online_P1 = {ContentFR = "J1"},
         UI_STAT_Online_P2 = {ContentFR = "J2"},
         UI_STAT_Online_P3 = {ContentFR = "J3"},
@@ -80750,7 +80805,15 @@ Allez voir ce qui se passe.]]
         },
         UI_SendGift_SendTimes = {
           ContentFR = "Envois restants ce mois-ci :{空格}"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SendGift_SendTo",
+    MaxKey = "UI_Skin_Des_5401",
+    Loader = function()
+      return {
         UI_SendGift_SendTo = {ContentFR = "À :"},
         UI_SendGift_SensitiveToast = {
           ContentFR = "Votre message contient des termes interdits. Veuillez le modifier."
@@ -80803,15 +80866,7 @@ Allez voir ce qui se passe.]]
         UI_SetTime_Button_Tomorrow = {ContentFR = "Demain"},
         UI_SetTime_CurrentTime = {
           ContentFR = "Heure actuelle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SetTime_Success",
-    MaxKey = "UI_Skin_Name_150101",
-    Loader = function()
-      return {
+        },
         UI_SetTime_Success = {
           ContentFR = "Heure modifiée"
         },
@@ -81294,7 +81349,15 @@ Allez voir ce qui se passe.]]
         },
         UI_Skin_Des_5401 = {
           ContentFR = "Le vert naissant qui perce la poussière et la fumée — léger comme l’herbe sauvage, tenace comme elle."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Forbid",
+    MaxKey = "UI_SpeakName_Zhongren4",
+    Loader = function()
+      return {
         UI_Skin_Forbid = {
           ContentFR = "Indisponible"
         },
@@ -81351,15 +81414,7 @@ Allez voir ce qui se passe.]]
         },
         UI_Skin_Name_150101 = {
           ContentFR = "Sucreries à foison : Lisbell"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Skin_Name_1502",
-    MaxKey = "UI_Squad_Edit",
-    Loader = function()
-      return {
+        },
         UI_Skin_Name_1502 = {
           ContentFR = "Tenue de Dame Nifle"
         },
@@ -81860,7 +81915,15 @@ Allez voir ce qui se passe.]]
         },
         UI_SpeakName_Zhongren4 = {
           ContentFR = "Lebon le réparateur des canalisations"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SpeakName_Zhongren5",
+    MaxKey = "UI_TEMPLE_80302",
+    Loader = function()
+      return {
         UI_SpeakName_Zhongren5 = {
           ContentFR = "Livia, rédactrice en chef"
         },
@@ -81919,15 +81982,7 @@ Allez voir ce qui se passe.]]
         UI_Squad_DeleteSuccess = {ContentFR = "Supprimée"},
         UI_Squad_Edit = {
           ContentFR = "Modifier l’équipe"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Squad_Elemental_Weakness",
-    MaxKey = "UI_TEMPLE_80903",
-    Loader = function()
-      return {
+        },
         UI_Squad_Elemental_Weakness = {
           ContentFR = "Personnages recommandés : %s"
         },
@@ -82434,7 +82489,15 @@ Allez voir ce qui se passe.]]
         },
         UI_TEMPLE_80302 = {
           ContentFR = "Rejoignez le Point d’évacuation dans le temps imparti"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TEMPLE_80401",
+    MaxKey = "UI_TeamSelectAtLeastOne",
+    Loader = function()
+      return {
         UI_TEMPLE_80401 = {
           ContentFR = [[
 Tirez sur les cibles pour marquer des points.
@@ -82505,15 +82568,7 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_TEMPLE_80903 = {
           ContentFR = "Touchez des ennemis actifs avec une arme de mêlée pour marquer des points."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_80904",
-    MaxKey = "UI_Team_Invitation",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_80904 = {
           ContentFR = "Gagner des points en touchant les ennemis actifs avec une arme à distance"
         },
@@ -83016,7 +83071,15 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_TeamSelectAtLeastOne = {
           ContentFR = "Sélectionnez-en au moins un"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TeamSelectAtMostTwo",
+    MaxKey = "UI_Track_Toast04",
+    Loader = function()
+      return {
         UI_TeamSelectAtMostTwo = {
           ContentFR = "Vous pouvez en sélectionner jusqu’à deux"
         },
@@ -83073,15 +83136,7 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_Team_Invitation = {
           ContentFR = "Invitation d’équipe"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Team_InviteSend",
-    MaxKey = "UI_Unlock_Condition",
-    Loader = function()
-      return {
+        },
         UI_Team_InviteSend = {
           ContentFR = "Invitation envoyée"
         },
@@ -83568,7 +83623,15 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_Track_Toast04 = {
           ContentFR = "Impossible de quitter la voie pour le moment"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TreasureHunt_ArchiveProgress",
+    MaxKey = "UI_WEAPON_NAME_10602",
+    Loader = function()
+      return {
         UI_TreasureHunt_ArchiveProgress = {
           ContentFR = "%d trésors débloqués"
         },
@@ -83617,15 +83680,7 @@ Tirer sur les cibles pour marquer des points.
         UI_UnlockQuestForce_Tips = {
           ContentFR = "Après confirmation, vous serez téléporté au Sanctuaire"
         },
-        UI_Unlock_Condition = {ContentFR = "Prérequis"}
-      }
-    end
-  },
-  {
-    MinKey = "UI_Unlock_Des_Bag",
-    MaxKey = "UI_WEAPON_NAME_20304",
-    Loader = function()
-      return {
+        UI_Unlock_Condition = {ContentFR = "Prérequis"},
         UI_Unlock_Des_Bag = {
           ContentFR = "Inventaire non déverrouillé"
         },
@@ -83922,6 +83977,9 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_DESC_20305 = {
           ContentFR = "Montée sur mille douilles argentées, l’ardeur divine s’abat — gravant le décret des dieux dans la poitrine de chaque hérétique."
         },
+        UI_WEAPON_DESC_20306 = {
+          ContentFR = "Continuer à vivre est une bénédiction dont les vivants doivent porter le poids."
+        },
         UI_WEAPON_DESC_20398 = {
           ContentFR = "Arme traitée selon les standards les plus modernes, maniée par les assaillants intrépides qui réduisent les murailles au silence."
         },
@@ -84141,7 +84199,15 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_WEAPON_NAME_10602 = {
           ContentFR = "Ombre fanée"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_10603",
+    MaxKey = "UI_WeaponAccessory_Name_10018",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_10603 = {
           ContentFR = "Grâce sacrée"
         },
@@ -84201,15 +84267,7 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_WEAPON_NAME_20304 = {
           ContentFR = "Résonance de Guixu"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_NAME_20305",
-    MaxKey = "UI_WeaponAccessory_Name_10040",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_NAME_20305 = {
           ContentFR = "Édit argenté"
         },
@@ -84725,7 +84783,15 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_WeaponAccessory_Name_10018 = {
           ContentFR = "Petit Pioupiou – Blanc ivoire"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponAccessory_Name_10019",
+    MaxKey = "UI_WeaponVerify_BeforeUnlock",
+    Loader = function()
+      return {
         UI_WeaponAccessory_Name_10019 = {
           ContentFR = "Petit Pioupiou – Caramel"
         },
@@ -84789,15 +84855,7 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_WeaponAccessory_Name_10040 = {
           ContentFR = "Pendentif aux mille mécanismes – Rouille"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponAccessory_Name_10041",
-    MaxKey = "UI_WeaponVerify_OldRecord",
-    Loader = function()
-      return {
+        },
         UI_WeaponAccessory_Name_10041 = {
           ContentFR = "Pendentif aux mille mécanismes – Doré"
         },
@@ -85309,7 +85367,15 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_WeaponVerify_BeforeUnlock = {
           ContentFR = "Configuration actuelle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponVerify_Chosen",
+    MaxKey = "VoiceDes038",
+    Loader = function()
+      return {
         UI_WeaponVerify_Chosen = {ContentFR = "Occupé"},
         UI_WeaponVerify_Des1 = {
           ContentFR = "Les mêmes personnages, armes, Géniemon et bonus ne peuvent pas être utilisés dans plusieurs défis.\nLes Sacs tactiques et les Emblèmes de combat ne peuvent pas être utilisés."
@@ -85369,15 +85435,7 @@ Tirer sur les cibles pour marquer des points.
         },
         UI_WeaponVerify_OldRecord = {
           ContentFR = "Record actuel"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponVerify_Reset",
-    MaxKey = "VoiceDes060",
-    Loader = function()
-      return {
+        },
         UI_WeaponVerify_Reset = {
           ContentFR = "Réinitialiser"
         },
@@ -85837,7 +85895,15 @@ Tirer sur les cibles pour marquer des points.
         VoiceDes035 = {ContentFR = "V"},
         VoiceDes036 = {ContentFR = "VI"},
         VoiceDes037 = {ContentFR = "VII"},
-        VoiceDes038 = {ContentFR = "VIII"},
+        VoiceDes038 = {ContentFR = "VIII"}
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes039",
+    MaxKey = "Weapon_Use",
+    Loader = function()
+      return {
         VoiceDes039 = {ContentFR = "IX"},
         VoiceDes040 = {ContentFR = "X"},
         VoiceDes041 = {
@@ -85899,15 +85965,7 @@ Tirer sur les cibles pour marquer des points.
         },
         VoiceDes060 = {
           ContentFR = "À propos d’une nouvelle vie"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes061",
-    MaxKey = "WikiText_20100502",
-    Loader = function()
-      return {
+        },
         VoiceDes061 = {
           ContentFR = "Je suis épuisée..."
         },
@@ -86397,7 +86455,15 @@ Tirer sur les cibles pour marquer des points.
         Weapon_LevelUp_Success = {
           ContentFR = "Arme améliorée !"
         },
-        Weapon_Use = {ContentFR = "Arme"},
+        Weapon_Use = {ContentFR = "Arme"}
+      }
+    end
+  },
+  {
+    MinKey = "WeeklyDungeonShop",
+    MaxKey = "WikiText_40100601",
+    Loader = function()
+      return {
         WeeklyDungeonShop = {
           ContentFR = "Récompenses de prime"
         },
@@ -86463,15 +86529,7 @@ Tirer sur les cibles pour marquer des points.
         },
         WikiText_20100502 = {
           ContentFR = "Elle se présente comme le « Rédempteur Immaculé ☆ Roi Démon de la Lumière ». Même si elle ne semble pas quémander l’admiration humaine comme les autres Lunariens, son comportement reste, au final, très proche du leur."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_20100601",
-    MaxKey = "WikiText_40301301",
-    Loader = function()
-      return {
+        },
         WikiText_20100601 = {
           ContentFR = "Henrik Ethelred, propriétaire de l’auberge connue sous le nom de Maison d’Hypnos. Homme taciturne, habité d’une profonde méfiance envers les étrangers."
         },
@@ -87005,7 +87063,15 @@ Tirer sur les cibles pour marquer des points.
         },
         WikiText_40100601 = {
           ContentFR = "Rébellion déclenchée par Les Déchus dans les régions méridionales de l’Empire. Durant le conflit, un Arbre Céleste fut incendié, empêchant les dirigeables impériaux d’approcher la zone.\n \nLa rébellion fut finalement réprimée sous le commandement de Sibylle."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_40200101",
+    MaxKey = "voice_ch_char_Aote_vo_topic_03_1",
+    Loader = function()
+      return {
         WikiText_40200101 = {
           ContentFR = "Dans la mythologie Charon, la Mer du Silence est considérée comme l’origine de toute vie.\nOn dit que l’Arbre Sacré y germa dans la brume, déployant des fleurs d’un blanc immaculé, et que de ces fleurs naquit la Mère Embla, créatrice du monde vivant.\n\nLes Charons croient que les âmes des morts retournent finalement à la Mer du Silence, et que les nouvelles vies, elles aussi, émergent de ses profondeurs."
         },
@@ -87071,15 +87137,7 @@ Tirer sur les cibles pour marquer des points.
         },
         WikiText_40301301 = {
           ContentFR = "Dernier fleuron de l’ingénierie alchimique de l’Empire Hyperboréen. Grâce à de puissants Moteurs Phoxichor, ces coques d’acier peuvent prendre leur envol et s’avèrent extrêmement difficiles à abattre. Leur apparition a ouvert une dimension nouvelle sur les champs de bataille.\nDepuis lors, l’issue d’une guerre ne dépend plus de l’instant où les combats éclatent, mais du moment où les dirigeables atteignent le front. La domination de l’Empire n’en est devenue que plus solide."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_40301401",
-    MaxKey = "voice_ch_char_Baiheng_vo_die_r01",
-    Loader = function()
-      return {
+        },
         WikiText_40301401 = {
           ContentFR = "Canon à propulsion Phoxichor monté à l’avant du train, dont la puissance suffit à anéantir toute cible à portée de vue. Les trains furent à l’origine conçus comme des armes de guerre : capables d’acheminer troupes et ravitaillement, ils servaient aussi de plateformes d’armement mobiles.\nTels des monstres d’acier, ils rampent sur les rails impériaux en transportant à la fois marchandises et destruction."
         },
@@ -87411,7 +87469,7 @@ Tirer sur les cibles pour marquer des points.
           ContentFR = "« Toute paix née de la peur finira par périr par la peur. »\nScénario : AYIN / Aura\n \nAfin de retrouver le Catalyseur, élément clé du Projet Nouvel Héritier évoqué dans les dernières paroles d’Avar, {nickname2} se rend dans les Montagnes d’Arcano pour enquêter.\n \nÀ sa grande surprise, {性别2:il|elle} découvre que le village de montagne, pourtant censé avoir été détruit, a été reconstruit en un temps étonnamment court. Plus surprenant encore, les souvenirs qu’{性别2:il|elle} a perdus semblent étroitement liés à Arcano.\n \nDéterminé à lever le voile sur les mystères qui enveloppent le village, {nickname2} se retrouve entraîné dans un jeu mortel... la Parade du Paradis."
         },
         WikiText_40901001 = {
-          ContentFR = "« Oui... Peut-être que continuer à vivre du mieux que l’on peut suffit déjà. »\nScénario : Beryl\nSupervision : WANDOU\n\nAprès la Traque aux Charons, Rhythm quitta la Légion. La perte d’un être cher et l’effondrement de ses convictions lui firent momentanément perdre le cap. Elle ne trouva alors d’autre refuge que de multiplier les petits boulots pour s’engourdir l’esprit, jusqu’au jour où elle découvrit par hasard, dans les affaires personnelles de Blues, la liste d’admission de la VIᵉ Légion de l’époque. \nEn voyant les noms de personnes ayant connu une tragédie semblable à celle de son frère cadet, Rhythm décida de rendre visite à leurs familles et de leur apporter toute l’aide dont elle était capable. \nAu contact de familles de victimes aux parcours variés, elle découvrit la froideur comme la chaleur de l’être humain, et retrouva des haines et des souffrances qui lui semblaient familières. Sans même s’en rendre compte, son propre état d’esprit commença lui aussi à changer..."
+          ContentFR = "« Oui... Peut-être que continuer à vivre du mieux que l’on peut suffit déjà. »\nScénario : Beryl\nSupervision : WANDOU\n \nAprès la Traque aux Charons, Rhythm quitta la Légion. La perte d’un être cher et l’effondrement de ses convictions lui firent momentanément perdre le cap. Elle ne trouva alors d’autre refuge que de multiplier les petits boulots pour s’engourdir l’esprit, jusqu’au jour où elle découvrit par hasard, dans les affaires personnelles de Blues, la liste d’admission de la VIᵉ Légion de l’époque. \nEn voyant les noms de personnes ayant connu une tragédie semblable à celle de son frère cadet, Rhythm décida de rendre visite à leurs familles et de leur apporter toute l’aide dont elle était capable. \nAu contact de familles de victimes aux parcours variés, elle découvrit la froideur comme la chaleur de l’être humain, et retrouva des haines et des souffrances qui lui semblaient familières. Sans même s’en rendre compte, son propre état d’esprit commença lui aussi à changer..."
         },
         Wiki_RewardList_Content = {
           ContentFR = "Entrées débloquées :{空格}"
@@ -87609,7 +87667,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Aote_vo_topic_03_1 = {
           ContentFR = "Ouais. Tu peux me passer ce bandage là-bas ? Si Fina le voit, elle va encore faire toute une histoire."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Aote_vo_topic_03_2",
+    MaxKey = "voice_ch_char_Falu_vo_be_hit_r01",
+    Loader = function()
+      return {
         voice_ch_char_Aote_vo_topic_03_2 = {
           ContentFR = "Je sais, mais les blessures font partie du métier. Je préfère qu’elle ne s’inquiète pas trop. Tu peux me couvrir si elle me pose des questions ? Je te revaudrai ça."
         },
@@ -87675,15 +87741,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Baiheng_vo_die_r01 = {
           ContentFR = "Protège... les autres... s’il te plaît..."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Baiheng_vo_die_r02",
-    MaxKey = "voice_ch_char_Falu_vo_topic_02_1",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Baiheng_vo_die_r02 = {
           ContentFR = "Si seulement... j’avais été une meilleure guérisseuse..."
         },
@@ -88207,7 +88265,15 @@ Tirer sur les cibles pour marquer des points.
           ContentFR = "Ce n’est rien."
         },
         voice_ch_char_Falu_vo_be_hit_heavy_r02 = {ContentFR = "Merde..."},
-        voice_ch_char_Falu_vo_be_hit_r01 = {ContentFR = "Khh..."},
+        voice_ch_char_Falu_vo_be_hit_r01 = {ContentFR = "Khh..."}
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Falu_vo_be_hit_r02",
+    MaxKey = "voice_ch_char_Kami_vo_birthday",
+    Loader = function()
+      return {
         voice_ch_char_Falu_vo_be_hit_r02 = {ContentFR = "Ngh !"},
         voice_ch_char_Falu_vo_birthday = {
           ContentFR = "Je ne sais pas comment célébrer correctement l’anniversaire de quelqu’un. Mais je sais aussi que, lors de journées heureuses comme celle-ci, les gens baissent leur garde... et que la lame suspendue au-dessus de leur tête tombe souvent à cet instant précis.\nAlors profitez pleinement de cette journée qui est la vôtre. Tant que je serai là, je repousserai toutes les menaces tapies dans l’ombre... et les emporterai avec moi vers un endroit que vous ne verrez jamais."
@@ -88271,15 +88337,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Falu_vo_topic_02_1 = {
           ContentFR = "Les affaires internes de la Légion ne m’intéressaient pas, et je ne me mêlais jamais de la vie privée de mes camarades. Je ne maintenais avec eux que des relations superficielles. Ainsi, lorsqu’il fallait les utiliser... ou les trahir... je n’en éprouvais aucun remords."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Falu_vo_topic_02_2",
-    MaxKey = "voice_ch_char_Kami_vo_topic_02_1",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Falu_vo_topic_02_2 = {
           ContentFR = "Quant aux documents confidentiels passés entre mes mains, je ne faisais que les transmettre ou les détruire selon les ordres reçus. Les informations auxquelles j’avais accès n’étaient, la plupart du temps, que des banalités."
         },
@@ -88801,7 +88859,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Kami_vo_be_hit_heavy_r02 = {ContentFR = "Merde !"},
         voice_ch_char_Kami_vo_birthday = {
           ContentFR = "Passe donc aux Asphodèles aujourd’hui. Nous t’y attendons. « Nous », tu demandes ? Les habitants de Givrelac que tu as aidés depuis que tu es devenu Chasseur de Phoxène, bien sûr. Aujourd’hui, c’est ton anniversaire. Tu es peut-être trop occupé pour t’en souvenir... mais eux ne l’ont pas oublié. \nAujourd’hui, toutes les boissons sont offertes. Bois autant que tu veux. Discute avec tout le monde. Et reste aussi longtemps que tu en as envie."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Kami_vo_companio_02",
+    MaxKey = "voice_ch_char_Maer_vo_gain_2",
+    Loader = function()
+      return {
         voice_ch_char_Kami_vo_companio_02 = {
           ContentFR = "Chaque personne possède ses propres talents. Certains naissent avec le don d’apaiser les autres... comme toi. Tu es quelqu’un de bien."
         },
@@ -88867,15 +88933,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Kami_vo_topic_02_1 = {
           ContentFR = "Tu me flattes. Les Chasseurs de Phoxène existaient bien avant mon établissement. Ils ont simplement besoin d’un endroit pour discuter, fanfaronner et échanger leurs « affaires ». S’il n’y avait pas eu les Asphodèles, ça aurait été le Muguet... ou la Tulipe."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Kami_vo_topic_02_2",
-    MaxKey = "voice_ch_char_Maer_vo_topic_04_3",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Kami_vo_topic_02_2 = {
           ContentFR = "Quant à savoir pourquoi ils ont fini par se réunir ici... rien de mystérieux. Un bon alcool. Un intermédiaire qui traite ses affaires équitablement. Et quelques petits coups de main quand quelqu’un traverse une mauvaise passe."
         },
@@ -89399,7 +89457,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Maer_vo_gain_2 = {
           ContentFR = "Quoi ? Tu as déjà entendu parler de mon titre de « Princesse des Déchets » ?! Euh... Ne va surtout pas répéter ça ! Appelle-moi juste Margie. Pas de princesse ici, juste une petite récupératrice de Givrelac !"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Maer_vo_idle",
+    MaxKey = "voice_ch_char_Shuimu_vo_topic_02_1",
+    Loader = function()
+      return {
         voice_ch_char_Maer_vo_idle = {
           ContentFR = "<I>Hmm</>, quel temps magnifique, parfait pour cueillir des fleurs et sentir bon après ! {nickname}, tu veux venir te balader avec moi ?"
         },
@@ -89465,15 +89531,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Maer_vo_topic_04_3 = {
           ContentFR = "Touffu préfère la vie sauvage à la vie urbaine. Nous avons dû nous séparer, mais elle fera toujours partie de moi, tout comme les champs de neige."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Maer_vo_topic_05_1",
-    MaxKey = "voice_ch_char_Songlu_vo_birthday",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Maer_vo_topic_05_1 = {
           ContentFR = "Non, non ! Ce n’est pas moi ! Je suis trop grande pour un titre aussi enfantin ! Je t’en supplie, ne m’appelle plus jamais comme ça !"
         },
@@ -89995,7 +90053,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Shuimu_vo_topic_02_1 = {
           ContentFR = "Ah, tu t’engages dans une conversation sur l’amour avec moi, comme c’est inattendu."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Shuimu_vo_topic_02_2",
+    MaxKey = "voice_ch_char_Tuosi_vo_topic_03_5",
+    Loader = function()
+      return {
         voice_ch_char_Shuimu_vo_topic_02_2 = {
           ContentFR = "Comment décrire ça ? C’est comme l’eau dans un parfum : elle embrasse chaque ingrédient, en absorbe l’essence, et crée un sillage qui dure longtemps..."
         },
@@ -90061,15 +90127,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Songlu_vo_birthday = {
           ContentFR = "Joyeux anniversaire ! J’avais préparé un énorme gâteau à la crème, avec des noix et de la confiture. Mais son odeur a attiré beaucoup de monde... alors... euh... je l’ai partagé avec eux aussi. Mais ne t’inquiète pas, je t’ai gardé une part ! Regarde, j’ai choisi la plus grosse, avec plein de confiture et des baies boréales dessus. Goûte-la, elle est bien meilleure que nos rations militaires !"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Songlu_vo_companio_01",
-    MaxKey = "voice_ch_char_WeitaF_vo_skill01_r01",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Songlu_vo_companio_01 = {
           ContentFR = "Tu as trouvé des patates qui germent dans le bac ? Ne les jette pas ! On les plante, on les arrose, et on aura plein de patates pour tout le monde !"
         },
@@ -90593,7 +90651,15 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_Tuosi_vo_topic_03_5 = {
           ContentFR = "Ainsi, elle cessera de chercher mes traces. J’étais son élève préféré... Je ne veux pas ternir sa mémoire."
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Tuosi_vo_topic_03_6",
+    MaxKey = "voice_ch_char_Zhangyu_vo_revive",
+    Loader = function()
+      return {
         voice_ch_char_Tuosi_vo_topic_03_6 = {
           ContentFR = "Oui... ne rien savoir rend souvent plus heureux."
         },
@@ -90659,15 +90725,7 @@ Tirer sur les cibles pour marquer des points.
         },
         voice_ch_char_WeitaF_vo_skill01_r01 = {
           ContentFR = "Inutile de résister."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_WeitaF_vo_skill01_r02",
-    MaxKey = "voice_ch_char_Zhiliu01_vo_gain",
-    Loader = function()
-      return {
+        },
         voice_ch_char_WeitaF_vo_skill01_r02 = {
           ContentFR = "Cible à éliminer."
         },
@@ -91197,7 +91255,15 @@ Oliver : Pff. Encore une pauvre victime.]]
         },
         voice_ch_char_Zhangyu_vo_revive = {
           ContentFR = "Je savais que c’était pas fini !"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Zhangyu_vo_skill01_r01",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Zhangyu_vo_skill01_r01 = {
           ContentFR = "C’est trop rigolo !"
         },
@@ -91263,15 +91329,7 @@ Oliver : Pff. Encore une pauvre victime.]]
         },
         voice_ch_char_Zhiliu01_vo_gain = {
           ContentFR = "Quoi ? Cela t’étonne tant ? Même en tant que Haut Chancelier de Longyuan, je dois revêtir un habit digne de ces banquets privés. La nuit ne fait que commencer... autant t’y accoutumer dès maintenant."
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Zhiliu01_vo_skill02_r01",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Zhiliu01_vo_skill02_r01 = {
           ContentFR = "Venez donc égayer le banquet."
         },

@@ -1840,7 +1840,7 @@ return ReadOnly("HeadSculpture", {
     HeadId = 30173,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0061.T_Head_Other0061'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0061.T_Head_Other0061'",
-    Name = "UI_PlayerHead_Name_30173"
+    Name = "RESOURCE_NAME_41069"
   },
   [30174] = {
     AccessText = "UI_Accessory_Unlock_Event",
@@ -1849,7 +1849,7 @@ return ReadOnly("HeadSculpture", {
     HeadId = 30174,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0060.T_Head_Other0060'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0060.T_Head_Other0060'",
-    Name = "UI_PlayerHead_Name_30174"
+    Name = "RESOURCE_NAME_41070"
   },
   [30175] = {
     AccessText = "UI_Accessory_Unlock_Event",
@@ -1858,7 +1858,7 @@ return ReadOnly("HeadSculpture", {
     HeadId = 30175,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0059.T_Head_Other0059'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0059.T_Head_Other0059'",
-    Name = "UI_PlayerHead_Name_30175"
+    Name = "RESOURCE_NAME_41071"
   },
   [30176] = {
     AccessText = "UI_Accessory_Unlock_BattlePass",
@@ -1910,7 +1910,7 @@ return ReadOnly("HeadSculpture", {
     HeadId = 30181,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0041_01.T_Head_Art_0041_01'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0041_01.T_Head_Art_0041_01'",
-    Name = "UI_PlayerHead_Name_30181"
+    Name = "RESOURCE_NAME_41072"
   },
   [30182] = {
     AccessText = "UI_Accessory_Unlock_Event",
@@ -1919,7 +1919,7 @@ return ReadOnly("HeadSculpture", {
     HeadId = 30182,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0041_02.T_Head_Art_0041_02'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0041_02.T_Head_Art_0041_02'",
-    Name = "UI_PlayerHead_Name_30182"
+    Name = "RESOURCE_NAME_41073"
   },
   [30183] = {
     AccessText = "UI_Accessory_Unlock_Event",
@@ -1928,7 +1928,7 @@ return ReadOnly("HeadSculpture", {
     HeadId = 30183,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0041_03.T_Head_Art_0041_03'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0041_03.T_Head_Art_0041_03'",
-    Name = "UI_PlayerHead_Name_30183"
+    Name = "RESOURCE_NAME_41074"
   },
   [30184] = {
     AccessText = "UI_Accessory_Unlock_Event",

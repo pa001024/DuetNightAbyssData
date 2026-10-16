@@ -831,7 +831,8 @@ return ReadOnly("SkillDescCheck", {
       LastTime = T.RT_129
     },
     [410301] = {
-      AddSp = T.RT_128
+      AddSp = T.RT_128,
+      LastTime = T.RT_128
     },
     [420105] = {
       LastTime = T.RT_127

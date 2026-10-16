@@ -6,9 +6,12 @@ function WBP_VideoPlayer_C:Initialize(Initializer)
   rawset(self, "PauseOnFirstFrameTimer", nil)
   rawset(self, "PauseOnFirstFrameTick", 0)
   rawset(self, "bShouldPauseOnFirstFrame", false)
+  rawset(self, "InstanceVideoTexture", nil)
+  rawset(self, "InstanceVideoMaterial", nil)
 end
 
 function WBP_VideoPlayer_C:Construct()
+  self:EnsureInstanceVideoSurface()
   WBP_VideoPlayer_C.Super.Construct(self)
   self.IsInit = true
   self:HideVideoSurfaceForLoading()
@@ -89,13 +92,44 @@ function WBP_VideoPlayer_C:HideVideoSurfaceForLoading()
   end
 end
 
+function WBP_VideoPlayer_C:EnsureInstanceVideoSurface()
+  if IsValid(self.InstanceVideoTexture) and IsValid(self.InstanceVideoMaterial) then
+    return true
+  end
+  local SourceTexture = self.MediaPlayer_VideoTexture
+  if not IsValid(SourceTexture) or not IsValid(self.Image_Video) then
+    return false
+  end
+  local Material = self.Image_Video:GetDynamicMaterial()
+  if not IsValid(Material) or not IsValid(Material:K2_GetTextureParameterValue("VideoTexture")) then
+    DebugPrint("WBP_VideoPlayer_C: video material is missing VideoTexture parameter")
+    return false
+  end
+  local Texture = NewObject(UE4.UMediaTexture, self)
+  Texture.AddressX = SourceTexture.AddressX
+  Texture.AddressY = SourceTexture.AddressY
+  Texture.AutoClear = SourceTexture.AutoClear
+  Texture.ClearColor = SourceTexture.ClearColor
+  Texture.SRGB = SourceTexture.SRGB
+  Texture.EnableGenMips = SourceTexture.EnableGenMips
+  Texture.NewStyleOutput = SourceTexture.NewStyleOutput
+  Texture.OutputFormat = SourceTexture.OutputFormat
+  Texture.NumMips = SourceTexture.NumMips
+  ULowEntryExtendedStandardLibrary.TextureUpdateResource(Texture)
+  Material:SetTextureParameterValue("VideoTexture", Texture)
+  self.MediaPlayer_VideoTexture = Texture
+  rawset(self, "InstanceVideoTexture", Texture)
+  rawset(self, "InstanceVideoMaterial", Material)
+  return true
+end
+
 function WBP_VideoPlayer_C:ClearVideoSurface()
   if self.MediaPlayer then
     self.MediaPlayer:Close()
   end
-  if self.MediaPlayer_VideoTexture then
+  if IsValid(self.InstanceVideoTexture) then
     pcall(function()
-      self.MediaPlayer_VideoTexture:SetMediaPlayer(nil)
+      self.InstanceVideoTexture:SetMediaPlayer(nil)
     end)
   end
   if self.Image_Video then
@@ -129,7 +163,10 @@ function WBP_VideoPlayer_C:Play()
   if self.MediaPlayer:IsPreparing() then
     return false
   end
-  self.MediaPlayer_VideoTexture:SetMediaPlayer(self.MediaPlayer)
+  if not self:EnsureInstanceVideoSurface() then
+    return false
+  end
+  self.InstanceVideoTexture:SetMediaPlayer(self.MediaPlayer)
   if self.MediaPlayer:IsReady() then
     self.MediaPlayer:Play()
   elseif self.MediaPlayer:CanPlayUrl(self.Url) then
@@ -238,6 +275,11 @@ function WBP_VideoPlayer_C:Destruct()
   if self.MediaPlayer then
     self.MediaPlayer:Close()
   end
+  if IsValid(self.InstanceVideoTexture) then
+    self.InstanceVideoTexture:SetMediaPlayer(nil)
+  end
+  rawset(self, "InstanceVideoTexture", nil)
+  rawset(self, "InstanceVideoMaterial", nil)
   rawset(self, "PauseOnFirstFrameTimer", nil)
   self.Super.Destruct(self)
 end

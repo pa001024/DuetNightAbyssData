@@ -1637,6 +1637,18 @@ return ReadOnly("CharTemplate", {
   [410301] = {
     CharId = 4103,
     CharLevel = 70,
+    Grade = 2,
+    ModId = {
+      [1] = 51942,
+      [2] = 56142,
+      [3] = 51747,
+      [4] = 51747,
+      [5] = 51747,
+      [6] = 51747,
+      [7] = 51747,
+      [8] = 51002
+    },
+    ModLevel = T.RT_1,
     RuleId = 410301,
     SkillLevel = 8,
     SkillTreeUnlock = T.RT_19

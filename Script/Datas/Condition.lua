@@ -13437,6 +13437,20 @@ return ReadOnly("Condition", {
     },
     Remark = "sp黎瑟抽卡180次"
   },
+  [4030058] = {
+    ConditionId = 4030058,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      HaveItem = {
+        {
+          "Skin",
+          410301,
+          1
+        }
+      }
+    },
+    Remark = "获得SP黎瑟皮肤"
+  },
   [4040001] = {
     ConditionId = 4040001,
     ConditionLogic = "AND",
@@ -13449,7 +13463,7 @@ return ReadOnly("Condition", {
         }
       }
     },
-    ConditionText = "巅峰赛达到1层",
+    ConditionText = "UI_Locked_Des_4040001",
     Remark = "1.7公会战层数条件-1"
   },
   [4040002] = {
@@ -13464,7 +13478,7 @@ return ReadOnly("Condition", {
         }
       }
     },
-    ConditionText = "巅峰赛达到5层",
+    ConditionText = "UI_Locked_Des_4040002",
     Remark = "1.7公会战层数条件-2"
   },
   [4040003] = {
@@ -13479,7 +13493,7 @@ return ReadOnly("Condition", {
         }
       }
     },
-    ConditionText = "巅峰赛达到10层",
+    ConditionText = "UI_Locked_Des_4040003",
     Remark = "1.7公会战层数条件-3"
   },
   [4040004] = {
@@ -13494,7 +13508,7 @@ return ReadOnly("Condition", {
         }
       }
     },
-    ConditionText = "巅峰赛达到15层",
+    ConditionText = "UI_Locked_Des_4040004",
     Remark = "1.7公会战层数条件-4"
   },
   [4040005] = {
@@ -13509,7 +13523,7 @@ return ReadOnly("Condition", {
         }
       }
     },
-    ConditionText = "巅峰赛达到30层",
+    ConditionText = "UI_Locked_Des_4040005",
     Remark = "1.7公会战层数条件-5"
   },
   [4040006] = {
@@ -13524,7 +13538,7 @@ return ReadOnly("Condition", {
         }
       }
     },
-    ConditionText = "巅峰赛达到60层",
+    ConditionText = "UI_Locked_Des_4040006",
     Remark = "1.7公会战层数条件-6"
   },
   [7072038] = {

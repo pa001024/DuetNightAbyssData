@@ -172787,7 +172787,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12070310] = {
           Content = "没事，不想说就不说，我只是有点惊讶而已。",
-          ContentFR = "Ce n’est rien. Si vous ne voulez pas en parler, n’en parlons pas. Je suis simplement surpris.",
+          ContentFR = "Ce n’est rien. Si vous ne voulez pas en parler, n’en parlons pas. Je suis simplement surprise.",
           DialogueId = 12070310,
           GUID = "1E377D3C",
           NextDialogue = 12070311,

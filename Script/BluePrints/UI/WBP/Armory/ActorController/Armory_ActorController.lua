@@ -279,6 +279,9 @@ function M:OnHelperEndViewTarget(PC)
   if self.bPreviewSceneLoaded then
     self.ArmoryHelper:OnPreviewSceneUnloaded()
   end
+  if self.bDestructed then
+    self:HideWeaponActor("ActorController_ChangeViewTarget", true)
+  end
   self:TryDestroyActors()
   if self.bDestructed then
     return

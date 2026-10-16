@@ -2125,6 +2125,7 @@ return ReadOnly("ShopBannerTab", {
   },
   [700] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_0093.T_Shop_Recommend_0093'",
+    BgVideoPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_GetSkin_SPLise01.Gacha_GetSkin_SPLise01'",
     Bp = "WBP_Shop_Recommend_Common",
     DisplayId = 410301,
     DisplayType = "Skin",
@@ -2168,6 +2169,7 @@ return ReadOnly("ShopBannerTab", {
   },
   [702] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_0094.T_Shop_Recommend_0094'",
+    BgVideoPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/ShopSkin/Shop_Action_SPLise01.Shop_Action_SPLise01'",
     Bp = "WBP_Shop_Recommend_Common",
     DisplayId = 41072,
     DisplayType = "Resource",

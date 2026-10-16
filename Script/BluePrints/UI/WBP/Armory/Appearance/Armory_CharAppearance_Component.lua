@@ -674,8 +674,12 @@ function M:UpdateHairDetails(Content)
   local SkinCollectTaskPopupModel = require("BluePrints.UI.WBP.Activity.Widget.SkinCollect.SkinCollectTaskPopupModel")
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    local CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(SkinCollectTaskPopupModel.SKinCollectTaskEventId)
-    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(SkinCollectTaskPopupModel.SKinCollectTaskEventId, Content.HairId) then
+    local EventId = SkinCollectTaskPopupModel.GetSkinCollectTaskEventId()
+    local CurrentScore, MaxScore = 0, 0
+    if EventId then
+      CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(EventId)
+    end
+    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(EventId, Content.HairId) then
       self.Shop_SkinPreview_CollectItem_1:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.Shop_SkinPreview_CollectItem_1.Group_SkinCollectScore:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.Shop_SkinPreview_CollectItem_1.Text_ScoreNum:SetText(Avatar:GetAppearanceScore(CommonConst.DataType.Hair, Content.HairId) or "0")

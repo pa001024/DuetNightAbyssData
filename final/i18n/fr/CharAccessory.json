@@ -3960,7 +3960,7 @@
   },
   {
     "id": 31007,
-    "name": "Victoire : Sérénade des premières neiges",
+    "name": "Victoire : Hurlement de Cerbère",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -5060,7 +5060,8 @@
     "desc": "Les pas qui résonnent dans la nuit sont-ils un guide porteur d’espoir ou un piège séduisant ?",
     "icon": "T_Fashion_Fx32_03",
     "rarity": 5,
-    "unlock": "Disponible via les événements"
+    "unlock": "Disponible via les événements",
+    "hide": 1
   },
   {
     "id": 70071,

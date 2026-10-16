@@ -74,17 +74,6 @@ function collectFirstDialogueIds(value: unknown, out: number[] = []): number[] {
 }
 
 /**
- * 偶遇闲谈组合的手工订正（TalkId -> NpcCombination）。
- * - 920204（SPLiseHuanjing）：数据源组合为 [84103, 81503]（刻舟），但剧情文件名中的
- *   Huanjing（幻景拼音；音频事件 gacha_show_Huanjing 同例）、语音台词“陪伴布鲁斯度过了
- *   那些灰暗的时刻”（对 TextMap“幻景与布鲁斯的藏身之地”）都指向 1103 幻景；81103 与
- *   81503 仅一位之差，疑似数据源笔误。这里按 [84103, 81103] 定位（黎瑟·浴火 ↔ 幻景）。
- */
-const COMPANIO_PAIR_OVERRIDES: Record<number, number[]> = {
-    920204: [84103, 81103],
-}
-
-/**
  * 构建「偶遇语音 → 触发的另一个角色 CharId」索引：精确对话号与对话段号各一张表。
  *
  * 偶遇语音的 UnlockDialogue 就是该段闲谈剧情首个对话的 DialogueId，剧情由 NpcGossipTrigger 的
@@ -104,7 +93,7 @@ function buildCompanioIndex(ctx: ModuleContext): { exact: Map<number, Map<number
     const pairsBySegment = new Map<number, number[][]>()
     let conflicting = 0
     for (const [talkId, entry] of Object.entries(triggerTable)) {
-        const combination = COMPANIO_PAIR_OVERRIDES[Number(talkId)] ?? (entry as any)?.NpcCombination
+        const combination = (entry as any)?.NpcCombination
         if (!Array.isArray(combination) || combination.length < 2) continue
         const storyPath = String(talkTrigger[talkId]?.StoryLinePath ?? "")
         if (!storyPath) continue

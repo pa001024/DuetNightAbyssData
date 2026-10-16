@@ -681,5 +681,19 @@ return ReadOnly("EventPortal", {
     JumpUnlockCondition = 4360,
     JumpUnlockTips = "EventPortal_UnlockTips_Common",
     SubBPPath2 = "/Game/UI/WBP/Activity/Widget/DoubleMod/WBP_Activity_DoubleMod_Content.WBP_Activity_DoubleMod_Content"
+  },
+  [103009012] = {
+    EventId = 103009012,
+    JumpUIId = 20,
+    JumpUnlockCondition = 4360,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/DoubleMod/WBP_Activity_DoubleMod_Content.WBP_Activity_DoubleMod_Content"
+  },
+  [103009013] = {
+    EventId = 103009013,
+    JumpUIId = 20,
+    JumpUnlockCondition = 4360,
+    JumpUnlockTips = "EventPortal_UnlockTips_Common",
+    SubBPPath2 = "/Game/UI/WBP/Activity/Widget/DoubleMod/WBP_Activity_DoubleMod_Content.WBP_Activity_DoubleMod_Content"
   }
 })

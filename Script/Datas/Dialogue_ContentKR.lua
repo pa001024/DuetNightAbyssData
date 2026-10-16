@@ -170855,7 +170855,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         [12070033] = {DialogueId = 12070033, GUID = "1E374FCA"},
         [12070034] = {
           Content = "“我不会再看着任何人被秽兽杀死”……",
-          ContentKR = "\"더는 필토이드가 사람을 해치는 걸 지켜보지 않겠어.\"",
+          ContentKR = "\"더 이상 그 누구도 필토이드에게 죽는 걸 보고만 있지 않겠다.\"",
           DialogueId = 12070034,
           GUID = "1E374FF4",
           NextDialogue = 12070035,
@@ -175021,7 +175021,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12070605] = {
           Content = "<H>“无论发生什么，好好活下去。”</>",
-          ContentKR = "<H>\"무슨 일이 있어도, 잘 살아\"</>",
+          ContentKR = "<H>\"무슨 일이 있어도, 잘 살아.\"</>",
           DialogueId = 12070605,
           GUID = "1E37ADA2",
           NextDialogue = 12070606,

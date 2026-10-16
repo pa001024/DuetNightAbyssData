@@ -276,20 +276,21 @@ local T = {
     RT_28 = {
       FixedMonster = {},
       MonsterSpawn = {
-        [6001011] = 1,
-        [6007018] = 1,
-        [6011001] = 8,
+        [6001001] = 10,
+        [6002001] = 8,
         [6012001] = 7,
-        [6016001] = 15,
-        [10005001] = 20
+        [9001001] = 10,
+        [9002001] = 7,
+        [9002017] = 1,
+        [9007001] = 8
       },
       OnlineCoefficient = 1.0
     },
     RT_29 = {
       FixedMonster = {},
       MonsterSpawn = {
-        [6002011] = 1,
-        [6003015] = 1,
+        [6001011] = 1,
+        [6007018] = 1,
         [6011001] = 8,
         [6012001] = 7,
         [6016001] = 15,
@@ -322,6 +323,18 @@ local T = {
     RT_30 = {
       FixedMonster = {},
       MonsterSpawn = {
+        [6002011] = 1,
+        [6003015] = 1,
+        [6011001] = 8,
+        [6012001] = 7,
+        [6016001] = 15,
+        [10005001] = 20
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_31 = {
+      FixedMonster = {},
+      MonsterSpawn = {
         [6001001] = 10,
         [6002001] = 8,
         [6004011] = 1,
@@ -329,6 +342,19 @@ local T = {
         [8001001] = 10,
         [8002001] = 11,
         [8003001] = 4
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_32 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6001001] = 10,
+        [6002001] = 8,
+        [6012001] = 7,
+        [9001001] = 10,
+        [9002001] = 7,
+        [9002018] = 1,
+        [9007001] = 8
       },
       OnlineCoefficient = 1.0
     },
@@ -584,7 +610,7 @@ local T = {
         [9002019] = 1,
         [9007001] = 8
       },
-      OnlineCoefficient = 2.0
+      OnlineCoefficient = 1.0
     },
     RT_21 = {
       FixedMonster = {},
@@ -612,7 +638,7 @@ local T = {
         [9002018] = 1,
         [9007001] = 8
       },
-      OnlineCoefficient = 2.0
+      OnlineCoefficient = 1.0
     },
     RT_3 = {
       FixedMonster = {},
@@ -783,6 +809,19 @@ local T = {
     RT_100 = {
       FixedMonster = {},
       MonsterSpawn = {
+        [6004021] = 2,
+        [7001001] = 15,
+        [7009001] = 3,
+        [7012001] = 9,
+        [7013001] = 9,
+        [7018001] = 10,
+        [7019001] = 4
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_101 = {
+      FixedMonster = {},
+      MonsterSpawn = {
         [7001001] = 15,
         [7001022] = 2,
         [7009001] = 3,
@@ -793,7 +832,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_101 = {
+    RT_102 = {
       FixedMonster = {},
       MonsterSpawn = {
         [7001001] = 15,
@@ -1171,6 +1210,19 @@ local T = {
       MonsterSpawn = {
         [6011001] = 10,
         [6015001] = 10,
+        [6016001] = 12,
+        [6016021] = 1,
+        [6017001] = 9,
+        [10003001] = 2,
+        [10005001] = 9
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_37 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6011001] = 10,
+        [6015001] = 10,
         [6015021] = 1,
         [6016001] = 12,
         [6017001] = 9,
@@ -1179,7 +1231,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_37 = {
+    RT_38 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6011001] = 10,
@@ -1192,7 +1244,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_38 = {
+    RT_39 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6011001] = 10,
@@ -1200,19 +1252,6 @@ local T = {
         [6016001] = 12,
         [6017001] = 9,
         [6017012] = 1,
-        [10003001] = 2,
-        [10005001] = 9
-      },
-      OnlineCoefficient = 1.0
-    },
-    RT_39 = {
-      FixedMonster = {},
-      MonsterSpawn = {
-        [6011001] = 10,
-        [6015001] = 10,
-        [6016001] = 12,
-        [6016022] = 1,
-        [6017001] = 9,
         [10003001] = 2,
         [10005001] = 9
       },
@@ -1239,6 +1278,19 @@ local T = {
         [6011001] = 10,
         [6015001] = 10,
         [6016001] = 12,
+        [6016022] = 1,
+        [6017001] = 9,
+        [10003001] = 2,
+        [10005001] = 9
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_41 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6011001] = 10,
+        [6015001] = 10,
+        [6016001] = 12,
         [6017001] = 9,
         [10003001] = 2,
         [10005001] = 9,
@@ -1246,7 +1298,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_41 = {
+    RT_42 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1259,7 +1311,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_42 = {
+    RT_43 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1272,7 +1324,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_43 = {
+    RT_44 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1285,7 +1337,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_44 = {
+    RT_45 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1298,7 +1350,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_45 = {
+    RT_46 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1311,7 +1363,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_46 = {
+    RT_47 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1324,7 +1376,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_47 = {
+    RT_48 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1337,27 +1389,13 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_48 = {
+    RT_49 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
         [6002001] = 10,
         [6003001] = 5,
         [6013017] = 1,
-        [7001001] = 14,
-        [7002001] = 7,
-        [7003001] = 7,
-        [7004001] = 5
-      },
-      OnlineCoefficient = 2.0
-    },
-    RT_49 = {
-      FixedMonster = {},
-      MonsterSpawn = {
-        [6001012] = 1,
-        [6002001] = 10,
-        [6002015] = 1,
-        [6003001] = 5,
         [7001001] = 14,
         [7002001] = 7,
         [7003001] = 7,
@@ -1384,6 +1422,20 @@ local T = {
     RT_50 = {
       FixedMonster = {},
       MonsterSpawn = {
+        [6001012] = 1,
+        [6002001] = 10,
+        [6002015] = 1,
+        [6003001] = 5,
+        [7001001] = 14,
+        [7002001] = 7,
+        [7003001] = 7,
+        [7004001] = 5
+      },
+      OnlineCoefficient = 2.0
+    },
+    RT_51 = {
+      FixedMonster = {},
+      MonsterSpawn = {
         [6002001] = 10,
         [6002015] = 1,
         [6003001] = 5,
@@ -1395,7 +1447,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_51 = {
+    RT_52 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002001] = 10,
@@ -1409,7 +1461,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_52 = {
+    RT_53 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1423,7 +1475,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_53 = {
+    RT_54 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1437,7 +1489,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_54 = {
+    RT_55 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002011] = 1,
@@ -1451,7 +1503,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_55 = {
+    RT_56 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1465,7 +1517,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_56 = {
+    RT_57 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1479,7 +1531,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_57 = {
+    RT_58 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6004014] = 1,
@@ -1493,7 +1545,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_58 = {
+    RT_59 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1504,20 +1556,6 @@ local T = {
         [7012001] = 8,
         [7013001] = 8,
         [7014001] = 2
-      },
-      OnlineCoefficient = 2.0
-    },
-    RT_59 = {
-      FixedMonster = {},
-      MonsterSpawn = {
-        [6002015] = 1,
-        [6012001] = 10,
-        [6013001] = 4,
-        [6014001] = 3,
-        [8001001] = 15,
-        [8002001] = 9,
-        [8003001] = 9,
-        [8003021] = 1
       },
       OnlineCoefficient = 2.0
     },
@@ -1539,6 +1577,20 @@ local T = {
     RT_60 = {
       FixedMonster = {},
       MonsterSpawn = {
+        [6002015] = 1,
+        [6012001] = 10,
+        [6013001] = 4,
+        [6014001] = 3,
+        [8001001] = 15,
+        [8002001] = 9,
+        [8003001] = 9,
+        [8003021] = 1
+      },
+      OnlineCoefficient = 2.0
+    },
+    RT_61 = {
+      FixedMonster = {},
+      MonsterSpawn = {
         [6012001] = 10,
         [6013001] = 4,
         [6013017] = 1,
@@ -1550,7 +1602,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_61 = {
+    RT_62 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1564,7 +1616,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_62 = {
+    RT_63 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1578,7 +1630,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_63 = {
+    RT_64 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1592,7 +1644,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_64 = {
+    RT_65 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1606,7 +1658,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_65 = {
+    RT_66 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1620,7 +1672,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_66 = {
+    RT_67 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1634,7 +1686,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_67 = {
+    RT_68 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1648,7 +1700,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_68 = {
+    RT_69 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1659,20 +1711,6 @@ local T = {
         [7009001] = 3,
         [7012001] = 9,
         [7013001] = 9
-      },
-      OnlineCoefficient = 2.0
-    },
-    RT_69 = {
-      FixedMonster = {},
-      MonsterSpawn = {
-        [6012001] = 10,
-        [6013001] = 4,
-        [6013017] = 1,
-        [7001001] = 15,
-        [7009001] = 3,
-        [7012001] = 9,
-        [7013001] = 9,
-        [7015011] = 1
       },
       OnlineCoefficient = 2.0
     },
@@ -1695,6 +1733,20 @@ local T = {
     RT_70 = {
       FixedMonster = {},
       MonsterSpawn = {
+        [6012001] = 10,
+        [6013001] = 4,
+        [6013017] = 1,
+        [7001001] = 15,
+        [7009001] = 3,
+        [7012001] = 9,
+        [7013001] = 9,
+        [7015011] = 1
+      },
+      OnlineCoefficient = 2.0
+    },
+    RT_71 = {
+      FixedMonster = {},
+      MonsterSpawn = {
         [6001012] = 1,
         [6012001] = 10,
         [6013001] = 4,
@@ -1706,7 +1758,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_71 = {
+    RT_72 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1720,7 +1772,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_72 = {
+    RT_73 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1734,7 +1786,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_73 = {
+    RT_74 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1748,7 +1800,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_74 = {
+    RT_75 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1762,7 +1814,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_75 = {
+    RT_76 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6012001] = 10,
@@ -1776,7 +1828,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_76 = {
+    RT_77 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1790,7 +1842,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_77 = {
+    RT_78 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1804,7 +1856,7 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
-    RT_78 = {
+    RT_79 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1816,27 +1868,6 @@ local T = {
         [6016001] = 12,
         [6017001] = 9,
         [6017014] = 1,
-        [8001001] = 15,
-        [8002001] = 9,
-        [8003001] = 9,
-        [8003024] = 1,
-        [10003001] = 2,
-        [10005001] = 9
-      },
-      OnlineCoefficient = 2.0
-    },
-    RT_79 = {
-      FixedMonster = {},
-      MonsterSpawn = {
-        [6011001] = 10,
-        [6012001] = 10,
-        [6013001] = 4,
-        [6013017] = 1,
-        [6014001] = 3,
-        [6015001] = 10,
-        [6016001] = 12,
-        [6016021] = 1,
-        [6017001] = 9,
         [8001001] = 15,
         [8002001] = 9,
         [8003001] = 9,
@@ -1866,6 +1897,27 @@ local T = {
     RT_80 = {
       FixedMonster = {},
       MonsterSpawn = {
+        [6011001] = 10,
+        [6012001] = 10,
+        [6013001] = 4,
+        [6013017] = 1,
+        [6014001] = 3,
+        [6015001] = 10,
+        [6016001] = 12,
+        [6016021] = 1,
+        [6017001] = 9,
+        [8001001] = 15,
+        [8002001] = 9,
+        [8003001] = 9,
+        [8003024] = 1,
+        [10003001] = 2,
+        [10005001] = 9
+      },
+      OnlineCoefficient = 2.0
+    },
+    RT_81 = {
+      FixedMonster = {},
+      MonsterSpawn = {
         [6002015] = 1,
         [6011001] = 10,
         [6015001] = 10,
@@ -1877,7 +1929,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_81 = {
+    RT_82 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6011001] = 10,
@@ -1891,7 +1943,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_82 = {
+    RT_83 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1905,7 +1957,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_83 = {
+    RT_84 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1919,7 +1971,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_84 = {
+    RT_85 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6011001] = 10,
@@ -1933,7 +1985,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_85 = {
+    RT_86 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002015] = 1,
@@ -1947,7 +1999,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_86 = {
+    RT_87 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6013017] = 1,
@@ -1961,7 +2013,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_87 = {
+    RT_88 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001012] = 1,
@@ -1975,19 +2027,6 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_88 = {
-      FixedMonster = {},
-      MonsterSpawn = {
-        [7001001] = 15,
-        [7009001] = 3,
-        [7012001] = 9,
-        [7013001] = 9,
-        [7018001] = 10,
-        [7019001] = 4,
-        [9007012] = 1
-      },
-      OnlineCoefficient = 1.0
-    },
     RT_89 = {
       FixedMonster = {},
       MonsterSpawn = {
@@ -1997,7 +2036,7 @@ local T = {
         [7013001] = 9,
         [7018001] = 10,
         [7019001] = 4,
-        [9002015] = 1
+        [9007012] = 1
       },
       OnlineCoefficient = 1.0
     },
@@ -2019,6 +2058,19 @@ local T = {
     RT_90 = {
       FixedMonster = {},
       MonsterSpawn = {
+        [7001001] = 15,
+        [7009001] = 3,
+        [7012001] = 9,
+        [7013001] = 9,
+        [7018001] = 10,
+        [7019001] = 4,
+        [9002015] = 1
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_91 = {
+      FixedMonster = {},
+      MonsterSpawn = {
         [6002015] = 1,
         [7001001] = 15,
         [7009001] = 3,
@@ -2030,7 +2082,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_91 = {
+    RT_92 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6013017] = 1,
@@ -2044,7 +2096,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_92 = {
+    RT_93 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001021] = 1,
@@ -2057,7 +2109,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_93 = {
+    RT_94 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6002021] = 1,
@@ -2070,7 +2122,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_94 = {
+    RT_95 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6004021] = 1,
@@ -2083,7 +2135,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_95 = {
+    RT_96 = {
       FixedMonster = {},
       MonsterSpawn = {
         [7001001] = 15,
@@ -2096,7 +2148,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_96 = {
+    RT_97 = {
       FixedMonster = {},
       MonsterSpawn = {
         [7001001] = 15,
@@ -2109,7 +2161,7 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_97 = {
+    RT_98 = {
       FixedMonster = {},
       MonsterSpawn = {
         [6001021] = 2,
@@ -2122,23 +2174,10 @@ local T = {
       },
       OnlineCoefficient = 1.0
     },
-    RT_98 = {
-      FixedMonster = {},
-      MonsterSpawn = {
-        [6002021] = 2,
-        [7001001] = 15,
-        [7009001] = 3,
-        [7012001] = 9,
-        [7013001] = 9,
-        [7018001] = 10,
-        [7019001] = 4
-      },
-      OnlineCoefficient = 1.0
-    },
     RT_99 = {
       FixedMonster = {},
       MonsterSpawn = {
-        [6004021] = 2,
+        [6002021] = 2,
         [7001001] = 15,
         [7009001] = 3,
         [7012001] = 9,
@@ -2192,13 +2231,6 @@ local T = {
         [8003001] = 1
       },
       OnlineCoefficient = 2.0
-    },
-    RT_4 = {
-      FixedMonster = {},
-      MonsterSpawn = {
-        [6016021] = 1
-      },
-      OnlineCoefficient = 1.0
     }
   },
   Hijack = {
@@ -3535,23 +3567,23 @@ local ReadOnly = {
   [91122] = T.ExtermPro.RT_33,
   [91123] = T.ExtermPro.RT_34,
   [91124] = T.ExtermPro.RT_35,
-  [91125] = T.Exterminate.RT_4,
-  [91126] = T.ExtermPro.RT_36,
-  [91127] = T.ExtermPro.RT_37,
-  [91128] = T.ExtermPro.RT_38,
-  [91129] = T.ExtermPro.RT_39,
+  [91125] = T.ExtermPro.RT_36,
+  [91126] = T.ExtermPro.RT_37,
+  [91127] = T.ExtermPro.RT_38,
+  [91128] = T.ExtermPro.RT_39,
+  [91129] = T.ExtermPro.RT_40,
   [91132] = T.SurvivalMiniPro.RT_6,
   [91133] = T.SurvivalMiniPro.RT_7,
   [91134] = T.Defence.RT_6,
   [91135] = T.Defence.RT_7,
-  [91136] = T.ExtermPro.RT_40,
-  [91137] = T.ExtermPro.RT_41,
-  [91138] = T.ExtermPro.RT_42,
-  [91139] = T.ExtermPro.RT_43,
-  [91140] = T.ExtermPro.RT_44,
-  [91141] = T.ExtermPro.RT_45,
-  [91142] = T.ExtermPro.RT_46,
-  [91143] = T.ExtermPro.RT_47,
+  [91136] = T.ExtermPro.RT_41,
+  [91137] = T.ExtermPro.RT_42,
+  [91138] = T.ExtermPro.RT_43,
+  [91139] = T.ExtermPro.RT_44,
+  [91140] = T.ExtermPro.RT_45,
+  [91141] = T.ExtermPro.RT_46,
+  [91142] = T.ExtermPro.RT_47,
+  [91143] = T.ExtermPro.RT_48,
   [91144] = T.SurvivalMiniPro.RT_8,
   [91145] = T.SurvivalMiniPro.RT_9,
   [91146] = T.Defence.RT_8,
@@ -3559,48 +3591,48 @@ local ReadOnly = {
   [91148] = T.SurvivalMiniPro.RT_10,
   [91149] = T.SurvivalMiniPro.RT_5,
   [91150] = T.Defence.RT_10,
-  [91151] = T.ExtermPro.RT_48,
-  [91152] = T.ExtermPro.RT_49,
-  [91153] = T.ExtermPro.RT_50,
-  [91154] = T.ExtermPro.RT_51,
-  [91155] = T.ExtermPro.RT_52,
-  [91156] = T.ExtermPro.RT_53,
-  [91157] = T.ExtermPro.RT_54,
-  [91158] = T.ExtermPro.RT_55,
-  [91159] = T.ExtermPro.RT_56,
-  [91160] = T.ExtermPro.RT_57,
-  [91161] = T.ExtermPro.RT_58,
-  [91162] = T.ExtermPro.RT_59,
-  [91163] = T.ExtermPro.RT_60,
-  [91164] = T.ExtermPro.RT_61,
-  [91165] = T.ExtermPro.RT_62,
-  [91166] = T.ExtermPro.RT_63,
-  [91167] = T.ExtermPro.RT_64,
-  [91168] = T.ExtermPro.RT_65,
-  [91169] = T.ExtermPro.RT_66,
-  [91170] = T.ExtermPro.RT_67,
-  [91171] = T.ExtermPro.RT_68,
-  [91172] = T.ExtermPro.RT_69,
-  [91173] = T.ExtermPro.RT_70,
-  [91174] = T.ExtermPro.RT_71,
-  [91175] = T.ExtermPro.RT_72,
-  [91176] = T.ExtermPro.RT_73,
-  [91177] = T.ExtermPro.RT_74,
-  [91178] = T.ExtermPro.RT_75,
-  [91179] = T.ExtermPro.RT_76,
-  [91180] = T.ExtermPro.RT_77,
+  [91151] = T.ExtermPro.RT_49,
+  [91152] = T.ExtermPro.RT_50,
+  [91153] = T.ExtermPro.RT_51,
+  [91154] = T.ExtermPro.RT_52,
+  [91155] = T.ExtermPro.RT_53,
+  [91156] = T.ExtermPro.RT_54,
+  [91157] = T.ExtermPro.RT_55,
+  [91158] = T.ExtermPro.RT_56,
+  [91159] = T.ExtermPro.RT_57,
+  [91160] = T.ExtermPro.RT_58,
+  [91161] = T.ExtermPro.RT_59,
+  [91162] = T.ExtermPro.RT_60,
+  [91163] = T.ExtermPro.RT_61,
+  [91164] = T.ExtermPro.RT_62,
+  [91165] = T.ExtermPro.RT_63,
+  [91166] = T.ExtermPro.RT_64,
+  [91167] = T.ExtermPro.RT_65,
+  [91168] = T.ExtermPro.RT_66,
+  [91169] = T.ExtermPro.RT_67,
+  [91170] = T.ExtermPro.RT_68,
+  [91171] = T.ExtermPro.RT_69,
+  [91172] = T.ExtermPro.RT_70,
+  [91173] = T.ExtermPro.RT_71,
+  [91174] = T.ExtermPro.RT_72,
+  [91175] = T.ExtermPro.RT_73,
+  [91176] = T.ExtermPro.RT_74,
+  [91177] = T.ExtermPro.RT_75,
+  [91178] = T.ExtermPro.RT_76,
+  [91179] = T.ExtermPro.RT_77,
+  [91180] = T.ExtermPro.RT_78,
   [91181] = T.SurvivalMiniPro.RT_11,
   [91182] = T.SurvivalMiniPro.RT_12,
   [91183] = T.Defence.RT_1,
   [91184] = T.Defence.RT_1,
-  [91185] = T.ExtermPro.RT_78,
-  [91186] = T.ExtermPro.RT_79,
+  [91185] = T.ExtermPro.RT_79,
+  [91186] = T.ExtermPro.RT_80,
   [91187] = T.Defence.RT_11,
   [91201] = T.DefenceMove.RT_9,
   [91202] = T.DefenceMove.RT_9,
-  [91203] = T.ExtermPro.RT_80,
-  [91204] = T.ExtermPro.RT_81,
-  [91205] = T.ExtermPro.RT_82,
+  [91203] = T.ExtermPro.RT_81,
+  [91204] = T.ExtermPro.RT_82,
+  [91205] = T.ExtermPro.RT_83,
   [91206] = T.SurvivalMiniPro.RT_13,
   [91207] = T.SurvivalMiniPro.RT_14,
   [91208] = T.Defence.RT_12,
@@ -3609,8 +3641,8 @@ local ReadOnly = {
   [91211] = T.SurvivalMiniPro.RT_16,
   [91212] = T.Defence.RT_14,
   [91213] = T.Defence.RT_15,
-  [91221] = T.ExtermPro.RT_83,
-  [91222] = T.ExtermPro.RT_84,
+  [91221] = T.ExtermPro.RT_84,
+  [91222] = T.ExtermPro.RT_85,
   [91251] = T.DefenceMove.RT_10,
   [91252] = T.DefenceMove.RT_11,
   [91253] = T.DefenceMove.RT_12,
@@ -3658,15 +3690,15 @@ local ReadOnly = {
   [614007] = T.Defence.RT_18,
   [614008] = T.Defence.RT_19,
   [614101] = T.DefenceMove.RT_19,
-  [614102] = T.ExtermPro.RT_85,
-  [614103] = T.ExtermPro.RT_86,
-  [614104] = T.ExtermPro.RT_87,
+  [614102] = T.ExtermPro.RT_86,
+  [614103] = T.ExtermPro.RT_87,
+  [614104] = T.ExtermPro.RT_88,
   [614105] = T.SurvivalMiniPro.RT_19,
   [614106] = T.SurvivalMiniPro.RT_20,
   [614107] = T.Defence.RT_20,
   [614108] = T.Defence.RT_21,
-  [615001] = T.ExtermPro.RT_88,
-  [615002] = T.ExtermPro.RT_89,
+  [615001] = T.ExtermPro.RT_89,
+  [615002] = T.ExtermPro.RT_90,
   [615003] = T.SurvivalMiniPro.RT_21,
   [615004] = T.SurvivalMiniPro.RT_22,
   [615005] = T.Defence.RT_22,
@@ -3677,34 +3709,34 @@ local ReadOnly = {
   [615010] = T.Defence.RT_1,
   [615011] = T.Defence.RT_1,
   [615012] = T.Defence.RT_1,
-  [615101] = T.ExtermPro.RT_90,
-  [615102] = T.ExtermPro.RT_91,
+  [615101] = T.ExtermPro.RT_91,
+  [615102] = T.ExtermPro.RT_92,
   [615103] = T.SurvivalMiniPro.RT_23,
   [615104] = T.SurvivalMiniPro.RT_24,
   [615105] = T.Defence.RT_24,
   [615106] = T.Defence.RT_25,
-  [616001] = T.ExtermPro.RT_92,
-  [616002] = T.ExtermPro.RT_93,
-  [616003] = T.ExtermPro.RT_94,
-  [616004] = T.ExtermPro.RT_95,
-  [616005] = T.ExtermPro.RT_96,
+  [616001] = T.ExtermPro.RT_93,
+  [616002] = T.ExtermPro.RT_94,
+  [616003] = T.ExtermPro.RT_95,
+  [616004] = T.ExtermPro.RT_96,
+  [616005] = T.ExtermPro.RT_97,
   [616006] = T.SurvivalMiniPro.RT_25,
   [616007] = T.SurvivalMiniPro.RT_26,
   [616008] = T.Defence.RT_26,
   [616009] = T.Defence.RT_27,
-  [616010] = T.Defence.RT_1,
-  [616101] = T.ExtermPro.RT_97,
-  [616102] = T.ExtermPro.RT_98,
-  [616103] = T.ExtermPro.RT_99,
-  [616104] = T.ExtermPro.RT_100,
-  [616105] = T.ExtermPro.RT_101,
+  [616010] = T.Defence.RT_28,
+  [616101] = T.ExtermPro.RT_98,
+  [616102] = T.ExtermPro.RT_99,
+  [616103] = T.ExtermPro.RT_100,
+  [616104] = T.ExtermPro.RT_101,
+  [616105] = T.ExtermPro.RT_102,
   [616106] = T.SurvivalMiniPro.RT_27,
   [616107] = T.SurvivalMiniPro.RT_28,
-  [616108] = T.Defence.RT_28,
-  [616109] = T.Defence.RT_29,
+  [616108] = T.Defence.RT_29,
+  [616109] = T.Defence.RT_30,
   [616110] = T.DefenceMove.RT_20,
-  [617001] = T.Defence.RT_30,
-  [617002] = T.Defence.RT_1,
+  [617001] = T.Defence.RT_31,
+  [617002] = T.Defence.RT_32,
   [617101] = T.DefenceMove.RT_21,
   [617102] = T.DefenceMove.RT_22
 }

@@ -1238,7 +1238,7 @@
             "id": 10199001,
             "名称": "Insoluble – Méditation",
             "icon": "",
-            "描述": "Lorsque cette arme inflige des dégâts, elle confère 1.0 points de calamité. Le maximum de calamité est de 100 points.\nLorsque le maximum est atteint, tous les points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de 10.0% pendant 15.0 s, jusqu’à 6.0 cumuls."
+            "描述": "Lorsque cette arme inflige des dégâts, elle confère 1.0 points de calamité. Le maximum de calamité est de 150 points.\nLorsque vous atteignez 100 points de calamité, 100 points de calamité sont consommés et vous obtenez 1 cumul de [Recherche] : la Vitesse de compétence augmente de 10.0% pendant 15.0 s, jusqu’à 6.0 cumuls."
           }
         ]
       },
@@ -1269,7 +1269,7 @@
             "id": 10199003,
             "名称": "Énigme – Inconnu",
             "icon": "",
-            "描述": "Lorsque des Dégâts de compétence se déclenchent, vous obtenez [2.0 × Vitesse de compétence] points de calamité.",
+            "描述": "Lorsque des Dégâts de compétence déclenchent un Effet supplémentaire, vous obtenez [2.0 × Vitesse de compétence] points de calamité.",
             "解锁": {
               "Prototype : Énigme insoluble": 30,
               "Cristal Électro": 90,
@@ -1426,7 +1426,7 @@
             "id": 10199010,
             "名称": "Insoluble – Vérité",
             "icon": "",
-            "描述": "Dégâts de compétence supplémentaires de votre attribut +50.0%.\nLorsque [Recherche] atteint le nombre maximal de cumuls, infliger des Dégâts de compétence inflige également 3500.0% dégâts de calamité aux ennemis dans un rayon de 3.0 m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et leur bonus de dégâts est calculé selon [Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les 1.0 s.",
+            "描述": "Dégâts de compétence supplémentaires de votre attribut +50.0%. Lorsque [Recherche] atteint le nombre maximal de cumuls, les Dégâts de compétence qui déclenchent un Effet supplémentaire infligent également 3500.0% dégâts de calamité aux ennemis dans un rayon de 3.0 m autour de la cible. Ces dégâts sont considérés comme des Dégâts de compétence et leur bonus de dégâts est calculé selon [Vitesse de compétence - 100 %]. Cet effet peut se déclencher au maximum une fois toutes les 1.0 s.",
             "加成": {
               "技能追伤": 0.5
             }
@@ -9872,7 +9872,7 @@
     "icon": "Cannon_Huozhe",
     "名称": "Le poids de vivre",
     "版本": "1.7",
-    "描述": "活下去，是生者需要背负的祝福。",
+    "描述": "Continuer à vivre est une bénédiction dont les vivants doivent porter le poids.",
     "类型": [
       "远程",
       "榴炮"

@@ -15996,7 +15996,7 @@
   },
   {
     "id": 260004,
-    "name": "Vieil homme abattu",
+    "name": "Vieille femme abattue",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -16086,7 +16086,7 @@
   },
   {
     "id": 260019,
-    "name": "Citadin enjoué",
+    "name": "Citadine enjouée",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -16116,7 +16116,7 @@
   },
   {
     "id": 260024,
-    "name": "Client serviable",
+    "name": "Cliente serviable",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -16128,7 +16128,7 @@
   },
   {
     "id": 260026,
-    "name": "Employé du théâtre",
+    "name": "Employée du théâtre",
     "camp": "NPC",
     "type": "Normal"
   },

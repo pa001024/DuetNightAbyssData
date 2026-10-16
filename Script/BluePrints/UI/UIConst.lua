@@ -733,8 +733,8 @@ UIConst.OptimizeSwitch = {
     UI_ADD_IN_CACHE = false
   },
   Mobile = {
-    UI_WRAPPING_WITH_INVALIDBOX = true,
-    UI_WRAPPING_WITH_RETAINERBOX = true,
+    UI_WRAPPING_WITH_INVALIDBOX = false,
+    UI_WRAPPING_WITH_RETAINERBOX = false,
     UI_ADD_IN_CACHE = false
   }
 }

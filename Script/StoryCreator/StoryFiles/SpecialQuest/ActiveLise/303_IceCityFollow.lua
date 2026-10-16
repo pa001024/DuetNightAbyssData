@@ -154,6 +154,12 @@ return {
             startPort = "Out",
             endQuest = "17917837606907985871",
             endPort = "In"
+          },
+          {
+            startQuest = "17873048713275706053",
+            startPort = "Out",
+            endQuest = "1791878631316871",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -411,6 +417,22 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["1791878631316871"] = {
+            key = "1791878631316871",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3514.605071225494, y = 139.94466403162045},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {101101},
+              bStoreToServer = true
             }
           }
         },

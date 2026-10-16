@@ -503,11 +503,16 @@ return {
             key = "179178478348111408879",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 2860.7922077922076, y = 474.15584415584425},
+            pos = {x = 2855.992207792208, y = 468.15584415584425},
             propsData = {
-              SoundStateType = 3,
+              SoundStateType = 0,
               SoundPriority = 0,
-              SoundType = 0
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_7/0188_story_talk_with_fuerweisi_cut",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {101901},
+              bStoreToServer = true
             }
           },
           ["179178481926511409320"] = {

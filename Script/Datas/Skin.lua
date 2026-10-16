@@ -1268,8 +1268,9 @@ return ReadOnly("Skin", {
     },
     Des = "UI_Skin_Des_410301",
     DisplayPath = "FileMediaSource'/Game/Asset/UIVideo/Gacha/Gacha_GetSkin_SPLise01.Gacha_GetSkin_SPLise01'",
-    ExcludeCollect = true,
+    GachaResultDisplayPath = "FileMediaSource'/Game/Asset/UIVideo/SystemShow/Gacha/Video_Gacha_ExclusiveDraw_SpLise01.Video_Gacha_ExclusiveDraw_SpLise01'",
     GetDisplayType = 1,
+    GetSoundPath = "event:/ui/btc/cg_splise_skin01",
     GoShopTypeId = {140520},
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_SPLise01.T_Head_SPLise01'",
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Avatar/T_Gacha_AvatarSPLise01.T_Gacha_AvatarSPLise01'",
@@ -1285,7 +1286,9 @@ return ReadOnly("Skin", {
     SkinName = "UI_Skin_Name_410301",
     SkinTag = "SpLise01",
     Sound = "SOUND_ITEM_NORMAL",
-    TimerInterval = T.RT_17
+    TimerInterval = T.RT_17,
+    UIDisplayTime = 9.5,
+    VideoCover = "Texture2D'/Game/UI/Texture/Dynamic/Image/SkinVideo/T_SkinVideo_SpLise.T_SkinVideo_SpLise'"
   },
   [510101] = {
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Avatar/T_Bust_Songlu01.T_Bust_Songlu01'",

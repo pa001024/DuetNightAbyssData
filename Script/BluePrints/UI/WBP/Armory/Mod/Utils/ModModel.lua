@@ -1421,9 +1421,9 @@ function M:HasTargetEquipedMod(TargetUuid, ModId)
     return false
   end
   for _, Slot in pairs(Target:GetModSuit()) do
-    if not string.isempty(Slot.ModEid) then
+    if self:IsModUuidValid(Slot.ModEid) then
       local Mod = self:GetMod(Slot.ModEid)
-      if Mod.ModId == ModId then
+      if Mod and Mod.ModId == ModId then
         return true
       end
     end

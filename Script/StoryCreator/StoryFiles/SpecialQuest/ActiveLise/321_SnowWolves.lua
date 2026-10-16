@@ -224,7 +224,7 @@ return {
           ["1790173744869854"] = {
             key = "1790173744869854",
             type = "ChangeStaticCreatorNode",
-            name = "生成卡森和两只",
+            name = "生成卡森和三只",
             pos = {x = 1387.7852925583195, y = 294.89061462759145},
             propsData = {
               ActiveEnable = true,
@@ -235,7 +235,8 @@ return {
               StaticCreatorIdList = {
                 351192092,
                 351192093,
-                351192095
+                351192095,
+                351192097
               }
             }
           },
@@ -258,7 +259,7 @@ return {
             pos = {x = 2240.850604877579, y = 281.200287849107},
             propsData = {
               KillMonsterType = "Id",
-              MonsterNeedNums = 4,
+              MonsterNeedNums = 3,
               IsShow = false,
               GuideType = "P",
               GuideName = "",
@@ -266,7 +267,6 @@ return {
               StaticCreatorIdList = {
                 351192094,
                 351192096,
-                351192097,
                 351192098
               }
             }
@@ -332,7 +332,7 @@ return {
           ["1790173744869860"] = {
             key = "1790173744869860",
             type = "ChangeStaticCreatorNode",
-            name = "生成目标四只",
+            name = "生成目标三只",
             pos = {x = 3084.067270467339, y = 112.75538350538312},
             propsData = {
               ActiveEnable = true,
@@ -342,7 +342,6 @@ return {
               NewTargetPointName = "",
               StaticCreatorIdList = {
                 351192096,
-                351192097,
                 351192098,
                 351192094
               }
@@ -351,7 +350,7 @@ return {
           ["1790173744869861"] = {
             key = "1790173744869861",
             type = "ChangeStaticCreatorNode",
-            name = "销毁看到的两只",
+            name = "销毁看到的三只",
             pos = {x = 2517.339123614192, y = 112.76159951159957},
             propsData = {
               ActiveEnable = false,
@@ -359,7 +358,11 @@ return {
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {351192093, 351192095}
+              StaticCreatorIdList = {
+                351192093,
+                351192095,
+                351192097
+              }
             }
           },
           ["17901739111622304"] = {

@@ -878,8 +878,12 @@ function M:SetSkinCollectScore(ItemData)
   local SkinCollectTaskPopupModel = require("BluePrints.UI.WBP.Activity.Widget.SkinCollect.SkinCollectTaskPopupModel")
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    local CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(SkinCollectTaskPopupModel.SKinCollectTaskEventId)
-    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(SkinCollectTaskPopupModel.SKinCollectTaskEventId, ItemData.TypeId) then
+    local EventId = SkinCollectTaskPopupModel.GetSkinCollectTaskEventId(self.ParentWidget and self.ParentWidget.CurActivityId)
+    local CurrentScore, MaxScore = 0, 0
+    if EventId then
+      CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(EventId)
+    end
+    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(EventId, ItemData.TypeId) then
       self.SkinCollectOpen = true
       self.Shop_SkinPreview_CollectItem_2:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.Shop_SkinPreview_CollectItem_2.Group_SkinCollectScore:SetVisibility(ESlateVisibility.SelfHitTestInvisible)

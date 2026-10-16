@@ -504,11 +504,16 @@ function M:CloseMenuAnchor()
 end
 
 function M:SetSkinCollectScore(Content)
+  self.Group_SkinCollect:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local SkinCollectTaskPopupModel = require("BluePrints.UI.WBP.Activity.Widget.SkinCollect.SkinCollectTaskPopupModel")
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    local CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(SkinCollectTaskPopupModel.SKinCollectTaskEventId)
-    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(SkinCollectTaskPopupModel.SKinCollectTaskEventId, Content.Id) then
+    local EventId = SkinCollectTaskPopupModel.GetSkinCollectTaskEventId()
+    local CurrentScore, MaxScore = 0, 0
+    if EventId then
+      CurrentScore, MaxScore = Avatar.AppearanceCollectEvent:SkinCollectScoreInfo(EventId)
+    end
+    if CurrentScore < MaxScore and EMCache:Get("SkinCollectTaskCheckBox") and Avatar.AppearanceCollectEvent:IsSkinCollectAppearance(EventId, Content.Id) then
       self.Group_SkinCollect:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.Text_ScoreNum:SetText(Avatar:GetAppearanceScore(Content.ItemType, Content.Id) or "0")
       self.Text_ScoreDesc:SetText(string.format(GText("UI_AppearanceCollect_CurrentProgress"), CurrentScore, MaxScore))

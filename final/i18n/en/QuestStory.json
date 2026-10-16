@@ -110074,7 +110074,7 @@
                 "id": 12070081,
                 "content": "...",
                 "npc": 260005,
-                "speakerName": "Forlorn Old Man",
+                "speakerName": "Forlorn Old Woman",
                 "next": 12070082
               },
               {
@@ -114071,7 +114071,8 @@
             "type": "TalkNode",
             "name": "无缝对话看城墙",
             "next": [
-              "178739061344924907242"
+              "178739061344924907242",
+              "17918787001821142268"
             ],
             "dialogues": [
               {
@@ -114213,6 +114214,12 @@
                 "npc": 260001
               }
             ]
+          },
+          {
+            "id": "17918787001821142268",
+            "type": "PlayOrStopBGMNode",
+            "name": "BGM节点",
+            "resource": "bgm/cbt03/0071_lise_secret"
           }
         ]
       }

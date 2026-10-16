@@ -1,6 +1,5 @@
 local M = {}
 local AvatarUtils = require("BluePrints.Client.AvatarUtils")
-M.SKinCollectTaskEventId = 10302402
 local BUTTON_STATE_GET = 0
 local BUTTON_STATE_NOT_DONE = 1
 local BUTTON_STATE_GOT = 2
@@ -91,6 +90,32 @@ local function GetAvatar()
     return nil
   end
   return GWorld:GetAvatar()
+end
+
+function M.GetSkinCollectTaskEventId(EventId)
+  local RewardConfig = DataMgr.AppearanceCollectReward
+  if type(RewardConfig) ~= "table" then
+    return nil
+  end
+  if nil ~= EventId then
+    local SourceEventId = tonumber(EventId)
+    return SourceEventId and RewardConfig[SourceEventId] and SourceEventId or nil
+  end
+  local Avatar = GetAvatar()
+  local CachedEventId = tonumber(EMCache:Get("SkinCollectTaskEventId"))
+  if CachedEventId and RewardConfig[CachedEventId] and (not (Avatar and Avatar.ActivityTimeOpen) or Avatar.ActivityTimeOpen[CachedEventId]) then
+    return CachedEventId
+  end
+  if not Avatar or not Avatar.ActivityTimeOpen then
+    return nil
+  end
+  local ActiveEventId
+  for CandidateEventId in pairs(RewardConfig) do
+    if type(CandidateEventId) == "number" and Avatar.ActivityTimeOpen[CandidateEventId] and (not ActiveEventId or CandidateEventId > ActiveEventId) then
+      ActiveEventId = CandidateEventId
+    end
+  end
+  return ActiveEventId
 end
 
 local function GetAppearanceCollectEventData(EventId)

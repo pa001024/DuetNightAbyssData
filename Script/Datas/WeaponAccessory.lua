@@ -995,7 +995,7 @@ return ReadOnly("WeaponAccessory", {
     RegainItemId = 110,
     RegainItemNum = 10,
     SortPriority = 24,
-    Sound = "UI_Accessory_Unlock_Exchange",
+    Sound = "SOUND_ITEM_CUTE",
     StanceFXTag = "1050202",
     StanceFXType = "HeavyAttack",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
@@ -1012,10 +1012,12 @@ return ReadOnly("WeaponAccessory", {
     RegainItemId = 110,
     RegainItemNum = 10,
     SortPriority = 24,
-    Sound = "UI_Accessory_Unlock_Exchange",
+    Sound = "SOUND_ITEM_CUTE",
     StanceFXTag = "1040302",
     StanceFXType = "HeavyAttack",
     UnlockOption = "UI_Accessory_Unlock_Exchange",
+    Video = "FileMediaSource'/Game/Asset/UIVideo/Weapon/Dualblade_Xuanwo.Dualblade_Xuanwo'",
+    VideoCover = "Texture2D'/Game/UI/Texture/Dynamic/Image/SkinVideo/T_SkinVideo_Xuanwo.T_SkinVideo_Xuanwo'",
     WeaponAccessoryId = 20005
   },
   [30001] = {

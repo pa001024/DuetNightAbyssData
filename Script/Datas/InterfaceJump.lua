@@ -1260,6 +1260,70 @@ return ReadOnly("InterfaceJump", {
     PortalUnlockCondition = T.RT_1,
     PortalUnlockTips = "UI_Locked_Des_GameEvent"
   },
+  [156] = {
+    InterfaceJumpId = 156,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "132",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [157] = {
+    InterfaceJumpId = 157,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "147",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [158] = {
+    InterfaceJumpId = 158,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "134",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [159] = {
+    InterfaceJumpId = 159,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "121004",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [160] = {
+    InterfaceJumpId = 160,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "149",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [161] = {
+    InterfaceJumpId = 161,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "148",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [162] = {
+    InterfaceJumpId = 162,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "111007",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
+  [163] = {
+    InterfaceJumpId = 163,
+    JumpParameter1 = "JumpToEventPage",
+    JumpParameter2 = "135",
+    JumpType = "SelfDefinedJump",
+    PortalUnlockCondition = T.RT_1,
+    PortalUnlockTips = "UI_Locked_Des_GameEvent"
+  },
   [1101] = {
     InterfaceJumpId = 1101,
     JumpParameter1 = "JumpToArmory",

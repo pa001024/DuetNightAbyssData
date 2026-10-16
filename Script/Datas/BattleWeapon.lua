@@ -801,7 +801,11 @@ return ReadOnly("BattleWeapon", {
     InitialWeaponSp = 0,
     MaxComboCount = 120,
     MaxWeaponSp = 150,
-    ModApplicationType = T.RT_13,
+    ModApplicationType = {
+      2,
+      101,
+      24
+    },
     ModVolume = 1,
     PassiveEffects = {10199},
     PassiveEffectsDesc = "SKILL_Psionic_DESC",

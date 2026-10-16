@@ -28,13 +28,13 @@ return ReadOnly("MultiplayerChallenge", {
     UnlockCondition = 120106
   },
   [3] = {
-    ChallengeDes = "UI_DUNGEON_CONTENT_EXTERMINATE_1",
+    ChallengeDes = "UI_DUNGEON_CONTENT_TESTING_1",
     ChallengeId = 3,
-    ChallengeName = "UI_DUNGEON_DES_EXTERMINATE_1",
+    ChallengeName = "UI_DUNGEON_DES_TESTING_1",
     DungeonId = {91125},
     ImgPath = "/Game/UI/Texture/Static/Image/AreaCoop/T_AreaCoop_02.T_AreaCoop_02",
     TeleportId = 8002,
-    TeleportName = "UI_TELEPORTPOINT_NAME_EXTERMINATE",
+    TeleportName = "UI_TELEPORTPOINT_NAME_EXTERNPRO",
     TitleName = "UI_TELEPORTPOINT_NAME_104101_11",
     UnlockCondition = 120106
   },

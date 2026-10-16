@@ -132778,7 +132778,7 @@ Scene: Fina's home at night. She hears a knock on the door.]],
     ContentEN = "\"I'll never let anyone die to Filthoids again.\"",
     ContentFR = "« Je ne regarderai plus jamais quelqu’un mourir à cause d’un Souillé. »",
     ContentJP = "「 もう二度と、<Default note=\"text:エジュウ\">穢獣</>に殺される人を見過ごしたりしない」……",
-    ContentKR = "\"더는 필토이드가 사람을 해치는 걸 지켜보지 않겠어.\"",
+    ContentKR = "\"더 이상 그 누구도 필토이드에게 죽는 걸 보고만 있지 않겠다.\"",
     ContentTC = "「我不會再看著任何人被穢獸殺死」……",
     GUID = "1E374FF4"
   },
@@ -135046,7 +135046,7 @@ In the slums, she knocks on a weathered door. In the square, she sits beside a g
   ["1E377D3C"] = {
     Content = "没事，不想说就不说，我只是有点惊讶而已。",
     ContentEN = "That's all right. You don't have to tell me. I just wasn't expecting it, that's all.",
-    ContentFR = "Ce n’est rien. Si vous ne voulez pas en parler, n’en parlons pas. Je suis simplement surpris.",
+    ContentFR = "Ce n’est rien. Si vous ne voulez pas en parler, n’en parlons pas. Je suis simplement surprise.",
     ContentJP = "そっか。話したくないなら、無理に聞かないよ。ただ、びっくりしただけ。",
     ContentKR = "괜찮아요. 그냥 좀 놀라서 그런 거지, 말하기 곤란하면 안 하셔도 돼요.",
     ContentTC = "沒事，不想說就不說，我只是有點驚訝而已。",
@@ -137455,7 +137455,7 @@ In the slums, she knocks on a weathered door. In the square, she sits beside a g
     ContentEN = "<H>\"No matter what happens, be brave, and live on.\"</>",
     ContentFR = "<H>« Quoi qu’il arrive... tiens bon... et vis. »</>",
     ContentJP = "<H>「何があっても、ちゃんと生きて」</>",
-    ContentKR = "<H>\"무슨 일이 있어도, 잘 살아\"</>",
+    ContentKR = "<H>\"무슨 일이 있어도, 잘 살아.\"</>",
     ContentTC = "<H>「無論發生什麼，好好活下去。」</>",
     GUID = "1E37ADA2"
   },

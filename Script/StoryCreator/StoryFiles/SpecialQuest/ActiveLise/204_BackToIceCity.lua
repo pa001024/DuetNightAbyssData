@@ -126,15 +126,21 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "17872280407927899427",
+            startQuest = "17872282021667900956",
+            startPort = "Out",
+            endQuest = "17917825538703424498",
+            endPort = "In"
+          },
+          {
+            startQuest = "17872285224387903268",
             startPort = "Out",
             endQuest = "17917820677973423987",
             endPort = "In"
           },
           {
-            startQuest = "17872282021667900956",
+            startQuest = "17872280407927899427",
             startPort = "Out",
-            endQuest = "17917825538703424498",
+            endQuest = "17919646449901005",
             endPort = "In"
           }
         },
@@ -344,11 +350,16 @@ return {
             key = "17917820677973423987",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1894.0620490620488, y = 145.935064935065},
+            pos = {x = 2190.149005583788, y = 151.15245623941283},
             propsData = {
-              SoundStateType = 3,
+              SoundStateType = 0,
               SoundPriority = 0,
-              SoundType = 0
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {101101},
+              bStoreToServer = true
             }
           },
           ["17917825538703424498"] = {
@@ -360,6 +371,22 @@ return {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["17919646449901005"] = {
+            key = "17919646449901005",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1899.016304347826, y = 156.86956521739125},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/1_7/0195_cs_lise_past",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {101101},
+              bStoreToServer = true
             }
           }
         },

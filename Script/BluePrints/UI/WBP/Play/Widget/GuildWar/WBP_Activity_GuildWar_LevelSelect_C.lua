@@ -77,9 +77,18 @@ end
 function M:InitGamepadKeyEvents()
   self:ClearAllKeyEvents()
   self:AddKeyClickEvent("Gamepad_FaceButton_Left", self.OnGamepadShopShortPress)
+  self:AddKeyClickEvent(UIConst.GamePadKey.SpecialRight, self.OnGamepadDefaultListShortPress)
   self:AddLongPressEvent("Gamepad_FaceButton_Left", Const.LongPressThreshold, self.OnGamepadRankingLongPressStart, self.OnGamepadRankingLongPressCancel, self.OnGamepadRankingLongPress)
   self:AddLongPressEvent(Const.GamepadLeftThumbstick, Const.LongPressThreshold, self.OnJumpFloorLongPressStart, self.OnJumpFloorLongPressCancel, self.OnJumpFloorLongPressFinished)
   self:AddLongPressEvent(Const.GamepadRightThumbstick, Const.LongPressThreshold, self.OnRewardPreviewLongPressStart, self.OnRewardPreviewLongPressCancel, self.OnGamepadRewardPreviewLongPress)
+  self:AddLongPressEvent(UIConst.GamePadKey.SpecialRight, Const.LongPressThreshold, self.OnMoreLongPressStart, self.OnMoreLongPressCancel, self.OnMoreLongPressFinished)
+end
+
+function M:OnGamepadDefaultListShortPress()
+  if self.DefaultList and self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
+    self.DefaultList:OnSpecialRightUp()
+  end
+  return UIUtils.Handled, true
 end
 
 function M:CanHandleGamepadShortcuts()
@@ -196,6 +205,30 @@ function M:OnJumpFloorLongPressFinished()
   if self:CanTriggerJumpFloor() then
     self.Btn_JumpFloor:OnClicked_JumpFloor()
   end
+end
+
+function M:CanTriggerMore()
+  return self:CanHandleGamepadShortcuts() and CommonConst.RaidSeasonType.Floor == self.RaidSeasonType and self.Btn_More and self.Btn_More:GetVisibility() ~= ESlateVisibility.Collapsed
+end
+
+function M:OnMoreLongPressStart()
+  if self:CanTriggerMore() and self.Btn_More.StartGamepadLongPress then
+    self.Btn_More:StartGamepadLongPress()
+  end
+end
+
+function M:OnMoreLongPressCancel()
+  if self.Btn_More and self.Btn_More.StopGamepadLongPress then
+    self.Btn_More:StopGamepadLongPress()
+  end
+end
+
+function M:OnMoreLongPressFinished()
+  self:OnMoreLongPressCancel()
+  if self:CanTriggerMore() then
+    self.Btn_More:OnClicked_BtnMore()
+  end
+  return UIUtils.Handled, true
 end
 
 function M:RefreshJumpFloorGamepadKey(CurInputDevice)
@@ -1389,6 +1422,9 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
     return
   end
+  if self.Btn_More and self.Btn_More.SetControllerMoreVisible then
+    self.Btn_More:SetControllerMoreVisible(not IsUseKeyAndMouse)
+  end
   if IsUseKeyAndMouse then
     self.Com_Key_More:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_Ranking.Key_Shop:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -1539,7 +1575,7 @@ function M:OnPreviewKeyUp(MyGeometry, InKeyEvent)
   end
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if ("Gamepad_FaceButton_Left" == InKeyName or InKeyName == Const.GamepadLeftThumbstick or InKeyName == Const.GamepadRightThumbstick) and self:HasLongPressEvent(InKeyName) then
+  if ("Gamepad_FaceButton_Left" == InKeyName or InKeyName == Const.GamepadLeftThumbstick or InKeyName == Const.GamepadRightThumbstick or InKeyName == UIConst.GamePadKey.SpecialRight and self:CanTriggerMore()) and self:HasLongPressEvent(InKeyName) then
     self:ProcessOnKeyUp(MyGeometry, InKeyEvent)
     return UWidgetBlueprintLibrary.Handled()
   end
@@ -1565,7 +1601,7 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
       end
       return UWidgetBlueprintLibrary.Handled()
     end
-    if ("Gamepad_FaceButton_Left" == InKeyName or InKeyName == Const.GamepadLeftThumbstick or InKeyName == Const.GamepadRightThumbstick) and self:HasLongPressEvent(InKeyName) then
+    if ("Gamepad_FaceButton_Left" == InKeyName or InKeyName == Const.GamepadLeftThumbstick or InKeyName == Const.GamepadRightThumbstick or InKeyName == UIConst.GamePadKey.SpecialRight and self:CanTriggerMore()) and self:HasLongPressEvent(InKeyName) then
       if not self:CanHandleGamepadShortcuts() then
         return UWidgetBlueprintLibrary.UnHandled()
       end

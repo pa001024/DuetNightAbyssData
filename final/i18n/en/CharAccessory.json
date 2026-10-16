@@ -3960,7 +3960,7 @@
   },
   {
     "id": 31007,
-    "name": "Victory: Snowfall Serenade",
+    "name": "Victory: Hellborne Roar",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_07",
     "rarity": 5,
@@ -5060,7 +5060,8 @@
     "desc": "Footsteps echo through the night... a beacon of hope, or a tempting snare?",
     "icon": "T_Fashion_Fx32_03",
     "rarity": 5,
-    "unlock": "Available from events"
+    "unlock": "Available from events",
+    "hide": 1
   },
   {
     "id": 70071,
