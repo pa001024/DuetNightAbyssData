@@ -12,7 +12,7 @@ export function charAccessoryModule(ctx: ModuleContext): VNodeTree {
     const table = (ctx.dm.getTable("CharAccessory") as Record<string, any>) || {}
     const result: VNodeTree[] = []
     for (const item of Object.values(table)) {
-        if (!item || typeof item !== "object" || item.IsHide) continue
+        if (!item || typeof item !== "object") continue
         const id = Number(item.AccessoryId ?? 0)
         if (!id) continue
         result.push({
@@ -22,6 +22,7 @@ export function charAccessoryModule(ctx: ModuleContext): VNodeTree {
             icon: iconName(item.Icon),
             rarity: item.Rarity ?? 0,
             unlock: T(item.UnlockOption ?? ""),
+            ...(item.IsHide ? { hide: 1 } : {}),
         })
     }
     result.sort((a, b) => Number((a as Record<string, unknown>).id ?? 0) - Number((b as Record<string, unknown>).id ?? 0))

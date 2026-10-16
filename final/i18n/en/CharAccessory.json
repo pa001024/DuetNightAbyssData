@@ -104,6 +104,15 @@
     "unlock": "Available through Prism Exchange"
   },
   {
+    "id": 10014,
+    "name": "Dragon of Fantasy - Liuliu",
+    "desc": "In every era, dragons have captivated hearts and stirred imaginations — powerful, untamed, and ever elusive. Their rarity only deepens the mystery, making them the perfect canvas for boundless fantasy.",
+    "icon": "T_Fashion_Head_Dinosaur",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 10015,
     "name": "Lunoeggy Plush Doll",
     "desc": "Under the eggshell is still eggshell, absolutely not luno, never!",
@@ -240,12 +249,39 @@
     "unlock": "Available through Myriad"
   },
   {
+    "id": 10033,
+    "name": "Axeident",
+    "desc": "Moral of the story? If an axe falls into a lake, it's probably headed for an innocent nymph's skull.",
+    "icon": "T_Fashion_Head06",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop",
+    "hide": 1
+  },
+  {
+    "id": 10034,
+    "name": "Sleepy Capybara",
+    "desc": "zZZ...zZZ...zZZ...zZZ...zZZ...",
+    "icon": "T_Fashion_Head04",
+    "rarity": 4,
+    "unlock": "Available at Lunoeggy's Impression Shop",
+    "hide": 1
+  },
+  {
     "id": 10035,
     "name": "Kitty Headpiece",
     "desc": "Vivacious, adorable, lively, beautiful... No words in the world do justice to the magical allure of these feline ears.",
     "icon": "T_Fashion_Head_CatEar",
     "rarity": 4,
     "unlock": "Available at Shop"
+  },
+  {
+    "id": 10036,
+    "name": "Snowveil Spark",
+    "desc": "Pitter-patter antler clatter!",
+    "icon": "T_Fashion_Head05",
+    "rarity": 5,
+    "unlock": "Available at Shop",
+    "hide": 1
   },
   {
     "id": 10037,
@@ -744,6 +780,15 @@
     "unlock": "Available from events"
   },
   {
+    "id": 10100,
+    "name": "Ritual Censer: Leaden Grey",
+    "desc": "Are we making offerings to Heaven... or to ourselves?",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 10101,
     "name": "Hushed Shade: Violet",
     "desc": "Are we making offerings to Heaven... or to ourselves?",
@@ -1048,12 +1093,30 @@
     "unlock": "Available from events"
   },
   {
+    "id": 10139,
+    "name": "Festival Balloon: Azure",
+    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
+    "icon": "T_Fashion_Head60_04",
+    "rarity": 3,
+    "unlock": "Available from events",
+    "hide": 1
+  },
+  {
     "id": 10140,
     "name": "Ironbloom",
     "desc": "Binding life within steel and machinery has always been one of alchemy's enduring pursuits.",
     "icon": "T_Fashion_Head62",
     "rarity": 3,
     "unlock": "Available from events"
+  },
+  {
+    "id": 10141,
+    "name": "Outer Peaks Cog",
+    "desc": "In Outer Peaks, even the mightiest machine depends on every single cog.",
+    "icon": "T_Fashion_Head73",
+    "rarity": 3,
+    "unlock": "Available from events",
+    "hide": 1
   },
   {
     "id": 10142,
@@ -1110,6 +1173,15 @@
     "icon": "T_Fashion_Head60_01",
     "rarity": 3,
     "unlock": "Available from events"
+  },
+  {
+    "id": 10149,
+    "name": "Festival Balloon: Mint",
+    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
+    "icon": "T_Fashion_Head60_02",
+    "rarity": 3,
+    "unlock": "Available from events",
+    "hide": 1
   },
   {
     "id": 10150,
@@ -1208,6 +1280,78 @@
     "unlock": "Available from events"
   },
   {
+    "id": 10162,
+    "name": "UI_Accessory_Name_10162",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 10163,
+    "name": "UI_Accessory_Name_10163",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 10164,
+    "name": "UI_Accessory_Name_10164",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 10165,
+    "name": "UI_Accessory_Name_10165",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 10166,
+    "name": "UI_Accessory_Name_10166",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 10167,
+    "name": "UI_Accessory_Name_10167",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 10168,
+    "name": "UI_Accessory_Name_10168",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 10169,
+    "name": "UI_Accessory_Name_10169",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -1238,6 +1382,15 @@
     "icon": "T_Fashion_Fx13",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 11005,
+    "name": "Bouncy Glide",
+    "desc": "Swaying to and fro, we dance to a merry tune.",
+    "icon": "T_Fashion_Fx16",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange",
+    "hide": 1
   },
   {
     "id": 11006,
@@ -1520,6 +1673,24 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 12031,
+    "name": "Sailor",
+    "desc": "What's a little pain when you've weathered the storm?",
+    "icon": "T_Fashion_Hat22",
+    "rarity": 4,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 12032,
+    "name": "Wrathscale",
+    "desc": "Go on. Touch it.",
+    "icon": "T_Fashion_Hat23",
+    "rarity": 4,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
     "id": 12121,
     "name": "Starry Hopes",
     "desc": "The bell chimes on the year's shortest day, and wishes are entrusted to the night, to be carried on starlight toward tomorrow.",
@@ -1550,6 +1721,24 @@
     "icon": "T_Fashion_Head50",
     "rarity": 4,
     "unlock": "Available at Shop"
+  },
+  {
+    "id": 12125,
+    "name": "The Liberator: Opaque White",
+    "desc": "Put it on, and feel a strange magic take hold — as if it's finally okay to let your true self out to play.",
+    "icon": "T_Fashion_Head51",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 12126,
+    "name": "The Liberator: Caramel",
+    "desc": "Put it on, and feel a strange magic take hold — as if it's finally okay to let your true self out to play.",
+    "icon": "T_Fashion_Head47",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 12127,
@@ -1880,12 +2069,30 @@
     "unlock": "Available from events"
   },
   {
+    "id": 13038,
+    "name": "修女主题配饰.红（待包装）",
+    "desc": "The divine form was left to the mortal world, a warmth beyond fading.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
+  },
+  {
     "id": 13039,
     "name": "Sacred Remains: Opaque White",
     "desc": "The divine form was left to the mortal world, a warmth beyond fading.",
     "icon": "T_Fashion_Waist33_02",
     "rarity": 5,
     "unlock": "Available from events"
+  },
+  {
+    "id": 13040,
+    "name": "修女主题配饰.紫（待包装）",
+    "desc": "The divine form was left to the mortal world, a warmth beyond fading.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
   },
   {
     "id": 13041,
@@ -1918,6 +2125,42 @@
     "icon": "T_Fashion_Back49_02",
     "rarity": 5,
     "unlock": "Available at Shop"
+  },
+  {
+    "id": 13045,
+    "name": "UI_Accessory_Name_13045",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 13046,
+    "name": "UI_Accessory_Name_13046",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 13047,
+    "name": "UI_Accessory_Name_13047",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available at Shop",
+    "hide": 1
+  },
+  {
+    "id": 13048,
+    "name": "UI_Accessory_Name_13048",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available at Shop",
+    "hide": 1
   },
   {
     "id": 13049,
@@ -2384,6 +2627,15 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 20048,
+    "name": "UI_Accessory_Name_20048",
+    "desc": "What is it that shimmers in their eyes — tears, or the soft ripples of moonlight?",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 20049,
     "name": "Sigil of Zhuyin: Gilt",
     "desc": "What is done cannot be undone.",
@@ -2462,6 +2714,42 @@
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
     "unlock": "Available at Shop"
+  },
+  {
+    "id": 20059,
+    "name": "Fengshi Visor: White Sakura",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20060,
+    "name": "僵尸主题脸饰2【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20061,
+    "name": "僵尸主题脸饰3【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20062,
+    "name": "僵尸主题脸饰4【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 20063,
@@ -2624,12 +2912,30 @@
     "unlock": "Available from events"
   },
   {
+    "id": 20083,
+    "name": "修女-脸部-黑（待包装）",
+    "desc": "The deity casts its light among mortals, waiting for faith to answer.",
+    "icon": "T_Fashion_Face26_03",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
+  },
+  {
     "id": 20084,
     "name": "Sacred Radiance: Celeste",
     "desc": "The deity casts its light among mortals, waiting for faith to answer.",
     "icon": "T_Fashion_Face26_02",
     "rarity": 5,
     "unlock": "Available from events"
+  },
+  {
+    "id": 20085,
+    "name": "修女-脸部-红（待包装）",
+    "desc": "The deity casts its light among mortals, waiting for faith to answer.",
+    "icon": "T_Fashion_Face26_01",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
   },
   {
     "id": 20086,
@@ -2710,6 +3016,60 @@
     "icon": "T_Fashion_Face29_04",
     "rarity": 5,
     "unlock": "Available from events"
+  },
+  {
+    "id": 20096,
+    "name": "Midnight Veil: Rust Red",
+    "desc": "Even the night falls for the smile hidden behind the veil.",
+    "icon": "T_Fashion_Face29_03",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
+  },
+  {
+    "id": 20097,
+    "name": "Midnight Veil: White Sakura",
+    "desc": "Even the night falls for the smile hidden behind the veil.",
+    "icon": "T_Fashion_Face29_01",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
+  },
+  {
+    "id": 20098,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_03",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20099,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_02",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20100,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_04",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20101,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_01",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 20102,
@@ -2856,6 +3216,24 @@
     "unlock": "Available from events"
   },
   {
+    "id": 21008,
+    "name": "Eldritch Talisman: Gilt",
+    "desc": "With but a thought, the talisman stirs, and eldritch power answers.",
+    "icon": "T_Fashion_Fx17_01",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
+  },
+  {
+    "id": 21009,
+    "name": "Everbloom Flurry",
+    "desc": "UI_Accessory_Desc_21007",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
+  },
+  {
     "id": 21010,
     "name": "Everbloom Flurry",
     "desc": "A crimson tide surging from the other shore.",
@@ -2878,6 +3256,15 @@
     "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "Available from events"
+  },
+  {
+    "id": 21013,
+    "name": "UI_Accessory_Name_21011",
+    "desc": "UI_Accessory_Desc_21010",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange",
+    "hide": 1
   },
   {
     "id": 21014,
@@ -2934,6 +3321,24 @@
     "icon": "T_Fashion_Fx49",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 29998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 29999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 30001,
@@ -3006,6 +3411,60 @@
     "icon": "T_Fashion_Waist05",
     "rarity": 4,
     "unlock": "Available at Lunoeggy's Impression Shop"
+  },
+  {
+    "id": 30010,
+    "name": "狩月之证·bilibili",
+    "desc": "Obtained through special events.",
+    "icon": "T_Fashion_Waist_Card_Bili",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30011,
+    "name": "狩月之证·好游快爆",
+    "desc": "Obtained through special events.",
+    "icon": "T_Fashion_Waist_Card_Haobao",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30012,
+    "name": "狩月之证·抖音",
+    "desc": "Obtained through special events.",
+    "icon": "T_Fashion_Waist_Card_Douyin",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30013,
+    "name": "狩月之证·TapTap",
+    "desc": "Obtained through special events.",
+    "icon": "T_Fashion_Waist_Card_TapTap",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30014,
+    "name": "狩月之证·Lenovo",
+    "desc": "Obtained through special events.",
+    "icon": "T_Fashion_Waist_Card_Lenovo",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30015,
+    "name": "狩月之证·WeGame",
+    "desc": "Obtained through special events.",
+    "icon": "T_Fashion_Waist_Card_Wegame",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 30016,
@@ -3408,6 +3867,42 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 30066,
+    "name": "UI_Accessory_Name_30066",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30067,
+    "name": "UI_Accessory_Name_30067",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30068,
+    "name": "UI_Accessory_Name_30068",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30069,
+    "name": "UI_Accessory_Name_30069",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 30070,
     "name": "Everlight Lantern",
     "desc": "Even the longest night will end. May its light guide you home.",
@@ -3472,6 +3967,33 @@
     "unlock": "Available through Prism Exchange"
   },
   {
+    "id": 31008,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Available through Prism Exchange",
+    "hide": 1
+  },
+  {
+    "id": 39998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 39999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40001,
     "name": "Phoxfox Tail",
     "desc": "The most subtle changes in humidity can not escape the perception of a phoxfox tail. Sophisticated travelers often observe whether a phoxfox in a rainy night would solo dance or not, thus to determine when the clouds will be dispersed, and when the moonlight will return.",
@@ -3496,12 +4018,30 @@
     "unlock": "Available at Lunoeggy's Impression Shop"
   },
   {
+    "id": 40004,
+    "name": "Cast Iron Wok",
+    "desc": "Not every hero wears armour. Some don cast iron.",
+    "icon": "T_Fashion_Back02",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40005,
     "name": "Nightowl Feathers",
     "desc": "Sink into the darkness and hunt for the light.",
     "icon": "T_Fashion_Back05",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 40006,
+    "name": "☆ Demon King's Backpack",
+    "desc": "The mightiest backpack in all the realms — or so proclaims the Demon King of Light.",
+    "icon": "T_Fashion_Back07",
+    "rarity": 5,
+    "unlock": "Bard's Tome",
+    "hide": 1
   },
   {
     "id": 40007,
@@ -3526,6 +4066,15 @@
     "icon": "T_Fashion_Back21",
     "rarity": 5,
     "unlock": "Available at Shop"
+  },
+  {
+    "id": 40010,
+    "name": "Faded Fantasy",
+    "desc": "An old cape, once steeped in fantasies of \"heroes.\" Perhaps it will see the light again one day, or perhaps never at all.",
+    "icon": "T_Fashion_Cloak_Linen",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 40011,
@@ -3726,6 +4275,15 @@
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
     "unlock": "Available from events"
+  },
+  {
+    "id": 40036,
+    "name": "僵尸主题背饰3【远期待包装】",
+    "desc": "By sacred words, evil is banished, the soul is nourished, and the spirits are sustained.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 40037,
@@ -3944,6 +4502,42 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 40064,
+    "name": "Ethereal Wings: Opaque White",
+    "desc": "Between six layered wings, the guilty behold the fires of judgement, and the suffering knock upon the gates of heaven.",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40065,
+    "name": "Ethereal Wings: Leaden Grey",
+    "desc": "Between six layered wings, the guilty behold the fires of judgement, and the suffering knock upon the gates of heaven.",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40066,
+    "name": "Ethereal Wings: Dark Jade",
+    "desc": "Between six layered wings, the guilty behold the fires of judgement, and the suffering knock upon the gates of heaven.",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40067,
+    "name": "Ethereal Wings: Rust Red",
+    "desc": "Between six layered wings, the guilty behold the fires of judgement, and the suffering knock upon the gates of heaven.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40068,
     "name": "Squishy Backpack: Emerald Green",
     "desc": "A dainty little sachet, soft and plump, dangling lightly at your hem.",
@@ -4046,6 +4640,24 @@
     "icon": "T_Fashion_Back47_02",
     "rarity": 5,
     "unlock": "Available from events"
+  },
+  {
+    "id": 40081,
+    "name": "Midnight Wings: White Sakura",
+    "desc": "A kiss from the night, resting upon your shoulder.",
+    "icon": "T_Fashion_Back47_01",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
+  },
+  {
+    "id": 40082,
+    "name": "Midnight Wings: Violet",
+    "desc": "A kiss from the night, resting upon your shoulder.",
+    "icon": "T_Fashion_Back47_04",
+    "rarity": 5,
+    "unlock": "Available from events",
+    "hide": 1
   },
   {
     "id": 40083,
@@ -4160,6 +4772,24 @@
     "unlock": "Available from events"
   },
   {
+    "id": 49998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 49999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -4214,6 +4844,15 @@
     "icon": "T_Fashion_Fx14",
     "rarity": 4,
     "unlock": "Available through Myriad"
+  },
+  {
+    "id": 60004,
+    "name": "UI_Accessory_Name_60004",
+    "desc": "UI_Accessory_Desc_60004",
+    "icon": "T_Fashion_Fx14",
+    "rarity": 4,
+    "unlock": "Available through Myriad",
+    "hide": 1
   },
   {
     "id": 60005,
@@ -4528,6 +5167,15 @@
     "unlock": "Available through Prism Exchange"
   },
   {
+    "id": 80004,
+    "name": "UI_Accessory_Name_80004",
+    "desc": "Turn around, get down — perfect!",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 80011,
     "name": "Midsummer Rendezvous: Rust Red",
     "desc": "Bearing pansies, butterflies await the star's arrival to begin the ball's grand overture.",
@@ -4598,6 +5246,33 @@
     "icon": "T_Fashion_Fx09",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80041,
+    "name": "UI_Accessory_Name_80041",
+    "desc": "Turn around, get down — perfect!",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 80042,
+    "name": "UI_Accessory_Name_80042",
+    "desc": "Turn around, get down — perfect!",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 80043,
+    "name": "UI_Accessory_Name_80043",
+    "desc": "Turn around, get down — perfect!",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 80044,
@@ -4782,5 +5457,41 @@
     "icon": "T_Fashion_Fx47_01",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80074,
+    "name": "UI_Accessory_Name_80074",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange",
+    "hide": 1
+  },
+  {
+    "id": 80075,
+    "name": "UI_Accessory_Name_80075",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange",
+    "hide": 1
+  },
+  {
+    "id": 80076,
+    "name": "UI_Accessory_Name_80076",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange",
+    "hide": 1
+  },
+  {
+    "id": 80077,
+    "name": "UI_Accessory_Name_80077",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange",
+    "hide": 1
   }
 ]

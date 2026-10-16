@@ -104,6 +104,15 @@
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
+    "id": 10014,
+    "name": "Dragon des rêves – Liuliu",
+    "desc": "Les dragons fascinent chaque époque. Puissants, sauvages, insaisissables — leur rareté les drape d’une aura de mystère. C’est cette brume d’imaginaire qui nourrit la créativité des peuples depuis toujours.",
+    "icon": "T_Fashion_Head_Dinosaur",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 10015,
     "name": "Peluche Lunoeggy",
     "desc": "Sous la coquille... encore une coquille. Et sous la coquille ? Toujours une coquille. Absolument pas une Luno. Vraiment pas.",
@@ -240,12 +249,39 @@
     "unlock": "Disponible via la Myriade"
   },
   {
+    "id": 10033,
+    "name": "Or, argent... et tigre ?",
+    "desc": "La morale ? Dans les lacs d’Atlasia, on ne repêche jamais ce qu’on y a jeté... seulement ce qu’on ne voulait surtout pas. Un tigre, par exemple.",
+    "icon": "T_Fashion_Head06",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy",
+    "hide": 1
+  },
+  {
+    "id": 10034,
+    "name": "Étincelle des neiges",
+    "desc": "ZzzZzZzZzZzZz...",
+    "icon": "T_Fashion_Head04",
+    "rarity": 4,
+    "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy",
+    "hide": 1
+  },
+  {
     "id": 10035,
     "name": "Ornement chaton",
     "desc": "Vif, adorable, espiègle, splendide... Tous les mots manquent pour capturer l’irrésistible magie de ces oreilles félines.",
     "icon": "T_Fashion_Head_CatEar",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10036,
+    "name": "Étincelle des neiges",
+    "desc": "Toc toc toc toc... petits sabots affolés !",
+    "icon": "T_Fashion_Head05",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
   },
   {
     "id": 10037,
@@ -744,6 +780,15 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 10100,
+    "name": "Brûle-encens rituel – Gris plomb",
+    "desc": "Rendons-nous hommage aux cieux... ou aux mortels ?",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 10101,
     "name": "Esprit du mutisme – Pourpre profond",
     "desc": "Rendons-nous hommage aux cieux... ou aux mortels ?",
@@ -1048,12 +1093,30 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 10139,
+    "name": "Ballon festif – Bleu indigo",
+    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
+    "icon": "T_Fashion_Head60_04",
+    "rarity": 3,
+    "unlock": "Disponible via les événements",
+    "hide": 1
+  },
+  {
     "id": 10140,
     "name": "Fleur d’acier",
     "desc": "Emprisonner la vie dans l’acier et la mécanique a toujours été l’un des grands sujets d’étude des alchimistes.",
     "icon": "T_Fashion_Head62",
     "rarity": 3,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10141,
+    "name": "Engrenage des Pics Extérieurs",
+    "desc": "Le fonctionnement de l’immense structure des Pics Extérieurs repose sur la contribution de chaque engrenage.",
+    "icon": "T_Fashion_Head73",
+    "rarity": 3,
+    "unlock": "Disponible via les événements",
+    "hide": 1
   },
   {
     "id": 10142,
@@ -1110,6 +1173,15 @@
     "icon": "T_Fashion_Head60_01",
     "rarity": 3,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10149,
+    "name": "Ballon festif – Menthe",
+    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
+    "icon": "T_Fashion_Head60_02",
+    "rarity": 3,
+    "unlock": "Disponible via les événements",
+    "hide": 1
   },
   {
     "id": 10150,
@@ -1208,6 +1280,78 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 10162,
+    "name": "UI_Accessory_Name_10162",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 10163,
+    "name": "UI_Accessory_Name_10163",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 10164,
+    "name": "UI_Accessory_Name_10164",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 10165,
+    "name": "UI_Accessory_Name_10165",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 10166,
+    "name": "UI_Accessory_Name_10166",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 10167,
+    "name": "UI_Accessory_Name_10167",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 10168,
+    "name": "UI_Accessory_Name_10168",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 10169,
+    "name": "UI_Accessory_Name_10169",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -1238,6 +1382,15 @@
     "icon": "T_Fashion_Fx13",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 11005,
+    "name": "Rythme espiègle",
+    "desc": "Oscillant au rythme, vous dansez au gré d’une mélodie espiègle.",
+    "icon": "T_Fashion_Fx16",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes",
+    "hide": 1
   },
   {
     "id": 11006,
@@ -1520,6 +1673,24 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 12031,
+    "name": "Marin",
+    "desc": "Cette douleur n’est rien face au vent et à la pluie.",
+    "icon": "T_Fashion_Hat22",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 12032,
+    "name": "Écaille inversée",
+    "desc": "Essaie donc de me toucher.",
+    "icon": "T_Fashion_Hat23",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
     "id": 12121,
     "name": "Vœu de la nuit étoilée",
     "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
@@ -1550,6 +1721,24 @@
     "icon": "T_Fashion_Head50",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12125,
+    "name": "Sac de papier merveilleux – Blanc ivoire",
+    "desc": "Une fois le sac de papier enfilé, une étrange magie semble opérer, comme si l’on n’avait plus besoin de réprimer sa vraie nature.",
+    "icon": "T_Fashion_Head51",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 12126,
+    "name": "Sac de papier merveilleux – Caramel",
+    "desc": "Une fois le sac de papier enfilé, une étrange magie semble opérer, comme si l’on n’avait plus besoin de réprimer sa vraie nature.",
+    "icon": "T_Fashion_Head47",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 12127,
@@ -1880,12 +2069,30 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 13038,
+    "name": "修女主题配饰.红（待包装）",
+    "desc": "Les dieux ont abandonné leur corps au monde des hommes, laissant derrière eux une chaleur qui ne s’éteint jamais.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
+  },
+  {
     "id": 13039,
     "name": "Reliquaire sacré – Blanc ivoire",
     "desc": "Les dieux ont abandonné leur corps au monde des hommes, laissant derrière eux une chaleur qui ne s’éteint jamais.",
     "icon": "T_Fashion_Waist33_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 13040,
+    "name": "修女主题配饰.紫（待包装）",
+    "desc": "Les dieux ont abandonné leur corps au monde des hommes, laissant derrière eux une chaleur qui ne s’éteint jamais.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
   },
   {
     "id": 13041,
@@ -1918,6 +2125,42 @@
     "icon": "T_Fashion_Back49_02",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13045,
+    "name": "UI_Accessory_Name_13045",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 13046,
+    "name": "UI_Accessory_Name_13046",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 13047,
+    "name": "UI_Accessory_Name_13047",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
+  },
+  {
+    "id": 13048,
+    "name": "UI_Accessory_Name_13048",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique",
+    "hide": 1
   },
   {
     "id": 13049,
@@ -2384,6 +2627,15 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 20048,
+    "name": "UI_Accessory_Name_20048",
+    "desc": "Ce qui emplit leur regard... Est-ce une larme, ou bien l’onde douce du clair de lune ?",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 20049,
     "name": "Marque de Zhuyin – Doré",
     "desc": "Tout est déjà scellé. Rien ne peut être défait.",
@@ -2462,6 +2714,42 @@
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20059,
+    "name": "Visière Fengshi – Blanc sakura",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20060,
+    "name": "僵尸主题脸饰2【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20061,
+    "name": "僵尸主题脸饰3【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20062,
+    "name": "僵尸主题脸饰4【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 20063,
@@ -2624,12 +2912,30 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 20083,
+    "name": "修女-脸部-黑（待包装）",
+    "desc": "Les dieux ont abandonné leur lumière au monde, attendant silencieusement la réponse de la foi.",
+    "icon": "T_Fashion_Face26_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
+  },
+  {
     "id": 20084,
     "name": "Radiance sacrée – Bleu céleste",
     "desc": "Les dieux ont abandonné leur lumière au monde, attendant silencieusement la réponse de la foi.",
     "icon": "T_Fashion_Face26_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 20085,
+    "name": "修女-脸部-红（待包装）",
+    "desc": "Les dieux ont abandonné leur lumière au monde, attendant silencieusement la réponse de la foi.",
+    "icon": "T_Fashion_Face26_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
   },
   {
     "id": 20086,
@@ -2710,6 +3016,60 @@
     "icon": "T_Fashion_Face29_04",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 20096,
+    "name": "Voile de la nuit envoûtante – Rouille",
+    "desc": "Même la nuit succombe au léger sourire dissimulé derrière ce voile.",
+    "icon": "T_Fashion_Face29_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
+  },
+  {
+    "id": 20097,
+    "name": "Voile de la nuit envoûtante – Blanc sakura",
+    "desc": "Même la nuit succombe au léger sourire dissimulé derrière ce voile.",
+    "icon": "T_Fashion_Face29_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
+  },
+  {
+    "id": 20098,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_03",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20099,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_02",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20100,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_04",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20101,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_01",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 20102,
@@ -2856,6 +3216,24 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 21008,
+    "name": "Talisman ésotérique – Doré",
+    "desc": "Le talisman s’anime à la pensée, et les voies occultes lui répondent.",
+    "icon": "T_Fashion_Fx17_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
+  },
+  {
+    "id": 21009,
+    "name": "Sillage de lycoris éternels",
+    "desc": "UI_Accessory_Desc_21007",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
+  },
+  {
     "id": 21010,
     "name": "Sillage de lycoris éternels",
     "desc": "Une marée écarlate déferlant depuis l’autre rive.",
@@ -2878,6 +3256,15 @@
     "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 21013,
+    "name": "UI_Accessory_Name_21011",
+    "desc": "UI_Accessory_Desc_21010",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes",
+    "hide": 1
   },
   {
     "id": 21014,
@@ -2934,6 +3321,24 @@
     "icon": "T_Fashion_Fx49",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 29998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 29999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 30001,
@@ -3006,6 +3411,60 @@
     "icon": "T_Fashion_Waist05",
     "rarity": 4,
     "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
+  },
+  {
+    "id": 30010,
+    "name": "Certificat du Chasseur de Phoxène : bilibili",
+    "desc": "Obtenu lors d’événements spéciaux.",
+    "icon": "T_Fashion_Waist_Card_Bili",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30011,
+    "name": "Certificat du Chasseur de Phoxène : 好游快爆",
+    "desc": "Obtenu lors d’événements spéciaux.",
+    "icon": "T_Fashion_Waist_Card_Haobao",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30012,
+    "name": "Certificat du Chasseur de Phoxène : 抖音",
+    "desc": "Obtenu lors d’événements spéciaux.",
+    "icon": "T_Fashion_Waist_Card_Douyin",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30013,
+    "name": "Certificat du Chasseur de Phoxène : TapTap",
+    "desc": "Obtenu lors d’événements spéciaux.",
+    "icon": "T_Fashion_Waist_Card_TapTap",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30014,
+    "name": "Certificat du Chasseur de Phoxène : Lenovo",
+    "desc": "Obtenu lors d’événements spéciaux.",
+    "icon": "T_Fashion_Waist_Card_Lenovo",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30015,
+    "name": "Certificat du Chasseur de Phoxène : WeGame",
+    "desc": "Obtenu lors d’événements spéciaux.",
+    "icon": "T_Fashion_Waist_Card_Wegame",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 30016,
@@ -3408,6 +3867,42 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 30066,
+    "name": "UI_Accessory_Name_30066",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30067,
+    "name": "UI_Accessory_Name_30067",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30068,
+    "name": "UI_Accessory_Name_30068",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30069,
+    "name": "UI_Accessory_Name_30069",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 30070,
     "name": "Lueur éternelle",
     "desc": "La longue nuit a toujours une fin. Puissent-elles éclairer votre chemin vers la maison.",
@@ -3472,6 +3967,33 @@
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
+    "id": 31008,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "Disponible via l’échange de Prismes",
+    "hide": 1
+  },
+  {
+    "id": 39998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 39999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40001,
     "name": "Joyau caudal de Phoxène",
     "desc": "La plus infime variation d’humidité n’échappe jamais à la sensibilité de cette queue. Les voyageurs aguerris observent souvent, les soirs de pluie, si un joyau caudal de Phoxène se met à danser en solitaire : signe que les nuées se dissiperont bientôt et que la lune reviendra bénir la route.",
@@ -3496,12 +4018,30 @@
     "unlock": "Disponible dans la Boutique d’Impressions de Lunoeggy"
   },
   {
+    "id": 40004,
+    "name": "Poêle d’aventure",
+    "desc": "Tous les héros ne portent pas d’armure. Certains combattent... en fonte.",
+    "icon": "T_Fashion_Back02",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40005,
     "name": "Plumes du hibou nocturne",
     "desc": "Portée par le vent et ses ailes, elle étreint le ciel — chante, plane, et ne regarde jamais en bas.",
     "icon": "T_Fashion_Back05",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 40006,
+    "name": "Sac à dos du Roi Démon ☆",
+    "desc": "Le plus grand, le plus puissant, le plus invincible des sacs — du moins, selon le Roi Démon de la Lumière lui-même.",
+    "icon": "T_Fashion_Back07",
+    "rarity": 5,
+    "unlock": "Ballade du Ménestrel",
+    "hide": 1
   },
   {
     "id": 40007,
@@ -3526,6 +4066,15 @@
     "icon": "T_Fashion_Back21",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40010,
+    "name": "Fantasmes d’antan",
+    "desc": "Une vieille cape, chargée de toutes les illusions d’autrefois liées aux « héros ». Peut-être reverra-t-elle un jour la lumière, ou peut-être jamais.",
+    "icon": "T_Fashion_Cloak_Linen",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 40011,
@@ -3726,6 +4275,15 @@
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 40036,
+    "name": "僵尸主题背饰3【远期待包装】",
+    "desc": "Les paroles sacrées chassent les ombres, nourrissent l’âme et élèvent les esprits.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 40037,
@@ -3944,6 +4502,42 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 40064,
+    "name": "Ailes célestes – Blanc ivoire",
+    "desc": "Entre six ailes entrelacées, les coupables contemplent les flammes du jugement, tandis que les âmes en peine frappent aux portes du ciel.",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40065,
+    "name": "Ailes célestes – Gris plomb",
+    "desc": "Entre six ailes entrelacées, les coupables contemplent les flammes du jugement, tandis que les âmes en peine frappent aux portes du ciel.",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40066,
+    "name": "Ailes célestes – Jade noir",
+    "desc": "Entre six ailes entrelacées, les coupables contemplent les flammes du jugement, tandis que les âmes en peine frappent aux portes du ciel.",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40067,
+    "name": "Ailes célestes – Rouille",
+    "desc": "Entre six ailes entrelacées, les coupables contemplent les flammes du jugement, tandis que les âmes en peine frappent aux portes du ciel.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40068,
     "name": "Sac rembourré – Émeraude",
     "desc": "Petit sachet délicat, tout doux, suspendu au coin d’un vêtement.",
@@ -4046,6 +4640,24 @@
     "icon": "T_Fashion_Back47_02",
     "rarity": 5,
     "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 40081,
+    "name": "Ailes de la nuit envoûtante – Blanc sakura",
+    "desc": "Une trace de baiser déposée sur l’épaule par la nuit.",
+    "icon": "T_Fashion_Back47_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
+  },
+  {
+    "id": 40082,
+    "name": "Ailes de la nuit envoûtante – Pourpre profond",
+    "desc": "Une trace de baiser déposée sur l’épaule par la nuit.",
+    "icon": "T_Fashion_Back47_04",
+    "rarity": 5,
+    "unlock": "Disponible via les événements",
+    "hide": 1
   },
   {
     "id": 40083,
@@ -4160,6 +4772,24 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 49998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 49999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -4214,6 +4844,15 @@
     "icon": "T_Fashion_Fx14",
     "rarity": 4,
     "unlock": "Disponible via la Myriade"
+  },
+  {
+    "id": 60004,
+    "name": "UI_Accessory_Name_60004",
+    "desc": "UI_Accessory_Desc_60004",
+    "icon": "T_Fashion_Fx14",
+    "rarity": 4,
+    "unlock": "Disponible via la Myriade",
+    "hide": 1
   },
   {
     "id": 60005,
@@ -4528,6 +5167,15 @@
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
+    "id": 80004,
+    "name": "UI_Accessory_Name_80004",
+    "desc": "Tourner, tomber... parfait !",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 80011,
     "name": "Invitation d’une nuit d’été – Rouille",
     "desc": "Des papillons, chargés de pensées, attendent l’arrivée du protagoniste pour ouvrir le bal.",
@@ -4598,6 +5246,33 @@
     "icon": "T_Fashion_Fx09",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80041,
+    "name": "UI_Accessory_Name_80041",
+    "desc": "Tourner, tomber... parfait !",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 80042,
+    "name": "UI_Accessory_Name_80042",
+    "desc": "Tourner, tomber... parfait !",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 80043,
+    "name": "UI_Accessory_Name_80043",
+    "desc": "Tourner, tomber... parfait !",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 80044,
@@ -4782,5 +5457,41 @@
     "icon": "T_Fashion_Fx47_01",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80074,
+    "name": "UI_Accessory_Name_80074",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes",
+    "hide": 1
+  },
+  {
+    "id": 80075,
+    "name": "UI_Accessory_Name_80075",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes",
+    "hide": 1
+  },
+  {
+    "id": 80076,
+    "name": "UI_Accessory_Name_80076",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes",
+    "hide": 1
+  },
+  {
+    "id": 80077,
+    "name": "UI_Accessory_Name_80077",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes",
+    "hide": 1
   }
 ]

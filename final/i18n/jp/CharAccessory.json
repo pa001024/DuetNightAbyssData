@@ -104,6 +104,15 @@
     "unlock": "プリズムの交換で獲得"
   },
   {
+    "id": 10014,
+    "name": "ファンタジードラゴン：ロロ",
+    "desc": "ドラゴンはいつの時代も人々を惹きつけてやまない存在だ。強大な大自然の申し子だが、目撃者はほとんどいないため具体的な姿形はベールに包まれている。その曖昧なイメージこそが自由な空想の土壌となっている。",
+    "icon": "T_Fashion_Head_Dinosaur",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 10015,
     "name": "ルーナエッグ",
     "desc": "タマゴの中身はタマゴ。そのタマゴの中身はまたまたタマゴ。中の人などいない！いないったらいないのだ！！",
@@ -240,12 +249,39 @@
     "unlock": "万華で獲得"
   },
   {
+    "id": 10033,
+    "name": "金銀斧と脳天直撃斧",
+    "desc": "湖に落ちた斧、なぜか最後はいつも無関係な妖精の頭に突き刺さる。",
+    "icon": "T_Fashion_Head06",
+    "rarity": 4,
+    "unlock": "ルーナエッグのフィーリングショップで獲得可能",
+    "hide": 1
+  },
+  {
+    "id": 10034,
+    "name": "居眠りカピバラ",
+    "desc": "zZZ...zZZ...zZZ...zZZ...zZZ...",
+    "icon": "T_Fashion_Head04",
+    "rarity": 4,
+    "unlock": "ルーナエッグのフィーリングショップで獲得可能",
+    "hide": 1
+  },
+  {
     "id": 10035,
     "name": "猫の髪飾り・原色",
     "desc": "しなやかで、明るくキュートで、美しい……世の中のすべての萌えが色あせて見える。これこそ、猫耳の持つ抗えない魔力。",
     "icon": "T_Fashion_Head_CatEar",
     "rarity": 4,
     "unlock": "ショップで獲得"
+  },
+  {
+    "id": 10036,
+    "name": "凛雪の星芒",
+    "desc": "幸せを運んでくれるトナカイ、見てるだけでドキドキする。",
+    "icon": "T_Fashion_Head05",
+    "rarity": 5,
+    "unlock": "ショップで獲得",
+    "hide": 1
   },
   {
     "id": 10037,
@@ -744,6 +780,15 @@
     "unlock": "イベントで入手"
   },
   {
+    "id": 10100,
+    "name": "祀煙香炉・鉛灰",
+    "desc": "私たちはいったい、天を祀っているのか、それとも人を祀っているのか？",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 10101,
     "name": "蓮草の髪飾り",
     "desc": "私たちはいったい、天を祀っているのか、それとも人を祀っているのか？",
@@ -1048,12 +1093,30 @@
     "unlock": "イベントで入手"
   },
   {
+    "id": 10139,
+    "name": "フェスバルーン・インディゴ",
+    "desc": "祭りのたびに、人々はそれをベンチや玄関先に結びつけ、そよ風に揺られて、まだらで愛らしい光と影を落とす。",
+    "icon": "T_Fashion_Head60_04",
+    "rarity": 3,
+    "unlock": "イベントで入手",
+    "hide": 1
+  },
+  {
     "id": 10140,
     "name": "鉄の華",
     "desc": "命を鋼鉄と機械の中に閉じ込めることは、錬金術師たちにとって永遠の研究課題のひとつだ。",
     "icon": "T_Fashion_Head62",
     "rarity": 3,
     "unlock": "イベントで入手"
+  },
+  {
+    "id": 10141,
+    "name": "山外の歯車",
+    "desc": "山外山で天を支える巨大な機構の稼働は、一つひとつの歯車の働きなくして成り立たない。",
+    "icon": "T_Fashion_Head73",
+    "rarity": 3,
+    "unlock": "イベントで入手",
+    "hide": 1
   },
   {
     "id": 10142,
@@ -1110,6 +1173,15 @@
     "icon": "T_Fashion_Head60_01",
     "rarity": 3,
     "unlock": "イベントで入手"
+  },
+  {
+    "id": 10149,
+    "name": "フェスバルーン・ミント",
+    "desc": "祭りのたびに、人々はそれをベンチや玄関先に結びつけ、そよ風に揺られて、まだらで愛らしい光と影を落とす。",
+    "icon": "T_Fashion_Head60_02",
+    "rarity": 3,
+    "unlock": "イベントで入手",
+    "hide": 1
   },
   {
     "id": 10150,
@@ -1208,6 +1280,78 @@
     "unlock": "イベントで入手"
   },
   {
+    "id": 10162,
+    "name": "UI_Accessory_Name_10162",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 10163,
+    "name": "UI_Accessory_Name_10163",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 10164,
+    "name": "UI_Accessory_Name_10164",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 10165,
+    "name": "UI_Accessory_Name_10165",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 10166,
+    "name": "UI_Accessory_Name_10166",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 10167,
+    "name": "UI_Accessory_Name_10167",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 10168,
+    "name": "UI_Accessory_Name_10168",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 10169,
+    "name": "UI_Accessory_Name_10169",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -1238,6 +1382,15 @@
     "icon": "T_Fashion_Fx13",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
+  },
+  {
+    "id": 11005,
+    "name": "おちゃめなリズム",
+    "desc": "ゆらゆら揺れて、おちゃめな旋律に合わせて踊ろう。",
+    "icon": "T_Fashion_Fx16",
+    "rarity": 5,
+    "unlock": "プリズムの交換で獲得",
+    "hide": 1
   },
   {
     "id": 11006,
@@ -1520,6 +1673,24 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 12031,
+    "name": "セーラー",
+    "desc": "風雨の中、これくらいの痛みがなんだ。",
+    "icon": "T_Fashion_Hat22",
+    "rarity": 4,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 12032,
+    "name": "逆鱗",
+    "desc": "触れてみろ。",
+    "icon": "T_Fashion_Hat23",
+    "rarity": 4,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
     "id": 12121,
     "name": "星降る夜に願いを",
     "desc": "昼が一番短い日に、鳴り響く鐘の音を聞きながら、夜空に願いを込めて、星屑に想いを乗せて未来へ。",
@@ -1550,6 +1721,24 @@
     "icon": "T_Fashion_Head50",
     "rarity": 4,
     "unlock": "ショップで獲得"
+  },
+  {
+    "id": 12125,
+    "name": "不思議な紙袋・アイボリー",
+    "desc": "紙袋をかぶると、天から不思議な力が降りたみたいに、抑えていた本性がするりとほどけてしまう。",
+    "icon": "T_Fashion_Head51",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 12126,
+    "name": "不思議な紙袋・キャラメル",
+    "desc": "紙袋をかぶると、天から不思議な力が降りたみたいに、抑えていた本性がするりとほどけてしまう。",
+    "icon": "T_Fashion_Head47",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 12127,
@@ -1880,12 +2069,30 @@
     "unlock": "イベントで入手"
   },
   {
+    "id": 13038,
+    "name": "修女主题配饰.红（待包装）",
+    "desc": "神はその御身を人の世に捨て置き、永遠に消えぬ温もりとなられた。",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
+  },
+  {
     "id": 13039,
     "name": "聖潔の遺骸・アイボリー",
     "desc": "神はその御身を人の世に捨て置き、永遠に消えぬ温もりとなられた。",
     "icon": "T_Fashion_Waist33_02",
     "rarity": 5,
     "unlock": "イベントで入手"
+  },
+  {
+    "id": 13040,
+    "name": "修女主题配饰.紫（待包装）",
+    "desc": "神はその御身を人の世に捨て置き、永遠に消えぬ温もりとなられた。",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
   },
   {
     "id": 13041,
@@ -1918,6 +2125,42 @@
     "icon": "T_Fashion_Back49_02",
     "rarity": 5,
     "unlock": "ショップで獲得"
+  },
+  {
+    "id": 13045,
+    "name": "UI_Accessory_Name_13045",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 13046,
+    "name": "UI_Accessory_Name_13046",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 13047,
+    "name": "UI_Accessory_Name_13047",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "ショップで獲得",
+    "hide": 1
+  },
+  {
+    "id": 13048,
+    "name": "UI_Accessory_Name_13048",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "ショップで獲得",
+    "hide": 1
   },
   {
     "id": 13049,
@@ -2384,6 +2627,15 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 20048,
+    "name": "UI_Accessory_Name_20048",
+    "desc": "この瞳を満たしているのは、こぼれ落ちぬ涙か、それとも、月のさざなみか。",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 20049,
     "name": "燭陰のスティグマ・マリーゴールド",
     "desc": "全て定まりて、もはや戻れず。",
@@ -2462,6 +2714,42 @@
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
     "unlock": "ショップで獲得"
+  },
+  {
+    "id": 20059,
+    "name": "風神のゴーグル・チェリーホワイト",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20060,
+    "name": "僵尸主题脸饰2【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20061,
+    "name": "僵尸主题脸饰3【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20062,
+    "name": "僵尸主题脸饰4【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 20063,
@@ -2624,12 +2912,30 @@
     "unlock": "イベントで入手"
   },
   {
+    "id": 20083,
+    "name": "修女-脸部-黑（待包装）",
+    "desc": "神は光を人の世に捨て置き、信仰のこだまを静かに待つ。",
+    "icon": "T_Fashion_Face26_03",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
+  },
+  {
     "id": 20084,
     "name": "聖潔の輝き・スカイブルー",
     "desc": "神は光を人の世に捨て置き、信仰のこだまを静かに待つ。",
     "icon": "T_Fashion_Face26_02",
     "rarity": 5,
     "unlock": "イベントで入手"
+  },
+  {
+    "id": 20085,
+    "name": "修女-脸部-红（待包装）",
+    "desc": "神は光を人の世に捨て置き、信仰のこだまを静かに待つ。",
+    "icon": "T_Fashion_Face26_01",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
   },
   {
     "id": 20086,
@@ -2710,6 +3016,60 @@
     "icon": "T_Fashion_Face29_04",
     "rarity": 5,
     "unlock": "イベントで入手"
+  },
+  {
+    "id": 20096,
+    "name": "惑夜のベール・ペルシアンレッド",
+    "desc": "夜色さえも、ベールの奥に浮かぶ微笑みに心奪われる。",
+    "icon": "T_Fashion_Face29_03",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
+  },
+  {
+    "id": 20097,
+    "name": "惑夜のベール・チェリーホワイト",
+    "desc": "夜色さえも、ベールの奥に浮かぶ微笑みに心奪われる。",
+    "icon": "T_Fashion_Face29_01",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
+  },
+  {
+    "id": 20098,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_03",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20099,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_02",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20100,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_04",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20101,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_01",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 20102,
@@ -2856,6 +3216,24 @@
     "unlock": "イベントで入手"
   },
   {
+    "id": 21008,
+    "name": "鬼道呪符・マリーゴールド",
+    "desc": "符は念に従って動き、鬼道はそれに随う。",
+    "icon": "T_Fashion_Fx17_01",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
+  },
+  {
+    "id": 21009,
+    "name": "永遠の花園",
+    "desc": "UI_Accessory_Desc_21007",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
+  },
+  {
     "id": 21010,
     "name": "永遠の花園",
     "desc": "彼岸に奔流する緋色の潮汐。",
@@ -2878,6 +3256,15 @@
     "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "イベントで入手"
+  },
+  {
+    "id": 21013,
+    "name": "UI_Accessory_Name_21011",
+    "desc": "UI_Accessory_Desc_21010",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "プリズムの交換で獲得",
+    "hide": 1
   },
   {
     "id": 21014,
@@ -2934,6 +3321,24 @@
     "icon": "T_Fashion_Fx49",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
+  },
+  {
+    "id": 29998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 29999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 30001,
@@ -3006,6 +3411,60 @@
     "icon": "T_Fashion_Waist05",
     "rarity": 4,
     "unlock": "ルーナエッグのフィーリングショップで獲得可能"
+  },
+  {
+    "id": 30010,
+    "name": "狩月之证·bilibili",
+    "desc": "特別イベントで獲得可能",
+    "icon": "T_Fashion_Waist_Card_Bili",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30011,
+    "name": "狩月之证·好游快爆",
+    "desc": "特別イベントで獲得可能",
+    "icon": "T_Fashion_Waist_Card_Haobao",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30012,
+    "name": "狩月之证·抖音",
+    "desc": "特別イベントで獲得可能",
+    "icon": "T_Fashion_Waist_Card_Douyin",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30013,
+    "name": "狩月之证·TapTap",
+    "desc": "特別イベントで獲得可能",
+    "icon": "T_Fashion_Waist_Card_TapTap",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30014,
+    "name": "狩月之证·Lenovo",
+    "desc": "特別イベントで獲得可能",
+    "icon": "T_Fashion_Waist_Card_Lenovo",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30015,
+    "name": "狩月之证·WeGame",
+    "desc": "特別イベントで獲得可能",
+    "icon": "T_Fashion_Waist_Card_Wegame",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 30016,
@@ -3408,6 +3867,42 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 30066,
+    "name": "UI_Accessory_Name_30066",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30067,
+    "name": "UI_Accessory_Name_30067",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30068,
+    "name": "UI_Accessory_Name_30068",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30069,
+    "name": "UI_Accessory_Name_30069",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 30070,
     "name": "有明の穂",
     "desc": "長い夜にもいつか終わりは来る。どうかそれらが、あなたの帰り道を照らしますように。",
@@ -3472,6 +3967,33 @@
     "unlock": "プリズムの交換で獲得"
   },
   {
+    "id": 31008,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "プリズムの交換で獲得",
+    "hide": 1
+  },
+  {
+    "id": 39998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 39999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40001,
     "name": "月狐の玉尾",
     "desc": "月狐の尻尾は、ほんの些細な湿度の変化も感知できるという。経験豊富な旅人は、月狐が雨の夜に踊っているかどうかで、いつ雲が晴れて月明かりが戻るかを判断している。",
@@ -3496,12 +4018,30 @@
     "unlock": "ルーナエッグのフィーリングショップで獲得可能"
   },
   {
+    "id": 40004,
+    "name": "黒いフライパン",
+    "desc": "いい鍋は料理にも武器にも使える。",
+    "icon": "T_Fashion_Back02",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40005,
     "name": "フクロウの羽根",
     "desc": "闇に堕ち、光を求める。",
     "icon": "T_Fashion_Back05",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
+  },
+  {
+    "id": 40006,
+    "name": "魔王☆バックパック",
+    "desc": "光の魔王様に「最強のバックパック」と称えられた。それ以上の説明は、いらないよね？",
+    "icon": "T_Fashion_Back07",
+    "rarity": 5,
+    "unlock": "詩歌集",
+    "hide": 1
   },
   {
     "id": 40007,
@@ -3526,6 +4066,15 @@
     "icon": "T_Fashion_Back21",
     "rarity": 5,
     "unlock": "ショップで獲得"
+  },
+  {
+    "id": 40010,
+    "name": "往日の幻想",
+    "desc": "一枚の古いショールには、かつての「英雄」にまつわるすべての幻想が託されている。いつか再び日の目を見るかもしれないし、永遠に見ないかもしれない。",
+    "icon": "T_Fashion_Cloak_Linen",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 40011,
@@ -3726,6 +4275,15 @@
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
     "unlock": "イベントで入手"
+  },
+  {
+    "id": 40036,
+    "name": "僵尸主题背饰3【远期待包装】",
+    "desc": "真言は怪を祓い、魂を養い、霊を育む。",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 40037,
@@ -3944,6 +4502,42 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 40064,
+    "name": "天使の翼・アイボリー",
+    "desc": "重なり合う六枚の翼の狭間で、罪ある者は審判の烈火を見、苦難を受けた者は天国の門を叩いた。",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40065,
+    "name": "天使の翼・鉛灰",
+    "desc": "重なり合う六枚の翼の狭間で、罪ある者は審判の烈火を見、苦難を受けた者は天国の門を叩いた。",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40066,
+    "name": "天使の翼・ジェットブラック",
+    "desc": "重なり合う六枚の翼の狭間で、罪ある者は審判の烈火を見、苦難を受けた者は天国の門を叩いた。",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40067,
+    "name": "天使の翼・ペルシアンレッド",
+    "desc": "重なり合う六枚の翼の狭間で、罪ある者は審判の烈火を見、苦難を受けた者は天国の門を叩いた。",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40068,
     "name": "もちもちリュック・エメラルドグリーン",
     "desc": "もちもちバッグは愛らしく、ふんわりと揺れる。",
@@ -4046,6 +4640,24 @@
     "icon": "T_Fashion_Back47_02",
     "rarity": 5,
     "unlock": "イベントで入手"
+  },
+  {
+    "id": 40081,
+    "name": "惑夜のウイング・チェリーホワイト",
+    "desc": "夜の帳が肩に残した口づけの痕。",
+    "icon": "T_Fashion_Back47_01",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
+  },
+  {
+    "id": 40082,
+    "name": "惑夜のウイング・レッドパープル",
+    "desc": "夜の帳が肩に残した口づけの痕。",
+    "icon": "T_Fashion_Back47_04",
+    "rarity": 5,
+    "unlock": "イベントで入手",
+    "hide": 1
   },
   {
     "id": 40083,
@@ -4160,6 +4772,24 @@
     "unlock": "イベントで入手"
   },
   {
+    "id": 49998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 49999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -4214,6 +4844,15 @@
     "icon": "T_Fashion_Fx14",
     "rarity": 4,
     "unlock": "万華で獲得"
+  },
+  {
+    "id": 60004,
+    "name": "UI_Accessory_Name_60004",
+    "desc": "UI_Accessory_Desc_60004",
+    "icon": "T_Fashion_Fx14",
+    "rarity": 4,
+    "unlock": "万華で獲得",
+    "hide": 1
   },
   {
     "id": 60005,
@@ -4528,6 +5167,15 @@
     "unlock": "プリズムの交換で獲得"
   },
   {
+    "id": 80004,
+    "name": "UI_Accessory_Name_80004",
+    "desc": "回って、落ちて、最高！",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 80011,
     "name": "夏夜の招待・ペルシアンレッド",
     "desc": "蝶が三色スミレをくわえ、主の到来を待ち、舞踏会の序章を奏でる。",
@@ -4598,6 +5246,33 @@
     "icon": "T_Fashion_Fx09",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
+  },
+  {
+    "id": 80041,
+    "name": "UI_Accessory_Name_80041",
+    "desc": "回って、落ちて、最高！",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 80042,
+    "name": "UI_Accessory_Name_80042",
+    "desc": "回って、落ちて、最高！",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 80043,
+    "name": "UI_Accessory_Name_80043",
+    "desc": "回って、落ちて、最高！",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 80044,
@@ -4782,5 +5457,41 @@
     "icon": "T_Fashion_Fx47_01",
     "rarity": 5,
     "unlock": "プリズムの交換で獲得"
+  },
+  {
+    "id": 80074,
+    "name": "UI_Accessory_Name_80074",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "プリズムの交換で獲得",
+    "hide": 1
+  },
+  {
+    "id": 80075,
+    "name": "UI_Accessory_Name_80075",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "プリズムの交換で獲得",
+    "hide": 1
+  },
+  {
+    "id": 80076,
+    "name": "UI_Accessory_Name_80076",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "プリズムの交換で獲得",
+    "hide": 1
+  },
+  {
+    "id": 80077,
+    "name": "UI_Accessory_Name_80077",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "プリズムの交換で獲得",
+    "hide": 1
   }
 ]

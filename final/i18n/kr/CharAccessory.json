@@ -104,6 +104,15 @@
     "unlock": "프리즘 교환으로 획득"
   },
   {
+    "id": 10014,
+    "name": "환상 속의 용·육육이",
+    "desc": "용은 시대를 초월하여 사람들에게 사랑받는 존재다. 강력하고 야성적이지만, 동시에 거의 볼 수 없기에 더욱 몽환적이고 매력적이며, 모두에게 마음껏 상상할 공간을 제공한다.",
+    "icon": "T_Fashion_Head_Dinosaur",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 10015,
     "name": "달걀 루나 인형",
     "desc": "계란 껍질 아래엔 계란 껍질, 그리고 계란 껍질이 있을 뿐, 절대로 루나가 아니다!",
@@ -240,12 +249,39 @@
     "unlock": "광채에서 획득"
   },
   {
+    "id": 10033,
+    "name": "금도끼 은도끼 우끼끼",
+    "desc": "호수에 빠진 모든 도끼는 결국 무고한 요정의 머리에 떨어진다.",
+    "icon": "T_Fashion_Head06",
+    "rarity": 4,
+    "unlock": "달걀 루나의 인상 상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 10034,
+    "name": "잠꾸러기 카피바라",
+    "desc": "zZZ...zZZ...zZZ...zZZ...zZZ...",
+    "icon": "T_Fashion_Head04",
+    "rarity": 4,
+    "unlock": "달걀 루나의 인상 상점을 통해 획득",
+    "hide": 1
+  },
+  {
     "id": 10035,
     "name": "묘묘 머리 장식",
     "desc": "귀엽다, 깜찍하다, 발랄하다, 아름답다... 세간의 온갖 미사여구도 고양이 귀 앞에서는 빛을 잃는다. 이게 바로 고양이 귀가 가진 거부할 수 없는 매력!",
     "icon": "T_Fashion_Head_CatEar",
     "rarity": 4,
     "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10036,
+    "name": "눈 속의 별빛",
+    "desc": "두근두근두근두근!",
+    "icon": "T_Fashion_Head05",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
   },
   {
     "id": 10037,
@@ -744,6 +780,15 @@
     "unlock": "이벤트를 통해 획득"
   },
   {
+    "id": 10100,
+    "name": "제례 향로·그레이",
+    "desc": "우리가 올리는 제의는 하늘을 모시기 위함인가, 사람을 기리기 위함인가?",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 10101,
     "name": "금언의 사령·보라",
     "desc": "우리가 올리는 제의는 하늘을 모시기 위함인가, 사람을 기리기 위함인가?",
@@ -1048,12 +1093,30 @@
     "unlock": "이벤트를 통해 획득"
   },
   {
+    "id": 10139,
+    "name": "축제 풍선·다크 블루",
+    "desc": "명절이 다가올 때마다, 사람들이 벤치나 현관 어귀에 매달아 두면, 바람에 살랑이며 바닥 위로 아기자기한 빛무리를 드리운다.",
+    "icon": "T_Fashion_Head60_04",
+    "rarity": 3,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
+  },
+  {
     "id": 10140,
     "name": "철의 꽃",
     "desc": "강철과 기계 속에 생명을 담아두는 것은 연금술사들의 영원한 연구 과제 중 하나다.",
     "icon": "T_Fashion_Head62",
     "rarity": 3,
     "unlock": "이벤트를 통해 획득"
+  },
+  {
+    "id": 10141,
+    "name": "산 너머 톱니바퀴",
+    "desc": "산외산의 거대한 장치들은 늘 작은 톱니바퀴들의 헌신으로 작동한다.",
+    "icon": "T_Fashion_Head73",
+    "rarity": 3,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
   },
   {
     "id": 10142,
@@ -1110,6 +1173,15 @@
     "icon": "T_Fashion_Head60_01",
     "rarity": 3,
     "unlock": "이벤트를 통해 획득"
+  },
+  {
+    "id": 10149,
+    "name": "축제 풍선·민트",
+    "desc": "명절이 다가올 때마다, 사람들이 벤치나 현관 어귀에 매달아 두면, 바람에 살랑이며 바닥 위로 아기자기한 빛무리를 드리운다.",
+    "icon": "T_Fashion_Head60_02",
+    "rarity": 3,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
   },
   {
     "id": 10150,
@@ -1208,6 +1280,78 @@
     "unlock": "이벤트를 통해 획득"
   },
   {
+    "id": 10162,
+    "name": "UI_Accessory_Name_10162",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 10163,
+    "name": "UI_Accessory_Name_10163",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 10164,
+    "name": "UI_Accessory_Name_10164",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 10165,
+    "name": "UI_Accessory_Name_10165",
+    "desc": "UI_Accessory_Desc_10162",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 10166,
+    "name": "UI_Accessory_Name_10166",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 10167,
+    "name": "UI_Accessory_Name_10167",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 10168,
+    "name": "UI_Accessory_Name_10168",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 10169,
+    "name": "UI_Accessory_Name_10169",
+    "desc": "UI_Accessory_Desc_10166",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -1238,6 +1382,15 @@
     "icon": "T_Fashion_Fx13",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 11005,
+    "name": "깜찍한 리듬",
+    "desc": "흔들흔들, 깜짝한 리듬에 맞춰 함께 춤을 추자.",
+    "icon": "T_Fashion_Fx16",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득",
+    "hide": 1
   },
   {
     "id": 11006,
@@ -1520,6 +1673,24 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 12031,
+    "name": "선원",
+    "desc": "비바람 속에서 이 정도 아픔쯤은 별거 아니야.",
+    "icon": "T_Fashion_Hat22",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 12032,
+    "name": "역린",
+    "desc": "건드려 보시지.",
+    "icon": "T_Fashion_Hat23",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
     "id": 12121,
     "name": "별빛의 소망",
     "desc": "낮이 짧은 계절, 종이 울리면 사람들은 마음속 소망을 밤하늘에 부쳐, 소망이 별빛을 따라 미래로 날아가길 빈다.",
@@ -1550,6 +1721,24 @@
     "icon": "T_Fashion_Head50",
     "rarity": 4,
     "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 12125,
+    "name": "신비한 종이봉투·아이보리",
+    "desc": "종이봉투를 머리에 쓰면 신비한 마력이 깃든 것처럼, 자신의 본능을 더 이상 억누르지 않아도 된다.",
+    "icon": "T_Fashion_Head51",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 12126,
+    "name": "신비한 종이봉투·캐러멜",
+    "desc": "종이봉투를 머리에 쓰면 신비한 마력이 깃든 것처럼, 자신의 본능을 더 이상 억누르지 않아도 된다.",
+    "icon": "T_Fashion_Head47",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 12127,
@@ -1880,12 +2069,30 @@
     "unlock": "이벤트를 통해 획득"
   },
   {
+    "id": 13038,
+    "name": "修女主题配饰.红（待包装）",
+    "desc": "신은 몸을 인간 세상에 내던지고, 꺼지지 않는 온기가 된다.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
+  },
+  {
     "id": 13039,
     "name": "성결한 유해·아이보리",
     "desc": "신은 몸을 인간 세상에 내던지고, 꺼지지 않는 온기가 된다.",
     "icon": "T_Fashion_Waist33_02",
     "rarity": 5,
     "unlock": "이벤트를 통해 획득"
+  },
+  {
+    "id": 13040,
+    "name": "修女主题配饰.紫（待包装）",
+    "desc": "신은 몸을 인간 세상에 내던지고, 꺼지지 않는 온기가 된다.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
   },
   {
     "id": 13041,
@@ -1918,6 +2125,42 @@
     "icon": "T_Fashion_Back49_02",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 13045,
+    "name": "UI_Accessory_Name_13045",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 13046,
+    "name": "UI_Accessory_Name_13046",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 13047,
+    "name": "UI_Accessory_Name_13047",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 13048,
+    "name": "UI_Accessory_Name_13048",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득",
+    "hide": 1
   },
   {
     "id": 13049,
@@ -2384,6 +2627,15 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 20048,
+    "name": "UI_Accessory_Name_20048",
+    "desc": "두 눈 가득 맺힌 물기는 눈물일까, 일렁이는 달빛일까?",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 20049,
     "name": "촉룡의 낙인·골드",
     "desc": "이미 엎질러진 물을 어찌 다시 주워 담으리.",
@@ -2462,6 +2714,42 @@
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 20059,
+    "name": "바람의 주인 고글·벚꽃",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20060,
+    "name": "僵尸主题脸饰2【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20061,
+    "name": "僵尸主题脸饰3【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20062,
+    "name": "僵尸主题脸饰4【远期待包装】",
+    "desc": "UI_Accessory_Desc_20059",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 20063,
@@ -2624,12 +2912,30 @@
     "unlock": "이벤트를 통해 획득"
   },
   {
+    "id": 20083,
+    "name": "修女-脸部-黑（待包装）",
+    "desc": "신은 빛을 인간 세상에 버리고, 신앙의 메아리를 기다린다.",
+    "icon": "T_Fashion_Face26_03",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
+  },
+  {
     "id": 20084,
     "name": "성결한 빛·스카이 블루",
     "desc": "신은 빛을 인간 세상에 버리고, 신앙의 메아리를 기다린다.",
     "icon": "T_Fashion_Face26_02",
     "rarity": 5,
     "unlock": "이벤트를 통해 획득"
+  },
+  {
+    "id": 20085,
+    "name": "修女-脸部-红（待包装）",
+    "desc": "신은 빛을 인간 세상에 버리고, 신앙의 메아리를 기다린다.",
+    "icon": "T_Fashion_Face26_01",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
   },
   {
     "id": 20086,
@@ -2710,6 +3016,60 @@
     "icon": "T_Fashion_Face29_04",
     "rarity": 5,
     "unlock": "이벤트를 통해 획득"
+  },
+  {
+    "id": 20096,
+    "name": "매혹의 베일·러스트 레드",
+    "desc": "밤하늘조차 베일 뒤의 미소에 매료될 것이다.",
+    "icon": "T_Fashion_Face29_03",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 20097,
+    "name": "매혹의 베일·벚꽃",
+    "desc": "밤하늘조차 베일 뒤의 미소에 매료될 것이다.",
+    "icon": "T_Fashion_Face29_01",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 20098,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_03",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20099,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_02",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20100,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_04",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 20101,
+    "name": "",
+    "desc": "",
+    "icon": "T_Fashion_Face28_01",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 20102,
@@ -2856,6 +3216,24 @@
     "unlock": "이벤트를 통해 획득"
   },
   {
+    "id": 21008,
+    "name": "삿된 부적·골드",
+    "desc": "뜻하는 대로 부적을 부리니, 기이한 도술이 펼쳐지네.",
+    "icon": "T_Fashion_Fx17_01",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 21009,
+    "name": "영원의 꽃덤불",
+    "desc": "UI_Accessory_Desc_21007",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
+  },
+  {
     "id": 21010,
     "name": "영원의 꽃덤불",
     "desc": "저편에서 밀려오는 진홍빛 파도.",
@@ -2878,6 +3256,15 @@
     "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "이벤트를 통해 획득"
+  },
+  {
+    "id": 21013,
+    "name": "UI_Accessory_Name_21011",
+    "desc": "UI_Accessory_Desc_21010",
+    "icon": "T_Fashion_Head_YellowChick",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득",
+    "hide": 1
   },
   {
     "id": 21014,
@@ -2934,6 +3321,24 @@
     "icon": "T_Fashion_Fx49",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 29998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 29999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 30001,
@@ -3006,6 +3411,60 @@
     "icon": "T_Fashion_Waist05",
     "rarity": 4,
     "unlock": "달걀 루나의 인상 상점을 통해 획득"
+  },
+  {
+    "id": 30010,
+    "name": "狩月之证·bilibili",
+    "desc": "스페셜 이벤트를 통해 획득",
+    "icon": "T_Fashion_Waist_Card_Bili",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30011,
+    "name": "狩月之证·好游快爆",
+    "desc": "스페셜 이벤트를 통해 획득",
+    "icon": "T_Fashion_Waist_Card_Haobao",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30012,
+    "name": "狩月之证·抖音",
+    "desc": "스페셜 이벤트를 통해 획득",
+    "icon": "T_Fashion_Waist_Card_Douyin",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30013,
+    "name": "狩月之证·TapTap",
+    "desc": "스페셜 이벤트를 통해 획득",
+    "icon": "T_Fashion_Waist_Card_TapTap",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30014,
+    "name": "狩月之证·Lenovo",
+    "desc": "스페셜 이벤트를 통해 획득",
+    "icon": "T_Fashion_Waist_Card_Lenovo",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30015,
+    "name": "狩月之证·WeGame",
+    "desc": "스페셜 이벤트를 통해 획득",
+    "icon": "T_Fashion_Waist_Card_Wegame",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 30016,
@@ -3408,6 +3867,42 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 30066,
+    "name": "UI_Accessory_Name_30066",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30067,
+    "name": "UI_Accessory_Name_30067",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30068,
+    "name": "UI_Accessory_Name_30068",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 30069,
+    "name": "UI_Accessory_Name_30069",
+    "desc": "",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 30070,
     "name": "빛나는 이삭",
     "desc": "긴 밤의 끝에서 이 등불이 그대의 귀로를 밝혀 주기를.",
@@ -3472,6 +3967,33 @@
     "unlock": "프리즘 교환으로 획득"
   },
   {
+    "id": 31008,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "프리즘 교환으로 획득",
+    "hide": 1
+  },
+  {
+    "id": 39998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 39999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40001,
     "name": "달의 여우 꼬리",
     "desc": "달의 여우는 아주 미세한 습도 변화도 꼬리로 감지한다. 경험이 풍부한 여행자들은 달의 여우가 비 오는 밤에 홀로 춤을 추는지에 따라 먹구름이 언제 사라질지, 달빛이 언제 다시 돌아올지를 판단한다.",
@@ -3496,12 +4018,30 @@
     "unlock": "달걀 루나의 인상 상점을 통해 획득"
   },
   {
+    "id": 40004,
+    "name": "검은색 프라이팬",
+    "desc": "내가 뒤집어쓰지.",
+    "icon": "T_Fashion_Back02",
+    "rarity": 4,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40005,
     "name": "올빼미의 깃털",
     "desc": "어둠 속에서, 빛을 찾아라.",
     "icon": "T_Fashion_Back05",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 40006,
+    "name": "마왕☆가방",
+    "desc": "세상에서 가장 위대하고 무적인 가방. 빛의 마왕이 그렇다고 했다.",
+    "icon": "T_Fashion_Back07",
+    "rarity": 5,
+    "unlock": "음유 시집",
+    "hide": 1
   },
   {
     "id": 40007,
@@ -3526,6 +4066,15 @@
     "icon": "T_Fashion_Back21",
     "rarity": 5,
     "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 40010,
+    "name": "과거의 환상",
+    "desc": "'영웅'을 향한 지난날의 환상이 담긴 낡은 숄. 이 숄은 언젠가 다시 빛을 보게 될지도, 어쩌면 영원히 그러지 못할지도 모른다.",
+    "icon": "T_Fashion_Cloak_Linen",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 40011,
@@ -3726,6 +4275,15 @@
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
     "unlock": "이벤트를 통해 획득"
+  },
+  {
+    "id": 40036,
+    "name": "僵尸主题背饰3【远期待包装】",
+    "desc": "진실된 언령으로 삿됨을 몰아내고, 혼령을 보듬는다.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 40037,
@@ -3944,6 +4502,42 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 40064,
+    "name": "천공의 날개·아이보리",
+    "desc": "여섯 개의 날개 사이로, 죄 지은 이는 타오르는 심판의 불길을 보았으며, 고난받는 이는 천공의 문을 두드렸다.",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40065,
+    "name": "천공의 날개·그레이",
+    "desc": "여섯 개의 날개 사이로, 죄 지은 이는 타오르는 심판의 불길을 보았으며, 고난받는 이는 천공의 문을 두드렸다.",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40066,
+    "name": "천공의 날개·제트 블랙",
+    "desc": "여섯 개의 날개 사이로, 죄 지은 이는 타오르는 심판의 불길을 보았으며, 고난받는 이는 천공의 문을 두드렸다.",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 40067,
+    "name": "천공의 날개·러스트 레드",
+    "desc": "여섯 개의 날개 사이로, 죄 지은 이는 타오르는 심판의 불길을 보았으며, 고난받는 이는 천공의 문을 두드렸다.",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 40068,
     "name": "향긋 가방·비취",
     "desc": "향긋하고 앙증맞은 주머니가, 보들보들 옷자락에서 달랑이네.",
@@ -4046,6 +4640,24 @@
     "icon": "T_Fashion_Back47_02",
     "rarity": 5,
     "unlock": "이벤트를 통해 획득"
+  },
+  {
+    "id": 40081,
+    "name": "매혹의 날개·벚꽃",
+    "desc": "어둠이 어깨에 남긴 키스 자국.",
+    "icon": "T_Fashion_Back47_01",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
+  },
+  {
+    "id": 40082,
+    "name": "매혹의 날개·보라",
+    "desc": "어둠이 어깨에 남긴 키스 자국.",
+    "icon": "T_Fashion_Back47_04",
+    "rarity": 5,
+    "unlock": "이벤트를 통해 획득",
+    "hide": 1
   },
   {
     "id": 40083,
@@ -4160,6 +4772,24 @@
     "unlock": "이벤트를 통해 획득"
   },
   {
+    "id": 49998,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 49999,
+    "name": "",
+    "desc": "",
+    "icon": "",
+    "rarity": 0,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -4214,6 +4844,15 @@
     "icon": "T_Fashion_Fx14",
     "rarity": 4,
     "unlock": "광채에서 획득"
+  },
+  {
+    "id": 60004,
+    "name": "UI_Accessory_Name_60004",
+    "desc": "UI_Accessory_Desc_60004",
+    "icon": "T_Fashion_Fx14",
+    "rarity": 4,
+    "unlock": "광채에서 획득",
+    "hide": 1
   },
   {
     "id": 60005,
@@ -4528,6 +5167,15 @@
     "unlock": "프리즘 교환으로 획득"
   },
   {
+    "id": 80004,
+    "name": "UI_Accessory_Name_80004",
+    "desc": "회전, 착지, 훌륭해!",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
     "id": 80011,
     "name": "여름밤의 초대·러스트 레드",
     "desc": "팬지꽃을 문 나비가 주인공의 도착을 기다리며 무도회의 서곡을 연주한다.",
@@ -4598,6 +5246,33 @@
     "icon": "T_Fashion_Fx09",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 80041,
+    "name": "UI_Accessory_Name_80041",
+    "desc": "회전, 착지, 훌륭해!",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 80042,
+    "name": "UI_Accessory_Name_80042",
+    "desc": "회전, 착지, 훌륭해!",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
+  },
+  {
+    "id": 80043,
+    "name": "UI_Accessory_Name_80043",
+    "desc": "회전, 착지, 훌륭해!",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "",
+    "hide": 1
   },
   {
     "id": 80044,
@@ -4782,5 +5457,41 @@
     "icon": "T_Fashion_Fx47_01",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 80074,
+    "name": "UI_Accessory_Name_80074",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득",
+    "hide": 1
+  },
+  {
+    "id": 80075,
+    "name": "UI_Accessory_Name_80075",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득",
+    "hide": 1
+  },
+  {
+    "id": 80076,
+    "name": "UI_Accessory_Name_80076",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득",
+    "hide": 1
+  },
+  {
+    "id": 80077,
+    "name": "UI_Accessory_Name_80077",
+    "desc": "UI_Accessory_Desc_80074",
+    "icon": "",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득",
+    "hide": 1
   }
 ]
