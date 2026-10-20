@@ -8,21 +8,24 @@ import type { DialogueService } from "../src/modules/dialogue/dialogueModule.ts"
 import { collectImpressionStoryPaths, collectSpecialStoryPaths, questStoryModule } from "../src/modules/questStory/questStoryModule.ts"
 
 describe("QuestStory special stories", () => {
-    // BGM 节点只在对应音频已导出时保留：用临时目录固定音频可用性，避免依赖真实数据集。
-    let audioRoot: string
-    let previousAudioRoot: string | undefined
+    // BGM 节点只在对应事件资产存在时保留：用临时解包目录固定资产可用性，避免依赖真实数据集。
+    let unpackRoot: string
+    let previousUnpackRoot: string | undefined
     beforeEach(() => {
-        previousAudioRoot = process.env.DNA_BGM_EXPORT_DIR
-        audioRoot = mkdtempSync(join(tmpdir(), "bgm-audio-"))
-        const file = join(audioRoot, "bgm/1_0/0091_feina_activity_cs_01.ogg")
+        previousUnpackRoot = process.env.DNA_UNPACK_DIR
+        unpackRoot = mkdtempSync(join(tmpdir(), "unpack-"))
+        const file = join(unpackRoot, "Fmodel", "Output", "Exports", "EM", "Content", "Asset", "Audio", "FMOD", "Events", "bgm/1_0/0091_feina_activity_cs_01.uasset")
         mkdirSync(dirname(file), { recursive: true })
-        writeFileSync(file, "ogg")
-        process.env.DNA_BGM_EXPORT_DIR = audioRoot
+        writeFileSync(file, "uasset")
+        const movie = join(unpackRoot, "Fmodel", "Output", "Exports", "EM", "Content", "Movies", "Story", "PC", "OBT0102_SC020", "SQ_OBT0102_SC020.mp4")
+        mkdirSync(dirname(movie), { recursive: true })
+        writeFileSync(movie, "mp4")
+        process.env.DNA_UNPACK_DIR = unpackRoot
     })
     afterEach(() => {
-        if (previousAudioRoot === undefined) delete process.env.DNA_BGM_EXPORT_DIR
-        else process.env.DNA_BGM_EXPORT_DIR = previousAudioRoot
-        rmSync(audioRoot, { recursive: true, force: true })
+        if (previousUnpackRoot === undefined) delete process.env.DNA_UNPACK_DIR
+        else process.env.DNA_UNPACK_DIR = previousUnpackRoot
+        rmSync(unpackRoot, { recursive: true, force: true })
     })
 
     test("keeps a standalone video node alongside reachable dialogue", async () => {

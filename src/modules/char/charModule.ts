@@ -47,8 +47,8 @@ const WEAPON_TYPE_CN: Record<string, string> = {
 export async function charModule(ctx: ModuleContext) {
     const dm = ctx.dm
     const skillArtifacts = ctx.getArtifact<SkillArtifacts>("Skill")!
-    // 动画数据源：uasset 优先（与 FModel JSON 逐值一致，已用 Lise_Skill01 验证），json 仅回退。
-    const assetReader = new AssetReader(dm.root, false)
+    // 动画数据源：UAssetCLI 直读 .uasset（已用 Lise_Skill01 验证与旧 FModel JSON 逐值一致）。
+    const assetReader = new AssetReader(dm.root)
     await assetReader.ensureServer()
 
     // 原始表

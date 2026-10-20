@@ -1354,7 +1354,7 @@
             "id": 10199007,
             "名称": "Énigme – Preuve",
             "icon": "",
-            "描述": "Sous l’effet de [Recherche], si votre Vitesse de compétence dépasse 2.2, les Dégâts de compétence ignorent 30.0% de la Défense de la cible.",
+            "描述": "Sous l’effet de [Recherche], si votre Vitesse de compétence dépasse 220.0%, les Dégâts de compétence ignorent 30.0% de la Défense de la cible.",
             "解锁": {
               "Prototype : Énigme insoluble": 30,
               "Cristal Électro": 90,

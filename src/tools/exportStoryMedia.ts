@@ -5,7 +5,7 @@ import { basename, dirname, extname, isAbsolute, join } from "node:path"
 import { AssetReader } from "../lua/AssetReader.ts"
 import { LuaDataManager } from "../lua/LuaDataManager.ts"
 import { getExportsRoot } from "../lua/UAssetServer.ts"
-import { fmodEventMediaName, quotedPackagePath, storyVideoName } from "../modules/shared/dataHelpers.ts"
+import { fmodEventMediaName, normalizeBgmAssetPath, quotedPackagePath, storyVideoName } from "../modules/shared/dataHelpers.ts"
 import {
     dialogueFlowCgVideo,
     dialogueFlowDir,
@@ -13,6 +13,8 @@ import {
     stageSequenceName,
     storyMoviesForCode,
 } from "../modules/shared/storyStageMedia.ts"
+
+export { normalizeBgmAssetPath }
 
 type Row = Record<string, any>
 type MediaItem = { resource: string; story: string; node: string }
@@ -46,20 +48,6 @@ function quotedPath(value: unknown): string | undefined {
 function isPlayableBgmEvent(value: string, soundType: unknown): boolean {
     if (/(?:^|\/)mute(?:\.|$)/i.test(value.replaceAll("\\", "/").toLowerCase())) return false
     return Number(soundType) !== 2
-}
-
-export function normalizeBgmAssetPath(value: string): string {
-    let normalized = value
-        .trim()
-        .replaceAll("\\", "/")
-        .replace(/^'+|'+$/g, "")
-    normalized = normalized.replace(/^event:\//i, "EM/Content/Asset/Audio/FMOD/Events/")
-    normalized = normalized.replace(/^\/?Game\//i, "EM/Content/")
-    normalized = normalized.replace(/^\/?Asset\//i, "EM/Content/Asset/")
-    normalized = normalized.replace(/^\/+/, "")
-    normalized = normalized.replace(/\.(?:uasset|umap)$/i, "")
-    normalized = normalized.replace(/\.([^/.]+)$/, "")
-    return `${normalized}.uasset`
 }
 
 export function parseFModelSoundLog(text: string, wantedPaths?: ReadonlySet<string>): Map<string, string[]> {

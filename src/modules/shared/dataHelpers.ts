@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs"
 import { join } from "node:path"
 import type { ModuleContext } from "../../core/Graph.ts"
+import { getExportsRoot } from "../../lua/UAssetServer.ts"
 
 export type Row = Record<string, any>
 
@@ -101,15 +102,35 @@ export function fmodEventMediaName(value: unknown): string | undefined {
 }
 
 /**
- * BGM 事件规范名对应的音频是否已导出（供剧情节点过滤）。
- *
- * 剧情媒体导出按规范名落盘到 `.env` 的 DNA_BGM_EXPORT_DIR（如 `<root>/bgm/1_1/xxx.ogg`）。
- * 该目录未配置时无从判定，按"保留节点"处理（未配置解包/导出目录的环境行为不变）。
+ * BGM 事件引用（`event:/…` 或 `/Game/Asset/Audio/FMOD/Events/…`）→ 解包目录下的事件资产相对路径。
+ * 例如 `event:/bgm/1_0/0091_feina_activity_cs_01` →
+ * `EM/Content/Asset/Audio/FMOD/Events/bgm/1_0/0091_feina_activity_cs_01.uasset`。
  */
-export function hasExportedBgmAudio(name: string): boolean {
-    const root = process.env.DNA_BGM_EXPORT_DIR?.trim()
-    if (!root) return true
-    return existsSync(join(root, `${name}.ogg`))
+export function normalizeBgmAssetPath(value: string): string {
+    let normalized = value
+        .trim()
+        .replaceAll("\\", "/")
+        .replace(/^'+|'+$/g, "")
+    normalized = normalized.replace(/^event:\//i, "EM/Content/Asset/Audio/FMOD/Events/")
+    normalized = normalized.replace(/^\/?Game\//i, "EM/Content/")
+    normalized = normalized.replace(/^\/?Asset\//i, "EM/Content/Asset/")
+    normalized = normalized.replace(/^\/+/, "")
+    normalized = normalized.replace(/\.(?:uasset|umap)$/i, "")
+    normalized = normalized.replace(/\.([^/.]+)$/, "")
+    return `${normalized}.uasset`
+}
+
+/**
+ * BGM 事件资产是否存在（供剧情节点过滤，直读解包目录）。
+ *
+ * 直接检查事件 `.uasset` 是否存在于解包目录（`DNA_UNPACK_DIR/Fmodel/Output/Exports` 下），
+ * 不依赖 FModel 日志解析出的导出音频目录（`DNA_BGM_EXPORT_DIR`）。解包目录未配置时
+ * 无从判定，按“保留节点”处理（与旧行为一致）。
+ */
+export function hasBgmEventAsset(resource: string): boolean {
+    const exportsRoot = getExportsRoot()
+    if (!exportsRoot) return true
+    return existsSync(join(exportsRoot, normalizeBgmAssetPath(resource)))
 }
 
 /**

@@ -1354,7 +1354,7 @@
             "id": 10199007,
             "名称": "Enigma – Attest",
             "icon": "",
-            "描述": "While [Inquiry] is active and Skill Speed exceeds 2.2, Skill DMG ignores 30.0% of the target's DEF.",
+            "描述": "While [Inquiry] is active and Skill Speed exceeds 220.0%, Skill DMG ignores 30.0% of the target's DEF.",
             "解锁": {
               "Prototype: Endless Enigma": 30,
               "Electro Crystal": 90,

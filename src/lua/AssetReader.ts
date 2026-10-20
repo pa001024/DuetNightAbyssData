@@ -1,16 +1,15 @@
 /**
- * AssetReader — 动画资产读取（零 fmodel json 依赖）。
+ * AssetReader — 动画资产读取（纯 .uasset 直读，零 fmodel json/log 依赖）。
  *
- * 把动画 Montage（取消/连段/装填/射击间隔的数据源）从"FModel 预导出 JSON"迁移为
- * "UAssetCLI server 直接解析 .uasset"：
- * - 优先按 SkillNode 的 AnimPath/AnimSubPath 定位 .uasset，经 UAssetCLI fmodel 导出
- * - uasset 缺失/exe 缺失时回退同路径 .json（兼容旧环境）
+ * 动画 Montage（取消/连段/装填/射击间隔的数据源）直接解析解包目录中的 .uasset：
+ * - 按 SkillNode 的 AnimPath/AnimSubPath 定位 .uasset，经 UAssetCLI fmodel 导出
+ * - uasset 缺失/server 不可用时返回零值，不再回退 FModel 预导出 .json
  *
  * fmodel 返回 FModel 同构数组 [{ Type, Properties }]，读 SlotAnimTracks / Notifies
  * 提取 cancel / combo / skillEffectLink / shootingInterval（对齐老 weapon 处理器）。
  */
 
-import { existsSync, readdirSync, readFileSync } from "node:fs"
+import { existsSync, readdirSync } from "node:fs"
 import { basename, join } from "node:path"
 import { closeUAssetServer, getExportsRoot, getUAssetServer, type UAssetServer } from "./UAssetServer.ts"
 
@@ -109,12 +108,10 @@ export class AssetReader {
     private server: UAssetServer | null = null
     private exportsRoot: string | null = null
     private metaCache = new Map<string, AnimMeta>()
-    private jsonMetaCache = new Map<string, AnimMeta>()
     private fmodelCache = new Map<string, unknown[] | null>()
 
     constructor(
         private root: string,
-        private preferJson = false,
         private allowPrefixedName = false
     ) {
         this.exportsRoot = getExportsRoot()
@@ -175,30 +172,28 @@ export class AssetReader {
     }
 
     /**
-     * 定位 SkillNode 的动画资产候选路径（uasset + json 同时尝试，uasset 优先）。
-     * 返回第一个存在的候选；都缺失返回空。
+     * 定位 SkillNode 的动画资产 .uasset 路径。返回第一个存在的候选；缺失返回 null。
      */
-    private resolveNodeSources(node: Record<string, any>): { uasset: string | null; json: string | null } {
+    private resolveNodeSources(node: Record<string, any>): string | null {
         const animResource = node.AnimResource || node.AnimName
-        if (!animResource || !this.assetRoot) return { uasset: null, json: null }
+        if (!animResource || !this.assetRoot) return null
         const animPath = node.AnimPath ?? ""
         const animSubPath = node.AnimSubPath ?? ""
         const root = this.assetRoot
 
-        const candidates: Array<{ uasset: string; json: string }> = []
+        const candidates: string[] = []
 
         const normalized = String(animPath).replace(/\\/g, "/")
         const marker = "/Game/Asset/"
         if (normalized.includes(marker)) {
             const rel = normalized.split(marker)[1].replace(/^\/+|\/+$/g, "")
-            const base = join(root, ...rel.split("/").filter(Boolean), String(animResource))
-            candidates.push({ uasset: `${base}.uasset`, json: `${base}.json` })
+            candidates.push(`${join(root, ...rel.split("/").filter(Boolean), String(animResource))}.uasset`)
         }
 
         // AnimSubPath 兜底：Char/Player/*/Animation/Montage/<subpath>/<AnimResource>
         const subDir = String(animSubPath).replace(/\\/g, "/").split("/").filter(Boolean)
         const playersRoot = join(root, "Char", "Player")
-        const prefixedCandidates: Array<{ uasset: string; json: string }> = []
+        const prefixedCandidates: string[] = []
         try {
             if (existsSync(playersRoot)) {
                 for (const charName of readdirSync(playersRoot).sort()) {
@@ -212,13 +207,13 @@ export class AssetReader {
                         }
                     }
                     if (!ok) continue
-                    candidates.push({ uasset: join(cur, `${animResource}.uasset`), json: join(cur, `${animResource}.json`) })
+                    candidates.push(join(cur, `${animResource}.uasset`))
                     if (this.allowPrefixedName) {
                         for (const name of readdirSync(cur).sort()) {
-                            if (!name.endsWith(`_${animResource}.json`) && !name.endsWith(`_${animResource}.uasset`)) continue
-                            const base = join(cur, name.replace(/\.(?:json|uasset)$/i, ""))
-                            if (!prefixedCandidates.some(candidate => candidate.uasset === `${base}.uasset`)) {
-                                prefixedCandidates.push({ uasset: `${base}.uasset`, json: `${base}.json` })
+                            if (!name.endsWith(`_${animResource}.uasset`)) continue
+                            const base = join(cur, name.replace(/\.uasset$/i, ""))
+                            if (!prefixedCandidates.some(candidate => candidate === `${base}.uasset`)) {
+                                prefixedCandidates.push(`${base}.uasset`)
                             }
                         }
                     }
@@ -228,42 +223,20 @@ export class AssetReader {
             /* ignore */
         }
         candidates.push(...prefixedCandidates)
-        if (this.preferJson) {
-            for (const c of candidates) {
-                if (c.json && existsSync(c.json)) return c
-            }
-        }
-        // 返回第一个存在的候选（uasset 优先，其次 json）
+        // 返回第一个存在的候选
         for (const c of candidates) {
-            if (c.uasset && existsSync(c.uasset)) return c
+            if (existsSync(c)) return c
         }
-        for (const c of candidates) {
-            if (c.json && existsSync(c.json)) return c
-        }
-        return { uasset: null, json: null }
+        return null
     }
 
     /**
-     * 读一个 SkillNode 的动画元数据。uasset 优先（UAssetCLI server），json 回退。带缓存。
+     * 读一个 SkillNode 的动画元数据（UAssetCLI server 直读 .uasset）。带缓存。
+     * 资产缺失或 server 不可用时返回零值（保持既有错误语义）。
      */
     async animMetaForNode(node: Record<string, any>): Promise<AnimMeta> {
-        const { uasset, json } = this.resolveNodeSources(node)
-
-        if (this.preferJson && json && existsSync(json)) {
-            const cached = this.jsonMetaCache.get(json)
-            if (cached) return cached
-            try {
-                const data = JSON.parse(readFileSync(json, "utf8"))
-                const meta = animMetaFromFModelData(data)
-                this.jsonMetaCache.set(json, meta)
-                return meta
-            } catch {
-                /* continue with the uasset source */
-            }
-        }
-
-        // 尝试 uasset（优先）
-        if (uasset && existsSync(uasset)) {
+        const uasset = this.resolveNodeSources(node)
+        if (uasset) {
             const cached = this.metaCache.get(uasset)
             if (cached) return cached
             const server = await this.ensureServer()
@@ -276,31 +249,16 @@ export class AssetReader {
                         return meta
                     }
                 } catch {
-                    /* fall to json */
+                    /* fall through to zero value */
                 }
-            }
-        }
-
-        // 回退 json（fmodel 预导出）
-        if (json && existsSync(json)) {
-            const cached = this.jsonMetaCache.get(json)
-            if (cached) return cached
-            try {
-                const data = JSON.parse(readFileSync(json, "utf8"))
-                const meta = animMetaFromFModelData(data)
-                this.jsonMetaCache.set(json, meta)
-                return meta
-            } catch {
-                return { ...EMPTY }
             }
         }
         return { ...EMPTY }
     }
 
     /** 指示是否真正使用 uasset 源（供日志） */
-    get source(): "uasset" | "json" | "none" {
+    get source(): "uasset" | "none" {
         if (this.server) return "uasset"
-        if (this.jsonMetaCache.size > 0) return "json"
         return "none"
     }
 }

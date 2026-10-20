@@ -9,7 +9,7 @@
  *
  * 翻译部分一律 vnode；数值/结构普通 JS。语言无关，一次 build 多语言渲染。
  * 数据源：Script/Datas/*.lua（按需加载）。
- * 动画资源由 AssetReader 通过 UAssetCLI 读取；仅保留既有静态资源目录兼容路径。
+ * 动画资源由 AssetReader 通过 UAssetCLI 直读 .uasset。
  */
 
 import type { ModuleContext } from "../../core/Graph.ts"
@@ -103,7 +103,7 @@ export async function weaponModule(ctx: ModuleContext) {
     const skillArtifacts = ctx.getArtifact<SkillArtifacts>("Skill")!
 
     // 资产读取（uassetcli server 优先，json 回退）
-    const assetReader = new AssetReader(dm.root, false, true)
+    const assetReader = new AssetReader(dm.root, true)
     await assetReader.ensureServer()
 
     // 原始表

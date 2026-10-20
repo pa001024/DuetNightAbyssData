@@ -191,7 +191,7 @@ return ReadOnly("HyperWeaponSkillTree", {
     ResourceId = T.RT_1,
     ResourceNum = T.RT_2,
     SkillDescParameter = {
-      [1] = "$#PassiveEffect[10199].Vars.Lv3SkillSpeedMin$",
+      [1] = "$#PassiveEffect[10199].Vars.Lv3SkillSpeedMin*100$%",
       [2] = "$#Buff[1019932].AddAttrs[1].Value*100$%"
     },
     SkillDescription = "SKILL_10199_07_DESC",

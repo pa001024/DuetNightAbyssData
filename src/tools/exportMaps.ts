@@ -3,13 +3,13 @@
  * exportMaps — 批量导出 Map_Splice 地图（TypeScript 独立工具）。
  *
  * 数据源：解包目录（DNA_UNPACK_DIR）中 FModel Exports 的 UMG 布局资产
- * （.uasset 经 UAssetCLI server 解析，或同路径 .json 静态回退）与贴图 PNG。
+ * （.uasset 经 UAssetCLI server 直读解析）与贴图 PNG。
  * 行为：遍历 Map_Splice 目录下每个布局 → 读 UniformGridPanel 槽位的
  * Row/Column → 按网格坐标把整张贴图 alpha 合成进透明画布 → 输出拼接 PNG，
  * 保留 Map_Splice 下的相对目录结构。
  *
  * 用法：bun run src/tools/exportMaps.ts [--splice-dir X] [--texture-root X]
- *       [--output-root X] [--grid-name Main] [--force-static-json]
+ *       [--output-root X] [--grid-name Main]
  */
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs"
 import { dirname, join } from "node:path"
@@ -31,7 +31,6 @@ interface Options {
     textureRoot: string
     outputRoot: string
     gridName: string
-    forceStaticJson: boolean
 }
 
 interface Counts {
@@ -53,7 +52,6 @@ function helpText(): string {
                          (默认: <解包目录>/Fmodel/Output/Exports/EM/Content/UI/Texture/Static)
   --output-root <dir>    输出根目录 (默认: <仓库>/out/map_splice, 保留相对目录结构)
   --grid-name <name>     UniformGridPanel 名称 (默认: Main)
-  --force-static-json    强制使用静态 .json 布局 (不走 UAssetCLI server)
   -h, --help             显示本帮助`
 }
 
@@ -68,7 +66,6 @@ function parseArgs(argv: string[]): Options | "help" {
         textureRoot: fallbackTexture,
         outputRoot: join(projectRoot, "out", "map_splice"),
         gridName: "Main",
-        forceStaticJson: false,
     }
     for (let i = 0; i < argv.length; i++) {
         const arg = argv[i]
@@ -89,9 +86,6 @@ function parseArgs(argv: string[]): Options | "help" {
                 break
             case "--grid-name":
                 options.gridName = value()
-                break
-            case "--force-static-json":
-                options.forceStaticJson = true
                 break
             case "-h":
             case "--help":
@@ -143,20 +137,11 @@ function collectFiles(root: string, suffix: string): string[] {
     return result.sort()
 }
 
-/** 读取布局数据：server 模式经 UAssetCLI fmodel，静态模式读 .json。失败返回 null。 */
-async function loadLayoutData(server: UAssetServer | null, source: string, exportsRoot: string): Promise<unknown[] | null> {
-    if (server !== null) {
-        const data = await server.fmodel(source, exportsRoot)
-        if (data === null) return null
-        return data
-    }
-    try {
-        const text = readFileSync(source, "utf8")
-        const data = JSON.parse(text)
-        return Array.isArray(data) ? data : null
-    } catch {
-        return null
-    }
+/** 读取布局数据：经 UAssetCLI fmodel 直读 .uasset。失败返回 null。 */
+async function loadLayoutData(server: UAssetServer, source: string, exportsRoot: string): Promise<unknown[] | null> {
+    const data = await server.fmodel(source, exportsRoot)
+    if (data === null) return null
+    return data
 }
 
 /**
@@ -258,30 +243,26 @@ function copyFallback(outFile: string, stems: string[], tileByStem: Map<string, 
 }
 
 export async function exportMaps(options: Options): Promise<Counts> {
-    const { spliceDir, textureRoot, outputRoot, gridName, forceStaticJson } = options
+    const { spliceDir, textureRoot, outputRoot, gridName } = options
     if (!existsSync(spliceDir)) throw new Error(`Map_Splice 目录不存在: ${spliceDir}`)
     if (!existsSync(textureRoot)) throw new Error(`贴图根目录不存在: ${textureRoot}`)
     mkdirSync(outputRoot, { recursive: true })
 
     const exportsRoot = getExportsRoot()
     const exe = getUassetExe()
-    const uassets = collectFiles(spliceDir, ".uasset")
-    const useServer = !forceStaticJson && exe !== null && exportsRoot !== null && uassets.length > 0
-    const sources = useServer ? uassets : collectFiles(spliceDir, ".json")
-    if (useServer) {
-        console.log(`[INFO] 数据源: UAssetCLI server 模式（${uassets.length} 个 uasset）`)
-    } else {
-        console.log(`[INFO] 数据源: 静态 JSON（${forceStaticJson ? "已强制" : "无 uasset / exe"}）`)
-    }
+    const sources = collectFiles(spliceDir, ".uasset")
+    if (exe === null || exportsRoot === null) throw new Error("地图导出需要 UAssetCLI 与解包目录（DNA_UNPACK_DIR），不支持静态 JSON")
+    if (sources.length === 0) throw new Error(`Map_Splice 目录下无 .uasset: ${spliceDir}`)
+    console.log(`[INFO] 数据源: UAssetCLI server 模式（${sources.length} 个 uasset）`)
     console.log(`[INFO] 扫描目录: ${spliceDir}`)
     console.log(`[INFO] 输出目录: ${outputRoot}`)
 
-    const server = useServer ? new UAssetServer(exe!) : null
+    const server = new UAssetServer(exe)
     const counts: Counts = { total: sources.length, ok: 0, skip: 0, fail: 0 }
     try {
         for (const source of sources) {
             const rel = source.slice(spliceDir.length).replace(/^[\\/]+/, "")
-            const layout = await loadLayoutData(server, source, exportsRoot ?? "")
+            const layout = await loadLayoutData(server, source, exportsRoot)
             if (layout === null) {
                 console.log(`[SKIP] ${source} / 布局数据不可用`)
                 counts.skip++
