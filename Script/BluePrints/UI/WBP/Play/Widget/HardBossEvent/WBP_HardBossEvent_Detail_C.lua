@@ -334,6 +334,17 @@ function M:InitSquad(DungeonId)
   end
 end
 
+function M:RefreshSquadPresetList()
+  local DefaultList = self.DefaultList
+  if not DefaultList or not DefaultList.RefreshData then
+    return
+  end
+  if DefaultList:GetVisibility() == ESlateVisibility.Collapsed then
+    return
+  end
+  DefaultList:RefreshData()
+end
+
 function M:OnCurrentSquadChange(SquadId, IsComMissing)
   self.SquadId = SquadId
 end

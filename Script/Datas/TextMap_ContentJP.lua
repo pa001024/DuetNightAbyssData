@@ -85373,7 +85373,7 @@ local Data = {
           ContentJP = "確率説明"
         },
         UI_Walnut_Gacha_Des_Detail = {
-          ContentJP = "<Title>依頼密書の確率説明</>\n依頼密書を完了することで、エピック報酬を獲得できる総合確率は<highlight>10%</>です。"
+          ContentJP = "<Title>依頼密書の確率について</>\n武器・キャラクター依頼密書を完了した際に、エピック報酬を獲得できる総合確率は<highlight>10%</>です。\nセイレーンシリーズの魔の楔依頼密書を完了した際に、エピック報酬を獲得できる総合確率は<highlight>2%</>です。\nその他のシリーズの魔の楔依頼密書を完了した際に、エピック報酬を獲得できる総合確率は<highlight>4%</>です。"
         },
         UI_Walnut_Giveup = {ContentJP = "放棄"},
         UI_Walnut_Giveup_Toast = {

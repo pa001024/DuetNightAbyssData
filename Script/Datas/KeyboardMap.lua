@@ -612,5 +612,19 @@ return ReadOnly("KeyboardMap", {
     Key = "W",
     Scale = "1",
     SortId = 43
+  },
+  ZoomInputDown = {
+    ActionName = "ZoomInputDown",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "MouseScrollDown",
+    SortId = 75
+  },
+  ZoomInputUp = {
+    ActionName = "ZoomInputUp",
+    IsActionMapping = true,
+    IsShowInSetting = false,
+    Key = "MouseScrollUp",
+    SortId = 74
   }
 })

@@ -56,6 +56,7 @@ function WBP_Task_Main:OnLoaded(...)
   self:InitTrackingButton()
   self:InitTabInfo()
   self:InitQuestReviewEntrance()
+  self.Entrance_QuestReview:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:UpdateListViewScrollMultiplier(self.RootWidget.List_Task, 10)
   if 0 ~= self.RootWidget.List_Task.ListItems:Num() then
     self.RootWidget.List_Task:SetScrollbarVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)

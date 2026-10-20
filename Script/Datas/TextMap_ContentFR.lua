@@ -84590,7 +84590,7 @@ Tirer sur les cibles pour marquer des points.
           ContentFR = "Probabilités"
         },
         UI_Walnut_Gacha_Des_Detail = {
-          ContentFR = "En accomplissant un Mandat scellé, vous avez <highlight>10 %</> de chances d’obtenir une récompense légendaire."
+          ContentFR = "En accomplissant un Mandat scellé d’arme ou de personnage, vous avez <highlight>10 %</> de chances d’obtenir une récompense légendaire.\nEn accomplissant un Mandat scellé de Sceau démoniaque de la série Sirène, vous avez <highlight>2 %</> de chances d’obtenir une récompense légendaire.\nEn accomplissant un Mandat scellé de Sceau démoniaque d’une autre série, vous avez <highlight>4 %</> de chances d’obtenir une récompense légendaire."
         },
         UI_Walnut_Giveup = {ContentFR = "Quitter"},
         UI_Walnut_Giveup_Toast = {

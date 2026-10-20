@@ -82496,7 +82496,7 @@ local Data = {
           ContentTC = "概率說明"
         },
         UI_Walnut_Gacha_Des_Detail = {
-          ContentTC = "<Title>委託密函概率說明</>\n透過完成委託密函，獲得金色階級獎勵的綜合概率為<highlight>10%</>。"
+          ContentTC = "<Title>委託密函概率說明</>\n透過完成武器、角色委託密函，獲得金色階級獎勵的綜合概率為<highlight>10%</>。\n透過完成海妖系列魔之楔委託密函，獲得金色階級獎勵的綜合概率為<highlight>2%</>。\n透過完成其他系列魔之楔委託密函，獲得金色階級獎勵的綜合概率為<highlight>4%</>。"
         },
         UI_Walnut_Giveup = {ContentTC = "放棄"},
         UI_Walnut_Giveup_Toast = {

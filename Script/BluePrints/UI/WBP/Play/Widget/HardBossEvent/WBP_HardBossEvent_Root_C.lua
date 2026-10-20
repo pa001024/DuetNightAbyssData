@@ -514,10 +514,22 @@ end
 function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
   self:RestoreRewardFocusAfterStackReturn(StackAction)
+  self:RefreshSquadPresetOnStackReturn(StackAction)
 end
 
 function M:OnEntryReceiveEnterState(StackAction)
   self:RestoreRewardFocusAfterStackReturn(StackAction)
+  self:RefreshSquadPresetOnStackReturn(StackAction)
+end
+
+function M:RefreshSquadPresetOnStackReturn(StackAction)
+  if 1 ~= StackAction or not self:IsDetailActive() then
+    return
+  end
+  local DetailPage = self.DetailPage
+  if DetailPage and DetailPage.RefreshSquadPresetList then
+    DetailPage:RefreshSquadPresetList()
+  end
 end
 
 function M:OnSystemUIUnLoad(UIName)

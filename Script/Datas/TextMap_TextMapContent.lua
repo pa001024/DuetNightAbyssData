@@ -83627,7 +83627,7 @@ local Data = {
           TextMapContent = "概率说明"
         },
         UI_Walnut_Gacha_Des_Detail = {
-          TextMapContent = "<Title>委托密函概率说明</>\n通过完成委托密函，获得金色阶级奖励的综合概率为<highlight>10%</>。"
+          TextMapContent = "<Title>委托密函概率说明</>\n通过完成武器,角色委托密函，获得金色阶级奖励的综合概率为<highlight>10%</>。\n通过完成海妖系列魔之楔委托密函，获得金色阶级奖励的综合概率为<highlight>2%</>。\n通过完成其他系列魔之楔委托密函，获得金色阶级奖励的综合概率为<highlight>4%</>。"
         },
         UI_Walnut_Giveup = {TextMapContent = "放弃"},
         UI_Walnut_Giveup_Toast = {

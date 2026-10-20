@@ -85340,7 +85340,9 @@ In the end, those fragile strings could bear no more, and snapped. She was made 
         UI_Walnut_Gacha_Des_Detail = {
           ContentEN = [[
 <Title>Covert Commission Reward Drop Rate</>
-Completing Covert Commissions grants a <highlight>10%</> chance of a Golden-tier reward.]]
+Completing Covert Commissions for Weapons and Characters grants a <highlight>10%</> chance of a Golden-tier reward.
+Completing Siren-series Demon Wedge Covert Commissions grants a <highlight>2%</> chance of a Golden-tier reward.
+Completing other Demon Wedge Covert Commissions grants a <highlight>4%</> chance of a Golden-tier reward.]]
         },
         UI_Walnut_Giveup = {ContentEN = "Quit"},
         UI_Walnut_Giveup_Toast = {

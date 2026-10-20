@@ -84117,7 +84117,7 @@ local Data = {
           ContentKR = "확률 설명"
         },
         UI_Walnut_Gacha_Des_Detail = {
-          ContentKR = "<Title>의뢰 편지 확률 설명</>\n의뢰 편지를 통해 금색 등급의 보상을 획득할 종합 확률은 <highlight>10%</>입니다."
+          ContentKR = "<Title>의뢰 편지 확률 설명</>\n무기&캐릭터 의뢰 편지를 통해 금색 등급의 보상을 획득할 종합 확률은 <highlight>10%</>입니다.\n세이렌 시리즈 악마의 쐐기 의뢰 편지를 통해 금색 등급의 보상을 획득할 종합 확률은 <highlight>2%</>입니다.\n다른 시리즈의 악마의 쐐기 의뢰 편지를 통해 금색 등급의 보상을 획득할 종합 확률은 <highlight>4%</>입니다."
         },
         UI_Walnut_Giveup = {ContentKR = "포기"},
         UI_Walnut_Giveup_Toast = {

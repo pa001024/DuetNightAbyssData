@@ -274405,12 +274405,14 @@ In the end, those fragile strings could bear no more, and snapped. She was made 
   UI_Walnut_Gacha_Des_Detail = {
     ContentEN = [[
 <Title>Covert Commission Reward Drop Rate</>
-Completing Covert Commissions grants a <highlight>10%</> chance of a Golden-tier reward.]],
-    ContentFR = "En accomplissant un Mandat scellé, vous avez <highlight>10 %</> de chances d’obtenir une récompense légendaire.",
-    ContentJP = "<Title>依頼密書の確率説明</>\n依頼密書を完了することで、エピック報酬を獲得できる総合確率は<highlight>10%</>です。",
-    ContentKR = "<Title>의뢰 편지 확률 설명</>\n의뢰 편지를 통해 금색 등급의 보상을 획득할 종합 확률은 <highlight>10%</>입니다.",
-    ContentTC = "<Title>委託密函概率說明</>\n透過完成委託密函，獲得金色階級獎勵的綜合概率為<highlight>10%</>。",
-    TextMapContent = "<Title>委托密函概率说明</>\n通过完成委托密函，获得金色阶级奖励的综合概率为<highlight>10%</>。",
+Completing Covert Commissions for Weapons and Characters grants a <highlight>10%</> chance of a Golden-tier reward.
+Completing Siren-series Demon Wedge Covert Commissions grants a <highlight>2%</> chance of a Golden-tier reward.
+Completing other Demon Wedge Covert Commissions grants a <highlight>4%</> chance of a Golden-tier reward.]],
+    ContentFR = "En accomplissant un Mandat scellé d’arme ou de personnage, vous avez <highlight>10 %</> de chances d’obtenir une récompense légendaire.\nEn accomplissant un Mandat scellé de Sceau démoniaque de la série Sirène, vous avez <highlight>2 %</> de chances d’obtenir une récompense légendaire.\nEn accomplissant un Mandat scellé de Sceau démoniaque d’une autre série, vous avez <highlight>4 %</> de chances d’obtenir une récompense légendaire.",
+    ContentJP = "<Title>依頼密書の確率について</>\n武器・キャラクター依頼密書を完了した際に、エピック報酬を獲得できる総合確率は<highlight>10%</>です。\nセイレーンシリーズの魔の楔依頼密書を完了した際に、エピック報酬を獲得できる総合確率は<highlight>2%</>です。\nその他のシリーズの魔の楔依頼密書を完了した際に、エピック報酬を獲得できる総合確率は<highlight>4%</>です。",
+    ContentKR = "<Title>의뢰 편지 확률 설명</>\n무기&캐릭터 의뢰 편지를 통해 금색 등급의 보상을 획득할 종합 확률은 <highlight>10%</>입니다.\n세이렌 시리즈 악마의 쐐기 의뢰 편지를 통해 금색 등급의 보상을 획득할 종합 확률은 <highlight>2%</>입니다.\n다른 시리즈의 악마의 쐐기 의뢰 편지를 통해 금색 등급의 보상을 획득할 종합 확률은 <highlight>4%</>입니다.",
+    ContentTC = "<Title>委託密函概率說明</>\n透過完成武器、角色委託密函，獲得金色階級獎勵的綜合概率為<highlight>10%</>。\n透過完成海妖系列魔之楔委託密函，獲得金色階級獎勵的綜合概率為<highlight>2%</>。\n透過完成其他系列魔之楔委託密函，獲得金色階級獎勵的綜合概率為<highlight>4%</>。",
+    TextMapContent = "<Title>委托密函概率说明</>\n通过完成武器,角色委托密函，获得金色阶级奖励的综合概率为<highlight>10%</>。\n通过完成海妖系列魔之楔委托密函，获得金色阶级奖励的综合概率为<highlight>2%</>。\n通过完成其他系列魔之楔委托密函，获得金色阶级奖励的综合概率为<highlight>4%</>。",
     TextMapId = "UI_Walnut_Gacha_Des_Detail"
   },
   UI_Walnut_Giveup = {

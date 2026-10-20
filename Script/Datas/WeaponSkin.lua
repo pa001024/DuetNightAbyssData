@@ -326,7 +326,7 @@ return ReadOnly("WeaponSkin", {
     ApplicationType = 101,
     BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Sword_Huanyu.T_Bust_Sword_Huanyu'",
     Dec = "UI_WeaponSkin_Des_3010210",
-    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Sword_Huanyu.T_Gacha_Sword_Huanyu'",
+    DisplayPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Bust/Weapon/T_Bust_Sword_Huanyu.T_Bust_Sword_Huanyu'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Weapon/T_Head_Sword_Huanyu.T_Head_Sword_Huanyu'",
     LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Gacha/Weapon/T_Gacha_Sword_Huanyu.T_Gacha_Sword_Huanyu'",
     Name = "UI_WeaponSkin_Name_3010210",
