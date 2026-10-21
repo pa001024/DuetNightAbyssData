@@ -7,12 +7,47 @@ import { eventModule } from "../src/modules/event/eventModule.ts"
 const baseDir = new URL("../out/", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1")
 const textmap = getTextMap(baseDir)
 
-async function buildEvents(): Promise<Array<Record<string, any>>> {
+async function buildEvents(lang = "cn"): Promise<Array<Record<string, any>>> {
     const graph = new Graph()
     graph.defineModule({ name: "Event", deps: [], outputs: true, build: ctx => eventModule(ctx) })
     const artifacts = await graph.build({}, undefined, ["Event"])
-    return renderTree(artifacts.get("Event") as VNodeTree, "cn", textmap) as Array<Record<string, any>>
+    return renderTree(artifacts.get("Event") as VNodeTree, lang, textmap) as Array<Record<string, any>>
 }
+
+describe("Event 联袂演绎", () => {
+    test("121001~121004 名含副标题且内联同一副本列表", async () => {
+        const events = await buildEvents()
+        for (const id of [121001, 121002, 121003, 121004]) {
+            const event = events.find(item => item.id === id)!
+            expect(event).toBeDefined()
+            expect(event.name).toBe("沉浸式戏剧·联袂演绎")
+            expect((event.asyncCombat as Record<string, any>).dungeons).toEqual([40601, 40602, 40603, 40604])
+        }
+    })
+
+    test("深渊事件名带勇者们的传说且无 asyncCombat，不与联袂演绎混淆", async () => {
+        const events = await buildEvents()
+        const event = events.find(item => item.id === 103002)!
+        expect(event.name).toBe("沉浸式戏剧·勇者们的传说")
+        expect(event).not.toHaveProperty("asyncCombat")
+        for (const item of events)
+            if (![121001, 121002, 121003, 121004].includes(item.id)) expect(item).not.toHaveProperty("asyncCombat")
+    })
+
+    test("无副标题事件名不变，副标题无文本时不拼接原始 key", async () => {
+        const events = await buildEvents()
+        expect(events.find(item => item.id === 103036)!.name).toBe("永恒梦魇")
+        // 103017 的 EventSName 无 TextMap，不拼接。
+        expect(events.find(item => item.id === 103017)!.name).toBe("定格的往事")
+        expect(JSON.stringify(events)).not.toContain("Event_STitle_103017")
+    })
+
+    test("en 名取官方对照翻译", async () => {
+        const events = await buildEvents("en")
+        expect(events.find(item => item.id === 121001)!.name).toBe("Immersive Theatre·Ensemble Act")
+        expect(events.find(item => item.id === 103002)!.name).toBe("Immersive Theatre·Legends of the Brave")
+    })
+}) 
 
 describe("Event 永恒梦魇内联", () => {
     test("103036 输出 5 Boss 双模式及周奖励元数据", async () => {

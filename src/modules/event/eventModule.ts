@@ -1,7 +1,7 @@
 /** Event module - 活动配置及关联明细。 */
 
 import type { ModuleContext } from "../../core/Graph.ts"
-import { T, type VNodeTree } from "../../i18n/vnode.ts"
+import { seq, T, type VNodeTree } from "../../i18n/vnode.ts"
 import { iconName, sequence } from "../shared/dataHelpers.ts"
 
 function table(ctx: ModuleContext, name: string): Record<string, any> {
@@ -223,6 +223,36 @@ function hardBossEventByEvent(ctx: ModuleContext): Map<string, VNodeTree> {
     return result
 }
 
+/**
+ * 联袂演绎（AsyncCombat，如事件 121001~121004）的副本关联，按 EventId 分组。
+ * 数据链：EventMain.ServerEventType === "AsyncCombat" 的事件 ↔ Dungeon.DungeonType === "AsyncCombat"
+ * 的副本（40601~40604，难度递进）。AsyncCombat 表本身无 EventId 字段，副本为各期窗口共用，
+ * 故每期事件内联同一副本 id 列表（升序）；前端凭此把副本（联袂演绎）对应到各期起止时间。
+ * 深渊事件（Abyss_entry，无 ServerEventType）不进入此分组，不与同名沉浸式戏剧混淆。
+ */
+function asyncCombatByEvent(ctx: ModuleContext): Map<string, VNodeTree> {
+    const dungeons: number[] = []
+    for (const item of Object.values(table(ctx, "Dungeon"))) {
+        if (!item || typeof item !== "object") continue
+        const row = item as Record<string, any>
+        if (row.DungeonType !== "AsyncCombat") continue
+        const id = Number(row.DungeonID ?? 0)
+        if (id > 0 && !dungeons.includes(id)) dungeons.push(id)
+    }
+    dungeons.sort((a, b) => a - b)
+    const result = new Map<string, VNodeTree>()
+    if (!dungeons.length) return result
+    for (const item of Object.values(table(ctx, "EventMain"))) {
+        if (!item || typeof item !== "object") continue
+        const row = item as Record<string, any>
+        if (row.ServerEventType !== "AsyncCombat") continue
+        const eventId = Number(row.EventId ?? 0)
+        if (!eventId) continue
+        result.set(String(eventId), { dungeons: dungeons as VNodeTree })
+    }
+    return result
+}
+
 export function eventModule(ctx: ModuleContext): VNodeTree {
     const boxDrops = rowsByEvent(ctx, "BoxDrop")
     const topUps = rowsByEvent(ctx, "CumulativeTopUpEvent")
@@ -230,15 +260,21 @@ export function eventModule(ctx: ModuleContext): VNodeTree {
     const signIns = signInByEvent(ctx)
     const onlineTimes = onlineTimeByEvent(ctx)
     const hardBossEvents = hardBossEventByEvent(ctx)
+    const asyncCombats = asyncCombatByEvent(ctx)
     const result: VNodeTree[] = []
     for (const item of Object.values(table(ctx, "EventMain"))) {
         if (!item || typeof item !== "object") continue
         const row = item as Record<string, any>
         const id = Number(row.EventId ?? 0)
         if (!id) continue
+        // 有官方副标题（EventSName）的事件，名按「主标题·副标题」合并导出，各语言取官方对照翻译：
+        // 联袂演绎 121001~121004 → 沉浸式戏剧·联袂演绎，深渊 103002 系 → 沉浸式戏剧·勇者们的传说。
+        // SName 无 TextMap 时不拼接，避免原始 key 泄漏（如 Event_STitle_103017）。
+        const sNameKey = typeof row.EventSName === "string" ? row.EventSName : ""
+        const nameKey = typeof row.EventName === "string" ? row.EventName : ""
         const output: Record<string, VNodeTree> = {
             id,
-            name: T(row.EventName ?? ""),
+            name: sNameKey && sNameKey !== nameKey && ctx.textmap.has(sNameKey) ? seq([T(nameKey), "·", T(sNameKey)]) : T(nameKey),
             desc: T(row.EventDes ?? ""),
             startTime: row.EventStartTime,
             endTime: row.EventEndTime,
@@ -264,6 +300,8 @@ export function eventModule(ctx: ModuleContext): VNodeTree {
         if (onlineTime) output.onlineTime = onlineTime
         const hardBossEvent = hardBossEvents.get(String(id))
         if (hardBossEvent) output.hardBossEvent = hardBossEvent
+        const asyncCombat = asyncCombats.get(String(id))
+        if (asyncCombat) output.asyncCombat = asyncCombat
         result.push(output)
     }
     result.sort((a, b) => Number((a as Record<string, any>).id) - Number((b as Record<string, any>).id))
