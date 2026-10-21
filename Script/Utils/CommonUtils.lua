@@ -1072,6 +1072,14 @@ function CommonUtils:SetActorTickableWhenPaused(TargetActor, bTickable)
         URuntimeCommonFunctionLibrary.SetComponentTickableWhenPaused(_Component, bTickable)
       end
     end
+    if TargetActor.NiagaraGroup then
+      for _, _Component in pairs(TargetActor.NiagaraGroup) do
+        if IsValid(_Component) then
+          URuntimeCommonFunctionLibrary.SetComponentTickableWhenPaused(_Component, bTickable)
+          _Component:SetAllowScalability(not bTickable)
+        end
+      end
+    end
   end
 end
 

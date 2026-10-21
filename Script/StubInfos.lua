@@ -8,6 +8,9 @@ StubInfos.StubFunctionList = {
   },
   {
     Name = "AMechanismBase::GetChestRewardTime"
+  },
+  {
+    Name = "UEMMonsterCreateOverlapCheckSystem::IsOverlappingOtherRealMonster"
   }
 }
 StubInfos.DyncBindings = {}
