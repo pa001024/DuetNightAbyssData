@@ -24,19 +24,19 @@ describe("mod 模块", () => {
     test("恒定列退火进模板，剩余列重排为连续编号", async () => {
         const mods = await buildMods()
 
-        // 51311：MaxLevel=5 且 ModCardLevelMax=5，共 10 级；#3（30 秒）与 #4（15 层）各级恒定
+        // 51311：MaxLevel=5 且 ModCardLevelMax=5，0~10 级共 11 列；#3（30 秒）与 #4（15 层）各级恒定
         const mod = mods.find(item => item.id === 51311)
         const effect = mod?.效果 as [string, ...string[][]]
         const [template, ...columns] = effect
 
         expect(template).toBe("受到的伤害降低#1。消灭敌人时，获得1层攻击提高#2，持续30.0秒，最多叠加15.0层，叠加时刷新剩余时间。")
         expect(columns).toHaveLength(2)
-        for (const column of columns) expect(column).toHaveLength(10)
+        for (const column of columns) expect(column).toHaveLength(11)
 
-        expect(columns[0][0]).toBe("4.0%")
-        expect(columns[0][9]).toBe("22.0%")
-        expect(columns[1][0]).toBe("2.0%")
-        expect(columns[1][9]).toBe("11.0%")
+        expect(columns[0][0]).toBe("2.0%")
+        expect(columns[0][10]).toBe("22.0%")
+        expect(columns[1][0]).toBe("1.0%")
+        expect(columns[1][10]).toBe("11.0%")
 
         // 代入最后一级应还原为完整的满级文案
         const render = (grade: number): string => {
@@ -46,7 +46,7 @@ describe("mod 模块", () => {
             })
             return text
         }
-        expect(render(9)).toBe("受到的伤害降低22.0%。消灭敌人时，获得1层攻击提高11.0%，持续30.0秒，最多叠加15.0层，叠加时刷新剩余时间。")
+        expect(render(10)).toBe("受到的伤害降低22.0%。消灭敌人时，获得1层攻击提高11.0%，持续30.0秒，最多叠加15.0层，叠加时刷新剩余时间。")
     })
 
     test("各级完全一致的效果退化为纯文案", async () => {
@@ -70,8 +70,8 @@ describe("mod 模块", () => {
 
         expect(template).toBe("技能效益大于等于130.0%时，自身技能威力提高#1。")
         expect(columns).toHaveLength(1)
-        expect(columns[0][0]).toBe("16.0%")
-        expect(columns[0][9]).toBe("88.0%")
+        expect(columns[0][0]).toBe("8.0%")
+        expect(columns[0][10]).toBe("88.0%")
     })
 
     test("仅在取值内部互引、未被模板引用的条目会被截断", async () => {
@@ -85,8 +85,8 @@ describe("mod 模块", () => {
 
         expect(template).toBe("改变单手剑的普通攻击招式和威力。对比默认招式，综合威力提高#1。")
         expect(columns).toHaveLength(1)
-        expect(columns[0][0]).toBe("110.0%")
-        expect(columns[0][9]).toBe("200.0%")
+        expect(columns[0][0]).toBe("100.0%")
+        expect(columns[0][10]).toBe("200.0%")
         expect(JSON.stringify(effect)).not.toContain("NewGrowDesc")
     })
 
@@ -99,8 +99,8 @@ describe("mod 模块", () => {
 
         expect(template).toBe("仅当装备的魔之楔各不相同时，属性效果生效，自身召唤物造成的伤害提高#1。")
         expect(columns).toHaveLength(1)
-        expect(columns[0][0]).toBe("20.0%")
-        expect(columns[0][4]).toBe("60.0%")
+        expect(columns[0][0]).toBe("10.0%")
+        expect(columns[0][5]).toBe("60.0%")
     })
 
     test("属性字段收拢进加成，不再平铺顶层", async () => {
@@ -117,7 +117,7 @@ describe("mod 模块", () => {
         expect(combo).not.toHaveProperty("额外连击")
         const effect = combo?.效果 as [string, ...string[][]]
         expect(effect[0]).toBe("通过攻击获得连击点数时，有#1概率额外获得1点。")
-        expect(effect[1]).toEqual(["33.0%", "50.0%", "67.0%", "84.0%", "100.0%"])
+        expect(effect[1]).toEqual(["17.0%", "33.0%", "50.0%", "67.0%", "84.0%", "100.0%"])
 
         // 12101：限定仍保留顶层，数值进加成
         const limit = mods.find(item => item.id === 12101)

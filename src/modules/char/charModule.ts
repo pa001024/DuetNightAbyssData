@@ -485,8 +485,12 @@ export async function charModule(ctx: ModuleContext) {
             const descKey = descKeys[i]
             const descValue = descValues[i]
             if (descKey === null || descKey === undefined || descValue === null || descValue === undefined) continue
-            // 与旧处理器一致：没有数值引用（#...）的纯文本/常量项不作为字段输出。
-            if (typeof descValue !== "string" || !descValue.includes("#")) continue
+            // 影响（SkillDescHints → 技能效益/技能威力/技能范围/技能耐久/技能速度/多重/充盈威力）
+            const hints = Array.isArray(descHints) ? descHints[i] : undefined
+            const hasHint = Array.isArray(hints) && hints.length > 0
+            // 没有数值引用（#...）的纯文本/常量项默认不作为字段输出，但带影响提示的常量除外
+            // （如 410302 校准时间 3 秒受技能速度影响，游戏内明确展示）。
+            if (typeof descValue !== "string" || (!descValue.includes("#") && !hasHint)) continue
 
             const groupName = skillSectionName(skillInfo.SkillDescGroups, i)
             const item: Record<string, any> = {
@@ -494,9 +498,7 @@ export async function charModule(ctx: ModuleContext) {
                 __descIndex: i,
             }
 
-            // 影响（SkillDescHints → 技能效益/技能威力/技能范围/技能耐久/技能速度/多重/充盈威力）
-            const hints = Array.isArray(descHints) ? descHints[i] : undefined
-            if (Array.isArray(hints) && hints.length > 0) {
+            if (hasHint) {
                 const impact = hints.map((h: string) => HINT_MAP[h] ?? h).join(",")
                 item.影响 = impact
             }

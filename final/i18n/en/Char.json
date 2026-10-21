@@ -14584,6 +14584,12 @@
             "名称": "[Arcshot] Sanity Cost per Shot Reduced per [Steady Aim] Stack",
             "值": 1,
             "格式": "{}"
+          },
+          {
+            "名称": "[Arcshot] Accuracy Calibration Time",
+            "影响": "技能速度",
+            "值": 3,
+            "格式": "{}s"
           }
         ],
         "升级": [

@@ -1806,6 +1806,7 @@
     "效果": [
       "Lors de l’obtention de points de Combo via une attaque, a #1 de chance d’obtenir 1 point de Combo supplémentaire.",
       [
+        "17.0%",
         "33.0%",
         "50.0%",
         "67.0%",
@@ -1826,6 +1827,7 @@
     "效果": [
       "Augmente le Taux CRIT de #1 pour chaque niveau de Combo.",
       [
+        "3.0%",
         "7.0%",
         "10.0%",
         "13.0%",
@@ -1846,6 +1848,7 @@
     "效果": [
       "Augmente la Chance de déclenchement de #1 pour chaque niveau de Combo.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -1986,6 +1989,7 @@
     "效果": [
       "Déclenche une explosion à l’emplacement de la cible après avoir vaincu un ennemi, infligeant des dégâts équivalents à #1 des dégâts d’arme à distance aux ennemis dans un rayon de 6.0 m.",
       [
+        "2.5%",
         "5.0%",
         "7.5%",
         "10.0%",
@@ -2006,6 +2010,7 @@
     "效果": [
       "Lors d’un coup critique, obtient 1 cumul augmentant la Chance de déclenchement de #1 pendant 5.0 s, jusqu’à 5.0 cumuls.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -2026,6 +2031,7 @@
     "效果": [
       "Lors d’un coup critique, a #1 de chance de désarmer la cible.",
       [
+        "15.0%",
         "30.0%",
         "45.0%",
         "60.0%",
@@ -2046,6 +2052,7 @@
     "效果": [
       "Lors du déclenchement d’un Effet supplémentaire, obtient 1 cumul augmentant le Tir multiple de #1 pendant 10.0 s, jusqu’à 5.0 cumuls.",
       [
+        "1.6%",
         "3.2%",
         "5.0%",
         "6.6%",
@@ -2066,6 +2073,7 @@
     "效果": [
       "Lors du déclenchement d’un Effet supplémentaire, a #1 de chance de recharger 1 munition.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -2454,6 +2462,7 @@
     "效果": [
       "Réduit les dégâts subis de #1. Vaincre un ennemi octroie 1 cumul augmentant l’ATQ de #2 pendant 30.0 s, jusqu’à 15.0 cumuls. L’obtention d’un cumul actualise la durée.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -2461,6 +2470,7 @@
         "12.0%"
       ],
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -2486,6 +2496,7 @@
     "效果": [
       "Lors des missions ou des Échos nocturnes, augmente la Puissance de compétence de #1 pendant 30.0 s au début du combat.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -2507,6 +2518,7 @@
     "效果": [
       "Lorsque 2 ennemis ou moins se trouvent dans un rayon de 20 m, les dégâts infligés augmentent de #1.",
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -2528,6 +2540,7 @@
     "效果": [
       "Augmente les dégâts infligés de #1 pour chaque ennemi dans un rayon de 20 m, jusqu’à un maximum de #2.",
       [
+        "0.2%",
         "0.4%",
         "0.6%",
         "0.8%",
@@ -2535,6 +2548,7 @@
         "1.2%"
       ],
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -2559,6 +2573,7 @@
     "效果": [
       "Lorsqu’un ennemi avec une posture brisée subit des dégâts, l’effet augmentant les dégâts reçus en posture brisée est renforcé de #1.",
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -2580,6 +2595,7 @@
     "效果": [
       "Lors des missions ou des Échos nocturnes, chaque réanimation augmente l’ATQ de #1, jusqu’à #2.",
       [
+        "7.0%",
         "14.0%",
         "21.0%",
         "28.0%",
@@ -2587,6 +2603,7 @@
         "42.0%"
       ],
       [
+        "21.0%",
         "42.0%",
         "63.0%",
         "84.0%",
@@ -2612,6 +2629,7 @@
     "效果": [
       "Les Dégâts de compétence ont #1 de chances de déclencher un Effet supplémentaire élémentaire.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -2883,6 +2901,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -2911,6 +2930,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -2939,6 +2959,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3006,6 +3027,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3034,6 +3056,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3062,6 +3085,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3129,6 +3153,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3157,6 +3182,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3185,6 +3211,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3252,6 +3279,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3280,6 +3308,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3308,6 +3337,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3375,6 +3405,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3403,6 +3434,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3431,6 +3463,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3498,6 +3531,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3526,6 +3560,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3554,6 +3589,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3824,6 +3860,7 @@
     "效果": [
       "L’effet élémentaire ne s’active que si tous les Sceaux démoniaques équipés sont différents. Les dégâts infligés par vos propres invocations augmentent de #1.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -3888,6 +3925,7 @@
     "效果": [
       "Les dégâts infligés par vos invocations augmentent de #1. Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -4606,6 +4644,7 @@
     "效果": [
       "Pour chaque Épée équipée par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4613,6 +4652,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4646,6 +4686,7 @@
     "效果": [
       "Pour chaque Arme d’hast équipée par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4653,6 +4694,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4686,6 +4728,7 @@
     "效果": [
       "Pour chaque Espadon équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4693,6 +4736,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4726,6 +4770,7 @@
     "效果": [
       "Pour chaque Doubles lames équipées par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4733,6 +4778,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4766,6 +4812,7 @@
     "效果": [
       "Pour chaque Épée-fouet équipée par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4773,6 +4820,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4806,6 +4854,7 @@
     "效果": [
       "Pour chaque Katana équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4813,6 +4862,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4846,6 +4896,7 @@
     "效果": [
       "Pour chaque Pistolet équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4853,6 +4904,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4886,6 +4938,7 @@
     "效果": [
       "Pour chaque Doubles pistolets équipés par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4893,6 +4946,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4926,6 +4980,7 @@
     "效果": [
       "Pour chaque Lance-grenades équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4933,6 +4988,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4966,6 +5022,7 @@
     "效果": [
       "Pour chaque Fusil à pompe équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4973,6 +5030,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -5006,6 +5064,7 @@
     "效果": [
       "Pour chaque Fusil d’assaut équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -5013,6 +5072,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -5046,6 +5106,7 @@
     "效果": [
       "Pour chaque Arc équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -5053,6 +5114,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -5090,6 +5152,7 @@
     "效果": [
       "Lorsque qu’un personnage Umbro consomme de la Lucidité, il obtient 1 cumul augmentant le Taux CRIT de son arme de #1 pendant 15.0 s, jusqu’à 15.0 cumuls.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -5117,6 +5180,7 @@
     "效果": [
       "Les invocations des personnages Hydro obtiennent une Vitesse d’attaque égale à #1 de la Vitesse d’attaque de l’arme de mêlée du personnage, ainsi qu’une Portée de compétence égale à #2 de sa Portée de compétence.",
       [
+        "4.5%",
         "9.0%",
         "13.5%",
         "18.0%",
@@ -5124,6 +5188,7 @@
         "27.0%"
       ],
       [
+        "2.2%",
         "4.4%",
         "6.6%",
         "8.8%",
@@ -5149,6 +5214,7 @@
     "效果": [
       "Lorsqu’un personnage Hydro déclenche une compétence, lui-même et ses alliés proches obtiennent un bonus d’ATQ équivalant à #1 de son ATQ (jusqu’à 275), pendant 10.0 s.",
       [
+        "1.9%",
         "3.8%",
         "5.7%",
         "7.6%",
@@ -5174,6 +5240,7 @@
     "效果": [
       "Lorsqu’un personnage Pyro inflige des dégâts, obtient 1 cumul augmentant l’ATQ de #1 pendant 15.0 s, jusqu’à 120.0 cumuls.",
       [
+        "0.2%",
         "0.3%",
         "0.5%",
         "0.6%",
@@ -5199,6 +5266,7 @@
     "效果": [
       "Lorsqu’un personnage Pyro consomme du Désordre Pyro, il obtient 1 cumul augmentant les dégâts infligés de #1 pendant 10.0 s, jusqu’à 5.0 cumuls.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -5224,6 +5292,7 @@
     "效果": [
       "Lorsque qu’un personnage Électro utilise une compétence, il obtient 1 cumul augmentant les Dégâts de compétence de #1 pendant 16.0 s, jusqu’à 8.0 cumuls.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -5249,6 +5318,7 @@
     "效果": [
       "Après être resté immobile pendant au moins 1 s, un personnage Électro gagne 1 cumul augmentant la Puissance de compétence de #1 toutes les 0,5 s. Durée illimitée, cumulable jusqu’à 10.0 fois. L’effet est annulé en cas de déplacement.",
       [
+        "1.6%",
         "3.2%",
         "4.8%",
         "6.4%",
@@ -5274,6 +5344,7 @@
     "效果": [
       "Lorsque qu’un personnage Anémo utilise une compétence de combat, il obtient un bonus de Puissance de compétence de #1 pendant 6.0 s.",
       [
+        "14.0%",
         "28.0%",
         "42.0%",
         "56.0%",
@@ -5299,6 +5370,7 @@
     "效果": [
       "Lorsqu’une arme à distance d’un personnage Anémo déclenche un Effet supplémentaire, confère à soi-même et aux alliés +#1 de Ténacité pendant 10.0 s.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -5324,6 +5396,7 @@
     "效果": [
       "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, le Taux CRIT contre eux augmente de #1.\nLe bonus augmente de #2 contre les cibles affectées par un malus.",
       [
+        "5.5%",
         "10.9%",
         "16.4%",
         "21.8%",
@@ -5331,6 +5404,7 @@
         "32.7%"
       ],
       [
+        "1.4%",
         "2.7%",
         "4.1%",
         "5.4%",
@@ -5356,6 +5430,7 @@
     "效果": [
       "Les personnages Lumino obtiennent une augmentation d’ATQ équivalente à [leur Durée de compétence × #1], jusqu’à un maximum de #2.",
       [
+        "8.1%",
         "16.2%",
         "24.3%",
         "32.4%",
@@ -5363,6 +5438,7 @@
         "48.6%"
       ],
       [
+        "19.5%",
         "39.0%",
         "58.5%",
         "78.0%",
@@ -5488,6 +5564,7 @@
     "效果": [
       "Vaincre un ennemi octroie 1 cumul augmentant la Vitesse d’attaque de #1 pendant 10.0 s, jusqu’à 2.0 cumuls.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -5509,6 +5586,7 @@
     "效果": [
       "Après avoir vaincu un ennemi, augmente la Vitesse de déplacement de #1 pendant 10.0 s.",
       [
+        "3.0%",
         "7.0%",
         "10.0%",
         "13.0%",
@@ -5530,6 +5608,7 @@
     "效果": [
       "Lors du déclenchement de l’Effet supplémentaire : Contondant, obtient 1 cumul augmentant les DGT CRIT de #1 pendant 10.0 s, jusqu’à 10.0 cumuls.",
       [
+        "1.6%",
         "3.3%",
         "5.0%",
         "6.6%",
@@ -5551,6 +5630,7 @@
     "效果": [
       "Lors du déclenchement d’un Effet supplémentaire, obtient 1 cumul augmentant la Portée d’attaque de #1 pendant 10.0 s, jusqu’à 2.0 cumuls.",
       [
+        "0.1",
         "0.2",
         "0.3",
         "0.4",
@@ -5642,6 +5722,7 @@
     "效果": [
       "Lorsqu’une Attaque de glissade inflige des dégâts, a #1 de chance d’obtenir 1 point de Combo supplémentaire.",
       [
+        "16.0%",
         "33.0%",
         "49.0%",
         "65.0%",
@@ -5673,6 +5754,7 @@
     "效果": [
       "Augmente les dégâts infligés aux Souillés de #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -5704,6 +5786,7 @@
     "效果": [
       "Augmente les dégâts infligés aux soldats de l’Empire Hyperboréen de #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -5735,6 +5818,7 @@
     "效果": [
       "Augmente les dégâts infligés aux membres de l’Église Élyséenne de #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -5766,6 +5850,7 @@
     "效果": [
       "Augmente les dégâts infligés aux Déchus de #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -5790,6 +5875,7 @@
     "效果": [
       "Augmente les dégâts infligés aux membres de la faction Huaxu de #1.",
       [
+        "7.0%",
         "14.0%",
         "21.0%",
         "28.0%",
@@ -5895,6 +5981,7 @@
     "效果": [
       "Augmente les dégâts infligés aux ennemis d’un niveau supérieur au vôtre de #1.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -6053,6 +6140,7 @@
     "效果": [
       "Après un rechargement, augmente la Vitesse d’attaque de #1 pendant #2 s.",
       [
+        "7.5%",
         "15.0%",
         "22.5%",
         "30.0%",
@@ -6060,6 +6148,7 @@
         "45.0%"
       ],
       [
+        "5.0",
         "6.0",
         "7.0",
         "8.0",
@@ -6081,6 +6170,7 @@
     "效果": [
       "Après avoir vaincu un ennemi, augmente la Vitesse de déplacement de #1, la Vitesse de glissade de #2 et la Vitesse de bond cyclonique de #3 pendant 15.0 s.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -6088,6 +6178,7 @@
         "48.0%"
       ],
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -6095,6 +6186,7 @@
         "48.0%"
       ],
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -6116,6 +6208,7 @@
     "效果": [
       "Augmente les dégâts en fonction du pourcentage de munitions restantes : plus ce pourcentage est élevé, plus le bonus est important, jusqu’à #1.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -6137,6 +6230,7 @@
     "效果": [
       "Toutes les 30.0 instances de DGT d’arme à distance infligées avec n’importe quelle arme confèrent +#1 de DGT d’arme de mêlée pendant 18.0 s.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -6158,6 +6252,7 @@
     "效果": [
       "Infliger des DGT d’arme à distance avec n’importe quelle arme fait perdre 10 % de PV lorsque les PV sont à 35 % ou plus. Effet limité à une fois toutes les #1 s.",
       [
+        "6.0",
         "5.0",
         "4.0",
         "3.0",
@@ -6182,6 +6277,7 @@
     "效果": [
       "Augmente les dégâts des projectiles explosifs de #1.",
       [
+        "3.0%",
         "7.0%",
         "10.0%",
         "13.0%",
@@ -6206,6 +6302,7 @@
     "效果": [
       "Augmente les dégâts des rayons de #1.",
       [
+        "3.0%",
         "7.0%",
         "10.0%",
         "13.0%",
@@ -6286,6 +6383,7 @@
     "效果": [
       "Augmente les dégâts infligés aux Souillés de #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -6317,6 +6415,7 @@
     "效果": [
       "Augmente les dégâts infligés aux soldats de l’Empire Hyperboréen de #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -6348,6 +6447,7 @@
     "效果": [
       "Augmente les dégâts infligés aux membres de l’Église Élyséenne de #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -6379,6 +6479,7 @@
     "效果": [
       "Augmente les dégâts infligés aux Déchus de #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -6403,6 +6504,7 @@
     "效果": [
       "Augmente les dégâts infligés aux membres de la faction Huaxu de #1.",
       [
+        "7.0%",
         "14.0%",
         "21.0%",
         "28.0%",
@@ -6536,6 +6638,7 @@
     "效果": [
       "Réduit les dégâts infligés de #1 (indépendamment des autres modificateurs).",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -6557,6 +6660,7 @@
     "效果": [
       "Vaincre un ennemi d’un niveau inférieur ou égal au vôtre restaure #1 de Lucidité.",
       [
+        "1.0",
         "2.0",
         "3.0",
         "4.0",
@@ -6578,6 +6682,7 @@
     "效果": [
       "Infliger des dégâts à un ennemi d’un niveau inférieur ou égal au vôtre fait fluctuer les dégâts finaux entre 1 % et #1 de leur valeur initiale.",
       [
+        "200.0%",
         "400.0%",
         "600.0%",
         "800.0%",
@@ -6599,6 +6704,7 @@
     "效果": [
       "Infliger des dégâts à un ennemi d’un niveau inférieur ou égal au vôtre a #1 de chances de le transformer en baril inerte. Lorsqu’il subit à nouveau des dégâts, il est immédiatement vaincu et inflige des Dégâts contondants équivalents à #2 de l’ATQ du personnage aux ennemis dans un rayon de 10 m.",
       [
+        "8.3%",
         "16.6%",
         "24.9%",
         "33.3%",
@@ -6606,6 +6712,7 @@
         "50.0%"
       ],
       [
+        "120.0%",
         "240.0%",
         "360.0%",
         "480.0%",
@@ -6972,6 +7079,7 @@
     "效果": [
       "Réduit les dégâts subis de #1. Vaincre un ennemi octroie 1 cumul augmentant l’ATQ de #2 pendant 30.0 s, jusqu’à 15.0 cumuls. L’obtention d’un cumul actualise la durée.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -6984,6 +7092,7 @@
         "22.0%"
       ],
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -7017,6 +7126,7 @@
     "效果": [
       "Lors des missions ou des Échos nocturnes, augmente la Puissance de compétence de #1 pendant 30.0 s au début du combat.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -7046,6 +7156,7 @@
     "效果": [
       "Lorsque 2 ennemis ou moins se trouvent dans un rayon de 20 m, les dégâts infligés augmentent de #1.",
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -7075,6 +7186,7 @@
     "效果": [
       "Augmente les dégâts infligés de #1 pour chaque ennemi dans un rayon de 20 m, jusqu’à un maximum de #2.",
       [
+        "0.2%",
         "0.4%",
         "0.6%",
         "0.8%",
@@ -7087,6 +7199,7 @@
         "2.2%"
       ],
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -7119,6 +7232,7 @@
     "效果": [
       "Lorsqu’un ennemi avec une posture brisée subit des dégâts, l’effet augmentant les dégâts reçus en posture brisée est renforcé de #1.",
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -7148,6 +7262,7 @@
     "效果": [
       "Lors des missions ou des Échos nocturnes, chaque réanimation augmente l’ATQ de #1, jusqu’à #2.",
       [
+        "7.0%",
         "14.0%",
         "21.0%",
         "28.0%",
@@ -7160,6 +7275,7 @@
         "77.0%"
       ],
       [
+        "21.0%",
         "42.0%",
         "63.0%",
         "84.0%",
@@ -7205,6 +7321,7 @@
     "效果": [
       "Les Dégâts de compétence ont #1 de chances de déclencher un Effet supplémentaire élémentaire.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -7526,6 +7643,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -7562,6 +7680,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -7598,6 +7717,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -7679,6 +7799,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -7715,6 +7836,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -7751,6 +7873,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -7832,6 +7955,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -7868,6 +7992,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -7904,6 +8029,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -7985,6 +8111,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -8021,6 +8148,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -8057,6 +8185,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -8138,6 +8267,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -8174,6 +8304,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -8210,6 +8341,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -8291,6 +8423,7 @@
     "效果": [
       "Lors des attaques avec une arme, inflige #1 de Dégâts supplémentaires du même attribut.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -8327,6 +8460,7 @@
     "效果": [
       "Restaure #1 de Lucidité supplémentaire toutes les 3 s pour vous et vos alliés.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -8363,6 +8497,7 @@
     "效果": [
       "Augmente les dégâts que vous et vos alliés infligez de #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -8701,6 +8836,7 @@
     "效果": [
       "L’effet élémentaire ne s’active que si tous les Sceaux démoniaques équipés sont différents. Les dégâts infligés par vos propres invocations augmentent de #1.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -8776,6 +8912,7 @@
     "效果": [
       "Les dégâts infligés par vos invocations augmentent de #1. Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -9673,6 +9810,7 @@
     "效果": [
       "Pour chaque Épée équipée par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9685,6 +9823,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9726,6 +9865,7 @@
     "效果": [
       "Pour chaque Arme d’hast équipée par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9738,6 +9878,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9779,6 +9920,7 @@
     "效果": [
       "Pour chaque Espadon équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9791,6 +9933,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9832,6 +9975,7 @@
     "效果": [
       "Pour chaque Doubles lames équipées par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9844,6 +9988,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9885,6 +10030,7 @@
     "效果": [
       "Pour chaque Épée-fouet équipée par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9897,6 +10043,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9938,6 +10085,7 @@
     "效果": [
       "Pour chaque Katana équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9950,6 +10098,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9991,6 +10140,7 @@
     "效果": [
       "Pour chaque Pistolet équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10003,6 +10153,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10044,6 +10195,7 @@
     "效果": [
       "Pour chaque Doubles pistolets équipés par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10056,6 +10208,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10097,6 +10250,7 @@
     "效果": [
       "Pour chaque Lance-grenades équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10109,6 +10263,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10150,6 +10305,7 @@
     "效果": [
       "Pour chaque Fusil à pompe équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10162,6 +10318,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10203,6 +10360,7 @@
     "效果": [
       "Pour chaque Fusil d’assaut équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10215,6 +10373,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10256,6 +10415,7 @@
     "效果": [
       "Pour chaque Arc équipé par vous ou votre Partenaire de combat, augmente vos dégâts infligés de #1, jusqu’à #2. (Sans effet si équipé par un Partenaire de combat.)",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10268,6 +10428,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10313,6 +10474,7 @@
     "效果": [
       "Lorsque qu’un personnage Umbro consomme de la Lucidité, il obtient 1 cumul augmentant le Taux CRIT de son arme de #1 pendant 15.0 s, jusqu’à 15.0 cumuls.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -10348,6 +10510,7 @@
     "效果": [
       "Les invocations des personnages Hydro obtiennent une Vitesse d’attaque égale à #1 de la Vitesse d’attaque de l’arme de mêlée du personnage, ainsi qu’une Portée de compétence égale à #2 de sa Portée de compétence.",
       [
+        "4.5%",
         "9.0%",
         "13.5%",
         "18.0%",
@@ -10360,6 +10523,7 @@
         "49.5%"
       ],
       [
+        "2.2%",
         "4.4%",
         "6.6%",
         "8.8%",
@@ -10393,6 +10557,7 @@
     "效果": [
       "Lorsqu’un personnage Hydro déclenche une compétence, lui-même et ses alliés proches obtiennent un bonus d’ATQ équivalant à #1 de son ATQ (jusqu’à 275), pendant 10.0 s.",
       [
+        "1.9%",
         "3.8%",
         "5.7%",
         "7.6%",
@@ -10426,6 +10591,7 @@
     "效果": [
       "Lorsqu’un personnage Pyro inflige des dégâts, obtient 1 cumul augmentant l’ATQ de #1 pendant 15.0 s, jusqu’à 120.0 cumuls.",
       [
+        "0.2%",
         "0.3%",
         "0.5%",
         "0.6%",
@@ -10471,6 +10637,7 @@
     "效果": [
       "Lorsqu’un personnage Pyro consomme du Désordre Pyro, il obtient 1 cumul augmentant les dégâts infligés de #1 pendant 10.0 s, jusqu’à 5.0 cumuls.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -10504,6 +10671,7 @@
     "效果": [
       "Lorsque qu’un personnage Électro utilise une compétence, il obtient 1 cumul augmentant les Dégâts de compétence de #1 pendant 16.0 s, jusqu’à 8.0 cumuls.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -10549,6 +10717,7 @@
     "效果": [
       "Après être resté immobile pendant au moins 1 s, un personnage Électro gagne 1 cumul augmentant la Puissance de compétence de #1 toutes les 0,5 s. Durée illimitée, cumulable jusqu’à 10.0 fois. L’effet est annulé en cas de déplacement.",
       [
+        "1.6%",
         "3.2%",
         "4.8%",
         "6.4%",
@@ -10582,6 +10751,7 @@
     "效果": [
       "Lorsque qu’un personnage Anémo utilise une compétence de combat, il obtient un bonus de Puissance de compétence de #1 pendant 6.0 s.",
       [
+        "14.0%",
         "28.0%",
         "42.0%",
         "56.0%",
@@ -10615,6 +10785,7 @@
     "效果": [
       "Lorsqu’une arme à distance d’un personnage Anémo déclenche un Effet supplémentaire, confère à soi-même et aux alliés +#1 de Ténacité pendant 10.0 s.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -10648,6 +10819,7 @@
     "效果": [
       "Lorsque des ennemis proches d’un personnage Lumino subissent des DGT d’arme, le Taux CRIT contre eux augmente de #1.\nLe bonus augmente de #2 contre les cibles affectées par un malus.",
       [
+        "5.5%",
         "10.9%",
         "16.4%",
         "21.8%",
@@ -10660,6 +10832,7 @@
         "60.0%"
       ],
       [
+        "1.4%",
         "2.7%",
         "4.1%",
         "5.4%",
@@ -10693,6 +10866,7 @@
     "效果": [
       "Les personnages Lumino obtiennent une augmentation d’ATQ équivalente à [leur Durée de compétence × #1], jusqu’à un maximum de #2.",
       [
+        "8.1%",
         "16.2%",
         "24.3%",
         "32.4%",
@@ -10705,6 +10879,7 @@
         "89.1%"
       ],
       [
+        "19.5%",
         "39.0%",
         "58.5%",
         "78.0%",
@@ -11194,6 +11369,7 @@
     "效果": [
       "Lors de l’obtention de points de Combo via une attaque, a #1 de chance d’obtenir 1 point de Combo supplémentaire.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -12020,6 +12196,7 @@
     "效果": [
       "Les attaques chargées ont 50.0% de chances de restaurer #1 de Lucidité. Cet effet ne peut se déclencher qu’une fois toutes les 5.0 s.",
       [
+        "10.0",
         "11.0",
         "12.0",
         "13.0",
@@ -12049,6 +12226,7 @@
     "效果": [
       "Lorsque les dégâts d’une attaque normale ne déclenchent pas de coup critique, la prochaine attaque normale gagne +#1 de Taux CRIT, cumulable jusqu’à +#2. L’effet est supprimé dès qu’une attaque normale inflige un coup critique.",
       [
+        "12.0%",
         "24.0%",
         "36.0%",
         "48.0%",
@@ -12061,6 +12239,7 @@
         "132.0%"
       ],
       [
+        "72.0%",
         "144.0%",
         "216.0%",
         "288.0%",
@@ -12288,6 +12467,7 @@
     "效果": [
       "Lorsque la Vigueur est ≥ 60.0%, confère +#1 de Dégâts Umbro supplémentaires.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12335,6 +12515,7 @@
     "效果": [
       "Lorsque la Vigueur est ≥ 60.0%, confère +#1 de Dégâts Umbro supplémentaires.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12380,6 +12561,7 @@
     "效果": [
       "Lorsque la Durée de compétence est ≥ 180.0%, vos DGT CRIT ainsi que ceux de vos alliés augmentent de #1.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -12427,6 +12609,7 @@
     "效果": [
       "Lorsque la Durée de compétence est ≥ 180.0%, vos DGT CRIT ainsi que ceux de vos alliés augmentent de #1.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -12472,6 +12655,7 @@
     "效果": [
       "Lorsque l’Efficacité de compétence est ≥ 165.0%, les dégâts infligés par vos invocations augmentent de #1.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -12519,6 +12703,7 @@
     "效果": [
       "Lorsque l’Efficacité de compétence est ≥ 165.0%, les dégâts infligés par vos invocations augmentent de #1.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -12564,6 +12749,7 @@
     "效果": [
       "Lorsque la Puissance de compétence est ≥ 350.0%, votre Vigueur et celle de vos alliés augmentent de #1.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12611,6 +12797,7 @@
     "效果": [
       "Lorsque la Puissance de compétence est ≥ 350.0%, votre Vigueur et celle de vos alliés augmentent de #1.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12656,6 +12843,7 @@
     "效果": [
       "Lorsque la Puissance de Surabondance est ≥ 500.0%, votre Puissance de compétence augmente de #1. (Non pris en compte dans le bonus de Conversion de Surabondance des armes)",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -12703,6 +12891,7 @@
     "效果": [
       "Lorsque la Puissance de Surabondance est ≥ 500.0%, votre Puissance de compétence augmente de #1. (Non pris en compte dans le bonus de Conversion de Surabondance des armes)",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -12748,6 +12937,7 @@
     "效果": [
       "Lorsque la Puissance de compétence est ≥ 350.0%, votre Vigueur et celle de vos alliés augmentent de #1.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12795,6 +12985,7 @@
     "效果": [
       "Lorsque la Puissance de compétence est ≥ 350.0%, votre Vigueur et celle de vos alliés augmentent de #1.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12840,6 +13031,7 @@
     "效果": [
       "Lorsque l’Efficacité de compétence est ≥ 130.0%, votre Puissance de compétence augmente de #1.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -12887,6 +13079,7 @@
     "效果": [
       "Lorsque l’Efficacité de compétence est ≥ 130.0%, votre Puissance de compétence augmente de #1.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -12932,6 +13125,7 @@
     "效果": [
       "Lorsque la Lucidité max est ≥ 300.0, votre Vigueur et celle de vos alliés augmentent de #1.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12979,6 +13173,7 @@
     "效果": [
       "Lorsque la Lucidité max est ≥ 300.0, votre Vigueur et celle de vos alliés augmentent de #1.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -13024,6 +13219,7 @@
     "效果": [
       "Lorsque l’Efficacité de compétence est ≥ 130.0%, votre Puissance de compétence augmente de #1.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -13071,6 +13267,7 @@
     "效果": [
       "Lorsque l’Efficacité de compétence est ≥ 130.0%, votre Puissance de compétence augmente de #1.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -13116,6 +13313,7 @@
     "效果": [
       "Lorsque la Lucidité max est ≥ 300.0, votre Ténacité et celle de vos alliés augmentent de #1.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -13163,6 +13361,7 @@
     "效果": [
       "Lorsque la Lucidité max est ≥ 300.0, votre Ténacité et celle de vos alliés augmentent de #1.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -13208,6 +13407,7 @@
     "效果": [
       "Lorsque la Portée de compétence est ≥ 160.0%, votre Vigueur augmente de #1.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -13255,6 +13455,7 @@
     "效果": [
       "Lorsque la Portée de compétence est ≥ 160.0%, votre Vigueur augmente de #1.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -13300,6 +13501,7 @@
     "效果": [
       "Lorsque la Durée de compétence est ≥ 200.0%, votre Taux CRIT et celui de vos alliés augmentent de #1.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -13347,6 +13549,7 @@
     "效果": [
       "Lorsque la Durée de compétence est ≥ 200.0%, votre Taux CRIT et celui de vos alliés augmentent de #1.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -14441,6 +14644,7 @@
     "效果": [
       "Modifie l’Attaque normale de l’Épée : inflige #1 de dégâts supplémentaires par rapport à l’attaque de base.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14538,6 +14742,7 @@
     "效果": [
       "Modifie l’Attaque chargée de l’Arme d’hast : vous projetez 5 armes vers l’avant, touchant tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de #1 par rapport à l’attaque de base.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14594,6 +14799,7 @@
     "效果": [
       "Modifie l’Attaque plongeante de l’Arme d’hast : l’impact génère une onde de choc de plus grande portée. Les dégâts sont augmentés de #1 par rapport à l’attaque de base.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14661,6 +14867,7 @@
     "效果": [
       "Modifie l’Attaque normale de l’Arme d’hast : invoque des lances spectrales pour attaquer. Inflige #1 de dégâts supplémentaires par rapport à l’attaque de base.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14763,6 +14970,7 @@
     "效果": [
       "Modifie l’Attaque normale de l’Espadon : la dernière frappe libère trois ondes tranchantes qui frappent les ennemis sur leur trajectoire. Les dégâts sont augmentés de #1 par rapport à l’attaque de base.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14859,6 +15067,7 @@
     "效果": [
       "Modifie l’Attaque de glissade des Doubles lames : vous foncez en avant, infligeant des dégâts à tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de #1 par rapport à l’attaque de base.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14926,6 +15135,7 @@
     "效果": [
       "Lorsque vous chevauchez [Filbert], votre Ténacité et celle de vos alliés augmentent de #1. Vous perdez 15.0% de vos PV actuels toutes les 2.0 s et déclenchez 1 fois les soins et bonus de [Pas de panique, c’est Filbert !], avec 30.0% de chances de générer 1 [Sel volatil stimulant] ou 1 [Goutte de rosée apaisante]. Si équipé par un Partenaire de combat, déclenche [À plein régime].",
       [
+        "2.0%",
         "5.0%",
         "7.8%",
         "10.4%",

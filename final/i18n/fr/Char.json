@@ -14584,6 +14584,12 @@
             "名称": "Réduction du coût en Lucidité des tirs du [Fusil de précision] par cumul de [Concentration]",
             "值": 1,
             "格式": "{}"
+          },
+          {
+            "名称": "Temps de calibrage de précision du [Fusil de précision]",
+            "影响": "技能速度",
+            "值": 3,
+            "格式": "{}s"
           }
         ],
         "升级": [

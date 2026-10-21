@@ -319,7 +319,8 @@ function passiveExtraFields(ctx: ModuleContext, mod: Row, modId: number, level: 
  *
  * 形如 ["受到伤害降低#1。...", ["4.0%",...], ["2.0%",...]]，第 i 个数组对应模板中的 #i
  * （与 ArmoryUtils.GenModPassiveEffectDesc 逐条 gsub("#" .. i) 的索引语义一致）。
- * 等级上限为 MaxLevel + ModCardLevelMax（卡牌等级额外叠加）。
+ * 等级上限为 MaxLevel + ModCardLevelMax（卡牌等级额外叠加），逐级值含 0 级（未强化）起算，
+ * 与加成曲线 curveValues 的 0~满级口径一致。
  */
 function passiveDescription(ctx: ModuleContext, mod: Row, modId: number, level: number): VNodeTree | undefined {
     if (!mod.PassiveEffectsDesc) return undefined
@@ -328,7 +329,7 @@ function passiveDescription(ctx: ModuleContext, mod: Row, modId: number, level: 
     for (const value of values) {
         if (typeof value !== "string") continue
         const perLevel: VNode[] = []
-        for (let lv = 1; lv <= level; lv++) {
+        for (let lv = 0; lv <= level; lv++) {
             perLevel.push(compile(ctx.dm.calcModDescValue(value, modId, lv)))
         }
         columns.push(perLevel)

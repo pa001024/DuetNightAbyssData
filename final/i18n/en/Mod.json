@@ -1806,6 +1806,7 @@
     "效果": [
       "When gaining Combo Point through attacking, there is a #1 chance to gain 1 additional Combo Point.",
       [
+        "17.0%",
         "33.0%",
         "50.0%",
         "67.0%",
@@ -1826,6 +1827,7 @@
     "效果": [
       "Each Combo Level increases CRIT Chance by #1.",
       [
+        "3.0%",
         "7.0%",
         "10.0%",
         "13.0%",
@@ -1846,6 +1848,7 @@
     "效果": [
       "Each Combo Level increases Trigger Probability by #1.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -1986,6 +1989,7 @@
     "效果": [
       "Triggers an explosion at the target location upon defeating an enemy, dealing #1 of your Ranged Weapon damage to enemies within a 6.0-metre range.",
       [
+        "2.5%",
         "5.0%",
         "7.5%",
         "10.0%",
@@ -2006,6 +2010,7 @@
     "效果": [
       "When dealing CRIT damage, gains 1 stack that increases Trigger Probability by #1 for 5.0s, up to 5.0 stacks.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -2026,6 +2031,7 @@
     "效果": [
       "When dealing CRIT Damage, there is a #1 chance to disarm the target.",
       [
+        "15.0%",
         "30.0%",
         "45.0%",
         "60.0%",
@@ -2046,6 +2052,7 @@
     "效果": [
       "When triggering Bonus Effect, gains 1 stack that increases Multishot by #1 for 10.0s, up to 5.0 stacks.",
       [
+        "1.6%",
         "3.2%",
         "5.0%",
         "6.6%",
@@ -2066,6 +2073,7 @@
     "效果": [
       "Upon triggering Bonus Effects, there is a #1 chance to reload 1 bullet.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -2454,6 +2462,7 @@
     "效果": [
       "Decreases Damage Taken by #1. Defeating an enemy grants 1 stack that increases ATK by #2 for 30.0s, up to 15.0 stacks. This effect duration refreshes with each new stack gained.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -2461,6 +2470,7 @@
         "12.0%"
       ],
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -2486,6 +2496,7 @@
     "效果": [
       "Increases Skill Intensity by #1 for 30.0s when battle starts during commissions or Nocturnal Echoes.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -2507,6 +2518,7 @@
     "效果": [
       "Increases Damage Dealt by #1 when facing less than 2 enemies within a 20-metre range.",
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -2528,6 +2540,7 @@
     "效果": [
       "Increases Damage Dealt by #1 per enemy within a 20-metre range (up to #2).",
       [
+        "0.2%",
         "0.4%",
         "0.6%",
         "0.8%",
@@ -2535,6 +2548,7 @@
         "1.2%"
       ],
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -2559,6 +2573,7 @@
     "效果": [
       "Increases Damage Dealt by #1 when attacking off-balance enemies (with Stance completely weakened).",
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -2580,6 +2595,7 @@
     "效果": [
       "Increases your ATK by #1 with each revival during commissions or Nocturnal Echoes (up to #2).",
       [
+        "7.0%",
         "14.0%",
         "21.0%",
         "28.0%",
@@ -2587,6 +2603,7 @@
         "42.0%"
       ],
       [
+        "21.0%",
         "42.0%",
         "63.0%",
         "84.0%",
@@ -2612,6 +2629,7 @@
     "效果": [
       "When dealing Skill DMG, there is a #1 chance to trigger Bonus Effects.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -2883,6 +2901,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -2911,6 +2930,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -2939,6 +2959,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3006,6 +3027,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3034,6 +3056,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3062,6 +3085,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3129,6 +3153,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3157,6 +3182,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3185,6 +3211,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3252,6 +3279,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3280,6 +3308,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3308,6 +3337,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3375,6 +3405,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3403,6 +3434,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3431,6 +3463,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3498,6 +3531,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -3526,6 +3560,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -3554,6 +3589,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -3824,6 +3860,7 @@
     "效果": [
       "This effect applies only if every equipped Demon Wedge is unique. Summon DMG +#1.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -3888,6 +3925,7 @@
     "效果": [
       "Damage dealt by summons is increased by #1. At +5.0, this Demon Wedge can be equipped in multiples.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -4606,6 +4644,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Sword equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4613,6 +4652,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4646,6 +4686,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Polearm equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4653,6 +4694,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4686,6 +4728,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Greatsword equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4693,6 +4736,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4726,6 +4770,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Dual Blades equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4733,6 +4778,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4766,6 +4812,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Whipblade equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4773,6 +4820,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4806,6 +4854,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Katana equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4813,6 +4862,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4846,6 +4896,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Pistol equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4853,6 +4904,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4886,6 +4938,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Dual Pistols equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4893,6 +4946,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4926,6 +4980,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Grenade Launcher equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4933,6 +4988,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -4966,6 +5022,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Shotgun equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -4973,6 +5030,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -5006,6 +5064,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Assault Rifle equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -5013,6 +5072,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -5046,6 +5106,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Bow equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -5053,6 +5114,7 @@
         "6.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -5090,6 +5152,7 @@
     "效果": [
       "When an Umbro character consumes Sanity, they gain 1 stack that increases weapon CRIT Chance by #1 for 15.0s, up to 15.0 stacks.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -5117,6 +5180,7 @@
     "效果": [
       "Hydro characters' summon gains an ATK Speed boost equal to #1 of the summoner's melee weapon ATK Speed and a Skill Range boost equal to #2 of the summoner's Skill Range.",
       [
+        "4.5%",
         "9.0%",
         "13.5%",
         "18.0%",
@@ -5124,6 +5188,7 @@
         "27.0%"
       ],
       [
+        "2.2%",
         "4.4%",
         "6.6%",
         "8.8%",
@@ -5149,6 +5214,7 @@
     "效果": [
       "When a Hydro character uses a skill, the user and nearby allies gain an ATK Increase equal to #1 of the user's ATK (up to 275) for 10.0s.",
       [
+        "1.9%",
         "3.8%",
         "5.7%",
         "7.6%",
@@ -5174,6 +5240,7 @@
     "效果": [
       "When a Pyro character deals damage, gains 1 stack that increases ATK by #1 for 15.0s, up to 120.0 stacks.",
       [
+        "0.2%",
         "0.3%",
         "0.5%",
         "0.6%",
@@ -5199,6 +5266,7 @@
     "效果": [
       "When a Pyro character consumes Pyro Disruption, their DMG Dealt increases by #1 for 10.0s, stacking up to 5.0 times.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -5224,6 +5292,7 @@
     "效果": [
       "When an Electro character uses skills, they gain 1 stack that increases Skill DMG by #1 for 16.0s, up to 8.0 stacks.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -5249,6 +5318,7 @@
     "效果": [
       "After remaining stationary for 1s, Electro characters gain 1 stack of #1 Skill Intensity every 0.5s. Lasts indefinitely and stacks up to 10.0 times. All stacks are removed upon moving.",
       [
+        "1.6%",
         "3.2%",
         "4.8%",
         "6.4%",
@@ -5274,6 +5344,7 @@
     "效果": [
       "When an Anemo character uses Combat Skills, it gains a #1 Skill Intensity Increase for 6.0s.",
       [
+        "14.0%",
         "28.0%",
         "42.0%",
         "56.0%",
@@ -5299,6 +5370,7 @@
     "效果": [
       "When an Anemo character's ranged weapon triggers a bonus effect, grants +#1 Resolve to the user and nearby allies for 10.0s.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -5324,6 +5396,7 @@
     "效果": [
       "When enemies near a Lumino character take Weapon DMG, CRIT Chance increases by #1. Gains an additional +#2 against targets with debuffs.",
       [
+        "5.5%",
         "10.9%",
         "16.4%",
         "21.8%",
@@ -5331,6 +5404,7 @@
         "32.7%"
       ],
       [
+        "1.4%",
         "2.7%",
         "4.1%",
         "5.4%",
@@ -5356,6 +5430,7 @@
     "效果": [
       "Increases the Lumino characters' ATK by [their current Skill Duration x #1], up to #2.",
       [
+        "8.1%",
         "16.2%",
         "24.3%",
         "32.4%",
@@ -5363,6 +5438,7 @@
         "48.6%"
       ],
       [
+        "19.5%",
         "39.0%",
         "58.5%",
         "78.0%",
@@ -5488,6 +5564,7 @@
     "效果": [
       "When defeating an enemy, gains 1 stack that increases ATK Speed by #1 for 10.0s, up to 2.0 stacks.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -5509,6 +5586,7 @@
     "效果": [
       "Increases Movement Speed by #1 for 10.0s after defeating an enemy.",
       [
+        "3.0%",
         "7.0%",
         "10.0%",
         "13.0%",
@@ -5530,6 +5608,7 @@
     "效果": [
       "When triggering Bonus Effect: Smash, gains 1 stack that increases CRIT Damage by #1 for 10.0s, up to 10.0 stacks.",
       [
+        "1.6%",
         "3.3%",
         "5.0%",
         "6.6%",
@@ -5551,6 +5630,7 @@
     "效果": [
       "When triggering Bonus Effect, gains 1 stack that increases ATK Range by #1 for 10.0s, up to 2.0 stacks.",
       [
+        "0.1",
         "0.2",
         "0.3",
         "0.4",
@@ -5642,6 +5722,7 @@
     "效果": [
       "#1 chance to get 1 additional Combo when dealing damage with Sliding Attack.",
       [
+        "16.0%",
         "33.0%",
         "49.0%",
         "65.0%",
@@ -5673,6 +5754,7 @@
     "效果": [
       "Increases damage dealt to Filthoids by #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -5704,6 +5786,7 @@
     "效果": [
       "Increases damage dealt to Hyperborean soldiers by #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -5735,6 +5818,7 @@
     "效果": [
       "Increases Damage Dealt to members of The Elysian Church by #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -5766,6 +5850,7 @@
     "效果": [
       "Increases Damage Dealt to members of The Forsakens by #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -5790,6 +5875,7 @@
     "效果": [
       "Damage Dealt to members of Huaxu +#1.",
       [
+        "7.0%",
         "14.0%",
         "21.0%",
         "28.0%",
@@ -5895,6 +5981,7 @@
     "效果": [
       "Damage Dealt to enemies of a higher level +#1.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -6053,6 +6140,7 @@
     "效果": [
       "After reloading, increases ATK Speed by #1 for #2s.",
       [
+        "7.5%",
         "15.0%",
         "22.5%",
         "30.0%",
@@ -6060,6 +6148,7 @@
         "45.0%"
       ],
       [
+        "5.0",
         "6.0",
         "7.0",
         "8.0",
@@ -6081,6 +6170,7 @@
     "效果": [
       "After defeating an enemy, the character gains Movement Speed +#1, Slide Speed +#2, and Helix Leap Speed +#3 for 15.0s.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -6088,6 +6178,7 @@
         "48.0%"
       ],
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -6095,6 +6186,7 @@
         "48.0%"
       ],
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -6116,6 +6208,7 @@
     "效果": [
       "When dealing damage, increases the damage according to the percentage of the remaining projectiles. The higher the percentage, the greater the increase, up to #1.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -6137,6 +6230,7 @@
     "效果": [
       "For every 30.0 instances of Ranged Weapon DMG dealt with any weapon, the character gains Melee Weapon DMG +#1 for 18.0s.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -6158,6 +6252,7 @@
     "效果": [
       "Dealing Ranged Weapon DMG while at or above 35% HP with any weapon causes the character to lose 10% HP. Triggers once every #1s.",
       [
+        "6.0",
         "5.0",
         "4.0",
         "3.0",
@@ -6182,6 +6277,7 @@
     "效果": [
       "Increases explosive projectile damage by #1.",
       [
+        "3.0%",
         "7.0%",
         "10.0%",
         "13.0%",
@@ -6206,6 +6302,7 @@
     "效果": [
       "Increases beam damage by #1.",
       [
+        "3.0%",
         "7.0%",
         "10.0%",
         "13.0%",
@@ -6286,6 +6383,7 @@
     "效果": [
       "Increases damage dealt to Filthoids by #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -6317,6 +6415,7 @@
     "效果": [
       "Increases damage dealt to Hyperborean soldiers by #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -6348,6 +6447,7 @@
     "效果": [
       "Increases Damage Dealt to members of The Elysian Church by #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -6379,6 +6479,7 @@
     "效果": [
       "Increases Damage Dealt to members of The Forsakens by #1.",
       [
+        "7.0%",
         "13.0%",
         "20.0%",
         "27.0%",
@@ -6403,6 +6504,7 @@
     "效果": [
       "Damage Dealt to members of Huaxu +#1.",
       [
+        "7.0%",
         "14.0%",
         "21.0%",
         "28.0%",
@@ -6536,6 +6638,7 @@
     "效果": [
       "Decreases Damage Dealt by #1 (unaffected by other modifiers).",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -6557,6 +6660,7 @@
     "效果": [
       "Defeating an enemy at or below the character's level restores #1 Sanity.",
       [
+        "1.0",
         "2.0",
         "3.0",
         "4.0",
@@ -6578,6 +6682,7 @@
     "效果": [
       "When dealing damage to an enemy at or below the character's level, final damage is randomly set between 1% and #1 of its original value.",
       [
+        "200.0%",
         "400.0%",
         "600.0%",
         "800.0%",
@@ -6599,6 +6704,7 @@
     "效果": [
       "When dealing damage to an enemy at or below the character's level, there is a #1 chance to turn it into a stationary oil barrel. The next time it takes damage, it is defeated instantly and deals Smash Damage equal to #2 of the character's ATK to enemies within 10 m.",
       [
+        "8.3%",
         "16.6%",
         "24.9%",
         "33.3%",
@@ -6606,6 +6712,7 @@
         "50.0%"
       ],
       [
+        "120.0%",
         "240.0%",
         "360.0%",
         "480.0%",
@@ -6972,6 +7079,7 @@
     "效果": [
       "Decreases Damage Taken by #1. Defeating an enemy grants 1 stack that increases ATK by #2 for 30.0s, up to 15.0 stacks. This effect duration refreshes with each new stack gained.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -6984,6 +7092,7 @@
         "22.0%"
       ],
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -7017,6 +7126,7 @@
     "效果": [
       "Increases Skill Intensity by #1 for 30.0s when battle starts during commissions or Nocturnal Echoes.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -7046,6 +7156,7 @@
     "效果": [
       "Increases Damage Dealt by #1 when facing less than 2 enemies within a 20-metre range.",
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -7075,6 +7186,7 @@
     "效果": [
       "Increases Damage Dealt by #1 per enemy within a 20-metre range (up to #2).",
       [
+        "0.2%",
         "0.4%",
         "0.6%",
         "0.8%",
@@ -7087,6 +7199,7 @@
         "2.2%"
       ],
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -7119,6 +7232,7 @@
     "效果": [
       "Increases Damage Dealt by #1 when attacking off-balance enemies (with Stance completely weakened).",
       [
+        "4.0%",
         "8.0%",
         "12.0%",
         "16.0%",
@@ -7148,6 +7262,7 @@
     "效果": [
       "Increases your ATK by #1 with each revival during commissions or Nocturnal Echoes (up to #2).",
       [
+        "7.0%",
         "14.0%",
         "21.0%",
         "28.0%",
@@ -7160,6 +7275,7 @@
         "77.0%"
       ],
       [
+        "21.0%",
         "42.0%",
         "63.0%",
         "84.0%",
@@ -7205,6 +7321,7 @@
     "效果": [
       "When dealing Skill DMG, there is a #1 chance to trigger Bonus Effects.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -7526,6 +7643,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -7562,6 +7680,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -7598,6 +7717,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -7679,6 +7799,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -7715,6 +7836,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -7751,6 +7873,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -7832,6 +7955,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -7868,6 +7992,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -7904,6 +8029,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -7985,6 +8111,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -8021,6 +8148,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -8057,6 +8185,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -8138,6 +8267,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -8174,6 +8304,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -8210,6 +8341,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -8291,6 +8423,7 @@
     "效果": [
       "When attacking with a weapon, deals #1 additional damage of the same element type.",
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -8327,6 +8460,7 @@
     "效果": [
       "Restores additional Sanity by #1 for you and your teammates every 3s.",
       [
+        "2.0",
         "3.0",
         "4.0",
         "5.0",
@@ -8363,6 +8497,7 @@
     "效果": [
       "Increases Damage Dealt by you and your teammate by #1.",
       [
+        "2.0%",
         "4.0%",
         "5.0%",
         "7.0%",
@@ -8701,6 +8836,7 @@
     "效果": [
       "This effect applies only if every equipped Demon Wedge is unique. Summon DMG +#1.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -8776,6 +8912,7 @@
     "效果": [
       "Damage dealt by summons is increased by #1. At +5.0, this Demon Wedge can be equipped in multiples.",
       [
+        "5.0%",
         "10.0%",
         "15.0%",
         "20.0%",
@@ -9673,6 +9810,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Sword equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9685,6 +9823,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9726,6 +9865,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Polearm equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9738,6 +9878,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9779,6 +9920,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Greatsword equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9791,6 +9933,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9832,6 +9975,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Dual Blades equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9844,6 +9988,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9885,6 +10030,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Whipblade equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9897,6 +10043,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9938,6 +10085,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Katana equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -9950,6 +10098,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -9991,6 +10140,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Pistol equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10003,6 +10153,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10044,6 +10195,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Dual Pistols equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10056,6 +10208,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10097,6 +10250,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Grenade Launcher equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10109,6 +10263,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10150,6 +10305,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Shotgun equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10162,6 +10318,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10203,6 +10360,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Assault Rifle equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10215,6 +10373,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10256,6 +10415,7 @@
     "效果": [
       "Increases your Damage Dealt by #1 per Bow equipped by you or your Combat Partner (up to #2; does not apply when acting as Combat Partner).",
       [
+        "1.0%",
         "2.0%",
         "3.0%",
         "4.0%",
@@ -10268,6 +10428,7 @@
         "11.0%"
       ],
       [
+        "3.0%",
         "6.0%",
         "9.0%",
         "12.0%",
@@ -10313,6 +10474,7 @@
     "效果": [
       "When an Umbro character consumes Sanity, they gain 1 stack that increases weapon CRIT Chance by #1 for 15.0s, up to 15.0 stacks.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -10348,6 +10510,7 @@
     "效果": [
       "Hydro characters' summon gains an ATK Speed boost equal to #1 of the summoner's melee weapon ATK Speed and a Skill Range boost equal to #2 of the summoner's Skill Range.",
       [
+        "4.5%",
         "9.0%",
         "13.5%",
         "18.0%",
@@ -10360,6 +10523,7 @@
         "49.5%"
       ],
       [
+        "2.2%",
         "4.4%",
         "6.6%",
         "8.8%",
@@ -10393,6 +10557,7 @@
     "效果": [
       "When a Hydro character uses a skill, the user and nearby allies gain an ATK Increase equal to #1 of the user's ATK (up to 275) for 10.0s.",
       [
+        "1.9%",
         "3.8%",
         "5.7%",
         "7.6%",
@@ -10426,6 +10591,7 @@
     "效果": [
       "When a Pyro character deals damage, gains 1 stack that increases ATK by #1 for 15.0s, up to 120.0 stacks.",
       [
+        "0.2%",
         "0.3%",
         "0.5%",
         "0.6%",
@@ -10471,6 +10637,7 @@
     "效果": [
       "When a Pyro character consumes Pyro Disruption, their DMG Dealt increases by #1 for 10.0s, stacking up to 5.0 times.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -10504,6 +10671,7 @@
     "效果": [
       "When an Electro character uses skills, they gain 1 stack that increases Skill DMG by #1 for 16.0s, up to 8.0 stacks.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -10549,6 +10717,7 @@
     "效果": [
       "After remaining stationary for 1s, Electro characters gain 1 stack of #1 Skill Intensity every 0.5s. Lasts indefinitely and stacks up to 10.0 times. All stacks are removed upon moving.",
       [
+        "1.6%",
         "3.2%",
         "4.8%",
         "6.4%",
@@ -10582,6 +10751,7 @@
     "效果": [
       "When an Anemo character uses Combat Skills, it gains a #1 Skill Intensity Increase for 6.0s.",
       [
+        "14.0%",
         "28.0%",
         "42.0%",
         "56.0%",
@@ -10615,6 +10785,7 @@
     "效果": [
       "When an Anemo character's ranged weapon triggers a bonus effect, grants +#1 Resolve to the user and nearby allies for 10.0s.",
       [
+        "0.9%",
         "1.8%",
         "2.7%",
         "3.6%",
@@ -10648,6 +10819,7 @@
     "效果": [
       "When enemies near a Lumino character take Weapon DMG, CRIT Chance increases by #1. Gains an additional +#2 against targets with debuffs.",
       [
+        "5.5%",
         "10.9%",
         "16.4%",
         "21.8%",
@@ -10660,6 +10832,7 @@
         "60.0%"
       ],
       [
+        "1.4%",
         "2.7%",
         "4.1%",
         "5.4%",
@@ -10693,6 +10866,7 @@
     "效果": [
       "Increases the Lumino characters' ATK by [their current Skill Duration x #1], up to #2.",
       [
+        "8.1%",
         "16.2%",
         "24.3%",
         "32.4%",
@@ -10705,6 +10879,7 @@
         "89.1%"
       ],
       [
+        "19.5%",
         "39.0%",
         "58.5%",
         "78.0%",
@@ -11194,6 +11369,7 @@
     "效果": [
       "When gaining Combo Point through attacking, there is a #1 chance to gain 1 additional Combo Point.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -12020,6 +12196,7 @@
     "效果": [
       "Charged Attacks have a 50.0% chance to restore #1 Sanity. This effect can only be triggered once every 5.0s max.",
       [
+        "10.0",
         "11.0",
         "12.0",
         "13.0",
@@ -12049,6 +12226,7 @@
     "效果": [
       "If a Normal Attack does not crit, the next Normal Attack gains +#1 CRIT Chance, stacking up to +#2. The effect is removed when a Normal Attack crits.",
       [
+        "12.0%",
         "24.0%",
         "36.0%",
         "48.0%",
@@ -12061,6 +12239,7 @@
         "132.0%"
       ],
       [
+        "72.0%",
         "144.0%",
         "216.0%",
         "288.0%",
@@ -12288,6 +12467,7 @@
     "效果": [
       "When Morale is ≥ 60.0%, grants +#1 additional Umbro Damage.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12335,6 +12515,7 @@
     "效果": [
       "When Morale is ≥ 60.0%, grants +#1 additional Umbro Damage.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12380,6 +12561,7 @@
     "效果": [
       "Grants +#1 CRIT Damage to self and allies when Skill Duration is ≥ 180.0%.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -12427,6 +12609,7 @@
     "效果": [
       "Grants +#1 CRIT Damage to self and allies when Skill Duration is ≥ 180.0%.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -12472,6 +12655,7 @@
     "效果": [
       "Summons deal +#1 DMG when Skill Efficiency is ≥ 165.0%.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -12519,6 +12703,7 @@
     "效果": [
       "Summons deal +#1 DMG when Skill Efficiency is ≥ 165.0%.",
       [
+        "10.0%",
         "20.0%",
         "30.0%",
         "40.0%",
@@ -12564,6 +12749,7 @@
     "效果": [
       "Grants self and allies +#1 Morale when Skill Intensity is ≥ 350.0%.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12611,6 +12797,7 @@
     "效果": [
       "Grants self and allies +#1 Morale when Skill Intensity is ≥ 350.0%.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12656,6 +12843,7 @@
     "效果": [
       "When Overflow Intensity is at least 500.0%, Skill Intensity increases by #1 (Overflow Intensity gained from Weapon Conversion does not count).",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -12703,6 +12891,7 @@
     "效果": [
       "When Overflow Intensity is at least 500.0%, Skill Intensity increases by #1 (Overflow Intensity gained from Weapon Conversion does not count).",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -12748,6 +12937,7 @@
     "效果": [
       "When Skill Intensity is ≥ 350.0%, the whole team gains +#1 Morale.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12795,6 +12985,7 @@
     "效果": [
       "When Skill Intensity is ≥ 350.0%, the whole team gains +#1 Morale.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12840,6 +13031,7 @@
     "效果": [
       "Grants +#1 Skill Intensity when Skill Efficiency is ≥ 130.0%.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -12887,6 +13079,7 @@
     "效果": [
       "Grants +#1 Skill Intensity when Skill Efficiency is ≥ 130.0%.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -12932,6 +13125,7 @@
     "效果": [
       "Grants +#1 Morale to self and allies when Max Sanity is ≥ 300.0.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -12979,6 +13173,7 @@
     "效果": [
       "Grants +#1 Morale to self and allies when Max Sanity is ≥ 300.0.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -13024,6 +13219,7 @@
     "效果": [
       "Grants +#1 Skill Intensity when Skill Efficiency is ≥ 130.0%.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -13071,6 +13267,7 @@
     "效果": [
       "Grants +#1 Skill Intensity when Skill Efficiency is ≥ 130.0%.",
       [
+        "8.0%",
         "16.0%",
         "24.0%",
         "32.0%",
@@ -13116,6 +13313,7 @@
     "效果": [
       "Grants +#1 Resolve to self and allies when Max Sanity is ≥ 300.0.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -13163,6 +13361,7 @@
     "效果": [
       "Grants +#1 Resolve to self and allies when Max Sanity is ≥ 300.0.",
       [
+        "2.0%",
         "4.0%",
         "6.0%",
         "8.0%",
@@ -13208,6 +13407,7 @@
     "效果": [
       "Grants +#1 Morale when Skill Range is ≥ 160.0%.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -13255,6 +13455,7 @@
     "效果": [
       "Grants +#1 Morale when Skill Range is ≥ 160.0%.",
       [
+        "6.0%",
         "12.0%",
         "18.0%",
         "24.0%",
@@ -13300,6 +13501,7 @@
     "效果": [
       "Grants +#1 CRIT Chance to self and allies when Skill Duration is ≥ 200.0%.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -13347,6 +13549,7 @@
     "效果": [
       "Grants +#1 CRIT Chance to self and allies when Skill Duration is ≥ 200.0%.",
       [
+        "9.0%",
         "18.0%",
         "27.0%",
         "36.0%",
@@ -14441,6 +14644,7 @@
     "效果": [
       "Upgrades the Sword Normal Attack. Deals #1 more damage than the standard attack.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14538,6 +14742,7 @@
     "效果": [
       "Upgrades the Polearm Charged Attack to throw 5 polearms forward. Deals #1 more damage than the standard attack.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14594,6 +14799,7 @@
     "效果": [
       "Upgrades the Polearm Plunging Attack to trigger a larger shockwave on impact. Deals #1 more damage than the standard attack.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14661,6 +14867,7 @@
     "效果": [
       "Upgrades the Polearm Normal Attack to summon phantom spears that strike the target. Deals #1 more damage than the standard attack.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14763,6 +14970,7 @@
     "效果": [
       "Upgrades the Greatsword Normal Attack to unleash 3 Swordwaves on the final hit, cleaving through enemies in its path. Deals #1 more damage than the standard attack.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14859,6 +15067,7 @@
     "效果": [
       "Upgrades the Dual Blades Sliding Attack into a lethal dash, slashing through all enemies in its path. Deals #1 more damage than the standard attack.",
       [
+        "100.0%",
         "110.0%",
         "120.0%",
         "130.0%",
@@ -14926,6 +15135,7 @@
     "效果": [
       "While Truffle is riding [Filbert], all team members gain #1 Resolve. Every 2.0s, Truffle loses 15.0% of her current HP, triggering one instance of [Trotters Trot-Trot]'s healing and buff effects and granting a 30.0% chance to generate 1 [Activated Sal Volatile] or [Tranquilizer Dewdrop]. When Truffle is deployed as a combat partner, she automatically casts [Tummy Full, Hands Full].",
       [
+        "2.0%",
         "5.0%",
         "7.8%",
         "10.4%",
