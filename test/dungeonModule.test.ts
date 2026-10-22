@@ -108,5 +108,28 @@ describe("Dungeon 副本过滤", () => {
         expect(find(91701).t).toBe("Defence")
         expect(find(91701).waves).toBe(1)
     })
+
+    test("公会 Boss 副本保留行：n 取官方 Boss 名，m 取 Boss 单位，无 r", async () => {
+        const dungeons = await buildDungeons()
+        const find = (id: number) => dungeons.find(item => item.id === id)!
+
+        // 29001~29004：DungeonName 恒为占位 DUNGEON_NAME_0（测试场景），n 取 GuildBossInfo.Name 官方译名；m 取 GuildBossInfo.ID（Monster 表有定义）；无 DungeonReward，不设 r。
+        // 29001→UI_HardBoss_Name_3/8502701，29002→UI_HardBoss_Name_4/8505701，29003→Mon_Name_8509001/8509701，29004→UI_HardBoss_Name_5/8512701。
+        for (const [dungeonId, nameKey, bossId] of [
+            [29001, "UI_HardBoss_Name_3", 8502701],
+            [29002, "UI_HardBoss_Name_4", 8505701],
+            [29003, "Mon_Name_8509001", 8509701],
+            [29004, "UI_HardBoss_Name_5", 8512701],
+        ] as Array<[number, string, number]>) {
+            expect((find(dungeonId).n as any)?.key).toBe(nameKey)
+            expect(find(dungeonId).m).toEqual([bossId])
+        }
+        for (const id of [29001, 29002, 29003, 29004]) {
+            expect(find(id).t).toBe("GuildBoss")
+            expect(find(id).lv).toBe(100)
+            expect(find(id).win).toBe(2)
+            expect("r" in find(id)).toBe(false)
+        }
+    })
 })
 

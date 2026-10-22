@@ -1,0 +1,418 @@
+{
+  "bosses": [
+    {
+      "id": 8502701,
+      "name": "羽化せし者",
+      "desc": "凍土の種は、夜のとばりへと安らかに羽ばたく機会を逃してしまった。",
+      "dungeonId": 29001,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8502
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8505701,
+      "name": "煉火の典獄",
+      "desc": "皇立軍事監獄の典獄。彼女の鎖が罪を裁き、彼女の火炎が正義を貫く。",
+      "dungeonId": 29002,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8505
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8509701,
+      "name": "？？？",
+      "desc": "真っ赤に染まった帳の下で、寒風の響きが雪国への挽歌となる。",
+      "dungeonId": 29003,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8509
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8512701,
+      "name": "雪国の野獣",
+      "desc": "雪国で荒ぶる獣は子供たちの故郷を滅ぼし、妖精たちの夢まで散らす。",
+      "dungeonId": 29004,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8512
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "buffs": [
+    {
+      "id": 1,
+      "buffIds": [
+        3021001
+      ],
+      "desc": "強敵の防御力が3000アップする。",
+      "icon": "T_Abyss_Buff_Mon_Survive01"
+    },
+    {
+      "id": 2,
+      "buffIds": [
+        3021002
+      ],
+      "desc": "強敵の体勢を削ることはできない。",
+      "icon": "T_Abyss_Buff_Mon_Boss"
+    },
+    {
+      "id": 8502,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "羽化せし者は[光なき哀歌]を使用できる。",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    },
+    {
+      "id": 8505,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "煉火の典獄は[断罪宣告]を使用できる。",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    },
+    {
+      "id": 8509,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "？？？は[怒りの咆哮]を使用できる。",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    },
+    {
+      "id": 8512,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "雪国の野獣は[砲撃の交響曲]を使用できる。",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    }
+  ],
+  "tests": [
+    {
+      "id": 101,
+      "type": 1,
+      "keyword": "スキルダメージ",
+      "desc": "累計でスキルダメージを1000回与える。",
+      "cond": {
+        "DamageTag": "Skill"
+      },
+      "rule": {
+        "Hit": 1000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 102,
+      "type": 1,
+      "keyword": "武器ダメージ",
+      "desc": "累計で武器ダメージを2000回与える。",
+      "cond": {
+        "DamageTag": "Weapon"
+      },
+      "rule": {
+        "Hit": 2000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 201,
+      "type": 2,
+      "keyword": "クリティカルダメージ",
+      "desc": "累計でクリティカルダメージを2000回与える。",
+      "cond": {
+        "Extra": "Crit"
+      },
+      "rule": {
+        "Hit": 2000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 202,
+      "type": 2,
+      "keyword": "属性追加効果を発動する",
+      "desc": "累計で属性追加効果を10000回発動する。",
+      "cond": {
+        "Extra": "Trigger"
+      },
+      "rule": {
+        "Hit": 10000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 203,
+      "type": 2,
+      "keyword": "追加ダメージ",
+      "desc": "累計で追加ダメージを8000回与える。",
+      "cond": {
+        "Extra": "Trigger"
+      },
+      "rule": {
+        "Hit": 8000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 204,
+      "type": 2,
+      "keyword": "持続ダメージ",
+      "desc": "累計で持続ダメージを2500回与える。",
+      "cond": {
+        "Extra": "Trigger"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 301,
+      "type": 3,
+      "keyword": "水属性ダメージ",
+      "desc": "累計で水属性ダメージを2500回与える。",
+      "cond": {
+        "DamageType": "Water"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 302,
+      "type": 3,
+      "keyword": "火属性ダメージ",
+      "desc": "累計で火属性ダメージを2500回与える。",
+      "cond": {
+        "DamageType": "Fire"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 303,
+      "type": 3,
+      "keyword": "風属性ダメージ",
+      "desc": "累計で風属性ダメージを2500回与える。",
+      "cond": {
+        "DamageType": "Wind"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 304,
+      "type": 3,
+      "keyword": "雷属性ダメージ",
+      "desc": "累計で雷属性ダメージを2500回与える。",
+      "cond": {
+        "DamageType": "Thunder"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 305,
+      "type": 3,
+      "keyword": "光属性ダメージ",
+      "desc": "累計で光属性ダメージを2500回与える。",
+      "cond": {
+        "DamageType": "Light"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 306,
+      "type": 3,
+      "keyword": "闇属性ダメージ",
+      "desc": "累計で闇属性ダメージを2500回与える。",
+      "cond": {
+        "DamageType": "Dark"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    }
+  ],
+  "refresh": [
+    {
+      "id": 1,
+      "startTime": 1785704400,
+      "bossIds": [
+        8502701,
+        8512701,
+        8505701
+      ]
+    },
+    {
+      "id": 2,
+      "startTime": 1789333200,
+      "bossIds": [
+        8512701,
+        8502701,
+        8505701
+      ]
+    },
+    {
+      "id": 3,
+      "startTime": 1792962000,
+      "bossIds": [
+        8502701,
+        8512701,
+        8505701
+      ]
+    }
+  ],
+  "pointRewards": [
+    {
+      "id": 101,
+      "lv": 20,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 102,
+      "lv": 30,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 103,
+      "lv": 40,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 104,
+      "lv": 50,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 105,
+      "lv": 55,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 106,
+      "lv": 60,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    }
+  ],
+  "weekRewards": [
+    {
+      "stage": 20,
+      "constructionPoint": 800,
+      "reward": 103004101
+    },
+    {
+      "stage": 40,
+      "constructionPoint": 1000,
+      "reward": 103004102
+    },
+    {
+      "stage": 60,
+      "constructionPoint": 1200,
+      "reward": 103004103
+    },
+    {
+      "stage": 80,
+      "constructionPoint": 1400,
+      "reward": 103004104
+    },
+    {
+      "stage": 100,
+      "constructionPoint": 1600,
+      "reward": 103004105
+    }
+  ]
+}

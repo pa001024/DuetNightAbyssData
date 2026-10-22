@@ -1,0 +1,418 @@
+{
+  "bosses": [
+    {
+      "id": 8502701,
+      "name": "우화를 이룬 자",
+      "desc": "얼어붙은 땅 속의 씨앗은 부드럽게 밤의 장막으로 들어갈 시기를 놓쳤다. ",
+      "dungeonId": 29001,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8502
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8505701,
+      "name": "지옥불의 교도소장",
+      "desc": "제국 황실 군교도소장. 사슬로 죄악을 징벌하고, 불로 정의를 수호한다.",
+      "dungeonId": 29002,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8505
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8509701,
+      "name": "???",
+      "desc": "새빨간 장막 아래, 찬바람이 설국의 슬픈 노래를 울렸다.",
+      "dungeonId": 29003,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8509
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8512701,
+      "name": "설국의 야수",
+      "desc": "기승을 부리는 설국의 야수. 아이들의 고향을 무너뜨리고, 요정의 깨진 꿈을 녹였다.",
+      "dungeonId": 29004,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8512
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "buffs": [
+    {
+      "id": 1,
+      "buffIds": [
+        3021001
+      ],
+      "desc": "강적 유닛의 방어가 3000 상승한다.",
+      "icon": "T_Abyss_Buff_Mon_Survive01"
+    },
+    {
+      "id": 2,
+      "buffIds": [
+        3021002
+      ],
+      "desc": "강적 유닛은 전투 태세가 약화되지 않는다.",
+      "icon": "T_Abyss_Buff_Mon_Boss"
+    },
+    {
+      "id": 8502,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "우화를 이룬 자는 [빛이 사라질 때의 애가]를 사용할 수 있다.",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    },
+    {
+      "id": 8505,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "지옥불의 교도소장은 [죄악 알리기]를 사용할 수 있다.",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    },
+    {
+      "id": 8509,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "???는 [분노의 포효]를 사용할 수 있다.",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    },
+    {
+      "id": 8512,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "설국의 야수는 [총포 교향곡]을 사용할 수 있다.",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    }
+  ],
+  "tests": [
+    {
+      "id": 101,
+      "type": 1,
+      "keyword": "스킬 대미지",
+      "desc": "스킬 대미지를 누적 1000회 입힌다.",
+      "cond": {
+        "DamageTag": "Skill"
+      },
+      "rule": {
+        "Hit": 1000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 102,
+      "type": 1,
+      "keyword": "무기 대미지",
+      "desc": "무기 대미지를 누적 2000회 입힌다.",
+      "cond": {
+        "DamageTag": "Weapon"
+      },
+      "rule": {
+        "Hit": 2000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 201,
+      "type": 2,
+      "keyword": "크리티컬 대미지",
+      "desc": "크리티컬 대미지를 누적 2000회 입힌다.",
+      "cond": {
+        "Extra": "Crit"
+      },
+      "rule": {
+        "Hit": 2000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 202,
+      "type": 2,
+      "keyword": "속성 추가 효과 발동",
+      "desc": "속성 추가 효과가 누적 10000회 발동한다.",
+      "cond": {
+        "Extra": "Trigger"
+      },
+      "rule": {
+        "Hit": 10000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 203,
+      "type": 2,
+      "keyword": "추가 대미지",
+      "desc": "추가 대미지를 누적 8000회 입힌다.",
+      "cond": {
+        "Extra": "Trigger"
+      },
+      "rule": {
+        "Hit": 8000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 204,
+      "type": 2,
+      "keyword": "지속 대미지",
+      "desc": "지속 대미지를 누적 2500회 입힌다.",
+      "cond": {
+        "Extra": "Trigger"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 301,
+      "type": 3,
+      "keyword": "물 속성 대미지",
+      "desc": "물 속성 대미지를 누적 2500회 입힌다.",
+      "cond": {
+        "DamageType": "Water"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 302,
+      "type": 3,
+      "keyword": "불 속성 대미지",
+      "desc": "불 속성 대미지를 누적 2500회 입힌다.",
+      "cond": {
+        "DamageType": "Fire"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 303,
+      "type": 3,
+      "keyword": "바람 속성 대미지",
+      "desc": "바람 속성 대미지를 누적 2500회 입힌다.",
+      "cond": {
+        "DamageType": "Wind"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 304,
+      "type": 3,
+      "keyword": "번개 속성 대미지",
+      "desc": "번개 속성 대미지를 누적 2500회 입힌다.",
+      "cond": {
+        "DamageType": "Thunder"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 305,
+      "type": 3,
+      "keyword": "빛 속성 대미지",
+      "desc": "빛 속성 대미지를 누적 2500회 입힌다.",
+      "cond": {
+        "DamageType": "Light"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 306,
+      "type": 3,
+      "keyword": "어둠 속성 대미지",
+      "desc": "어둠 속성 대미지를 누적 2500회 입힌다.",
+      "cond": {
+        "DamageType": "Dark"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    }
+  ],
+  "refresh": [
+    {
+      "id": 1,
+      "startTime": 1785704400,
+      "bossIds": [
+        8502701,
+        8512701,
+        8505701
+      ]
+    },
+    {
+      "id": 2,
+      "startTime": 1789333200,
+      "bossIds": [
+        8512701,
+        8502701,
+        8505701
+      ]
+    },
+    {
+      "id": 3,
+      "startTime": 1792962000,
+      "bossIds": [
+        8502701,
+        8512701,
+        8505701
+      ]
+    }
+  ],
+  "pointRewards": [
+    {
+      "id": 101,
+      "lv": 20,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 102,
+      "lv": 30,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 103,
+      "lv": 40,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 104,
+      "lv": 50,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 105,
+      "lv": 55,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 106,
+      "lv": 60,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    }
+  ],
+  "weekRewards": [
+    {
+      "stage": 20,
+      "constructionPoint": 800,
+      "reward": 103004101
+    },
+    {
+      "stage": 40,
+      "constructionPoint": 1000,
+      "reward": 103004102
+    },
+    {
+      "stage": 60,
+      "constructionPoint": 1200,
+      "reward": 103004103
+    },
+    {
+      "stage": 80,
+      "constructionPoint": 1400,
+      "reward": 103004104
+    },
+    {
+      "stage": 100,
+      "constructionPoint": 1600,
+      "reward": 103004105
+    }
+  ]
+}

@@ -7158,6 +7158,50 @@
     "win": 2
   },
   {
+    "id": 29001,
+    "n": "The Eclosioner",
+    "t": "GuildBoss",
+    "lv": 100,
+    "rd": 1,
+    "m": [
+      8502701
+    ],
+    "win": 2
+  },
+  {
+    "id": 29002,
+    "n": "The Warden of the Inferno",
+    "t": "GuildBoss",
+    "lv": 100,
+    "rd": 1,
+    "m": [
+      8505701
+    ],
+    "win": 2
+  },
+  {
+    "id": 29003,
+    "n": "???",
+    "t": "GuildBoss",
+    "lv": 100,
+    "rd": 1,
+    "m": [
+      8509701
+    ],
+    "win": 2
+  },
+  {
+    "id": 29004,
+    "n": "Beast From the Snowfield",
+    "t": "GuildBoss",
+    "lv": 100,
+    "rd": 1,
+    "m": [
+      8512701
+    ],
+    "win": 2
+  },
+  {
     "id": 40601,
     "n": "UI_DUNGEON_ASYNCCOMBAT_1",
     "t": "AsyncCombat",

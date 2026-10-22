@@ -82,6 +82,8 @@ class DungeonBuilder {
     private readonly spawnSources = new Map<number, Row>()
     private readonly defenceWavesPerStage = new Map<number, number>()
     private readonly rewardTable: Row
+    /** 公会 Boss 副本 DungeonID → {GuildBossInfo.ID, 官方名称 key}（展示名/试炼/奖励归属以 GuildBoss.json 为准）。 */
+    private readonly guildBossByDungeon = new Map<number, { id: number; name: string }>()
     /** 历练界面/周常“委托列表”（SelectDungeon/WeeklySelectDungeon 的 DungeonList）与委托密函可选副本（WalnutSelectDungeon 的 DungeonId）：无论奖励如何都保留。 */
     private readonly entryDungeonIds = new Set<number>()
 
@@ -96,6 +98,11 @@ class DungeonBuilder {
         this.asyncFree = ctx.dm.getCommonConst("AsyncCombatSysRoomOpen") === true ? asyncRows.filter(item => item.RoomType != null) : []
         this.buildEntryDungeonIds()
         this.rewardTable = table(ctx, "Reward")
+        for (const item of rows(ctx.dm.getTable("GuildBossInfo"))) {
+            const dungeonId = Number(item.DungeonID)
+            const id = Number(item.ID)
+            if (dungeonId && id) this.guildBossByDungeon.set(dungeonId, { id, name: String(item.Name ?? "") })
+        }
         this.monsterSpawns = table(ctx, "MonsterSpawn")
         this.monsterGroups = table(ctx, "MonsterGroup")
         this.monsterGroupSpawns = table(ctx, "MonsterGroupSpawn")
@@ -370,6 +377,15 @@ class DungeonBuilder {
             lv: dungeon.DungeonLevel ?? 0,
             rd: dungeon.IsRandom ?? 0,
         }
+        // 公会 Boss 本 DungeonName 恒为占位 DUNGEON_NAME_0（测试场景）：n 取 GuildBossInfo.Name 官方译名（六语 TextMap 均有），不用占位。
+        // m 取 GuildBossInfo.ID（DungeonID 反查）：运行时 Creator.UnitId 即被设为该 Boss 单位（见 BP_GuildBossComponent.OnCreateGuildBoss），
+        // 四个 ID 在 Monster 表均有定义；静态 DungeonMonsters/奖励缺失如旧，不设 r，归属见 GuildBoss.json。
+        if (type === "GuildBoss") {
+            const boss = this.guildBossByDungeon.get(dungeonId)
+            if (boss?.name) item.n = T(boss.name)
+            else delete item.n
+            if (boss) item.m = [boss.id]
+        }
 
         const wavesPerStage = this.defenceWavesPerStage.get(dungeonId)
         if ((type === "Defence" || type === "DefenceMove") && wavesPerStage !== undefined) item.waves = wavesPerStage
@@ -402,7 +418,9 @@ class DungeonBuilder {
             item.m = monsters
         } else if (has(dungeon, "DungeonMonsters")) item.m = list(dungeon.DungeonMonsters)
         else if (type === "AsyncCombat") item.m = this.asyncMonsters(dungeonId)
-        else return undefined
+        else if (type === "GuildBoss") {
+            // Boss 实体运行时由 StaticCreator 生成（GuildBossInfo.BossCreatorID，见 BP_GuildBossComponent.OnStaticCreatorEvent），无静态 DungeonMonsters；不设 m。
+        } else return undefined
 
         const spawn = this.dungeonSpawn(dungeon)
         if (spawn.length) item.spawn = spawn
@@ -418,7 +436,8 @@ class DungeonBuilder {
                 return undefined
             item.r = validRewards
             // Raid 预热赛（分组赛，如 21701~21704）无 DungeonReward 字段：奖励走 RaidFloor/排行结算，但副本本身（怪物/胜负条件）仍需输出。
-        } else if (type !== "AsyncCombat" && type !== "SoloRaid") return undefined
+            // 公会 Boss 无 DungeonReward 字段：奖励走 GuildBossWeekReward/PointReward + 结算，与 Raid 预热赛同理保留副本行。
+        } else if (type !== "AsyncCombat" && type !== "SoloRaid" && type !== "GuildBoss") return undefined
         if (has(dungeon, "DungeonWinMode")) item.win = dungeon.DungeonWinMode
         return item
     }

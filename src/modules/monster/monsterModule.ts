@@ -141,6 +141,9 @@ function validMonsterIds(ctx: ModuleContext): Set<number> {
         if (info && typeof info === "object") addNumbers(valid, (info as any).DungeonMonsters)
     for (const info of list(table(ctx, "AsyncCombat"))) if (info && typeof info === "object") addNumbers(valid, (info as any).BossUnitID)
     for (const info of list(table(ctx, "HardBossMain"))) if (info && typeof info === "object") addNumbers(valid, (info as any).MonsterId)
+    // 公会 Boss 运行时单位：实战 Creator.UnitId 即设为 GuildBossInfo.ID（见 BP_GuildBossComponent.OnCreateGuildBoss），
+    // Dungeon 2900x 的 m 指向它；静态 Dungeon 表无此来源，需直读。
+    for (const info of list(table(ctx, "GuildBossInfo"))) if (info && typeof info === "object") addNumbers(valid, (info as any).ID)
     addSpawnSources(ctx, valid, dungeon)
     return valid
 }

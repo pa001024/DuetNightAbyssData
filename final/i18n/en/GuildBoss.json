@@ -1,0 +1,418 @@
+{
+  "bosses": [
+    {
+      "id": 8502701,
+      "name": "The Eclosioner",
+      "desc": "The seed in the frozen soil that has forfeited the opportunity for a gentle descent into the night.",
+      "dungeonId": 29001,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8502
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8505701,
+      "name": "The Warden of the Inferno",
+      "desc": "The Warden of the Imperial Military Prison wields her chains to chastise evil and her flames to defend justice.",
+      "dungeonId": 29002,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8505
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8509701,
+      "name": "???",
+      "desc": "The scarlet drape trembles as the icy breeze hums a lament of the Snowfield.",
+      "dungeonId": 29003,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8509
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8512701,
+      "name": "Beast From the Snowfield",
+      "desc": "It is the Beast From the Snowfield, crushing children's homes and melting remnants of the fairy's slumber.",
+      "dungeonId": 29004,
+      "timeLimit": 90,
+      "hp": 120000000000,
+      "baseRate": 9232.46,
+      "buffs": [
+        1,
+        2,
+        8512
+      ],
+      "testTypes": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "buffs": [
+    {
+      "id": 1,
+      "buffIds": [
+        3021001
+      ],
+      "desc": "Elite enemies gain +3000 DEF.",
+      "icon": "T_Abyss_Buff_Mon_Survive01"
+    },
+    {
+      "id": 2,
+      "buffIds": [
+        3021002
+      ],
+      "desc": "Elite enemies' Stance cannot be reduced.",
+      "icon": "T_Abyss_Buff_Mon_Boss"
+    },
+    {
+      "id": 8502,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "The Eclosioner unlocks [Lament of Fading Light].",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    },
+    {
+      "id": 8505,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "The Warden of the Inferno unlocks [Damnation Declared].",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    },
+    {
+      "id": 8509,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "??? unlocks [Raging Roar].",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    },
+    {
+      "id": 8512,
+      "buffIds": [
+        3021003
+      ],
+      "desc": "Beast From the Snowfield unlocks [Symphony of Gunfire].",
+      "icon": "T_Abyss_Buff_Mon_Survive02"
+    }
+  ],
+  "tests": [
+    {
+      "id": 101,
+      "type": 1,
+      "keyword": "Skill DMG",
+      "desc": "Deal Skill DMG 1000 time(s).",
+      "cond": {
+        "DamageTag": "Skill"
+      },
+      "rule": {
+        "Hit": 1000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 102,
+      "type": 1,
+      "keyword": "Weapon DMG",
+      "desc": "Deal Weapon DMG 2000 time(s).",
+      "cond": {
+        "DamageTag": "Weapon"
+      },
+      "rule": {
+        "Hit": 2000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 201,
+      "type": 2,
+      "keyword": "CRIT Damage",
+      "desc": "Deal CRIT DMG 2000 time(s).",
+      "cond": {
+        "Extra": "Crit"
+      },
+      "rule": {
+        "Hit": 2000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 202,
+      "type": 2,
+      "keyword": "Trigger Bonus Effects",
+      "desc": "Trigger Bonus Effects 10000 time(s).",
+      "cond": {
+        "Extra": "Trigger"
+      },
+      "rule": {
+        "Hit": 10000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 203,
+      "type": 2,
+      "keyword": "Additional DMG",
+      "desc": "Deal Additional DMG 8000 time(s).",
+      "cond": {
+        "Extra": "Trigger"
+      },
+      "rule": {
+        "Hit": 8000
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 204,
+      "type": 2,
+      "keyword": "Periodic DMG",
+      "desc": "Deal Periodic DMG 2500 time(s).",
+      "cond": {
+        "Extra": "Trigger"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 301,
+      "type": 3,
+      "keyword": "Hydro DMG",
+      "desc": "Deal Hydro DMG 2500 time(s).",
+      "cond": {
+        "DamageType": "Water"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 302,
+      "type": 3,
+      "keyword": "Pyro DMG",
+      "desc": "Deal Pyro DMG 2500 time(s).",
+      "cond": {
+        "DamageType": "Fire"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 303,
+      "type": 3,
+      "keyword": "Anemo DMG",
+      "desc": "Deal Anemo DMG 2500 time(s).",
+      "cond": {
+        "DamageType": "Wind"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 304,
+      "type": 3,
+      "keyword": "Electro DMG",
+      "desc": "Deal Electro DMG 2500 time(s).",
+      "cond": {
+        "DamageType": "Thunder"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 305,
+      "type": 3,
+      "keyword": "Lumino DMG",
+      "desc": "Deal Lumino DMG 2500 time(s).",
+      "cond": {
+        "DamageType": "Light"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    },
+    {
+      "id": 306,
+      "type": 3,
+      "keyword": "Umbro DMG",
+      "desc": "Deal Umbro DMG 2500 time(s).",
+      "cond": {
+        "DamageType": "Dark"
+      },
+      "rule": {
+        "Hit": 2500
+      },
+      "rate": 2000000
+    }
+  ],
+  "refresh": [
+    {
+      "id": 1,
+      "startTime": 1785704400,
+      "bossIds": [
+        8502701,
+        8512701,
+        8505701
+      ]
+    },
+    {
+      "id": 2,
+      "startTime": 1789333200,
+      "bossIds": [
+        8512701,
+        8502701,
+        8505701
+      ]
+    },
+    {
+      "id": 3,
+      "startTime": 1792962000,
+      "bossIds": [
+        8502701,
+        8512701,
+        8505701
+      ]
+    }
+  ],
+  "pointRewards": [
+    {
+      "id": 101,
+      "lv": 20,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 102,
+      "lv": 30,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 103,
+      "lv": 40,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 104,
+      "lv": 50,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 105,
+      "lv": 55,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    },
+    {
+      "id": 106,
+      "lv": 60,
+      "eachPoints": 800000,
+      "rewards": [
+        55150,
+        55151,
+        55152,
+        55153,
+        55154
+      ]
+    }
+  ],
+  "weekRewards": [
+    {
+      "stage": 20,
+      "constructionPoint": 800,
+      "reward": 103004101
+    },
+    {
+      "stage": 40,
+      "constructionPoint": 1000,
+      "reward": 103004102
+    },
+    {
+      "stage": 60,
+      "constructionPoint": 1200,
+      "reward": 103004103
+    },
+    {
+      "stage": 80,
+      "constructionPoint": 1400,
+      "reward": 103004104
+    },
+    {
+      "stage": 100,
+      "constructionPoint": 1600,
+      "reward": 103004105
+    }
+  ]
+}
