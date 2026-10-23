@@ -1840,6 +1840,10 @@ function M:_ResolveGuildPeerInfo(Uid, Raw)
   return nil
 end
 
+function M:_IsUsableGuildPeerInfo(Info)
+  return type(Info) == "table" and type(Info.Nickname) == "string" and Info.Nickname ~= "" and type(Info.Level) == "number" and Info.Level > 0 and "number" == type(Info.HeadIconId) and Info.HeadIconId > 0
+end
+
 function M:_IsValidGuildMemberQueryInfo(Info)
   if type(Info) ~= "table" then
     return false
@@ -1877,11 +1881,17 @@ function M:_RefreshGuildPrivatePeerInfos(Uids)
     local FallbackUids = {}
     local ChangedUids = {}
     local bNeedRebuildList = false
-    if Ret == ErrorCode.RET_SUCCESS and type(MemberInfos) == "table" then
+    local bSuccess = Ret == ErrorCode.RET_SUCCESS
+    if type(MemberInfos) == "table" then
       for _, Uid in ipairs(Uids) do
+        local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+        local bCurrentUid = bSuccess or GuildList and (nil ~= GuildList[Uid] or nil ~= GuildList[tostring(Uid)])
         local Info = MemberInfos[Uid] or MemberInfos[tostring(Uid)]
-        if self:_IsValidGuildMemberQueryInfo(Info) then
-          local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+        if not bSuccess and (not self:_IsUsableGuildPeerInfo(Info) or type(Info.IsOnline) ~= "boolean") then
+          Info = MemberInfos[tostring(Uid)]
+        end
+        local bValidInfo = bSuccess and self:_IsValidGuildMemberQueryInfo(Info) or not bSuccess and self:_IsUsableGuildPeerInfo(Info) and type(Info.IsOnline) == "boolean"
+        if bCurrentUid and bValidInfo then
           local OldInfo = self:_ResolveGuildPeerInfo(Uid, GuildList and GuildList[Uid])
           local bWasOnline = OldInfo and OldInfo.IsOnline == true or false
           if ChatModel:RegisterGuildUid(Uid, Info) then
@@ -1894,7 +1904,7 @@ function M:_RefreshGuildPrivatePeerInfos(Uids)
               ChangedUids[#ChangedUids + 1] = Uid
             end
           end
-        else
+        elseif bCurrentUid then
           FallbackUids[#FallbackUids + 1] = Uid
         end
       end
@@ -1918,6 +1928,10 @@ end
 
 function M:_QueryGuildPeerInfo(Uid)
   if not Uid then
+    return
+  end
+  local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+  if GuildList and (self:_IsUsableGuildPeerInfo(GuildList[Uid]) or self:_IsUsableGuildPeerInfo(GuildList[tostring(Uid)])) then
     return
   end
   self._GuildPeerInfoQuerying = self._GuildPeerInfoQuerying or {}

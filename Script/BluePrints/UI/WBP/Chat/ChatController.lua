@@ -463,6 +463,21 @@ function M:_ResolveGuildDynamicNickname(Uid)
     self._GuildDynamicNicknameCache[Uid] = FriendNickname
     return FriendNickname
   end
+  local GuildChats = Avatar and Avatar.GuildChats
+  if type(GuildChats) == "table" then
+    for _, Key in ipairs({
+      Uid,
+      tostring(Uid)
+    }) do
+      local Record = GuildChats[Key]
+      local PlayerInfo = type(Record) == "table" and Record.PlayerInfo or nil
+      local Nickname = type(PlayerInfo) == "table" and PlayerInfo.Nickname or nil
+      if type(Nickname) == "string" and "" ~= Nickname then
+        self._GuildDynamicNicknameCache[Uid] = Nickname
+        return Nickname
+      end
+    end
+  end
   self:_RequestGuildDynamicNickname(Uid)
   return nil
 end

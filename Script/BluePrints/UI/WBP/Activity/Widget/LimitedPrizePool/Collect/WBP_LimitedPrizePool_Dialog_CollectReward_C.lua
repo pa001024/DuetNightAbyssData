@@ -16,19 +16,6 @@ local function IsHorizontalNavigationKey(KeyName)
   return KeyName == UIConst.GamePadKey.DPadLeft or KeyName == UIConst.GamePadKey.DPadRight or KeyName == UIConst.GamePadKey.LeftStickLeft or KeyName == UIConst.GamePadKey.LeftStickRight
 end
 
-local function GetRecordData(Record)
-  return Record and (Record.Props or Record)
-end
-
-local function MakeRecordTupleKey(Record)
-  return table.concat({
-    tostring(Record.TimeStamp),
-    tostring(Record.Round),
-    tostring(Record.PrizeIndex),
-    tostring(Record.SelfSelectId)
-  }, "\031")
-end
-
 function M:Construct()
   self.List_Item.OnCreateEmptyContent:Bind(self, self.CreateEmptyCategoryContent)
   self.List_Item.BP_OnItemSelectionChanged:Remove(self, self.OnCategorySelectionChanged)
@@ -74,22 +61,6 @@ function M:InitContent(Params, PopupData, Owner)
   self:RefreshCategoryList()
 end
 
-function M:BuildClaimedPrizeSet(LimitPrizeData, Round)
-  local TupleCounts = {}
-  local ClaimedPrizeSet = {}
-  for _, Record in ipairs(LimitPrizeData and LimitPrizeData.Record or {}) do
-    local RecordData = GetRecordData(Record)
-    if RecordData and RecordData.Round == Round then
-      local TupleKey = MakeRecordTupleKey(RecordData)
-      TupleCounts[TupleKey] = (TupleCounts[TupleKey] or 0) + 1
-      if TupleCounts[TupleKey] >= 2 then
-        ClaimedPrizeSet[RecordData.PrizeIndex] = true
-      end
-    end
-  end
-  return ClaimedPrizeSet
-end
-
 function M:IsItemOwned(Avatar, ItemType, ItemId)
   if not (Avatar and ItemType) or not ItemId then
     return false
@@ -133,7 +104,7 @@ function M:BuildCategoryContents()
     return
   end
   self.CurrentRound = Round
-  local ClaimedPrizeSet = self:BuildClaimedPrizeSet(LimitPrizeData, Round)
+  local ExtraItemsReceived = LimitPrizeData.ExtraItemsReceived or {}
   local PrizeIndices = {}
   for RawPrizeIndex in pairs(PoolData.ExtraItem) do
     local PrizeIndex = tonumber(RawPrizeIndex)
@@ -175,7 +146,8 @@ function M:BuildCategoryContents()
       Content.RewardType = RewardType
       Content.RewardId = RewardId
       Content.RewardCount = RewardCount
-      Content.bRewardClaimed = true == ClaimedPrizeSet[PrizeIndex]
+      local RewardKey = ExtraInfo[1] .. ":" .. RewardId
+      Content.bRewardClaimed = 1 == ExtraItemsReceived[RewardKey]
       table.insert(self.CategoryContents, Content)
     else
       DebugPrint("LimitedPrizePool collect reward: invalid category", self.PoolId, Round, PrizeIndex)

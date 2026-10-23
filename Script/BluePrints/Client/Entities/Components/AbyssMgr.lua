@@ -204,6 +204,10 @@ end
 
 function Component:OnAbyssEnd(AbyssId, AbyssLevelId, AbyssDungeonIndex, IsWin, PassTime)
   self.logger.debug("OnAbyssEnd", AbyssId, AbyssLevelId, AbyssDungeonIndex, IsWin, PassTime)
+  local DungeonId = GWorld.GameInstance and GWorld.GameInstance:GetCurrentDungeonId()
+  if DungeonId and DungeonId > 0 then
+    self:SendTaskbarDungeonFinish(DungeonId)
+  end
   GWorld.GameInstance:PushLogicServerCallbackInfo(IsWin, AbyssId, AbyssLevelId, AbyssDungeonIndex, PassTime)
   local PlayerCharacter = GWorld:GetMainPlayer()
   if PlayerCharacter then

@@ -2732,6 +2732,9 @@ return ReadOnly("Monster", {
     ModelId = 210211,
     PlayAsThirdPerson = true,
     PreloadSummonNum = 1,
+    SkinModelId = {
+      [210299] = 210295
+    },
     SnapShotRule = "ActorEvent",
     UnitBPPath = "/Game/AssetDesign/Char/Player/Eve/BP_Eve_Summoned_Replicant.BP_Eve_Summoned_Replicant",
     UnitId = 210201,
@@ -2751,6 +2754,9 @@ return ReadOnly("Monster", {
     IgnoreByEnemyCheckRangeHit = true,
     ModelId = 210212,
     PreloadSummonNum = 8,
+    SkinModelId = {
+      [210299] = 210294
+    },
     SnapShotRule = "ActorEvent",
     UnitBPPath = "/Game/AssetDesign/Char/Player/Eve/BP_Eve_Summoned_Soldier.BP_Eve_Summoned_Soldier",
     UnitId = 210202,
@@ -2769,6 +2775,9 @@ return ReadOnly("Monster", {
     IgnoreByEnemyCheckRangeHit = true,
     ModelId = 210213,
     PreloadSummonNum = 2,
+    SkinModelId = {
+      [210299] = 210293
+    },
     SnapShotRule = "ActorEvent",
     UnitBPPath = "/Game/AssetDesign/Char/Player/Eve/BP_Eve_Summoned_Rook.BP_Eve_Summoned_Rook",
     UnitId = 210203,
@@ -2787,6 +2796,9 @@ return ReadOnly("Monster", {
     IgnoreByEnemyCheckRangeHit = true,
     ModelId = 210214,
     PreloadSummonNum = 1,
+    SkinModelId = {
+      [210299] = 210292
+    },
     SnapShotRule = "ActorEvent",
     UnitBPPath = "/Game/AssetDesign/Char/Player/Eve/BP_Eve_Summoned_Queen.BP_Eve_Summoned_Queen",
     UnitId = 210204,

@@ -416,11 +416,11 @@ return ReadOnly("Cutoff", {
     ItemId = 1208001
   },
   [55] = {
-    CutoffEndTime = LocalTimeProxy(1775466000),
+    CutoffEndTime = LocalTimeProxy(1796029200),
     CutoffId = 55,
     CutoffPrice = 60,
     CutoffShow = 6,
-    CutoffStartTime = LocalTimeProxy(1770602400),
+    CutoffStartTime = LocalTimeProxy(1792375200),
     ItemId = 1208002
   },
   [56] = {
@@ -3231,11 +3231,11 @@ return ReadOnly("Cutoff", {
     ItemId = 120244
   },
   [10165] = {
-    CutoffEndTime = LocalTimeProxy(1796029200),
+    CutoffEndTime = LocalTimeProxy(1775466000),
     CutoffId = 10165,
     CutoffPrice = 60,
     CutoffShow = 6,
-    CutoffStartTime = LocalTimeProxy(1792375200),
+    CutoffStartTime = LocalTimeProxy(1770602400),
     ItemId = 1208002
   },
   [10166] = {

@@ -304,7 +304,7 @@ function Component:PreInitInfo(Info)
   end
   self.FromOtherWorld = Info.FromOtherWorld or false
   self.FromArmory = Info.FromArmory or false
-  if self.FromOtherWorld and not self.FromArmory and self:IsPlayer() then
+  if self.FromOtherWorld and not self.FromArmory and not Info.IsDungeonEnd and self:IsPlayer() then
     if IsValid(self.AudioListener) then
       self.AudioListener:K2_DestroyComponent(self)
     end

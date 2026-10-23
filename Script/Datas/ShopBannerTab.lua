@@ -2345,7 +2345,7 @@ return ReadOnly("ShopBannerTab", {
   [712] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_0099.T_Shop_Recommend_0099'",
     Bp = "WBP_Shop_Recommend_Common",
-    DisplayId = 1013,
+    DisplayId = 1003,
     DisplayType = "Mount",
     EndTime = LocalTimeProxy(1794258000),
     Id = 712,
@@ -2355,7 +2355,7 @@ return ReadOnly("ShopBannerTab", {
     ShowRemainTime = true,
     SoldOutSinkBanner = true,
     StartTime = LocalTimeProxy(1792375200),
-    Text1 = "RESOURCE_NAME_49986",
+    Text1 = "RESOURCE_NAME_49996",
     Text1Sub = "UI_Mount"
   },
   [713] = {

@@ -339,11 +339,7 @@ BattleHUDCommonConst.ExtraNodeConfigInHUD = {
   Group_Map = {SettingNodeName = "MapPos", DefaultLayoutIndex = 1},
   Group_Task = {SettingNodeName = "TaskPos", DefaultLayoutIndex = 2},
   Group_Drop = {SettingNodeName = "DropPos", DefaultLayoutIndex = 3},
-  Pos_Entry = {
-    SettingNodeName = "SystemPos",
-    bUseParentSlot = true,
-    DefaultLayoutIndex = 4
-  },
+  Pos_Entry = {SettingNodeName = "SystemPos", DefaultLayoutIndex = 4},
   Team = {SettingNodeName = "TeamPos", DefaultLayoutIndex = 5},
   HUD_Bar = {SettingNodeName = "BloodPos", DefaultLayoutIndex = 6},
   Pos_Spiritualized = {
