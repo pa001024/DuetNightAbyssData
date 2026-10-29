@@ -119,14 +119,22 @@ describe("mod 模块", () => {
         expect(effect[0]).toBe("通过攻击获得连击点数时，有#1概率额外获得1点。")
         expect(effect[1]).toEqual(["17.0%", "33.0%", "50.0%", "67.0%", "84.0%", "100.0%"])
 
-        // 12101：限定仍保留顶层，数值进加成
+        // 12101：限定仍保留顶层，数值进加成（具体属性：切割攻击）
         const limit = mods.find(item => item.id === 12101)
         expect(limit?.限定).toBe("切割")
-        expect(limit?.加成).toEqual({ 物理: 0.2 })
-        expect(limit).not.toHaveProperty("物理")
+        expect(limit?.加成).toEqual({ 切割攻击: 0.2 })
+        expect(limit).not.toHaveProperty("切割攻击")
 
         // 56111：受到的伤害 → 加成.减伤（取反，常数项取 [v]）
         expect(mods.find(item => item.id === 56111)?.加成).toEqual({ 减伤: [0.3] })
+
+        // 阵营增伤：键名取 mod 名去掉“狩猎”前缀 + “增伤”，不再归并为“歧视”
+        expect(mods.find(item => item.id === 42501)?.加成).toMatchObject({ 秽兽增伤: expect.anything() })
+        expect(mods.find(item => item.id === 42502)?.加成).toMatchObject({ 军团增伤: expect.anything() })
+        expect(mods.find(item => item.id === 42503)?.加成).toMatchObject({ 神使增伤: expect.anything() })
+        expect(mods.find(item => item.id === 42504)?.加成).toMatchObject({ 神弃者增伤: expect.anything() })
+        expect(mods.find(item => item.id === 42505)?.加成).toMatchObject({ 华胥增伤: expect.anything() })
+        expect(JSON.stringify(mods)).not.toContain("歧视")
     })
 
     test("AddCharModCost 补最大耐受（满级耐受 × 系数下取整）", async () => {

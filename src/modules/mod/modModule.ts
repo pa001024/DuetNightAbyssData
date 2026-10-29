@@ -69,6 +69,22 @@ function release(value: unknown): string {
     return n ? `${Math.floor(n / 100)}.${Math.floor((n % 100) / 10)}` : ""
 }
 
+/** 阵营增伤 Attr 名集合（Gr/Jt/Jh/Sq/HxRate → 对特定阵营/怪物增伤）。 */
+const FACTION_RATE_ATTRS = new Set(["GrRate", "JtRate", "JhRate", "SqRate", "HxRate"])
+
+/**
+ * 阵营增伤键名：取 mod 中文名去掉“狩猎”前缀 + “增伤”（如 狩猎秽兽→秽兽增伤）。
+ * 非阵营属性或非狩猎命名返回 undefined，调用方回退 P_MAP。
+ */
+function factionRateName(ctx: ModuleContext, mod: Row, attrName: string): string | undefined {
+    if (!FACTION_RATE_ATTRS.has(attrName)) return undefined
+    const modName = ctx.textmap.get(String(mod.Name ?? ""), "cn")
+    if (!modName || modName === String(mod.Name ?? "")) return undefined
+    const faction = modName.startsWith("狩猎") ? modName.slice(2) : modName
+    if (!faction) return undefined
+    return `${faction}增伤`
+}
+
 function attrConfigKey(attr: Row, config: Row): string {
     const name = String(attr.AttrName ?? "")
     if (!name) return ""
@@ -493,6 +509,10 @@ export async function modModule(ctx: ModuleContext): Promise<VNodeTree> {
             const cfg = config[attrConfigKey(attrRow, config)] ?? {}
             let name = cfg.Name ? ctx.textmap.get(String(cfg.Name), "cn") : String(attrRow.AttrName)
             if (String(attrRow.AttrName).startsWith("BonusDamage_")) name = "追加伤害"
+            // 阵营增伤（Gr/Jt/Jh/Sq/HxRate）：译名取 mod 名去掉“狩猎”前缀 + “增伤”
+            // （如 狩猎秽兽→秽兽增伤）；非狩猎命名时回退 P_MAP 兜底。
+            const factionName = factionRateName(ctx, mod, String(attrRow.AttrName))
+            if (factionName) name = factionName
             if (["切割攻击", "贯穿攻击", "震荡攻击"].includes(name)) output.限定 = name.slice(0, 2)
             name = P_MAP[name] ?? name
             const finalName = name === "受到的伤害" ? "减伤" : name

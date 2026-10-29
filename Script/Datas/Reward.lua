@@ -36014,6 +36014,15 @@ return ReadOnly("Reward", {
     RewardId = 82050,
     Type = T.RT_1611
   },
+  [82051] = {
+    Count = T.RT_13,
+    Id = {
+      [1] = 10051
+    },
+    Mode = "Fixed",
+    RewardId = 82051,
+    Type = T.RT_1611
+  },
   [91001] = {
     Count = T.RT_13,
     Id = {

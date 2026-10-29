@@ -387,6 +387,14 @@ return ReadOnly("LimitEventRewardCollection", {
     EventId = 103009011,
     ShowVersion = T.RT_4
   },
+  [103009012] = {
+    EventId = 103009012,
+    ShowVersion = T.RT_6
+  },
+  [103009013] = {
+    EventId = 103009013,
+    ShowVersion = T.RT_6
+  },
   [105101020] = {
     EventId = 105101020,
     RewardId = 20000,

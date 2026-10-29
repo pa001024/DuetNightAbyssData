@@ -68978,6 +68978,18 @@
     ]
   },
   {
+    "id": 82051,
+    "m": "Fixed",
+    "child": [
+      {
+        "id": 10051,
+        "t": "HeadFrame",
+        "c": 1,
+        "n": "Lueur de Givrelac"
+      }
+    ]
+  },
+  {
     "id": 91001,
     "m": "Fixed",
     "child": [
