@@ -77,6 +77,7 @@ function processChain(_ctx: ModuleContext, chain: Row, stl: Row | undefined): VN
     nonEmpty(output, "reward", chain.QuestChainReward)
     nonEmpty(output, "questReward", chain.QuestReward)
     nonEmpty(output, "npc", chain.QuestNpcId)
+    nonEmpty(output, "unlock", chain.UnlockCondition)
     nonEmpty(output, "startTime", chain.StartTime)
     nonEmpty(output, "endTime", chain.EndTime)
     const quests = stl ? orderedQuests(stl) : []
