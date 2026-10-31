@@ -154,6 +154,7 @@ function M:ReceiveEnterState(StackAction)
 end
 
 function M:Destruct()
+  self:CloseOpenedRankHeadMenus()
   self._bRankingShown = false
   self._bStackCovered = nil
   if self._bIsClosing then
@@ -1340,12 +1341,13 @@ function M:OpenHeadMenuForRankContent(Content)
 end
 
 function M:CloseOpenedRankHeadMenus(ExceptRow)
+  self:RemoveTimer("RankingHeadMenuDeferredOpen")
   local MyselfRow = self.Ranking_Myself
-  if MyselfRow and MyselfRow ~= ExceptRow and MyselfRow.IsHeadMenuOpen and MyselfRow:IsHeadMenuOpen() then
+  if MyselfRow and MyselfRow ~= ExceptRow and MyselfRow.CloseHeadMenu then
     MyselfRow:CloseHeadMenu()
   end
   for _, EntryWidget in ipairs(self:GetDisplayedRankEntryWidgets()) do
-    if EntryWidget and EntryWidget ~= ExceptRow and EntryWidget.IsHeadMenuOpen and EntryWidget:IsHeadMenuOpen() then
+    if EntryWidget and EntryWidget ~= ExceptRow and EntryWidget.CloseHeadMenu then
       EntryWidget:CloseHeadMenu()
     end
   end
@@ -1532,6 +1534,7 @@ function M:CloseSelf()
   if self:IsAnimationPlaying(self.In) then
     self:StopAnimation(self.In)
   end
+  self:CloseOpenedRankHeadMenus()
   self._bIsClosing = true
   AudioManager(self):SetEventSoundParam(self, "CommonRankingIn", {ToEnd = 1})
   self:BlockAllUIInput(true, "SP_DisplayOnly")
@@ -1635,6 +1638,7 @@ function M:SetRankingNavigateOpacity(Opacity)
 end
 
 function M:CloseRankingOverlaysBeforeHide()
+  self:CloseOpenedRankHeadMenus()
   if self.IsHeaderQaMenuOpen and self:IsHeaderQaMenuOpen() and self.CloseHeaderQaMenu then
     self:CloseHeaderQaMenu()
   end

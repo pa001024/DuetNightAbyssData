@@ -427,6 +427,11 @@ function M:Init(AvatarInfo, GuildInfo, FuncList, BtnOption)
   SetDefaultMenuFocus(self)
 end
 
+function M:RefreshGuildInfo(GuildInfo)
+  InitGuildInfo(self, self.AvatarInfo, GuildInfo)
+  RefreshControllerVisibility(self)
+end
+
 function M:BP_GetDesiredFocusTarget()
   if TeamController:IsGamepad() and IsSingleMenuItemMode(self) then
     return self

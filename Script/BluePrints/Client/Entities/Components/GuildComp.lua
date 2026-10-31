@@ -286,14 +286,24 @@ function Component:GetGuildInfo(Callback, GuildId)
   CallGuildRpc(self, "GetGuildInfo", Callback, TargetGuildId)
 end
 
-function Component:GetGuildSimpleInfo(Callback, GuildId)
+function Component:GetGuildSimpleInfo(Callback, GuildId, bCallbackOnly)
   local SrcParams = table.pack(GuildId or 0)
   local GuildInfo, TargetGuildId = GetLocalGuildInfo(self, GuildId)
   if GuildInfo then
+    if bCallbackOnly then
+      if Callback then
+        Callback(ErrorCode.RET_SUCCESS, BuildGuildSimpleInfo(GuildInfo))
+      end
+      return
+    end
     CallGuildLocalCallback("GetGuildSimpleInfo", Callback, SrcParams, ErrorCode.RET_SUCCESS, BuildGuildSimpleInfo(GuildInfo))
     return
   end
-  CallGuildRpc(self, "GetGuildSimpleInfo", Callback, TargetGuildId)
+  if bCallbackOnly then
+    self:CallServer("GetGuildSimpleInfo", Callback, TargetGuildId)
+  else
+    CallGuildRpc(self, "GetGuildSimpleInfo", Callback, TargetGuildId)
+  end
 end
 
 function Component:GetGuildSimpleInfoBatch(Callback, GuildIds)

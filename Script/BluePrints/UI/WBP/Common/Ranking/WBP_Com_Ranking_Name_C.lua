@@ -1,5 +1,6 @@
 require("UnLua")
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
+local GuildBaseInfo = require("BluePrints.UI.WBP.Guild.Common.GuildBaseInfo")
 local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
 local PageJumpUtils = require("Utils.PageJumpUtils")
@@ -15,8 +16,8 @@ function M:Construct()
       end
       if self.OpenHeadMenuDeferred then
         self.OpenHeadMenuDeferred()
-      elseif self.Head_Anchor then
-        self.Head_Anchor:Open(true)
+      else
+        self:OpenHeadMenu()
       end
     end)
   end
@@ -27,6 +28,7 @@ function M:Construct()
 end
 
 function M:Destruct()
+  self:CloseHeadMenu()
   if self.Head_Anchor then
     self.Head_Anchor.OnGetMenuContentEvent:Unbind()
     self.Head_Anchor.OnMenuOpenChanged:Remove(self, self.HeadMenuOpenChanged)
@@ -34,6 +36,7 @@ function M:Destruct()
 end
 
 function M:Init(Data)
+  self:CloseHeadMenu()
   Data = Data or {}
   local RankInfo = Data.RankInfo
   local MenuOpenCallback = Data.MenuOpenCallback
@@ -128,7 +131,7 @@ function M:OnAnchorGetUserMenuContent()
   if ComRankingUtils.IsSameUid(self.RankInfo.Uid, SelfAvatar.Uid) or ComRankingUtils.LookupByUid(FriendModel:GetFriendDict(), self.RankInfo.Uid) then
     Switch = {InitShowRecordBtn}
   end
-  self.HeadMenuWidget = ChatController:OpenPlayerBtnList(self, self.RankInfo, Switch)
+  self.HeadMenuWidget = ChatController:OpenPlayerBtnList(self, self.HeadMenuRankInfo or self.RankInfo, Switch, self.HeadMenuGuildInfo)
   return self.HeadMenuWidget
 end
 
@@ -138,16 +141,70 @@ function M:HeadMenuOpenChanged(bOpen)
     self.MenuOpenCallback(bOpen)
   end
   if false == bOpen then
+    self._HeadMenuGuildRequest = nil
     self.HeadMenuWidget = nil
     self:SetFocus()
   end
 end
 
+local function GetRankGuildInfo(RankInfo)
+  local Info = type(RankInfo.GuildSimpleInfo) == "table" and RankInfo.GuildSimpleInfo or nil
+  local GuildId = tonumber(Info and (Info.GuildId or Info.GuildID or Info.Id) or RankInfo.GuildId or RankInfo.GuildID or 0) or 0
+  local GuildName = Info and (Info.Name or Info.GuildName) or RankInfo.GuildName or ""
+  return GuildId, GuildName
+end
+
 function M:OpenHeadMenu()
-  if not self.RankInfo or not self.Head_Anchor then
+  local RankInfo = self.RankInfo
+  if not RankInfo or not self.Head_Anchor then
     return false
   end
+  if self:IsHeadMenuOpen() then
+    return true
+  end
+  self._HeadMenuGuildRequest = nil
+  self.HeadMenuGuildInfo = nil
+  local MenuRankInfo = {}
+  for Key, Value in pairs(RankInfo) do
+    MenuRankInfo[Key] = Value
+  end
+  self.HeadMenuRankInfo = MenuRankInfo
+  local GuildId, GuildName = GetRankGuildInfo(RankInfo)
+  local NeedsGuildName = GuildId > 0 and "" == GuildName
+  if NeedsGuildName then
+    self.HeadMenuGuildInfo = {
+      GuildId = GuildId,
+      Name = GText("UI_Guild")
+    }
+  end
   self.Head_Anchor:Open(true)
+  local Menu = self.HeadMenuWidget
+  if not (NeedsGuildName and self:IsHeadMenuOpen()) or not IsValid(Menu) then
+    return true
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return true
+  end
+  local Request = {
+    Uid = RankInfo.Uid,
+    GuildId = GuildId
+  }
+  self._HeadMenuGuildRequest = Request
+  Avatar:GetGuildSimpleInfo(function(Ret, ServerGuildInfo)
+    if not IsValid(self) or self._HeadMenuGuildRequest ~= Request then
+      return
+    end
+    self._HeadMenuGuildRequest = nil
+    if not (self.RankInfo == RankInfo and RankInfo.Uid == Request.Uid and GetRankGuildInfo(RankInfo) == Request.GuildId and self.HeadMenuWidget == Menu and IsValid(Menu)) or not self:IsHeadMenuOpen() then
+      return
+    end
+    if Ret ~= ErrorCode.RET_SUCCESS or type(ServerGuildInfo) ~= "table" or type(ServerGuildInfo.Name) ~= "string" or ServerGuildInfo.Name == "" or tonumber(ServerGuildInfo.GuildId) ~= GuildId then
+      return
+    end
+    self.HeadMenuGuildInfo = GuildBaseInfo.New(ServerGuildInfo)
+    Menu:RefreshGuildInfo(self.HeadMenuGuildInfo)
+  end, GuildId, true)
   return true
 end
 
@@ -156,6 +213,9 @@ function M:IsHeadMenuOpen()
 end
 
 function M:CloseHeadMenu()
+  self._HeadMenuGuildRequest = nil
+  self.HeadMenuRankInfo = nil
+  self.HeadMenuGuildInfo = nil
   if self.Head_Anchor then
     self.Head_Anchor:Close()
   end
