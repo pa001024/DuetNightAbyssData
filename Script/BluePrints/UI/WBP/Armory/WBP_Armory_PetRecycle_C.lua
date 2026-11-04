@@ -48,6 +48,9 @@ function M:Initialize(Initializer)
   self.PendingLockId = nil
   self.PendingIds = nil
   self.PreviewRewards = nil
+  self.bInventoryDirty = false
+  self.bInventoryRefreshScheduled = false
+  self.PendingSyncIds = nil
   self.bOwnsInputBlock = false
   self.bClosing = false
   self.bBackgroundPointerDown = false
@@ -97,10 +100,10 @@ function M:Init(Parent)
   })
   self:InitSortLayer()
   self.Pet_Sell:Init(self)
-  self:AddDispatcher(EventID.OnPropChangePets, self, self.RefreshInventory)
-  self:AddDispatcher(EventID.OnNewPetObtained, self, self.RefreshInventory)
-  self:AddDispatcher(EventID.OnPetDeleted, self, self.RefreshInventory)
-  self:AddDispatcher(EventID.OnSwitchPet, self, self.RefreshInventory)
+  self:AddDispatcher(EventID.OnPropChangePets, self, self.OnInventoryChanged)
+  self:AddDispatcher(EventID.OnNewPetObtained, self, self.OnInventoryChanged)
+  self:AddDispatcher(EventID.OnPetDeleted, self, self.OnInventoryChanged)
+  self:AddDispatcher(EventID.OnSwitchPet, self, self.OnInventoryChanged)
   self:AddDispatcher(EventID.OnPetLocked, self, self.OnPetLocked)
   self:RefreshInventory()
   self.Selective_Listing:PlayInAnim()
@@ -178,15 +181,68 @@ function M:RefreshPetItemContent(Content, Avatar)
   end
 end
 
+function M:OnInventoryChanged()
+  if self.bClosing then
+    return
+  end
+  self.bInventoryDirty = true
+  if self.Phase == "Request" or self.Phase == "Reward" or self.bInventoryRefreshScheduled then
+    return
+  end
+  self.bInventoryRefreshScheduled = true
+  self:AddTimer(0.01, self.FlushInventoryChanges, false, nil, "PetRecycleInventoryRefresh", true)
+end
+
+function M:CancelInventoryRefresh()
+  self:RemoveTimer("PetRecycleInventoryRefresh")
+  self.bInventoryRefreshScheduled = false
+end
+
+function M:IsDecomposeInventorySynced()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  for _, UniqueId in ipairs(self.PendingSyncIds or {}) do
+    if Avatar.Pets[UniqueId] then
+      return false
+    end
+  end
+  return true
+end
+
+function M:FlushInventoryChanges()
+  self.bInventoryRefreshScheduled = false
+  if not (not self.bClosing and self.bInventoryDirty) or self.Phase == "Request" or self.Phase == "Reward" then
+    return
+  end
+  if self.PendingSyncIds then
+    if not self:IsDecomposeInventorySynced() then
+      return
+    end
+    self.PendingSyncIds = nil
+    self:CancelOperation()
+    return
+  end
+  self:RefreshInventory()
+end
+
 function M:RefreshInventory()
   if self.bClosing then
     return
   end
+  if self.Phase == "Request" or self.Phase == "Reward" then
+    self.bInventoryDirty = true
+    return
+  end
+  self:CancelInventoryRefresh()
+  self.bInventoryDirty = false
   local ListView = self.Selective_Listing.TileView_Select_Role
   local ScrollOffset = ListView:GetScrollOffset()
+  local RestoreSellFocus = not self:IsBusy() and (self.Pet_Sell:HasAnyUserFocus() or self.Pet_Sell:HasFocusedDescendants())
   local Avatar = GWorld:GetAvatar()
-  local Removed = RecycleUtils.PruneSelection(Avatar, self.SelectedIds)
-  self.Pet_Sell:MultiRemoveBagItemInList(Removed)
+  RecycleUtils.PruneSelection(Avatar, self.SelectedIds)
+  self.Pet_Sell:ReconcilePetSelection(self.SelectedIds)
   local Contents = {}
   local ContentRefs = {}
   local DetailId = self.DetailContent and self.DetailContent.UniqueId
@@ -215,6 +271,9 @@ function M:RefreshInventory()
   ListView:SetScrollOffset(ScrollOffset)
   self.ContentRefs = ContentRefs
   self:RefreshPreview()
+  if RestoreSellFocus then
+    self.Pet_Sell:SetFocus_Lua()
+  end
 end
 
 function M:FilterContents(Contents, FilterIndexes)
@@ -346,7 +405,7 @@ function M:RefreshPreview()
 end
 
 function M:CancelOperation()
-  if self.bClosing then
+  if self.bClosing or self.PendingSyncIds then
     return
   end
   local WasLockOperation = self.PendingLockId ~= nil
@@ -354,7 +413,9 @@ function M:CancelOperation()
   self.PendingLockId = nil
   self:SetInputBlocked(false)
   self:SetPhase("Idle")
-  self:RefreshInventory()
+  if self.bInventoryDirty then
+    self:RefreshInventory()
+  end
   if WasLockOperation and self.DetailContent then
     self.ItemDetailsWidget:SetFocus()
   else
@@ -434,10 +495,9 @@ function M:TryUnlockPet(UniqueId)
 end
 
 function M:OnPetLocked(ErrCode, UniqueId, IsLocked)
+  self:OnInventoryChanged()
   if self.PendingLockId == UniqueId and (self.Phase == "LockRequest" and IsLocked or self.Phase == "UnlockRequest" and not IsLocked) then
     self:CancelOperation()
-  else
-    self:RefreshInventory()
   end
 end
 
@@ -554,6 +614,9 @@ function M:ValidateDecomposePassword()
 end
 
 function M:SubmitDecompose(Password)
+  if self.bClosing or self.Phase ~= "Password" or not self.PendingIds then
+    return
+  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar or not self.PreviewRewards then
     self:CancelOperation()
@@ -562,6 +625,7 @@ function M:SubmitDecompose(Password)
   for _, UniqueId in ipairs(self.PendingIds) do
     local Reason = RecycleUtils.GetUnavailableReason(Avatar, UniqueId)
     if Reason then
+      self.bInventoryDirty = true
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(Reason))
       self:CancelOperation()
       return
@@ -569,8 +633,9 @@ function M:SubmitDecompose(Password)
   end
   self:SetPhase("Request")
   self:SetInputBlocked(true)
-  Avatar:DecomposePets(self.PendingIds, Password, function(ErrCode, DecomposeResult)
-    if not IsValid(self) or self.bClosing then
+  local RequestIds = self.PendingIds
+  Avatar:DecomposePets(RequestIds, Password, function(ErrCode, DecomposeResult)
+    if not IsValid(self) or self.bClosing or self.Phase ~= "Request" or self.PendingIds ~= RequestIds then
       return
     end
     self:SetInputBlocked(false)
@@ -578,12 +643,25 @@ function M:SubmitDecompose(Password)
       self:CancelOperation()
       return
     end
+    self.PendingSyncIds = RequestIds
+    self.PendingIds = nil
+    self.bInventoryDirty = true
+    self:SetPhase("Sync")
+    if self:IsDecomposeInventorySynced() then
+      self.PendingSyncIds = nil
+      self:RefreshInventory()
+    end
     local ActualRewards = RecycleUtils.GetActualRewards(DecomposeResult)
     if not ActualRewards then
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Pet_Decompose_ResultUnavailable"))
-      self:CancelOperation()
+      if self.PendingSyncIds then
+        self:SetFocus_Lua()
+      else
+        self:CancelOperation()
+      end
       return
     end
+    self:CancelInventoryRefresh()
     self:SetPhase("Reward")
     UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, ActualRewards, function()
       if IsValid(self) then
@@ -669,16 +747,20 @@ function M:OnDetailsKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:BeginExitDecomposeMode()
-  if self:IsBusy() then
+  if self.bClosing or self:IsBusy() and self.Phase ~= "Sync" then
     return
   end
   self.bClosing = true
+  self:CancelInventoryRefresh()
   self:RemoveAllDispatcher()
   self.Selective_Listing:PlayOutAnim()
   self.Pet_Sell:PlayOutAnim()
 end
 
 function M:FinishClose()
+  self.bClosing = true
+  self:CancelInventoryRefresh()
+  self.PendingSyncIds = nil
   if IsValid(self.Parent) then
     self.Parent:ClosePetRecycle()
   end
@@ -692,6 +774,10 @@ function M:Destruct()
   self.ContentsById = {}
   self.DetailContent = nil
   self.PendingLockId = nil
+  self.PendingIds = nil
+  self.PendingSyncIds = nil
+  self.bInventoryDirty = false
+  self.bInventoryRefreshScheduled = false
 end
 
 return M

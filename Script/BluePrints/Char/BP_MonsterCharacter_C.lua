@@ -551,6 +551,12 @@ function BP_MonsterCharacter_C:PhysStateErrorReset_Lua()
   self.Mesh:TermBodiesBelow("Root")
 end
 
+function BP_MonsterCharacter_C:OnClearDataStamp()
+  if self:IsInStun() then
+    self:ClearStunState()
+  end
+end
+
 function BP_MonsterCharacter_C:InitMonHudHealthBar_Lua(Owner)
   if not IsValid(Owner) then
     return

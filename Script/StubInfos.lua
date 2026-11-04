@@ -11,6 +11,9 @@ StubInfos.StubFunctionList = {
   },
   {
     Name = "UEMMonsterCreateOverlapCheckSystem::IsOverlappingOtherRealMonster"
+  },
+  {
+    Name = "AMonsterCharacter::OnClearDataStamp"
   }
 }
 StubInfos.DyncBindings = {}

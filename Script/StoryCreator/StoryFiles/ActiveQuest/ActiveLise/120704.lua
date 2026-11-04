@@ -311,6 +311,12 @@ return {
             startPort = "false",
             endQuest = "179024091193736094631",
             endPort = "In"
+          },
+          {
+            startQuest = "17870209368668394289",
+            startPort = "QuestStart",
+            endQuest = "17936757805431648",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -431,6 +437,17 @@ return {
               bGuideUIEnable = false,
               GuideType = "P",
               GuideName = ""
+            }
+          },
+          ["17936757805431648"] = {
+            key = "17936757805431648",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 790.9090909090908, y = 577.909090909091},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "SetSewSpecialDoorOpen",
+              UnitId = -1
             }
           }
         },

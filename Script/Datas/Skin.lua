@@ -793,6 +793,7 @@ return ReadOnly("Skin", {
     SkinId = 110101,
     SkinModelId = 110199,
     SkinName = "UI_Skin_Name_110101",
+    SkinTag = "Beilei01",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [110201] = {
@@ -863,6 +864,7 @@ return ReadOnly("Skin", {
     SkinId = 150101,
     SkinModelId = 150199,
     SkinName = "UI_Skin_Name_150101",
+    SkinTag = "Lisbell01",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [150201] = {
@@ -1145,6 +1147,7 @@ return ReadOnly("Skin", {
     SkinId = 310201,
     SkinModelId = 310299,
     SkinName = "UI_Skin_Name_310201",
+    SkinTag = "Xierda01",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [310401] = {
@@ -1196,6 +1199,7 @@ return ReadOnly("Skin", {
     SkinId = 320201,
     SkinModelId = 320299,
     SkinName = "UI_Skin_Name_320201",
+    SkinTag = "Kamila01",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [410101] = {
@@ -1331,7 +1335,8 @@ return ReadOnly("Skin", {
     SkinDescribe = "UI_Skin_Des_510102",
     SkinId = 510102,
     SkinModelId = 510189,
-    SkinName = "UI_Skin_Name_510102"
+    SkinName = "UI_Skin_Name_510102",
+    SkinTag = "Songlu02"
   },
   [530101] = {
     AutoHair = 530192,
@@ -1387,6 +1392,7 @@ return ReadOnly("Skin", {
     SkinId = 530102,
     SkinModelId = 530189,
     SkinName = "UI_Skin_Name_530102",
+    SkinTag = "Saiqi02",
     Sound = "SOUND_ITEM_NORMAL"
   },
   [540201] = {

@@ -37460,7 +37460,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Melee",
-        DamageTag = T.RT_44,
+        DamageTag = T.RT_60,
         Function = "Damage",
         Rate = 5.66
       },

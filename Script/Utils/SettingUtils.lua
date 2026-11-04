@@ -2,6 +2,11 @@ local SettingUtils = {}
 local EMCache = require("EMCache.EMCache")
 local FIRST_OPEN_LAYOUT_PLAN_03_KEY = "FirstOpenLayoutPlan03"
 local bPerformanceInitDone = false
+local StartupPerformanceTier
+
+local function IsValidPerformanceTier(Level)
+  return type(Level) == "number" and Level >= 0 and Level <= 4 and 0 == Level % 1
+end
 
 local function IsPerformanceInitReady()
   if not GWorld or not GWorld.GameInstance then
@@ -11,6 +16,88 @@ local function IsPerformanceInitReady()
   return nil ~= SubSystem
 end
 
+local function FinishCustomTierMigration(BaseTier)
+  local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)
+  local PlatformData = DataMgr.PlatformPerformance and DataMgr.PlatformPerformance[PlatformName]
+  local LevelId = PlatformData and PlatformData[SettingUtils.ScalabilityToPerformanceKey[BaseTier]]
+  local LevelData = LevelId and DataMgr.PerformanceLevel and DataMgr.PerformanceLevel[LevelId]
+  if not LevelData then
+    return false
+  end
+  local IsMobile = CommonUtils.GetDeviceTypeByPlatformName(GWorld.GameInstance) == "Mobile"
+  if UUCloudGameInstanceSubsystem and UUCloudGameInstanceSubsystem.IsCloudGame() then
+    IsMobile = false
+  end
+  if IsMobile then
+    return true
+  end
+  if EMCache:Get("WaterQuality") == nil and LevelData.WaterQuality ~= nil then
+    SettingUtils.SaveEMCache("WaterQuality", nil, LevelData.WaterQuality + 1)
+  end
+  if nil == EMCache:Get("FoliageQuality") and nil ~= LevelData.FoliageEnhanced then
+    SettingUtils.SaveEMCache("FoliageQuality", nil, LevelData.FoliageEnhanced)
+  end
+  local SRType = EMCache:Get("UpscalingMethodValue")
+  local Quality = EMCache:Get("QualityModeValue")
+  if not (ESuperResolutionType and nil ~= ESuperResolutionType.Default and nil ~= ESuperResolutionType.DLSS and USRMBlueprintLibrary and USRMBlueprintLibrary.SetSRTypeAndQuality) or not USRMBlueprintLibrary.IsSRTypeAvailable then
+    return false
+  end
+  if nil == SRType and nil == Quality then
+    local DLSSMode = EMCache:Get("DLSS")
+    if 3 == DLSSMode then
+      DLSSMode = 1
+    end
+    if nil == DLSSMode then
+      local Tier = LevelData.DLSS
+      DLSSMode = ({
+        [0] = 0,
+        [1] = 6,
+        [2] = 5,
+        [3] = 4
+      })[Tier] or 0
+    end
+    if DLSSMode > 0 and URuntimeCommonFunctionLibrary.IsDLSSSupported() and USRMBlueprintLibrary.IsSRTypeAvailable(ESuperResolutionType.DLSS) then
+      SRType, Quality = ESuperResolutionType.DLSS, DLSSMode
+    else
+      SRType, Quality = ESuperResolutionType.Default, 0
+    end
+    local QualityId = ({
+      [1] = 1,
+      [2] = 5,
+      [4] = 2,
+      [5] = 3,
+      [6] = 4
+    })[Quality]
+    if SRType ~= ESuperResolutionType.Default and nil == QualityId then
+      return false
+    end
+    SettingUtils.SaveEMCache("UpscalingMethod", nil, SRType == ESuperResolutionType.Default and 1 or 2)
+    SettingUtils.SaveEMCache("UpscalingMethodValue", nil, SRType)
+    SettingUtils.SaveEMCache("QualityMode", nil, SRType == ESuperResolutionType.Default and 0 or QualityId)
+    SettingUtils.SaveEMCache("QualityModeValue", nil, Quality)
+  end
+  if nil ~= SRType and nil ~= Quality then
+    if SRType ~= ESuperResolutionType.Default and USRMBlueprintLibrary.IsSRTypeAvailable(SRType) then
+      URuntimeCommonFunctionLibrary.SetAntiAliasingMethodType(2)
+      USRMBlueprintLibrary.SetSRTypeAndQuality(SRType, Quality)
+      SettingUtils.SaveEMCache("AntiAliasing", nil, 2)
+    elseif SRType == ESuperResolutionType.Default then
+      USRMBlueprintLibrary.SetSRTypeAndQuality(SRType, 0)
+      if UDLSSLibrary and UDLSSLibrary.SetDLSSMode and URuntimeCommonFunctionLibrary.IsDLSSSupported() then
+        UDLSSLibrary.SetDLSSMode(0)
+      end
+      local CachedAA = EMCache:Get("AntiAliasing")
+      if nil ~= CachedAA then
+        URuntimeCommonFunctionLibrary.SetAntiAliasingMethodType(CachedAA)
+      end
+    end
+    if nil ~= EMCache:Get("DLSS") then
+      SettingUtils.SaveEMCache("DLSS", nil, SRType == ESuperResolutionType.DLSS and Quality or 0)
+    end
+  end
+  return true
+end
+
 function SettingUtils.InitPerformanceSetting()
   if bPerformanceInitDone then
     return
@@ -18,29 +105,44 @@ function SettingUtils.InitPerformanceSetting()
   if not IsPerformanceInitReady() then
     return
   end
-  local bOverallApplied = SettingUtils.InitGameOverallPerformance()
-  SettingUtils.InitGameMaxFPS()
-  if bOverallApplied then
-    bPerformanceInitDone = true
+  local bOverallApplied, MigratedBaseTier = SettingUtils.InitGameOverallPerformance()
+  if not bOverallApplied then
+    return
   end
+  SettingUtils.InitGameMaxFPS()
+  if nil ~= MigratedBaseTier then
+    if not FinishCustomTierMigration(MigratedBaseTier) then
+      return
+    end
+    EMCache:Set("CustomBaseTier", MigratedBaseTier)
+  end
+  bPerformanceInitDone = true
 end
 
 function SettingUtils.InitGameOverallPerformance()
   local OptionName = "OverallPreset"
   local GameOverallPerformanceCache = EMCache:Get(OptionName)
   local NowGameOverallPerformance = GWorld.GameInstance:GetOverallScalabilityLevel()
+  if nil == StartupPerformanceTier and IsValidPerformanceTier(NowGameOverallPerformance) then
+    StartupPerformanceTier = NowGameOverallPerformance
+  end
   DebugPrint("-----jzn---InitGameOverallPerformance-----", GameOverallPerformanceCache, NowGameOverallPerformance)
   local bOverallApplied = false
+  local MigratedBaseTier
   if nil ~= GameOverallPerformanceCache then
+    if GameOverallPerformanceCache ~= CommonConst.OverallPerformanceCustom and not IsValidPerformanceTier(GameOverallPerformanceCache) then
+      return false
+    end
     GWorld.GameInstance:SetScalabilityLevel(GameOverallPerformanceCache)
     EventManager:FireEvent(EventID.OnOverallPresetChanged, GameOverallPerformanceCache)
     if GameOverallPerformanceCache == CommonConst.OverallPerformanceCustom then
       local BaseTier = SettingUtils.GetCustomBaseTier()
       if nil ~= BaseTier then
-        bOverallApplied = SettingUtils.SetPlatformPerformanceLevel(BaseTier)
+        bOverallApplied = SettingUtils.SetPlatformPerformanceLevel(BaseTier, false)
         GWorld.GameInstance:SetScalabilityLevel(CommonConst.OverallPerformanceCustom)
-      else
-        bOverallApplied = true
+        if bOverallApplied and not IsValidPerformanceTier(EMCache:Get("CustomBaseTier")) then
+          MigratedBaseTier = BaseTier
+        end
       end
       SettingUtils.InitContentPerformanceCache()
       SettingUtils.InitGameUserSettingsCache()
@@ -51,19 +153,24 @@ function SettingUtils.InitGameOverallPerformance()
     else
       bOverallApplied = SettingUtils.SetPlatformPerformanceLevel(GameOverallPerformanceCache, true)
     end
-  elseif nil ~= NowGameOverallPerformance and -1 ~= NowGameOverallPerformance then
-    bOverallApplied = SettingUtils.SetPlatformPerformanceLevel(NowGameOverallPerformance, true)
-    if bOverallApplied then
-      EMCache:Set(OptionName, NowGameOverallPerformance)
-      EventManager:FireEvent(EventID.OnOverallPresetChanged, NowGameOverallPerformance)
-    end
   else
-    bOverallApplied = true
+    local DefaultTier = IsValidPerformanceTier(NowGameOverallPerformance) and NowGameOverallPerformance or StartupPerformanceTier
+    if nil ~= DefaultTier then
+      bOverallApplied = SettingUtils.SetPlatformPerformanceLevel(DefaultTier, true)
+      if bOverallApplied then
+        EMCache:Set(OptionName, DefaultTier)
+        EventManager:FireEvent(EventID.OnOverallPresetChanged, DefaultTier)
+        GameOverallPerformanceCache = DefaultTier
+      end
+    end
+  end
+  if not bOverallApplied then
+    return false
   end
   SettingUtils.InitAntiAliasingCache(GameOverallPerformanceCache or NowGameOverallPerformance)
   SettingUtils.InitMobileResolution(GameOverallPerformanceCache or NowGameOverallPerformance)
   SettingUtils.InitRealtimeSunlight(GameOverallPerformanceCache or NowGameOverallPerformance)
-  return bOverallApplied
+  return bOverallApplied, MigratedBaseTier
 end
 
 SettingUtils.ScalabilityToPerformanceKey = {
@@ -75,7 +182,7 @@ SettingUtils.ScalabilityToPerformanceKey = {
 }
 
 function SettingUtils.SetPlatformPerformanceLevel(ScalabilityLevel, bSyncOverrideCache)
-  if nil == ScalabilityLevel or ScalabilityLevel < 0 then
+  if not IsValidPerformanceTier(ScalabilityLevel) then
     return false
   end
   local DevicePlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)
@@ -165,17 +272,17 @@ end
 
 function SettingUtils.GetCustomBaseTier()
   local BaseTier = EMCache:Get("CustomBaseTier")
-  if nil ~= BaseTier and BaseTier >= 0 then
+  if IsValidPerformanceTier(BaseTier) then
     return BaseTier
   end
   local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
   if GameUserSettings then
     local InferredLevel = GameUserSettings:GetOverallScalabilityLevel()
-    if nil ~= InferredLevel and InferredLevel >= 0 then
+    if IsValidPerformanceTier(InferredLevel) then
       return InferredLevel
     end
   end
-  return nil
+  return StartupPerformanceTier
 end
 
 function SettingUtils.InitAntiAliasingCache(GameOverallPerformance)

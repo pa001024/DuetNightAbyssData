@@ -3,6 +3,7 @@ local BagSell = require("BluePrints.UI.WBP.Bag.Widget.WBP_Bag_Sell_View_C")
 local BagCommon = require("BluePrints.UI.WBP.Bag.BagCommon")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local insert = table.insert
+local ipairs = _ENV.ipairs
 local M = Class({
   "BluePrints.UI.BP_UIState_C",
   "BluePrints.UI.WBP.Bag.Widget.WBP_Bag_Sell_View_C"
@@ -10,6 +11,7 @@ local M = Class({
 
 function M:Initialize(Initializer)
   BagSell.Initialize(self, Initializer)
+  self.bReconcilingSelection = false
 end
 
 function M:Init(Parent)
@@ -75,6 +77,57 @@ function M:FillWithWeaponResolveData(Pet)
   self.NeedDealWithStuffCount[Content.Uuid] = 1
   self.List_Item:AddItem(Content)
   self.CurStuffCountInList = self.CurStuffCountInList + 1
+end
+
+function M:ReconcilePetSelection(SelectedIds)
+  local Contents = {}
+  local Removed = false
+  for Index = 0, self.List_Item:GetNumItems() - 1 do
+    local Content = self.List_Item:GetItemAt(Index)
+    if SelectedIds[Content.Uuid] then
+      insert(Contents, Content)
+    else
+      Removed = true
+      Content.IsSelect = false
+      self.NeedDealWithStuffData[Content.Uuid] = nil
+      self.NeedDealWithStuffCount[Content.Uuid] = nil
+      self.AllTypeRewardsInfo[Content.Uuid] = nil
+    end
+  end
+  if not Removed then
+    return
+  end
+  local Current = self.CurSelectStuffContentInList
+  if not Current or not SelectedIds[Current.Uuid] then
+    Current = Contents[1]
+  end
+  local ScrollOffset = self.List_Item:GetScrollOffset()
+  self.bReconcilingSelection = true
+  self.CurStuffCountInList = #Contents
+  self.CurSelectStuffContentInList = Current
+  self.CurSelectGridIndex = nil
+  self.List_Item:ClearListItems()
+  for Index, Content in ipairs(Contents) do
+    Content.GridIndex = Index
+    Content.IsSelect = Content == Current
+    if Content.IsSelect then
+      self.CurSelectGridIndex = Index
+    end
+    self.List_Item:AddItem(Content)
+  end
+  if Current then
+    self.List_Item:BP_SetSelectedItem(Current)
+  end
+  self.List_Item:BP_CancelScrollIntoView()
+  self.List_Item:SetScrollOffset(ScrollOffset)
+  self.bReconcilingSelection = false
+end
+
+function M:OnSelectStuffItemChanged(SelectItem, bIsSelect)
+  if self.bReconcilingSelection then
+    return
+  end
+  BagSell.OnSelectStuffItemChanged(self, SelectItem, bIsSelect)
 end
 
 function M:OnPetEntryInitialized(Content, Widget)
@@ -224,6 +277,7 @@ function M:Close()
 end
 
 function M:Destruct()
+  self.bReconcilingSelection = false
   self:RemoveInputMethodChangedListen()
   M.Super.Destruct(self)
 end
