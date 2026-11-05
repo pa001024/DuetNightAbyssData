@@ -1,5 +1,5 @@
 /**
- * 技能链证据收集 — 遍历契约与 char/behaviorChain.ts 保持一致：
+ * 技能链证据收集 — 遍历契约与 skillBehavior/behaviorChain.ts 保持一致：
  * - 入口 BeginNodeId，沿 NextNodeId 最多 8 个主节点；
  * - 分支（BranchNodeIds/ChildNodeIds）沿 NextNodeId，总节点数上限 64；
  * - TaskEffects 的 SkillEffect/EffectIds 递归进入，effect 去重。
@@ -7,7 +7,7 @@
  * 差异只在产物：这里收集节点/effect/Buff/PassiveEffect/动画引用原始数据，
  * 不生成中文行为文本。
  */
-import { getSkillEntry, normalizeMapOrArray } from "../char/behaviorChain.ts"
+import { getSkillEntry, normalizeMapOrArray } from "../skillBehavior/behaviorChain.ts"
 import type { SkillEffectEvidence, SkillNodeEvidence } from "./types.ts"
 
 export interface EvidenceTables {
@@ -72,8 +72,17 @@ export function collectSkillEvidence(
     const addBuff = (id: number) => {
         if (!buffIds.includes(id)) buffIds.push(id)
     }
+    /**
+     * 记录被动效果 id 并解析其 BPPath。`PassiveEffectId`（TaskEffects）与
+     * `$#PassiveEffect[...]$`（描述串）同样可达，必须与 `Skill.PassiveEffects` 一样解析，
+     * 否则可达 BP 会漏（例如 Lise Q → PassiveEffect 410103 → BP_Lise_Skill02_01）。
+     */
     const addPassive = (id: number) => {
-        if (!passiveIds.includes(id)) passiveIds.push(id)
+        if (passiveIds.includes(id)) return
+        passiveIds.push(id)
+        const passive = tables.passiveEffect(id)
+        const path = passive && typeof passive === "object" && passive.BPPath ? String(passive.BPPath) : null
+        passiveEffectBPs.push({ id, path })
     }
 
     const walkEffect = (rawId: unknown): void => {
@@ -165,11 +174,13 @@ export function collectSkillEvidence(
 
     for (const passiveId of asIdList(entry.PassiveEffects)) {
         addPassive(passiveId)
-        const passive = tables.passiveEffect(passiveId)
-        const path = passive && typeof passive === "object" && passive.BPPath ? String(passive.BPPath) : null
-        passiveEffectBPs.push({ id: passiveId, path })
-        // BPAddBuff 是静态映射：BP 名 → 额外的 Buff id（与行为链一致地并入可达 Buff）。
-        for (const buffId of tables.bpAddBuff[bpNameOf(path)] ?? []) addBuff(Number(buffId))
+        // BPAddBuff 是静态映射：BP 名 → 额外的 Buff id。
+        // 仅对 Skill.PassiveEffects 生效，与 behaviorChain 的 BP_Falu_Passive 例外保持一致（见下方说明）。
+        const path = passiveEffectBPs.find(item => item.id === passiveId)?.path ?? null
+        const bpName = bpNameOf(path)
+        if (bpName !== "BP_Falu_Passive") {
+            for (const buffId of tables.bpAddBuff[bpName] ?? []) addBuff(Number(buffId))
+        }
     }
 
     return {

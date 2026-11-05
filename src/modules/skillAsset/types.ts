@@ -116,12 +116,17 @@ export interface BuffEntry {
     bpNames: string[]
 }
 
-/** 持有者级被动效果（BattleChar/BattleWeapon/BattlePet/Mod.PassiveEffects），不属于单个技能。 */
+/**
+ * 可达被动效果：持有者级（BattleChar/BattleWeapon/BattlePet/Mod.PassiveEffects）
+ * 或技能链内引用（TaskEffects[].PassiveEffectId / `$#PassiveEffect[...]$`）。
+ */
 export interface PassiveEntry {
     id: number
     lua: Record<string, unknown>
     bpPackages: string[]
     owners: SkillOwner[]
+    /** 引用该被动效果的技能 id */
+    referencedBySkills: number[]
 }
 
 export interface SkillAssetCoverage {
@@ -154,18 +159,38 @@ export interface SkillAssetCoverage {
     notifiesAmbiguousPayload: Array<{ asset: string; name: string; matches: number[] }>
     sequencesResolved: number
     sequencesMissing: string[]
+    /** 文件存在但不是 AnimSequence / 解析失败 */
+    sequencesFailed: Array<{ asset: string; reason: string }>
     blueprintsTotal: number
     blueprintsParsed: number
     blueprintsFailed: Array<{ path: string; error: string }>
     blueprintsMissing: string[]
     animBPsTotal: number
     animBPsResolved: number
+    /**
+     * 含非空 BakedStateMachines 的 AnimBP 数量。熟化资产经 UAssetAPI 反序列化时
+     * BakedStateMachines 不暴露，因此当前恒为 0；状态机不可得是数据面事实，不是解析失败。
+     */
+    animBPsWithStateMachines: number
     animBPsMissing: Array<{ characterId: number | null; path: string | null; reason: string }>
     passiveEffectsTotal: number
     ownerPassivesTotal: number
     ownerPassivesWithBlueprint: number
+    /** 被动效果表中的可达 id 总数与缺失（技能链引用但 PassiveEffect 表无条目） */
+    passivesTotal: number
+    passivesWithBlueprint: number
+    passivesMissing: number[]
     buffsTotal: number
     buffsWithBlueprint: number
+    /** 技能链引用但 Buff 表无条目的 id */
+    buffsMissing: number[]
+    /** 各持有者类型的技能口径（角色 169 主技能 + 子技能；武器/宠物/MOD 独立统计） */
+    owners: Record<string, { skills: number; withMontage: number; withBlueprint: number }>
+    /**
+     * Blueprint 字节码中调用的、未在同一资产内定义的函数（引擎/蓝图外部调用），
+     * 供 U3 做 native 语义映射；本模块不做归一。
+     */
+    nativeCallsUnknown: Array<{ name: string; count: number }>
     /** 进程级 UAsset 缓存命中/加载计数（含本次导出其他模块的请求） */
     assets: UAssetServerStats
 }

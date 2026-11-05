@@ -5,7 +5,7 @@ import { skillAssetModule } from "./skillAssetModule.ts"
 export const plugins: ModulePlugin[] = [
     {
         name: "SkillAsset",
-        deps: ["Skill"],
+        deps: ["Skill", "SkillBehavior"],
         outputs: true,
         uasset: true,
         languageNeutral: true,

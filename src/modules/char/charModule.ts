@@ -14,7 +14,7 @@ import { compile, LTemplate, record, seq, T, TFixed, TMap, TSection, type VNode,
 import { AssetReader } from "../../lua/AssetReader.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
 import { extractFieldValueAndFormatFromSource, roundValue } from "../skill/skillModule.ts"
-import { generateSkillBehavior, getSkillEntry, normalizeMapOrArray } from "./behaviorChain.ts"
+import { generateSkillBehavior, getSkillEntry, normalizeMapOrArray } from "../skillBehavior/behaviorChain.ts"
 
 /** 阵营：Camp 表 */
 /** 属性缩写 */

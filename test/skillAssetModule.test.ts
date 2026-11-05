@@ -59,16 +59,29 @@ describe("collectSkillEvidence", () => {
         13: { TaskId: 13, TaskEffects: [{ Function: "AddBuff", BuffId: 502, PassiveEffectId: 700 }] },
     }
     const passiveTable: Record<string, Record<string, unknown>> = {
-        700: { ID: 700, BPPath: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Test.BP_Test" },
+        700: { ID: 700, BPPath: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_FromTask.BP_FromTask" },
+        701: { ID: 701, BPPath: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_FromSkill.BP_FromSkill" },
+        702: { ID: 702, BPPath: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_FromDesc.BP_FromDesc" },
+        703: { ID: 703, BPPath: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Passive.BP_Falu_Passive" },
     }
     const tables = {
         skillNode: (id: number | string) => nodeTable[String(id)],
         skillEffect: (id: number | string) => effectTable[String(id)],
         passiveEffect: (id: number | string) => passiveTable[String(id)],
-        bpAddBuff: { BP_Test: [601, 602] },
+        bpAddBuff: { BP_FromSkill: [601, 602], BP_Falu_Passive: [999] },
     }
     const skillTable: Record<string, unknown> = {
-        1: [{ "0": { SkillId: 1, SkillType: "Skill1", BeginNodeId: 100, PassiveEffects: [700] } }],
+        1: [
+            {
+                "0": {
+                    SkillId: 1,
+                    SkillType: "Skill1",
+                    BeginNodeId: 100,
+                    PassiveEffects: [701, 703],
+                    SkillDescValues: ["$#PassiveEffect[702].Vars.X$"],
+                },
+            },
+        ],
     }
     const dm = {
         getTableItem: (table: string, id: number | string) => (table === "Skill" ? skillTable[String(id)] : undefined),
@@ -79,10 +92,16 @@ describe("collectSkillEvidence", () => {
         expect(evidence).not.toBeNull()
         expect(evidence!.nodes.map(node => node.id)).toEqual([100, 101, 102, 103])
         expect(evidence!.effects.map(effect => effect.id)).toEqual([10, 11, 12, 13])
+        // BPAddBuff 仅对 Skill.PassiveEffects 的 BP 生效，并沿用 behaviorChain 的 BP_Falu_Passive 例外
+        // BP_Falu_Passive 的静态映射被 behaviorChain 显式排除，这里同样不并入 Buff。
         expect(evidence!.buffIds).toEqual([500, 501, 502, 601, 602])
-        expect(evidence!.passiveIds).toEqual([700])
+        // PassiveEffect 的可达来源三种都要解析 BPPath：TaskEffects / Skill.PassiveEffects / 描述串
+        expect(evidence!.passiveIds).toEqual([700, 702, 701, 703])
         expect(evidence!.passiveEffectBPs).toEqual([
-            { id: 700, path: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Test.BP_Test" },
+            { id: 700, path: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_FromTask.BP_FromTask" },
+            { id: 702, path: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_FromDesc.BP_FromDesc" },
+            { id: 701, path: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_FromSkill.BP_FromSkill" },
+            { id: 703, path: "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Passive.BP_Falu_Passive" },
         ])
         expect(evidence!.nodes[0]).toMatchObject({
             animName: "Skill01_Montage",
@@ -163,6 +182,29 @@ describe("skillAsset 模块", () => {
         expect(coverage.notifiesTotal).toBeGreaterThan(0)
         expect(coverage.notifiesWithPayload).toBeGreaterThan(0)
         expect(coverage.notifiesTotal - coverage.notifiesWithPayload).toBe(coverage.notifiesWithoutPayload.length)
+
+        // 角色口径：Char.json 的 169 个主技能全部覆盖，子技能单独计数
+        expect(doc.characters.reduce((sum, character) => sum + character.skills.length, 0)).toBe(169)
+        expect(coverage.owners.char!.skills).toBeGreaterThan(169)
+
+        // Mod.ModActivateSkills 是 Lua map（{"1010101":1010201}），必须归一化后进入 skills
+        expect(coverage.owners.mod?.skills ?? 0).toBeGreaterThan(0)
+        expect(doc.skills["1010201"]).toBeDefined()
+        expect(doc.skills["1010201"]!.owner).toEqual({ kind: "mod", id: 101001 })
+
+        // 技能链引用的 PassiveEffect 必须解析 BPPath（Lise Q → PassiveEffect 410103 → BP_Lise_Skill02_01）
+        const liseQ = doc.skills["410102"]!
+        expect(liseQ.sources.bpPackages).toContain(
+            "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Lise_Skill02_01"
+        )
+        expect(doc.passives["410103"]).toBeDefined()
+        expect(doc.passives["410103"]!.referencedBySkills).toContain(410102)
+        expect(doc.passives["410103"]!.bpPackages).toEqual([
+            "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Lise_Skill02_01",
+        ])
+        expect(coverage.passivesTotal).toBeGreaterThan(coverage.ownerPassivesTotal)
+        expect(coverage.nativeCallsUnknown.length).toBeGreaterThan(0)
+        expect(coverage.nativeCallsUnknown[0]!.count).toBeGreaterThan(0)
     })
 
     test("重复构建结果稳定（进程级 memo + DuckDB 命中）", async () => {

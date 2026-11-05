@@ -24,8 +24,8 @@ import {
     type SequenceMeta,
 } from "../../lua/AssetReader.ts"
 import { getExportsRoot, packagePathFor, type UAssetBytecodeDocument, type UAssetServer } from "../../lua/UAssetServer.ts"
-import { generateSkillBehaviorText, getSkillEntry } from "../char/behaviorChain.ts"
 import type { SkillArtifacts } from "../skill/skillModule.ts"
+import { generateSkillBehaviorText, getSkillEntry } from "../skillBehavior/behaviorChain.ts"
 import { collectSkillEvidence, type SkillEvidence } from "./evidence.ts"
 import {
     type BuffEntry,
@@ -63,6 +63,21 @@ function asRecord(value: unknown): Record<string, any> | null {
 
 function asString(value: unknown): string | null {
     return value === null || value === undefined || value === "" ? null : String(value)
+}
+
+/**
+ * 技能/被动 id 列表归一化：Lua 表可能是数组、1 起始 map 或普通对象 map
+ * （真实数据里 `Mod.ModActivateSkills` 就是 `{"1010101":1010201}`），也允许单值。
+ */
+function toIdList(value: unknown): number[] {
+    if (value === null || value === undefined || value === "") return []
+    const list = Array.isArray(value) ? value : typeof value === "object" ? Object.values(value) : [value]
+    const out: number[] = []
+    for (const item of list) {
+        const num = Number(item)
+        if (Number.isFinite(num) && !out.includes(num)) out.push(num)
+    }
+    return out
 }
 
 function joinGamePath(...parts: string[]): string {
@@ -104,9 +119,7 @@ function collectOwners(dm: ModuleContext["dm"]): {
         owned.set(skillId, context)
     }
     const registerPassives = (value: unknown, owner: SkillOwner) => {
-        for (const raw of Array.isArray(value) ? value : []) {
-            const id = Number(raw)
-            if (!Number.isFinite(id)) continue
+        for (const id of toIdList(value)) {
             const owners = ownerPassives.get(id) ?? []
             if (!owners.some(item => item.kind === owner.kind && item.id === owner.id)) owners.push(owner)
             ownerPassives.set(id, owners)
@@ -164,11 +177,7 @@ function collectOwners(dm: ModuleContext["dm"]): {
             if (!record) continue
             const id = Number(record.WeaponId ?? record.PetId ?? record.Id ?? key)
             if (!Number.isFinite(id)) continue
-            const skills = listKey
-                ? (Array.isArray(record[listKey]) ? record[listKey] : []).map(Number)
-                : record.SupportSkillId === undefined || record.SupportSkillId === null
-                  ? []
-                  : [Number(record.SupportSkillId)]
+            const skills = listKey ? toIdList(record[listKey]) : toIdList(record.SupportSkillId)
             for (const skillId of skills) {
                 register(skillId, { owner: { kind, id }, characterId: null, model: null, parentSkillId: null })
             }
@@ -267,6 +276,7 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
     const sequenceByKey = new Map<string, SequenceMeta | null>()
     const sequenceMissing = new Set<string>()
     const montagesFailed: Array<{ asset: string; reason: string }> = []
+    const sequencesFailed: Array<{ asset: string; reason: string }> = []
     const montagesMissing: SkillAssetCoverage["montagesMissing"] = []
 
     const resolveAnimFile = (node: SkillEvidence["nodes"][number], ownedSkill: OwnedSkill): string | null => {
@@ -283,10 +293,12 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
     const readMontage = async (file: string): Promise<MontageTimeline | null> => {
         const key = file.replace(/\\/g, "/").toLowerCase()
         if (montageByKey.has(key)) return montageByKey.get(key) ?? null
-        const timeline = await reader.readMontageTimeline(file)
-        if (!timeline && exportsRoot) montagesFailed.push({ asset: packagePathFor(file, exportsRoot), reason: "not an AnimMontage export" })
-        montageByKey.set(key, timeline)
-        return timeline
+        const read = await reader.readMontageTimeline(file)
+        if (!read.timeline && exportsRoot) {
+            montagesFailed.push({ asset: packagePathFor(file, exportsRoot), reason: read.error ?? "unknown read failure" })
+        }
+        montageByKey.set(key, read.timeline)
+        return read.timeline
     }
 
     const readSequence = async (packagePath: string): Promise<SequenceMeta | null> => {
@@ -303,14 +315,15 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
             sequenceByKey.set(key, null)
             return null
         }
-        const meta = await reader.readSequence(file)
-        if (!meta) {
+        const read = await reader.readSequence(file)
+        if (!read.meta) {
+            sequencesFailed.push({ asset: packagePath, reason: read.error ?? "unknown read failure" })
             sequenceMissing.add(packagePath)
             sequenceByKey.set(key, null)
             return null
         }
-        sequenceByKey.set(key, meta)
-        return meta
+        sequenceByKey.set(key, read.meta)
+        return read.meta
     }
 
     // ---- Blueprint / AnimBlueprint ----
@@ -368,13 +381,13 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
         }
         const packagePath = packagePathFor(file, exportsRoot)
         if (!animBPDocs.has(packagePath)) {
-            const info = await reader.readAnimBP(file)
-            if (!info) {
+            const read = await reader.readAnimBP(file)
+            if (!read.info) {
                 charAnimBP.set(character.id, null)
-                animBPMissing.push({ characterId: character.id, path, reason: "not an AnimBlueprintGeneratedClass export" })
+                animBPMissing.push({ characterId: character.id, path, reason: read.error ?? "unknown read failure" })
                 continue
             }
-            animBPDocs.set(packagePath, info)
+            animBPDocs.set(packagePath, read.info)
         }
         charAnimBP.set(character.id, packagePath)
         character.animBP = packagePath
@@ -508,9 +521,13 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
 
     // ---- Buff ----
     const buffs: Record<string, BuffEntry> = {}
+    const buffsMissing: number[] = []
     for (const buffId of [...buffIds].sort((a, b) => a - b)) {
         const raw = buffData(buffId)
-        if (!raw) continue
+        if (!raw) {
+            buffsMissing.push(buffId)
+            continue
+        }
         const path = asString(raw.BPPath)
         let bpPackages: string[] = []
         if (path && exportsRoot) {
@@ -525,11 +542,24 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
         }
     }
 
-    // ---- 持有者级 PassiveEffect（BattleChar/BattleWeapon/BattlePet/Mod.PassiveEffects） ----
+    // ---- PassiveEffect：持有者级 + 技能链引用（TaskEffects.PassiveEffectId / 描述串） ----
+    const skillPassiveRefs = new Map<number, number[]>()
+    for (const skill of Object.values(skills)) {
+        for (const passiveId of skill.lua.passiveEffectIds) {
+            const refs = skillPassiveRefs.get(passiveId) ?? []
+            if (!refs.includes(skill.id)) refs.push(skill.id)
+            skillPassiveRefs.set(passiveId, refs)
+        }
+    }
     const passives: Record<string, PassiveEntry> = {}
-    for (const passiveId of [...ownerPassives.keys()].sort((a, b) => a - b)) {
+    const passivesMissing: number[] = []
+    const allPassiveIds = [...new Set([...ownerPassives.keys(), ...skillPassiveRefs.keys()])].sort((a, b) => a - b)
+    for (const passiveId of allPassiveIds) {
         const raw = passiveEffectData(passiveId)
-        if (!raw) continue
+        if (!raw) {
+            passivesMissing.push(passiveId)
+            continue
+        }
         const bpPackages: string[] = []
         const path = asString(raw.BPPath)
         if (path && exportsRoot) {
@@ -550,6 +580,7 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
             lua: raw,
             bpPackages,
             owners: ownerPassives.get(passiveId) ?? [],
+            referencedBySkills: skillPassiveRefs.get(passiveId) ?? [],
         }
     }
 
@@ -571,7 +602,7 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
                 notifiesTotal++
                 if (notify.payload || notify.payloads) notifiesWithPayload++
                 if (!notify.payload && !notify.payloads) {
-                    const key = `${timeline.asset} ${notify.name} ${notify.time}`
+                    const key = [timeline.asset, notify.name, notify.time].join("\u0000")
                     if (!seenNotifyGaps.has(key)) {
                         seenNotifyGaps.add(key)
                         notifiesWithoutPayload.push({ asset: timeline.asset, name: notify.name, time: notify.time, state: notify.state })
@@ -600,18 +631,26 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
         notifiesAmbiguousPayload,
         sequencesResolved: [...sequenceByKey.values()].filter((item): item is SequenceMeta => item !== null).length,
         sequencesMissing: [...sequenceMissing].sort(),
+        sequencesFailed: dedupeBy(sequencesFailed, item => `${item.asset}\u0000${item.reason}`),
         blueprintsTotal: skillBpPaths.size + [...blueprintMissing].length,
         blueprintsParsed: blueprintDocs.size,
         blueprintsFailed: dedupeBy(blueprintErrors, item => `${item.path}\u0000${item.error}`),
         blueprintsMissing: [...blueprintMissing].sort(),
         animBPsTotal: characters.length,
         animBPsResolved: characters.filter(character => character.animBP !== null).length,
+        animBPsWithStateMachines: [...animBPDocs.values()].filter(info => info.stateMachines.length > 0).length,
         animBPsMissing: animBPMissing,
         passiveEffectsTotal: new Set(skillList.flatMap(skill => skill.lua.passiveEffectIds)).size,
-        ownerPassivesTotal: Object.keys(passives).length,
-        ownerPassivesWithBlueprint: Object.values(passives).filter(passive => passive.bpPackages.length > 0).length,
+        ownerPassivesTotal: ownerPassives.size,
+        ownerPassivesWithBlueprint: [...ownerPassives.keys()].filter(id => (passives[String(id)]?.bpPackages.length ?? 0) > 0).length,
+        passivesTotal: Object.keys(passives).length,
+        passivesWithBlueprint: Object.values(passives).filter(passive => passive.bpPackages.length > 0).length,
+        passivesMissing,
         buffsTotal: Object.keys(buffs).length,
         buffsWithBlueprint: Object.values(buffs).filter(buff => buff.bpPackages.length > 0).length,
+        buffsMissing,
+        owners: ownerBreakdown(skillList),
+        nativeCallsUnknown: collectNativeCalls(blueprintDocs),
         assets: assetStats,
     }
 
@@ -634,6 +673,50 @@ export async function buildSkillAssetDoc(ctx: ModuleContext, deps: SkillAssetDep
 
 function montagePackagesResolved(montageByKey: Map<string, MontageTimeline | null>): number {
     return [...montageByKey.values()].filter((item): item is MontageTimeline => item !== null).length
+}
+
+/** 按持有者类型拆分技能口径：角色 169 主技能与武器/宠物/MOD 分开计数，避免混读。 */
+function ownerBreakdown(skills: SkillEntry[]): SkillAssetCoverage["owners"] {
+    const out: SkillAssetCoverage["owners"] = {}
+    for (const skill of skills) {
+        const entry = (out[skill.owner.kind] ??= { skills: 0, withMontage: 0, withBlueprint: 0 })
+        entry.skills++
+        if (skill.montage) entry.withMontage++
+        if (skill.sources.bpPackages.length > 0) entry.withBlueprint++
+    }
+    return out
+}
+
+/**
+ * 收集 Blueprint 字节码中调用、但未在同一资产内定义的函数名（引擎/蓝图外部调用）。
+ * 只做频次统计与溯源，语义归一由 dna-builder 负责。
+ */
+function collectNativeCalls(blueprints: Map<string, UAssetBytecodeDocument>): Array<{ name: string; count: number }> {
+    const counts = new Map<string, number>()
+    const visit = (node: unknown, defined: Set<string>) => {
+        if (!node || typeof node !== "object") return
+        if (Array.isArray(node)) {
+            for (const item of node) visit(item, defined)
+            return
+        }
+        const record = node as Record<string, unknown>
+        const op = record.op
+        if (op === "EX_FinalFunction" || op === "EX_CallMath" || op === "EX_VirtualFunction") {
+            const fn = record.function
+            if (typeof fn === "string" && fn && !defined.has(fn) && !fn.startsWith("ExecuteUbergraph_")) {
+                counts.set(fn, (counts.get(fn) ?? 0) + 1)
+            }
+        }
+        for (const [key, value] of Object.entries(record)) {
+            if (key === "op" || key === "function") continue
+            if (value && typeof value === "object") visit(value, defined)
+        }
+    }
+    for (const doc of blueprints.values()) {
+        const defined = new Set(doc.functions.map(fn => fn.name))
+        for (const fn of doc.functions) visit(fn.body, defined)
+    }
+    return [...counts.entries()].map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count || (a.name < b.name ? -1 : 1))
 }
 
 function dedupeBy<T>(items: T[], key: (item: T) => string): T[] {

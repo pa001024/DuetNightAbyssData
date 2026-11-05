@@ -1,5 +1,5 @@
 /**
- * behaviorChain — 角色技能行为链的形式化表达。
+ * behaviorChain — 角色技能行为链的形式化表达（纯依赖模块，供 Char / SkillAsset 共用）。
  *
  * 本模块是 `行为` 字段的唯一生产者（char 模块调用 `generateSkillBehavior`）。
  * 输出保持自由中文字符串（`Part (";" Part)*`，面向最终使用者阅读），注册表保证
@@ -258,7 +258,10 @@ export function generateSkillBehaviorText(
     const attrConfig = () => (dm.getTable("AttrConfig") as Record<string, any>) || {}
     let bpAddBuff = BP_ADD_BUFF_CACHE.get(dm.root)
     if (!bpAddBuff) {
-        bpAddBuff = JSON.parse(readFileSync(join(import.meta.dir, "data", "BPAddBuff.json"), "utf8")) as Record<string, number[]>
+        bpAddBuff = JSON.parse(readFileSync(join(import.meta.dir, "..", "char", "data", "BPAddBuff.json"), "utf8")) as Record<
+            string,
+            number[]
+        >
         BP_ADD_BUFF_CACHE.set(dm.root, bpAddBuff)
     }
     const entry = getSkillEntry(dm, skillId)

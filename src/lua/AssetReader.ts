@@ -271,7 +271,13 @@ function normalizedNotifyName(name: string): string {
 function resolveNotifyPayload(
     exports: any[],
     notify: Record<string, any>
-): { payload: NotifyPayload | null; matches: number[]; source: "objectPath" | "name" | null; ambiguous?: boolean; payloads?: NotifyPayload[] } {
+): {
+    payload: NotifyPayload | null
+    matches: number[]
+    source: "objectPath" | "name" | null
+    ambiguous?: boolean
+    payloads?: NotifyPayload[]
+} {
     const ref = notify.Notify ?? notify.NotifyStateClass
     const index = exportIndexOfObjectPath(ref?.ObjectPath)
     if (index !== null && index > 0 && index < exports.length) {
@@ -350,13 +356,19 @@ export function montageTimelineFromFModelData(data: unknown): MontageTimeline | 
     for (const notify of Array.isArray(props.Notifies) ? props.Notifies : []) {
         if (!notify || typeof notify !== "object") continue
         const resolved = resolveNotifyPayload(exports, notify)
+        const state = notify.NotifyStateClass !== undefined && notify.NotifyStateClass !== null
+        const duration = numberOrNull(notify.Duration) ?? 0
+        // 瞬时 notify 的 EndLink 是无效残留（常为 0），只在 state/EndLink 有意义时输出 endTime。
+        const rawEnd = numberOrNull(notify.EndLink?.LinkValue)
+        const time = numberOrNull(notify.LinkValue) ?? 0
+        const endTime = state && rawEnd !== null && rawEnd >= time ? rawEnd : null
         const item: MontageNotify = {
             name: String(notify.NotifyName ?? ""),
-            time: numberOrNull(notify.LinkValue) ?? 0,
-            duration: numberOrNull(notify.Duration) ?? 0,
-            endTime: numberOrNull(notify.EndLink?.LinkValue),
+            time,
+            duration,
+            endTime,
             trackIndex: numberOrNull(notify.TrackIndex),
-            state: notify.NotifyStateClass !== undefined && notify.NotifyStateClass !== null,
+            state,
             payload: resolved.payload,
             payloadMatches: resolved.matches,
             payloadSource: resolved.source,
@@ -486,6 +498,29 @@ export function assetPathFromObjectPath(objectPath: unknown, exportsRoot: string
     return `${join(exportsRoot, ...packagePath.split("/").filter(Boolean))}.uasset`
 }
 
+// ---------- 读取结果（成功/失败原因） ----------
+
+/** fmodel 读取结果：失败时 `error` 给出真实原因，调用方写入覆盖清单。 */
+export interface FModelReadResult {
+    data: unknown[] | null
+    error: string | null
+}
+
+export interface MontageReadResult {
+    timeline: MontageTimeline | null
+    error: string | null
+}
+
+export interface SequenceReadResult {
+    meta: SequenceMeta | null
+    error: string | null
+}
+
+export interface AnimBPReadResult {
+    info: AnimBPInfo | null
+    error: string | null
+}
+
 // ---------- 进程级 memo（跨 Char/Weapon/Mod/SkillAsset 共享） ----------
 
 const fmodelMemo = new Map<string, unknown[]>()
@@ -502,7 +537,7 @@ export class AssetReader {
     private server: UAssetServer | null = null
     private exportsRoot: string | null = null
     private metaCache = new Map<string, AnimMeta>()
-    private fmodelCache = new Map<string, unknown[] | null>()
+    private fmodelCache = new Map<string, FModelReadResult>()
     private closed = false
 
     constructor(
@@ -554,70 +589,76 @@ export class AssetReader {
      * 该接口不读取同名 JSON，调用方需要明确处理 server 不可用的情况。
      */
     async readFModelAsset(assetPath: string): Promise<unknown[] | null> {
+        return (await this.readFModelResult(assetPath)).data
+    }
+
+    /** 同 `readFModelAsset`，但保留失败原因（供新模块写入覆盖清单）。 */
+    async readFModelResult(assetPath: string): Promise<FModelReadResult> {
         const key = assetPath.replace(/\\/g, "/")
         const memo = fmodelMemo.get(key)
-        if (memo) return memo
-        if (this.fmodelCache.has(key)) return this.fmodelCache.get(key) ?? null
+        if (memo) return { data: memo, error: null }
+        if (this.fmodelCache.has(key)) return this.fmodelCache.get(key)!
+        let result: FModelReadResult
         if (!existsSync(assetPath)) {
-            this.fmodelCache.set(key, null)
-            return null
-        }
-        const server = await this.ensureServer()
-        if (!server || !this.exportsRoot) {
-            this.fmodelCache.set(key, null)
-            return null
-        }
-        let result: unknown[] | null = null
-        try {
-            result = await server.fmodel(assetPath, this.exportsRoot)
-        } catch {
-            result = null
+            result = { data: null, error: "asset not found" }
+        } else {
+            const server = await this.ensureServer()
+            if (!server || !this.exportsRoot) {
+                result = { data: null, error: "DNA_UNPACK_DIR/Fmodel/Output/Exports unavailable" }
+            } else {
+                try {
+                    const data = await server.fmodel(assetPath, this.exportsRoot)
+                    result = data ? { data, error: null } : { data: null, error: "UAssetCLI fmodel returned no result" }
+                } catch (error) {
+                    result = { data: null, error: error instanceof Error ? error.message : String(error) }
+                }
+            }
         }
         this.fmodelCache.set(key, result)
-        if (result) fmodelMemo.set(key, result)
+        if (result.data) fmodelMemo.set(key, result.data)
         return result
     }
 
-    /** 读 Montage 时间轴；资产缺失/不是 Montage 时返回 null（由调用方记入覆盖清单）。 */
-    async readMontageTimeline(assetPath: string): Promise<MontageTimeline | null> {
+    /** 读 Montage 时间轴；失败原因通过 `error` 返回，由调用方写入覆盖清单。 */
+    async readMontageTimeline(assetPath: string): Promise<MontageReadResult> {
         const key = assetPath.replace(/\\/g, "/")
         const memo = montageMemo.get(key)
-        if (memo) return memo
-        const data = await this.readFModelAsset(assetPath)
-        if (!data) return null
-        const timeline = montageTimelineFromFModelData(data)
-        if (!timeline) return null
+        if (memo) return { timeline: memo, error: null }
+        const read = await this.readFModelResult(assetPath)
+        if (!read.data) return { timeline: null, error: read.error }
+        const timeline = montageTimelineFromFModelData(read.data)
+        if (!timeline) return { timeline: null, error: "no AnimMontage export" }
         if (this.exportsRoot) timeline.asset = packagePathFor(assetPath, this.exportsRoot)
         montageMemo.set(key, timeline)
-        return timeline
+        return { timeline, error: null }
     }
 
     /** 读 AnimSequence 元数据。 */
-    async readSequence(assetPath: string): Promise<SequenceMeta | null> {
+    async readSequence(assetPath: string): Promise<SequenceReadResult> {
         const key = assetPath.replace(/\\/g, "/")
         const memo = sequenceMemo.get(key)
-        if (memo) return memo
-        const data = await this.readFModelAsset(assetPath)
-        if (!data) return null
-        const meta = sequenceMetaFromFModelData(data)
-        if (!meta) return null
+        if (memo) return { meta: memo, error: null }
+        const read = await this.readFModelResult(assetPath)
+        if (!read.data) return { meta: null, error: read.error }
+        const meta = sequenceMetaFromFModelData(read.data)
+        if (!meta) return { meta: null, error: "no AnimSequence export" }
         if (this.exportsRoot) meta.asset = packagePathFor(assetPath, this.exportsRoot)
         sequenceMemo.set(key, meta)
-        return meta
+        return { meta, error: null }
     }
 
     /** 读 AnimBlueprint（CDO 图节点；无 BakedStateMachines 时在结果中说明）。 */
-    async readAnimBP(assetPath: string): Promise<AnimBPInfo | null> {
+    async readAnimBP(assetPath: string): Promise<AnimBPReadResult> {
         const key = assetPath.replace(/\\/g, "/")
         const memo = animBPMemo.get(key)
-        if (memo) return memo
-        const data = await this.readFModelAsset(assetPath)
-        if (!data) return null
-        const info = animBPFromFModelData(data)
-        if (!info) return null
+        if (memo) return { info: memo, error: null }
+        const read = await this.readFModelResult(assetPath)
+        if (!read.data) return { info: null, error: read.error }
+        const info = animBPFromFModelData(read.data)
+        if (!info) return { info: null, error: "no AnimBlueprintGeneratedClass export" }
         if (this.exportsRoot) info.asset = packagePathFor(assetPath, this.exportsRoot)
         animBPMemo.set(key, info)
-        return info
+        return { info, error: null }
     }
 
     /**
@@ -691,9 +732,9 @@ export class AssetReader {
             if (shared) return shared
             const cached = this.metaCache.get(uasset)
             if (cached) return cached
-            const data = await this.readFModelAsset(uasset)
-            if (data) {
-                const meta = animMetaFromFModelData(data)
+            const read = await this.readFModelResult(uasset)
+            if (read.data) {
+                const meta = animMetaFromFModelData(read.data)
                 this.metaCache.set(uasset, meta)
                 animMetaMemo.set(key, meta)
                 return meta

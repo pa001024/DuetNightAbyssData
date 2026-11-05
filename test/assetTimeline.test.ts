@@ -119,7 +119,7 @@ describe("montageTimelineFromFModelData", () => {
             name: "BP_SkillEffect_C",
             time: 1.0660003,
             duration: 0,
-            endTime: 0,
+            endTime: null,
             trackIndex: 1,
             state: false,
             payloadMatches: [6],
@@ -130,7 +130,7 @@ describe("montageTimelineFromFModelData", () => {
             class: "BP_AnimNotify_SkillEffect_C",
             properties: { 通知名称: "hit1" },
         })
-        expect(timeline!.notifies[1]).toMatchObject({ name: "BP_SkillCancel_C", state: true, payloadMatches: [13] })
+        expect(timeline!.notifies[1]).toMatchObject({ name: "BP_SkillCancel_C", state: true, payloadMatches: [13], endTime: 1.8333334 })
         expect(timeline!.notifies[1]!.payload!.properties).toEqual({ OtherSkillCancel: true })
         expect(timeline!.branchingPoints).toEqual([
             { notifyIndex: 0, time: -0.0001, type: "EAnimNotifyEventType::Begin" },
