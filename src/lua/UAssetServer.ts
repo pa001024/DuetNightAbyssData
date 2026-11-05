@@ -3,9 +3,12 @@
  *
  * 启动一次 UAssetCLI.exe server，通过 stdio JSON 行协议请求：
  * - `fmodel` / `fmodel_dir`：按 FModel Output/Exports 数组格式导出 uasset（内存 JSON）
+ * - `bytecode`：类型化 Blueprint 字节码（opcode / 语句偏移 / 基本块 / 事件入口 / CDO 变量）
  *
- * 用于把 assets（动画 Montage 等）的数据源从"FModel 预导出 JSON"迁移为
- * "直接解析 .uasset"，实现零 fmodel json 依赖。
+ * 传输约定：
+ * - 请求按 FIFO 串行发送，每个请求带自增 `id`，CLI 原样回传；收到不匹配的 id 视为协议错误。
+ * - 单个请求有超时（默认 120s，可用 `DNA_UASSET_TIMEOUT_MS` 或构造参数覆盖）；
+ *   超时/进程退出会杀掉子进程并在下一次请求时重启，不会永久挂起。
  *
  * 解包目录解析顺序：
  *   1. 环境变量 DNA_UNPACK_DIR
@@ -14,11 +17,109 @@
  */
 import { type ChildProcess, spawn } from "node:child_process"
 import { existsSync, readFileSync } from "node:fs"
-import { join } from "node:path"
-import { closeUAssetCache as closeCache, getUAssetCache, type UAssetCache } from "./UAssetCache.ts"
+import { basename, join } from "node:path"
+import { closeUAssetCache as closeCache, getUAssetCache, statFingerprint, type UAssetCache, type UAssetFingerprint } from "./UAssetCache.ts"
 
 // import.meta.dir 在 bun 下是 src/lua 的绝对路径（Windows 无前导盘符问题）
 const PROJECT_ROOT = join(import.meta.dir, "..", "..")
+const DEFAULT_REQUEST_TIMEOUT_MS = 120_000
+
+/** bytecode 输出的结构版本；与 tools/UAssetCLI Program.cs 的 schemaVersion 同步递增。 */
+export const UASSET_BYTECODE_PARSER_VERSION = 1
+/** 泛型缓存表的 kind。 */
+export const UASSET_BYTECODE_CACHE_KIND = "bytecode"
+
+export interface UAssetBytecodeProperty {
+    name: string
+    type: string
+    out?: boolean
+    return?: boolean
+    struct?: string
+    objectClass?: string
+    enum?: string
+    innerType?: string
+}
+
+export interface UAssetBytecodeEvent {
+    name: string
+    target: string
+    entryOffset: number | null
+    flags: string[]
+}
+
+export interface UAssetBytecodeVariable {
+    name: string
+    type: string
+    struct?: string
+    innerType?: string
+    enum?: string
+    default: unknown
+}
+
+/** 表达式节点：op 为 EExprToken 名（如 EX_Let）；其余字段随 opcode 而定。 */
+export interface UAssetBytecodeExpression {
+    op: string
+    offset?: number
+    [key: string]: unknown
+}
+
+export interface UAssetBytecodeSuccessor {
+    kind: string
+    from?: number
+    targetOffset?: number
+    block: number | null
+}
+
+export interface UAssetBytecodeBlock {
+    index: number
+    startOffset: number
+    endOffset: number
+    statements: number[]
+    successors: UAssetBytecodeSuccessor[]
+}
+
+export interface UAssetBytecodeFunction {
+    name: string
+    flags?: string[]
+    params?: UAssetBytecodeProperty[]
+    locals?: UAssetBytecodeProperty[]
+    codeSize?: number
+    body?: UAssetBytecodeExpression[]
+    blocks?: UAssetBytecodeBlock[]
+    /** 单个函数解析失败时的诊断信息；此时不包含 body/blocks。 */
+    error?: string
+}
+
+export interface UAssetBytecodeClassInfo {
+    name: string | null
+    super: string | null
+    interfaces: Array<{ name: string; implementedByBlueprint: boolean }>
+}
+
+export interface UAssetBytecodeDocument {
+    schemaVersion: number
+    asset: string
+    class: UAssetBytecodeClassInfo
+    events: UAssetBytecodeEvent[]
+    variables: UAssetBytecodeVariable[]
+    components: unknown[]
+    functions: UAssetBytecodeFunction[]
+}
+
+export interface UAssetServerOptions {
+    /** 单个请求超时（毫秒）。默认 DNA_UASSET_TIMEOUT_MS 或 120000。 */
+    timeoutMs?: number
+    /** 启动命令（含参数）；默认 [exe, "server"]。用于测试桩或嵌入其他 CLI 实现。 */
+    command?: string[]
+}
+
+/** 请求超时：不重试，直接向上抛出。 */
+export class UAssetTimeoutError extends Error {
+    constructor(message: string) {
+        super(message)
+        this.name = "UAssetTimeoutError"
+    }
+}
 
 /** 读 .env（不覆盖已存在的环境变量） */
 function loadDotenv(): void {
@@ -90,17 +191,48 @@ export function packagePathFor(uassetFile: string, exportsRoot: string): string 
     return uassetFile.replace(/\\/g, "/").replace(/\.(?:uasset|umap)$/i, "")
 }
 
+function resolveTimeoutMs(options: UAssetServerOptions): number {
+    if (options.timeoutMs !== undefined) {
+        if (!Number.isFinite(options.timeoutMs) || options.timeoutMs <= 0)
+            throw new Error(`UAssetServer timeoutMs 必须是正数: ${options.timeoutMs}`)
+        return options.timeoutMs
+    }
+    const raw = process.env.DNA_UASSET_TIMEOUT_MS?.trim()
+    if (!raw) return DEFAULT_REQUEST_TIMEOUT_MS
+    const value = Number(raw)
+    if (!Number.isFinite(value) || value <= 0) throw new Error(`DNA_UASSET_TIMEOUT_MS 必须是正数: ${raw}`)
+    return value
+}
+
+interface PendingRequest {
+    id: number
+    resolve: (response: Record<string, unknown>) => void
+    reject: (error: Error) => void
+    timer: ReturnType<typeof setTimeout>
+}
+
 export class UAssetServer {
     private proc: ChildProcess | null = null
     private buffer = ""
+    private lastStderr = ""
+    private pending: PendingRequest | null = null
+    private nextRequestId = 1
+    /** 请求串行化：上一个请求结束（成功或失败）后才发送下一个。 */
+    private chain: Promise<unknown> = Promise.resolve()
+    private closing: Promise<void> | null = null
+    private readonly timeoutMs: number
     private readonly cache: UAssetCache
+    private readonly command: string[] | null
 
     constructor(
         private exe: string = getUassetExe() ?? "",
         private mount = "EM/Content",
-        cache: UAssetCache = getUAssetCache()
+        cache: UAssetCache = getUAssetCache(),
+        options: UAssetServerOptions = {}
     ) {
         this.cache = cache
+        this.timeoutMs = resolveTimeoutMs(options)
+        this.command = options.command ?? null
     }
 
     start(): void {
@@ -108,56 +240,150 @@ export class UAssetServer {
     }
 
     private ensureProcess(): ChildProcess {
-        if (this.proc && this.proc.exitCode === null) return this.proc
-        if (!this.exe || !existsSync(this.exe)) throw new Error(`找不到 UAssetCLI.exe（tools/UAssetCLI/UAssetCLI.exe）: ${this.exe}`)
-        this.proc = spawn(this.exe, ["server"], {
+        if (this.proc && this.proc.exitCode === null && !this.proc.killed) return this.proc
+        if (!this.command && (!this.exe || !existsSync(this.exe)))
+            throw new Error(`找不到 UAssetCLI.exe（tools/UAssetCLI/UAssetCLI.exe）: ${this.exe}`)
+        const [file, ...args] = this.command ?? [this.exe, "server"]
+        const proc = spawn(file, args, {
             stdio: ["pipe", "pipe", "pipe"],
             windowsHide: true,
         })
-        this.proc.stderr?.on("data", () => {
-            /* 忽略 stderr（调试时可打开） */
+        this.buffer = ""
+        this.lastStderr = ""
+        proc.stdout?.on("data", (chunk: Buffer) => this.onStdout(proc, chunk))
+        proc.stderr?.on("data", (chunk: Buffer) => {
+            this.lastStderr = (this.lastStderr + chunk.toString("utf8")).slice(-4000)
         })
-        return this.proc
+        proc.on("exit", (code, signal) => this.onProcessExit(proc, code, signal))
+        proc.on("error", error => this.onProcessError(proc, error))
+        this.proc = proc
+        return proc
     }
 
-    /** 发送一行 JSON 命令，读一行 JSON 响应（按行缓冲解析） */
-    private requestRaw(cmd: Record<string, unknown>): Promise<Record<string, unknown>> {
-        const proc = this.ensureProcess()
-        const writeOk = proc.stdin?.write(`${JSON.stringify(cmd)}\n`)
-        if (!writeOk) return Promise.reject(new Error("UAssetCLI stdin 写入失败"))
+    private onStdout(proc: ChildProcess, chunk: Buffer): void {
+        if (this.proc !== proc) return
+        this.buffer += chunk.toString("utf8")
+        let newline = this.buffer.indexOf("\n")
+        while (newline >= 0) {
+            const line = this.buffer.slice(0, newline).trim()
+            this.buffer = this.buffer.slice(newline + 1)
+            if (line) this.dispatchResponse(line)
+            newline = this.buffer.indexOf("\n")
+        }
+    }
 
-        return new Promise((resolve, reject) => {
-            const onData = (chunk: Buffer) => {
-                this.buffer += chunk.toString("utf8")
-                const nl = this.buffer.indexOf("\n")
-                if (nl >= 0) {
-                    const line = this.buffer.slice(0, nl).trim()
-                    this.buffer = this.buffer.slice(nl + 1)
-                    proc.stdout?.off("data", onData)
-                    if (!line) {
-                        reject(new Error("UAssetCLI 返回空行"))
-                        return
-                    }
-                    try {
-                        resolve(JSON.parse(line))
-                    } catch (e) {
-                        reject(e)
-                    }
-                }
+    private dispatchResponse(line: string): void {
+        let response: Record<string, unknown>
+        try {
+            const parsed: unknown = JSON.parse(line)
+            if (parsed === null || typeof parsed !== "object" || Array.isArray(parsed)) {
+                this.failPending(new Error(`UAssetCLI 返回了非对象响应: ${truncate(line)}`))
+                return
             }
-            proc.stdout?.on("data", onData)
+            response = parsed as Record<string, unknown>
+        } catch {
+            this.failPending(new Error(`UAssetCLI 返回了非 JSON 响应: ${truncate(line)}`))
+            return
+        }
+        const pending = this.pending
+        if (!pending) return
+        if ("id" in response && response.id !== pending.id) {
+            this.failPending(new Error(`UAssetCLI 响应 id 不匹配: 期望 ${pending.id}，实际 ${String(response.id)}`))
+            return
+        }
+        this.pending = null
+        clearTimeout(pending.timer)
+        pending.resolve(response)
+    }
+
+    private onProcessExit(proc: ChildProcess, code: number | null, signal: NodeJS.Signals | null): void {
+        if (this.proc !== proc) return
+        this.proc = null
+        this.buffer = ""
+        this.failPending(new Error(`UAssetCLI 进程退出（code=${String(code)}, signal=${String(signal)}）${this.stderrSuffix()}`))
+    }
+
+    private onProcessError(proc: ChildProcess, error: Error): void {
+        if (this.proc !== proc) return
+        this.proc = null
+        this.buffer = ""
+        this.failPending(new Error(`UAssetCLI 进程错误: ${error.message}`))
+    }
+
+    private stderrSuffix(): string {
+        const text = this.lastStderr.trim()
+        return text ? `；stderr: ${truncate(text)}` : ""
+    }
+
+    private failPending(error: Error): void {
+        const pending = this.pending
+        if (!pending) return
+        this.pending = null
+        clearTimeout(pending.timer)
+        pending.reject(error)
+    }
+
+    private killProcess(): void {
+        const proc = this.proc
+        this.proc = null
+        this.buffer = ""
+        if (!proc) return
+        try {
+            proc.stdin?.end()
+        } catch {
+            /* ignore */
+        }
+        try {
+            proc.kill()
+        } catch {
+            /* ignore */
+        }
+    }
+
+    /** 串行发送一个请求；失败不会阻塞后续请求。 */
+    private request(cmd: Record<string, unknown>, timeoutMs = this.timeoutMs): Promise<Record<string, unknown>> {
+        const run = () => this.requestOnce(cmd, timeoutMs)
+        const result = this.chain.then(run, run)
+        this.chain = result.then(
+            () => undefined,
+            () => undefined
+        )
+        return result
+    }
+
+    private requestOnce(cmd: Record<string, unknown>, timeoutMs: number): Promise<Record<string, unknown>> {
+        const proc = this.ensureProcess()
+        if (this.pending) return Promise.reject(new Error("UAssetCLI 请求重叠（内部串行化失效）"))
+        const id = this.nextRequestId++
+        return new Promise<Record<string, unknown>>((resolve, reject) => {
+            const timer = setTimeout(() => {
+                if (this.pending?.id !== id) return
+                this.failPending(new UAssetTimeoutError(`UAssetCLI 请求超时（${timeoutMs}ms，cmd=${String(cmd.cmd)}）`))
+                this.killProcess()
+            }, timeoutMs)
+            timer.unref?.()
+            this.pending = { id, resolve, reject, timer }
+            try {
+                proc.stdin?.write(`${JSON.stringify({ ...cmd, id })}\n`, error => {
+                    if (error && this.pending?.id === id) this.failPending(new Error(`UAssetCLI stdin 写入失败: ${error.message}`))
+                })
+            } catch (error) {
+                if (this.pending?.id === id) this.failPending(toError(error))
+            }
+            if (!proc.stdin) this.failPending(new Error("UAssetCLI stdin 不可用"))
         })
     }
 
-    /** 带重试的请求（瞬时失败指数退避） */
-    private async request(cmd: Record<string, unknown>, retries = 4): Promise<Record<string, unknown>> {
+    /** 带重试的请求（瞬时失败指数退避）；超时不重试。 */
+    private async requestWithRetry(cmd: Record<string, unknown>, retries = 4): Promise<Record<string, unknown>> {
         for (let attempt = 0; attempt < retries; attempt++) {
             try {
-                const resp = await this.requestRaw(cmd)
+                const resp = await this.request(cmd)
                 if (resp.ok) return resp
                 if (attempt >= retries - 1) return resp
-            } catch {
-                if (!this.exe || !existsSync(this.exe))
+            } catch (error) {
+                if (error instanceof UAssetTimeoutError) throw error
+                if (!this.command && (!this.exe || !existsSync(this.exe)))
                     throw new Error(`找不到 UAssetCLI.exe（tools/UAssetCLI/UAssetCLI.exe）: ${this.exe}`)
                 if (attempt >= retries - 1) throw new Error(`UAssetCLI 请求失败: ${cmd.cmd}`)
             }
@@ -166,13 +392,13 @@ export class UAssetServer {
         return { ok: false, error: "unknown" }
     }
 
-    /** fmodel：导出单个 uasset 为 FModel 数组格式；失败返回 null */
+    /** fmodel：导出单个 uasset 为 FModel 数组格式；失败返回 null。命中旧表不校验指纹。 */
     async fmodel(uassetFile: string, exportsRoot: string, mount?: string): Promise<unknown[] | null> {
         const resolvedMount = mount ?? this.mount
         const packagePath = packagePathFor(uassetFile, exportsRoot)
         const cacheKey = JSON.stringify([uassetFile.replace(/\\/g, "/"), packagePath, resolvedMount])
         return this.cache.getOrLoad(cacheKey, async () => {
-            const resp = await this.request({
+            const resp = await this.requestWithRetry({
                 cmd: "fmodel",
                 path: uassetFile,
                 package: packagePath,
@@ -184,29 +410,89 @@ export class UAssetServer {
         })
     }
 
-    async close(): Promise<void> {
-        if (!this.proc) return
-        try {
-            await this.request({ cmd: "shutdown" }, 1)
-        } catch {
-            /* ignore */
-        }
-        try {
-            this.proc.stdin?.end()
-        } catch {
-            /* ignore */
-        }
-        try {
-            this.proc.kill()
-        } catch {
-            /* ignore */
-        }
-        this.proc = null
+    /**
+     * bytecode：读取类型化 Blueprint 字节码。
+     * 缓存 key 含 parserVersion + mtimeMs + size；未命中才 spawn UAssetCLI。
+     * 解析失败抛出异常（带 CLI 错误信息），不会写入缓存。
+     */
+    async bytecode(uassetFile: string): Promise<UAssetBytecodeDocument> {
+        const fingerprint = statFingerprint(uassetFile, UASSET_BYTECODE_PARSER_VERSION)
+        const cacheKey = bytecodeCacheKey(uassetFile, fingerprint)
+        const cached = await this.cache.getKinded(UASSET_BYTECODE_CACHE_KIND, cacheKey, fingerprint)
+        if (cached !== undefined) return asBytecodeDocument(cached, cacheKey)
+
+        const resp = await this.request({ cmd: "bytecode", path: uassetFile })
+        if (!resp.ok) throw new Error(`UAssetCLI bytecode 解析失败（${basename(uassetFile)}）: ${String(resp.error ?? "unknown")}`)
+        const document = asBytecodeDocument(resp.result, cacheKey)
+        await this.cache.setKinded(UASSET_BYTECODE_CACHE_KIND, cacheKey, fingerprint, document)
+        return document
     }
+
+    /** 关闭子进程（幂等）。不发请求时不启动进程。 */
+    async close(): Promise<void> {
+        if (this.closing) return this.closing
+        this.closing = (async () => {
+            if (!this.proc) return
+            const graceMs = Math.min(this.timeoutMs, 5000)
+            // shutdown 排在已排队请求之后；用独立的宽限计时避免挂起请求拖住 close
+            const shutdown = this.request({ cmd: "shutdown" }, graceMs).catch(() => undefined)
+            await Promise.race([shutdown, sleepUnref(graceMs)])
+            this.killProcess()
+            this.failPending(new Error("UAssetCLI 已关闭"))
+        })()
+        try {
+            await this.closing
+        } finally {
+            this.closing = null
+        }
+    }
+}
+
+/** bytecode 缓存键：kind + 路径 + parserVersion + mtimeMs + size。 */
+export function bytecodeCacheKey(uassetFile: string, fingerprint: UAssetFingerprint): string {
+    return JSON.stringify([
+        UASSET_BYTECODE_CACHE_KIND,
+        uassetFile.replace(/\\/g, "/"),
+        fingerprint.parserVersion,
+        fingerprint.mtimeMs,
+        fingerprint.size,
+    ])
+}
+
+function asBytecodeDocument(value: unknown, cacheKey: string): UAssetBytecodeDocument {
+    if (value === null || typeof value !== "object" || Array.isArray(value)) {
+        throw new Error(`UAssetCLI bytecode 返回的不是对象（cacheKey=${cacheKey}）`)
+    }
+    const doc = value as UAssetBytecodeDocument
+    if (typeof doc.schemaVersion !== "number" || !Array.isArray(doc.functions)) {
+        throw new Error(`UAssetCLI bytecode 返回缺少 schemaVersion/functions（cacheKey=${cacheKey}）`)
+    }
+    if (doc.schemaVersion !== UASSET_BYTECODE_PARSER_VERSION) {
+        throw new Error(
+            `UAssetCLI bytecode schemaVersion 不匹配: 期望 ${UASSET_BYTECODE_PARSER_VERSION}，实际 ${doc.schemaVersion}（cacheKey=${cacheKey}）`
+        )
+    }
+    return doc
+}
+
+function toError(value: unknown): Error {
+    return value instanceof Error ? value : new Error(String(value))
+}
+
+function truncate(text: string, max = 500): string {
+    return text.length > max ? `${text.slice(0, max)}…` : text
 }
 
 function sleep(ms: number): Promise<void> {
     return new Promise(r => setTimeout(r, ms))
+}
+
+/** 不阻止进程退出的计时器（调用方已有其他句柄保持事件循环）。 */
+function sleepUnref(ms: number): Promise<void> {
+    return new Promise(resolve => {
+        const timer = setTimeout(resolve, ms)
+        timer.unref?.()
+    })
 }
 
 /** 单例（懒建，复用进程） */
@@ -219,12 +505,16 @@ export async function getUAssetServer(): Promise<UAssetServer | null> {
     return _server
 }
 
-export async function closeUAssetServer(): Promise<void> {
+/**
+ * 关闭单例进程。默认同时关闭共享 DuckDB 缓存（历史行为）；
+ * `keepCache: true` 只关进程，供多个调用方分批复用同一缓存（U2 使用）。
+ */
+export async function closeUAssetServer(options: { keepCache?: boolean } = {}): Promise<void> {
     if (_server) {
         await _server.close()
         _server = null
     }
-    await closeCache()
+    if (!options.keepCache) await closeCache()
 }
 
 export async function clearUAssetCache(): Promise<void> {
