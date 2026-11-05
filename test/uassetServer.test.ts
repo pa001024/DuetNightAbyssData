@@ -1,11 +1,15 @@
 import { afterEach, describe, expect, test } from "bun:test"
-import { existsSync, mkdtempSync, readFileSync, rmSync, statSync, utimesSync, writeFileSync } from "node:fs"
+import { existsSync, mkdtempSync, readFileSync, rmSync, utimesSync, writeFileSync } from "node:fs"
 import { tmpdir } from "node:os"
 import { join } from "node:path"
-import { UAssetCache } from "../src/lua/UAssetCache.ts"
+import { statFingerprint, type UAssetFingerprint, UAssetCache } from "../src/lua/UAssetCache.ts"
 import {
+    acquireUAssetServer,
     bytecodeCacheKey,
+    closeUAssetServer,
+    getUAssetServer,
     getUassetExe,
+    releaseUAssetServer,
     UASSET_BYTECODE_PARSER_VERSION,
     UAssetServer,
     UAssetTimeoutError,
@@ -89,6 +93,36 @@ describe("UAssetServer bytecode", () => {
         expect(readLog(log).filter(entry => entry.cmd === "bytecode")).toHaveLength(2)
     })
 
+    test("仅 .uexp 变化（.uasset 未变）使缓存失效", async () => {
+        const log = join(workDir(), "requests.log")
+        const server = createServer(["--log", log])
+        const asset = createAsset("Sidecar.uasset")
+        const uexp = join(workDir(), "Sidecar.uexp")
+        writeFileSync(uexp, "bytecode-v1")
+        await server.bytecode(asset)
+        await server.bytecode(asset)
+        expect(readLog(log).filter(entry => entry.cmd === "bytecode")).toHaveLength(1)
+
+        // 只 touch sidecar，模拟同长字节码/CDO 编辑后 .uasset 指纹不变
+        const future = new Date(Date.now() + 5000)
+        utimesSync(uexp, future, future)
+        await server.bytecode(asset)
+        expect(readLog(log).filter(entry => entry.cmd === "bytecode")).toHaveLength(2)
+    })
+
+    test(".ubulk 变化使缓存失效", async () => {
+        const log = join(workDir(), "requests.log")
+        const server = createServer(["--log", log])
+        const asset = createAsset("Bulk.uasset")
+        const ubulk = join(workDir(), "Bulk.ubulk")
+        writeFileSync(ubulk, "v1")
+        await server.bytecode(asset)
+
+        writeFileSync(ubulk, "v2-longer")
+        await server.bytecode(asset)
+        expect(readLog(log).filter(entry => entry.cmd === "bytecode")).toHaveLength(2)
+    })
+
     test("size 变化使缓存失效并重新解析", async () => {
         const log = join(workDir(), "requests.log")
         const server = createServer(["--log", log])
@@ -119,8 +153,15 @@ describe("UAssetServer bytecode", () => {
         await expect(server.bytecode(asset)).rejects.toThrow(/id 不匹配/)
     })
 
+    test("响应缺少 id 时显式报错", async () => {
+        const server = createServer(["--no-id"])
+        const asset = createAsset("NoId.uasset")
+        await expect(server.bytecode(asset)).rejects.toThrow(/id 不匹配/)
+    })
+
     test("超时抛出 UAssetTimeoutError，后续请求重启进程", async () => {
-        const server = createServer(["--delay", "600", "--delay-path", "Slow"], 120)
+        // 超时需短于 Slow 的延迟、长于新进程（bun 桩）冷启动
+        const server = createServer(["--delay", "1500", "--delay-path", "Slow"], 700)
         const slow = createAsset("Slow.uasset")
         const fast = createAsset("Fast.uasset")
 
@@ -139,17 +180,56 @@ describe("UAssetServer bytecode", () => {
         expect(readLog(log).filter(entry => entry.cmd === "bytecode")).toHaveLength(2)
     })
 
-    test("close 幂等", async () => {
+    test("close 幂等，关闭后的实例不能再启动进程", async () => {
         const server = createServer()
         await server.bytecode(createAsset("Close.uasset"))
         await server.close()
         await server.close()
+        await expect(server.bytecode(createAsset("AfterClose.uasset"))).rejects.toThrow(/已关闭/)
     })
 
-    test("bytecodeCacheKey 包含 parserVersion、mtime 与 size", () => {
-        const fingerprint = { parserVersion: UASSET_BYTECODE_PARSER_VERSION, mtimeMs: 123.5, size: 456 }
-        const key = bytecodeCacheKey("D:/unpack/A.uasset", fingerprint)
-        expect(JSON.parse(key)).toEqual(["bytecode", "D:/unpack/A.uasset", 1, 123.5, 456])
+    test("bytecodeCacheKey 包含完整指纹（parserVersion + 主资产/sidecar）", () => {
+        const fingerprint: UAssetFingerprint = {
+            parserVersion: UASSET_BYTECODE_PARSER_VERSION,
+            files: [
+                { suffix: "uasset", mtimeMs: 123.5, size: 456 },
+                { suffix: "uexp", mtimeMs: 789, size: 1024 },
+            ],
+        }
+        const parsed = JSON.parse(bytecodeCacheKey("D:/unpack/A.uasset", fingerprint))
+        expect(parsed[0]).toBe("bytecode")
+        expect(parsed[1]).toBe("D:/unpack/A.uasset")
+        expect(JSON.parse(parsed[2])).toEqual([
+            1,
+            [
+                ["uasset", 123.5, 456],
+                ["uexp", 789, 1024],
+            ],
+        ])
+    })
+
+    test("acquire/release：陈旧持有者不影响当前引用或关闭当前实例", async () => {
+        await closeUAssetServer({ keepCache: true })
+        try {
+            const first = await acquireUAssetServer()
+            const second = await acquireUAssetServer()
+            expect(first).toBe(second)
+
+            const foreignCache = new UAssetCache(join(workDir(), "foreign.duckdb"))
+            openCaches.push(foreignCache)
+            const foreign = new UAssetServer("unused", "EM/Content", foreignCache, {
+                command: [process.execPath, STUB, "--fixture", FIXTURE],
+            })
+            await releaseUAssetServer(foreign)
+            expect(await getUAssetServer()).toBe(first)
+
+            await releaseUAssetServer(first)
+            expect(await getUAssetServer()).toBe(first)
+            await releaseUAssetServer(second)
+            expect(await getUAssetServer()).not.toBe(first)
+        } finally {
+            await closeUAssetServer({ keepCache: true })
+        }
     })
 })
 
@@ -158,8 +238,7 @@ describe("UAssetServer bytecode payload validation", () => {
     test("缓存中的非对象 payload 被拒绝", async () => {
         const server = createServer()
         const asset = createAsset("Bad.uasset")
-        const stat = statSync(asset)
-        const fingerprint = { parserVersion: UASSET_BYTECODE_PARSER_VERSION, mtimeMs: stat.mtimeMs, size: stat.size }
+        const fingerprint = statFingerprint(asset, UASSET_BYTECODE_PARSER_VERSION)
         await openCaches[openCaches.length - 1]!.setKinded(
             "bytecode",
             bytecodeCacheKey(asset, fingerprint),
@@ -172,8 +251,7 @@ describe("UAssetServer bytecode payload validation", () => {
     test("缺少 schemaVersion/functions 的 payload 被拒绝", async () => {
         const server = createServer()
         const asset = createAsset("BadSchema.uasset")
-        const stat = statSync(asset)
-        const fingerprint = { parserVersion: UASSET_BYTECODE_PARSER_VERSION, mtimeMs: stat.mtimeMs, size: stat.size }
+        const fingerprint = statFingerprint(asset, UASSET_BYTECODE_PARSER_VERSION)
         await openCaches[openCaches.length - 1]!.setKinded("bytecode", bytecodeCacheKey(asset, fingerprint), fingerprint, {
             asset: "BadSchema",
         })
@@ -211,6 +289,9 @@ test.skipIf(!integrationAsset)("真实 BP bytecode：结构自洽且不含绝对
     openCaches.push(cache)
     const server = new UAssetServer(exe, "EM/Content", cache, { timeoutMs: 60000 })
     openServers.push(server)
+    // 真实熟化资产：ScriptBytecode 在 .uexp，指纹必须包含 sidecar
+    const fingerprint = statFingerprint(integrationAsset!, UASSET_BYTECODE_PARSER_VERSION)
+    expect(fingerprint.files.map(file => file.suffix)).toContain("uexp")
     const document: UAssetBytecodeDocument = await server.bytecode(integrationAsset!)
     expect(document.schemaVersion).toBe(1)
     expect(document.functions.length).toBeGreaterThan(0)

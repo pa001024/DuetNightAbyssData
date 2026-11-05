@@ -128,18 +128,29 @@ UAssetCLI server 由 TS 侧 `src/lua/UAssetServer.ts` 封装，供地图拼接�
 3. 以 **server 模式** 请求 `fmodel` / `fmodel_dir` / `parse_dir` / `bytecode` 等命令；
 4. 使用完毕发送 `shutdown` 关闭 server（不占用额外进程）。
 
-`UAssetServer` 的传输约定：请求串行发送并带自增 `id`；单个请求默认 120s 超时
+`UAssetServer` 的传输约定：请求串行发送并带自增 `id`，响应必须回传同一 `id`
+（缺失或不匹配视为协议错误）；stdout 按 UTF-8 字符流解码。单个请求默认 120s 超时
 （`DNA_UASSET_TIMEOUT_MS` 或构造参数覆盖）。超时或进程退出会杀掉子进程，下一次请求自动重启。
-`closeUAssetServer({ keepCache: true })` 只关进程、保留共享 DuckDB 缓存。
+`close()` 后的实例不可再启动进程。
+
+生命周期：`acquireUAssetServer()` / `releaseUAssetServer(server)` 引用计数，最后一个持有者释放时
+只关进程、保留共享 DuckDB 缓存；陈旧引用不会影响当前引用数或关闭当前实例。
+`closeUAssetServer({ keepCache: true })` 只关进程、保留缓存。
 
 ### 缓存
 
 - `fmodel` 使用旧表 `uasset_fmodel_cache`：key 为
   `[绝对路径, 包路径, mount]`，命中不校验指纹（保持历史行为）。
-- `bytecode` 使用 `uasset_kind_cache(cache_key, kind, parser_version, source_mtime_ms, source_size, payload, updated_at)`，
+- `bytecode` 使用
+  `uasset_kind_cache(cache_key, kind, parser_version, source_mtime_ms, source_size, source_fingerprint, payload, updated_at)`，
   主键 `(cache_key, kind)`；key 为
-  `["bytecode", 绝对路径(正斜杠), parserVersion, mtimeMs, size]`，行内再校验同一指纹。
-  源文件 mtime/size 或 `UASSET_BYTECODE_PARSER_VERSION` 变化即失效；命中只做 stat + DuckDB 查询，不启动 CLI。
+  `["bytecode", 绝对路径(正斜杠), 指纹]`，其中指纹是
+  `[parserVersion, [[后缀, mtimeMs, size], ...]]`，覆盖主资产与 sidecar：
+  `.uasset`（包头/导入表）+ `.uexp`（ScriptBytecode/属性值）+ `.ubulk`（存在时）。
+  行内再校验同一 `source_fingerprint`；主资产或任一 sidecar 的 mtime/size、
+  或 `UASSET_BYTECODE_PARSER_VERSION` 变化即失效。
+  `source_mtime_ms`/`source_size` 仅作诊断汇总（最大 mtime、size 之和）。
+  命中只做 stat + DuckDB 查询，不启动 CLI。
 - `bun warmup` 清空两张表。
 - 环境变量 `DNA_UASSET_CACHE` 可覆盖 DuckDB 路径（相对路径按 cwd 解析），
   便于在 worktree 中复用主 checkout 的缓存或做基准测试。

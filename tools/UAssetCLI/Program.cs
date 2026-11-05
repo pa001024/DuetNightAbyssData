@@ -35,6 +35,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
 using UAssetAPI;
 using UAssetAPI.ExportTypes;
@@ -259,12 +260,36 @@ class Program
         Console.Out.Flush();
     }
 
-    // 错误信息里不出现绝对路径（bytecode 输出契约）
+    // 错误信息里不出现绝对路径（bytecode 输出契约）：按段匹配，正/反斜杠都视为分隔符，
+    // 同时覆盖调用方给的形式与 GetFullPath 规范化后的形式。
     static string RedactPath(string message, string path)
     {
         if (string.IsNullOrEmpty(message) || string.IsNullOrEmpty(path)) return message;
         var name = Path.GetFileName(path);
-        return message.Replace(path, name).Replace(path.Replace('\\', '/'), name);
+        var redacted = message;
+        foreach (var candidate in PathVariants(path))
+        {
+            if (string.IsNullOrEmpty(candidate)) continue;
+            var pattern = string.Join("[\\\\/]", candidate.Split(new[] { '\\', '/' }, StringSplitOptions.RemoveEmptyEntries).Select(Regex.Escape));
+            if (pattern.Length == 0) continue;
+            redacted = Regex.Replace(redacted, pattern, name, RegexOptions.IgnoreCase);
+        }
+        return redacted;
+    }
+
+    static IEnumerable<string> PathVariants(string path)
+    {
+        var variants = new List<string> { path };
+        try
+        {
+            var full = Path.GetFullPath(path);
+            if (!string.Equals(full, path, StringComparison.OrdinalIgnoreCase)) variants.Add(full);
+        }
+        catch
+        {
+            /* 路径无法规范化时只替换原始形式 */
+        }
+        return variants;
     }
 
     // ---------- 解析 ----------
@@ -469,13 +494,13 @@ class Program
             }
             catch (Exception e)
             {
-                // 单个函数解析失败不静默丢弃：显式记录错误，其余函数继续输出
-                functions.Add(new JObject { ["name"] = SafeStr(fe.ObjectName), ["error"] = e.Message });
+                // 单个函数解析失败不静默丢弃：显式记录错误（脱敏路径），其余函数继续输出
+                functions.Add(new JObject { ["name"] = SafeStr(fe.ObjectName), ["error"] = RedactPath(e.Message, path) });
             }
         }
         root["events"] = events;
-        root["variables"] = BuildCdoVariables(asset);
-        root["components"] = BuildCdoComponents(asset);
+        root["variables"] = BuildCdoVariables(asset, path);
+        root["components"] = BuildCdoComponents(asset, path);
         root["functions"] = functions;
         return root;
     }
@@ -1105,7 +1130,7 @@ class Program
     }
 
     // CDO 默认值：只输出属性名、类型与默认值；对象引用输出名称/类别，不含包路径。
-    static JArray BuildCdoVariables(UAsset asset)
+    static JArray BuildCdoVariables(UAsset asset, string path)
     {
         var arr = new JArray();
         var cdo = FindClassDefaultObject(asset);
@@ -1122,13 +1147,13 @@ class Program
             else if (p is ArrayPropertyData ap) jo["innerType"] = SafeStr(ap.ArrayType);
             else if (p is EnumPropertyData ep) jo["enum"] = SafeStr(ep.EnumType);
             else if (p is BytePropertyData bp && bp.ByteType == BytePropertyType.FName) jo["enum"] = SafeStr(bp.EnumType);
-            jo["default"] = DefaultValueJson(asset, p);
+            jo["default"] = DefaultValueJson(asset, p, path);
             arr.Add(jo);
         }
         return arr;
     }
 
-    static JArray BuildCdoComponents(UAsset asset)
+    static JArray BuildCdoComponents(UAsset asset, string path)
     {
         var arr = new JArray();
         var cdo = FindClassDefaultObject(asset);
@@ -1141,11 +1166,11 @@ class Program
                 if (item?.RawValue is FPackageIndex index)
                     arr.Add(index.IsImport() ? SafeStr(index.ToImport(asset).ObjectName) : SafeStr(index.ToExport(asset).ObjectName));
                 else if (item != null)
-                    arr.Add(DefaultValueJson(asset, item));
+                    arr.Add(DefaultValueJson(asset, item, path));
             }
             catch (Exception e)
             {
-                arr.Add(new JObject { ["error"] = e.Message });
+                arr.Add(new JObject { ["error"] = RedactPath(e.Message, path) });
             }
         }
         return arr;
@@ -1156,7 +1181,7 @@ class Program
         return asset.Exports.OfType<NormalExport>().FirstOrDefault(x => SafeStr(x.ObjectName).StartsWith("Default__", StringComparison.Ordinal));
     }
 
-    static JToken DefaultValueJson(UAsset asset, PropertyData p)
+    static JToken DefaultValueJson(UAsset asset, PropertyData p, string path)
     {
         if (p == null) return JValue.CreateNull();
         try
@@ -1173,7 +1198,7 @@ class Program
                 var obj = new JObject();
                 if (sp.Value is IEnumerable<PropertyData> children)
                     foreach (var child in children)
-                        if (child != null) obj[SafeStr(child.Name)] = DefaultValueJson(asset, child);
+                        if (child != null) obj[SafeStr(child.Name)] = DefaultValueJson(asset, child, path);
                 return obj;
             }
             if (p is ArrayPropertyData ap)
@@ -1181,7 +1206,7 @@ class Program
                 var list = new JArray();
                 if (ap.Value is IEnumerable<PropertyData> items)
                     foreach (var item in items)
-                        if (item != null) list.Add(DefaultValueJson(asset, item));
+                        if (item != null) list.Add(DefaultValueJson(asset, item, path));
                 return list;
             }
             if (p is MapPropertyData map)
@@ -1192,8 +1217,8 @@ class Program
                     var pair = map.Value.GetItem(i);
                     list.Add(new JObject
                     {
-                        ["key"] = DefaultValueJson(asset, pair.Key),
-                        ["value"] = DefaultValueJson(asset, pair.Value),
+                        ["key"] = DefaultValueJson(asset, pair.Key, path),
+                        ["value"] = DefaultValueJson(asset, pair.Value, path),
                     });
                 }
                 return list;
@@ -1210,7 +1235,7 @@ class Program
             {
                 var list = new JArray();
                 foreach (var item in nested)
-                    if (item != null) list.Add(DefaultValueJson(asset, item));
+                    if (item != null) list.Add(DefaultValueJson(asset, item, path));
                 return list;
             }
             if (raw is bool || raw is byte || raw is sbyte || raw is short || raw is ushort
@@ -1222,7 +1247,7 @@ class Program
         }
         catch (Exception e)
         {
-            return new JObject { ["error"] = e.Message };
+            return new JObject { ["error"] = RedactPath(e.Message, path) };
         }
         return JValue.CreateNull();
     }
