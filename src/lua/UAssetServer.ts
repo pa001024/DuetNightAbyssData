@@ -16,9 +16,17 @@
  *   3. 仓库同级 ../dna-unpack
  */
 import { type ChildProcess, spawn } from "node:child_process"
-import { existsSync, readFileSync } from "node:fs"
+import { existsSync } from "node:fs"
 import { basename, join } from "node:path"
-import { closeUAssetCache as closeCache, getUAssetCache, statFingerprint, type UAssetCache, type UAssetFingerprint } from "./UAssetCache.ts"
+import {
+    closeUAssetCache as closeCache,
+    fingerprintKey,
+    getUAssetCache,
+    loadDotenv,
+    statFingerprint,
+    type UAssetCache,
+    type UAssetFingerprint,
+} from "./UAssetCache.ts"
 
 // import.meta.dir 在 bun 下是 src/lua 的绝对路径（Windows 无前导盘符问题）
 const PROJECT_ROOT = join(import.meta.dir, "..", "..")
@@ -129,26 +137,6 @@ export class UAssetTimeoutError extends Error {
     }
 }
 
-/** 读 .env（不覆盖已存在的环境变量） */
-function loadDotenv(): void {
-    try {
-        const text = readFileSync(join(PROJECT_ROOT, ".env"), "utf8")
-        for (const line of text.split(/\r?\n/)) {
-            const l = line.trim()
-            if (!l || l.startsWith("#") || !l.includes("=")) continue
-            const [k, ...rest] = l.split("=")
-            const key = k.trim()
-            const value = rest
-                .join("=")
-                .trim()
-                .replace(/^["']|["']$/g, "")
-            if (key && !process.env[key]) process.env[key] = value
-        }
-    } catch {
-        /* 无 .env 时忽略 */
-    }
-}
-
 export function getUnpackDir(): string | null {
     loadDotenv()
     const raw = process.env.DNA_UNPACK_DIR?.trim() ?? ""
@@ -205,6 +193,7 @@ function resolveTimeoutMs(options: UAssetServerOptions): number {
             throw new Error(`UAssetServer timeoutMs 必须是正数: ${options.timeoutMs}`)
         return options.timeoutMs
     }
+    loadDotenv()
     const raw = process.env.DNA_UASSET_TIMEOUT_MS?.trim()
     if (!raw) return DEFAULT_REQUEST_TIMEOUT_MS
     const value = Number(raw)
@@ -228,6 +217,8 @@ export class UAssetServer {
     /** 请求串行化：上一个请求结束（成功或失败）后才发送下一个。 */
     private chain: Promise<unknown> = Promise.resolve()
     private closing: Promise<void> | null = null
+    /** close() 后实例不可再启动进程；陈旧持有者不能借旧引用重新 spawn。 */
+    private closed = false
     private readonly timeoutMs: number
     private readonly cache: UAssetCache
     private readonly command: string[] | null
@@ -249,6 +240,7 @@ export class UAssetServer {
     }
 
     private ensureProcess(): ChildProcess {
+        if (this.closed) throw new Error("UAssetServer 已关闭，不能继续启动 UAssetCLI 进程")
         if (this.proc && this.proc.exitCode === null && !this.proc.killed) return this.proc
         if (!this.command && (!this.exe || !existsSync(this.exe)))
             throw new Error(`找不到 UAssetCLI.exe（tools/UAssetCLI/UAssetCLI.exe）: ${this.exe}`)
@@ -259,9 +251,12 @@ export class UAssetServer {
         })
         this.buffer = ""
         this.lastStderr = ""
-        proc.stdout?.on("data", (chunk: Buffer) => this.onStdout(proc, chunk))
-        proc.stderr?.on("data", (chunk: Buffer) => {
-            this.lastStderr = (this.lastStderr + chunk.toString("utf8")).slice(-4000)
+        // 按字符流解码，避免多字节字符恰好跨 chunk 时被拆成 U+FFFD
+        proc.stdout?.setEncoding("utf8")
+        proc.stderr?.setEncoding("utf8")
+        proc.stdout?.on("data", (chunk: string) => this.onStdout(proc, chunk))
+        proc.stderr?.on("data", (chunk: string) => {
+            this.lastStderr = (this.lastStderr + chunk).slice(-4000)
         })
         proc.on("exit", (code, signal) => this.onProcessExit(proc, code, signal))
         proc.on("error", error => this.onProcessError(proc, error))
@@ -269,9 +264,9 @@ export class UAssetServer {
         return proc
     }
 
-    private onStdout(proc: ChildProcess, chunk: Buffer): void {
+    private onStdout(proc: ChildProcess, chunk: string): void {
         if (this.proc !== proc) return
-        this.buffer += chunk.toString("utf8")
+        this.buffer += chunk
         let newline = this.buffer.indexOf("\n")
         while (newline >= 0) {
             const line = this.buffer.slice(0, newline).trim()
@@ -296,7 +291,8 @@ export class UAssetServer {
         }
         const pending = this.pending
         if (!pending) return
-        if ("id" in response && response.id !== pending.id) {
+        // 必须显式回传同一 id：缺失/不匹配都视为协议错误，避免并发下错配
+        if (response.id !== pending.id) {
             this.failPending(new Error(`UAssetCLI 响应 id 不匹配: 期望 ${pending.id}，实际 ${String(response.id)}`))
             return
         }
@@ -427,7 +423,7 @@ export class UAssetServer {
 
     /**
      * bytecode：读取类型化 Blueprint 字节码。
-     * 缓存 key 含 parserVersion + mtimeMs + size；未命中才 spawn UAssetCLI。
+     * 缓存 key 含 parserVersion + .uasset/.uexp/.ubulk 的 mtime/size；未命中才 spawn UAssetCLI。
      * 解析失败抛出异常（带 CLI 错误信息），不会写入缓存。
      */
     async bytecode(uassetFile: string): Promise<UAssetBytecodeDocument> {
@@ -447,8 +443,9 @@ export class UAssetServer {
         return document
     }
 
-    /** 关闭子进程（幂等）。不发请求时不启动进程。 */
+    /** 关闭子进程（幂等）。不发请求时不启动进程；关闭后实例不可复用。 */
     async close(): Promise<void> {
+        this.closed = true
         if (this.closing) return this.closing
         this.closing = (async () => {
             if (!this.proc) return
@@ -467,15 +464,9 @@ export class UAssetServer {
     }
 }
 
-/** bytecode 缓存键：kind + 路径 + parserVersion + mtimeMs + size。 */
+/** bytecode 缓存键：kind + 路径 + 完整指纹（parserVersion + .uasset/.uexp/.ubulk 的 mtime/size）。 */
 export function bytecodeCacheKey(uassetFile: string, fingerprint: UAssetFingerprint): string {
-    return JSON.stringify([
-        UASSET_BYTECODE_CACHE_KIND,
-        uassetFile.replace(/\\/g, "/"),
-        fingerprint.parserVersion,
-        fingerprint.mtimeMs,
-        fingerprint.size,
-    ])
+    return JSON.stringify([UASSET_BYTECODE_CACHE_KIND, uassetFile.replace(/\\/g, "/"), fingerprintKey(fingerprint)])
 }
 
 function asBytecodeDocument(value: unknown, cacheKey: string): UAssetBytecodeDocument {
@@ -529,7 +520,7 @@ export async function getUAssetServer(): Promise<UAssetServer | null> {
 
 /**
  * 引用一个共享 server。与 `releaseUAssetServer` 成对使用；
- * AssetReader 用它避免某个模块结束时关闭其他模块仍在使用的进程。
+ * 调用方（如 AssetReader）用引用计数避免某个模块结束时关闭其他模块仍在用的进程。
  */
 export async function acquireUAssetServer(): Promise<UAssetServer | null> {
     const server = await getUAssetServer()
@@ -539,13 +530,16 @@ export async function acquireUAssetServer(): Promise<UAssetServer | null> {
 
 /**
  * 释放引用。计数归零时关闭 UAssetCLI 进程，但不关闭 DuckDB 缓存：
- * 同一次导出内后续模块继续复用同一个 4.65GB 连接，只有 CLI 退出时统一关闭。
+ * 同一次导出内后续模块继续复用同一个连接，只有 CLI 退出时统一关闭。
+ * 先校验身份再减计数：陈旧持有者既不能影响当前引用数，也不能关闭当前进程；
+ * 被关闭的实例已标记 closed，无法被旧引用重新 spawn。
  */
 export async function releaseUAssetServer(server?: UAssetServer | null): Promise<void> {
-    if (_serverRefs > 0) _serverRefs--
-    if (_serverRefs > 0 || !_server) return
-    if (server && server !== _server) return
     const current = _server
+    if (!current) return
+    if (server !== undefined && server !== current) return
+    if (_serverRefs > 0) _serverRefs--
+    if (_serverRefs > 0) return
     _server = null
     await current.close()
 }

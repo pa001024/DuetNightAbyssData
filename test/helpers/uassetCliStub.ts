@@ -7,6 +7,7 @@
  *   --delay <ms>            bytecode 请求的延迟
  *   --delay-path <子串>     只对包含该子串的请求路径延迟（缺省全部延迟）
  *   --wrong-id              响应回传错误的 id（模拟协议错配）
+ *   --no-id                 响应不回传 id（模拟旧版 CLI）
  *   --fail                  返回 {"ok":false,...}
  */
 import { appendFileSync, readFileSync } from "node:fs"
@@ -24,11 +25,13 @@ const logPath = arg("--log")
 const delayMs = Number(arg("--delay", "0"))
 const delayPath = arg("--delay-path")
 const wrongId = args.includes("--wrong-id")
+const noId = args.includes("--no-id")
 const fail = args.includes("--fail")
 const fixture = fixturePath ? (JSON.parse(readFileSync(fixturePath, "utf8")) as Record<string, unknown>) : {}
 
 function respond(response: Record<string, unknown>): void {
-    process.stdout.write(`${JSON.stringify(response)}\n`)
+    const payload = noId ? Object.fromEntries(Object.entries(response).filter(([key]) => key !== "id")) : response
+    process.stdout.write(`${JSON.stringify(payload)}\n`)
 }
 function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms))
