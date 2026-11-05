@@ -222,6 +222,35 @@ export function generateSkillBehavior(
     skillId: number,
     inheritedDescValues?: unknown[]
 ): VNodeTree {
+    return behaviorTextToVNode(generateSkillBehaviorText(dm, skillArtifacts, skillId, inheritedDescValues))
+}
+
+/** 原始行为文本 → vnode：`GT{}` 哨兵转为 TMap 片段，其余原样。 */
+export function behaviorTextToVNode(text: string): VNodeTree {
+    const matches = [...text.matchAll(GT_RE)]
+    if (matches.length === 0) return text
+    const nodes: VNode[] = []
+    let last = 0
+    for (const match of matches) {
+        const index = match.index!
+        if (index > last) nodes.push(text.slice(last, index))
+        nodes.push(TMap(match[1], P_MAP))
+        last = index + match[0].length
+    }
+    if (last < text.length) nodes.push(text.slice(last))
+    return seq(nodes)
+}
+
+/**
+ * 生成行为文本（保留 `GT{}` 哨兵，不做翻译替换）。
+ * 语言无关产物（skill-behavior）用它保留原始 key；char 模块经 behaviorTextToVNode 渲染。
+ */
+export function generateSkillBehaviorText(
+    dm: ModuleContext["dm"],
+    skillArtifacts: SkillArtifacts,
+    skillId: number,
+    inheritedDescValues?: unknown[]
+): string {
     const nodeData = (id: number | string) => dm.getTableItem("SkillNode", id) as Record<string, any> | undefined
     const effectData = (id: number | string) => dm.getTableItem("SkillEffects", id) as Record<string, any> | undefined
     const buffData = (id: number | string) => dm.getTableItem("Buff", id) as Record<string, any> | undefined
@@ -559,17 +588,5 @@ export function generateSkillBehavior(
     }
 
     walkSkill(skillId)
-    const text = parts.join(";")
-    const matches = [...text.matchAll(GT_RE)]
-    if (matches.length === 0) return text
-    const nodes: VNode[] = []
-    let last = 0
-    for (const match of matches) {
-        const index = match.index!
-        if (index > last) nodes.push(text.slice(last, index))
-        nodes.push(TMap(match[1], P_MAP))
-        last = index + match[0].length
-    }
-    if (last < text.length) nodes.push(text.slice(last))
-    return seq(nodes)
+    return parts.join(";")
 }

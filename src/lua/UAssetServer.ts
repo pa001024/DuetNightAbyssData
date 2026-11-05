@@ -113,6 +113,14 @@ export interface UAssetServerOptions {
     command?: string[]
 }
 
+/** 缓存命中/加载计数（进程级，用于导出覆盖率与性能报告）。 */
+export interface UAssetServerStats {
+    fmodelHits: number
+    fmodelLoads: number
+    bytecodeHits: number
+    bytecodeLoads: number
+}
+
 /** 请求超时：不重试，直接向上抛出。 */
 export class UAssetTimeoutError extends Error {
     constructor(message: string) {
@@ -223,6 +231,7 @@ export class UAssetServer {
     private readonly timeoutMs: number
     private readonly cache: UAssetCache
     private readonly command: string[] | null
+    readonly stats: UAssetServerStats = { fmodelHits: 0, fmodelLoads: 0, bytecodeHits: 0, bytecodeLoads: 0 }
 
     constructor(
         private exe: string = getUassetExe() ?? "",
@@ -397,17 +406,23 @@ export class UAssetServer {
         const resolvedMount = mount ?? this.mount
         const packagePath = packagePathFor(uassetFile, exportsRoot)
         const cacheKey = JSON.stringify([uassetFile.replace(/\\/g, "/"), packagePath, resolvedMount])
-        return this.cache.getOrLoad(cacheKey, async () => {
-            const resp = await this.requestWithRetry({
-                cmd: "fmodel",
-                path: uassetFile,
-                package: packagePath,
-                mount: resolvedMount,
-            })
-            if (!resp.ok) return null
-            const result = resp.result
-            return Array.isArray(result) ? result : null
+        const cached = await this.cache.get(cacheKey)
+        if (cached !== undefined) {
+            this.stats.fmodelHits++
+            return cached
+        }
+        this.stats.fmodelLoads++
+        const resp = await this.requestWithRetry({
+            cmd: "fmodel",
+            path: uassetFile,
+            package: packagePath,
+            mount: resolvedMount,
         })
+        if (!resp.ok) return null
+        const result = resp.result
+        if (!Array.isArray(result)) return null
+        await this.cache.set(cacheKey, result)
+        return result
     }
 
     /**
@@ -419,8 +434,12 @@ export class UAssetServer {
         const fingerprint = statFingerprint(uassetFile, UASSET_BYTECODE_PARSER_VERSION)
         const cacheKey = bytecodeCacheKey(uassetFile, fingerprint)
         const cached = await this.cache.getKinded(UASSET_BYTECODE_CACHE_KIND, cacheKey, fingerprint)
-        if (cached !== undefined) return asBytecodeDocument(cached, cacheKey)
+        if (cached !== undefined) {
+            this.stats.bytecodeHits++
+            return asBytecodeDocument(cached, cacheKey)
+        }
 
+        this.stats.bytecodeLoads++
         const resp = await this.request({ cmd: "bytecode", path: uassetFile })
         if (!resp.ok) throw new Error(`UAssetCLI bytecode 解析失败（${basename(uassetFile)}）: ${String(resp.error ?? "unknown")}`)
         const document = asBytecodeDocument(resp.result, cacheKey)
@@ -497,6 +516,9 @@ function sleepUnref(ms: number): Promise<void> {
 
 /** 单例（懒建，复用进程） */
 let _server: UAssetServer | null = null
+/** acquire/release 引用计数：最后一个持有者释放时关闭进程，但保留共享 DuckDB 连接。 */
+let _serverRefs = 0
+
 export async function getUAssetServer(): Promise<UAssetServer | null> {
     if (!_server) {
         _server = new UAssetServer()
@@ -506,15 +528,45 @@ export async function getUAssetServer(): Promise<UAssetServer | null> {
 }
 
 /**
+ * 引用一个共享 server。与 `releaseUAssetServer` 成对使用；
+ * AssetReader 用它避免某个模块结束时关闭其他模块仍在使用的进程。
+ */
+export async function acquireUAssetServer(): Promise<UAssetServer | null> {
+    const server = await getUAssetServer()
+    if (server) _serverRefs++
+    return server
+}
+
+/**
+ * 释放引用。计数归零时关闭 UAssetCLI 进程，但不关闭 DuckDB 缓存：
+ * 同一次导出内后续模块继续复用同一个 4.65GB 连接，只有 CLI 退出时统一关闭。
+ */
+export async function releaseUAssetServer(server?: UAssetServer | null): Promise<void> {
+    if (_serverRefs > 0) _serverRefs--
+    if (_serverRefs > 0 || !_server) return
+    if (server && server !== _server) return
+    const current = _server
+    _server = null
+    await current.close()
+}
+
+/**
  * 关闭单例进程。默认同时关闭共享 DuckDB 缓存（历史行为）；
- * `keepCache: true` 只关进程，供多个调用方分批复用同一缓存（U2 使用）。
+ * `keepCache: true` 只关进程，供多个调用方分批复用同一缓存。
  */
 export async function closeUAssetServer(options: { keepCache?: boolean } = {}): Promise<void> {
+    _serverRefs = 0
     if (_server) {
-        await _server.close()
+        const current = _server
         _server = null
+        await current.close()
     }
     if (!options.keepCache) await closeCache()
+}
+
+/** 进程级 server 统计（当前单例；未启动时为零值）。 */
+export function getUAssetServerStats(): UAssetServerStats {
+    return _server ? { ..._server.stats } : { fmodelHits: 0, fmodelLoads: 0, bytecodeHits: 0, bytecodeLoads: 0 }
 }
 
 export async function clearUAssetCache(): Promise<void> {
