@@ -207,15 +207,18 @@ async function main() {
         return
     }
 
-    // 收集输出（产出文件的模块）：模块返回 { 文件名(可含.json): vnode树 }
+    // 收集输出（产出文件的模块）：模块返回 { 文件名(可含.json): vnode树 }；
+    // languageNeutral 模块的数据只写一次，不进入逐语言渲染。
     const collector = new OutputCollector()
+    const neutralModules = new Set(registry.filter(m => m.languageNeutral).map(m => m.name))
     const outputModules = registry.filter(m => m.outputs && requested.includes(m.name))
     for (const m of outputModules) {
         const artifact = artifacts.get(m.name) as Record<string, unknown> | undefined
         if (!artifact) continue
         for (const [fileName, tree] of Object.entries(artifact)) {
             const name = fileName.endsWith(".json") ? fileName : `${fileName}.json`
-            collector.add(name, tree as any)
+            if (neutralModules.has(m.name)) collector.addNeutral(name, tree)
+            else collector.add(name, tree as any)
         }
     }
 

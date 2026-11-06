@@ -4,7 +4,7 @@ import { getTextMap } from "../src/i18n/TextMap.ts"
 import { renderTree } from "../src/i18n/vnode.ts"
 import { getLuaDataManager } from "../src/lua/LuaDataManager.ts"
 import { charModule } from "../src/modules/char/charModule.ts"
-import { EMIT_TASK_FUNCTIONS, getSkillEntry, HIDDEN_TASK_FUNCTIONS, taskFunctionPolicy } from "../src/modules/char/behaviorChain.ts"
+import { EMIT_TASK_FUNCTIONS, getSkillEntry, HIDDEN_TASK_FUNCTIONS, taskFunctionPolicy } from "../src/modules/skillBehavior/behaviorChain.ts"
 import { skillModule } from "../src/modules/skill/skillModule.ts"
 
 const baseDir = new URL("../out/", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1")

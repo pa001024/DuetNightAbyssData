@@ -1,5 +1,5 @@
 /**
- * behaviorChain — 角色技能行为链的形式化表达。
+ * behaviorChain — 角色技能行为链的形式化表达（纯依赖模块，供 Char / SkillAsset 共用）。
  *
  * 本模块是 `行为` 字段的唯一生产者（char 模块调用 `generateSkillBehavior`）。
  * 输出保持自由中文字符串（`Part (";" Part)*`，面向最终使用者阅读），注册表保证
@@ -222,6 +222,35 @@ export function generateSkillBehavior(
     skillId: number,
     inheritedDescValues?: unknown[]
 ): VNodeTree {
+    return behaviorTextToVNode(generateSkillBehaviorText(dm, skillArtifacts, skillId, inheritedDescValues))
+}
+
+/** 原始行为文本 → vnode：`GT{}` 哨兵转为 TMap 片段，其余原样。 */
+export function behaviorTextToVNode(text: string): VNodeTree {
+    const matches = [...text.matchAll(GT_RE)]
+    if (matches.length === 0) return text
+    const nodes: VNode[] = []
+    let last = 0
+    for (const match of matches) {
+        const index = match.index!
+        if (index > last) nodes.push(text.slice(last, index))
+        nodes.push(TMap(match[1], P_MAP))
+        last = index + match[0].length
+    }
+    if (last < text.length) nodes.push(text.slice(last))
+    return seq(nodes)
+}
+
+/**
+ * 生成行为文本（保留 `GT{}` 哨兵，不做翻译替换）。
+ * 语言无关产物（skill-behavior）用它保留原始 key；char 模块经 behaviorTextToVNode 渲染。
+ */
+export function generateSkillBehaviorText(
+    dm: ModuleContext["dm"],
+    skillArtifacts: SkillArtifacts,
+    skillId: number,
+    inheritedDescValues?: unknown[]
+): string {
     const nodeData = (id: number | string) => dm.getTableItem("SkillNode", id) as Record<string, any> | undefined
     const effectData = (id: number | string) => dm.getTableItem("SkillEffects", id) as Record<string, any> | undefined
     const buffData = (id: number | string) => dm.getTableItem("Buff", id) as Record<string, any> | undefined
@@ -229,7 +258,10 @@ export function generateSkillBehavior(
     const attrConfig = () => (dm.getTable("AttrConfig") as Record<string, any>) || {}
     let bpAddBuff = BP_ADD_BUFF_CACHE.get(dm.root)
     if (!bpAddBuff) {
-        bpAddBuff = JSON.parse(readFileSync(join(import.meta.dir, "data", "BPAddBuff.json"), "utf8")) as Record<string, number[]>
+        bpAddBuff = JSON.parse(readFileSync(join(import.meta.dir, "..", "char", "data", "BPAddBuff.json"), "utf8")) as Record<
+            string,
+            number[]
+        >
         BP_ADD_BUFF_CACHE.set(dm.root, bpAddBuff)
     }
     const entry = getSkillEntry(dm, skillId)
@@ -559,17 +591,5 @@ export function generateSkillBehavior(
     }
 
     walkSkill(skillId)
-    const text = parts.join(";")
-    const matches = [...text.matchAll(GT_RE)]
-    if (matches.length === 0) return text
-    const nodes: VNode[] = []
-    let last = 0
-    for (const match of matches) {
-        const index = match.index!
-        if (index > last) nodes.push(text.slice(last, index))
-        nodes.push(TMap(match[1], P_MAP))
-        last = index + match[0].length
-    }
-    if (last < text.length) nodes.push(text.slice(last))
-    return seq(nodes)
+    return parts.join(";")
 }

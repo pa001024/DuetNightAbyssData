@@ -19,6 +19,11 @@ export interface ModulePlugin extends ModuleDefinition {
      * 为 true 的插件进入 `bun run warmup` 的默认预热构建集。
      */
     uasset?: boolean
+    /**
+     * 产物是语言无关数据：只写一次 `final/<文件名>`，不进入逐语言渲染。
+     * 仅用于不含 vnode 的新增数据文件；既有模块保持默认。
+     */
+    languageNeutral?: boolean
 }
 
 /** 模块目录内插件注册文件名（目录约定） */
@@ -30,16 +35,19 @@ function normalizePlugin(folder: string, index: number, raw: unknown): ModulePlu
     const rec = raw as Record<string, unknown>
     if (typeof rec.name !== "string" || !rec.name) throw new Error(`模块插件 ${where} 缺少非空字符串 name`)
     if (typeof rec.build !== "function") throw new Error(`模块插件 ${where}（${rec.name}）缺少 build 函数`)
-    const { deps, outputs, uasset, build } = rec
+    const { deps, outputs, uasset, languageNeutral, build } = rec
     if (deps !== undefined && (!Array.isArray(deps) || deps.some(d => typeof d !== "string")))
         throw new Error(`模块插件 ${where}（${rec.name}）的 deps 必须是字符串数组`)
     if (outputs !== undefined && typeof outputs !== "boolean") throw new Error(`模块插件 ${where}（${rec.name}）的 outputs 必须是布尔值`)
     if (uasset !== undefined && typeof uasset !== "boolean") throw new Error(`模块插件 ${where}（${rec.name}）的 uasset 必须是布尔值`)
+    if (languageNeutral !== undefined && typeof languageNeutral !== "boolean")
+        throw new Error(`模块插件 ${where}（${rec.name}）的 languageNeutral 必须是布尔值`)
     return {
         name: rec.name,
         deps: (deps as string[] | undefined) ?? [],
         outputs: (outputs as boolean | undefined) ?? true,
         uasset: (uasset as boolean | undefined) ?? false,
+        languageNeutral: (languageNeutral as boolean | undefined) ?? false,
         build: build as ModulePlugin["build"],
     }
 }

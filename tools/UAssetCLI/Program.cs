@@ -18,9 +18,14 @@
 //         -> {"ok":true,"result":[FModel Output/Exports 数组格式...]}（地图导出用）
 //       {"cmd":"fmodel_dir","path":"<目录>","root":"<Exports根>"[, "mount":"EM/Content"]}
 //         -> {"ok":true,"result":{"Files":{包路径: [数组...]}}}（递归）
+//       {"cmd":"bytecode","path":"<文件>"}       -> {"ok":true,"result":<类型化字节码文档>}
+//         result 含 class/events/variables/components/functions；每个函数保留 opcode、
+//         语句字节偏移和基本块，不剥离表达式类型（见 BuildBytecodeResult）。
+//       请求可带 "id"（任意 JSON 值），响应原样回传，供并发调用关联请求与响应。
 //       {"cmd":"shutdown"}                       -> {"ok":true,"closed":true} 后退出
 //  2) 一次性模式：UAssetCLI <文件|目录>  直接打印解析结果(字节码)后退出。
 //     UAssetCLI export <文件|目录> 直接打印 FModel 式整体 JSON 后退出。
+//     UAssetCLI export --keep-types <文件|目录> 同上，但保留 $type/$id/$ref。
 //
 // 字节码调用汇总结构(通用，不做游戏语义过滤)：
 //   { "Function": "<函数名>", "IntParams": [int...], "AllParams": [参数摘要...] }
@@ -30,9 +35,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
 using UAssetAPI;
 using UAssetAPI.ExportTypes;
+using UAssetAPI.FieldTypes;
 using UAssetAPI.Kismet;
 using UAssetAPI.Kismet.Bytecode;
 using UAssetAPI.Kismet.Bytecode.Expressions;
@@ -69,20 +76,28 @@ class Program
             return RunServer();
         if (args.Length > 1 && args[0] == "export")
         {
-            // 一次性 FModel 式整体 JSON 导出
-            if (File.Exists(args[1]))
+            // 一次性 FModel 式整体 JSON 导出；--keep-types 保留 UAssetAPI round-trip 元数据
+            bool keepTypes = args[1] == "--keep-types";
+            int argIndex = keepTypes ? 2 : 1;
+            if (args.Length <= argIndex)
             {
-                var r = ExportFile(args[1]);
+                Console.Error.WriteLine("用法: UAssetCLI export [--keep-types] <文件|目录>");
+                return 1;
+            }
+            var target = args[argIndex];
+            if (File.Exists(target))
+            {
+                var r = ExportFile(target, keepTypes);
                 if (r.ok) Console.WriteLine(r.json.ToString(Newtonsoft.Json.Formatting.Indented));
                 else { Console.Error.WriteLine("导出失败: " + r.error); return 1; }
             }
-            else if (Directory.Exists(args[1]))
+            else if (Directory.Exists(target))
             {
-                Console.WriteLine(ExportDirectory(args[1]).ToString(Newtonsoft.Json.Formatting.Indented));
+                Console.WriteLine(ExportDirectory(target, keepTypes).ToString(Newtonsoft.Json.Formatting.Indented));
             }
             else
             {
-                Console.Error.WriteLine("路径不存在: " + args[1]);
+                Console.Error.WriteLine("路径不存在: " + target);
                 return 1;
             }
             return 0;
@@ -102,7 +117,7 @@ class Program
             Console.WriteLine(root.ToString(Newtonsoft.Json.Formatting.Indented));
             return 0;
         }
-        Console.Error.WriteLine("用法: UAssetCLI server | export <文件|目录> | <uasset文件|目录>");
+        Console.Error.WriteLine("用法: UAssetCLI server | export [--keep-types] <文件|目录> | <uasset文件|目录>");
         return 1;
     }
 
@@ -116,15 +131,17 @@ class Program
         {
             if (string.IsNullOrWhiteSpace(line)) continue;
             JObject reply;
+            JToken? reqId = null;
             try
             {
                 var req = JObject.Parse(line);
+                reqId = req["id"];
                 var cmd = (string)req["cmd"];
                 switch (cmd)
                 {
                     case "shutdown":
                         reply = new JObject { ["ok"] = true, ["closed"] = true };
-                        WriteLine(reply);
+                        WriteLineWithId(reply, reqId);
                         return 0;
                     case "parse_dir":
                         reply = new JObject
@@ -140,9 +157,21 @@ class Program
                             ["result"] = new JObject { ["File"] = ParseFile((string)req["path"]) },
                         };
                         break;
+                    case "bytecode":
+                        // 类型化字节码：保留 opcode、语句偏移与基本块（不下钻游戏语义）
+                        var bcPath = (string?)req["path"] ?? "";
+                        try
+                        {
+                            reply = new JObject { ["ok"] = true, ["result"] = BuildBytecodeResult(bcPath) };
+                        }
+                        catch (Exception e)
+                        {
+                            reply = new JObject { ["ok"] = false, ["error"] = RedactPath(e.Message, bcPath) };
+                        }
+                        break;
                     case "export":
                         // FModel 式整体 JSON(单文件)
-                        var er = ExportFile((string)req["path"]);
+                        var er = ExportFile((string)req["path"], req["keepTypes"]?.Value<bool>() ?? false);
                         if (er.ok)
                             reply = new JObject { ["ok"] = true, ["result"] = er.json };
                         else
@@ -213,15 +242,54 @@ class Program
             {
                 reply = new JObject { ["ok"] = false, ["error"] = e.Message };
             }
-            WriteLine(reply);
+            WriteLineWithId(reply, reqId);
         }
         return 0;
+    }
+
+    // 请求带 "id" 时原样回传，供调用方在并发请求中关联响应
+    static void WriteLineWithId(JObject obj, JToken? id)
+    {
+        if (id != null) obj["id"] = id.DeepClone();
+        WriteLine(obj);
     }
 
     static void WriteLine(JObject obj)
     {
         Console.WriteLine(obj.ToString(Newtonsoft.Json.Formatting.None));
         Console.Out.Flush();
+    }
+
+    // 错误信息里不出现绝对路径（bytecode 输出契约）：按段匹配，正/反斜杠都视为分隔符，
+    // 同时覆盖调用方给的形式与 GetFullPath 规范化后的形式。
+    static string RedactPath(string message, string path)
+    {
+        if (string.IsNullOrEmpty(message) || string.IsNullOrEmpty(path)) return message;
+        var name = Path.GetFileName(path);
+        var redacted = message;
+        foreach (var candidate in PathVariants(path))
+        {
+            if (string.IsNullOrEmpty(candidate)) continue;
+            var pattern = string.Join("[\\\\/]", candidate.Split(new[] { '\\', '/' }, StringSplitOptions.RemoveEmptyEntries).Select(Regex.Escape));
+            if (pattern.Length == 0) continue;
+            redacted = Regex.Replace(redacted, pattern, name, RegexOptions.IgnoreCase);
+        }
+        return redacted;
+    }
+
+    static IEnumerable<string> PathVariants(string path)
+    {
+        var variants = new List<string> { path };
+        try
+        {
+            var full = Path.GetFullPath(path);
+            if (!string.Equals(full, path, StringComparison.OrdinalIgnoreCase)) variants.Add(full);
+        }
+        catch
+        {
+            /* 路径无法规范化时只替换原始形式 */
+        }
+        return variants;
     }
 
     // ---------- 解析 ----------
@@ -328,6 +396,7 @@ class Program
 
     static string ResolveStackNode(FPackageIndex idx, UAsset asset)
     {
+        if (idx == null) return "null";
         try
         {
             if (idx.IsImport()) return idx.ToImport(asset).ObjectName.ToString();
@@ -355,7 +424,7 @@ class Program
         catch { return "?"; }
     }
 
-    static string SafeStr(object v)
+    static string SafeStr(object? v)
     {
         try { return v?.ToString() ?? "?"; } catch { return "?"; }
     }
@@ -395,15 +464,804 @@ class Program
         return list;
     }
 
+    // ---------- 类型化字节码（bytecode 命令） ----------
+    // 输出契约（schemaVersion 1）：
+    //   { schemaVersion, asset, class:{name,super,interfaces[]},
+    //     events:[{name,target,entryOffset,flags[]}],
+    //     variables:[{name,type,struct?,innerType?,enum?,default}],
+    //     components:[...],
+    //     functions:[{name,flags[],params[],locals[],codeSize,body[],blocks[]} | {name,error}] }
+    // body 中每个表达式都带 op（EExprToken 名）与语句/子表达式字节偏移；
+    // blocks 的 successors 用 block 索引表达后继，无法落到语句边界的偏移保留 targetOffset。
+    // 只输出资产名与对象名，不含文件系统绝对路径。
+
+    static JObject BuildBytecodeResult(string path)
+    {
+        var asset = ReadAsset(path);
+        var root = new JObject
+        {
+            ["schemaVersion"] = 1,
+            ["asset"] = Path.GetFileNameWithoutExtension(path),
+            ["class"] = BuildClassInfo(asset),
+        };
+        var events = new JArray();
+        var functions = new JArray();
+        foreach (var fe in asset.Exports.OfType<FunctionExport>())
+        {
+            try
+            {
+                functions.Add(BuildFunctionInfo(asset, fe, events));
+            }
+            catch (Exception e)
+            {
+                // 单个函数解析失败不静默丢弃：显式记录错误（脱敏路径），其余函数继续输出
+                functions.Add(new JObject { ["name"] = SafeStr(fe.ObjectName), ["error"] = RedactPath(e.Message, path) });
+            }
+        }
+        root["events"] = events;
+        root["variables"] = BuildCdoVariables(asset, path);
+        root["components"] = BuildCdoComponents(asset, path);
+        root["functions"] = functions;
+        return root;
+    }
+
+    static JObject BuildClassInfo(UAsset asset)
+    {
+        var jo = new JObject();
+        var cls = asset.Exports.OfType<ClassExport>().FirstOrDefault();
+        if (cls == null)
+        {
+            jo["name"] = JValue.CreateNull();
+            jo["super"] = JValue.CreateNull();
+            jo["interfaces"] = new JArray();
+            return jo;
+        }
+        jo["name"] = SafeStr(cls.ObjectName);
+        jo["super"] = cls.SuperStruct == null || cls.SuperStruct.IsNull()
+            ? JValue.CreateNull()
+            : (JToken)ResolveStackNode(cls.SuperStruct, asset);
+        var interfaces = new JArray();
+        foreach (var i in cls.Interfaces ?? Array.Empty<SerializedInterfaceReference>())
+        {
+            interfaces.Add(new JObject
+            {
+                ["name"] = ResolveStackNode(FPackageIndex.FromRawIndex(i.Class), asset),
+                ["implementedByBlueprint"] = i.bImplementedByK2,
+            });
+        }
+        jo["interfaces"] = interfaces;
+        return jo;
+    }
+
+    static JObject BuildFunctionInfo(UAsset asset, FunctionExport fe, JArray events)
+    {
+        var jo = new JObject { ["name"] = SafeStr(fe.ObjectName) };
+        jo["flags"] = FlagNames(fe.FunctionFlags);
+
+        var parameters = new JArray();
+        var locals = new JArray();
+        foreach (var p in fe.LoadedProperties ?? Array.Empty<FProperty>())
+        {
+            if (p == null) continue;
+            var flags = p.PropertyFlags;
+            bool isParm = (flags & EPropertyFlags.CPF_Parm) != 0;
+            var item = new JObject
+            {
+                ["name"] = SafeStr(p.Name),
+                ["type"] = SafeStr(p.SerializedType),
+                ["out"] = (flags & EPropertyFlags.CPF_OutParm) != 0,
+            };
+            if ((flags & EPropertyFlags.CPF_ReturnParm) != 0) item["return"] = true;
+            AddFieldTypeDetail(asset, p, item);
+            (isParm ? parameters : locals).Add(item);
+        }
+        jo["params"] = parameters;
+        jo["locals"] = locals;
+
+        var code = fe.ScriptBytecode ?? Array.Empty<KismetExpression>();
+        // UAssetAPI 的 Visit 按序列化顺序回调每个子表达式及其字节偏移；
+        // 顶层语句起点由 GetSize 累加（与 ScriptBytecodeSize 一致）。
+        var offsets = new Dictionary<KismetExpression, uint>();
+        var starts = new uint[code.Length];
+        uint cursor = 0;
+        for (int i = 0; i < code.Length; i++)
+        {
+            starts[i] = cursor;
+            code[i].Visit(asset, ref cursor, (expr, offset) => offsets[expr] = offset);
+        }
+
+        jo["codeSize"] = fe.ScriptBytecodeSize;
+        var body = new JArray();
+        foreach (var stmt in code) body.Add(SerializeExpression(asset, stmt, offsets));
+        jo["body"] = body;
+        jo["blocks"] = BuildBlocks(code, starts, fe.ScriptBytecodeSize);
+
+        TryAddEvent(asset, fe, code, events);
+        return jo;
+    }
+
+    // 事件入口：函数体首个 BlueprintEvent 调用是 ExecuteUbergraph_X(IntConst offset)。
+    static void TryAddEvent(UAsset asset, FunctionExport fe, KismetExpression[] code, JArray events)
+    {
+        foreach (var stmt in code)
+        {
+            string target;
+            KismetExpression[] args;
+            if (stmt is EX_CallMath cm)
+            {
+                target = ResolveStackNode(cm.StackNode, asset);
+                args = cm.Parameters;
+            }
+            else if (stmt is EX_FinalFunction ff)
+            {
+                target = ResolveStackNode(ff.StackNode, asset);
+                args = ff.Parameters;
+            }
+            else
+            {
+                continue;
+            }
+            if (target == null || !target.StartsWith("ExecuteUbergraph_", StringComparison.Ordinal)) continue;
+            events.Add(new JObject
+            {
+                ["name"] = SafeStr(fe.ObjectName),
+                ["target"] = target,
+                ["entryOffset"] = FirstIntConst(args) is int entry ? entry : (JToken)JValue.CreateNull(),
+                ["flags"] = FlagNames(fe.FunctionFlags),
+            });
+            return;
+        }
+    }
+
+    static int? FirstIntConst(KismetExpression[] args)
+    {
+        foreach (var arg in args ?? Array.Empty<KismetExpression>())
+        {
+            if (arg is EX_IntConst ic) return ic.Value;
+            if (arg is EX_IntConstByte icb) return icb.Value;
+            if (arg is EX_NothingInt32 ni) return ni.Value;
+        }
+        return null;
+    }
+
+    static JArray FlagNames<T>(T flags) where T : struct, Enum
+    {
+        var arr = new JArray();
+        var text = flags.ToString();
+        if (string.IsNullOrEmpty(text) || text == "0") return arr;
+        foreach (var part in text.Split(','))
+        {
+            var name = part.Trim();
+            if (name.Length > 0) arr.Add(name);
+        }
+        return arr;
+    }
+
+    static void AddFieldTypeDetail(UAsset asset, FProperty p, JObject jo)
+    {
+        if (p is FStructProperty sp) jo["struct"] = ResolveStackNode(sp.Struct, asset);
+        else if (p is FObjectProperty op) jo["objectClass"] = ResolveStackNode(op.PropertyClass, asset);
+        else if (p is FEnumProperty ep) jo["enum"] = ResolveStackNode(ep.Enum, asset);
+        else if (p is FByteProperty bp && bp.Enum != null && !bp.Enum.IsNull()) jo["enum"] = ResolveStackNode(bp.Enum, asset);
+        else if (p is FArrayProperty ap && ap.Inner != null)
+        {
+            jo["innerType"] = SafeStr(ap.Inner.SerializedType);
+            AddFieldTypeDetail(asset, ap.Inner, jo);
+        }
+        else if (p is FMapProperty mp)
+        {
+            jo["keyType"] = SafeStr(mp.KeyProp?.SerializedType);
+            jo["valueType"] = SafeStr(mp.ValueProp?.SerializedType);
+        }
+    }
+
+    // 表达式树：保留 opcode 与全部可递归子表达式；未知类型显式标记 unsupported。
+    static JToken SerializeExpression(UAsset asset, KismetExpression e, IDictionary<KismetExpression, uint> offsets)
+    {
+        if (e == null) return JValue.CreateNull();
+        var jo = new JObject { ["op"] = e.Token.ToString() };
+        if (offsets.TryGetValue(e, out var off)) jo["offset"] = off;
+
+        switch (e)
+        {
+            // 派生自 EX_FinalFunction / EX_VirtualFunction 的类型必须先于基类匹配
+            case EX_CallMath cm:
+                jo["function"] = ResolveStackNode(cm.StackNode, asset);
+                jo["args"] = ExpressionArray(asset, cm.Parameters, offsets);
+                break;
+            case EX_CallMulticastDelegate cmd:
+                jo["delegate"] = SerializeExpression(asset, cmd.Delegate, offsets);
+                jo["function"] = ResolveStackNode(cmd.StackNode, asset);
+                jo["args"] = ExpressionArray(asset, cmd.Parameters, offsets);
+                break;
+            case EX_FinalFunction ff:
+                jo["function"] = ResolveStackNode(ff.StackNode, asset);
+                jo["args"] = ExpressionArray(asset, ff.Parameters, offsets);
+                break;
+            case EX_VirtualFunction vf:
+                jo["function"] = SafeStr(vf.VirtualFunctionName);
+                jo["args"] = ExpressionArray(asset, vf.Parameters, offsets);
+                break;
+            case EX_Let let:
+                jo["property"] = PointerJson(asset, let.Value);
+                jo["variable"] = SerializeExpression(asset, let.Variable, offsets);
+                jo["value"] = SerializeExpression(asset, let.Expression, offsets);
+                break;
+            case EX_LetBase lb:
+                jo["variable"] = SerializeExpression(asset, lb.VariableExpression, offsets);
+                jo["value"] = SerializeExpression(asset, lb.AssignmentExpression, offsets);
+                break;
+            case EX_LetValueOnPersistentFrame lpf:
+                jo["property"] = PointerJson(asset, lpf.DestinationProperty);
+                jo["value"] = SerializeExpression(asset, lpf.AssignmentExpression, offsets);
+                break;
+            case EX_Context ctx:
+                jo["object"] = SerializeExpression(asset, ctx.ObjectExpression, offsets);
+                jo["context"] = SerializeExpression(asset, ctx.ContextExpression, offsets);
+                jo["property"] = PointerJson(asset, ctx.RValuePointer);
+                break;
+            case EX_Jump jump:
+                jo["targetOffset"] = jump.CodeOffset;
+                break;
+            case EX_JumpIfNot jumpIfNot:
+                jo["targetOffset"] = jumpIfNot.CodeOffset;
+                jo["condition"] = SerializeExpression(asset, jumpIfNot.BooleanExpression, offsets);
+                break;
+            case EX_PushExecutionFlow push:
+                jo["targetOffset"] = push.PushingAddress;
+                break;
+            case EX_ComputedJump computed:
+                jo["target"] = SerializeExpression(asset, computed.CodeOffsetExpression, offsets);
+                break;
+            case EX_Skip skip:
+                jo["targetOffset"] = skip.CodeOffset;
+                jo["expression"] = SerializeExpression(asset, skip.SkipExpression, offsets);
+                break;
+            case EX_Return ret:
+                jo["value"] = SerializeExpression(asset, ret.ReturnExpression, offsets);
+                break;
+            case EX_SwitchValue sw:
+                jo["endTargetOffset"] = sw.EndGotoOffset;
+                jo["index"] = SerializeExpression(asset, sw.IndexTerm, offsets);
+                jo["default"] = SerializeExpression(asset, sw.DefaultTerm, offsets);
+                var cases = new JArray();
+                foreach (var c in sw.Cases ?? Array.Empty<FKismetSwitchCase>())
+                {
+                    cases.Add(new JObject
+                    {
+                        ["index"] = SerializeExpression(asset, c.CaseIndexValueTerm, offsets),
+                        ["nextOffset"] = c.NextOffset,
+                        ["value"] = SerializeExpression(asset, c.CaseTerm, offsets),
+                    });
+                }
+                jo["cases"] = cases;
+                break;
+            case EX_CastBase cast:
+                jo["class"] = ResolveStackNode(cast.ClassPtr, asset);
+                jo["target"] = SerializeExpression(asset, cast.Target, offsets);
+                break;
+            case EX_PrimitiveCast primitive:
+                jo["conversion"] = SafeStr(primitive.ConversionType);
+                jo["target"] = SerializeExpression(asset, primitive.Target, offsets);
+                break;
+            case EX_VariableBase variable:
+                jo["property"] = PointerJson(asset, variable.Variable);
+                break;
+            case EX_StructMemberContext member:
+                jo["member"] = PointerJson(asset, member.StructMemberExpression);
+                jo["struct"] = SerializeExpression(asset, member.StructExpression, offsets);
+                break;
+            case EX_ArrayGetByRef arrayRef:
+                jo["array"] = SerializeExpression(asset, arrayRef.ArrayVariable, offsets);
+                jo["index"] = SerializeExpression(asset, arrayRef.ArrayIndex, offsets);
+                break;
+            case EX_SetArray setArray:
+                jo["property"] = SerializeExpression(asset, setArray.AssigningProperty, offsets);
+                jo["innerType"] = ResolveStackNode(setArray.ArrayInnerProp, asset);
+                jo["elements"] = ExpressionArray(asset, setArray.Elements, offsets);
+                break;
+            case EX_SetConst setConst:
+                jo["innerProperty"] = PointerJson(asset, setConst.InnerProperty);
+                jo["elements"] = ExpressionArray(asset, setConst.Elements, offsets);
+                break;
+            case EX_SetMap setMap:
+                jo["property"] = SerializeExpression(asset, setMap.MapProperty, offsets);
+                jo["elements"] = ExpressionArray(asset, setMap.Elements, offsets);
+                break;
+            case EX_SetSet setSet:
+                jo["property"] = SerializeExpression(asset, setSet.SetProperty, offsets);
+                jo["elements"] = ExpressionArray(asset, setSet.Elements, offsets);
+                break;
+            case EX_ArrayConst arrayConst:
+                jo["innerProperty"] = PointerJson(asset, arrayConst.InnerProperty);
+                jo["elements"] = ExpressionArray(asset, arrayConst.Elements, offsets);
+                break;
+            case EX_MapConst mapConst:
+                jo["keyProperty"] = PointerJson(asset, mapConst.KeyProperty);
+                jo["valueProperty"] = PointerJson(asset, mapConst.ValueProperty);
+                jo["elements"] = ExpressionArray(asset, mapConst.Elements, offsets);
+                break;
+            case EX_StructConst structConst:
+                jo["struct"] = ResolveStackNode(structConst.Struct, asset);
+                jo["size"] = structConst.StructSize;
+                jo["elements"] = ExpressionArray(asset, structConst.Value, offsets);
+                break;
+            case EX_Assert assert:
+                jo["lineNumber"] = assert.LineNumber;
+                jo["debugMode"] = assert.DebugMode;
+                jo["condition"] = SerializeExpression(asset, assert.AssertExpression, offsets);
+                break;
+            case EX_InterfaceContext interfaceContext:
+                jo["value"] = SerializeExpression(asset, interfaceContext.InterfaceValue, offsets);
+                break;
+            case EX_PopExecutionFlowIfNot popIfNot:
+                jo["condition"] = SerializeExpression(asset, popIfNot.BooleanExpression, offsets);
+                break;
+            case EX_IntConst intConst:
+                jo["value"] = intConst.Value;
+                break;
+            case EX_IntConstByte intConstByte:
+                jo["value"] = intConstByte.Value;
+                break;
+            case EX_ByteConst byteConst:
+                jo["value"] = byteConst.Value;
+                break;
+            case EX_Int64Const int64Const:
+                jo["value"] = int64Const.Value;
+                break;
+            case EX_UInt64Const uint64Const:
+                jo["value"] = uint64Const.Value;
+                break;
+            case EX_NothingInt32 nothingInt32:
+                jo["value"] = nothingInt32.Value;
+                break;
+            case EX_SkipOffsetConst skipOffset:
+                jo["value"] = skipOffset.Value;
+                break;
+            case EX_FloatConst floatConst:
+                jo["value"] = floatConst.Value;
+                break;
+            case EX_DoubleConst doubleConst:
+                jo["value"] = doubleConst.Value;
+                break;
+            case EX_StringConst stringConst:
+                jo["value"] = stringConst.Value;
+                break;
+            case EX_UnicodeStringConst unicodeConst:
+                jo["value"] = unicodeConst.Value;
+                break;
+            case EX_NameConst nameConst:
+                jo["value"] = SafeStr(nameConst.Value);
+                break;
+            case EX_TextConst textConst:
+                jo["value"] = TextConstJson(asset, textConst.Value, offsets);
+                break;
+            case EX_ObjectConst objectConst:
+                jo["object"] = ConstRefJson(asset, objectConst.GetObject<FPackageIndex>());
+                break;
+            case EX_SoftObjectConst softObject:
+                jo["value"] = SerializeExpression(asset, softObject.Value, offsets);
+                break;
+            case EX_FieldPathConst fieldPath:
+                jo["value"] = SerializeExpression(asset, fieldPath.Value, offsets);
+                break;
+            case EX_VectorConst vector:
+                jo["value"] = new JObject { ["x"] = vector.Value.X, ["y"] = vector.Value.Y, ["z"] = vector.Value.Z };
+                break;
+            case EX_Vector3fConst vector3f:
+                jo["value"] = new JObject { ["x"] = vector3f.X, ["y"] = vector3f.Y, ["z"] = vector3f.Z };
+                break;
+            case EX_RotationConst rotation:
+                jo["value"] = new JObject
+                {
+                    ["pitch"] = rotation.Value.Pitch,
+                    ["yaw"] = rotation.Value.Yaw,
+                    ["roll"] = rotation.Value.Roll,
+                };
+                break;
+            case EX_TransformConst transform:
+                jo["value"] = new JObject
+                {
+                    ["translation"] = new JObject
+                    {
+                        ["x"] = transform.Value.Translation.X,
+                        ["y"] = transform.Value.Translation.Y,
+                        ["z"] = transform.Value.Translation.Z,
+                    },
+                    ["rotation"] = new JObject
+                    {
+                        ["x"] = transform.Value.Rotation.X,
+                        ["y"] = transform.Value.Rotation.Y,
+                        ["z"] = transform.Value.Rotation.Z,
+                        ["w"] = transform.Value.Rotation.W,
+                    },
+                    ["scale"] = new JObject
+                    {
+                        ["x"] = transform.Value.Scale3D.X,
+                        ["y"] = transform.Value.Scale3D.Y,
+                        ["z"] = transform.Value.Scale3D.Z,
+                    },
+                };
+                break;
+            case EX_InstanceDelegate instanceDelegate:
+                jo["function"] = SafeStr(instanceDelegate.FunctionName);
+                break;
+            case EX_BindDelegate bindDelegate:
+                jo["function"] = SafeStr(bindDelegate.FunctionName);
+                jo["delegate"] = SerializeExpression(asset, bindDelegate.Delegate, offsets);
+                jo["object"] = SerializeExpression(asset, bindDelegate.ObjectTerm, offsets);
+                break;
+            case EX_AddMulticastDelegate addDelegate:
+                jo["delegate"] = SerializeExpression(asset, addDelegate.Delegate, offsets);
+                jo["delegateToAdd"] = SerializeExpression(asset, addDelegate.DelegateToAdd, offsets);
+                break;
+            case EX_RemoveMulticastDelegate removeDelegate:
+                jo["delegate"] = SerializeExpression(asset, removeDelegate.Delegate, offsets);
+                jo["delegateToAdd"] = SerializeExpression(asset, removeDelegate.DelegateToAdd, offsets);
+                break;
+            case EX_ClearMulticastDelegate clearDelegate:
+                jo["delegate"] = SerializeExpression(asset, clearDelegate.DelegateToClear, offsets);
+                break;
+            case EX_BitFieldConst bitField:
+                jo["property"] = PointerJson(asset, bitField.Property);
+                jo["value"] = bitField.Value;
+                break;
+            case EX_PropertyConst propertyConst:
+                jo["property"] = PointerJson(asset, propertyConst.Property);
+                break;
+            case EX_InstrumentationEvent instrumentation:
+                jo["eventType"] = SafeStr(instrumentation.EventType);
+                jo["eventName"] = SafeStr(instrumentation.EventName);
+                break;
+            default:
+                // 无子字段的 opcode 只保留 op/offset；UAssetAPI 新增且未覆盖的类型显式标记
+                if (!KnownLeafOps.Contains(e.GetType().Name)) jo["unsupported"] = true;
+                break;
+        }
+        return jo;
+    }
+
+    static readonly HashSet<string> KnownLeafOps = new HashSet<string>(StringComparer.Ordinal)
+    {
+        "EX_Self", "EX_True", "EX_False", "EX_IntZero", "EX_IntOne", "EX_NoObject", "EX_NoInterface",
+        "EX_Nothing", "EX_EndOfScript", "EX_EndFunctionParms", "EX_EndArray", "EX_EndArrayConst",
+        "EX_EndMap", "EX_EndMapConst", "EX_EndParmValue", "EX_EndSet", "EX_EndSetConst",
+        "EX_EndStructConst", "EX_Tracepoint", "EX_WireTracepoint", "EX_Breakpoint", "EX_DeprecatedOp4A",
+        "EX_PopExecutionFlow",
+    };
+
+    static JArray ExpressionArray(UAsset asset, KismetExpression[] expressions, IDictionary<KismetExpression, uint> offsets)
+    {
+        var arr = new JArray();
+        foreach (var e in expressions ?? Array.Empty<KismetExpression>()) arr.Add(SerializeExpression(asset, e, offsets));
+        return arr;
+    }
+
+    static JToken PointerJson(UAsset asset, KismetPropertyPointer pointer)
+    {
+        if (pointer == null) return JValue.CreateNull();
+        var jo = new JObject();
+        if (pointer.Old != null && !pointer.Old.IsNull())
+        {
+            jo["path"] = new JArray(ResolveStackNode(pointer.Old, asset));
+            return jo;
+        }
+        var path = new JArray();
+        foreach (var name in pointer.New?.Path ?? Array.Empty<FName>()) path.Add(SafeStr(name));
+        if (path.Count == 0) return JValue.CreateNull();
+        jo["path"] = path;
+        if (pointer.New != null && pointer.New.ResolvedOwner != null && !pointer.New.ResolvedOwner.IsNull())
+            jo["owner"] = ResolveStackNode(pointer.New.ResolvedOwner, asset);
+        return jo;
+    }
+
+    static JObject ConstRefJson(UAsset asset, FPackageIndex index)
+    {
+        var jo = new JObject();
+        if (index == null || index.IsNull())
+        {
+            jo["name"] = JValue.CreateNull();
+            return jo;
+        }
+        try
+        {
+            if (index.IsImport())
+            {
+                jo["kind"] = "import";
+                jo["name"] = SafeStr(index.ToImport(asset).ObjectName);
+                jo["class"] = SafeStr(index.ToImport(asset).ClassName);
+            }
+            else if (index.IsExport())
+            {
+                jo["kind"] = "export";
+                jo["name"] = SafeStr(index.ToExport(asset).ObjectName);
+            }
+            else
+            {
+                jo["kind"] = "unknown";
+                jo["name"] = JValue.CreateNull();
+            }
+        }
+        catch (Exception)
+        {
+            jo["kind"] = "unknown";
+            jo["name"] = JValue.CreateNull();
+        }
+        return jo;
+    }
+
+    static JObject TextConstJson(UAsset asset, FScriptText text, IDictionary<KismetExpression, uint> offsets)
+    {
+        var jo = new JObject();
+        if (text == null) return jo;
+        jo["textLiteralType"] = SafeStr(text.TextLiteralType);
+        switch (text.TextLiteralType)
+        {
+            case EBlueprintTextLiteralType.LocalizedText:
+                jo["namespace"] = SerializeExpression(asset, text.LocalizedNamespace, offsets);
+                jo["key"] = SerializeExpression(asset, text.LocalizedKey, offsets);
+                jo["source"] = SerializeExpression(asset, text.LocalizedSource, offsets);
+                break;
+            case EBlueprintTextLiteralType.InvariantText:
+                jo["value"] = SerializeExpression(asset, text.InvariantLiteralString, offsets);
+                break;
+            case EBlueprintTextLiteralType.LiteralString:
+                jo["value"] = SerializeExpression(asset, text.LiteralString, offsets);
+                break;
+            case EBlueprintTextLiteralType.StringTableEntry:
+                jo["table"] = ResolveStackNode(text.StringTableAsset, asset);
+                jo["id"] = SerializeExpression(asset, text.StringTableId, offsets);
+                jo["key"] = SerializeExpression(asset, text.StringTableKey, offsets);
+                break;
+        }
+        return jo;
+    }
+
+    // 基本块：起点 = 函数入口 / 跳转目标 / 硬终止语句之后；successors 给出静态控制流边。
+    static JArray BuildBlocks(KismetExpression[] code, uint[] starts, int codeSize)
+    {
+        var blocks = new JArray();
+        if (code.Length == 0) return blocks;
+
+        var statementByOffset = new Dictionary<uint, int>();
+        for (int i = 0; i < code.Length; i++) statementByOffset[starts[i]] = i;
+
+        var isStart = new bool[code.Length];
+        isStart[0] = true;
+        for (int i = 0; i < code.Length; i++)
+        {
+            foreach (var target in StaticTargets(code[i]))
+                if (statementByOffset.TryGetValue(target, out var targetStatement)) isStart[targetStatement] = true;
+            if (IsHardTerminator(code[i]) && i + 1 < code.Length) isStart[i + 1] = true;
+        }
+
+        var startStatements = new List<int>();
+        for (int i = 0; i < code.Length; i++)
+            if (isStart[i]) startStatements.Add(i);
+
+        var blockByOffset = new Dictionary<uint, int>();
+        for (int b = 0; b < startStatements.Count; b++) blockByOffset[starts[startStatements[b]]] = b;
+
+        for (int b = 0; b < startStatements.Count; b++)
+        {
+            int first = startStatements[b];
+            int last = (b + 1 < startStatements.Count ? startStatements[b + 1] : code.Length) - 1;
+            var statements = new JArray();
+            for (int i = first; i <= last; i++) statements.Add(i);
+            var jo = new JObject
+            {
+                ["index"] = b,
+                ["startOffset"] = starts[first],
+                ["endOffset"] = last + 1 < code.Length ? starts[last + 1] : (uint)codeSize,
+                ["statements"] = statements,
+            };
+
+            var successors = new JArray();
+            for (int i = first; i <= last; i++)
+            {
+                foreach (var edge in ControlFlowEdges(code[i]))
+                {
+                    var item = new JObject { ["kind"] = edge.kind, ["from"] = i };
+                    if (edge.targetOffset.HasValue)
+                    {
+                        item["targetOffset"] = edge.targetOffset.Value;
+                        item["block"] = blockByOffset.TryGetValue(edge.targetOffset.Value, out var targetBlock)
+                            ? (JToken)targetBlock
+                            : JValue.CreateNull();
+                    }
+                    else
+                    {
+                        item["block"] = JValue.CreateNull();
+                    }
+                    successors.Add(item);
+                }
+            }
+            if (!IsHardTerminator(code[last]) && b + 1 < startStatements.Count)
+                successors.Add(new JObject { ["kind"] = "fallthrough", ["block"] = b + 1 });
+            jo["successors"] = successors;
+            blocks.Add(jo);
+        }
+        return blocks;
+    }
+
+    static IEnumerable<(string kind, uint? targetOffset)> ControlFlowEdges(KismetExpression e)
+    {
+        switch (e)
+        {
+            case EX_Jump jump:
+                yield return ("jump", jump.CodeOffset);
+                break;
+            case EX_JumpIfNot jumpIfNot:
+                yield return ("jumpIfNot", jumpIfNot.CodeOffset);
+                break;
+            case EX_PushExecutionFlow push:
+                yield return ("pushFlow", push.PushingAddress);
+                break;
+            case EX_Skip skip:
+                yield return ("skip", skip.CodeOffset);
+                break;
+            case EX_SwitchValue sw:
+                foreach (var c in sw.Cases ?? Array.Empty<FKismetSwitchCase>())
+                    yield return ("switchCase", c.NextOffset);
+                yield return ("switchEnd", sw.EndGotoOffset);
+                break;
+            case EX_ComputedJump _:
+                yield return ("computedJump", null);
+                break;
+            case EX_PopExecutionFlowIfNot _:
+                yield return ("popFlowIfNot", null);
+                break;
+            case EX_PopExecutionFlow _:
+                yield return ("popFlow", null);
+                break;
+        }
+    }
+
+    static IEnumerable<uint> StaticTargets(KismetExpression e)
+    {
+        foreach (var (_, targetOffset) in ControlFlowEdges(e))
+            if (targetOffset.HasValue) yield return targetOffset.Value;
+    }
+
+    static bool IsHardTerminator(KismetExpression e)
+    {
+        return e is EX_Jump || e is EX_Return || e is EX_EndOfScript
+            || e is EX_ComputedJump || e is EX_PopExecutionFlow;
+    }
+
+    // CDO 默认值：只输出属性名、类型与默认值；对象引用输出名称/类别，不含包路径。
+    static JArray BuildCdoVariables(UAsset asset, string path)
+    {
+        var arr = new JArray();
+        var cdo = FindClassDefaultObject(asset);
+        if (cdo == null) return arr;
+        foreach (var p in cdo.Data)
+        {
+            if (p == null) continue;
+            var jo = new JObject
+            {
+                ["name"] = SafeStr(p.Name),
+                ["type"] = SafeStr(p.PropertyType),
+            };
+            if (p is StructPropertyData sp) jo["struct"] = SafeStr(sp.StructType);
+            else if (p is ArrayPropertyData ap) jo["innerType"] = SafeStr(ap.ArrayType);
+            else if (p is EnumPropertyData ep) jo["enum"] = SafeStr(ep.EnumType);
+            else if (p is BytePropertyData bp && bp.ByteType == BytePropertyType.FName) jo["enum"] = SafeStr(bp.EnumType);
+            jo["default"] = DefaultValueJson(asset, p, path);
+            arr.Add(jo);
+        }
+        return arr;
+    }
+
+    static JArray BuildCdoComponents(UAsset asset, string path)
+    {
+        var arr = new JArray();
+        var cdo = FindClassDefaultObject(asset);
+        var prop = cdo?.Data?.FirstOrDefault(p => SafeStr(p.Name) == "BlueprintCreatedComponents") as ArrayPropertyData;
+        if (prop?.Value == null) return arr;
+        foreach (var item in prop.Value)
+        {
+            try
+            {
+                if (item?.RawValue is FPackageIndex index)
+                    arr.Add(index.IsImport() ? SafeStr(index.ToImport(asset).ObjectName) : SafeStr(index.ToExport(asset).ObjectName));
+                else if (item != null)
+                    arr.Add(DefaultValueJson(asset, item, path));
+            }
+            catch (Exception e)
+            {
+                arr.Add(new JObject { ["error"] = RedactPath(e.Message, path) });
+            }
+        }
+        return arr;
+    }
+
+    static NormalExport? FindClassDefaultObject(UAsset asset)
+    {
+        return asset.Exports.OfType<NormalExport>().FirstOrDefault(x => SafeStr(x.ObjectName).StartsWith("Default__", StringComparison.Ordinal));
+    }
+
+    static JToken DefaultValueJson(UAsset asset, PropertyData p, string path)
+    {
+        if (p == null) return JValue.CreateNull();
+        try
+        {
+            if (p is Vector2DPropertyData v2) return new JObject { ["x"] = v2.Value.X, ["y"] = v2.Value.Y };
+            if (p is VectorPropertyData v3) return new JObject { ["x"] = v3.Value.X, ["y"] = v3.Value.Y, ["z"] = v3.Value.Z };
+            if (p is RotatorPropertyData rot) return new JObject { ["pitch"] = rot.Value.Pitch, ["yaw"] = rot.Value.Yaw, ["roll"] = rot.Value.Roll };
+            if (p is LinearColorPropertyData lc)
+                return new JObject { ["r"] = lc.Value.R, ["g"] = lc.Value.G, ["b"] = lc.Value.B, ["a"] = lc.Value.A };
+            if (p is ColorPropertyData col)
+                return new JObject { ["r"] = (int)col.Value.R, ["g"] = (int)col.Value.G, ["b"] = (int)col.Value.B, ["a"] = (int)col.Value.A };
+            if (p is StructPropertyData sp)
+            {
+                var obj = new JObject();
+                if (sp.Value is IEnumerable<PropertyData> children)
+                    foreach (var child in children)
+                        if (child != null) obj[SafeStr(child.Name)] = DefaultValueJson(asset, child, path);
+                return obj;
+            }
+            if (p is ArrayPropertyData ap)
+            {
+                var list = new JArray();
+                if (ap.Value is IEnumerable<PropertyData> items)
+                    foreach (var item in items)
+                        if (item != null) list.Add(DefaultValueJson(asset, item, path));
+                return list;
+            }
+            if (p is MapPropertyData map)
+            {
+                var list = new JArray();
+                for (int i = 0; i < map.Value.Count; i++)
+                {
+                    var pair = map.Value.GetItem(i);
+                    list.Add(new JObject
+                    {
+                        ["key"] = DefaultValueJson(asset, pair.Key, path),
+                        ["value"] = DefaultValueJson(asset, pair.Value, path),
+                    });
+                }
+                return list;
+            }
+            if (p is EnumPropertyData ep) return SafeStr(ep.RawValue);
+            if (p is BytePropertyData bp)
+                return bp.ByteType == BytePropertyType.FName ? (JToken)SafeStr(bp.EnumValue) : new JValue((int)bp.Value);
+
+            var raw = p.RawValue;
+            if (raw is FName name) return SafeStr(name);
+            if (raw is FString text) return SafeStr(text);
+            if (raw is FPackageIndex index) return ConstRefJson(asset, index);
+            if (raw is IEnumerable<PropertyData> nested)
+            {
+                var list = new JArray();
+                foreach (var item in nested)
+                    if (item != null) list.Add(DefaultValueJson(asset, item, path));
+                return list;
+            }
+            if (raw is bool || raw is byte || raw is sbyte || raw is short || raw is ushort
+                || raw is int || raw is uint || raw is long || raw is ulong
+                || raw is float || raw is double || raw is decimal)
+                return new JValue(raw);
+            if (raw is string str) return new JValue(str);
+            if (raw != null) return new JValue(SafeStr(raw));
+        }
+        catch (Exception e)
+        {
+            return new JObject { ["error"] = RedactPath(e.Message, path) };
+        }
+        return JValue.CreateNull();
+    }
+
     // ---------- FModel 式整体 JSON 导出 ----------
-    static (bool ok, JToken json, string error) ExportFile(string path)
+    static (bool ok, JToken json, string error) ExportFile(string path, bool keepTypes = false)
     {
         try
         {
             var asset = ReadAsset(path);
             var json = JObject.Parse(asset.SerializeJson());
-            // 去掉 UAssetAPI round-trip 元数据($type/$id/$ref)，得到干净的 FModel 式 JSON
-            StripTypeAnnotations(json);
+            // 默认去掉 UAssetAPI round-trip 元数据($type/$id/$ref)，得到干净的 FModel 式 JSON；
+            // keep-types 保留它们（$ref 仍指向同一次响应内的 $id）
+            if (!keepTypes) StripTypeAnnotations(json);
             return (true, json, null);
         }
         catch (Exception e)
@@ -429,14 +1287,14 @@ class Program
         }
     }
 
-    static JObject ExportDirectory(string dir)
+    static JObject ExportDirectory(string dir, bool keepTypes = false)
     {
         var files = Directory.GetFiles(dir, "*.uasset");
         Array.Sort(files);
         var outObj = new JObject();
         foreach (var file in files)
         {
-            var r = ExportFile(file);
+            var r = ExportFile(file, keepTypes);
             outObj[Path.GetFileName(file)] = r.ok ? (JToken)r.json : new JObject { ["error"] = r.error };
         }
         return outObj;

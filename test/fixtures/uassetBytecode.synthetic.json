@@ -1,0 +1,112 @@
+{
+    "schemaVersion": 1,
+    "asset": "Synthetic",
+    "class": {
+        "name": "BP_Synthetic_C",
+        "super": "Actor",
+        "interfaces": []
+    },
+    "events": [
+        {
+            "name": "ReceiveBeginPlay",
+            "target": "ExecuteUbergraph_BP_Synthetic",
+            "entryOffset": 10,
+            "flags": ["FUNC_Event", "FUNC_BlueprintEvent"]
+        }
+    ],
+    "variables": [
+        { "name": "BuffId", "type": "IntProperty", "default": 110102 },
+        {
+            "name": "Targets",
+            "type": "ArrayProperty",
+            "innerType": "ObjectProperty",
+            "default": [{ "kind": "import", "name": "CharacterBase", "class": "Class" }]
+        }
+    ],
+    "components": [],
+    "functions": [
+        {
+            "name": "ExecuteUbergraph_BP_Synthetic",
+            "flags": ["FUNC_Final", "FUNC_UbergraphFunction"],
+            "params": [{ "name": "EntryPoint", "type": "IntProperty", "out": false }],
+            "locals": [{ "name": "CallFunc_AddBuff_ReturnValue", "type": "BoolProperty", "out": false }],
+            "codeSize": 91,
+            "body": [
+                {
+                    "op": "EX_Let",
+                    "offset": 0,
+                    "property": {
+                        "path": ["CallFunc_AddBuff_ReturnValue"],
+                        "owner": "ExecuteUbergraph_BP_Synthetic"
+                    },
+                    "variable": {
+                        "op": "EX_LocalVariable",
+                        "offset": 9,
+                        "property": {
+                            "path": ["CallFunc_AddBuff_ReturnValue"],
+                            "owner": "ExecuteUbergraph_BP_Synthetic"
+                        }
+                    },
+                    "value": {
+                        "op": "EX_CallMath",
+                        "offset": 18,
+                        "function": "AddBuffToTarget",
+                        "args": [
+                            { "op": "EX_Self", "offset": 30 },
+                            { "op": "EX_IntConst", "offset": 31, "value": 110102 },
+                            { "op": "EX_IntConst", "offset": 36, "value": 1 }
+                        ]
+                    }
+                },
+                {
+                    "op": "EX_JumpIfNot",
+                    "offset": 41,
+                    "targetOffset": 90,
+                    "condition": {
+                        "op": "EX_LocalVariable",
+                        "offset": 46,
+                        "property": {
+                            "path": ["CallFunc_AddBuff_ReturnValue"],
+                            "owner": "ExecuteUbergraph_BP_Synthetic"
+                        }
+                    }
+                },
+                { "op": "EX_Return", "offset": 60, "value": { "op": "EX_Nothing", "offset": 61 } },
+                { "op": "EX_EndOfScript", "offset": 90 }
+            ],
+            "blocks": [
+                {
+                    "index": 0,
+                    "startOffset": 0,
+                    "endOffset": 41,
+                    "statements": [0],
+                    "successors": [{ "kind": "fallthrough", "block": 1 }]
+                },
+                {
+                    "index": 1,
+                    "startOffset": 41,
+                    "endOffset": 60,
+                    "statements": [1],
+                    "successors": [
+                        { "kind": "jumpIfNot", "from": 1, "targetOffset": 90, "block": 3 },
+                        { "kind": "fallthrough", "block": 2 }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "startOffset": 60,
+                    "endOffset": 90,
+                    "statements": [2],
+                    "successors": []
+                },
+                {
+                    "index": 3,
+                    "startOffset": 90,
+                    "endOffset": 91,
+                    "statements": [3],
+                    "successors": []
+                }
+            ]
+        }
+    ]
+}

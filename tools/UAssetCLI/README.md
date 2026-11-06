@@ -24,14 +24,18 @@ FModel 的 JSON 导出只有属性签名、不含编译后的字节码（`Script
 {"cmd":"parse","path":"<uasset文件>"}
 {"cmd":"parse_dir","path":"<目录>"}
 {"cmd":"export","path":"<uasset文件>"}
+{"cmd":"export","path":"<uasset文件>","keepTypes":true}
 {"cmd":"export_dir","path":"<目录>"}
 {"cmd":"export_dir","path":"<目录>","out":"<输出目录>"}
 {"cmd":"fmodel","path":"<uasset文件>","package":"<包路径>","mount":"EM/Content"}
 {"cmd":"fmodel_dir","path":"<目录>","root":"<Exports根>","mount":"EM/Content"}
+{"cmd":"bytecode","path":"<uasset文件>"}
 {"cmd":"shutdown"}
 ```
 
 响应统一为 `{"ok":true,"result":...}` 或 `{"ok":false,"error":...}`。
+
+请求可带任意 JSON 值 `id`，响应会原样回传 `id`，供调用方在并发场景关联请求与响应。
 
 - `parse_dir`：`result.Files` 为 `{文件名: {函数名: [调用汇总...]}}`。
 - `export`：`result` 为该资产的整体 JSON（可能较大，一次性请用 export_dir 写文件）。
@@ -46,6 +50,56 @@ FModel 的 JSON 导出只有属性签名、不含编译后的字节码（`Script
   `[{Key, Value}, ...]` 数组。
 - `fmodel_dir`：递归导出目录下所有 uasset，返回 `{"Files":{包路径: [数组]}}`，
   供地图导出脚本一次性取回整棵 Widget 树。
+- `bytecode`：输出类型化 Blueprint 字节码。每个 `FunctionExport` 保留 opcode
+  （`EX_*`）、语句/子表达式字节偏移、基本块与后继边；顶层附类信息、事件入口、
+  CDO 变量默认值与组件。输出只含资产名/对象名，不含文件系统绝对路径，同一输入逐字节稳定。
+
+`bytecode` 结果结构（`schemaVersion: 1`）：
+
+```json
+{
+  "schemaVersion": 1,
+  "asset": "BP_Feina",
+  "class": { "name": "BP_Feina_C", "super": "BP_PassiveEffectBase_C", "interfaces": [] },
+  "events": [{ "name": "ReceiveBeginPlay", "target": "ExecuteUbergraph_BP_Feina", "entryOffset": 25, "flags": ["FUNC_Event"] }],
+  "variables": [{ "name": "PassiveLastTime", "type": "FloatProperty", "default": 15 }],
+  "components": [],
+  "functions": [
+    {
+      "name": "Skill1AddBuff",
+      "flags": ["FUNC_Public", "FUNC_BlueprintCallable"],
+      "params": [{ "name": "NodeId", "type": "IntProperty", "out": false }],
+      "locals": [{ "name": "CallFunc_GetInt_ReturnValue", "type": "IntProperty", "out": false }],
+      "codeSize": 604,
+      "body": [
+        {
+          "op": "EX_JumpIfNot",
+          "offset": 60,
+          "targetOffset": 340,
+          "condition": { "op": "EX_LocalVariable", "offset": 65, "property": { "path": ["CallFunc_CheckSkillGrade_IsSuccess"] } }
+        },
+        { "op": "EX_Let", "offset": 74, "variable": { "op": "EX_LocalVariable" }, "value": { "op": "EX_CallMath", "function": "CastToCharacterBase", "args": [] } },
+        { "op": "EX_Return", "offset": 601, "value": { "op": "EX_Nothing" } }
+      ],
+      "blocks": [
+        {
+          "index": 0,
+          "startOffset": 0,
+          "endOffset": 340,
+          "statements": [0, 1],
+          "successors": [{ "kind": "jumpIfNot", "from": 1, "targetOffset": 340, "block": 1 }]
+        }
+      ]
+    }
+  ]
+}
+```
+
+- `offset` 是表达式在 `ScriptBytecode` 中的字节偏移（与 `ScriptBytecodeSize` 一致）；
+  `blocks[].statements` 是 `body` 的下标，`successors[].block` 为目标基本块。
+- 跳转目标无法落到语句起点时 `block` 为 `null`，保留 `targetOffset` 供诊断。
+- 单个函数解析失败时该函数项为 `{"name": "...", "error": "..."}`，其余函数照常输出。
+- 未识别的 opcode 保留 `op`/`offset` 并标记 `"unsupported": true`，不静默丢弃。
 
 字节码调用汇总（通用，不做游戏语义过滤）：
 
@@ -59,8 +113,9 @@ FModel 的 JSON 导出只有属性签名、不含编译后的字节码（`Script
 ### 2. 一次性模式
 
 ```bash
-UAssetCLI <uasset文件|目录>          # 字节码调用解析，直接打印 JSON 后退出
-UAssetCLI export <uasset文件|目录>   # FModel 式整体 JSON
+UAssetCLI <uasset文件|目录>                     # 字节码调用解析，直接打印 JSON 后退出
+UAssetCLI export <uasset文件|目录>              # FModel 式整体 JSON
+UAssetCLI export --keep-types <uasset文件|目录> # 同上，保留 $type/$id/$ref
 ```
 
 ## 与 TS 工具链集成
@@ -70,8 +125,35 @@ UAssetCLI server 由 TS 侧 `src/lua/UAssetServer.ts` 封装，供地图拼接�
 
 1. 定位 `tools/UAssetCLI/UAssetCLI.exe`；
 2. 通过 `DNA_UNPACK_DIR` 环境变量（缺省时尝试仓库同级 `../dna-unpack`）定位解包目录；
-3. 以 **server 模式** 请求 `fmodel` / `fmodel_dir` / `parse_dir` 等命令；
+3. 以 **server 模式** 请求 `fmodel` / `fmodel_dir` / `parse_dir` / `bytecode` 等命令；
 4. 使用完毕发送 `shutdown` 关闭 server（不占用额外进程）。
+
+`UAssetServer` 的传输约定：请求串行发送并带自增 `id`，响应必须回传同一 `id`
+（缺失或不匹配视为协议错误）；stdout 按 UTF-8 字符流解码。单个请求默认 120s 超时
+（`DNA_UASSET_TIMEOUT_MS` 或构造参数覆盖）。超时或进程退出会杀掉子进程，下一次请求自动重启。
+`close()` 后的实例不可再启动进程。
+
+生命周期：`acquireUAssetServer()` / `releaseUAssetServer(server)` 引用计数，最后一个持有者释放时
+只关进程、保留共享 DuckDB 缓存；陈旧引用不会影响当前引用数或关闭当前实例。
+`closeUAssetServer({ keepCache: true })` 只关进程、保留缓存。
+
+### 缓存
+
+- `fmodel` 使用旧表 `uasset_fmodel_cache`：key 为
+  `[绝对路径, 包路径, mount]`，命中不校验指纹（保持历史行为）。
+- `bytecode` 使用
+  `uasset_kind_cache(cache_key, kind, parser_version, source_mtime_ms, source_size, source_fingerprint, payload, updated_at)`，
+  主键 `(cache_key, kind)`；key 为
+  `["bytecode", 绝对路径(正斜杠), 指纹]`，其中指纹是
+  `[parserVersion, [[后缀, mtimeMs, size], ...]]`，覆盖主资产与 sidecar：
+  `.uasset`（包头/导入表）+ `.uexp`（ScriptBytecode/属性值）+ `.ubulk`（存在时）。
+  行内再校验同一 `source_fingerprint`；主资产或任一 sidecar 的 mtime/size、
+  或 `UASSET_BYTECODE_PARSER_VERSION` 变化即失效。
+  `source_mtime_ms`/`source_size` 仅作诊断汇总（最大 mtime、size 之和）。
+  命中只做 stat + DuckDB 查询，不启动 CLI。
+- `bun warmup` 清空两张表。
+- 环境变量 `DNA_UASSET_CACHE` 可覆盖 DuckDB 路径（相对路径按 cwd 解析），
+  便于在 worktree 中复用主 checkout 的缓存或做基准测试。
 
 `src/modules/char/data/BPAddBuff.json` 是角色被动 BP 的 `{BP名: [buff id...]}` 映射
 （从 uasset 提取并提交在仓库中以保证可复现），由 TS 的 char 模块在生成技能行为摘要时读取。
